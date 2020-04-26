@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>人生当苦, 良人当归</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-04-26T01:31:18.797Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>fairyeye</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>StringToInteger</title>
+    <link href="http://yoursite.com/2020/04/26/StringToInteger/"/>
+    <id>http://yoursite.com/2020/04/26/StringToInteger/</id>
+    <published>2020-04-26T01:31:18.797Z</published>
+    <updated>2020-04-26T01:31:18.797Z</updated>
+    
+    <content type="html"><![CDATA[<!DOCTYPE html><html>    <head>        <title>页面标题</title>        <style>        body {        background-image: url("../640.png"); }         </style>    <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="人生当苦, 良人当归" type="application/atom+xml"></head><body> <h1 id="String-转-Integer"><a href="#String-转-Integer" class="headerlink" title="String 转 Integer"></a>String 转 Integer</h1><h2 id="1-Integer的parseInt方法"><a href="#1-Integer的parseInt方法" class="headerlink" title="1.Integer的parseInt方法"></a>1.Integer的parseInt方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt----------&gt;123</span><br></pre></td></tr></table></figure><h2 id="2-Integer的valueOf方法"><a href="#2-Integer的valueOf方法" class="headerlink" title="2.Integer的valueOf方法"></a>2.Integer的valueOf方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">Integer value &#x3D; Integer.valueOf(string);</span><br><span class="line">System.out.println(&quot;stringToInt1----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt1----------&gt;123</span><br></pre></td></tr></table></figure><p>以上两种方法都是可行的。</p><p>但是会有特殊的情况，比如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:16)</span><br><span class="line">at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br></pre></td></tr></table></figure><p>使用stringToInt1()也会返回同样的错误。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static Integer valueOf(String s) throws NumberFormatException &#123;</span><br><span class="line">    return Integer.valueOf(parseInt(s, 10));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>valueOf()调用了parseInt()，所以返回同样的错误是正常的。</p><p>按照正常的逻辑来说，我们需要对这个错误进行处理，比如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; 0;</span><br><span class="line">try &#123;</span><br><span class="line">    value &#x3D; Integer.parseInt(string);</span><br><span class="line">&#125; catch (NumberFormatException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;StringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:18)</span><br><span class="line">at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br><span class="line">StringToInt----------&gt;0</span><br></pre></td></tr></table></figure><p>可以看到，虽然依然报错，但是程序还是继续执行了。</p><p>然后回到主题。</p><h2 id="3-Guava-的-Ints-结合-Java8-的-Optional"><a href="#3-Guava-的-Ints-结合-Java8-的-Optional" class="headerlink" title="3.Guava 的 Ints 结合 Java8 的 Optional"></a>3.Guava 的 Ints 结合 Java8 的 Optional</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(0);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;0</span><br></pre></td></tr></table></figure><p>可以在转换失败的时候为他设置默认值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(100);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;100</span><br></pre></td></tr></table></figure><p><strong>写在末尾：之所以写这么详细是因为最开始的时候我很菜，看别人写的文档都很简单，虽然可以解决问题，但是却不解其意，所以写的啰嗦一点，对新手比较友好。</strong></p><p>​    </body></p></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;页面标题&lt;/title&gt;
+        &lt;style&gt;
+        body {        background-image: url(&quot;../640.png&quot;); } 
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Wed Apr 08 2020 00:00:00 GMT+0800 (GMT+08:00)</title>
+    <link href="http://yoursite.com/2020/04/08/test/"/>
+    <id>http://yoursite.com/2020/04/08/test/</id>
+    <published>2020-04-08T01:54:30.000Z</published>
+    <updated>2020-04-26T01:31:18.798Z</updated>
+    
+    <content type="html"><![CDATA[<p>当做实体类入参时，可以通过mapper接口的<code>@param</code>绑定入参。</p><h3 id="Exception："><a href="#Exception：" class="headerlink" title="Exception："></a>Exception：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException</span><br></pre></td></tr></table></figure><p><strong>子查询：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id&#x3D;&quot;queryList&quot; resultType&#x3D;&quot;org.hdgp.mdm.domain.entity.DataPermission&quot;&gt;</span><br><span class="line">    SELECT</span><br><span class="line">        ddp.*</span><br><span class="line">    FROM dmdm_data_permission ddp</span><br><span class="line">    WHERE 1&#x3D;1</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrName!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_code in (</span><br><span class="line">        SELECT hda.attr_code</span><br><span class="line">        FROM hdpm_data_attribute hda</span><br><span class="line">        WHERE hda.attr_name LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrName&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrValue!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrValue&#125;,&#39;%&#39;))</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.meaning!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value IN (</span><br><span class="line">        SELECT hlv.value</span><br><span class="line">        FROM hpfm_lov_value hlv</span><br><span class="line">        WHERE hlv.meaning like CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.meaning&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure><p><strong>换成连接查询：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;当做实体类入参时，可以通过mapper接口的&lt;code&gt;@param&lt;/code&gt;绑定入参。&lt;/p&gt;
+&lt;h3 id=&quot;Exception：&quot;&gt;&lt;a href=&quot;#Exception：&quot; class=&quot;headerlink&quot; title=&quot;Exception：&quot;&gt;&lt;/a&gt;Ex
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+</feed>
