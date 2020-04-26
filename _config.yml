@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 人生当苦, 良人当归
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: fairyeye
+language: zh_CN
 timezone: ''
 
 # URL
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: amazing
+theme: indigo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
