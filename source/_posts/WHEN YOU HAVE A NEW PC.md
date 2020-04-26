@@ -60,6 +60,32 @@ git commit -m "Initial commit"
 git push -u origin master
 ```
 
+#### MySQL 安装
+
+安装`https://www.runoob.com/mysql/mysql-install.html`
+
+
+
+
+
+修改初始密码
+
+MySQL版本5.7.6版本以前用户可以使用如下命令：
+
+```
+mysql> SET PASSWORD = PASSWORD('your pwd'); 
+```
+MySQL版本5.7.6版本开始的用户可以使用如下命令：
+```
+mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
+```
+
+
+
+
+
+登录报错 `https://www.cnblogs.com/lifan1998/p/9177731.html`
+
 #### 去图标
 
 ​	管理员运行  `去图标.bat` 文件。
