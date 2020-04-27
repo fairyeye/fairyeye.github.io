@@ -1,4 +1,5 @@
 ---
-title: categories
-date: 2020-04-26 10:45:15
+layout: categories
+title: category
+date: 2020-04-27 14:30:47
 ---

@@ -2,250 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f67c46-ed3a-489c-9432-dfa67776b5a0" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/tags/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/indigo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/hello-world.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/scaffolds/draft.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/scaffolds/page.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/scaffolds/post.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/about/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/album/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/friend/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/media/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/message/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/music/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/ex_pages/source/self-talking/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/dependency.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/filter/locals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/generator/categories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/generator/category.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/generator/insight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/generator/tags.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/helper/cdn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/helper/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/helper/thumbnail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/migration/head.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/migration/v2_v3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/changyan.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/disqus.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/disqusjs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/facebook.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/gitalk.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/gitment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/isso.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/livere.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/comment/valine.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/article.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/comment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/donates.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/footer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/head.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/navbar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/plugins.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/providers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/search.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/share.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/sidebar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/common/widgets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/donate/alipay.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/donate/buymeacoffee.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/donate/patreon.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/donate/paypal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/donate/wechat.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/misc/meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/misc/open_graph.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/misc/poly_links.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/misc/structured_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/animejs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/back_to_top.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/baidu_analytics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/busuanzi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/gallery.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/google_analytics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/hotjar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/katex.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/mathjax.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/outdated_browser.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/plugin/progressbar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/search/baidu.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/search/google_cse.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/search/insight.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/share/addthis.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/share/addtoany.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/share/bdshare.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/share/sharejs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/share/sharethis.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/adsense.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/archives.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/hot_recommend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/latest_comment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/links.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/profile.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/recent_posts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/subscribe_email.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/tags.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/schema/widget/toc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/util/console.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/util/migrate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/util/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/include/util/yaml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/de.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/en.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/es.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/fr.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/id.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/ja.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/ko.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/pl.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/pt-BR.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/ru.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/tr.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/vn.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/zh-CN.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/languages/zh-TW.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/archive.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/categories.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/category.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/changyan.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/disqus.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/disqusjs.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/facebook.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/gitalk.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/gitment.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/isso.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/livere.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/comment/valine.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/article-media.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/article.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/comment.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/donates.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/footer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/head.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/navbar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/plugins.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/scripts.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/search.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/share.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/common/widgets.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/donate/alipay.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/donate/buymeacoffee.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/donate/patreon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/donate/paypal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/donate/wechat.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/layout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/misc/meta.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/misc/open_graph.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/misc/paginator.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/misc/structured_data.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/animejs.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/back_to_top.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/baidu_analytics.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/busuanzi.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/gallery.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/google_analytics.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/hotjar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/katex.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/mathjax.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/outdated_browser.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/plugin/progressbar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/post.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/search/baidu.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/search/google_cse.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/search/insight.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/share/addthis.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/share/addtoany.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/share/bdshare.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/share/sharejs.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/share/sharethis.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/tag.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/tags.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/util/cache.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/util/classname.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/adsense.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/archives.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/categories.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/hot_recommend.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/latest_comment.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/links.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/profile.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/recent_posts.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/recommend_post.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/subscribe_email.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/tags.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/layout/widget/toc.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/scripts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/DPlayer.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/base.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/fonts/fontello.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/fonts/fontello.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/fonts/fontello.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/fonts/fontello.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/global_gray.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/helper.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/insight.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/meplayer.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/css/style.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/chat.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/links/fangfang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/links/fghrsh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/links/nopic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/links/xsy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/og_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/thumbnail.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/img/tuzi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/Aplayer.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/DPlayer.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/about-me.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/animation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/back-to-top.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/comment-issue-data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/echarts.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/friend.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/gitalk.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/gitalk_self.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/globalUtils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/insight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/meplayer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/music.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/statistics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/theme-setting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/js/toc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/json_data/friend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/json_data/music.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/json_data/record.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/json_data/video.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/autoload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/flat-ui-icons-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/flat-ui-icons-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/flat-ui-icons-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/flat-ui-icons-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/live2d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/waifu-tips.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/waifu-tips.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/amazing/source/live2d/waifu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/RE-1注册中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/RE-1注册中心.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/categories/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/store/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/tags/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/tags/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/indigo/source/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -308,6 +70,7 @@
       <workItem from="1587820075016" duration="342000" />
       <workItem from="1587864698899" duration="1232000" />
       <workItem from="1587867134929" duration="1616000" />
+      <workItem from="1587968164252" duration="1803000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1587865659117</created>
@@ -360,10 +123,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="105" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1587865661334" />
-    <state x="303" y="95" width="759" height="548" key="find.popup" timestamp="1587869785855">
+    <state x="303" y="95" width="759" height="548" key="find.popup" timestamp="1587968622906">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="303" y="95" width="759" height="548" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1587869785855" />
+    <state x="303" y="95" width="759" height="548" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1587968622906" />
   </component>
   <component name="masterDetails">
     <states>
