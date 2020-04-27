@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-27T02:20:39.101Z</updated>
+  <updated>2020-04-27T05:58:34.100Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RE-4Swagger</title>
-    <link href="http://yoursite.com/2020/04/27/RE-4Swagger/"/>
-    <id>http://yoursite.com/2020/04/27/RE-4Swagger/</id>
-    <published>2020-04-27T01:50:25.816Z</published>
-    <updated>2020-04-27T02:20:39.101Z</updated>
+    <title>RE:4Swagger</title>
+    <link href="http://yoursite.com/2020/04/26/RE-4Swagger/"/>
+    <id>http://yoursite.com/2020/04/26/RE-4Swagger/</id>
+    <published>2020-04-26T07:25:10.000Z</published>
+    <updated>2020-04-27T05:58:34.100Z</updated>
     
     <content type="html"><![CDATA[<ol><li>添加依赖</li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p><a href="https://blog.csdn.net/huangjinjin520/article/details/89740672" target="_blank" rel="noopener">https://blog.csdn.net/huangjinjin520/article/details/89740672</a></p>]]></content>
     
@@ -39,27 +39,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>RE-3用户服务</title>
-    <link href="http://yoursite.com/2020/04/27/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/"/>
-    <id>http://yoursite.com/2020/04/27/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/</id>
-    <published>2020-04-27T01:47:56.127Z</published>
-    <updated>2020-04-27T02:20:47.764Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure><h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure><h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">'?й???????'</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure><p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;依赖：&quot;&gt;&lt;a href=&quot;#依赖：&quot; class=&quot;headerlink&quot; title=&quot;依赖：&quot;&gt;&lt;/a&gt;依赖：&lt;/h4&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
-      
-    
-    </summary>
-    
-    
+      <category term="store" scheme="http://yoursite.com/tags/store/"/>
     
   </entry>
   
@@ -89,11 +69,59 @@
   </entry>
   
   <entry>
+    <title>RE:3-UserService</title>
+    <link href="http://yoursite.com/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/"/>
+    <id>http://yoursite.com/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/</id>
+    <published>2020-04-26T07:25:10.000Z</published>
+    <updated>2020-04-27T05:58:04.920Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure><h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure><h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">'?й???????'</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure><p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;依赖：&quot;&gt;&lt;a href=&quot;#依赖：&quot; class=&quot;headerlink&quot; title=&quot;依赖：&quot;&gt;&lt;/a&gt;依赖：&lt;/h4&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+    
+      <category term="store" scheme="http://yoursite.com/tags/store/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE:5UserService&amp;Fegin</title>
+    <link href="http://yoursite.com/2020/04/26/RE-5UserService&amp;Fegin/"/>
+    <id>http://yoursite.com/2020/04/26/RE-5UserService&amp;Fegin/</id>
+    <published>2020-04-26T07:25:10.000Z</published>
+    <updated>2020-04-27T05:59:13.050Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p><p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p><p><strong>注册中心：</strong></p><table><thead><tr><th align="left">Application</th><th align="left">AMIs</th><th align="left">Availability Zones</th><th align="left">Status</th></tr></thead><tbody><tr><td align="left"><strong>GOODS-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr><tr><td align="left"><strong>USER-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr></tbody></table><h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Fegin&quot;&gt;&lt;a href=&quot;#Fegin&quot; class=&quot;headerlink&quot; title=&quot;Fegin&quot;&gt;&lt;/a&gt;Fegin&lt;/h4&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="store" scheme="http://yoursite.com/tags/store/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RE:1 注册中心</title>
     <link href="http://yoursite.com/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
     <id>http://yoursite.com/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</id>
     <published>2020-04-26T06:25:50.000Z</published>
-    <updated>2020-04-27T02:18:52.199Z</updated>
+    <updated>2020-04-27T05:57:30.286Z</updated>
     
     <content type="html"><![CDATA[<h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200426143308709.png" alt="image-20200426143308709" title="">                </div>                <div class="image-caption">image-20200426143308709</div>            </figure><h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>启动类上加<code>@EnableEurekaServer</code>注解</p><p>store需要pom</p><p><code>application.yml</code></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: store-eureka</span><br><span class="line">server:</span><br><span class="line">  port: 8000</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false</span><br><span class="line">    fetch-registry: false</span><br><span class="line">    serviceUrl:</span><br><span class="line">      defaultZone: http://dev.store.local:$&#123;server.port&#125;/eureka/</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">register-with-eureka: false  &#x2F;&#x2F; 注释之后才可以看到 available instance</span><br></pre></td></tr></table></figure><p>参考：</p><p><a href="http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html</a></p><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p> 版本：8.0.19</p>]]></content>
     
@@ -104,6 +132,8 @@
     </summary>
     
     
+    
+      <category term="store" scheme="http://yoursite.com/tags/store/"/>
     
   </entry>
   
@@ -464,31 +494,6 @@
     
     
       <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Wed Apr 08 2020 00:00:00 GMT+0800 (GMT+08:00)</title>
-    <link href="http://yoursite.com/2020/04/08/test/"/>
-    <id>http://yoursite.com/2020/04/08/test/</id>
-    <published>2020-04-08T01:54:30.000Z</published>
-    <updated>2020-04-26T01:31:18.798Z</updated>
-    
-    <content type="html"><![CDATA[<p>当做实体类入参时，可以通过mapper接口的<code>@param</code>绑定入参。</p><h3 id="Exception："><a href="#Exception：" class="headerlink" title="Exception："></a>Exception：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException</span><br></pre></td></tr></table></figure><p><strong>子查询：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id&#x3D;&quot;queryList&quot; resultType&#x3D;&quot;org.hdgp.mdm.domain.entity.DataPermission&quot;&gt;</span><br><span class="line">    SELECT</span><br><span class="line">        ddp.*</span><br><span class="line">    FROM dmdm_data_permission ddp</span><br><span class="line">    WHERE 1&#x3D;1</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrName!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_code in (</span><br><span class="line">        SELECT hda.attr_code</span><br><span class="line">        FROM hdpm_data_attribute hda</span><br><span class="line">        WHERE hda.attr_name LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrName&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrValue!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrValue&#125;,&#39;%&#39;))</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.meaning!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value IN (</span><br><span class="line">        SELECT hlv.value</span><br><span class="line">        FROM hpfm_lov_value hlv</span><br><span class="line">        WHERE hlv.meaning like CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.meaning&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure><p><strong>换成连接查询：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;当做实体类入参时，可以通过mapper接口的&lt;code&gt;@param&lt;/code&gt;绑定入参。&lt;/p&gt;
-&lt;h3 id=&quot;Exception：&quot;&gt;&lt;a href=&quot;#Exception：&quot; class=&quot;headerlink&quot; title=&quot;Exception：&quot;&gt;&lt;/a&gt;Ex
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
