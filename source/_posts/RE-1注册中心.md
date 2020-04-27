@@ -1,7 +1,7 @@
 ---
-title: store
+title: RE:1 注册中心
 date: 2020-04-26 14:25:50
-
+description: 先搞注册中心
 ---
 
 
