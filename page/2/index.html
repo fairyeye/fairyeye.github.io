@@ -65,42 +65,35 @@
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
-                Home
+                主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
-                Archives
+                归档
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
-                Tags
+                标签
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                Categories
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="https://github.com/fairyeye" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/store"  >
-                <i class="icon icon-lg icon-link"></i>
-                store
+                来康康？
               </a>
             </li>
         
@@ -121,7 +114,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -181,21 +174,21 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        引用计数算法​    原理：是否有对象引用。
-​    
-                
-                    
-                    
-                
-                counting.png
-            
-​    缺点：如果两个对象互相引用，会造成内存泄漏。
-可达性分析法​    
+        <h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​    原理：是否有对象引用。</p>
+<p>​    <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="D:\workspace\gitee\StaticFile\image\Reference" alt="Reference counting" title="counting.png">
+                </div>
+                <div class="image-caption">counting.png</div>
+            </figure></p>
+<p>​    缺点：如果两个对象互相引用，会造成内存泄漏。</p>
+<h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​    </p>
 
     
 
         <a href="/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -236,21 +229,343 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Calendar
+        <h4 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h4><table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Method and Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>BigDecimal</code></td>
+<td><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>BigDecimal</code></td>
+<td><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>BigDecimal</code></td>
+<td><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>BigDecimal</code></td>
+<td><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Modifier and Type</th>
+<th align="left">Method and Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>abs()</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>abs(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>byte</code></td>
+<td align="left"><code>byteValueExact()</code>Converts this <code>BigDecimal</code> to a <code>byte</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>compareTo(BigDecimal val)</code>Compares this <code>BigDecimal</code> with the specified <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose preferred scale is <code>(this.scale() - divisor.scale())</code>; if the exact quotient cannot be represented (because it has a non-terminating decimal expansion) an <code>ArithmeticException</code> is thrown.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, int scale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal[]</code></td>
+<td align="left"><code>divideAndRemainder(BigDecimal divisor)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal[]</code></td>
+<td align="left"><code>divideAndRemainder(BigDecimal divisor, MathContext mc)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands calculated with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divideToIntegralValue(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is the integer part of the quotient <code>(this / divisor)</code> rounded down.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divideToIntegralValue(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the integer part of <code>(this / divisor)</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>double</code></td>
+<td align="left"><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>boolean</code></td>
+<td align="left"><code>equals(Object x)</code>Compares this <code>BigDecimal</code> with the specified <code>Object</code> for equality.</td>
+</tr>
+<tr>
+<td align="left"><code>float</code></td>
+<td align="left"><code>floatValue()</code>Converts this <code>BigDecimal</code> to a <code>float</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>hashCode()</code>Returns the hash code for this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>intValue()</code>Converts this <code>BigDecimal</code> to an <code>int</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>intValueExact()</code>Converts this <code>BigDecimal</code> to an <code>int</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>long</code></td>
+<td align="left"><code>longValue()</code>Converts this <code>BigDecimal</code> to a <code>long</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>long</code></td>
+<td align="left"><code>longValueExact()</code>Converts this <code>BigDecimal</code> to a <code>long</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>max(BigDecimal val)</code>Returns the maximum of this <code>BigDecimal</code> and <code>val</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>min(BigDecimal val)</code>Returns the minimum of this <code>BigDecimal</code> and <code>val</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>movePointLeft(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the left.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>movePointRight(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the right.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>multiply(BigDecimal multiplicand)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, and whose scale is <code>(this.scale() + multiplicand.scale())</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>multiply(BigDecimal multiplicand, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>negate()</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>negate(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>plus()</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>plus(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>pow(int n)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>, The power is computed exactly, to unlimited precision.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>pow(int n, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>precision()</code>Returns the <em>precision</em> of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>remainder(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>remainder(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>round(MathContext mc)</code>Returns a <code>BigDecimal</code> rounded according to the <code>MathContext</code> settings.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>scale()</code>Returns the <em>scale</em> of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>scaleByPowerOfTen(int n)</code>Returns a BigDecimal whose numerical value is equal to (<code>this</code> * 10n).</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>setScale(int newScale)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose value is numerically equal to this <code>BigDecimal</code>‘s.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>setScale(int newScale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>setScale(int newScale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td>
+</tr>
+<tr>
+<td align="left"><code>short</code></td>
+<td align="left"><code>shortValueExact()</code>Converts this <code>BigDecimal</code> to a <code>short</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>signum()</code>Returns the signum function of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>stripTrailingZeros()</code>Returns a <code>BigDecimal</code> which is numerically equal to this one but with any trailing zeros removed from the representation.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>subtract(BigDecimal subtrahend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, and whose scale is <code>max(this.scale(), subtrahend.scale())</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>subtract(BigDecimal subtrahend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigInteger</code></td>
+<td align="left"><code>toBigInteger()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigInteger</code></td>
+<td align="left"><code>toBigIntegerExact()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>String</code></td>
+<td align="left"><code>toEngineeringString()</code>Returns a string representation of this <code>BigDecimal</code>, using engineering notation if an exponent is needed.</td>
+</tr>
+<tr>
+<td align="left"><code>String</code></td>
+<td align="left"><code>toPlainString()</code>Returns a string representation of this <code>BigDecimal</code> without an exponent field.</td>
+</tr>
+<tr>
+<td align="left"><code>String</code></td>
+<td align="left"><code>toString()</code>Returns the string representation of this <code>BigDecimal</code>, using scientific notation if an exponent is needed.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>ulp()</code>Returns the size of an ulp, a unit in the last place, of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigInteger</code></td>
+<td align="left"><code>unscaledValue()</code>Returns a <code>BigInteger</code> whose value is the <em>unscaled value</em> of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>static BigDecimal</code></td>
+<td align="left"><code>valueOf(double val)</code>Translates a <code>double</code> into a <code>BigDecimal</code>, using the <code>double</code>‘s canonical string representation provided by the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#toString-double-" target="_blank" rel="noopener"><code>Double.toString(double)</code></a> method.</td>
+</tr>
+<tr>
+<td align="left"><code>static BigDecimal</code></td>
+<td align="left"><code>valueOf(long val)</code>Translates a <code>long</code> value into a <code>BigDecimal</code> with a scale of zero.</td>
+</tr>
+<tr>
+<td align="left"><code>static BigDecimal</code></td>
+<td align="left"><code>valueOf(long unscaledVal, int scale)</code>Translates a <code>long</code> unscaled value and an <code>int</code> scale into a <code>BigDecimal</code>.</td>
+</tr>
+</tbody></table>
 
-
-Modifier and Type
-Method and Description
-
-
-
-BigDecimal
-divide(BigDecimal divisor, int roundingMode)Returns a BigDecimal whose value is (this / divisor), and whose scale is this.scale().
-...
     
 
         <a href="/2020/04/22/22/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -291,15 +606,18 @@ divide(BigDecimal divisor, int roundingMode)Returns a BigDecimal whose value is 
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        String数组转int数组假设我们有一个字符串数组：
-1String[] strings &#x3D; &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;
+        <h1 id="String数组转int数组"><a href="#String数组转int数组" class="headerlink" title="String数组转int数组"></a><a href="https://www.cnblogs.com/ukzq/p/11965382.html" target="_blank" rel="noopener">String数组转int数组</a></h1><p>假设我们有一个字符串数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] strings &#x3D; &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure>
 
-使用Lambda表达式（自Java 8起）：
-1int[] array &#x3D; Arrays.asList(strings).stream().mapToInt(In...
+<p>使用<em>Lambda表达式</em>（自Java 8起）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>
+
+<p>另一种方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>
     
 
         <a href="/2020/04/20/20/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -334,19 +652,23 @@ divide(BigDecimal divisor, int roundingMode)Returns a BigDecimal whose value is 
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        场景：
-参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,
-可以用 ||
-123if （Objects.isNull(list) || list &#x3D;&#x3D; 0） &#123;&#125;
+        <p>场景：</p>
+<p>参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,</p>
+<p>可以用 ||</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if （Objects.isNull(list) || list &#x3D;&#x3D; 0） &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。
-File - &gt;...
+<p><code>单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。</code></p>
+<p><strong>File - &gt;  Other Setting -&gt; Setting For New Projects</strong> 全局配置</p>
+<p>maven默认仓库地址，选择本地的地址</p>
+<p><code>&lt;localRepository&gt;D:\maven_repo&lt;/localRepository&gt;</code></p>
+<p>Setting -&gt; file and code temeplate -&gt; include</p>
+
     
 
         <a href="/2020/04/17/17/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -387,14 +709,14 @@ File - &gt;...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        基础依赖后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。
-1Date date = new Date(1579676844); // 1970-01-19T14:47:56.844+0800
+        <h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><p>后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date(<span class="number">1579676844</span>); <span class="comment">// 1970-01-19T14:47:56.844+0800</span></span><br></pre></td></tr></table></figure>
 
-1Date date = new Date(1579676844 * 1000L); // 2020-01-22T15:07:24.000+0800
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date(<span class="number">1579676844</span> * <span class="number">1000L</span>); <span class="comment">// 2020-01-22T15:07:24.000+0800</span></span><br></pre></td></tr></table></figure>
     
 
         <a href="/2020/04/17/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -435,12 +757,12 @@ File - &gt;...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        ​    
+        <p>​    </p>
 
     
 
         <a href="/2020/04/16/interface/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -481,16 +803,33 @@ File - &gt;...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Filter1Stream&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate)
+        <h5 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stream&lt;T&gt; <span class="title">filter</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; predicate)</span></span></span><br></pre></td></tr></table></figure>
 
-Returns a stream consisting of the elements of this stream that match the given predicate.
-This is an intermediate operation.
+<p>Returns a stream consisting of the elements of this stream that match the given predicate.</p>
+<p>This is an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#StreamOps" target="_blank" rel="noopener">intermediate operation</a>.</p>
+<ul>
+<li><p><strong>Parameters:</strong></p>
+<p>predicate - a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference" target="_blank" rel="noopener">non-interfering</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness" target="_blank" rel="noopener">stateless</a> predicate to apply to each element to determine if it should be included</p>
+</li>
+<li><p><strong>Returns:</strong></p>
+<p>the new stream</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过条件筛选</span></span><br><span class="line">list.stream().filter(User -&gt; StringUtils.isEmpty(User.getUserName));</span><br></pre></td></tr></table></figure>
 
-P...
+
+
+
+
+<h5 id="GroupBy"><a href="#GroupBy" class="headerlink" title="GroupBy"></a>GroupBy</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过条件分组</span></span><br><span class="line">Map&lt;String, List&lt;User&gt;&gt; groupMap = list.stream().collect(Collectors.groupingBy(User::getName));</span><br></pre></td></tr></table></figure>
+
+
+
+
     
 
         <a href="/2020/04/16/16/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -535,7 +874,7 @@ P...
     
 
         <a href="/2020/04/15/15/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -570,16 +909,22 @@ P...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        12错误描述信息：org.fairy.eye.domin.entity.User is not an enclosing class
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">错误描述信息：</span><br><span class="line">org.fairy.eye.domin.entity.User is not an enclosing class</span><br></pre></td></tr></table></figure>
 
-​        在 new 一个内部类的对象时，idea 会生成如下的代码。
-12&#x2F;&#x2F; Info 是User的内部类User.Info info &#x3D; new User.Info();
+<p>​        在 new 一个内部类的对象时，idea 会生成如下的代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Info 是User的内部类</span><br><span class="line">User.Info info &#x3D; new User.Info();</span><br></pre></td></tr></table></figure>
 
-​        然后会提示报错 org...
+<p>​        然后会提示报错 <code>org.fairy.eye.domin.entity.User is not an enclosing class</code></p>
+<p>​        如果内部类没有用 <code>static</code> 修饰的话，是不能这样 new 的。</p>
+<p>​        需要有外部类实例对象来支持。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user &#x3D; new User();</span><br><span class="line">User.Info info &#x3D; new user.Info();</span><br></pre></td></tr></table></figure>
+
+
+
     
 
         <a href="/2020/04/14/14/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -620,14 +965,37 @@ P...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        1.GIT相关场景：​        GIT版本出了点问题，无法正常合并代码
-具体描述：​        由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。
-​        无奈之下，我选择回滚代码。
-具体操作：第一种方法：注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没...
+        <h4 id="1-GIT相关"><a href="#1-GIT相关" class="headerlink" title="1.GIT相关"></a>1.GIT相关</h4><h5 id="场景："><a href="#场景：" class="headerlink" title="场景："></a>场景：</h5><p>​        GIT版本出了点问题，无法正常合并代码</p>
+<h5 id="具体描述："><a href="#具体描述：" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。</p>
+<p>​        无奈之下，我选择回滚代码。</p>
+<h5 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h5><p><strong>第一种方法：<code>注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没有别的人提交</code></strong></p>
+<ol>
+<li><p>首先要找到你要回滚的版本号。</p>
+<p>​    在idea中操作：右键项目 -&gt; Git -&gt; Show History -&gt; 右键提交的版本 -&gt; Copy Revision Number。</p>
+<p>​    在GIT中操作：找到提交的历史，SHA 值，即为版本号。</p>
+</li>
+<li><p>Git Bush 命令行/idea TerMinal 命令行</p>
+<p>​    <code>git reset --hard 版本号</code></p>
+</li>
+</ol>
+<p><strong>第二种方法：</strong></p>
+<ol>
+<li>找到版本号，同上。</li>
+<li>右键项目 -&gt; Git -&gt; Repository -&gt; Reset HEAD</li>
+<li>在 To Commit 中输入版本号</li>
+</ol>
+<p><img src="C:%5CUsers%5Chuapeng.zhang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200414092630073.png" alt="回滚代码"></p>
+<h5 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h5><p>​        <strong>记得一定要提交代码，即使看起来没有要 push 的东西，否则 git pull 之后等于没回滚。</strong></p>
+<h4 id="2-构建相关"><a href="#2-构建相关" class="headerlink" title="2.构建相关"></a>2.构建相关</h4><h5 id="场景：-1"><a href="#场景：-1" class="headerlink" title="场景："></a>场景：</h5><p>​        回滚代码之后，本地可以成功构建，但服务器端无法正常构建。</p>
+<h5 id="具体描述：-1"><a href="#具体描述：-1" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        服务器端构建一直失败，好像是拉取到了错误版本的代码。</p>
+<h5 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h5><p>​        暴脾气的我本来打算把项目删了重新拉一个下来，后来忍住了，在服务器端回滚了一下代码，然后手动构建了一下，居然成功了，完结。</p>
+<h5 id="最后：-1"><a href="#最后：-1" class="headerlink" title="最后："></a>最后：</h5><p>​        虽然没什么有用的东西，不过思路还是有的。</p>
+<p>​        首先你要确认本地构建的代码是否和服务器完全相同、服务器构建的时候是否pull了最新的代码…</p>
+
     
 
         <a href="/2020/04/13/13/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -670,7 +1038,7 @@ P...
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -777,7 +1145,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '404 Not Found!';
             clearTimeout(titleTime);
         } else {
             document.title = '(つェ⊂)咦!又好了!';

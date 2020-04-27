@@ -65,42 +65,35 @@
             <li class="waves-block waves-effect active">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
-                Home
+                主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
-                Archives
+                归档
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
-                Tags
+                标签
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                Categories
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="https://github.com/fairyeye" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/store"  >
-                <i class="icon icon-lg icon-link"></i>
-                store
+                来康康？
               </a>
             </li>
         
@@ -121,7 +114,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -181,14 +174,29 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
-添加依赖
+        <ol>
+<li>添加依赖</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-12345678910&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;/groupId&gt;    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;    &lt;version&gt;2.9.2&lt;/version&gt;&lt;/dependency...
+
+
+
+
+
+
+
+
+
+
+
+
+<p><a href="https://blog.csdn.net/huangjinjin520/article/details/89740672" target="_blank" rel="noopener">https://blog.csdn.net/huangjinjin520/article/details/89740672</a></p>
+
     
 
         <a href="/2020/04/26/RE-4Swagger/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -229,14 +237,19 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        错误的依赖正确的依赖
-1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;    &lt;artifactId&gt;spring-cloud-netflix-eureka-client&lt;/artifactId&gt;&lt;/dependency&gt;
+        <h5 id="错误的依赖"><a href="#错误的依赖" class="headerlink" title="错误的依赖"></a>错误的依赖</h5><p>正确的依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-使用IP注册到注...
+<h5 id="使用IP注册到注册中心"><a href="#使用IP注册到注册中心" class="headerlink" title="使用IP注册到注册中心"></a>使用IP注册到注册中心</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    hostname: $&#123;spring.cloud.client.ip-address&#125;</span><br><span class="line">    instance-id: $&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;</span><br><span class="line">    # 使用IP注册到注册中心</span><br><span class="line">    prefer-ip-address: true</span><br></pre></td></tr></table></figure>
+
+
+
+<p><a href="http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html</a></p>
+
     
 
         <a href="/2020/04/26/RE-2%E7%BD%91%E5%85%B3/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -277,11 +290,27 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        依赖：1234567891011121314151617&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;&lt;/dependency&gt;&lt;depen...
+        <h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">'?й???????'</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure>
+
+<p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>
+
     
 
         <a href="/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -322,11 +351,38 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Fegin123456789101112package com.fairyeye.feign;@FeignClient(name = "goods-service")public interface GoodsFeign &#123;    /**     *     * @param id     * @return     */    @GetMapping("/goods/select...
+        <h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p>
+<p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p>
+<p><strong>注册中心：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Application</th>
+<th align="left">AMIs</th>
+<th align="left">Availability Zones</th>
+<th align="left">Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>GOODS-SERVICE</strong></td>
+<td align="left"><strong>n/a</strong> (1)</td>
+<td align="left">(1)</td>
+<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td>
+</tr>
+<tr>
+<td align="left"><strong>USER-SERVICE</strong></td>
+<td align="left"><strong>n/a</strong> (1)</td>
+<td align="left">(1)</td>
+<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td>
+</tr>
+</tbody></table>
+<h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4>
     
 
         <a href="/2020/04/26/RE-5UserService&Fegin/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -348,6 +404,8 @@
         <time class="post-time" title="2020-04-26 14:25:50" datetime="2020-04-26T06:25:50.000Z"  itemprop="datePublished">2020-04-26</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%8A%98%E8%85%BE/">折腾</a></li></ul>
+
 
 
     </div>
@@ -367,14 +425,43 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        基础依赖1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;    &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;&lt;/dependency&gt;
+        <h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200426143308709.png" alt="image-20200426143308709" title="">
+                </div>
+                <div class="image-caption">image-20200426143308709</div>
+            </figure>
 
 
-      ...
+
+
+
+<h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>启动类上加<code>@EnableEurekaServer</code>注解</p>
+<p>store需要pom</p>
+<p><code>application.yml</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: store-eureka</span><br><span class="line">server:</span><br><span class="line">  port: 8000</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false</span><br><span class="line">    fetch-registry: false</span><br><span class="line">    serviceUrl:</span><br><span class="line">      defaultZone: http://dev.store.local:$&#123;server.port&#125;/eureka/</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">register-with-eureka: false  &#x2F;&#x2F; 注释之后才可以看到 available instance</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html</a></p>
+<h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p> 版本：8.0.19</p>
+
     
 
         <a href="/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -415,15 +502,49 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-         WHEN YOU HAVE A NEW PCJava环境配置1. 安装​    提前新建两个文件夹，jdk，jre，默认路径也可以
-​    安装jdk-8u111-windows-x64.exe
-​    设置jdk、jre的路径
-2. 配置环境变量​    右键此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  系统变量(S)
-​    只有系统变量...
+        <h3 id="WHEN-YOU-HAVE-A-NEW-PC"><a href="#WHEN-YOU-HAVE-A-NEW-PC" class="headerlink" title=" WHEN YOU HAVE A NEW PC"></a><center> WHEN YOU HAVE A NEW PC</center></h3><h4 id="Java环境配置"><a href="#Java环境配置" class="headerlink" title="Java环境配置"></a>Java环境配置</h4><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h5><p>​    提前新建两个文件夹，jdk，jre，默认路径也可以</p>
+<p>​    安装<code>jdk-8u111-windows-x64.exe</code></p>
+<p>​    设置jdk、jre的路径</p>
+<h5 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h5><p>​    右键此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  <strong>系统变量(S)</strong></p>
+<p>​    只有系统变量才是全局的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">新建	CLASSPATH	.;</span><br><span class="line">新建	JAVA_HOME	jdk路径</span><br><span class="line">修改	path		添加 %JAVA_HOME%\bin;</span><br><span class="line"></span><br><span class="line">测试	java -version</span><br><span class="line">	 javac -version</span><br></pre></td></tr></table></figure>
+
+<h4 id="Maven环境配置"><a href="#Maven环境配置" class="headerlink" title="Maven环境配置"></a>Maven环境配置</h4><ol>
+<li>解压<code>apache-maven-3.3.9.rar</code> 到指定的目录。</li>
+<li>修改配置文件（压缩包已修改过）。</li>
+</ol>
+<h4 id="GIT-工具"><a href="#GIT-工具" class="headerlink" title="GIT 工具"></a>GIT 工具</h4><h5 id="1-全局配置用户信息"><a href="#1-全局配置用户信息" class="headerlink" title="1. 全局配置用户信息"></a>1. 全局配置用户信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;fairy&quot;</span><br><span class="line">git config --global user.email &quot;fairy@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-生成key"><a href="#2-生成key" class="headerlink" title="2. 生成key"></a>2. 生成key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#39;email&#39; &#x2F;&#x2F; Email可选，会在key中生成你的邮箱信息  一直回车就行</span><br></pre></td></tr></table></figure>
+
+<p>​    生成的key文件  <code>C:\Users\你的用户名\.ssh\id_rsa.pub</code></p>
+<p>​    用文本编辑器打开，复制到GIT上。</p>
+<h5 id="3-上传项目到GIT"><a href="#3-上传项目到GIT" class="headerlink" title="3. 上传项目到GIT"></a>3. 上传项目到GIT</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 项目文件加夹</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:fairyeye&#x2F;StudyJava.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h4 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h4><p>安装<code>https://www.runoob.com/mysql/mysql-install.html</code></p>
+<p>修改初始密码</p>
+<p>MySQL版本5.7.6版本以前用户可以使用如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SET PASSWORD &#x3D; PASSWORD(&#39;your pwd&#39;);</span><br></pre></td></tr></table></figure>
+<p>MySQL版本5.7.6版本开始的用户可以使用如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER USER() IDENTIFIED BY &#39;your pwd&#39;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>登录报错 <code>https://www.cnblogs.com/lifan1998/p/9177731.html</code></p>
+<h4 id="去图标"><a href="#去图标" class="headerlink" title="去图标"></a>去图标</h4><p>​    管理员运行  <code>去图标.bat</code> 文件。</p>
+<h4 id="谷歌访问助手"><a href="#谷歌访问助手" class="headerlink" title="谷歌访问助手"></a>谷歌访问助手</h4><p>​    谷歌浏览器 -&gt; 更多工具 -&gt; 扩展程序 -&gt; 开发者模式(打开) 。</p>
+<p>​    拖动 <code>谷歌访问助手.crx</code> 到谷歌浏览器中。</p>
+<h4 id="软件安装清单"><a href="#软件安装清单" class="headerlink" title="软件安装清单"></a>软件安装清单</h4><ul>
+<li>IDEA：费什么话…你能像我一样用<code>Sublime</code>写代码？</li>
+<li>Chrome：先装个浏览器吧</li>
+</ul>
+
     
 
         <a href="/2020/04/26/WHEN%20YOU%20HAVE%20A%20NEW%20PC/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -458,19 +579,19 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        假如把一张表比作一间教室，数据比作学生。
-drop 就是把这件教师炸掉了，教室都没了，更不用说数据了。
-truncate 就是把学生开除了，离开了，再也没有了。
-delete 就是学生出去了，虽然他们可能不会回来了，但是位置还是要留着。
-Drop直接删掉表，这个没什么好说的。
-包括表结构，表数据，全部删除，占用的空间也会释放。
-Truncate截断表，会释放空间。
-Delete删除数据
+        <p>假如把一张表比作一间教室，数据比作学生。</p>
+<p><code>drop</code> 就是把这件教师炸掉了，教室都没了，更不用说数据了。</p>
+<p><code>truncate</code> 就是把学生开除了，离开了，再也没有了。</p>
+<p><code>delete</code> 就是学生出去了，虽然他们可能不会回来了，但是位置还是要留着。</p>
+<h4 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h4><p>直接删掉表，这个没什么好说的。</p>
+<p>包括表结构，表数据，全部删除，占用的空间也会释放。</p>
+<h4 id="Truncate"><a href="#Truncate" class="headerlink" title="Truncate"></a>Truncate</h4><p>截断表，会释放空间。</p>
+<h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4><p>删除数据</p>
 
     
 
         <a href="/2020/04/26/Delete%20&%20Truncate/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -511,13 +632,13 @@ Delete删除数据
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        12query -&gt; DataPermission	:
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">query -&gt; DataPermission</span><br><span class="line">	:</span><br></pre></td></tr></table></figure>
 
 
     
 
         <a href="/2020/04/26/10/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -552,11 +673,11 @@ Delete删除数据
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        @interface
+        <h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3>
     
 
         <a href="/2020/04/26/%E6%8C%96%E5%9D%91/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -591,22 +712,48 @@ Delete删除数据
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        
-
-    
-        页面标题
-        
+        <!DOCTYPE html>
+<html>
+    <head>
+        <title>页面标题</title>
+        <style>
         body {        background-image: url("../640.png"); } 
-        
-    
+        </style>
+    <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="人生当苦, 良人当归" type="application/atom+xml">
+</head>
+<body> 
 
- 
+<h1 id="String-转-Integer"><a href="#String-转-Integer" class="headerlink" title="String 转 Integer"></a>String 转 Integer</h1><h2 id="1-Integer的parseInt方法"><a href="#1-Integer的parseInt方法" class="headerlink" title="1.Integer的parseInt方法"></a>1.Integer的parseInt方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt----------&gt;123</span><br></pre></td></tr></table></figure>
 
-String 转 Integer1.Integer的parseInt方法12345String string &#x3D; &quot;123&quot;;int value ...
+<h2 id="2-Integer的valueOf方法"><a href="#2-Integer的valueOf方法" class="headerlink" title="2.Integer的valueOf方法"></a>2.Integer的valueOf方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">Integer value &#x3D; Integer.valueOf(string);</span><br><span class="line">System.out.println(&quot;stringToInt1----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt1----------&gt;123</span><br></pre></td></tr></table></figure>
+
+<p>以上两种方法都是可行的。</p>
+<p>但是会有特殊的情况，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:16)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br></pre></td></tr></table></figure>
+
+<p>使用stringToInt1()也会返回同样的错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static Integer valueOf(String s) throws NumberFormatException &#123;</span><br><span class="line">    return Integer.valueOf(parseInt(s, 10));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>valueOf()调用了parseInt()，所以返回同样的错误是正常的。</p>
+<p>按照正常的逻辑来说，我们需要对这个错误进行处理，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; 0;</span><br><span class="line">try &#123;</span><br><span class="line">    value &#x3D; Integer.parseInt(string);</span><br><span class="line">&#125; catch (NumberFormatException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;StringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:18)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br><span class="line">StringToInt----------&gt;0</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，虽然依然报错，但是程序还是继续执行了。</p>
+<p>然后回到主题。</p>
+<h2 id="3-Guava-的-Ints-结合-Java8-的-Optional"><a href="#3-Guava-的-Ints-结合-Java8-的-Optional" class="headerlink" title="3.Guava 的 Ints 结合 Java8 的 Optional"></a>3.Guava 的 Ints 结合 Java8 的 Optional</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(0);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;0</span><br></pre></td></tr></table></figure>
+
+<p>可以在转换失败的时候为他设置默认值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(100);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;100</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>写在末尾：之所以写这么详细是因为最开始的时候我很菜，看别人写的文档都很简单，虽然可以解决问题，但是却不解其意，所以写的啰嗦一点，对新手比较友好。</strong></p>
+<p>​    </body></p>
+</html>
     
 
         <a href="/2020/04/26/StringToInteger/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -643,7 +790,7 @@ String 转 Integer1.Integer的parseInt方法12345String string &#x3D; &quot;123&
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -750,7 +897,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '404 Not Found!';
             clearTimeout(titleTime);
         } else {
             document.title = '(つェ⊂)咦!又好了!';
