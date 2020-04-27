@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-26T01:31:18.797Z</updated>
+  <updated>2020-04-27T02:20:39.101Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,190 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RE-4Swagger</title>
+    <link href="http://yoursite.com/2020/04/27/RE-4Swagger/"/>
+    <id>http://yoursite.com/2020/04/27/RE-4Swagger/</id>
+    <published>2020-04-27T01:50:25.816Z</published>
+    <updated>2020-04-27T02:20:39.101Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>添加依赖</li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p><a href="https://blog.csdn.net/huangjinjin520/article/details/89740672" target="_blank" rel="noopener">https://blog.csdn.net/huangjinjin520/article/details/89740672</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;添加依赖&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RE-3用户服务</title>
+    <link href="http://yoursite.com/2020/04/27/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/"/>
+    <id>http://yoursite.com/2020/04/27/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/</id>
+    <published>2020-04-27T01:47:56.127Z</published>
+    <updated>2020-04-27T02:20:47.764Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure><h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure><h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">'?й???????'</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure><p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;依赖：&quot;&gt;&lt;a href=&quot;#依赖：&quot; class=&quot;headerlink&quot; title=&quot;依赖：&quot;&gt;&lt;/a&gt;依赖：&lt;/h4&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RE:2网关</title>
+    <link href="http://yoursite.com/2020/04/26/RE-2%E7%BD%91%E5%85%B3/"/>
+    <id>http://yoursite.com/2020/04/26/RE-2%E7%BD%91%E5%85%B3/</id>
+    <published>2020-04-26T07:25:10.000Z</published>
+    <updated>2020-04-26T08:24:28.904Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="错误的依赖"><a href="#错误的依赖" class="headerlink" title="错误的依赖"></a>错误的依赖</h5><p>正确的依赖</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="使用IP注册到注册中心"><a href="#使用IP注册到注册中心" class="headerlink" title="使用IP注册到注册中心"></a>使用IP注册到注册中心</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    hostname: $&#123;spring.cloud.client.ip-address&#125;</span><br><span class="line">    instance-id: $&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;</span><br><span class="line">    # 使用IP注册到注册中心</span><br><span class="line">    prefer-ip-address: true</span><br></pre></td></tr></table></figure><p><a href="http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;错误的依赖&quot;&gt;&lt;a href=&quot;#错误的依赖&quot; class=&quot;headerlink&quot; title=&quot;错误的依赖&quot;&gt;&lt;/a&gt;错误的依赖&lt;/h5&gt;&lt;p&gt;正确的依赖&lt;/p&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
+      
+    
+    </summary>
+    
+    
+    
+      <category term="store" scheme="http://yoursite.com/tags/store/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RE:1 注册中心</title>
+    <link href="http://yoursite.com/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+    <id>http://yoursite.com/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</id>
+    <published>2020-04-26T06:25:50.000Z</published>
+    <updated>2020-04-27T02:18:52.199Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200426143308709.png" alt="image-20200426143308709" title="">                </div>                <div class="image-caption">image-20200426143308709</div>            </figure><h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>启动类上加<code>@EnableEurekaServer</code>注解</p><p>store需要pom</p><p><code>application.yml</code></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: store-eureka</span><br><span class="line">server:</span><br><span class="line">  port: 8000</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false</span><br><span class="line">    fetch-registry: false</span><br><span class="line">    serviceUrl:</span><br><span class="line">      defaultZone: http://dev.store.local:$&#123;server.port&#125;/eureka/</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">register-with-eureka: false  &#x2F;&#x2F; 注释之后才可以看到 available instance</span><br></pre></td></tr></table></figure><p>参考：</p><p><a href="http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html</a></p><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p> 版本：8.0.19</p>]]></content>
+    
+    <summary type="html">
+    
+      先搞注册中心
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WHEN YOU HAVE A NEW PC</title>
+    <link href="http://yoursite.com/2020/04/26/WHEN%20YOU%20HAVE%20A%20NEW%20PC/"/>
+    <id>http://yoursite.com/2020/04/26/WHEN%20YOU%20HAVE%20A%20NEW%20PC/</id>
+    <published>2020-04-26T03:55:38.637Z</published>
+    <updated>2020-04-26T09:06:37.610Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="WHEN-YOU-HAVE-A-NEW-PC"><a href="#WHEN-YOU-HAVE-A-NEW-PC" class="headerlink" title=" WHEN YOU HAVE A NEW PC"></a><center> WHEN YOU HAVE A NEW PC</center></h3><h4 id="Java环境配置"><a href="#Java环境配置" class="headerlink" title="Java环境配置"></a>Java环境配置</h4><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h5><p>​    提前新建两个文件夹，jdk，jre，默认路径也可以</p><p>​    安装<code>jdk-8u111-windows-x64.exe</code></p><p>​    设置jdk、jre的路径</p><h5 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h5><p>​    右键此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  <strong>系统变量(S)</strong></p><p>​    只有系统变量才是全局的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">新建CLASSPATH.;</span><br><span class="line">新建JAVA_HOMEjdk路径</span><br><span class="line">修改path添加 %JAVA_HOME%\bin;</span><br><span class="line"></span><br><span class="line">测试java -version</span><br><span class="line"> javac -version</span><br></pre></td></tr></table></figure><h4 id="Maven环境配置"><a href="#Maven环境配置" class="headerlink" title="Maven环境配置"></a>Maven环境配置</h4><ol><li>解压<code>apache-maven-3.3.9.rar</code> 到指定的目录。</li><li>修改配置文件（压缩包已修改过）。</li></ol><h4 id="GIT-工具"><a href="#GIT-工具" class="headerlink" title="GIT 工具"></a>GIT 工具</h4><h5 id="1-全局配置用户信息"><a href="#1-全局配置用户信息" class="headerlink" title="1. 全局配置用户信息"></a>1. 全局配置用户信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;fairy&quot;</span><br><span class="line">git config --global user.email &quot;fairy@gmail.com&quot;</span><br></pre></td></tr></table></figure><h5 id="2-生成key"><a href="#2-生成key" class="headerlink" title="2. 生成key"></a>2. 生成key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#39;email&#39; &#x2F;&#x2F; Email可选，会在key中生成你的邮箱信息  一直回车就行</span><br></pre></td></tr></table></figure><p>​    生成的key文件  <code>C:\Users\你的用户名\.ssh\id_rsa.pub</code></p><p>​    用文本编辑器打开，复制到GIT上。</p><h5 id="3-上传项目到GIT"><a href="#3-上传项目到GIT" class="headerlink" title="3. 上传项目到GIT"></a>3. 上传项目到GIT</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 项目文件加夹</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:fairyeye&#x2F;StudyJava.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><h4 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h4><p>安装<code>https://www.runoob.com/mysql/mysql-install.html</code></p><p>修改初始密码</p><p>MySQL版本5.7.6版本以前用户可以使用如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SET PASSWORD &#x3D; PASSWORD(&#39;your pwd&#39;);</span><br></pre></td></tr></table></figure><p>MySQL版本5.7.6版本开始的用户可以使用如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER USER() IDENTIFIED BY &#39;your pwd&#39;;</span><br></pre></td></tr></table></figure><p>登录报错 <code>https://www.cnblogs.com/lifan1998/p/9177731.html</code></p><h4 id="去图标"><a href="#去图标" class="headerlink" title="去图标"></a>去图标</h4><p>​    管理员运行  <code>去图标.bat</code> 文件。</p><h4 id="谷歌访问助手"><a href="#谷歌访问助手" class="headerlink" title="谷歌访问助手"></a>谷歌访问助手</h4><p>​    谷歌浏览器 -&gt; 更多工具 -&gt; 扩展程序 -&gt; 开发者模式(打开) 。</p><p>​    拖动 <code>谷歌访问助手.crx</code> 到谷歌浏览器中。</p><h4 id="软件安装清单"><a href="#软件安装清单" class="headerlink" title="软件安装清单"></a>软件安装清单</h4><ul><li>IDEA：费什么话…你能像我一样用<code>Sublime</code>写代码？</li><li>Chrome：先装个浏览器吧</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;WHEN-YOU-HAVE-A-NEW-PC&quot;&gt;&lt;a href=&quot;#WHEN-YOU-HAVE-A-NEW-PC&quot; class=&quot;headerlink&quot; title=&quot; WHEN YOU HAVE A NEW PC&quot;&gt;&lt;/a&gt;&lt;center&gt; WHEN YOU H
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Delete/Truncate/Drop</title>
+    <link href="http://yoursite.com/2020/04/26/Delete%20&amp;%20Truncate/"/>
+    <id>http://yoursite.com/2020/04/26/Delete%20&amp;%20Truncate/</id>
+    <published>2020-04-26T03:55:38.631Z</published>
+    <updated>2020-04-22T09:44:47.286Z</updated>
+    
+    <content type="html"><![CDATA[<p>假如把一张表比作一间教室，数据比作学生。</p><p><code>drop</code> 就是把这件教师炸掉了，教室都没了，更不用说数据了。</p><p><code>truncate</code> 就是把学生开除了，离开了，再也没有了。</p><p><code>delete</code> 就是学生出去了，虽然他们可能不会回来了，但是位置还是要留着。</p><h4 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h4><p>直接删掉表，这个没什么好说的。</p><p>包括表结构，表数据，全部删除，占用的空间也会释放。</p><h4 id="Truncate"><a href="#Truncate" class="headerlink" title="Truncate"></a>Truncate</h4><p>截断表，会释放空间。</p><h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4><p>删除数据</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;假如把一张表比作一间教室，数据比作学生。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;drop&lt;/code&gt; 就是把这件教师炸掉了，教室都没了，更不用说数据了。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;truncate&lt;/code&gt; 就是把学生开除了，离开了，再也没有了。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;del
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10</title>
+    <link href="http://yoursite.com/2020/04/26/10/"/>
+    <id>http://yoursite.com/2020/04/26/10/</id>
+    <published>2020-04-26T03:55:38.619Z</published>
+    <updated>2020-04-14T01:39:55.883Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">query -&gt; DataPermission</span><br><span class="line">:</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>挖坑</title>
+    <link href="http://yoursite.com/2020/04/26/%E6%8C%96%E5%9D%91/"/>
+    <id>http://yoursite.com/2020/04/26/%E6%8C%96%E5%9D%91/</id>
+    <published>2020-04-26T03:55:38.617Z</published>
+    <updated>2020-04-27T01:46:33.601Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;interface&quot;&gt;&lt;a href=&quot;#interface&quot; class=&quot;headerlink&quot; title=&quot;@interface&quot;&gt;&lt;/a&gt;@interface&lt;/h3&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>StringToInteger</title>
@@ -41,6 +225,245 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>GC</title>
+    <link href="http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/</id>
+    <published>2020-04-23T16:00:00.000Z</published>
+    <updated>2020-04-26T03:51:36.331Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​    原理：是否有对象引用。</p><p>​    <figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="D:\workspace\gitee\StaticFile\image\Reference" alt="Reference counting" title="counting.png">                </div>                <div class="image-caption">counting.png</div>            </figure></p><p>​    缺点：如果两个对象互相引用，会造成内存泄漏。</p><h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​    </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;引用计数算法&quot;&gt;&lt;a href=&quot;#引用计数算法&quot; class=&quot;headerlink&quot; title=&quot;引用计数算法&quot;&gt;&lt;/a&gt;引用计数算法&lt;/h4&gt;&lt;p&gt;​    原理：是否有对象引用。&lt;/p&gt;
+&lt;p&gt;​    &lt;figure class=&quot;image-bubb
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>22</title>
+    <link href="http://yoursite.com/2020/04/22/22/"/>
+    <id>http://yoursite.com/2020/04/22/22/</id>
+    <published>2020-04-22T03:08:07.000Z</published>
+    <updated>2020-04-22T03:24:33.699Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h4><table><thead><tr><th>Modifier and Type</th><th>Method and Description</th></tr></thead><tbody><tr><td><code>BigDecimal</code></td><td><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td></tr><tr><td></td><td></td></tr><tr><td><code>BigDecimal</code></td><td><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td></tr><tr><td></td><td></td></tr><tr><td><code>BigDecimal</code></td><td><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td></tr><tr><td></td><td></td></tr><tr><td><code>BigDecimal</code></td><td><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td></tr><tr><td></td><td></td></tr><tr><td><code>double</code></td><td><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><table><thead><tr><th align="left">Modifier and Type</th><th align="left">Method and Description</th></tr></thead><tbody><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>abs()</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, and whose scale is <code>this.scale()</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>abs(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>byte</code></td><td align="left"><code>byteValueExact()</code>Converts this <code>BigDecimal</code> to a <code>byte</code>, checking for lost information.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>compareTo(BigDecimal val)</code>Compares this <code>BigDecimal</code> with the specified <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divide(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose preferred scale is <code>(this.scale() - divisor.scale())</code>; if the exact quotient cannot be represented (because it has a non-terminating decimal expansion) an <code>ArithmeticException</code> is thrown.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divide(BigDecimal divisor, int scale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divide(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divide(BigDecimal divisor, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td></tr><tr><td align="left"><code>BigDecimal[]</code></td><td align="left"><code>divideAndRemainder(BigDecimal divisor)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands.</td></tr><tr><td align="left"><code>BigDecimal[]</code></td><td align="left"><code>divideAndRemainder(BigDecimal divisor, MathContext mc)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands calculated with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divideToIntegralValue(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is the integer part of the quotient <code>(this / divisor)</code> rounded down.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>divideToIntegralValue(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the integer part of <code>(this / divisor)</code>.</td></tr><tr><td align="left"><code>double</code></td><td align="left"><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td></tr><tr><td align="left"><code>boolean</code></td><td align="left"><code>equals(Object x)</code>Compares this <code>BigDecimal</code> with the specified <code>Object</code> for equality.</td></tr><tr><td align="left"><code>float</code></td><td align="left"><code>floatValue()</code>Converts this <code>BigDecimal</code> to a <code>float</code>.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>hashCode()</code>Returns the hash code for this <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>intValue()</code>Converts this <code>BigDecimal</code> to an <code>int</code>.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>intValueExact()</code>Converts this <code>BigDecimal</code> to an <code>int</code>, checking for lost information.</td></tr><tr><td align="left"><code>long</code></td><td align="left"><code>longValue()</code>Converts this <code>BigDecimal</code> to a <code>long</code>.</td></tr><tr><td align="left"><code>long</code></td><td align="left"><code>longValueExact()</code>Converts this <code>BigDecimal</code> to a <code>long</code>, checking for lost information.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>max(BigDecimal val)</code>Returns the maximum of this <code>BigDecimal</code> and <code>val</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>min(BigDecimal val)</code>Returns the minimum of this <code>BigDecimal</code> and <code>val</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>movePointLeft(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the left.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>movePointRight(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the right.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>multiply(BigDecimal multiplicand)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, and whose scale is <code>(this.scale() + multiplicand.scale())</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>multiply(BigDecimal multiplicand, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>negate()</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, and whose scale is <code>this.scale()</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>negate(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>plus()</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, and whose scale is <code>this.scale()</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>plus(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>pow(int n)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>, The power is computed exactly, to unlimited precision.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>pow(int n, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>precision()</code>Returns the <em>precision</em> of this <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>remainder(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>remainder(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>round(MathContext mc)</code>Returns a <code>BigDecimal</code> rounded according to the <code>MathContext</code> settings.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>scale()</code>Returns the <em>scale</em> of this <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>scaleByPowerOfTen(int n)</code>Returns a BigDecimal whose numerical value is equal to (<code>this</code> * 10n).</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>setScale(int newScale)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose value is numerically equal to this <code>BigDecimal</code>‘s.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>setScale(int newScale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>setScale(int newScale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td></tr><tr><td align="left"><code>short</code></td><td align="left"><code>shortValueExact()</code>Converts this <code>BigDecimal</code> to a <code>short</code>, checking for lost information.</td></tr><tr><td align="left"><code>int</code></td><td align="left"><code>signum()</code>Returns the signum function of this <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>stripTrailingZeros()</code>Returns a <code>BigDecimal</code> which is numerically equal to this one but with any trailing zeros removed from the representation.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>subtract(BigDecimal subtrahend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, and whose scale is <code>max(this.scale(), subtrahend.scale())</code>.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>subtract(BigDecimal subtrahend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, with rounding according to the context settings.</td></tr><tr><td align="left"><code>BigInteger</code></td><td align="left"><code>toBigInteger()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>.</td></tr><tr><td align="left"><code>BigInteger</code></td><td align="left"><code>toBigIntegerExact()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>, checking for lost information.</td></tr><tr><td align="left"><code>String</code></td><td align="left"><code>toEngineeringString()</code>Returns a string representation of this <code>BigDecimal</code>, using engineering notation if an exponent is needed.</td></tr><tr><td align="left"><code>String</code></td><td align="left"><code>toPlainString()</code>Returns a string representation of this <code>BigDecimal</code> without an exponent field.</td></tr><tr><td align="left"><code>String</code></td><td align="left"><code>toString()</code>Returns the string representation of this <code>BigDecimal</code>, using scientific notation if an exponent is needed.</td></tr><tr><td align="left"><code>BigDecimal</code></td><td align="left"><code>ulp()</code>Returns the size of an ulp, a unit in the last place, of this <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>BigInteger</code></td><td align="left"><code>unscaledValue()</code>Returns a <code>BigInteger</code> whose value is the <em>unscaled value</em> of this <code>BigDecimal</code>.</td></tr><tr><td align="left"><code>static BigDecimal</code></td><td align="left"><code>valueOf(double val)</code>Translates a <code>double</code> into a <code>BigDecimal</code>, using the <code>double</code>‘s canonical string representation provided by the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#toString-double-" target="_blank" rel="noopener"><code>Double.toString(double)</code></a> method.</td></tr><tr><td align="left"><code>static BigDecimal</code></td><td align="left"><code>valueOf(long val)</code>Translates a <code>long</code> value into a <code>BigDecimal</code> with a scale of zero.</td></tr><tr><td align="left"><code>static BigDecimal</code></td><td align="left"><code>valueOf(long unscaledVal, int scale)</code>Translates a <code>long</code> unscaled value and an <code>int</code> scale into a <code>BigDecimal</code>.</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Calendar&quot;&gt;&lt;a href=&quot;#Calendar&quot; class=&quot;headerlink&quot; title=&quot;Calendar&quot;&gt;&lt;/a&gt;Calendar&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Modifier and Type&lt;/th&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20</title>
+    <link href="http://yoursite.com/2020/04/20/20/"/>
+    <id>http://yoursite.com/2020/04/20/20/</id>
+    <published>2020-04-20T03:00:50.000Z</published>
+    <updated>2020-04-26T03:53:32.152Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="String数组转int数组"><a href="#String数组转int数组" class="headerlink" title="String数组转int数组"></a><a href="https://www.cnblogs.com/ukzq/p/11965382.html" target="_blank" rel="noopener">String数组转int数组</a></h1><p>假设我们有一个字符串数组：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] strings &#x3D; &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure><p>使用<em>Lambda表达式</em>（自Java 8起）：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure><p>另一种方式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;String数组转int数组&quot;&gt;&lt;a href=&quot;#String数组转int数组&quot; class=&quot;headerlink&quot; title=&quot;String数组转int数组&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblogs.com/ukzq/p/1196
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>17</title>
+    <link href="http://yoursite.com/2020/04/17/17/"/>
+    <id>http://yoursite.com/2020/04/17/17/</id>
+    <published>2020-04-17T02:59:54.000Z</published>
+    <updated>2020-04-17T07:04:19.371Z</updated>
+    
+    <content type="html"><![CDATA[<p>场景：</p><p>参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,</p><p>可以用 ||</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if （Objects.isNull(list) || list &#x3D;&#x3D; 0） &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。</code></p><p><strong>File - &gt;  Other Setting -&gt; Setting For New Projects</strong> 全局配置</p><p>maven默认仓库地址，选择本地的地址</p><p><code>&lt;localRepository&gt;D:\maven_repo&lt;/localRepository&gt;</code></p><p>Setting -&gt; file and code temeplate -&gt; include</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;场景：&lt;/p&gt;
+&lt;p&gt;参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,&lt;/p&gt;
+&lt;p&gt;可以用 ||&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tab
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间戳 -&gt; Date</title>
+    <link href="http://yoursite.com/2020/04/17/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/04/17/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/</id>
+    <published>2020-04-17T02:59:54.000Z</published>
+    <updated>2020-04-26T07:20:05.475Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><p>后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date(<span class="number">1579676844</span>); <span class="comment">// 1970-01-19T14:47:56.844+0800</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date(<span class="number">1579676844</span> * <span class="number">1000L</span>); <span class="comment">// 2020-01-22T15:07:24.000+0800</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;基础依赖&quot;&gt;&lt;a href=&quot;#基础依赖&quot; class=&quot;headerlink&quot; title=&quot;基础依赖&quot;&gt;&lt;/a&gt;基础依赖&lt;/h4&gt;&lt;p&gt;后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。&lt;/p&gt;
+&lt;figure class=&quot;highligh
+      
+    
+    </summary>
+    
+    
+    
+      <category term="basic" scheme="http://yoursite.com/tags/basic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>interface</title>
+    <link href="http://yoursite.com/2020/04/16/interface/"/>
+    <id>http://yoursite.com/2020/04/16/interface/</id>
+    <published>2020-04-16T08:58:48.000Z</published>
+    <updated>2020-04-24T07:17:07.874Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;​    &lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="work" scheme="http://yoursite.com/tags/work/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 8 Stream</title>
+    <link href="http://yoursite.com/2020/04/16/16/"/>
+    <id>http://yoursite.com/2020/04/16/16/</id>
+    <published>2020-04-16T02:16:54.000Z</published>
+    <updated>2020-04-17T07:47:31.947Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stream&lt;T&gt; <span class="title">filter</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; predicate)</span></span></span><br></pre></td></tr></table></figure><p>Returns a stream consisting of the elements of this stream that match the given predicate.</p><p>This is an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#StreamOps" target="_blank" rel="noopener">intermediate operation</a>.</p><ul><li><p><strong>Parameters:</strong></p><p>predicate - a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference" target="_blank" rel="noopener">non-interfering</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness" target="_blank" rel="noopener">stateless</a> predicate to apply to each element to determine if it should be included</p></li><li><p><strong>Returns:</strong></p><p>the new stream</p></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过条件筛选</span></span><br><span class="line">list.stream().filter(User -&gt; StringUtils.isEmpty(User.getUserName));</span><br></pre></td></tr></table></figure><h5 id="GroupBy"><a href="#GroupBy" class="headerlink" title="GroupBy"></a>GroupBy</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过条件分组</span></span><br><span class="line">Map&lt;String, List&lt;User&gt;&gt; groupMap = list.stream().collect(Collectors.groupingBy(User::getName));</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;Filter&quot;&gt;&lt;a href=&quot;#Filter&quot; class=&quot;headerlink&quot; title=&quot;Filter&quot;&gt;&lt;/a&gt;Filter&lt;/h5&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>15</title>
+    <link href="http://yoursite.com/2020/04/15/15/"/>
+    <id>http://yoursite.com/2020/04/15/15/</id>
+    <published>2020-04-15T06:34:30.000Z</published>
+    <updated>2020-04-15T09:26:47.598Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>内部类问题</title>
+    <link href="http://yoursite.com/2020/04/14/14/"/>
+    <id>http://yoursite.com/2020/04/14/14/</id>
+    <published>2020-04-14T01:41:32.000Z</published>
+    <updated>2020-04-14T01:57:50.242Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">错误描述信息：</span><br><span class="line">org.fairy.eye.domin.entity.User is not an enclosing class</span><br></pre></td></tr></table></figure><p>​        在 new 一个内部类的对象时，idea 会生成如下的代码。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Info 是User的内部类</span><br><span class="line">User.Info info &#x3D; new User.Info();</span><br></pre></td></tr></table></figure><p>​        然后会提示报错 <code>org.fairy.eye.domin.entity.User is not an enclosing class</code></p><p>​        如果内部类没有用 <code>static</code> 修饰的话，是不能这样 new 的。</p><p>​        需要有外部类实例对象来支持。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user &#x3D; new User();</span><br><span class="line">User.Info info &#x3D; new user.Info();</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GIT代码无法合并+本地构建成功服务器构建失败</title>
+    <link href="http://yoursite.com/2020/04/13/13/"/>
+    <id>http://yoursite.com/2020/04/13/13/</id>
+    <published>2020-04-13T01:13:28.000Z</published>
+    <updated>2020-04-15T09:32:05.798Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-GIT相关"><a href="#1-GIT相关" class="headerlink" title="1.GIT相关"></a>1.GIT相关</h4><h5 id="场景："><a href="#场景：" class="headerlink" title="场景："></a>场景：</h5><p>​        GIT版本出了点问题，无法正常合并代码</p><h5 id="具体描述："><a href="#具体描述：" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。</p><p>​        无奈之下，我选择回滚代码。</p><h5 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h5><p><strong>第一种方法：<code>注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没有别的人提交</code></strong></p><ol><li><p>首先要找到你要回滚的版本号。</p><p>​    在idea中操作：右键项目 -&gt; Git -&gt; Show History -&gt; 右键提交的版本 -&gt; Copy Revision Number。</p><p>​    在GIT中操作：找到提交的历史，SHA 值，即为版本号。</p></li><li><p>Git Bush 命令行/idea TerMinal 命令行</p><p>​    <code>git reset --hard 版本号</code></p></li></ol><p><strong>第二种方法：</strong></p><ol><li>找到版本号，同上。</li><li>右键项目 -&gt; Git -&gt; Repository -&gt; Reset HEAD</li><li>在 To Commit 中输入版本号</li></ol><p><img src="C:%5CUsers%5Chuapeng.zhang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200414092630073.png" alt="回滚代码"></p><h5 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h5><p>​        <strong>记得一定要提交代码，即使看起来没有要 push 的东西，否则 git pull 之后等于没回滚。</strong></p><h4 id="2-构建相关"><a href="#2-构建相关" class="headerlink" title="2.构建相关"></a>2.构建相关</h4><h5 id="场景：-1"><a href="#场景：-1" class="headerlink" title="场景："></a>场景：</h5><p>​        回滚代码之后，本地可以成功构建，但服务器端无法正常构建。</p><h5 id="具体描述：-1"><a href="#具体描述：-1" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        服务器端构建一直失败，好像是拉取到了错误版本的代码。</p><h5 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h5><p>​        暴脾气的我本来打算把项目删了重新拉一个下来，后来忍住了，在服务器端回滚了一下代码，然后手动构建了一下，居然成功了，完结。</p><h5 id="最后：-1"><a href="#最后：-1" class="headerlink" title="最后："></a>最后：</h5><p>​        虽然没什么有用的东西，不过思路还是有的。</p><p>​        首先你要确认本地构建的代码是否和服务器完全相同、服务器构建的时候是否pull了最新的代码…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;1-GIT相关&quot;&gt;&lt;a href=&quot;#1-GIT相关&quot; class=&quot;headerlink&quot; title=&quot;1.GIT相关&quot;&gt;&lt;/a&gt;1.GIT相关&lt;/h4&gt;&lt;h5 id=&quot;场景：&quot;&gt;&lt;a href=&quot;#场景：&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
     
   </entry>
   

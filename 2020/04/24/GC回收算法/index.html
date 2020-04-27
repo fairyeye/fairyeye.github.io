@@ -14,22 +14,27 @@
     
     
     
-    <title>categories | 人生当苦, 良人当归</title>
+    <title>GC | 人生当苦, 良人当归</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="keywords" content="dairy">
+    <meta name="description" content="引用计数算法​    原理：是否有对象引用。 ​                                                                                                 counting.png              ​    缺点：如果两个对象互相引用，会造成内存泄漏。 可达性分析法​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GC">
+<meta property="og:url" content="http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="人生当苦, 良人当归">
+<meta property="og:description" content="引用计数算法​    原理：是否有对象引用。 ​                                                                                                 counting.png              ​    缺点：如果两个对象互相引用，会造成内存泄漏。 可达性分析法​">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-26T02:45:15.000Z">
-<meta property="article:modified_time" content="2020-04-26T02:45:15.531Z">
+<meta property="og:image" content="d:/workspace/gitee/StaticFile/image/Reference">
+<meta property="article:published_time" content="2020-04-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-26T03:51:36.331Z">
 <meta property="article:author" content="fairyeye">
+<meta property="article:tag" content="dairy">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/workspace/gitee/StaticFile/image/Reference">
     
         <link rel="alternate" type="application/atom+xml" title="人生当苦, 良人当归" href="/atom.xml">
     
@@ -85,7 +90,7 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
@@ -117,7 +122,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">categories</div>
+        <div class="flex-col header-title ellipsis">GC</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -136,11 +141,17 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">categories</h1>
+        <h1 class="title">GC</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2020-04-23T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2020-04-24
+</time>
+
+
             
         </h5>
     </div>
@@ -152,19 +163,80 @@
 
 
 <div class="container body-wrap">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引用计数算法"><span class="post-toc-number">1.</span> <span class="post-toc-text">引用计数算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#可达性分析法"><span class="post-toc-number">2.</span> <span class="post-toc-text">可达性分析法</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-GC回收算法"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">GC</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-24 00:00:00" datetime="2020-04-23T16:00:00.000Z"  itemprop="datePublished">2020-04-24</time>
+
             
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​    原理：是否有对象引用。</p>
+<p>​    <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="D:\workspace\gitee\StaticFile\image\Reference" alt="Reference counting" title="counting.png">
+                </div>
+                <div class="image-caption">counting.png</div>
+            </figure></p>
+<p>​    缺点：如果两个对象互相引用，会造成内存泄漏。</p>
+<h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​    </p>
+
         </div>
 
+        <blockquote class="post-copyright">
+    
+    <div class="content">
         
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>fairyeye</strong></p>
-                <p><em></em></p>
-                <p>用户页面中作者相关的描述性文字，如不需要设为 false</p>
-            </div>
+<span class="post-time">
+    Last updated: <time datetime="2020-04-26T03:51:36.331Z" itemprop="dateUpdated">2020-04-26 11:51:36</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" target="_blank" rel="external">http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="fairyeye">
+            fairyeye
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -173,7 +245,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/categories/&title=《categories》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/&title=《GC》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -183,22 +255,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/categories/&title=《categories》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/&title=《GC》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/categories/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《categories》 — 人生当苦, 良人当归&url=http://yoursite.com/categories/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GC》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/categories/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -215,38 +287,54 @@
 
 
         </div>
-        
+    </div>
 
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </article>
     
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/04/26/StringToInteger/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">StringToInteger</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/04/22/22/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">22</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
 <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
@@ -272,6 +360,7 @@
         
     </div>
 </div>
+
 
 
 </div>
@@ -315,7 +404,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/categories/&title=《categories》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/&title=《GC》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -325,22 +414,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/categories/&title=《categories》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/&title=《GC》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/categories/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《categories》 — 人生当苦, 良人当归&url=http://yoursite.com/categories/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GC》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/categories/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -351,7 +440,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/categories/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
 </div>
 
 
