@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f67c46-ed3a-489c-9432-dfa67776b5a0" name="Default Changelist" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/RE-1注册中心.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/RE-1注册中心.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/categories/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/categories/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/store/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/tags/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/tags/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/RE-5UserService&amp;Fegin.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/RE-5UserService&amp;Fegin.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,7 @@
       <workItem from="1587820075016" duration="342000" />
       <workItem from="1587864698899" duration="1232000" />
       <workItem from="1587867134929" duration="1616000" />
-      <workItem from="1587968164252" duration="1803000" />
+      <workItem from="1587968164252" duration="2410000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1587865659117</created>
