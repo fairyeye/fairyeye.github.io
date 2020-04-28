@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-27T05:58:34.100Z</updated>
+  <updated>2020-04-28T10:20:47.201Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL连接问题</title>
+    <link href="http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</id>
+    <published>2020-04-28T10:15:49.000Z</published>
+    <updated>2020-04-28T10:20:47.201Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天接了一个任务，把之前写好的<code>Mapper</code> 中的SQL多连接一张表，</p><p>然后中间出现了一个问题</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ui.name <span class="keyword">FROM</span> school s,<span class="keyword">user</span> u <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> user_info ui <span class="keyword">ON</span> u.id = ui.id;</span><br></pre></td></tr></table></figure><p>这样是没错的，但是如果把表的顺序换一下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT ui.name FROM user u,school s LEFT JOIN user_info ui ON u.id &#x3D; ui.id;</span><br></pre></td></tr></table></figure><p>就会出问题，理论上来说这样是正常的，但是刚开始的时候确实忽略的这个问题</p><p>毕竟有前辈写的代码，实战中都是很多张表关联。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天接了一个任务，把之前写好的&lt;code&gt;Mapper&lt;/code&gt; 中的SQL多连接一张表，&lt;/p&gt;
+&lt;p&gt;然后中间出现了一个问题&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
   
   <entry>
     <title>RE:4Swagger</title>
@@ -97,9 +123,9 @@
     <link href="http://yoursite.com/2020/04/26/RE-5UserService&amp;Fegin/"/>
     <id>http://yoursite.com/2020/04/26/RE-5UserService&amp;Fegin/</id>
     <published>2020-04-26T07:25:10.000Z</published>
-    <updated>2020-04-27T05:59:13.050Z</updated>
+    <updated>2020-04-27T09:06:03.848Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p><p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p><p><strong>注册中心：</strong></p><table><thead><tr><th align="left">Application</th><th align="left">AMIs</th><th align="left">Availability Zones</th><th align="left">Status</th></tr></thead><tbody><tr><td align="left"><strong>GOODS-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr><tr><td align="left"><strong>USER-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr></tbody></table><h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4>]]></content>
+    <content type="html"><![CDATA[<h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p><p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p><p><strong>注册中心：</strong></p><table><thead><tr><th align="left">Application</th><th align="left">AMIs</th><th align="left">Availability Zones</th><th align="left">Status</th></tr></thead><tbody><tr><td align="left"><strong>GOODS-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr><tr><td align="left"><strong>USER-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr></tbody></table><h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4><p><a href="https://github.com/fairyeye/store" target="_blank" rel="noopener">https://github.com/fairyeye/store</a></p><p>1+1+1+1+1+1+1 = 7</p><p>6+5+4+3+2+1 = </p>]]></content>
     
     <summary type="html">
     
@@ -465,30 +491,6 @@
       
       
         &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
-      
-    
-    </summary>
-    
-    
-    
-      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIT代码无法合并+本地构建成功服务器构建失败</title>
-    <link href="http://yoursite.com/2020/04/13/13/"/>
-    <id>http://yoursite.com/2020/04/13/13/</id>
-    <published>2020-04-13T01:13:28.000Z</published>
-    <updated>2020-04-15T09:32:05.798Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="1-GIT相关"><a href="#1-GIT相关" class="headerlink" title="1.GIT相关"></a>1.GIT相关</h4><h5 id="场景："><a href="#场景：" class="headerlink" title="场景："></a>场景：</h5><p>​        GIT版本出了点问题，无法正常合并代码</p><h5 id="具体描述："><a href="#具体描述：" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。</p><p>​        无奈之下，我选择回滚代码。</p><h5 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h5><p><strong>第一种方法：<code>注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没有别的人提交</code></strong></p><ol><li><p>首先要找到你要回滚的版本号。</p><p>​    在idea中操作：右键项目 -&gt; Git -&gt; Show History -&gt; 右键提交的版本 -&gt; Copy Revision Number。</p><p>​    在GIT中操作：找到提交的历史，SHA 值，即为版本号。</p></li><li><p>Git Bush 命令行/idea TerMinal 命令行</p><p>​    <code>git reset --hard 版本号</code></p></li></ol><p><strong>第二种方法：</strong></p><ol><li>找到版本号，同上。</li><li>右键项目 -&gt; Git -&gt; Repository -&gt; Reset HEAD</li><li>在 To Commit 中输入版本号</li></ol><p><img src="C:%5CUsers%5Chuapeng.zhang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200414092630073.png" alt="回滚代码"></p><h5 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h5><p>​        <strong>记得一定要提交代码，即使看起来没有要 push 的东西，否则 git pull 之后等于没回滚。</strong></p><h4 id="2-构建相关"><a href="#2-构建相关" class="headerlink" title="2.构建相关"></a>2.构建相关</h4><h5 id="场景：-1"><a href="#场景：-1" class="headerlink" title="场景："></a>场景：</h5><p>​        回滚代码之后，本地可以成功构建，但服务器端无法正常构建。</p><h5 id="具体描述：-1"><a href="#具体描述：-1" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        服务器端构建一直失败，好像是拉取到了错误版本的代码。</p><h5 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h5><p>​        暴脾气的我本来打算把项目删了重新拉一个下来，后来忍住了，在服务器端回滚了一下代码，然后手动构建了一下，居然成功了，完结。</p><h5 id="最后：-1"><a href="#最后：-1" class="headerlink" title="最后："></a>最后：</h5><p>​        虽然没什么有用的东西，不过思路还是有的。</p><p>​        首先你要确认本地构建的代码是否和服务器完全相同、服务器构建的时候是否pull了最新的代码…</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;1-GIT相关&quot;&gt;&lt;a href=&quot;#1-GIT相关&quot; class=&quot;headerlink&quot; title=&quot;1.GIT相关&quot;&gt;&lt;/a&gt;1.GIT相关&lt;/h4&gt;&lt;h5 id=&quot;场景：&quot;&gt;&lt;a href=&quot;#场景：&quot; class=&quot;headerlink&quot; title=
       
     
     </summary>

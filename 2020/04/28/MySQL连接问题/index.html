@@ -14,24 +14,24 @@
     
     
     
-    <title>RE:4Swagger | 人生当苦, 良人当归</title>
+    <title>MySQL连接问题 | 人生当苦, 良人当归</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="store">
-    <meta name="description" content="添加依赖  12345678910&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;springfox-swagger2&lt;&#x2F;artifactId&gt;    &lt;version&gt;2.9.2&lt;&#x2F;version&gt;&lt;&#x2F;dependency&amp;gt">
+    <meta name="keywords" content="dairy">
+    <meta name="description" content="今天接了一个任务，把之前写好的Mapper 中的SQL多连接一张表， 然后中间出现了一个问题 1SELECT ui.name FROM school s,user u LEFT JOIN user_info ui ON u.id &#x3D; ui.id;  这样是没错的，但是如果把表的顺序换一下 1SELECT ui.name FROM user u,school s LEFT JOIN user_inf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RE:4Swagger">
-<meta property="og:url" content="http://yoursite.com/2020/04/26/RE-4Swagger/index.html">
+<meta property="og:title" content="MySQL连接问题">
+<meta property="og:url" content="http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="人生当苦, 良人当归">
-<meta property="og:description" content="添加依赖  12345678910&lt;dependency&gt;    &lt;groupId&gt;io.springfox&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;springfox-swagger2&lt;&#x2F;artifactId&gt;    &lt;version&gt;2.9.2&lt;&#x2F;version&gt;&lt;&#x2F;dependency&amp;gt">
+<meta property="og:description" content="今天接了一个任务，把之前写好的Mapper 中的SQL多连接一张表， 然后中间出现了一个问题 1SELECT ui.name FROM school s,user u LEFT JOIN user_info ui ON u.id &#x3D; ui.id;  这样是没错的，但是如果把表的顺序换一下 1SELECT ui.name FROM user u,school s LEFT JOIN user_inf">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-26T07:25:10.000Z">
-<meta property="article:modified_time" content="2020-04-27T05:58:34.100Z">
+<meta property="article:published_time" content="2020-04-28T10:15:49.000Z">
+<meta property="article:modified_time" content="2020-04-28T10:20:47.201Z">
 <meta property="article:author" content="fairyeye">
-<meta property="article:tag" content="store">
+<meta property="article:tag" content="dairy">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="人生当苦, 良人当归" href="/atom.xml">
@@ -113,7 +113,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">RE:4Swagger</div>
+        <div class="flex-col header-title ellipsis">MySQL连接问题</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -135,11 +135,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">RE:4Swagger</h1>
+        <h1 class="title">MySQL连接问题</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-04-26T07:25:10.000Z" itemprop="datePublished" class="page-time">
-  2020-04-26
+                <time datetime="2020-04-28T10:15:49.000Z" itemprop="datePublished" class="page-time">
+  2020-04-28
 </time>
 
 
@@ -156,13 +156,13 @@
 <div class="container body-wrap">
     
 
-<article id="post-RE-4Swagger"
+<article id="post-MySQL连接问题"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">RE:4Swagger</h1>
+        <h1 class="post-card-title">MySQL连接问题</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-04-26 15:25:10" datetime="2020-04-26T07:25:10.000Z"  itemprop="datePublished">2020-04-26</time>
+            <time class="post-time" title="2020-04-28 18:15:49" datetime="2020-04-28T10:15:49.000Z"  itemprop="datePublished">2020-04-28</time>
 
             
 
@@ -175,24 +175,15 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <ol>
-<li>添加依赖</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+            <p>今天接了一个任务，把之前写好的<code>Mapper</code> 中的SQL多连接一张表，</p>
+<p>然后中间出现了一个问题</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ui.name <span class="keyword">FROM</span> school s,<span class="keyword">user</span> u <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> user_info ui <span class="keyword">ON</span> u.id = ui.id;</span><br></pre></td></tr></table></figure>
 
+<p>这样是没错的，但是如果把表的顺序换一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT ui.name FROM user u,school s LEFT JOIN user_info ui ON u.id &#x3D; ui.id;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-<p><a href="https://blog.csdn.net/huangjinjin520/article/details/89740672" target="_blank" rel="noopener">https://blog.csdn.net/huangjinjin520/article/details/89740672</a></p>
+<p>就会出问题，理论上来说这样是正常的，但是刚开始的时候确实忽略的这个问题</p>
+<p>毕竟有前辈写的代码，实战中都是很多张表关联。</p>
 
         </div>
 
@@ -201,7 +192,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-04-27T05:58:34.100Z" itemprop="dateUpdated">2020-04-27 13:58:34</time>
+    最后更新时间：<time datetime="2020-04-28T10:20:47.201Z" itemprop="dateUpdated">2020-04-28 18:20:47</time>
 </span><br>
 
 
@@ -225,7 +216,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/store/" rel="tag">store</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
 
 
             
@@ -235,7 +226,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/26/RE-4Swagger/&title=《RE:4Swagger》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/&title=《MySQL连接问题》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -245,22 +236,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/26/RE-4Swagger/&title=《RE:4Swagger》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/&title=《MySQL连接问题》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/26/RE-4Swagger/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《RE:4Swagger》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/04/26/RE-4Swagger/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MySQL连接问题》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/26/RE-4Swagger/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -280,21 +271,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">MySQL连接问题</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/04/26/RE-2%E7%BD%91%E5%85%B3/" id="post-next" class="post-nav-link">
+      <a href="/2020/04/26/RE-4Swagger/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">RE:2网关</h4>
+        <h4 class="title">RE:4Swagger</h4>
       </a>
     </div>
   
@@ -384,7 +368,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/26/RE-4Swagger/&title=《RE:4Swagger》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/&title=《MySQL连接问题》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -394,22 +378,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/26/RE-4Swagger/&title=《RE:4Swagger》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/&title=《MySQL连接问题》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/26/RE-4Swagger/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《RE:4Swagger》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/04/26/RE-4Swagger/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MySQL连接问题》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/26/RE-4Swagger/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -420,7 +404,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/04/26/RE-4Swagger/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
 </div>
 
 
