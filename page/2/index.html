@@ -148,6 +148,45 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-挖坑"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-26 11:55:38" datetime="2020-04-26T03:55:38.617Z"  itemprop="datePublished">2020-04-26</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/26/%E6%8C%96%E5%9D%91/">挖坑</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3>
+    
+
+        <a href="/2020/04/26/%E6%8C%96%E5%9D%91/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-StringToInteger"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -952,62 +991,6 @@
         <a href="/2020/04/15/15/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-14"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-04-14 09:41:32" datetime="2020-04-14T01:41:32.000Z"  itemprop="datePublished">2020-04-14</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/14/14/">内部类问题</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">错误描述信息：</span><br><span class="line">org.fairy.eye.domin.entity.User is not an enclosing class</span><br></pre></td></tr></table></figure>
-
-<p>​        在 new 一个内部类的对象时，idea 会生成如下的代码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Info 是User的内部类</span><br><span class="line">User.Info info &#x3D; new User.Info();</span><br></pre></td></tr></table></figure>
-
-<p>​        然后会提示报错 <code>org.fairy.eye.domin.entity.User is not an enclosing class</code></p>
-<p>​        如果内部类没有用 <code>static</code> 修饰的话，是不能这样 new 的。</p>
-<p>​        需要有外部类实例对象来支持。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user &#x3D; new User();</span><br><span class="line">User.Info info &#x3D; new user.Info();</span><br></pre></td></tr></table></figure>
-
-
-
-    
-
-        <a href="/2020/04/14/14/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
-
     </div>
     
 </article>
