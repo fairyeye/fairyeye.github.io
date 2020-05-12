@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-09T07:46:04.966Z</updated>
+  <updated>2020-05-11T00:51:07.068Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Easy Code使用问题</title>
+    <link href="http://yoursite.com/2020/05/11/EasyCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2020/05/11/EasyCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</id>
+    <published>2020-05-11T00:47:23.089Z</published>
+    <updated>2020-05-11T00:51:07.068Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>Mapper</code>接口要加上<code>@Mapper</code>注解。</p><p><code>application.yml</code>要加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:/mapper/*Dao.xml</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      记录一下Easy Code
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>分页查询</title>
@@ -486,30 +507,6 @@
     
     
       <category term="work" scheme="http://yoursite.com/tags/work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 8 Stream</title>
-    <link href="http://yoursite.com/2020/04/16/16/"/>
-    <id>http://yoursite.com/2020/04/16/16/</id>
-    <published>2020-04-16T02:16:54.000Z</published>
-    <updated>2020-04-17T07:47:31.947Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stream&lt;T&gt; <span class="title">filter</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; predicate)</span></span></span><br></pre></td></tr></table></figure><p>Returns a stream consisting of the elements of this stream that match the given predicate.</p><p>This is an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#StreamOps" target="_blank" rel="noopener">intermediate operation</a>.</p><ul><li><p><strong>Parameters:</strong></p><p>predicate - a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference" target="_blank" rel="noopener">non-interfering</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness" target="_blank" rel="noopener">stateless</a> predicate to apply to each element to determine if it should be included</p></li><li><p><strong>Returns:</strong></p><p>the new stream</p></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过条件筛选</span></span><br><span class="line">list.stream().filter(User -&gt; StringUtils.isEmpty(User.getUserName));</span><br></pre></td></tr></table></figure><h5 id="GroupBy"><a href="#GroupBy" class="headerlink" title="GroupBy"></a>GroupBy</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过条件分组</span></span><br><span class="line">Map&lt;String, List&lt;User&gt;&gt; groupMap = list.stream().collect(Collectors.groupingBy(User::getName));</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h5 id=&quot;Filter&quot;&gt;&lt;a href=&quot;#Filter&quot; class=&quot;headerlink&quot; title=&quot;Filter&quot;&gt;&lt;/a&gt;Filter&lt;/h5&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
-      
-    
-    </summary>
-    
-    
-    
-      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
     
   </entry>
   
