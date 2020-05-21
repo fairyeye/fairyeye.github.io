@@ -148,7 +148,7 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-Java 8 Stream List排序"
+            <article id="post-Java 8 Stream"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -164,7 +164,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/05/19/Java%208%20Stream%20List%E6%8E%92%E5%BA%8F/">List 通过某一字段排序</a>
+      <a class="post-title-link" href="/2020/05/19/Java%208%20Stream/">List stream</a>
     </h3>
   
 
@@ -175,10 +175,32 @@
 
     
         <p>通过<code>workOrederNum</code>字段排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect &#x3D; list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查出<code>InstructionPoDTO</code>中<code>InstructionDocNum</code>作为list</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 筛选出不重复的 instructionDocNum</span></span><br><span class="line">List&lt;String&gt; instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>筛选所有<code>instructionDocNum = 123</code>的对象 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;InstructionPoDTO&gt; instructionPoDTOS = read.stream().filter(instructionPoDTO -&gt;</span><br><span class="line">     instructionPoDTO.getInstructionDocNum().equals(<span class="string">"123"</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查询出第一个</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String instructionDocId = instructionDocs.stream().findFirst().get();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>设置<code>typeCode</code>为key，``list<code>的对象为</code>value`</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, MtGenType&gt; typesMap = types.stream().collect(Collectors.toMap(t -&gt; t.getTypeCode(), t -&gt; t));</span><br></pre></td></tr></table></figure>
+
+
     
 
-        <a href="/2020/05/19/Java%208%20Stream%20List%E6%8E%92%E5%BA%8F/" class="post-more waves-effect waves-button">
+        <a href="/2020/05/19/Java%208%20Stream/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>

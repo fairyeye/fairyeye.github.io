@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-19T06:54:22.515Z</updated>
+  <updated>2020-05-21T03:19:06.127Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>List 通过某一字段排序</title>
-    <link href="http://yoursite.com/2020/05/19/Java%208%20Stream%20List%E6%8E%92%E5%BA%8F/"/>
-    <id>http://yoursite.com/2020/05/19/Java%208%20Stream%20List%E6%8E%92%E5%BA%8F/</id>
+    <title>List stream</title>
+    <link href="http://yoursite.com/2020/05/19/Java%208%20Stream/"/>
+    <id>http://yoursite.com/2020/05/19/Java%208%20Stream/</id>
     <published>2020-05-19T06:52:21.116Z</published>
-    <updated>2020-05-19T06:54:22.515Z</updated>
+    <updated>2020-05-21T03:19:06.127Z</updated>
     
-    <content type="html"><![CDATA[<p>通过<code>workOrederNum</code>字段排序</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect &#x3D; list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>通过<code>workOrederNum</code>字段排序</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>查出<code>InstructionPoDTO</code>中<code>InstructionDocNum</code>作为list</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 筛选出不重复的 instructionDocNum</span></span><br><span class="line">List&lt;String&gt; instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>筛选所有<code>instructionDocNum = 123</code>的对象 </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;InstructionPoDTO&gt; instructionPoDTOS = read.stream().filter(instructionPoDTO -&gt;</span><br><span class="line">     instructionPoDTO.getInstructionDocNum().equals(<span class="string">"123"</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>查询出第一个</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String instructionDocId = instructionDocs.stream().findFirst().get();</span><br></pre></td></tr></table></figure><p>设置<code>typeCode</code>为key，``list<code>的对象为</code>value`</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, MtGenType&gt; typesMap = types.stream().collect(Collectors.toMap(t -&gt; t.getTypeCode(), t -&gt; t));</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;通过&lt;code&gt;workOrederNum&lt;/code&gt;字段排序&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/p
       
     
     </summary>
