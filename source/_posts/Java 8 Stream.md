@@ -46,7 +46,7 @@ String instructionDocId = instructionDocs.stream().findFirst().get();
 
 
 
-设置`typeCode`为key，``list`的对象为`value`
+设置`typeCode`为key，`list`的对象为`value`
 
 ```java
 Map<String, MtGenType> typesMap = types.stream().collect(Collectors.toMap(t -> t.getTypeCode(), t -> t));
