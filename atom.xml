@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-01T01:37:21.863Z</updated>
+  <updated>2020-06-10T04:24:37.060Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL</title>
+    <link href="http://yoursite.com/2020/06/10/MySQL/"/>
+    <id>http://yoursite.com/2020/06/10/MySQL/</id>
+    <published>2020-06-10T04:24:00.655Z</published>
+    <updated>2020-06-10T04:24:37.060Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">swid.OPERATION,</span><br><span class="line">swid.DELIVERY_METHOD,</span><br><span class="line">GROUP_CONCAT( DISTINCT( swid.WORK_ORDER_ID ) ) WORK_ORDER_ID </span><br><span class="line">FROM</span><br><span class="line">SSME_WO_ISSUE_DETAIL swid </span><br><span class="line">WHERE</span><br><span class="line">swid.TENANT_ID &#x3D; 4 </span><br><span class="line">AND swid.WORK_ORDER_ID IN ( &#39;42717.1&#39;,&#39;42719.1&#39; ) </span><br><span class="line">GROUP BY</span><br><span class="line">swid.OPERATION,</span><br><span class="line">swid.DELIVERY_METHOD</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ExcelUtils</title>
@@ -116,7 +138,7 @@
     <link href="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/"/>
     <id>http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/</id>
     <published>2020-04-29T08:12:42.000Z</published>
-    <updated>2020-04-29T08:14:58.430Z</updated>
+    <updated>2020-06-10T04:24:08.873Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数据库如何存储时间？你真的知道吗？"><a href="#数据库如何存储时间？你真的知道吗？" class="headerlink" title="数据库如何存储时间？你真的知道吗？"></a>数据库如何存储时间？你真的知道吗？</h1><p>我们平时开发中不可避免的就是要存储时间，比如我们要记录操作表中这条记录的时间、记录转账的交易时间、记录出发时间等等。你会发现这个时间这个东西与我们开发的联系还是非常紧密的，用的好与不好会给我们的业务甚至功能带来很大的影响。所以，我们有必要重新出发，好好认识一下这个东西。</p><p>这是一篇短小精悍的文章，仔细阅读一定能学到不少东西！</p><h3 id="1-切记不要用字符串存储日期"><a href="#1-切记不要用字符串存储日期" class="headerlink" title="1.切记不要用字符串存储日期"></a>1.切记不要用字符串存储日期</h3><p>我记得我在大学的时候就这样干过，而且现在很多对数据库不太了解的新手也会这样干，可见，这种存储日期的方式的优点还是有的，就是简单直白，容易上手。</p><p>但是，这是不正确的做法，主要会有下面两个问题：</p><ol><li>字符串占用的空间更大！</li><li>字符串存储的日期比较效率比较低（逐个字符进行比对），无法用日期相关的 API 进行计算和比较。</li></ol><h3 id="2-Datetime-和-Timestamp-之间抉择"><a href="#2-Datetime-和-Timestamp-之间抉择" class="headerlink" title="2.Datetime 和 Timestamp 之间抉择"></a>2.Datetime 和 Timestamp 之间抉择</h3><p>Datetime 和 Timestamp 是 MySQL 提供的两种比较相似的保存时间的数据类型。他们两者究竟该如何选择呢？</p><p><strong>通常我们都会首选 Timestamp。</strong> 下面说一下为什么这样做!</p><h4 id="2-1-DateTime-类型没有时区信息的"><a href="#2-1-DateTime-类型没有时区信息的" class="headerlink" title="2.1 DateTime 类型没有时区信息的"></a>2.1 DateTime 类型没有时区信息的</h4><p><strong>DateTime 类型是没有时区信息的（时区无关）</strong> ，DateTime 类型保存的时间都是当前会话所设置的时区对应的时间。这样就会有什么问题呢？当你的时区更换之后，比如你的服务器更换地址或者更换客户端连接时区设置的话，就会导致你从数据库中读出的时间错误。不要小看这个问题，很多系统就是因为这个问题闹出了很多笑话。</p><p><strong>Timestamp 和时区有关</strong>。Timestamp 类型字段的值会随着服务器时区的变化而变化，自动换算成相应的时间，说简单点就是在不同时区，查询到同一个条记录此字段的值会不一样。</p><p>下面实际演示一下！</p><p>建表 SQL 语句：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;time_zone_test&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  &#96;date_time&#96; datetime DEFAULT NULL,</span><br><span class="line">  &#96;time_stamp&#96; timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;)</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure><p>插入数据：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO time_zone_test(date_time,time_stamp) VALUES(NOW(),NOW());</span><br></pre></td></tr></table></figure><p>查看数据：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select date_time,time_stamp from time_zone_test;</span><br></pre></td></tr></table></figure><p>结果：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+---------------------+</span><br><span class="line">| date_time           | time_stamp          |</span><br><span class="line">+---------------------+---------------------+</span><br><span class="line">| 2020-01-11 09:53:32 | 2020-01-11 09:53:32 |</span><br><span class="line">+---------------------+---------------------+</span><br></pre></td></tr></table></figure><p>现在我们运行</p><p>修改当前会话的时区:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set time_zone&#x3D;&#39;+8:00&#39;;</span><br></pre></td></tr></table></figure><p>再次查看数据：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+---------------------+</span><br><span class="line">| date_time           | time_stamp          |</span><br><span class="line">+---------------------+---------------------+</span><br><span class="line">| 2020-01-11 09:53:32 | 2020-01-11 17:53:32 |</span><br><span class="line">+---------------------+---------------------+</span><br></pre></td></tr></table></figure><p><strong>扩展：一些关于 MySQL 时区设置的一个常用 sql 命令</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前会话时区</span><br><span class="line">SELECT @@session.time_zone;</span><br><span class="line"># 设置当前会话时区</span><br><span class="line">SET time_zone &#x3D; &#39;Europe&#x2F;Helsinki&#39;;</span><br><span class="line">SET time_zone &#x3D; &quot;+00:00&quot;;</span><br><span class="line"># 数据库全局时区设置</span><br><span class="line">SELECT @@global.time_zone;</span><br><span class="line"># 设置全局时区</span><br><span class="line">SET GLOBAL time_zone &#x3D; &#39;+8:00&#39;;</span><br><span class="line">SET GLOBAL time_zone &#x3D; &#39;Europe&#x2F;Helsinki&#39;;</span><br></pre></td></tr></table></figure><h4 id="2-2-DateTime-类型耗费空间更大"><a href="#2-2-DateTime-类型耗费空间更大" class="headerlink" title="2.2 DateTime 类型耗费空间更大"></a>2.2 DateTime 类型耗费空间更大</h4><p>Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。但是，这样同样造成了一个问题，Timestamp 表示的时间范围更小。</p><ul><li>DateTime ：1000-01-01 00:00:00 ~ 9999-12-31 23:59:59</li><li>Timestamp： 1970-01-01 00:00:01 ~ 2037-12-31 23:59:59</li></ul><blockquote><p>Timestamp 在不同版本的 MySQL 中有细微差别。</p></blockquote><h3 id="3-再看-MySQL-日期类型存储空间"><a href="#3-再看-MySQL-日期类型存储空间" class="headerlink" title="3 再看 MySQL 日期类型存储空间"></a>3 再看 MySQL 日期类型存储空间</h3><p>下图是 MySQL 5.6 版本中日期类型所占的存储空间：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://user-gold-cdn.xitu.io/2020/1/14/16fa26644507d5f4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img" title="">                </div>                <div class="image-caption">img</div>            </figure><p>可以看出 5.6.4 之后的 MySQL 多出了一个需要 0 ～ 3 字节的小数位。Datatime 和 Timestamp 会有几种不同的存储空间占用。</p><p>为了方便，本文我们还是默认 Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。</p><h3 id="4-数值型时间戳是更好的选择吗？"><a href="#4-数值型时间戳是更好的选择吗？" class="headerlink" title="4.数值型时间戳是更好的选择吗？"></a>4.数值型时间戳是更好的选择吗？</h3><p>很多时候，我们也会使用 int 或者 bigint 类型的数值也就是时间戳来表示时间。</p><p>这种存储方式的具有 Timestamp 类型的所具有一些优点，并且使用它的进行日期排序以及对比等操作的效率会更高，跨系统也很方便，毕竟只是存放的数值。缺点也很明显，就是数据的可读性太差了，你无法直观的看到具体时间。</p><p>时间戳的定义如下：</p><blockquote><p>时间戳的定义是从一个基准时间开始算起，这个基准时间是「1970-1-1 00:00:00 +0:00」，从这个时间开始，用整数表示，以秒计时，随着时间的流逝这个时间整数不断增加。这样一来，我只需要一个数值，就可以完美地表示时间了，而且这个数值是一个绝对数值，即无论的身处地球的任何角落，这个表示时间的时间戳，都是一样的，生成的数值都是一样的，并且没有时区的概念，所以在系统的中时间的传输中，都不需要进行额外的转换了，只有在显示给用户的时候，才转换为字符串格式的本地时间。</p></blockquote><p>数据库中实际操作：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select UNIX_TIMESTAMP(&#39;2020-01-11 09:53:32&#39;);</span><br><span class="line">+---------------------------------------+</span><br><span class="line">| UNIX_TIMESTAMP(&#39;2020-01-11 09:53:32&#39;) |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|                            1578707612 |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select FROM_UNIXTIME(1578707612);</span><br><span class="line">+---------------------------+</span><br><span class="line">| FROM_UNIXTIME(1578707612) |</span><br><span class="line">+---------------------------+</span><br><span class="line">| 2020-01-11 09:53:32       |</span><br><span class="line">+---------------------------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">转载：https:&#x2F;&#x2F;juejin.im&#x2F;post&#x2F;5e1d494a5188254c45778a14</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -477,33 +499,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>17</title>
-    <link href="http://yoursite.com/2020/04/17/17/"/>
-    <id>http://yoursite.com/2020/04/17/17/</id>
-    <published>2020-04-17T02:59:54.000Z</published>
-    <updated>2020-04-17T07:04:19.371Z</updated>
-    
-    <content type="html"><![CDATA[<p>场景：</p><p>参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,</p><p>可以用 ||</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if （Objects.isNull(list) || list &#x3D;&#x3D; 0） &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。</code></p><p><strong>File - &gt;  Other Setting -&gt; Setting For New Projects</strong> 全局配置</p><p>maven默认仓库地址，选择本地的地址</p><p><code>&lt;localRepository&gt;D:\maven_repo&lt;/localRepository&gt;</code></p><p>Setting -&gt; file and code temeplate -&gt; include</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;场景：&lt;/p&gt;
-&lt;p&gt;参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,&lt;/p&gt;
-&lt;p&gt;可以用 ||&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tab
-      
-    
-    </summary>
-    
-    
-    
-      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
     
   </entry>
   

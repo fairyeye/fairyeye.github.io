@@ -148,6 +148,81 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-RE-5UserService&amp;Fegin"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-26 15:25:10" datetime="2020-04-26T07:25:10.000Z"  itemprop="datePublished">2020-04-26</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/26/RE-5UserService&Fegin/">RE:5UserService&amp;Fegin</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p>
+<p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p>
+<p><strong>注册中心：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Application</th>
+<th align="left">AMIs</th>
+<th align="left">Availability Zones</th>
+<th align="left">Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>GOODS-SERVICE</strong></td>
+<td align="left"><strong>n/a</strong> (1)</td>
+<td align="left">(1)</td>
+<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td>
+</tr>
+<tr>
+<td align="left"><strong>USER-SERVICE</strong></td>
+<td align="left"><strong>n/a</strong> (1)</td>
+<td align="left">(1)</td>
+<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td>
+</tr>
+</tbody></table>
+<h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4><p><a href="https://github.com/fairyeye/store" target="_blank" rel="noopener">https://github.com/fairyeye/store</a></p>
+<p>1+1+1+1+1+1+1 = 7</p>
+<p>6+5+4+3+2+1 = </p>
+
+    
+
+        <a href="/2020/04/26/RE-5UserService&Fegin/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/store/" rel="tag">store</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-RE-1注册中心"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -984,63 +1059,6 @@
         <a href="/2020/04/20/20/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-17"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-04-17 10:59:54" datetime="2020-04-17T02:59:54.000Z"  itemprop="datePublished">2020-04-17</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/17/17/">17</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>场景：</p>
-<p>参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,</p>
-<p>可以用 ||</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if （Objects.isNull(list) || list &#x3D;&#x3D; 0） &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><code>单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。</code></p>
-<p><strong>File - &gt;  Other Setting -&gt; Setting For New Projects</strong> 全局配置</p>
-<p>maven默认仓库地址，选择本地的地址</p>
-<p><code>&lt;localRepository&gt;D:\maven_repo&lt;/localRepository&gt;</code></p>
-<p>Setting -&gt; file and code temeplate -&gt; include</p>
-
-    
-
-        <a href="/2020/04/17/17/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
-
     </div>
     
 </article>
