@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-10T04:24:37.060Z</updated>
+  <updated>2020-06-11T07:15:27.124Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库锁</title>
+    <link href="http://yoursite.com/2020/06/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/"/>
+    <id>http://yoursite.com/2020/06/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/</id>
+    <published>2020-06-11T02:00:36.754Z</published>
+    <updated>2020-06-11T07:15:27.124Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Tastill/article/details/88060539" target="_blank" rel="noopener">https://blog.csdn.net/Tastill/article/details/88060539</a></p><p>pdf   <a href="https://www.cnblogs.com/duoduo-727/p/9367175.html" target="_blank" rel="noopener">https://www.cnblogs.com/duoduo-727/p/9367175.html</a></p><p>CASE<br>    mmla.ATTR_VALUE<br>    WHEN ‘Y’ THEN<br>    ‘BONDED’ ELSE ‘’<br>END </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Tastill/article/details/88060539&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/Tastill/article/det
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>MySQL</title>
@@ -43,7 +65,7 @@
     <link href="http://yoursite.com/2020/06/01/ExcelUtils/"/>
     <id>http://yoursite.com/2020/06/01/ExcelUtils/</id>
     <published>2020-06-01T01:36:15.377Z</published>
-    <updated>2020-06-01T01:37:21.863Z</updated>
+    <updated>2020-06-11T02:00:44.968Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 对应Excel头与实体类字段 通过HeaderAlias</span><br><span class="line">int rowCount &#x3D; reader.getRowCount();</span><br><span class="line">reader.setHeaderAlias(DataReadVO.getHeaderAlias());</span><br><span class="line">List&lt;DataReadVO&gt; read &#x3D; reader.read(0, 1, rowCount, DataReadVO.class);</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class DataReadVO &#123;</span><br><span class="line"></span><br><span class="line">    private boolean status &#x3D; false;</span><br><span class="line">    private Long lineNum;</span><br><span class="line">    private String materialId;</span><br><span class="line">    private String materialCode;</span><br><span class="line">    private Double qty;</span><br><span class="line">    public Map&lt;String, String&gt; map;</span><br><span class="line"></span><br><span class="line">    public static Map&lt;String, String&gt; getHeaderAlias()&#123;</span><br><span class="line">        Map&lt;String, String&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;行号&quot;, &quot;lineNum&quot;);</span><br><span class="line">        map.put(&quot;物料编码&quot;, &quot;materialCode&quot;);</span><br><span class="line">        map.put(&quot;数量&quot;, &quot;qty&quot;);</span><br><span class="line">        return map;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -477,28 +499,6 @@
     
     
       <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>20</title>
-    <link href="http://yoursite.com/2020/04/20/20/"/>
-    <id>http://yoursite.com/2020/04/20/20/</id>
-    <published>2020-04-20T03:00:50.000Z</published>
-    <updated>2020-04-26T03:53:32.152Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="String数组转int数组"><a href="#String数组转int数组" class="headerlink" title="String数组转int数组"></a><a href="https://www.cnblogs.com/ukzq/p/11965382.html" target="_blank" rel="noopener">String数组转int数组</a></h1><p>假设我们有一个字符串数组：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] strings &#x3D; &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure><p>使用<em>Lambda表达式</em>（自Java 8起）：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure><p>另一种方式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;String数组转int数组&quot;&gt;&lt;a href=&quot;#String数组转int数组&quot; class=&quot;headerlink&quot; title=&quot;String数组转int数组&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblogs.com/ukzq/p/1196
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
