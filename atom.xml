@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-16T06:31:50.506Z</updated>
+  <updated>2020-06-16T11:39:29.631Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/06/16/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     <id>http://yoursite.com/2020/06/16/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
     <published>2020-06-16T06:29:54.819Z</published>
-    <updated>2020-06-16T06:31:50.506Z</updated>
+    <updated>2020-06-16T11:39:29.631Z</updated>
     
-    <content type="html"><![CDATA[<p>0001-0099/字符串有序</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat f&#x3D;new DecimalFormat(&quot;00000&quot;);</span><br><span class="line">for(int i&#x3D;1;i&lt;10000;i++)&#123;</span><br><span class="line">System.out.println(f.format(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>ER-00001 下一个为ER-00002一直到ER-99999</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String m &#x3D; &quot;ER-&quot;;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 2; i++) &#123;</span><br><span class="line">    String format &#x3D; String.format(&quot;%05d&quot;, i);   </span><br><span class="line">    System.out.println(m+format);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>0001-0099/字符串有序</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat f&#x3D;new DecimalFormat(&quot;00000&quot;);</span><br><span class="line">for(int i&#x3D;1;i&lt;10000;i++)&#123;</span><br><span class="line">System.out.println(f.format(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>ER-00001 下一个为ER-00002一直到ER-99999</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String m &#x3D; &quot;ER-&quot;;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 2; i++) &#123;</span><br><span class="line">    String format &#x3D; String.format(&quot;%05d&quot;, i);   </span><br><span class="line">    System.out.println(m+format);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://user-gold-cdn.xitu.io/2020/6/16/172baf15ddf4c269?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>]]></content>
     
     <summary type="html">
     
