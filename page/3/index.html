@@ -148,6 +148,61 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-GC回收算法"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-24 00:00:00" datetime="2020-04-23T16:00:00.000Z"  itemprop="datePublished">2020-04-24</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/">GC</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​    原理：是否有对象引用。</p>
+<p>​    <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="D:\workspace\gitee\StaticFile\image\Reference" alt="Reference counting" title="counting.png">
+                </div>
+                <div class="image-caption">counting.png</div>
+            </figure></p>
+<p>​    缺点：如果两个对象互相引用，会造成内存泄漏。</p>
+<h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​    </p>
+
+    
+
+        <a href="/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-22"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -954,69 +1009,12 @@
 
         </li>
     
-        <li class="post-list-item fade">
-            <article id="post-test"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-04-08 09:54:30" datetime="2020-04-08T01:54:30.000Z"  itemprop="datePublished">2020-04-08</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/08/test/">Wed Apr 08 2020 00:00:00 GMT+0800 (GMT+08:00)</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>当做实体类入参时，可以通过mapper接口的<code>@param</code>绑定入参。</p>
-<h3 id="Exception："><a href="#Exception：" class="headerlink" title="Exception："></a>Exception：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>子查询：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id&#x3D;&quot;queryList&quot; resultType&#x3D;&quot;org.hdgp.mdm.domain.entity.DataPermission&quot;&gt;</span><br><span class="line">    SELECT</span><br><span class="line">        ddp.*</span><br><span class="line">    FROM dmdm_data_permission ddp</span><br><span class="line">    WHERE 1&#x3D;1</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrName!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_code in (</span><br><span class="line">        SELECT hda.attr_code</span><br><span class="line">        FROM hdpm_data_attribute hda</span><br><span class="line">        WHERE hda.attr_name LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrName&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrValue!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrValue&#125;,&#39;%&#39;))</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.meaning!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value IN (</span><br><span class="line">        SELECT hlv.value</span><br><span class="line">        FROM hpfm_lov_value hlv</span><br><span class="line">        WHERE hlv.meaning like CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.meaning&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>换成连接查询：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-    
-
-        <a href="/2020/04/08/test/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
     </ul>
 
     
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
     </div>
 </nav>
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-14T06:09:28.702Z</updated>
+  <updated>2020-06-16T06:31:50.506Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有序字符串</title>
+    <link href="http://yoursite.com/2020/06/16/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2020/06/16/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2020-06-16T06:29:54.819Z</published>
+    <updated>2020-06-16T06:31:50.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>0001-0099/字符串有序</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat f&#x3D;new DecimalFormat(&quot;00000&quot;);</span><br><span class="line">for(int i&#x3D;1;i&lt;10000;i++)&#123;</span><br><span class="line">System.out.println(f.format(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>ER-00001 下一个为ER-00002一直到ER-99999</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String m &#x3D; &quot;ER-&quot;;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 2; i++) &#123;</span><br><span class="line">    String format &#x3D; String.format(&quot;%05d&quot;, i);   </span><br><span class="line">    System.out.println(m+format);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;0001-0099/字符串有序&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>MySQL重启失败</title>
@@ -470,31 +493,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>GC</title>
-    <link href="http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/</id>
-    <published>2020-04-23T16:00:00.000Z</published>
-    <updated>2020-04-26T03:51:36.331Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​    原理：是否有对象引用。</p><p>​    <figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="D:\workspace\gitee\StaticFile\image\Reference" alt="Reference counting" title="counting.png">                </div>                <div class="image-caption">counting.png</div>            </figure></p><p>​    缺点：如果两个对象互相引用，会造成内存泄漏。</p><h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​    </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;引用计数算法&quot;&gt;&lt;a href=&quot;#引用计数算法&quot; class=&quot;headerlink&quot; title=&quot;引用计数算法&quot;&gt;&lt;/a&gt;引用计数算法&lt;/h4&gt;&lt;p&gt;​    原理：是否有对象引用。&lt;/p&gt;
-&lt;p&gt;​    &lt;figure class=&quot;image-bubb
-      
-    
-    </summary>
-    
-    
-    
-      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
     
   </entry>
   
