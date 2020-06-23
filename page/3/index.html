@@ -148,82 +148,6 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-StringToInteger"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-04-26 09:31:18" datetime="2020-04-26T01:31:18.797Z"  itemprop="datePublished">2020-04-26</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/26/StringToInteger/">StringToInteger</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <!DOCTYPE html>
-<html>
-    <head>
-        <title>页面标题</title>
-        <style>
-        body {        background-image: url("../640.png"); } 
-        </style>
-    <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="人生当苦, 良人当归" type="application/atom+xml">
-</head>
-<body> 
-
-<h1 id="String-转-Integer"><a href="#String-转-Integer" class="headerlink" title="String 转 Integer"></a>String 转 Integer</h1><h2 id="1-Integer的parseInt方法"><a href="#1-Integer的parseInt方法" class="headerlink" title="1.Integer的parseInt方法"></a>1.Integer的parseInt方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt----------&gt;123</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-Integer的valueOf方法"><a href="#2-Integer的valueOf方法" class="headerlink" title="2.Integer的valueOf方法"></a>2.Integer的valueOf方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">Integer value &#x3D; Integer.valueOf(string);</span><br><span class="line">System.out.println(&quot;stringToInt1----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt1----------&gt;123</span><br></pre></td></tr></table></figure>
-
-<p>以上两种方法都是可行的。</p>
-<p>但是会有特殊的情况，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:16)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br></pre></td></tr></table></figure>
-
-<p>使用stringToInt1()也会返回同样的错误。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static Integer valueOf(String s) throws NumberFormatException &#123;</span><br><span class="line">    return Integer.valueOf(parseInt(s, 10));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>valueOf()调用了parseInt()，所以返回同样的错误是正常的。</p>
-<p>按照正常的逻辑来说，我们需要对这个错误进行处理，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; 0;</span><br><span class="line">try &#123;</span><br><span class="line">    value &#x3D; Integer.parseInt(string);</span><br><span class="line">&#125; catch (NumberFormatException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;StringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:18)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br><span class="line">StringToInt----------&gt;0</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，虽然依然报错，但是程序还是继续执行了。</p>
-<p>然后回到主题。</p>
-<h2 id="3-Guava-的-Ints-结合-Java8-的-Optional"><a href="#3-Guava-的-Ints-结合-Java8-的-Optional" class="headerlink" title="3.Guava 的 Ints 结合 Java8 的 Optional"></a>3.Guava 的 Ints 结合 Java8 的 Optional</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(0);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;0</span><br></pre></td></tr></table></figure>
-
-<p>可以在转换失败的时候为他设置默认值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(100);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;100</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>写在末尾：之所以写这么详细是因为最开始的时候我很菜，看别人写的文档都很简单，虽然可以解决问题，但是却不解其意，所以写的啰嗦一点，对新手比较友好。</strong></p>
-<p>​    </body></p>
-</html>
-    
-
-        <a href="/2020/04/26/StringToInteger/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
             <article id="post-GC回收算法"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -807,52 +731,6 @@
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-interface"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-04-16 16:58:48" datetime="2020-04-16T08:58:48.000Z"  itemprop="datePublished">2020-04-16</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/16/interface/">interface</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>​    </p>
-
-    
-
-        <a href="/2020/04/16/interface/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/" rel="tag">work</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
             <article id="post-16"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -1014,12 +892,140 @@
 
         </li>
     
+        <li class="post-list-item fade">
+            <article id="post-13"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-13 09:13:28" datetime="2020-04-13T01:13:28.000Z"  itemprop="datePublished">2020-04-13</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/13/13/">GIT代码无法合并+本地构建成功服务器构建失败</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <h4 id="1-GIT相关"><a href="#1-GIT相关" class="headerlink" title="1.GIT相关"></a>1.GIT相关</h4><h5 id="场景："><a href="#场景：" class="headerlink" title="场景："></a>场景：</h5><p>​        GIT版本出了点问题，无法正常合并代码</p>
+<h5 id="具体描述："><a href="#具体描述：" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。</p>
+<p>​        无奈之下，我选择回滚代码。</p>
+<h5 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h5><p><strong>第一种方法：<code>注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没有别的人提交</code></strong></p>
+<ol>
+<li><p>首先要找到你要回滚的版本号。</p>
+<p>​    在idea中操作：右键项目 -&gt; Git -&gt; Show History -&gt; 右键提交的版本 -&gt; Copy Revision Number。</p>
+<p>​    在GIT中操作：找到提交的历史，SHA 值，即为版本号。</p>
+</li>
+<li><p>Git Bush 命令行/idea TerMinal 命令行</p>
+<p>​    <code>git reset --hard 版本号</code></p>
+</li>
+</ol>
+<p><strong>第二种方法：</strong></p>
+<ol>
+<li>找到版本号，同上。</li>
+<li>右键项目 -&gt; Git -&gt; Repository -&gt; Reset HEAD</li>
+<li>在 To Commit 中输入版本号</li>
+</ol>
+<p><img src="C:%5CUsers%5Chuapeng.zhang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200414092630073.png" alt="回滚代码"></p>
+<h5 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h5><p>​        <strong>记得一定要提交代码，即使看起来没有要 push 的东西，否则 git pull 之后等于没回滚。</strong></p>
+<h4 id="2-构建相关"><a href="#2-构建相关" class="headerlink" title="2.构建相关"></a>2.构建相关</h4><h5 id="场景：-1"><a href="#场景：-1" class="headerlink" title="场景："></a>场景：</h5><p>​        回滚代码之后，本地可以成功构建，但服务器端无法正常构建。</p>
+<h5 id="具体描述：-1"><a href="#具体描述：-1" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        服务器端构建一直失败，好像是拉取到了错误版本的代码。</p>
+<h5 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h5><p>​        暴脾气的我本来打算把项目删了重新拉一个下来，后来忍住了，在服务器端回滚了一下代码，然后手动构建了一下，居然成功了，完结。</p>
+<h5 id="最后：-1"><a href="#最后：-1" class="headerlink" title="最后："></a>最后：</h5><p>​        虽然没什么有用的东西，不过思路还是有的。</p>
+<p>​        首先你要确认本地构建的代码是否和服务器完全相同、服务器构建的时候是否pull了最新的代码…</p>
+
+    
+
+        <a href="/2020/04/13/13/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-test"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-08 09:54:30" datetime="2020-04-08T01:54:30.000Z"  itemprop="datePublished">2020-04-08</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/08/test/">Wed Apr 08 2020 00:00:00 GMT+0800 (GMT+08:00)</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <p>当做实体类入参时，可以通过mapper接口的<code>@param</code>绑定入参。</p>
+<h3 id="Exception："><a href="#Exception：" class="headerlink" title="Exception："></a>Exception：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>子查询：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id&#x3D;&quot;queryList&quot; resultType&#x3D;&quot;org.hdgp.mdm.domain.entity.DataPermission&quot;&gt;</span><br><span class="line">    SELECT</span><br><span class="line">        ddp.*</span><br><span class="line">    FROM dmdm_data_permission ddp</span><br><span class="line">    WHERE 1&#x3D;1</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrName!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_code in (</span><br><span class="line">        SELECT hda.attr_code</span><br><span class="line">        FROM hdpm_data_attribute hda</span><br><span class="line">        WHERE hda.attr_name LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrName&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.attrValue!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value LIKE CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.attrValue&#125;,&#39;%&#39;))</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">    &lt;if test&#x3D;&quot;permission.meaning!&#x3D;null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value IN (</span><br><span class="line">        SELECT hlv.value</span><br><span class="line">        FROM hpfm_lov_value hlv</span><br><span class="line">        WHERE hlv.meaning like CONCAT(CONCAT(&#39;%&#39;,#&#123;permission.meaning&#125;,&#39;%&#39;))</span><br><span class="line">        )</span><br><span class="line">    &lt;&#x2F;if&gt;</span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>换成连接查询：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    
+
+        <a href="/2020/04/08/test/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
     </ul>
 
     
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
     </div>
 </nav>
 
