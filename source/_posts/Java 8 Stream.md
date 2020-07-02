@@ -52,3 +52,13 @@ String instructionDocId = instructionDocs.stream().findFirst().get();
 Map<String, MtGenType> typesMap = types.stream().collect(Collectors.toMap(t -> t.getTypeCode(), t -> t));
 ```
 
+
+
+
+
+// 通过字段去重
+
+```
+instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-> new TreeSet<>(Comparator.comparing(o -> o.getMaterial()+";"+o.getPlant()+";"+o.getStorage()+";"+o.getBatch()+";"+o.getSpecialStock()))), ArrayList::new));
+```
+
