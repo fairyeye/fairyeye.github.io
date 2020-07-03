@@ -23,7 +23,8 @@ bignum3 =  bignum1.add(bignum2);
 System.out.println("和 是：" + bignum3);  
   
 //减法  
-bignum3 = bignum1.subtract(bignum2);  
+bignum3 = bignum1.
+(bignum2);  
 System.out.println("差  是：" + bignum3);  
   
 //乘法  
