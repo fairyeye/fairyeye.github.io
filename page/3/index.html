@@ -148,6 +148,46 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-挖坑"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-26 11:55:38" datetime="2020-04-26T03:55:38.617Z"  itemprop="datePublished">2020-04-26</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/26/%E6%8C%96%E5%9D%91/">挖坑</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        <h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3><p><img src="https://i.loli.net/2020/06/26/9dsgJ8kPlNnyHFV.png" alt="image-20200626141113470"></p>
+
+    
+
+        <a href="/2020/04/26/%E6%8C%96%E5%9D%91/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-StringToInteger"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -954,77 +994,6 @@
     
 
         <a href="/2020/04/14/14/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dairy/" rel="tag">dairy</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-13"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-04-13 09:13:28" datetime="2020-04-13T01:13:28.000Z"  itemprop="datePublished">2020-04-13</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/13/13/">GIT代码无法合并+本地构建成功服务器构建失败</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h4 id="1-GIT相关"><a href="#1-GIT相关" class="headerlink" title="1.GIT相关"></a>1.GIT相关</h4><h5 id="场景："><a href="#场景：" class="headerlink" title="场景："></a>场景：</h5><p>​        GIT版本出了点问题，无法正常合并代码</p>
-<h5 id="具体描述："><a href="#具体描述：" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。</p>
-<p>​        无奈之下，我选择回滚代码。</p>
-<h5 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h5><p><strong>第一种方法：<code>注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没有别的人提交</code></strong></p>
-<ol>
-<li><p>首先要找到你要回滚的版本号。</p>
-<p>​    在idea中操作：右键项目 -&gt; Git -&gt; Show History -&gt; 右键提交的版本 -&gt; Copy Revision Number。</p>
-<p>​    在GIT中操作：找到提交的历史，SHA 值，即为版本号。</p>
-</li>
-<li><p>Git Bush 命令行/idea TerMinal 命令行</p>
-<p>​    <code>git reset --hard 版本号</code></p>
-</li>
-</ol>
-<p><strong>第二种方法：</strong></p>
-<ol>
-<li>找到版本号，同上。</li>
-<li>右键项目 -&gt; Git -&gt; Repository -&gt; Reset HEAD</li>
-<li>在 To Commit 中输入版本号</li>
-</ol>
-<p><img src="C:%5CUsers%5Chuapeng.zhang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200414092630073.png" alt="回滚代码"></p>
-<h5 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h5><p>​        <strong>记得一定要提交代码，即使看起来没有要 push 的东西，否则 git pull 之后等于没回滚。</strong></p>
-<h4 id="2-构建相关"><a href="#2-构建相关" class="headerlink" title="2.构建相关"></a>2.构建相关</h4><h5 id="场景：-1"><a href="#场景：-1" class="headerlink" title="场景："></a>场景：</h5><p>​        回滚代码之后，本地可以成功构建，但服务器端无法正常构建。</p>
-<h5 id="具体描述：-1"><a href="#具体描述：-1" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​        服务器端构建一直失败，好像是拉取到了错误版本的代码。</p>
-<h5 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h5><p>​        暴脾气的我本来打算把项目删了重新拉一个下来，后来忍住了，在服务器端回滚了一下代码，然后手动构建了一下，居然成功了，完结。</p>
-<h5 id="最后：-1"><a href="#最后：-1" class="headerlink" title="最后："></a>最后：</h5><p>​        虽然没什么有用的东西，不过思路还是有的。</p>
-<p>​        首先你要确认本地构建的代码是否和服务器完全相同、服务器构建的时候是否pull了最新的代码…</p>
-
-    
-
-        <a href="/2020/04/13/13/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
