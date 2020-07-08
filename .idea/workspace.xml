@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f67c46-ed3a-489c-9432-dfa67776b5a0" name="Default Changelist" comment="init">
-      <change beforePath="$PROJECT_DIR$/source/_posts/RE-5UserService&amp;Fegin.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/RE-5UserService&amp;Fegin.md" afterDir="false" />
-    </list>
+    <list default="true" id="43f67c46-ed3a-489c-9432-dfa67776b5a0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +44,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\fairy\fairyeye.github.io\themes\indigo\source\img" />
@@ -66,6 +67,7 @@
       <workItem from="1587864698899" duration="1232000" />
       <workItem from="1587867134929" duration="1616000" />
       <workItem from="1587968164252" duration="2410000" />
+      <workItem from="1594173393558" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1587865659117</created>
@@ -74,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587865659117</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[ADD] documents dir">
+      <created>1594173434853</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594173434853</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,13 +96,14 @@
       <path value="$PROJECT_DIR$/themes/indigo" />
     </ignored-roots>
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="[ADD] documents dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] documents dir" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1587869588028">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1594173433761">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1587869588028" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1594173433761" />
     <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1587865932357">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -114,10 +124,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="186" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1587869564736" />
-    <state x="275" y="105" key="Vcs.Push.Dialog.v2" timestamp="1587865661334">
+    <state x="275" y="105" key="Vcs.Push.Dialog.v2" timestamp="1594173444367">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="105" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1587865661334" />
+    <state x="275" y="105" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1594173444367" />
     <state x="303" y="95" width="759" height="548" key="find.popup" timestamp="1587968622906">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
