@@ -36,3 +36,13 @@ bignum3 = bignum1.divide(bignum2);
 System.out.println("商  是：" + bignum3);
 ```
 
+
+
+##### BigDecimal 去除小数点后的0
+
+```
+BigDecimal bigDecimal = new BigDecimal("10.100000");
+bigDecimal = bigDecimal.stripTrailingZeros();// 10.1
+String str = bigDecimal.toPlainString();//转成字符串
+```
+
