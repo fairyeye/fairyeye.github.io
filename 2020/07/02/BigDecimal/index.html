@@ -29,7 +29,7 @@
 <meta property="og:description" content="123456789101112131415161718192021222324252627int a &#x3D; bigdemical.compareTo(bigdemical2)&#x2F;&#x2F;a &#x3D; -1,表示bigdemical小于bigdemical2；&#x2F;&#x2F;a &#x3D; 0,表示bigdemical等于bigdemical2；&#x2F;&amp;#">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-02T06:15:30.045Z">
-<meta property="article:modified_time" content="2020-07-02T09:58:54.329Z">
+<meta property="article:modified_time" content="2020-07-09T03:04:35.993Z">
 <meta property="article:author" content="fairyeye">
 <meta name="twitter:card" content="summary">
     
@@ -154,6 +154,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#BigDecimal-去除小数点后的0"><span class="post-toc-number">1.</span> <span class="post-toc-text">BigDecimal 去除小数点后的0</span></a></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-BigDecimal"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -179,6 +186,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">int a &#x3D; bigdemical.compareTo(bigdemical2)</span><br><span class="line">&#x2F;&#x2F;a &#x3D; -1,表示bigdemical小于bigdemical2；</span><br><span class="line">&#x2F;&#x2F;a &#x3D; 0,表示bigdemical等于bigdemical2；</span><br><span class="line">&#x2F;&#x2F;a &#x3D; 1,表示bigdemical大于bigdemical2；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;加减乘除：</span><br><span class="line">BigDecimal bignum1 &#x3D; new BigDecimal(&quot;10&quot;);  </span><br><span class="line">BigDecimal bignum2 &#x3D; new BigDecimal(&quot;5&quot;);  </span><br><span class="line">BigDecimal bignum3 &#x3D; null;  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;加法  </span><br><span class="line">bignum3 &#x3D;  bignum1.add(bignum2);       </span><br><span class="line">System.out.println(&quot;和 是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;减法  </span><br><span class="line">bignum3 &#x3D; bignum1.</span><br><span class="line">(bignum2);  </span><br><span class="line">System.out.println(&quot;差  是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;乘法  </span><br><span class="line">bignum3 &#x3D; bignum1.multiply(bignum2);  </span><br><span class="line">System.out.println(&quot;积  是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;除法  </span><br><span class="line">bignum3 &#x3D; bignum1.divide(bignum2);  </span><br><span class="line">System.out.println(&quot;商  是：&quot; + bignum3);</span><br></pre></td></tr></table></figure>
 
 
+
+<h5 id="BigDecimal-去除小数点后的0"><a href="#BigDecimal-去除小数点后的0" class="headerlink" title="BigDecimal 去除小数点后的0"></a>BigDecimal 去除小数点后的0</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal bigDecimal &#x3D; new BigDecimal(&quot;10.100000&quot;);</span><br><span class="line">bigDecimal &#x3D; bigDecimal.stripTrailingZeros();&#x2F;&#x2F; 10.1</span><br><span class="line">String str &#x3D; bigDecimal.toPlainString();&#x2F;&#x2F;转成字符串</span><br></pre></td></tr></table></figure>
+
+
         </div>
 
         <blockquote class="post-copyright">
@@ -186,7 +197,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-02T09:58:54.329Z" itemprop="dateUpdated">2020-07-02 17:58:54</time>
+    最后更新时间：<time datetime="2020-07-09T03:04:35.993Z" itemprop="dateUpdated">2020-07-09 11:04:35</time>
 </span><br>
 
 
