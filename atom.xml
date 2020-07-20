@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-16T08:14:58.256Z</updated>
+  <updated>2020-07-20T08:49:18.179Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/2020/07/20/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    <id>http://yoursite.com/2020/07/20/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</id>
+    <published>2020-07-20T08:47:25.582Z</published>
+    <updated>2020-07-20T08:49:18.179Z</updated>
+    
+    <content type="html"><![CDATA[<p>启动类</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class DoaApplication &#123;</span><br><span class="line"></span><br><span class="line">@Resource</span><br><span class="line">private JdbcTemplate jdbcTemplate;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">SpringApplication.run(DoaApplication.class, args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@GetMapping(&quot;&#x2F;test&quot;)</span><br><span class="line">public List&lt;Map&lt;String, Object&gt;&gt; test() &#123;</span><br><span class="line">return jdbcTemplate.queryForList(&quot;select * from user&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;doa?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf-8&amp;useSSL&#x3D;false&amp;rewriteBatchedStatements&#x3D;true&amp;serverTimezone&#x3D;UTC</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br></pre></td></tr></table></figure><p>pom</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;</span><br><span class="line">&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;启动类&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里巴巴手册</title>
@@ -463,33 +488,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Delete/Truncate/Drop</title>
-    <link href="http://yoursite.com/2020/04/26/Delete%20&amp;%20Truncate/"/>
-    <id>http://yoursite.com/2020/04/26/Delete%20&amp;%20Truncate/</id>
-    <published>2020-04-26T03:55:38.631Z</published>
-    <updated>2020-04-22T09:44:47.286Z</updated>
-    
-    <content type="html"><![CDATA[<p>假如把一张表比作一间教室，数据比作学生。</p><p><code>drop</code> 就是把这件教师炸掉了，教室都没了，更不用说数据了。</p><p><code>truncate</code> 就是把学生开除了，离开了，再也没有了。</p><p><code>delete</code> 就是学生出去了，虽然他们可能不会回来了，但是位置还是要留着。</p><h4 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h4><p>直接删掉表，这个没什么好说的。</p><p>包括表结构，表数据，全部删除，占用的空间也会释放。</p><h4 id="Truncate"><a href="#Truncate" class="headerlink" title="Truncate"></a>Truncate</h4><p>截断表，会释放空间。</p><h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4><p>删除数据</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;假如把一张表比作一间教室，数据比作学生。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;drop&lt;/code&gt; 就是把这件教师炸掉了，教室都没了，更不用说数据了。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;truncate&lt;/code&gt; 就是把学生开除了，离开了，再也没有了。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;del
-      
-    
-    </summary>
-    
-    
-    
-      <category term="dairy" scheme="http://yoursite.com/tags/dairy/"/>
     
   </entry>
   
