@@ -1,10 +1,9 @@
-
 ---
 title: 2020-04-08
 date: 2020-04-08 09:54:30
-
-tags: Java
+tags: "Java"
 ---
+
 
 当做实体类入参时，可以通过mapper接口的`@param`绑定入参。
 
