@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-20T08:49:18.179Z</updated>
+  <updated>2020-07-22T08:00:44.723Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fastJson使用</title>
+    <link href="http://yoursite.com/2020/07/22/fastJson/"/>
+    <id>http://yoursite.com/2020/07/22/fastJson/</id>
+    <published>2020-07-22T07:57:48.643Z</published>
+    <updated>2020-07-22T08:00:44.723Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>syntax error, expect {, actual [, pos 0, fastjson-version 1.2.50</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 转换一个map对象</span></span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; maps = jdbcTemplate.queryForList(<span class="string">"select * from user"</span>);</span><br><span class="line">maps.forEach(stringObjectMap -&gt; &#123;</span><br><span class="line">User user = JSON.parseObject(JSON.toJSONString(stringObjectMap), User<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;syntax error, expect {, actual [, pos 0, fastjson-version 1.2.50&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+    
+    
+      <category term="utils" scheme="http://yoursite.com/tags/utils/"/>
+    
+  </entry>
   
   <entry>
     <title>test</title>
@@ -228,7 +253,7 @@
     <link href="http://yoursite.com/2020/05/19/Java%208%20Stream/"/>
     <id>http://yoursite.com/2020/05/19/Java%208%20Stream/</id>
     <published>2020-05-19T06:52:21.116Z</published>
-    <updated>2020-07-01T09:55:31.970Z</updated>
+    <updated>2020-07-22T08:03:34.857Z</updated>
     
     <content type="html"><![CDATA[<p>通过<code>workOrederNum</code>字段排序</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>查出<code>InstructionPoDTO</code>中<code>InstructionDocNum</code>作为list</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 筛选出不重复的 instructionDocNum</span></span><br><span class="line">List&lt;String&gt; instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>筛选所有<code>instructionDocNum = 123</code>的对象 </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;InstructionPoDTO&gt; instructionPoDTOS = read.stream().filter(instructionPoDTO -&gt;</span><br><span class="line">     instructionPoDTO.getInstructionDocNum().equals(<span class="string">"123"</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>查询出第一个</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String instructionDocId = instructionDocs.stream().findFirst().get();</span><br></pre></td></tr></table></figure><p>设置<code>typeCode</code>为key，<code>list</code>的对象为<code>value</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, MtGenType&gt; typesMap = types.stream().collect(Collectors.toMap(t -&gt; t.getTypeCode(), t -&gt; t));</span><br></pre></td></tr></table></figure><p>// 通过字段去重</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-&gt; new TreeSet&lt;&gt;(Comparator.comparing(o -&gt; o.getMaterial()+&quot;;&quot;+o.getPlant()+&quot;;&quot;+o.getStorage()+&quot;;&quot;+o.getBatch()+&quot;;&quot;+o.getSpecialStock()))), ArrayList::new));</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -244,7 +269,7 @@
     
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -466,28 +491,6 @@
     
     
       <category term="store" scheme="http://yoursite.com/tags/store/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WHEN YOU HAVE A NEW PC</title>
-    <link href="http://yoursite.com/2020/04/26/WHEN%20YOU%20HAVE%20A%20NEW%20PC/"/>
-    <id>http://yoursite.com/2020/04/26/WHEN%20YOU%20HAVE%20A%20NEW%20PC/</id>
-    <published>2020-04-26T03:55:38.637Z</published>
-    <updated>2020-04-26T09:06:37.610Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="WHEN-YOU-HAVE-A-NEW-PC"><a href="#WHEN-YOU-HAVE-A-NEW-PC" class="headerlink" title=" WHEN YOU HAVE A NEW PC"></a><center> WHEN YOU HAVE A NEW PC</center></h3><h4 id="Java环境配置"><a href="#Java环境配置" class="headerlink" title="Java环境配置"></a>Java环境配置</h4><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h5><p>​    提前新建两个文件夹，jdk，jre，默认路径也可以</p><p>​    安装<code>jdk-8u111-windows-x64.exe</code></p><p>​    设置jdk、jre的路径</p><h5 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h5><p>​    右键此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  <strong>系统变量(S)</strong></p><p>​    只有系统变量才是全局的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">新建CLASSPATH.;</span><br><span class="line">新建JAVA_HOMEjdk路径</span><br><span class="line">修改path添加 %JAVA_HOME%\bin;</span><br><span class="line"></span><br><span class="line">测试java -version</span><br><span class="line"> javac -version</span><br></pre></td></tr></table></figure><h4 id="Maven环境配置"><a href="#Maven环境配置" class="headerlink" title="Maven环境配置"></a>Maven环境配置</h4><ol><li>解压<code>apache-maven-3.3.9.rar</code> 到指定的目录。</li><li>修改配置文件（压缩包已修改过）。</li></ol><h4 id="GIT-工具"><a href="#GIT-工具" class="headerlink" title="GIT 工具"></a>GIT 工具</h4><h5 id="1-全局配置用户信息"><a href="#1-全局配置用户信息" class="headerlink" title="1. 全局配置用户信息"></a>1. 全局配置用户信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;fairy&quot;</span><br><span class="line">git config --global user.email &quot;fairy@gmail.com&quot;</span><br></pre></td></tr></table></figure><h5 id="2-生成key"><a href="#2-生成key" class="headerlink" title="2. 生成key"></a>2. 生成key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#39;email&#39; &#x2F;&#x2F; Email可选，会在key中生成你的邮箱信息  一直回车就行</span><br></pre></td></tr></table></figure><p>​    生成的key文件  <code>C:\Users\你的用户名\.ssh\id_rsa.pub</code></p><p>​    用文本编辑器打开，复制到GIT上。</p><h5 id="3-上传项目到GIT"><a href="#3-上传项目到GIT" class="headerlink" title="3. 上传项目到GIT"></a>3. 上传项目到GIT</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 项目文件加夹</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:fairyeye&#x2F;StudyJava.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><h4 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h4><p>安装<code>https://www.runoob.com/mysql/mysql-install.html</code></p><p>修改初始密码</p><p>MySQL版本5.7.6版本以前用户可以使用如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SET PASSWORD &#x3D; PASSWORD(&#39;your pwd&#39;);</span><br></pre></td></tr></table></figure><p>MySQL版本5.7.6版本开始的用户可以使用如下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER USER() IDENTIFIED BY &#39;your pwd&#39;;</span><br></pre></td></tr></table></figure><p>登录报错 <code>https://www.cnblogs.com/lifan1998/p/9177731.html</code></p><h4 id="去图标"><a href="#去图标" class="headerlink" title="去图标"></a>去图标</h4><p>​    管理员运行  <code>去图标.bat</code> 文件。</p><h4 id="谷歌访问助手"><a href="#谷歌访问助手" class="headerlink" title="谷歌访问助手"></a>谷歌访问助手</h4><p>​    谷歌浏览器 -&gt; 更多工具 -&gt; 扩展程序 -&gt; 开发者模式(打开) 。</p><p>​    拖动 <code>谷歌访问助手.crx</code> 到谷歌浏览器中。</p><h4 id="软件安装清单"><a href="#软件安装清单" class="headerlink" title="软件安装清单"></a>软件安装清单</h4><ul><li>IDEA：费什么话…你能像我一样用<code>Sublime</code>写代码？</li><li>Chrome：先装个浏览器吧</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;WHEN-YOU-HAVE-A-NEW-PC&quot;&gt;&lt;a href=&quot;#WHEN-YOU-HAVE-A-NEW-PC&quot; class=&quot;headerlink&quot; title=&quot; WHEN YOU HAVE A NEW PC&quot;&gt;&lt;/a&gt;&lt;center&gt; WHEN YOU H
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
