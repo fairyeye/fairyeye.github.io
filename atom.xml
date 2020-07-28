@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-22T08:00:44.723Z</updated>
+  <updated>2020-07-28T06:57:18.940Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Springboot返回html</title>
+    <link href="http://yoursite.com/2020/07/28/Springboot%E8%BF%94%E5%9B%9Ehtml/"/>
+    <id>http://yoursite.com/2020/07/28/Springboot%E8%BF%94%E5%9B%9Ehtml/</id>
+    <published>2020-07-28T06:54:53.283Z</published>
+    <updated>2020-07-28T06:57:18.940Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Springboot返回html"><a href="#Springboot返回html" class="headerlink" title="Springboot返回html"></a>Springboot返回html</h1><p>2019-04-15阅读 1.4K0</p><p>  注：Springboot的版本2.1.3.RELEASE</p><p> <em>List-1</em> application.properties文件</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">server.port=<span class="number">8080</span></span><br><span class="line">#url中，项目的前缀</span><br><span class="line">server.servlet.context-path=<span class="regexp">/project</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">spring.mvc.view.prefix=/</span></span><br><span class="line">spring.mvc.view.suffix=.html</span><br></pre></td></tr></table></figure><p>  整体结构如下图1所示，html要放在static下，不是templates下</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ask.qcloudimg.com/http-save/yehe-5089774/1k8adq8jn7.jpeg?imageView2/2/w/1620" alt="img" title="">                </div>                <div class="image-caption">img</div>            </figure><p>　　　　　　　　　　　　　　　　　　　　　　　　　图１</p><p> <em>List-2</em> HelloController的内容如下</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"></span><br><span class="line">@Slf4j</span><br><span class="line">@Controller</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = <span class="string">"/hello"</span>)</span><br><span class="line">    public <span class="built_in">String</span> index() &#123;</span><br><span class="line">        log.info(<span class="string">"收到请求"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"html/hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p> <em>List-3</em> 启动springboot，之后在浏览器中输入</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#返回index.html的内容</span><br><span class="line">http:<span class="comment">//localhost:8080/project/</span></span><br><span class="line"></span><br><span class="line">#返回hello.html的内容</span><br><span class="line">http:<span class="comment">//localhost:8080/project/hello</span></span><br></pre></td></tr></table></figure><p>  网上很多关于模板的（Thymeleaf 、FreeMarker 等），但是我不需要，我只需要纯的html。</p><p>  index.html是springboot的默认welcome page。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol><li><a href="https://www.jianshu.com/p/eb4c0fc2dfc4" target="_blank" rel="noopener">https://www.jianshu.com/p/eb4c0fc2dfc4</a></li><li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content</a></li><li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-welcome-page" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-welcome-page</a></li></ol><p>​     (adsbygoogle = window.adsbygoogle || []).push({});  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Springboot返回html&quot;&gt;&lt;a href=&quot;#Springboot返回html&quot; class=&quot;headerlink&quot; title=&quot;Springboot返回html&quot;&gt;&lt;/a&gt;Springboot返回html&lt;/h1&gt;&lt;p&gt;2019-04-15阅读 1
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>fastJson使用</title>
@@ -465,29 +487,6 @@
     
     </summary>
     
-    
-    
-      <category term="store" scheme="http://yoursite.com/tags/store/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RE:1 注册中心</title>
-    <link href="http://yoursite.com/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
-    <id>http://yoursite.com/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</id>
-    <published>2020-04-26T06:25:50.000Z</published>
-    <updated>2020-04-27T06:34:25.430Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200426143308709.png" alt="image-20200426143308709" title="">                </div>                <div class="image-caption">image-20200426143308709</div>            </figure><h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>启动类上加<code>@EnableEurekaServer</code>注解</p><p>store需要pom</p><p><code>application.yml</code></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: store-eureka</span><br><span class="line">server:</span><br><span class="line">  port: 8000</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false</span><br><span class="line">    fetch-registry: false</span><br><span class="line">    serviceUrl:</span><br><span class="line">      defaultZone: http://dev.store.local:$&#123;server.port&#125;/eureka/</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">register-with-eureka: false  &#x2F;&#x2F; 注释之后才可以看到 available instance</span><br></pre></td></tr></table></figure><p>参考：</p><p><a href="http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html</a></p><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p> 版本：8.0.19</p>]]></content>
-    
-    <summary type="html">
-    
-      先搞注册中心
-    
-    </summary>
-    
-    
-      <category term="折腾" scheme="http://yoursite.com/categories/%E6%8A%98%E8%85%BE/"/>
     
     
       <category term="store" scheme="http://yoursite.com/tags/store/"/>
