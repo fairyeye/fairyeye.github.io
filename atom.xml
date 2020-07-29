@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-28T06:57:18.940Z</updated>
+  <updated>2020-07-28T11:00:50.316Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端学习</title>
+    <link href="http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2020/07/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/</id>
+    <published>2020-07-28T10:01:02.854Z</published>
+    <updated>2020-07-28T11:00:50.316Z</updated>
+    
+    <content type="html"><![CDATA[<hr><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用 yarn 创建 Umi 脚手架，执行以下命令</span><br><span class="line">$ mkdir li &amp;&amp; cd li</span><br><span class="line">$ yarn create umi</span><br><span class="line">$ yarn</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Untitled</title>
+    <link href="http://yoursite.com/2020/07/28/Untitled/"/>
+    <id>http://yoursite.com/2020/07/28/Untitled/</id>
+    <published>2020-07-28T10:00:52.268Z</published>
+    <updated>2020-07-28T10:00:52.268Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Springboot返回html</title>
@@ -435,54 +474,6 @@
       
         &lt;h5 id=&quot;错误的依赖&quot;&gt;&lt;a href=&quot;#错误的依赖&quot; class=&quot;headerlink&quot; title=&quot;错误的依赖&quot;&gt;&lt;/a&gt;错误的依赖&lt;/h5&gt;&lt;p&gt;正确的依赖&lt;/p&gt;
 &lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
-      
-    
-    </summary>
-    
-    
-    
-      <category term="store" scheme="http://yoursite.com/tags/store/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RE:3-UserService</title>
-    <link href="http://yoursite.com/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/"/>
-    <id>http://yoursite.com/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/</id>
-    <published>2020-04-26T07:25:10.000Z</published>
-    <updated>2020-04-27T05:58:04.920Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure><h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure><h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">'?й???????'</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure><p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;依赖：&quot;&gt;&lt;a href=&quot;#依赖：&quot; class=&quot;headerlink&quot; title=&quot;依赖：&quot;&gt;&lt;/a&gt;依赖：&lt;/h4&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;spa
-      
-    
-    </summary>
-    
-    
-    
-      <category term="store" scheme="http://yoursite.com/tags/store/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RE:5UserService&amp;Fegin</title>
-    <link href="http://yoursite.com/2020/04/26/RE-5UserService&amp;Fegin/"/>
-    <id>http://yoursite.com/2020/04/26/RE-5UserService&amp;Fegin/</id>
-    <published>2020-04-26T07:25:10.000Z</published>
-    <updated>2020-04-27T09:06:03.848Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p><p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p><p><strong>注册中心：</strong></p><table><thead><tr><th align="left">Application</th><th align="left">AMIs</th><th align="left">Availability Zones</th><th align="left">Status</th></tr></thead><tbody><tr><td align="left"><strong>GOODS-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr><tr><td align="left"><strong>USER-SERVICE</strong></td><td align="left"><strong>n/a</strong> (1)</td><td align="left">(1)</td><td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td></tr></tbody></table><h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4><p><a href="https://github.com/fairyeye/store" target="_blank" rel="noopener">https://github.com/fairyeye/store</a></p><p>1+1+1+1+1+1+1 = 7</p><p>6+5+4+3+2+1 = </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Fegin&quot;&gt;&lt;a href=&quot;#Fegin&quot; class=&quot;headerlink&quot; title=&quot;Fegin&quot;&gt;&lt;/a&gt;Fegin&lt;/h4&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
       
     
     </summary>
