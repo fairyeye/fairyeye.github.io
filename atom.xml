@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-28T11:00:50.316Z</updated>
+  <updated>2020-08-06T07:25:31.941Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建SSR服务器</title>
+    <link href="http://yoursite.com/2020/08/06/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://yoursite.com/2020/08/06/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2020-08-06T07:23:36.222Z</published>
+    <updated>2020-08-06T07:25:31.941Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">apt install git </span><br><span class="line">报错：Temporary failure resolving &#39;archive.ubuntu.com</span><br><span class="line">具体如下：</span><br><span class="line"></span><br><span class="line">Ign:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 liberror-perl all 0.17-1.2</span><br><span class="line">Ign:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">Err:3 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main amd64 git amd64 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 liberror-perl all 0.17-1.2</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;main&#x2F;libe&#x2F;liberror-perl&#x2F;liberror-perl_0.17-1.2_all.deb  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;main&#x2F;g&#x2F;git&#x2F;git-man_2.7.4-0ubuntu1_all.deb  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;main&#x2F;g&#x2F;git&#x2F;git_2.7.4-0ubuntu1_amd64.deb  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line"></span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line">root@132157:~# apt-get update</span><br><span class="line">Err:1 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu xenial-security InRelease</span><br><span class="line">  Temporary failure resolving &#39;security.ubuntu.com&#39;</span><br><span class="line">Err:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial InRelease</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:3 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial-updates InRelease</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:4 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial-backports InRelease</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial-updates&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial-backports&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial-security&#x2F;InRelease  Temporary failure resolving &#39;security.ubuntu.com&#39;</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure><p><code>原因是DNS未配置</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vi &#x2F;etc&#x2F;resolv.conf</span><br><span class="line"></span><br><span class="line">+ nameserver 202.96.134.133</span><br><span class="line">+ nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>前端学习</title>
@@ -449,31 +471,6 @@
 &lt;li&gt;添加依赖&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;
-      
-    
-    </summary>
-    
-    
-    
-      <category term="store" scheme="http://yoursite.com/tags/store/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RE:2网关</title>
-    <link href="http://yoursite.com/2020/04/26/RE-2%E7%BD%91%E5%85%B3/"/>
-    <id>http://yoursite.com/2020/04/26/RE-2%E7%BD%91%E5%85%B3/</id>
-    <published>2020-04-26T07:25:10.000Z</published>
-    <updated>2020-04-26T08:24:28.904Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="错误的依赖"><a href="#错误的依赖" class="headerlink" title="错误的依赖"></a>错误的依赖</h5><p>正确的依赖</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="使用IP注册到注册中心"><a href="#使用IP注册到注册中心" class="headerlink" title="使用IP注册到注册中心"></a>使用IP注册到注册中心</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    hostname: $&#123;spring.cloud.client.ip-address&#125;</span><br><span class="line">    instance-id: $&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;</span><br><span class="line">    # 使用IP注册到注册中心</span><br><span class="line">    prefer-ip-address: true</span><br></pre></td></tr></table></figure><p><a href="http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h5 id=&quot;错误的依赖&quot;&gt;&lt;a href=&quot;#错误的依赖&quot; class=&quot;headerlink&quot; title=&quot;错误的依赖&quot;&gt;&lt;/a&gt;错误的依赖&lt;/h5&gt;&lt;p&gt;正确的依赖&lt;/p&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
       
     
     </summary>
