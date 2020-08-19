@@ -62,3 +62,37 @@ Map<String, MtGenType> typesMap = types.stream().collect(Collectors.toMap(t -> t
 instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-> new TreeSet<>(Comparator.comparing(o -> o.getMaterial()+";"+o.getPlant()+";"+o.getStorage()+";"+o.getBatch()+";"+o.getSpecialStock()))), ArrayList::new));
 ```
 
+
+
+GROUP BY
+
+```
+Map<String, List<WmsIqcRecord>> map = records.stream().collect(Collectors.groupingBy(iqcRecord -> {
+                    if (StringUtils.equals("TO_DO", iqcRecord.getStatus())) {
+                        switch (iqcRecord.getDealMethod()) {
+                            case "RELEASE":
+                                return "TO_RELEASE";
+                            case "FREEZE":
+                                return "TO_FREEZE";
+                            case "RETURN":
+                                return "TO_RETURN";
+                            default:
+                                return "TO_DO";
+                        }
+                    } else if (StringUtils.equals("DONE", iqcRecord.getStatus())) {
+                        switch (iqcRecord.getDealMethod()) {
+                            case "RELEASE":
+                                return "RELEASE_DONE";
+                            case "FREEZE":
+                                return "FREEZE_DONE";
+                            case "RETURN":
+                                return "RETURN_DONE";
+                            default:
+                                return "DONE";
+                        }
+                    } else {
+                        return "DEAL";
+                    }
+                }));
+```
+
