@@ -14,21 +14,24 @@
     
     
     
-    <title>Untitled | 人生当苦, 良人当归</title>
+    <title>Java8 LocalDate | 人生当苦, 良人当归</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta property="og:type" content="article">
-<meta property="og:title" content="Untitled">
-<meta property="og:url" content="http://yoursite.com/2020/07/28/Untitled/index.html">
+    <meta name="keywords" content="utils">
+    <meta name="description" content="localDate&#x2F;localTime&#x2F;localDateTime">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java8 LocalDate">
+<meta property="og:url" content="http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="人生当苦, 良人当归">
+<meta property="og:description" content="localDate&#x2F;localTime&#x2F;localDateTime">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-28T10:00:52.268Z">
-<meta property="article:modified_time" content="2020-07-28T10:00:52.268Z">
+<meta property="article:published_time" content="2020-10-09T10:21:18.961Z">
+<meta property="article:modified_time" content="2020-10-09T10:34:50.631Z">
 <meta property="article:author" content="fairyeye">
+<meta property="article:tag" content="utils">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="人生当苦, 良人当归" href="/atom.xml">
@@ -110,7 +113,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Untitled</div>
+        <div class="flex-col header-title ellipsis">Java8 LocalDate</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -132,11 +135,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Untitled</h1>
+        <h1 class="title">Java8 LocalDate</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-07-28T10:00:52.268Z" itemprop="datePublished" class="page-time">
-  2020-07-28
+                <time datetime="2020-10-09T10:21:18.961Z" itemprop="datePublished" class="page-time">
+  2020-10-09
 </time>
 
 
@@ -153,13 +156,13 @@
 <div class="container body-wrap">
     
 
-<article id="post-Untitled"
+<article id="post-日期处理"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Untitled</h1>
+        <h1 class="post-card-title">Java8 LocalDate</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-07-28 18:00:52" datetime="2020-07-28T10:00:52.268Z"  itemprop="datePublished">2020-07-28</time>
+            <time class="post-time" title="2020-10-09 18:21:18" datetime="2020-10-09T10:21:18.961Z"  itemprop="datePublished">2020-10-09</time>
 
             
 
@@ -172,7 +175,10 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">LocalDate localDate &#x3D; LocalDate.now();</span><br><span class="line">      LocalTime localTime &#x3D; LocalTime.now();</span><br><span class="line">      LocalDateTime localDateTime &#x3D; LocalDateTime.now();</span><br><span class="line"></span><br><span class="line">      System.out.println(localDate); &#x2F;&#x2F; 2020-10-09</span><br><span class="line">      System.out.println(localTime); &#x2F;&#x2F; 18:29:47.712227100</span><br><span class="line">      System.out.println(localDateTime); &#x2F;&#x2F; 2020-10-09T18:29:47.712227100</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 去掉毫秒</span><br><span class="line">      System.out.println(localTime.withNano(0)); &#x2F;&#x2F; 18:29:47</span><br><span class="line">      System.out.println(localDateTime.withNano(0)); &#x2F;&#x2F; 2020-10-09T18:29:47</span><br><span class="line">      System.out.println(localTime.truncatedTo(ChronoUnit.SECONDS)); &#x2F;&#x2F; 18:29:47</span><br><span class="line">      System.out.println(localDateTime.truncatedTo(ChronoUnit.SECONDS)); &#x2F;&#x2F; 2020-10-09T18:29:47</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 获取加减一天的日期</span><br><span class="line">      System.out.println(localDateTime.plusDays(1L)); &#x2F;&#x2F; 2020-10-10T18:33:47.376192400</span><br><span class="line">      System.out.println(localDateTime.plusDays(-1L)); &#x2F;&#x2F; 2020-10-08T18:33:47.376192400</span><br></pre></td></tr></table></figure>
+
+<p>参考API</p>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -180,7 +186,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-07-28T10:00:52.268Z" itemprop="dateUpdated">2020-07-28 18:00:52</time>
+    最后更新时间：<time datetime="2020-10-09T10:34:50.631Z" itemprop="dateUpdated">2020-10-09 18:34:50</time>
 </span><br>
 
 
@@ -204,6 +210,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/utils/" rel="tag">utils</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -212,7 +220,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/07/28/Untitled/&title=《Untitled》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/&title=《Java8 LocalDate》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -222,22 +230,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/07/28/Untitled/&title=《Untitled》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/&title=《Java8 LocalDate》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/07/28/Untitled/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Untitled》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/07/28/Untitled/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java8 LocalDate》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/07/28/Untitled/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -260,18 +268,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/07/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" id="post-prev" class="post-nav-link">
+      <a href="/2020/10/10/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">前端学习</h4>
+        <h4 class="title">查询不在B表里的A表数据</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/07/28/Springboot%E8%BF%94%E5%9B%9Ehtml/" id="post-next" class="post-nav-link">
+      <a href="/2020/10/09/JDBCTemplete%E6%89%B9%E5%A4%84%E7%90%86/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Springboot返回html</h4>
+        <h4 class="title">JdbcTemplete批处理</h4>
       </a>
     </div>
   
@@ -361,7 +369,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/07/28/Untitled/&title=《Untitled》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/&title=《Java8 LocalDate》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -371,22 +379,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/07/28/Untitled/&title=《Untitled》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/&title=《Java8 LocalDate》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/07/28/Untitled/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Untitled》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/07/28/Untitled/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java8 LocalDate》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/07/28/Untitled/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -397,7 +405,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/07/28/Untitled/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" alt="微信分享二维码">
 </div>
 
 

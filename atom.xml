@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-23T08:25:42.142Z</updated>
+  <updated>2020-10-09T10:21:48.236Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>查询不在B表里的A表数据</title>
+    <link href="http://yoursite.com/2020/10/10/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/"/>
+    <id>http://yoursite.com/2020/10/10/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/</id>
+    <published>2020-10-10T01:27:46.428Z</published>
+    <updated>2020-10-09T10:21:48.236Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="utils" scheme="http://yoursite.com/tags/utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java8 LocalDate</title>
+    <link href="http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/"/>
+    <id>http://yoursite.com/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</id>
+    <published>2020-10-09T10:21:18.961Z</published>
+    <updated>2020-10-09T10:34:50.631Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">LocalDate localDate &#x3D; LocalDate.now();</span><br><span class="line">      LocalTime localTime &#x3D; LocalTime.now();</span><br><span class="line">      LocalDateTime localDateTime &#x3D; LocalDateTime.now();</span><br><span class="line"></span><br><span class="line">      System.out.println(localDate); &#x2F;&#x2F; 2020-10-09</span><br><span class="line">      System.out.println(localTime); &#x2F;&#x2F; 18:29:47.712227100</span><br><span class="line">      System.out.println(localDateTime); &#x2F;&#x2F; 2020-10-09T18:29:47.712227100</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 去掉毫秒</span><br><span class="line">      System.out.println(localTime.withNano(0)); &#x2F;&#x2F; 18:29:47</span><br><span class="line">      System.out.println(localDateTime.withNano(0)); &#x2F;&#x2F; 2020-10-09T18:29:47</span><br><span class="line">      System.out.println(localTime.truncatedTo(ChronoUnit.SECONDS)); &#x2F;&#x2F; 18:29:47</span><br><span class="line">      System.out.println(localDateTime.truncatedTo(ChronoUnit.SECONDS)); &#x2F;&#x2F; 2020-10-09T18:29:47</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 获取加减一天的日期</span><br><span class="line">      System.out.println(localDateTime.plusDays(1L)); &#x2F;&#x2F; 2020-10-10T18:33:47.376192400</span><br><span class="line">      System.out.println(localDateTime.plusDays(-1L)); &#x2F;&#x2F; 2020-10-08T18:33:47.376192400</span><br></pre></td></tr></table></figure><p>参考API</p>]]></content>
+    
+    <summary type="html">
+    
+      localDate/localTime/localDateTime
+    
+    </summary>
+    
+    
+    
+      <category term="utils" scheme="http://yoursite.com/tags/utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JdbcTemplete批处理</title>
+    <link href="http://yoursite.com/2020/10/09/JDBCTemplete%E6%89%B9%E5%A4%84%E7%90%86/"/>
+    <id>http://yoursite.com/2020/10/09/JDBCTemplete%E6%89%B9%E5%A4%84%E7%90%86/</id>
+    <published>2020-10-09T10:15:22.133Z</published>
+    <updated>2020-10-09T10:20:35.264Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; sql语句</span><br><span class="line">String sql &#x3D; &quot;INSERT INTO ssme_iqc_change(TENANT_ID, KID) VALUE (?, ?);&quot;;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; kids &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; BatchPreparedStatementSetter 通过循环取出数据填充到SQL中</span><br><span class="line">jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void setValues(PreparedStatement ps, int i) throws SQLException &#123;</span><br><span class="line">                ps.setLong(1, 4L);</span><br><span class="line">                ps.setString(2, kids.get(i));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public int getBatchSize() &#123;</span><br><span class="line">                return kids.size();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      批处理-速率优化
+    
+    </summary>
+    
+    
+      <category term="速率优化" scheme="http://yoursite.com/categories/%E9%80%9F%E7%8E%87%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="utils" scheme="http://yoursite.com/tags/utils/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu</title>
@@ -41,33 +102,25 @@
   </entry>
   
   <entry>
-    <title>Ub</title>
-    <link href="http://yoursite.com/2020/09/23/Ub/"/>
-    <id>http://yoursite.com/2020/09/23/Ub/</id>
-    <published>2020-09-23T02:01:09.318Z</published>
-    <updated>2020-09-23T02:00:49.776Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-      <category term="utils" scheme="http://yoursite.com/tags/utils/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模板</title>
+    <title>MySQL查询</title>
     <link href="http://yoursite.com/2020/09/23/%E6%A8%A1%E6%9D%BF/"/>
     <id>http://yoursite.com/2020/09/23/%E6%A8%A1%E6%9D%BF/</id>
     <published>2020-09-23T02:00:07.585Z</published>
-    <updated>2020-09-23T08:26:14.029Z</updated>
+    <updated>2020-10-10T01:29:48.168Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查询left表里有 right表里没有的数据</span><br><span class="line">SELECT  l.*</span><br><span class="line">FROM    t_left l</span><br><span class="line">WHERE   NOT EXISTS</span><br><span class="line">(</span><br><span class="line">SELECT  NULL</span><br><span class="line">FROM    t_right r</span><br><span class="line">WHERE   r.value &#x3D; l.value</span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
     </summary>
     
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
       <category term="utils" scheme="http://yoursite.com/tags/utils/"/>
@@ -163,21 +216,6 @@
 &lt;hr&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;
       
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Untitled</title>
-    <link href="http://yoursite.com/2020/07/28/Untitled/"/>
-    <id>http://yoursite.com/2020/07/28/Untitled/</id>
-    <published>2020-07-28T10:00:52.268Z</published>
-    <updated>2020-07-28T10:00:52.268Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
@@ -436,31 +474,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>List stream</title>
-    <link href="http://yoursite.com/2020/05/19/Java%208%20Stream/"/>
-    <id>http://yoursite.com/2020/05/19/Java%208%20Stream/</id>
-    <published>2020-05-19T06:52:21.116Z</published>
-    <updated>2020-08-19T07:35:07.047Z</updated>
-    
-    <content type="html"><![CDATA[<p>通过<code>workOrederNum</code>字段排序</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>查出<code>InstructionPoDTO</code>中<code>InstructionDocNum</code>作为list</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 筛选出不重复的 instructionDocNum</span></span><br><span class="line">List&lt;String&gt; instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>筛选所有<code>instructionDocNum = 123</code>的对象 </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;InstructionPoDTO&gt; instructionPoDTOS = read.stream().filter(instructionPoDTO -&gt;</span><br><span class="line">     instructionPoDTO.getInstructionDocNum().equals(<span class="string">"123"</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure><p>查询出第一个</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String instructionDocId = instructionDocs.stream().findFirst().get();</span><br></pre></td></tr></table></figure><p>设置<code>typeCode</code>为key，<code>list</code>的对象为<code>value</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, MtGenType&gt; typesMap = types.stream().collect(Collectors.toMap(t -&gt; t.getTypeCode(), t -&gt; t));</span><br></pre></td></tr></table></figure><p>// 通过字段去重</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-&gt; new TreeSet&lt;&gt;(Comparator.comparing(o -&gt; o.getMaterial()+&quot;;&quot;+o.getPlant()+&quot;;&quot;+o.getStorage()+&quot;;&quot;+o.getBatch()+&quot;;&quot;+o.getSpecialStock()))), ArrayList::new));</span><br></pre></td></tr></table></figure><p>GROUP BY</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, List&lt;WmsIqcRecord&gt;&gt; map &#x3D; records.stream().collect(Collectors.groupingBy(iqcRecord -&gt; &#123;</span><br><span class="line">                    if (StringUtils.equals(&quot;TO_DO&quot;, iqcRecord.getStatus())) &#123;</span><br><span class="line">                        switch (iqcRecord.getDealMethod()) &#123;</span><br><span class="line">                            case &quot;RELEASE&quot;:</span><br><span class="line">                                return &quot;TO_RELEASE&quot;;</span><br><span class="line">                            case &quot;FREEZE&quot;:</span><br><span class="line">                                return &quot;TO_FREEZE&quot;;</span><br><span class="line">                            case &quot;RETURN&quot;:</span><br><span class="line">                                return &quot;TO_RETURN&quot;;</span><br><span class="line">                            default:</span><br><span class="line">                                return &quot;TO_DO&quot;;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else if (StringUtils.equals(&quot;DONE&quot;, iqcRecord.getStatus())) &#123;</span><br><span class="line">                        switch (iqcRecord.getDealMethod()) &#123;</span><br><span class="line">                            case &quot;RELEASE&quot;:</span><br><span class="line">                                return &quot;RELEASE_DONE&quot;;</span><br><span class="line">                            case &quot;FREEZE&quot;:</span><br><span class="line">                                return &quot;FREEZE_DONE&quot;;</span><br><span class="line">                            case &quot;RETURN&quot;:</span><br><span class="line">                                return &quot;RETURN_DONE&quot;;</span><br><span class="line">                            default:</span><br><span class="line">                                return &quot;DONE&quot;;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return &quot;DEAL&quot;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;));</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;通过&lt;code&gt;workOrederNum&lt;/code&gt;字段排序&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/p
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
