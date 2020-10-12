@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f67c46-ed3a-489c-9432-dfa67776b5a0" name="Default Changelist" comment="" />
+    <list default="true" id="43f67c46-ed3a-489c-9432-dfa67776b5a0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/themes/indigo/_config.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +71,7 @@
       <workItem from="1587867134929" duration="1616000" />
       <workItem from="1587968164252" duration="2410000" />
       <workItem from="1594173393558" duration="68000" />
+      <workItem from="1602465957893" duration="989000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1587865659117</created>
