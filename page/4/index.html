@@ -174,61 +174,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h3 id="WHEN-YOU-HAVE-A-NEW-PC"><a href="#WHEN-YOU-HAVE-A-NEW-PC" class="headerlink" title=" WHEN YOU HAVE A NEW PC"></a><center> WHEN YOU HAVE A NEW PC</center></h3><h4 id="Java环境配置"><a href="#Java环境配置" class="headerlink" title="Java环境配置"></a>Java环境配置</h4><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h5><p>​    提前新建两个文件夹，jdk，jre，默认路径也可以</p>
-<p>​    安装<code>jdk-8u111-windows-x64.exe</code></p>
-<p>​    设置jdk、jre的路径</p>
-<h5 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h5><p>​    右键此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  <strong>系统变量(S)</strong></p>
-<p>​    只有系统变量才是全局的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">新建	CLASSPATH	.;</span><br><span class="line">新建	JAVA_HOME	jdk路径</span><br><span class="line">修改	path		添加 %JAVA_HOME%\bin;</span><br><span class="line"></span><br><span class="line">测试	java -version</span><br><span class="line">	 javac -version</span><br></pre></td></tr></table></figure>
-
-<h4 id="Maven环境配置"><a href="#Maven环境配置" class="headerlink" title="Maven环境配置"></a>Maven环境配置</h4><ol>
-<li>解压<code>apache-maven-3.3.9.rar</code> 到指定的目录。</li>
-<li>修改配置文件（压缩包已修改过）。</li>
-</ol>
-<h4 id="GIT-工具"><a href="#GIT-工具" class="headerlink" title="GIT 工具"></a>GIT 工具</h4><h5 id="1-全局配置用户信息"><a href="#1-全局配置用户信息" class="headerlink" title="1. 全局配置用户信息"></a>1. 全局配置用户信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;fairy&quot;</span><br><span class="line">git config --global user.email &quot;fairy@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-生成key"><a href="#2-生成key" class="headerlink" title="2. 生成key"></a>2. 生成key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#39;email&#39; &#x2F;&#x2F; Email可选，会在key中生成你的邮箱信息  一直回车就行</span><br></pre></td></tr></table></figure>
-
-<p>​    生成的key文件  <code>C:\Users\你的用户名\.ssh\id_rsa.pub</code></p>
-<p>​    用文本编辑器打开，复制到GIT上。</p>
-<h5 id="3-上传项目到GIT"><a href="#3-上传项目到GIT" class="headerlink" title="3. 上传项目到GIT"></a>3. 上传项目到GIT</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 项目文件加夹</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:fairyeye&#x2F;StudyJava.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h4 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h4><p>安装<code>https://www.runoob.com/mysql/mysql-install.html</code></p>
-<p>修改初始密码</p>
-<p>MySQL版本5.7.6版本以前用户可以使用如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SET PASSWORD &#x3D; PASSWORD(&#39;your pwd&#39;);</span><br></pre></td></tr></table></figure>
-<p>MySQL版本5.7.6版本开始的用户可以使用如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER USER() IDENTIFIED BY &#39;your pwd&#39;;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>登录报错 <code>https://www.cnblogs.com/lifan1998/p/9177731.html</code></p>
-<h4 id="去图标"><a href="#去图标" class="headerlink" title="去图标"></a>去图标</h4><p>​    管理员运行  <code>去图标.bat</code> 文件。</p>
-<h4 id="谷歌访问助手"><a href="#谷歌访问助手" class="headerlink" title="谷歌访问助手"></a>谷歌访问助手</h4><p>​    谷歌浏览器 -&gt; 更多工具 -&gt; 扩展程序 -&gt; 开发者模式(打开) 。</p>
-<p>​    拖动 <code>谷歌访问助手.crx</code> 到谷歌浏览器中。</p>
-<h4 id="软件安装清单"><a href="#软件安装清单" class="headerlink" title="软件安装清单"></a>软件安装清单</h4><ul>
-<li><p>IDEA：费什么话…你能像我一样用<code>Sublime</code>写代码？</p>
-</li>
-<li><p>Chrome：先装个浏览器吧</p>
-</li>
-<li><p>uTools：神器</p>
-</li>
-<li><p>Typora：这不是在用吗</p>
-</li>
-<li><p>PicGo：配合Typora上传图片用（图床地址：<a href="https://sm.ms/home/）" target="_blank" rel="noopener">https://sm.ms/home/）</a></p>
-</li>
-<li><p>Another Redis Desktop Manager：很好看的Redis客户端</p>
-</li>
-<li><p>Shell：好看 好用</p>
-</li>
-<li><p>DiskGenius：硬盘管理</p>
-</li>
-<li><p>Shadowsocks：小飞机</p>
-</li>
-</ul>
-
+         WHEN YOU HAVE A NEW PCJava环境配置1. 安装​    提前新建两个...
     
 
         <a href="/2020/04/26/WHEN%20YOU%20HAVE%20A%20NEW%20PC/" class="post-more waves-effect waves-button">
@@ -267,15 +213,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>假如把一张表比作一间教室，数据比作学生。</p>
-<p><code>drop</code> 就是把这件教师炸掉了，教室都没了，更不用说数据了。</p>
-<p><code>truncate</code> 就是把学生开除了，离开了，再也没有了。</p>
-<p><code>delete</code> 就是学生出去了，虽然他们可能不会回来了，但是位置还是要留着。</p>
-<h4 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h4><p>直接删掉表，这个没什么好说的。</p>
-<p>包括表结构，表数据，全部删除，占用的空间也会释放。</p>
-<h4 id="Truncate"><a href="#Truncate" class="headerlink" title="Truncate"></a>Truncate</h4><p>截断表，会释放空间。</p>
-<h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4><p>删除数据</p>
-
+        假如把一张表比作一间教室，数据比作学生。
+drop 就是把这件教师炸掉了，教室都没了，更不用说...
     
 
         <a href="/2020/04/26/Delete%20&%20Truncate/" class="post-more waves-effect waves-button">
@@ -320,7 +259,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">query -&gt; DataPermission</span><br><span class="line">	:</span><br></pre></td></tr></table></figure>
+        12query -&gt; DataPermission	:
 
 
     
@@ -361,7 +300,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3><p><img src="https://i.loli.net/2020/06/26/9dsgJ8kPlNnyHFV.png" alt="image-20200626141113470"></p>
+        @interface
 
     
 
@@ -401,44 +340,12 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <!DOCTYPE html>
-<html>
-    <head>
-        <title>页面标题</title>
-        <style>
-        body {        background-image: url("../640.png"); } 
-        </style>
-    <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="人生当苦, 良人当归" type="application/atom+xml">
-</head>
-<body> 
+        
 
-<h1 id="String-转-Integer"><a href="#String-转-Integer" class="headerlink" title="String 转 Integer"></a>String 转 Integer</h1><h2 id="1-Integer的parseInt方法"><a href="#1-Integer的parseInt方法" class="headerlink" title="1.Integer的parseInt方法"></a>1.Integer的parseInt方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt----------&gt;123</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-Integer的valueOf方法"><a href="#2-Integer的valueOf方法" class="headerlink" title="2.Integer的valueOf方法"></a>2.Integer的valueOf方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;123&quot;;</span><br><span class="line">Integer value &#x3D; Integer.valueOf(string);</span><br><span class="line">System.out.println(&quot;stringToInt1----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt1----------&gt;123</span><br></pre></td></tr></table></figure>
-
-<p>以上两种方法都是可行的。</p>
-<p>但是会有特殊的情况，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:16)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br></pre></td></tr></table></figure>
-
-<p>使用stringToInt1()也会返回同样的错误。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static Integer valueOf(String s) throws NumberFormatException &#123;</span><br><span class="line">    return Integer.valueOf(parseInt(s, 10));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>valueOf()调用了parseInt()，所以返回同样的错误是正常的。</p>
-<p>按照正常的逻辑来说，我们需要对这个错误进行处理，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">int value &#x3D; 0;</span><br><span class="line">try &#123;</span><br><span class="line">    value &#x3D; Integer.parseInt(string);</span><br><span class="line">&#125; catch (NumberFormatException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;StringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:18)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br><span class="line">StringToInt----------&gt;0</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，虽然依然报错，但是程序还是继续执行了。</p>
-<p>然后回到主题。</p>
-<h2 id="3-Guava-的-Ints-结合-Java8-的-Optional"><a href="#3-Guava-的-Ints-结合-Java8-的-Optional" class="headerlink" title="3.Guava 的 Ints 结合 Java8 的 Optional"></a>3.Guava 的 Ints 结合 Java8 的 Optional</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(0);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;0</span><br></pre></td></tr></table></figure>
-
-<p>可以在转换失败的时候为他设置默认值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String string &#x3D; &quot;abc&quot;;</span><br><span class="line">Integer value &#x3D; Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(100);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;100</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>写在末尾：之所以写这么详细是因为最开始的时候我很菜，看别人写的文档都很简单，虽然可以解决问题，但是却不解其意，所以写的啰嗦一点，对新手比较友好。</strong></p>
-<p>​    </body></p>
-</html>
+    
+        页面标题
+        
+        body {    ...
     
 
         <a href="/2020/04/26/StringToInteger/" class="post-more waves-effect waves-button">
@@ -477,17 +384,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​    原理：是否有对象引用。</p>
-<p>​    <figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="D:\workspace\gitee\StaticFile\image\Reference" alt="Reference counting" title="counting.png">
-                </div>
-                <div class="image-caption">counting.png</div>
-            </figure></p>
-<p>​    缺点：如果两个对象互相引用，会造成内存泄漏。</p>
-<h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​    </p>
-
+        引用计数算法​    原理：是否有对象引用。
+​    
+                
+ ...
     
 
         <a href="/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/" class="post-more waves-effect waves-button">
@@ -532,339 +432,11 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h4><table>
-<thead>
-<tr>
-<th>Modifier and Type</th>
-<th>Method and Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>BigDecimal</code></td>
-<td><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>BigDecimal</code></td>
-<td><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>BigDecimal</code></td>
-<td><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>BigDecimal</code></td>
-<td><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="left">Modifier and Type</th>
-<th align="left">Method and Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>abs()</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, and whose scale is <code>this.scale()</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>abs(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>byte</code></td>
-<td align="left"><code>byteValueExact()</code>Converts this <code>BigDecimal</code> to a <code>byte</code>, checking for lost information.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>compareTo(BigDecimal val)</code>Compares this <code>BigDecimal</code> with the specified <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divide(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose preferred scale is <code>(this.scale() - divisor.scale())</code>; if the exact quotient cannot be represented (because it has a non-terminating decimal expansion) an <code>ArithmeticException</code> is thrown.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divide(BigDecimal divisor, int scale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divide(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divide(BigDecimal divisor, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal[]</code></td>
-<td align="left"><code>divideAndRemainder(BigDecimal divisor)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal[]</code></td>
-<td align="left"><code>divideAndRemainder(BigDecimal divisor, MathContext mc)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands calculated with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divideToIntegralValue(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is the integer part of the quotient <code>(this / divisor)</code> rounded down.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>divideToIntegralValue(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the integer part of <code>(this / divisor)</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>double</code></td>
-<td align="left"><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>boolean</code></td>
-<td align="left"><code>equals(Object x)</code>Compares this <code>BigDecimal</code> with the specified <code>Object</code> for equality.</td>
-</tr>
-<tr>
-<td align="left"><code>float</code></td>
-<td align="left"><code>floatValue()</code>Converts this <code>BigDecimal</code> to a <code>float</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>hashCode()</code>Returns the hash code for this <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>intValue()</code>Converts this <code>BigDecimal</code> to an <code>int</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>intValueExact()</code>Converts this <code>BigDecimal</code> to an <code>int</code>, checking for lost information.</td>
-</tr>
-<tr>
-<td align="left"><code>long</code></td>
-<td align="left"><code>longValue()</code>Converts this <code>BigDecimal</code> to a <code>long</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>long</code></td>
-<td align="left"><code>longValueExact()</code>Converts this <code>BigDecimal</code> to a <code>long</code>, checking for lost information.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>max(BigDecimal val)</code>Returns the maximum of this <code>BigDecimal</code> and <code>val</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>min(BigDecimal val)</code>Returns the minimum of this <code>BigDecimal</code> and <code>val</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>movePointLeft(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the left.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>movePointRight(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the right.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>multiply(BigDecimal multiplicand)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, and whose scale is <code>(this.scale() + multiplicand.scale())</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>multiply(BigDecimal multiplicand, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>negate()</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, and whose scale is <code>this.scale()</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>negate(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>plus()</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, and whose scale is <code>this.scale()</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>plus(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>pow(int n)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>, The power is computed exactly, to unlimited precision.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>pow(int n, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>precision()</code>Returns the <em>precision</em> of this <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>remainder(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>remainder(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>round(MathContext mc)</code>Returns a <code>BigDecimal</code> rounded according to the <code>MathContext</code> settings.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>scale()</code>Returns the <em>scale</em> of this <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>scaleByPowerOfTen(int n)</code>Returns a BigDecimal whose numerical value is equal to (<code>this</code> * 10n).</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>setScale(int newScale)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose value is numerically equal to this <code>BigDecimal</code>‘s.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>setScale(int newScale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>setScale(int newScale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td>
-</tr>
-<tr>
-<td align="left"><code>short</code></td>
-<td align="left"><code>shortValueExact()</code>Converts this <code>BigDecimal</code> to a <code>short</code>, checking for lost information.</td>
-</tr>
-<tr>
-<td align="left"><code>int</code></td>
-<td align="left"><code>signum()</code>Returns the signum function of this <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>stripTrailingZeros()</code>Returns a <code>BigDecimal</code> which is numerically equal to this one but with any trailing zeros removed from the representation.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>subtract(BigDecimal subtrahend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, and whose scale is <code>max(this.scale(), subtrahend.scale())</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>subtract(BigDecimal subtrahend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, with rounding according to the context settings.</td>
-</tr>
-<tr>
-<td align="left"><code>BigInteger</code></td>
-<td align="left"><code>toBigInteger()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigInteger</code></td>
-<td align="left"><code>toBigIntegerExact()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>, checking for lost information.</td>
-</tr>
-<tr>
-<td align="left"><code>String</code></td>
-<td align="left"><code>toEngineeringString()</code>Returns a string representation of this <code>BigDecimal</code>, using engineering notation if an exponent is needed.</td>
-</tr>
-<tr>
-<td align="left"><code>String</code></td>
-<td align="left"><code>toPlainString()</code>Returns a string representation of this <code>BigDecimal</code> without an exponent field.</td>
-</tr>
-<tr>
-<td align="left"><code>String</code></td>
-<td align="left"><code>toString()</code>Returns the string representation of this <code>BigDecimal</code>, using scientific notation if an exponent is needed.</td>
-</tr>
-<tr>
-<td align="left"><code>BigDecimal</code></td>
-<td align="left"><code>ulp()</code>Returns the size of an ulp, a unit in the last place, of this <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>BigInteger</code></td>
-<td align="left"><code>unscaledValue()</code>Returns a <code>BigInteger</code> whose value is the <em>unscaled value</em> of this <code>BigDecimal</code>.</td>
-</tr>
-<tr>
-<td align="left"><code>static BigDecimal</code></td>
-<td align="left"><code>valueOf(double val)</code>Translates a <code>double</code> into a <code>BigDecimal</code>, using the <code>double</code>‘s canonical string representation provided by the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#toString-double-" target="_blank" rel="noopener"><code>Double.toString(double)</code></a> method.</td>
-</tr>
-<tr>
-<td align="left"><code>static BigDecimal</code></td>
-<td align="left"><code>valueOf(long val)</code>Translates a <code>long</code> value into a <code>BigDecimal</code> with a scale of zero.</td>
-</tr>
-<tr>
-<td align="left"><code>static BigDecimal</code></td>
-<td align="left"><code>valueOf(long unscaledVal, int scale)</code>Translates a <code>long</code> unscaled value and an <code>int</code> scale into a <code>BigDecimal</code>.</td>
-</tr>
-</tbody></table>
+        Calendar
 
+
+Modifier and Type
+Method and Descrip...
     
 
         <a href="/2020/04/22/22/" class="post-more waves-effect waves-button">
@@ -909,14 +481,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h1 id="String数组转int数组"><a href="#String数组转int数组" class="headerlink" title="String数组转int数组"></a><a href="https://www.cnblogs.com/ukzq/p/11965382.html" target="_blank" rel="noopener">String数组转int数组</a></h1><p>假设我们有一个字符串数组：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] strings &#x3D; &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>使用<em>Lambda表达式</em>（自Java 8起）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>
-
-<p>另一种方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int[] array &#x3D; Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>
+        String数组转int数组假设我们有一个字符串数组：
+1String[] strings &...
     
 
         <a href="/2020/04/20/20/" class="post-more waves-effect waves-button">
@@ -955,19 +521,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>场景：</p>
-<p>参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,</p>
-<p>可以用 ||</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if （Objects.isNull(list) || list &#x3D;&#x3D; 0） &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><code>单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。</code></p>
-<p><strong>File - &gt;  Other Setting -&gt; Setting For New Projects</strong> 全局配置</p>
-<p>maven默认仓库地址，选择本地的地址</p>
-<p><code>&lt;localRepository&gt;D:\maven_repo&lt;/localRepository&gt;</code></p>
-<p>Setting -&gt; file and code temeplate -&gt; include</p>
-
+        场景：
+参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为n...
     
 
         <a href="/2020/04/17/17/" class="post-more waves-effect waves-button">
@@ -1012,10 +567,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><p>后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date(<span class="number">1579676844</span>); <span class="comment">// 1970-01-19T14:47:56.844+0800</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = <span class="keyword">new</span> Date(<span class="number">1579676844</span> * <span class="number">1000L</span>); <span class="comment">// 2020-01-22T15:07:24.000+0800</span></span><br></pre></td></tr></table></figure>
+        基础依赖后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。
+1Date da...
     
 
         <a href="/2020/04/17/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/" class="post-more waves-effect waves-button">
@@ -1066,7 +619,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>fairyeye &copy; 2015 - 2020</span>
+        <p><span>fairyeye &copy; 2019 - 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

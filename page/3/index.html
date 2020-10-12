@@ -174,42 +174,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>通过<code>workOrederNum</code>字段排序</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
-
-
-
-<p>查出<code>InstructionPoDTO</code>中<code>InstructionDocNum</code>作为list</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 筛选出不重复的 instructionDocNum</span></span><br><span class="line">List&lt;String&gt; instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
-
-
-
-<p>筛选所有<code>instructionDocNum = 123</code>的对象 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;InstructionPoDTO&gt; instructionPoDTOS = read.stream().filter(instructionPoDTO -&gt;</span><br><span class="line">     instructionPoDTO.getInstructionDocNum().equals(<span class="string">"123"</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
-
-
-
-<p>查询出第一个</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String instructionDocId = instructionDocs.stream().findFirst().get();</span><br></pre></td></tr></table></figure>
-
-
-
-<p>设置<code>typeCode</code>为key，<code>list</code>的对象为<code>value</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, MtGenType&gt; typesMap = types.stream().collect(Collectors.toMap(t -&gt; t.getTypeCode(), t -&gt; t));</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>// 通过字段去重</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-&gt; new TreeSet&lt;&gt;(Comparator.comparing(o -&gt; o.getMaterial()+&quot;;&quot;+o.getPlant()+&quot;;&quot;+o.getStorage()+&quot;;&quot;+o.getBatch()+&quot;;&quot;+o.getSpecialStock()))), ArrayList::new));</span><br></pre></td></tr></table></figure>
-
-
-
-<p>GROUP BY</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, List&lt;WmsIqcRecord&gt;&gt; map &#x3D; records.stream().collect(Collectors.groupingBy(iqcRecord -&gt; &#123;</span><br><span class="line">                    if (StringUtils.equals(&quot;TO_DO&quot;, iqcRecord.getStatus())) &#123;</span><br><span class="line">                        switch (iqcRecord.getDealMethod()) &#123;</span><br><span class="line">                            case &quot;RELEASE&quot;:</span><br><span class="line">                                return &quot;TO_RELEASE&quot;;</span><br><span class="line">                            case &quot;FREEZE&quot;:</span><br><span class="line">                                return &quot;TO_FREEZE&quot;;</span><br><span class="line">                            case &quot;RETURN&quot;:</span><br><span class="line">                                return &quot;TO_RETURN&quot;;</span><br><span class="line">                            default:</span><br><span class="line">                                return &quot;TO_DO&quot;;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else if (StringUtils.equals(&quot;DONE&quot;, iqcRecord.getStatus())) &#123;</span><br><span class="line">                        switch (iqcRecord.getDealMethod()) &#123;</span><br><span class="line">                            case &quot;RELEASE&quot;:</span><br><span class="line">                                return &quot;RELEASE_DONE&quot;;</span><br><span class="line">                            case &quot;FREEZE&quot;:</span><br><span class="line">                                return &quot;FREEZE_DONE&quot;;</span><br><span class="line">                            case &quot;RETURN&quot;:</span><br><span class="line">                                return &quot;RETURN_DONE&quot;;</span><br><span class="line">                            default:</span><br><span class="line">                                return &quot;DONE&quot;;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return &quot;DEAL&quot;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;));</span><br></pre></td></tr></table></figure>
-
-
+        通过workOrederNum字段排序
+1List&lt;ProduceOrderDTO&gt...
     
 
         <a href="/2020/05/19/Java%208%20Stream/" class="post-more waves-effect waves-button">
@@ -254,11 +220,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><code>Mapper</code>接口要加上<code>@Mapper</code>注解。</p>
-<p><code>application.yml</code>要加上</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:/mapper/*Dao.xml</span></span><br></pre></td></tr></table></figure>
-
-
+        Mapper接口要加上@Mapper注解。
+application.yml要加上
+12myba...
     
 
         <a href="/2020/05/11/EasyCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" class="post-more waves-effect waves-button">
@@ -305,32 +269,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 反例（耗时129.570s）</span><br><span class="line">select * from task_result LIMIT 20000000, 10;</span><br><span class="line"></span><br><span class="line"># 正例（耗时5.114s）</span><br><span class="line">SELECT a.* FROM task_result a, (select id from task_result LIMIT 20000000, 10) b where a.id &#x3D; b.id;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，id为主键，偏移量达到2000万</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h3 id="获取一条数据时的Limit-1"><a href="#获取一条数据时的Limit-1" class="headerlink" title="获取一条数据时的Limit 1"></a>获取一条数据时的Limit 1</h3><p>在很多情况下我们已知数据仅存在一条，此时我们应该告知数据库只用查一条，否则将会转化为全表扫描</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 反例（耗时2424.612s）</span><br><span class="line">select * from task_result where unique_key &#x3D; &#39;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#39;;</span><br><span class="line"></span><br><span class="line"># 正例（耗时1.036s）</span><br><span class="line">select * from task_result where unique_key &#x3D; &#39;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#39; LIMIT 1;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，where条件非索引字段，数据所在行为第19486条记录</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 反例</span><br><span class="line">INSERT into person(name,age) values(&#39;A&#39;,24)</span><br><span class="line">INSERT into person(name,age) values(&#39;B&#39;,24)</span><br><span class="line">INSERT into person(name,age) values(&#39;C&#39;,24)</span><br><span class="line"></span><br><span class="line"># 正例</span><br><span class="line">INSERT into person(name,age) values(&#39;A&#39;,24),(&#39;B&#39;,24),(&#39;C&#39;,24);</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">比较常规，就不多做说明了</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<p><a href="https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension" target="_blank" rel="noopener">https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension</a></p>
-
+        MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 off...
     
 
         <a href="/2020/05/09/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/" class="post-more waves-effect waves-button">
@@ -375,78 +314,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h1 id="数据库如何存储时间？你真的知道吗？"><a href="#数据库如何存储时间？你真的知道吗？" class="headerlink" title="数据库如何存储时间？你真的知道吗？"></a>数据库如何存储时间？你真的知道吗？</h1><p>我们平时开发中不可避免的就是要存储时间，比如我们要记录操作表中这条记录的时间、记录转账的交易时间、记录出发时间等等。你会发现这个时间这个东西与我们开发的联系还是非常紧密的，用的好与不好会给我们的业务甚至功能带来很大的影响。所以，我们有必要重新出发，好好认识一下这个东西。</p>
-<p>这是一篇短小精悍的文章，仔细阅读一定能学到不少东西！</p>
-<h3 id="1-切记不要用字符串存储日期"><a href="#1-切记不要用字符串存储日期" class="headerlink" title="1.切记不要用字符串存储日期"></a>1.切记不要用字符串存储日期</h3><p>我记得我在大学的时候就这样干过，而且现在很多对数据库不太了解的新手也会这样干，可见，这种存储日期的方式的优点还是有的，就是简单直白，容易上手。</p>
-<p>但是，这是不正确的做法，主要会有下面两个问题：</p>
-<ol>
-<li>字符串占用的空间更大！</li>
-<li>字符串存储的日期比较效率比较低（逐个字符进行比对），无法用日期相关的 API 进行计算和比较。</li>
-</ol>
-<h3 id="2-Datetime-和-Timestamp-之间抉择"><a href="#2-Datetime-和-Timestamp-之间抉择" class="headerlink" title="2.Datetime 和 Timestamp 之间抉择"></a>2.Datetime 和 Timestamp 之间抉择</h3><p>Datetime 和 Timestamp 是 MySQL 提供的两种比较相似的保存时间的数据类型。他们两者究竟该如何选择呢？</p>
-<p><strong>通常我们都会首选 Timestamp。</strong> 下面说一下为什么这样做!</p>
-<h4 id="2-1-DateTime-类型没有时区信息的"><a href="#2-1-DateTime-类型没有时区信息的" class="headerlink" title="2.1 DateTime 类型没有时区信息的"></a>2.1 DateTime 类型没有时区信息的</h4><p><strong>DateTime 类型是没有时区信息的（时区无关）</strong> ，DateTime 类型保存的时间都是当前会话所设置的时区对应的时间。这样就会有什么问题呢？当你的时区更换之后，比如你的服务器更换地址或者更换客户端连接时区设置的话，就会导致你从数据库中读出的时间错误。不要小看这个问题，很多系统就是因为这个问题闹出了很多笑话。</p>
-<p><strong>Timestamp 和时区有关</strong>。Timestamp 类型字段的值会随着服务器时区的变化而变化，自动换算成相应的时间，说简单点就是在不同时区，查询到同一个条记录此字段的值会不一样。</p>
-<p>下面实际演示一下！</p>
-<p>建表 SQL 语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;time_zone_test&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  &#96;date_time&#96; datetime DEFAULT NULL,</span><br><span class="line">  &#96;time_stamp&#96; timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;)</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br></pre></td></tr></table></figure>
-
-<p>插入数据：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO time_zone_test(date_time,time_stamp) VALUES(NOW(),NOW());</span><br></pre></td></tr></table></figure>
-
-<p>查看数据：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select date_time,time_stamp from time_zone_test;</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+---------------------+</span><br><span class="line">| date_time           | time_stamp          |</span><br><span class="line">+---------------------+---------------------+</span><br><span class="line">| 2020-01-11 09:53:32 | 2020-01-11 09:53:32 |</span><br><span class="line">+---------------------+---------------------+</span><br></pre></td></tr></table></figure>
-
-<p>现在我们运行</p>
-<p>修改当前会话的时区:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set time_zone&#x3D;&#39;+8:00&#39;;</span><br></pre></td></tr></table></figure>
-
-<p>再次查看数据：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+---------------------+</span><br><span class="line">| date_time           | time_stamp          |</span><br><span class="line">+---------------------+---------------------+</span><br><span class="line">| 2020-01-11 09:53:32 | 2020-01-11 17:53:32 |</span><br><span class="line">+---------------------+---------------------+</span><br></pre></td></tr></table></figure>
-
-<p><strong>扩展：一些关于 MySQL 时区设置的一个常用 sql 命令</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前会话时区</span><br><span class="line">SELECT @@session.time_zone;</span><br><span class="line"># 设置当前会话时区</span><br><span class="line">SET time_zone &#x3D; &#39;Europe&#x2F;Helsinki&#39;;</span><br><span class="line">SET time_zone &#x3D; &quot;+00:00&quot;;</span><br><span class="line"># 数据库全局时区设置</span><br><span class="line">SELECT @@global.time_zone;</span><br><span class="line"># 设置全局时区</span><br><span class="line">SET GLOBAL time_zone &#x3D; &#39;+8:00&#39;;</span><br><span class="line">SET GLOBAL time_zone &#x3D; &#39;Europe&#x2F;Helsinki&#39;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-2-DateTime-类型耗费空间更大"><a href="#2-2-DateTime-类型耗费空间更大" class="headerlink" title="2.2 DateTime 类型耗费空间更大"></a>2.2 DateTime 类型耗费空间更大</h4><p>Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。但是，这样同样造成了一个问题，Timestamp 表示的时间范围更小。</p>
-<ul>
-<li>DateTime ：1000-01-01 00:00:00 ~ 9999-12-31 23:59:59</li>
-<li>Timestamp： 1970-01-01 00:00:01 ~ 2037-12-31 23:59:59</li>
-</ul>
-<blockquote>
-<p>Timestamp 在不同版本的 MySQL 中有细微差别。</p>
-</blockquote>
-<h3 id="3-再看-MySQL-日期类型存储空间"><a href="#3-再看-MySQL-日期类型存储空间" class="headerlink" title="3 再看 MySQL 日期类型存储空间"></a>3 再看 MySQL 日期类型存储空间</h3><p>下图是 MySQL 5.6 版本中日期类型所占的存储空间：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://user-gold-cdn.xitu.io/2020/1/14/16fa26644507d5f4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img" title="">
-                </div>
-                <div class="image-caption">img</div>
-            </figure>
-
-<p>可以看出 5.6.4 之后的 MySQL 多出了一个需要 0 ～ 3 字节的小数位。Datatime 和 Timestamp 会有几种不同的存储空间占用。</p>
-<p>为了方便，本文我们还是默认 Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。</p>
-<h3 id="4-数值型时间戳是更好的选择吗？"><a href="#4-数值型时间戳是更好的选择吗？" class="headerlink" title="4.数值型时间戳是更好的选择吗？"></a>4.数值型时间戳是更好的选择吗？</h3><p>很多时候，我们也会使用 int 或者 bigint 类型的数值也就是时间戳来表示时间。</p>
-<p>这种存储方式的具有 Timestamp 类型的所具有一些优点，并且使用它的进行日期排序以及对比等操作的效率会更高，跨系统也很方便，毕竟只是存放的数值。缺点也很明显，就是数据的可读性太差了，你无法直观的看到具体时间。</p>
-<p>时间戳的定义如下：</p>
-<blockquote>
-<p>时间戳的定义是从一个基准时间开始算起，这个基准时间是「1970-1-1 00:00:00 +0:00」，从这个时间开始，用整数表示，以秒计时，随着时间的流逝这个时间整数不断增加。这样一来，我只需要一个数值，就可以完美地表示时间了，而且这个数值是一个绝对数值，即无论的身处地球的任何角落，这个表示时间的时间戳，都是一样的，生成的数值都是一样的，并且没有时区的概念，所以在系统的中时间的传输中，都不需要进行额外的转换了，只有在显示给用户的时候，才转换为字符串格式的本地时间。</p>
-</blockquote>
-<p>数据库中实际操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select UNIX_TIMESTAMP(&#39;2020-01-11 09:53:32&#39;);</span><br><span class="line">+---------------------------------------+</span><br><span class="line">| UNIX_TIMESTAMP(&#39;2020-01-11 09:53:32&#39;) |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|                            1578707612 |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select FROM_UNIXTIME(1578707612);</span><br><span class="line">+---------------------------+</span><br><span class="line">| FROM_UNIXTIME(1578707612) |</span><br><span class="line">+---------------------------+</span><br><span class="line">| 2020-01-11 09:53:32       |</span><br><span class="line">+---------------------------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">转载：https:&#x2F;&#x2F;juejin.im&#x2F;post&#x2F;5e1d494a5188254c45778a14</span><br></pre></td></tr></table></figure>
-
-
-
-
+        数据库如何存储时间？你真的知道吗？我们平时开发中不可避免的就是要存储时间，比如我们要记录操作表...
     
 
         <a href="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/" class="post-more waves-effect waves-button">
@@ -491,16 +359,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>今天接了一个任务，把之前写好的<code>Mapper</code> 中的SQL多连接一张表，</p>
-<p>然后中间出现了一个问题</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ui.name <span class="keyword">FROM</span> school s,<span class="keyword">user</span> u <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> user_info ui <span class="keyword">ON</span> u.id = ui.id;</span><br></pre></td></tr></table></figure>
-
-<p>这样是没错的，但是如果把表的顺序换一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT ui.name FROM user u,school s LEFT JOIN user_info ui ON u.id &#x3D; ui.id;</span><br></pre></td></tr></table></figure>
-
-<p>就会出问题，理论上来说这样是正常的，但是刚开始的时候确实忽略的这个问题</p>
-<p>毕竟有前辈写的代码，实战中都是很多张表关联。</p>
-
+        今天接了一个任务，把之前写好的Mapper 中的SQL多连接一张表，
+然后中间出现了一个问题
+...
     
 
         <a href="/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" class="post-more waves-effect waves-button">
@@ -545,25 +406,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <ol>
-<li>添加依赖</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        
+添加依赖
 
-
-
-
-
-
-
-
-
-
-
-
-
-<p><a href="https://blog.csdn.net/huangjinjin520/article/details/89740672" target="_blank" rel="noopener">https://blog.csdn.net/huangjinjin520/article/details/89740672</a></p>
-
+12345678910&lt;dependency&gt;    &lt;gro...
     
 
         <a href="/2020/04/26/RE-4Swagger/" class="post-more waves-effect waves-button">
@@ -608,15 +454,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h5 id="错误的依赖"><a href="#错误的依赖" class="headerlink" title="错误的依赖"></a>错误的依赖</h5><p>正确的依赖</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="使用IP注册到注册中心"><a href="#使用IP注册到注册中心" class="headerlink" title="使用IP注册到注册中心"></a>使用IP注册到注册中心</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    hostname: $&#123;spring.cloud.client.ip-address&#125;</span><br><span class="line">    instance-id: $&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;</span><br><span class="line">    # 使用IP注册到注册中心</span><br><span class="line">    prefer-ip-address: true</span><br></pre></td></tr></table></figure>
-
-
-
-<p><a href="http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html</a></p>
-
+        错误的依赖正确的依赖
+1234&lt;dependency&gt;    &lt;groupI...
     
 
         <a href="/2020/04/26/RE-2%E7%BD%91%E5%85%B3/" class="post-more waves-effect waves-button">
@@ -661,23 +500,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">'?й???????'</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure>
-
-<p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>
-
+        依赖：1234567891011121314151617&lt;dependency&gt; ...
     
 
         <a href="/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/" class="post-more waves-effect waves-button">
@@ -722,37 +545,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"goods-service"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsFeign</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/goods/selectOne"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">selectOne</span><span class="params">(@RequestParam(value = <span class="string">"id"</span>)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p>
-<p><code>@GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p>
-<p><strong>注册中心：</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">AMIs</th>
-<th align="left">Availability Zones</th>
-<th align="left">Status</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>GOODS-SERVICE</strong></td>
-<td align="left"><strong>n/a</strong> (1)</td>
-<td align="left">(1)</td>
-<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td>
-</tr>
-<tr>
-<td align="left"><strong>USER-SERVICE</strong></td>
-<td align="left"><strong>n/a</strong> (1)</td>
-<td align="left">(1)</td>
-<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info" target="_blank" rel="noopener">your ip:port</a></td>
-</tr>
-</tbody></table>
-<h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4><p><a href="https://github.com/fairyeye/store" target="_blank" rel="noopener">https://github.com/fairyeye/store</a></p>
-<p>1+1+1+1+1+1+1 = 7</p>
-<p>6+5+4+3+2+1 = </p>
-
+        Fegin123456789101112package com.fairyeye.feign;...
     
 
         <a href="/2020/04/26/RE-5UserService&Fegin/" class="post-more waves-effect waves-button">
@@ -799,39 +592,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200426143308709.png" alt="image-20200426143308709" title="">
-                </div>
-                <div class="image-caption">image-20200426143308709</div>
-            </figure>
-
-
-
-
-
-<h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>启动类上加<code>@EnableEurekaServer</code>注解</p>
-<p>store需要pom</p>
-<p><code>application.yml</code></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: store-eureka</span><br><span class="line">server:</span><br><span class="line">  port: 8000</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false</span><br><span class="line">    fetch-registry: false</span><br><span class="line">    serviceUrl:</span><br><span class="line">      defaultZone: http://dev.store.local:$&#123;server.port&#125;/eureka/</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">register-with-eureka: false  &#x2F;&#x2F; 注释之后才可以看到 available instance</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html" target="_blank" rel="noopener">http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html</a></p>
-<h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p> 版本：8.0.19</p>
-
+        基础依赖1234&lt;dependency&gt;    &lt;groupId&gt;or...
     
 
         <a href="/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/" class="post-more waves-effect waves-button">
@@ -882,7 +643,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>fairyeye &copy; 2015 - 2020</span>
+        <p><span>fairyeye &copy; 2019 - 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

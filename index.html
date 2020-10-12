@@ -219,10 +219,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">LocalDate localDate &#x3D; LocalDate.now();</span><br><span class="line">      LocalTime localTime &#x3D; LocalTime.now();</span><br><span class="line">      LocalDateTime localDateTime &#x3D; LocalDateTime.now();</span><br><span class="line"></span><br><span class="line">      System.out.println(localDate); &#x2F;&#x2F; 2020-10-09</span><br><span class="line">      System.out.println(localTime); &#x2F;&#x2F; 18:29:47.712227100</span><br><span class="line">      System.out.println(localDateTime); &#x2F;&#x2F; 2020-10-09T18:29:47.712227100</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 去掉毫秒</span><br><span class="line">      System.out.println(localTime.withNano(0)); &#x2F;&#x2F; 18:29:47</span><br><span class="line">      System.out.println(localDateTime.withNano(0)); &#x2F;&#x2F; 2020-10-09T18:29:47</span><br><span class="line">      System.out.println(localTime.truncatedTo(ChronoUnit.SECONDS)); &#x2F;&#x2F; 18:29:47</span><br><span class="line">      System.out.println(localDateTime.truncatedTo(ChronoUnit.SECONDS)); &#x2F;&#x2F; 2020-10-09T18:29:47</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; 获取加减一天的日期</span><br><span class="line">      System.out.println(localDateTime.plusDays(1L)); &#x2F;&#x2F; 2020-10-10T18:33:47.376192400</span><br><span class="line">      System.out.println(localDateTime.plusDays(-1L)); &#x2F;&#x2F; 2020-10-08T18:33:47.376192400</span><br></pre></td></tr></table></figure>
-
-<p>参考API</p>
-
+        1234567891011121314151617LocalDate localDate &#...
     
 
         <a href="/2020/10/09/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" class="post-more waves-effect waves-button">
@@ -269,9 +266,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; sql语句</span><br><span class="line">String sql &#x3D; &quot;INSERT INTO ssme_iqc_change(TENANT_ID, KID) VALUE (?, ?);&quot;;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; kids &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; BatchPreparedStatementSetter 通过循环取出数据填充到SQL中</span><br><span class="line">jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void setValues(PreparedStatement ps, int i) throws SQLException &#123;</span><br><span class="line">                ps.setLong(1, 4L);</span><br><span class="line">                ps.setString(2, kids.get(i));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public int getBatchSize() &#123;</span><br><span class="line">                return kids.size();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-
-
+        123456789101112131415161718&#x2F;&#x2F; sql语句St...
     
 
         <a href="/2020/10/09/JDBCTemplete%E6%89%B9%E5%A4%84%E7%90%86/" class="post-more waves-effect waves-button">
@@ -316,30 +311,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h3 id="NETDATA"><a href="#NETDATA" class="headerlink" title="NETDATA"></a>NETDATA</h3><h4 id="1-安装编译环境"><a href="#1-安装编译环境" class="headerlink" title="1. 安装编译环境"></a>1. 安装编译环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install zlib1g-dev gcc make git autoconf autogen automake pkg-config uuid-dev</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-克隆项目"><a href="#2-克隆项目" class="headerlink" title="2. 克隆项目"></a>2. 克隆项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;firehol&#x2F;netdata.git --depth&#x3D;1</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-安装netdata"><a href="#3-安装netdata" class="headerlink" title="3. 安装netdata"></a>3. 安装netdata</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;netdata-installer.sh</span><br></pre></td></tr></table></figure>
-
-<p>然后访问 <code>IP:19999</code> </p>
-<p><img src="https://i.loli.net/2020/09/23/Zp2AJqzlKPSaW7E.png" alt=""></p>
-<h3 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h3><h4 id="1-安装Nginx"><a href="#1-安装Nginx" class="headerlink" title="1. 安装Nginx"></a>1. 安装Nginx</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
-
-<p>浏览器地址栏输入 <code>IP</code>看到如下页面表示已经安装好了Nginx，如果有域名，输入域名也是同样的效果（前提是已经给域名添加了解析）</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://i.loli.net/2020/09/23/45jPeQEu2TCoOyb.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-
-<h4 id="2-Nginx-转发端口"><a href="#2-Nginx-转发端口" class="headerlink" title="2.Nginx 转发端口"></a>2.Nginx 转发端口</h4><p>我已经在服务器上安装了<code>netdata</code>服务，端口为<code>19999</code>,但是通过<code>Nginx</code>访问服务器时默认是<code>80</code>端口，所以需要做一些配置，在我们输入域名的时候访问不同的端口。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># nginx.conf里包含	include &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;*.conf; 所以可以在&#x2F;etc&#x2F;nginx&#x2F;conf.d 文件夹下新增一个配置文件</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name xxxx.cn;</span><br><span class="line"></span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">      client_max_body_size   3000m;</span><br><span class="line">      proxy_next_upstream http_502 http_504 error timeout invalid_header;</span><br><span class="line"></span><br><span class="line">      proxy_set_header   Host $host;</span><br><span class="line">      proxy_set_header   X-Real-IP $remote_addr;</span><br><span class="line">      proxy_set_header   X-Real-PORT $remote_port;</span><br><span class="line">      proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line"></span><br><span class="line">      proxy_pass http:&#x2F;&#x2F;127.0.0.1:19999;</span><br><span class="line">      proxy_redirect default;</span><br><span class="line">      proxy_connect_timeout 3000;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样 当我们在浏览器地址栏输入 域名时 就会自动跳转到<code>netdata</code>的主页</p>
-
+        NETDATA1. 安装编译环境1sudo apt install zlib1g-dev gc...
     
 
         <a href="/2020/09/23/Ubuntu/" class="post-more waves-effect waves-button">
@@ -386,9 +358,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查询left表里有 right表里没有的数据</span><br><span class="line">SELECT  l.*</span><br><span class="line">FROM    t_left l</span><br><span class="line">WHERE   NOT EXISTS</span><br><span class="line">(</span><br><span class="line">SELECT  NULL</span><br><span class="line">FROM    t_right r</span><br><span class="line">WHERE   r.value &#x3D; l.value</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
+        123456789&#x2F;&#x2F; 查询left表里有 right表里没有的数据SEL...
     
 
         <a href="/2020/09/23/%E6%A8%A1%E6%9D%BF/" class="post-more waves-effect waves-button">
@@ -435,8 +405,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><code>https://www.processon.com/view/link/5f6891517d9c087da1ba5bbe</code></p>
-
+        https://www.processon.com/view/link/5f6891517d9...
     
 
         <a href="/2020/09/21/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%20-%20%E5%89%AF%E6%9C%AC/" class="post-more waves-effect waves-button">
@@ -483,51 +452,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h4 id="1-最简单的单例模式："><a href="#1-最简单的单例模式：" class="headerlink" title="1. 最简单的单例模式："></a>1. 最简单的单例模式：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package com.example.demo.JUC.thread;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @author huapeng.zhang</span><br><span class="line"> * @version 1.0</span><br><span class="line"> * @date 2020&#x2F;9&#x2F;17 18:28</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SingletomDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static SingletomDemo singletomDemo &#x3D; null;</span><br><span class="line">    </span><br><span class="line">    private SingletomDemo() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;\t 我是构造方法SingletomDemo()！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static SingletomDemo getInstance() &#123;</span><br><span class="line">        if (singletomDemo &#x3D;&#x3D; null) &#123;</span><br><span class="line">        		singletomDemo &#x3D; new SingletomDemo();</span><br><span class="line">        &#125;</span><br><span class="line">        return singletomDemo;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F; 单线程</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() &#x3D;&#x3D; SingletomDemo.getInstance());</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() &#x3D;&#x3D; SingletomDemo.getInstance());</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() &#x3D;&#x3D; SingletomDemo.getInstance());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在单线程的情况下，打印结果如下：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://i.loli.net/2020/09/17/J9rb5oynQclfD4d.png" alt="image-20200917191550283" title="">
-                </div>
-                <div class="image-caption">image-20200917191550283</div>
-            </figure>
-
-<p>可以看到，虽然我们一共调用了六次<code>getInstance()</code>， 但是只打印了一次构造方法输出内容，也就是只调用了一个构造函数，所获得的对象地址自然是一样的。</p>
-<h4 id="2-多线程下的单例模式"><a href="#2-多线程下的单例模式" class="headerlink" title="2. 多线程下的单例模式"></a>2. 多线程下的单例模式</h4><p>我们对<code>main()</code>方法做一下改造，改造后的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    &#x2F;&#x2F; 改为多线程后 可能多次调用构造函数</span><br><span class="line">    for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">        new Thread(() -&gt; &#123;</span><br><span class="line">            SingletomDemo.getInstance();</span><br><span class="line">        &#125;, String.valueOf(i)).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>打印结果为：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://i.loli.net/2020/09/17/Q7RWYjayOgoXfH1.png" alt="image-20200917192220270" title="">
-                </div>
-                <div class="image-caption">image-20200917192220270</div>
-            </figure>
-
-<p>多次执行下可以看到打印的次数是不同的。</p>
-<p>可以对<code>getInstance()</code>方法添加<code>synchronized</code>加锁，保证只生成一个实例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private static synchronized SingletomDemo getInstance() &#123;</span><br><span class="line">    if (singletomDemo &#x3D;&#x3D; null) &#123;</span><br><span class="line">    		singletomDemo &#x3D; new SingletomDemo();</span><br><span class="line">    &#125;</span><br><span class="line">    return singletomDemo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>再次执行程序发现只打印了一次构造方法输出函数，还有另外一种方法就是<code>DCL：double check locks双端检测模式</code>模式也可以达到同样的目的。</p>
-<h4 id="3-DCL-单例模式"><a href="#3-DCL-单例模式" class="headerlink" title="3.DCL + 单例模式"></a>3.DCL + 单例模式</h4><p>我们再次对<code>getInstance()</code>方法进行改造，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; DCL模式(double check locks双端检测模式)</span><br><span class="line">private static SingletomDemo getInstance() &#123;</span><br><span class="line">    if (singletomDemo &#x3D;&#x3D; null) &#123;</span><br><span class="line">        synchronized (SingletomDemo.class) &#123;</span><br><span class="line">            if (singletomDemo &#x3D;&#x3D; null) &#123;</span><br><span class="line">                singletomDemo &#x3D; new SingletomDemo();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return singletomDemo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>当我们的单例模式写到这种程度的时候，基本可以应对99%的情况，但是由于<code>指令排序</code>的存在，还是有可能会出现问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memory &#x3D; allocate(); &#x2F;&#x2F;1.分配对象内存空间</span><br><span class="line">instance(memory);    &#x2F;&#x2F;2.初始化对象</span><br><span class="line">instance &#x3D; memory;   &#x2F;&#x2F;3.设置instance指向刚分配的内存地址，此时instance!&#x3D;null</span><br></pre></td></tr></table></figure>
-
-<p>步骤2、3不存在数据依赖，所以由于指令重排的关系，可能会出现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memory &#x3D; allocate(); &#x2F;&#x2F;1.分配对象内存空间</span><br><span class="line">instance &#x3D; memory;   &#x2F;&#x2F;3.设置instance指向刚分配的内存地址，此时instance!&#x3D;null</span><br><span class="line">instance(memory);    &#x2F;&#x2F;2.初始化对象</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-Volatile-单例模式"><a href="#4-Volatile-单例模式" class="headerlink" title="4.Volatile + 单例模式"></a>4.Volatile + 单例模式</h4><p>我们在声明 <code>singletomDemo</code>时，加上<code>Volatile</code>关键字修饰，就可以达到完美的效果。</p>
-<p>最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package com.example.demo.JUC.thread;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @author huapeng.zhang</span><br><span class="line"> * @version 1.0</span><br><span class="line"> * @date 2020&#x2F;9&#x2F;17 18:28</span><br><span class="line"> *&#x2F;</span><br><span class="line">public class SingletomDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static volatile SingletomDemo singletomDemo &#x3D; null;</span><br><span class="line"></span><br><span class="line">    private SingletomDemo() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;\t 我是构造方法SingletomDemo()！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; DCL模式(double check locks双端检测模式)</span><br><span class="line">    private static SingletomDemo getInstance() &#123;</span><br><span class="line">        if (singletomDemo &#x3D;&#x3D; null) &#123;</span><br><span class="line">            synchronized (SingletomDemo.class) &#123;</span><br><span class="line">                if (singletomDemo &#x3D;&#x3D; null) &#123;</span><br><span class="line">                    singletomDemo &#x3D; new SingletomDemo();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singletomDemo;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F; 单线程</span><br><span class="line">&#x2F;&#x2F;        System.out.println(SingletomDemo.getInstance() &#x3D;&#x3D; SingletomDemo.getInstance());</span><br><span class="line">&#x2F;&#x2F;        System.out.println(SingletomDemo.getInstance() &#x3D;&#x3D; SingletomDemo.getInstance());</span><br><span class="line">&#x2F;&#x2F;        System.out.println(SingletomDemo.getInstance() &#x3D;&#x3D; SingletomDemo.getInstance());</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;         改为多线程后 可能多次调用构造函数</span><br><span class="line">&#x2F;&#x2F;         可以在 getInstance上加SYNC解决问题</span><br><span class="line">        for (int i &#x3D; 0; i &lt; 10; i++) &#123;</span><br><span class="line">            new Thread(() -&gt; &#123;</span><br><span class="line">                SingletomDemo.getInstance();</span><br><span class="line">            &#125;, String.valueOf(i)).start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        1. 最简单的单例模式：12345678910111213141516171819202122...
     
 
         <a href="/2020/09/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="post-more waves-effect waves-button">
@@ -572,12 +497,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">apt install git </span><br><span class="line">报错：Temporary failure resolving &#39;archive.ubuntu.com</span><br><span class="line">具体如下：</span><br><span class="line"></span><br><span class="line">Ign:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 liberror-perl all 0.17-1.2</span><br><span class="line">Ign:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">Err:3 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main amd64 git amd64 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:1 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 liberror-perl all 0.17-1.2</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial&#x2F;main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;main&#x2F;libe&#x2F;liberror-perl&#x2F;liberror-perl_0.17-1.2_all.deb  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;main&#x2F;g&#x2F;git&#x2F;git-man_2.7.4-0ubuntu1_all.deb  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;main&#x2F;g&#x2F;git&#x2F;git_2.7.4-0ubuntu1_amd64.deb  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line"></span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line">root@132157:~# apt-get update</span><br><span class="line">Err:1 http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu xenial-security InRelease</span><br><span class="line">  Temporary failure resolving &#39;security.ubuntu.com&#39;</span><br><span class="line">Err:2 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial InRelease</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:3 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial-updates InRelease</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Err:4 http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu xenial-backports InRelease</span><br><span class="line">  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial-updates&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;archive.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial-backports&#x2F;InRelease  Temporary failure resolving &#39;archive.ubuntu.com&#39;</span><br><span class="line">W: Failed to fetch http:&#x2F;&#x2F;security.ubuntu.com&#x2F;ubuntu&#x2F;dists&#x2F;xenial-security&#x2F;InRelease  Temporary failure resolving &#39;security.ubuntu.com&#39;</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure>
-
-<p><code>原因是DNS未配置</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vi &#x2F;etc&#x2F;resolv.conf</span><br><span class="line"></span><br><span class="line">+ nameserver 202.96.134.133</span><br><span class="line">+ nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
-
-
+        12345678910111213141516171819202122232425262728...
     
 
         <a href="/2020/08/06/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-more waves-effect waves-button">
@@ -616,11 +536,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <hr>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用 yarn 创建 Umi 脚手架，执行以下命令</span><br><span class="line">$ mkdir li &amp;&amp; cd li</span><br><span class="line">$ yarn create umi</span><br><span class="line">$ yarn</span><br></pre></td></tr></table></figure>
+        
 
-
+1234使用 yarn 创建 Umi 脚手架，执行以下命令$ mkdir li &amp;...
     
 
         <a href="/2020/07/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/" class="post-more waves-effect waves-button">
@@ -659,37 +577,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <h1 id="Springboot返回html"><a href="#Springboot返回html" class="headerlink" title="Springboot返回html"></a>Springboot返回html</h1><p>2019-04-15阅读 1.4K0</p>
-<p>  注：Springboot的版本2.1.3.RELEASE</p>
-<p> <em>List-1</em> application.properties文件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">server.port=<span class="number">8080</span></span><br><span class="line">#url中，项目的前缀</span><br><span class="line">server.servlet.context-path=<span class="regexp">/project</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">spring.mvc.view.prefix=/</span></span><br><span class="line">spring.mvc.view.suffix=.html</span><br></pre></td></tr></table></figure>
-
-<p>  整体结构如下图1所示，html要放在static下，不是templates下</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://ask.qcloudimg.com/http-save/yehe-5089774/1k8adq8jn7.jpeg?imageView2/2/w/1620" alt="img" title="">
-                </div>
-                <div class="image-caption">img</div>
-            </figure>
-
-
-<p>　　　　　　　　　　　　　　　　　　　　　　　　　图１</p>
-<p> <em>List-2</em> HelloController的内容如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"></span><br><span class="line">@Slf4j</span><br><span class="line">@Controller</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = <span class="string">"/hello"</span>)</span><br><span class="line">    public <span class="built_in">String</span> index() &#123;</span><br><span class="line">        log.info(<span class="string">"收到请求"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"html/hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p> <em>List-3</em> 启动springboot，之后在浏览器中输入</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#返回index.html的内容</span><br><span class="line">http:<span class="comment">//localhost:8080/project/</span></span><br><span class="line"></span><br><span class="line">#返回hello.html的内容</span><br><span class="line">http:<span class="comment">//localhost:8080/project/hello</span></span><br></pre></td></tr></table></figure>
-
-<p>  网上很多关于模板的（Thymeleaf 、FreeMarker 等），但是我不需要，我只需要纯的html。</p>
-<p>  index.html是springboot的默认welcome page。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a href="https://www.jianshu.com/p/eb4c0fc2dfc4" target="_blank" rel="noopener">https://www.jianshu.com/p/eb4c0fc2dfc4</a></li>
-<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content</a></li>
-<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-welcome-page" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-welcome-page</a></li>
-</ol>
-<p>​     (adsbygoogle = window.adsbygoogle || []).push({});  </p>
-
+        Springboot返回html2019-04-15阅读 1.4K0
+  注：Springbo...
     
 
         <a href="/2020/07/28/Springboot%E8%BF%94%E5%9B%9Ehtml/" class="post-more waves-effect waves-button">
@@ -734,7 +623,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>fairyeye &copy; 2015 - 2020</span>
+        <p><span>fairyeye &copy; 2019 - 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

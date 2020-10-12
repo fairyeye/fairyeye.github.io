@@ -174,8 +174,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><code>syntax error, expect {, actual [, pos 0, fastjson-version 1.2.50</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 转换一个map对象</span></span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; maps = jdbcTemplate.queryForList(<span class="string">"select * from user"</span>);</span><br><span class="line">		maps.forEach(stringObjectMap -&gt; &#123;</span><br><span class="line">			User user = JSON.parseObject(JSON.toJSONString(stringObjectMap), User<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
+        syntax error, expect {, actual [, pos 0, fastjs...
     
 
         <a href="/2020/07/22/fastJson/" class="post-more waves-effect waves-button">
@@ -220,18 +219,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>启动类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class DoaApplication &#123;</span><br><span class="line"></span><br><span class="line">	@Resource</span><br><span class="line">	private JdbcTemplate jdbcTemplate;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		SpringApplication.run(DoaApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@GetMapping(&quot;&#x2F;test&quot;)</span><br><span class="line">	public List&lt;Map&lt;String, Object&gt;&gt; test() &#123;</span><br><span class="line">		return jdbcTemplate.queryForList(&quot;select * from user&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;doa?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf-8&amp;useSSL&#x3D;false&amp;rewriteBatchedStatements&#x3D;true&amp;serverTimezone&#x3D;UTC</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br></pre></td></tr></table></figure>
-
-<p>pom</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
+        启动类
+12345678910111213141516@RestController@Spri...
     
 
         <a href="/2020/07/20/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/" class="post-more waves-effect waves-button">
@@ -276,7 +265,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><img src="https://i.loli.net/2020/07/16/ZXJmPqvfo2W6U9p.png" alt=""></p>
+        
 
     
 
@@ -316,7 +305,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;if test&#x3D;&quot;dto.instructionDocStatus !&#x3D; null and dto.instructionDocStatus !&#x3D; &#39;&#39;&quot;&gt;</span><br><span class="line">    AND MID.INSTRUCTION_DOC_STATUS IN</span><br><span class="line">    &lt;foreach collection&#x3D;&quot;dto.instructionDocStatus.split(&#39;,&#39;)&quot; item&#x3D;&quot;item&quot; index&#x3D;&quot;index&quot; separator&#x3D;&quot;,&quot;&gt;</span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">    &lt;&#x2F;foreach&gt;</span><br><span class="line">&lt;&#x2F;if&gt;</span><br></pre></td></tr></table></figure>
+        123456&lt;if test&#x3D;&quot;dto.instructionDoc...
     
 
         <a href="/2020/07/02/Mapper/" class="post-more waves-effect waves-button">
@@ -355,15 +344,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <hr>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">int a &#x3D; bigdemical.compareTo(bigdemical2)</span><br><span class="line">&#x2F;&#x2F;a &#x3D; -1,表示bigdemical小于bigdemical2；</span><br><span class="line">&#x2F;&#x2F;a &#x3D; 0,表示bigdemical等于bigdemical2；</span><br><span class="line">&#x2F;&#x2F;a &#x3D; 1,表示bigdemical大于bigdemical2；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;加减乘除：</span><br><span class="line">BigDecimal bignum1 &#x3D; new BigDecimal(&quot;10&quot;);  </span><br><span class="line">BigDecimal bignum2 &#x3D; new BigDecimal(&quot;5&quot;);  </span><br><span class="line">BigDecimal bignum3 &#x3D; null;  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;加法  </span><br><span class="line">bignum3 &#x3D;  bignum1.add(bignum2);       </span><br><span class="line">System.out.println(&quot;和 是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;减法  </span><br><span class="line">bignum3 &#x3D; bignum1.</span><br><span class="line">(bignum2);  </span><br><span class="line">System.out.println(&quot;差  是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;乘法  </span><br><span class="line">bignum3 &#x3D; bignum1.multiply(bignum2);  </span><br><span class="line">System.out.println(&quot;积  是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F;除法  </span><br><span class="line">bignum3 &#x3D; bignum1.divide(bignum2);  </span><br><span class="line">System.out.println(&quot;商  是：&quot; + bignum3);</span><br></pre></td></tr></table></figure>
+        
 
-
-
-<h5 id="BigDecimal-去除小数点后的0"><a href="#BigDecimal-去除小数点后的0" class="headerlink" title="BigDecimal 去除小数点后的0"></a>BigDecimal 去除小数点后的0</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal bigDecimal &#x3D; new BigDecimal(&quot;10.100000&quot;);</span><br><span class="line">bigDecimal &#x3D; bigDecimal.stripTrailingZeros();&#x2F;&#x2F; 10.1</span><br><span class="line">String str &#x3D; bigDecimal.toPlainString();&#x2F;&#x2F;转成字符串</span><br></pre></td></tr></table></figure>
-
-
+123456789101112131415161718192021222324252627...
     
 
         <a href="/2020/07/02/BigDecimal/" class="post-more waves-effect waves-button">
@@ -402,16 +385,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>0001-0099/字符串有序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat f&#x3D;new DecimalFormat(&quot;00000&quot;);</span><br><span class="line">for(int i&#x3D;1;i&lt;10000;i++)&#123;</span><br><span class="line">System.out.println(f.format(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ER-00001 下一个为ER-00002一直到ER-99999</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String m &#x3D; &quot;ER-&quot;;</span><br><span class="line">for (int i &#x3D; 0; i &lt; 2; i++) &#123;</span><br><span class="line">    String format &#x3D; String.format(&quot;%05d&quot;, i);   </span><br><span class="line">    System.out.println(m+format);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://user-gold-cdn.xitu.io/2020/6/16/172baf15ddf4c269?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
-
+        0001-0099/字符串有序
+1234NumberFormat f&#x3D;new Dec...
     
 
         <a href="/2020/06/16/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="post-more waves-effect waves-button">
@@ -450,13 +425,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p>my.cnf -&gt; 查看 err_log 位置</p>
-<p>查看日志报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR:-----------&gt; The innodb_system data file &#39;ibdata1&#39; must be writable</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 5.7之后版本 [根据MySQL安装路径]</span><br><span class="line">chmod -R 777 &#x2F;var&#x2F;lib&#x2F;mysql</span><br></pre></td></tr></table></figure>
-
-
+        my.cnf -&gt; 查看 err_log 位置
+查看日志报错
+1ERROR:------...
     
 
         <a href="/2020/06/14/MySQL%E9%87%8D%E5%90%AF%E5%A4%B1%E8%B4%A5/" class="post-more waves-effect waves-button">
@@ -495,10 +466,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <p><a href="https://blog.csdn.net/Tastill/article/details/88060539" target="_blank" rel="noopener">https://blog.csdn.net/Tastill/article/details/88060539</a></p>
-<p>pdf   <a href="https://www.cnblogs.com/duoduo-727/p/9367175.html" target="_blank" rel="noopener">https://www.cnblogs.com/duoduo-727/p/9367175.html</a></p>
-<p>CASE<br>    mmla.ATTR_VALUE<br>    WHEN ‘Y’ THEN<br>    ‘BONDED’ ELSE ‘’<br>END </p>
-
+        https://blog.csdn.net/Tastill/article/details/8...
     
 
         <a href="/2020/06/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/" class="post-more waves-effect waves-button">
@@ -537,9 +505,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	swid.OPERATION,</span><br><span class="line">	swid.DELIVERY_METHOD,</span><br><span class="line">	GROUP_CONCAT( DISTINCT( swid.WORK_ORDER_ID ) ) WORK_ORDER_ID </span><br><span class="line">FROM</span><br><span class="line">	SSME_WO_ISSUE_DETAIL swid </span><br><span class="line">WHERE</span><br><span class="line">	swid.TENANT_ID &#x3D; 4 </span><br><span class="line">	AND swid.WORK_ORDER_ID IN ( &#39;42717.1&#39;,&#39;42719.1&#39; ) </span><br><span class="line">GROUP BY</span><br><span class="line">	swid.OPERATION,</span><br><span class="line">	swid.DELIVERY_METHOD</span><br></pre></td></tr></table></figure>
-
-
+        123456789101112SELECT	swid.OPERATION,	swid.DELI...
     
 
         <a href="/2020/06/10/MySQL/" class="post-more waves-effect waves-button">
@@ -578,13 +544,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 对应Excel头与实体类字段 通过HeaderAlias</span><br><span class="line">int rowCount &#x3D; reader.getRowCount();</span><br><span class="line">reader.setHeaderAlias(DataReadVO.getHeaderAlias());</span><br><span class="line">List&lt;DataReadVO&gt; read &#x3D; reader.read(0, 1, rowCount, DataReadVO.class);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class DataReadVO &#123;</span><br><span class="line"></span><br><span class="line">    private boolean status &#x3D; false;</span><br><span class="line">    private Long lineNum;</span><br><span class="line">    private String materialId;</span><br><span class="line">    private String materialCode;</span><br><span class="line">    private Double qty;</span><br><span class="line">    public Map&lt;String, String&gt; map;</span><br><span class="line"></span><br><span class="line">    public static Map&lt;String, String&gt; getHeaderAlias()&#123;</span><br><span class="line">        Map&lt;String, String&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;行号&quot;, &quot;lineNum&quot;);</span><br><span class="line">        map.put(&quot;物料编码&quot;, &quot;materialCode&quot;);</span><br><span class="line">        map.put(&quot;数量&quot;, &quot;qty&quot;);</span><br><span class="line">        return map;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        1234&#x2F;&#x2F; 对应Excel头与实体类字段 通过HeaderAliasin...
     
 
         <a href="/2020/06/01/ExcelUtils/" class="post-more waves-effect waves-button">
@@ -629,7 +589,7 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>fairyeye &copy; 2015 - 2020</span>
+        <p><span>fairyeye &copy; 2019 - 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
