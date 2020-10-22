@@ -21,18 +21,21 @@
     
     
     <meta name="keywords" content="utils">
-    <meta name="description" content="123456789&#x2F;&#x2F; 查询left表里有 right表里没有的数据SELECT  l.*FROM    t_left lWHERE   NOT EXISTS(SELECT  NULLFROM    t_right rWHERE   r.value &#x3D; l.value)">
+    <meta name="description" content="通过FEDERATED同步在不同MySQL服务的两张表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL查询">
 <meta property="og:url" content="http://yoursite.com/2020/09/23/%E6%A8%A1%E6%9D%BF/index.html">
 <meta property="og:site_name" content="人生当苦, 良人当归">
-<meta property="og:description" content="123456789&#x2F;&#x2F; 查询left表里有 right表里没有的数据SELECT  l.*FROM    t_left lWHERE   NOT EXISTS(SELECT  NULLFROM    t_right rWHERE   r.value &#x3D; l.value)">
+<meta property="og:description" content="通过FEDERATED同步在不同MySQL服务的两张表">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png">
+<meta property="og:image" content="https://i.loli.net/2020/10/22/HhLBosuOdeNDbgQ.png">
 <meta property="article:published_time" content="2020-09-23T02:00:07.585Z">
-<meta property="article:modified_time" content="2020-10-10T01:29:48.168Z">
+<meta property="article:modified_time" content="2020-10-22T07:14:51.424Z">
 <meta property="article:author" content="fairyeye">
 <meta property="article:tag" content="utils">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png">
     
         <link rel="alternate" type="application/atom+xml" title="人生当苦, 良人当归" href="/atom.xml">
     
@@ -157,6 +160,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-首先要保证本地的MySQL服务支持FEDERATED引擎。"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 首先要保证本地的MySQL服务支持FEDERATED引擎。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-启用-FEDERATED"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.启用 FEDERATED</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-建表"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.建表</span></a></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-模板"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -179,8 +189,29 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查询left表里有 right表里没有的数据</span><br><span class="line">SELECT  l.*</span><br><span class="line">FROM    t_left l</span><br><span class="line">WHERE   NOT EXISTS</span><br><span class="line">(</span><br><span class="line">SELECT  NULL</span><br><span class="line">FROM    t_right r</span><br><span class="line">WHERE   r.value &#x3D; l.value</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+            <h4 id="1-首先要保证本地的MySQL服务支持FEDERATED引擎。"><a href="#1-首先要保证本地的MySQL服务支持FEDERATED引擎。" class="headerlink" title="1. 首先要保证本地的MySQL服务支持FEDERATED引擎。"></a>1. 首先要保证本地的MySQL服务支持FEDERATED引擎。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：SHOW ENGINES;</span><br><span class="line">如下 FEDERATED 行的Support为YES则表示开启了FEDERATED。</span><br><span class="line">如果为 NO 则表示未开启。</span><br><span class="line"></span><br><span class="line">如果 FEDERATED 没有开启的话 要启用。</span><br></pre></td></tr></table></figure>
 
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h4 id="2-启用-FEDERATED"><a href="#2-启用-FEDERATED" class="headerlink" title="2.启用 FEDERATED"></a>2.启用 FEDERATED</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在MySQL的配置文件</span><br><span class="line">安装目录下的my.ini或my.cnf </span><br><span class="line">加上 一行  &#96;FEDERATED&#96;</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2020/10/22/HhLBosuOdeNDbgQ.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h4 id="3-建表"><a href="#3-建表" class="headerlink" title="3.建表"></a>3.建表</h4><p><strong>建表一般应的是InnoDB引擎，这里需要修改一下 改为</strong> <code>ENGINE=FEDERATED</code></p>
+<p>从原表导出表结构SQL，然后修改 <code>ENGINE = InnoDB</code>-&gt;<code>ENGINE=FEDERATED CONNECTION=&#39;mysql://用户名:密码@IP:PORT/库名/表名&#39;</code></p>
+<p>然后打开这张表，可以看到远程表里的数据已经同步到了这张表。</p>
 
         </div>
 
@@ -189,7 +220,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-10-10T01:29:48.168Z" itemprop="dateUpdated">2020-10-10 09:29:48</time>
+    最后更新时间：<time datetime="2020-10-22T07:14:51.424Z" itemprop="dateUpdated">2020-10-22 15:14:51</time>
 </span><br>
 
 
