@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-22T06:50:54.464Z</updated>
+  <updated>2020-10-26T01:50:01.471Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/"/>
     <id>http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/</id>
     <published>2020-10-22T06:50:54.464Z</published>
-    <updated>2020-10-22T06:50:54.464Z</updated>
+    <updated>2020-10-26T01:50:01.471Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-查询数据库是否启用-FEDERATED引擎"><a href="#1-查询数据库是否启用-FEDERATED引擎" class="headerlink" title="1.查询数据库是否启用 FEDERATED引擎"></a>1.查询数据库是否启用 <strong>FEDERATED</strong>引擎</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW ENGINES;</span><br></pre></td></tr></table></figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://i.loli.net/2020/10/26/NmkbpSugEsld1rJ.png" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><p>如果<code>Support</code> 为<code>NO</code>需要改为<code>YES</code> ，只需要修改自己的数据库，目标数据库无需修改。</p><h4 id="2-建立数据库"><a href="#2-建立数据库" class="headerlink" title="2.建立数据库"></a>2.建立数据库</h4><p>自建表引擎一般为<code>InnoDB</code>，建立远程数据表示需要修改为<code>FEDERATED</code></p><p>建立与目标 表一样的表结构  替换引擎为<code>FEDERATED</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENGINE&#x3D;FEDERATED CONNECTION&#x3D;&#39;mysql:&#x2F;&#x2F;#&#123;userName&#125;:#&#123;passwd&#125;@#&#123;IP&#125;:#&#123;PORT&#125;&#x2F;#&#123;数据库&#125;&#x2F;#&#123;表&#125;&#39;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;1-查询数据库是否启用-FEDERATED引擎&quot;&gt;&lt;a href=&quot;#1-查询数据库是否启用-FEDERATED引擎&quot; class=&quot;headerlink&quot; title=&quot;1.查询数据库是否启用 FEDERATED引擎&quot;&gt;&lt;/a&gt;1.查询数据库是否启用 &lt;stro
+      
     
     </summary>
     
