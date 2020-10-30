@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-10-26T01:50:01.471Z</updated>
+  <updated>2020-10-30T09:20:36.749Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>淘汰策略</title>
+    <link href="http://yoursite.com/2020/10/30/%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/"/>
+    <id>http://yoursite.com/2020/10/30/%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</id>
+    <published>2020-10-30T09:17:43.353Z</published>
+    <updated>2020-10-30T09:20:36.749Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">常见的策略有三种：</span><br><span class="line"></span><br><span class="line">- FIFO：先进先出策略 </span><br><span class="line">- LFU：最少使用策略</span><br><span class="line">- LRU：最近最少使用策略</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Transactional注解</title>
+    <link href="http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/</id>
+    <published>2020-10-30T02:53:05.106Z</published>
+    <updated>2020-10-30T02:54:23.607Z</updated>
+    
+    <content type="html"><![CDATA[<p>方法A中调用B后再调用C,三个方法中均有插入数据后再查询数据</p><p>B方法的注解：@Transactional(propagation=Propagation.REQUIRES_NEW) –不管是否存在事务,都创建一个新的事务,原来的挂起,新的执行完毕,继续执行老的事务</p><p>C方法的注解：@Transactional(propagation=Propagation.REQUIRED) –如果有事务,那么加入事务,没有的话新建一个</p><p>1、当方法B或者C报错时，A、B、C方法都回滚</p><p>2、当方法A、B、C异常被捕获时，A、B、C事务不回滚（a、b、c均入库）</p><p>3、当方法BC执行后，方法A报错时，A、C事务回滚，B事务不回滚（b数据入库）</p><p>A方法向表中添加数据a，在查询该表能得到数据a</p><p>B方法向表中添加数据b，再查询该表能得到数据b</p><p>C方法向表中添加数据c，再查询该表能得到数据a，b，c</p><p>带有注解@Transactional(propagation=Propagation.REQUIRES_NEW)的方法走完之后，数据就会被提交入库</p><p>另外需要注意方法内部调用@Transactional(propagation=Propagation.REQUIRES_NEW)注解不生效，比如A和B都在同一个方法中，A调用B，B方法是此注解，则不生效。同样，AOP拦截也拦截不到B</p>]]></content>
+    
+    <summary type="html">
+    
+      事务回滚
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>同步不同服务的MySQL数据表</title>
@@ -422,50 +467,6 @@
         &lt;p&gt;my.cnf -&amp;gt; 查看 err_log 位置&lt;/p&gt;
 &lt;p&gt;查看日志报错&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/spa
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库锁</title>
-    <link href="http://yoursite.com/2020/06/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/"/>
-    <id>http://yoursite.com/2020/06/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/</id>
-    <published>2020-06-11T02:00:36.754Z</published>
-    <updated>2020-06-11T07:15:27.124Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Tastill/article/details/88060539" target="_blank" rel="noopener">https://blog.csdn.net/Tastill/article/details/88060539</a></p><p>pdf   <a href="https://www.cnblogs.com/duoduo-727/p/9367175.html" target="_blank" rel="noopener">https://www.cnblogs.com/duoduo-727/p/9367175.html</a></p><p>CASE<br>    mmla.ATTR_VALUE<br>    WHEN ‘Y’ THEN<br>    ‘BONDED’ ELSE ‘’<br>END </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Tastill/article/details/88060539&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/Tastill/article/det
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL</title>
-    <link href="http://yoursite.com/2020/06/10/MySQL/"/>
-    <id>http://yoursite.com/2020/06/10/MySQL/</id>
-    <published>2020-06-10T04:24:00.655Z</published>
-    <updated>2020-06-10T04:24:37.060Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">swid.OPERATION,</span><br><span class="line">swid.DELIVERY_METHOD,</span><br><span class="line">GROUP_CONCAT( DISTINCT( swid.WORK_ORDER_ID ) ) WORK_ORDER_ID </span><br><span class="line">FROM</span><br><span class="line">SSME_WO_ISSUE_DETAIL swid </span><br><span class="line">WHERE</span><br><span class="line">swid.TENANT_ID &#x3D; 4 </span><br><span class="line">AND swid.WORK_ORDER_ID IN ( &#39;42717.1&#39;,&#39;42719.1&#39; ) </span><br><span class="line">GROUP BY</span><br><span class="line">swid.OPERATION,</span><br><span class="line">swid.DELIVERY_METHOD</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
       
     
     </summary>

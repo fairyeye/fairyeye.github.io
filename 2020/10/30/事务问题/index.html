@@ -14,26 +14,24 @@
     
     
     
-    <title>同步不同服务的MySQL数据表 | 人生当苦, 良人当归</title>
+    <title>Transactional注解 | 人生当苦, 良人当归</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="1.查询数据库是否启用 FEDERATED引擎1SHOW ENGINES;                                                                                                              如果Support 为NO需要改为YES ，只需要修改自己的数据库，目标数据库无需修改。 2.建立数据库自">
+    <meta name="description" content="事务回滚">
 <meta property="og:type" content="article">
-<meta property="og:title" content="同步不同服务的MySQL数据表">
-<meta property="og:url" content="http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/index.html">
+<meta property="og:title" content="Transactional注解">
+<meta property="og:url" content="http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="人生当苦, 良人当归">
-<meta property="og:description" content="1.查询数据库是否启用 FEDERATED引擎1SHOW ENGINES;                                                                                                              如果Support 为NO需要改为YES ，只需要修改自己的数据库，目标数据库无需修改。 2.建立数据库自">
+<meta property="og:description" content="事务回滚">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2020/10/26/NmkbpSugEsld1rJ.png">
-<meta property="article:published_time" content="2020-10-22T06:50:54.464Z">
-<meta property="article:modified_time" content="2020-10-26T01:50:01.471Z">
+<meta property="article:published_time" content="2020-10-30T02:53:05.106Z">
+<meta property="article:modified_time" content="2020-10-30T02:54:23.607Z">
 <meta property="article:author" content="fairyeye">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/10/26/NmkbpSugEsld1rJ.png">
     
         <link rel="alternate" type="application/atom+xml" title="人生当苦, 良人当归" href="/atom.xml">
     
@@ -114,7 +112,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">同步不同服务的MySQL数据表</div>
+        <div class="flex-col header-title ellipsis">Transactional注解</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -136,13 +134,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">同步不同服务的MySQL数据表</h1>
+        <h1 class="title">Transactional注解</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-10-22T06:50:54.464Z" itemprop="datePublished" class="page-time">
-  2020-10-22
+                <time datetime="2020-10-30T02:53:05.106Z" itemprop="datePublished" class="page-time">
+  2020-10-30
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></li></ul>
 
             
         </h5>
@@ -156,23 +156,18 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-查询数据库是否启用-FEDERATED引擎"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.查询数据库是否启用 FEDERATED引擎</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-建立数据库"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.建立数据库</span></a></li></ol>
-        </nav>
-    </aside>
 
-
-<article id="post-同步不同服务的MySQL数据表"
+<article id="post-事务问题"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">同步不同服务的MySQL数据表</h1>
+        <h1 class="post-card-title">Transactional注解</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-10-22 14:50:54" datetime="2020-10-22T06:50:54.464Z"  itemprop="datePublished">2020-10-22</time>
+            <time class="post-time" title="2020-10-30 10:53:05" datetime="2020-10-30T02:53:05.106Z"  itemprop="datePublished">2020-10-30</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></li></ul>
+
 
 
             
@@ -183,21 +178,17 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h4 id="1-查询数据库是否启用-FEDERATED引擎"><a href="#1-查询数据库是否启用-FEDERATED引擎" class="headerlink" title="1.查询数据库是否启用 FEDERATED引擎"></a>1.查询数据库是否启用 <strong>FEDERATED</strong>引擎</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW ENGINES;</span><br></pre></td></tr></table></figure>
-
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://i.loli.net/2020/10/26/NmkbpSugEsld1rJ.png" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure>
-
-<p>如果<code>Support</code> 为<code>NO</code>需要改为<code>YES</code> ，只需要修改自己的数据库，目标数据库无需修改。</p>
-<h4 id="2-建立数据库"><a href="#2-建立数据库" class="headerlink" title="2.建立数据库"></a>2.建立数据库</h4><p>自建表引擎一般为<code>InnoDB</code>，建立远程数据表示需要修改为<code>FEDERATED</code></p>
-<p>建立与目标 表一样的表结构  替换引擎为<code>FEDERATED</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENGINE&#x3D;FEDERATED CONNECTION&#x3D;&#39;mysql:&#x2F;&#x2F;#&#123;userName&#125;:#&#123;passwd&#125;@#&#123;IP&#125;:#&#123;PORT&#125;&#x2F;#&#123;数据库&#125;&#x2F;#&#123;表&#125;&#39;</span><br></pre></td></tr></table></figure>
-
+            <p>方法A中调用B后再调用C,三个方法中均有插入数据后再查询数据</p>
+<p>B方法的注解：@Transactional(propagation=Propagation.REQUIRES_NEW) –不管是否存在事务,都创建一个新的事务,原来的挂起,新的执行完毕,继续执行老的事务</p>
+<p>C方法的注解：@Transactional(propagation=Propagation.REQUIRED) –如果有事务,那么加入事务,没有的话新建一个</p>
+<p>1、当方法B或者C报错时，A、B、C方法都回滚</p>
+<p>2、当方法A、B、C异常被捕获时，A、B、C事务不回滚（a、b、c均入库）</p>
+<p>3、当方法BC执行后，方法A报错时，A、C事务回滚，B事务不回滚（b数据入库）</p>
+<p>A方法向表中添加数据a，在查询该表能得到数据a</p>
+<p>B方法向表中添加数据b，再查询该表能得到数据b</p>
+<p>C方法向表中添加数据c，再查询该表能得到数据a，b，c</p>
+<p>带有注解@Transactional(propagation=Propagation.REQUIRES_NEW)的方法走完之后，数据就会被提交入库</p>
+<p>另外需要注意方法内部调用@Transactional(propagation=Propagation.REQUIRES_NEW)注解不生效，比如A和B都在同一个方法中，A调用B，B方法是此注解，则不生效。同样，AOP拦截也拦截不到B</p>
 
         </div>
 
@@ -206,7 +197,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-10-26T01:50:01.471Z" itemprop="dateUpdated">2020-10-26 09:50:01</time>
+    最后更新时间：<time datetime="2020-10-30T02:54:23.607Z" itemprop="dateUpdated">2020-10-30 10:54:23</time>
 </span><br>
 
 
@@ -234,7 +225,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/&title=《同步不同服务的MySQL数据表》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/&title=《Transactional注解》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -244,22 +235,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/&title=《同步不同服务的MySQL数据表》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/&title=《Transactional注解》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同步不同服务的MySQL数据表》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Transactional注解》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -282,18 +273,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/" id="post-prev" class="post-nav-link">
+      <a href="/2020/10/30/%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Transactional注解</h4>
+        <h4 class="title">淘汰策略</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/10/10/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/" id="post-next" class="post-nav-link">
+      <a href="/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">查询不在B表里的A表数据</h4>
+        <h4 class="title">同步不同服务的MySQL数据表</h4>
       </a>
     </div>
   
@@ -367,7 +358,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/&title=《同步不同服务的MySQL数据表》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/&title=《Transactional注解》 — 人生当苦, 良人当归&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -377,22 +368,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/&title=《同步不同服务的MySQL数据表》 — 人生当苦, 良人当归&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/&title=《Transactional注解》 — 人生当苦, 良人当归&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《同步不同服务的MySQL数据表》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Transactional注解》 — 人生当苦, 良人当归&url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -403,7 +394,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/10/22/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/10/30/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
 </div>
 
 
