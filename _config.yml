@@ -4,16 +4,16 @@
 
 # Site
 title: 人生当苦, 良人当归
-subtitle: ''
+subtitle: '我曾溪底杀指玄'
 description: ''
 keywords:
-author: fairyeye
+author: 谪仙人
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-#url: http://yoursite.com
+url: http://fairyeye.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -93,7 +93,18 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: indigo
+theme: next
+
+# Search
+# algolia:
+#   applicationID: 'O1I7RNIL72'
+#   indexName: 'hexo_next'
+#   chunkSize: 5000
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
