@@ -361,7 +361,7 @@ baidu_analytics: 1b880c42b2ce831a35b7ec0fcd1d478b
 # Disqus
 disqus:
   enable: true
-  shortname: lihei
+  shortname: fairyeye-blog
   count: true
 
 # Hypercomments
