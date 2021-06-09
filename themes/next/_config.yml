@@ -92,12 +92,12 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  about: /about/
-  tags: /tags/
-  categories: /categories/
-  archives: /archives/
-  #schedule: /schedule/ || calendar
+  home: /||home
+  archives: /archives/||
+  # about: /about/
+  # tags: /tags/||tags
+  # categories: /categories/||categories
+  # schedule: /schedule/|| calendar
   # sitemap: /sitemap.xml
   # commonweal: /404/
 
@@ -128,7 +128,7 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/fairyeye || github
-  E-Mail: mailto:yourname@gmail.com || envelope
+  E-Mail: https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=CllgCJqXPHhnfdhrXwtBtHvcwVDRzLfPLVSPhLCrhfLbtQmVLHCnnbMKfgwtbvSSdlDTRtMVllB || envelope
   Google: https://plus.google.com/yourname || google
   Twitter: https://twitter.com/yourname || twitter
   FB Page: https://www.facebook.com/yourname || facebook

@@ -1,3 +1,13 @@
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto_text')
+      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      hitokoto.innerText = data.hitokoto
+    })
+    .catch(console.error)
+</script>
 <div class="site-brand-wrapper">
   <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
     {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
@@ -16,10 +26,11 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+
       {% if theme.seo %}
         <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
       {% else %}
-        <p class="site-subtitle">{{ config.subtitle }}</p>
+        <p class="site-subtitle" id="hitokoto_text">{{ config.subtitle }}</p>
       {% endif %}
   </div>
 
