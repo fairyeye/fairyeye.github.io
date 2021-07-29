@@ -98,21 +98,17 @@ mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
 
 #### 软件安装清单
 
-- IDEA：费什么话...你能像我一样用`Sublime`写代码？
+- IDEA：
 
-- Chrome：先装个浏览器吧
+- Chrome：
 
-- uTools：神器
+- uTools：
 
-- Typora：这不是在用吗
-
-- PicGo：配合Typora上传图片用（图床地址：https://sm.ms/home/）
+- Typora：
 
 - Another Redis Desktop Manager：很好看的Redis客户端
 
-- Shell：好看 好用
-
-- DiskGenius：硬盘管理
+- XShell：好看 好用
 
 - Shadowsocks：小飞机
 
