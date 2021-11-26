@@ -112,5 +112,7 @@ mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
 
 - Shadowsocks：小飞机
 
+- Windows Termial:Windows终端
+
   
 

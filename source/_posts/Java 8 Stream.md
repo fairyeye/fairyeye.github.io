@@ -96,3 +96,14 @@ Map<String, List<WmsIqcRecord>> map = records.stream().collect(Collectors.groupi
                 }));
 ```
 
+
+
+```
+//        List<LocalDate> collect = localDates.stream().sorted((var1, var2) -> {
+//            if (var1.isBefore(var2)) {
+//                return -1;
+//            }
+//            return 1;
+//        }).collect(Collectors.toList());
+//        System.out.println(localDates.stream().sorted().collect(Collectors.toList()));
+```
