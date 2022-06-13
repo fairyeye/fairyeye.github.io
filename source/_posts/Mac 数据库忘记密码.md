@@ -1,3 +1,11 @@
+---
+title: Navicat数据库导出链接密码解析
+date: 2022年6月13日14:08:30
+tags: ""
+categories: "实用"
+description: 
+---
+
 参考：https://blog.csdn.net/harris_lele/article/details/123588127
 
 导出来，然后用php解析密码即可；
