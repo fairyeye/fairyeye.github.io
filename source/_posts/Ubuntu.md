@@ -25,6 +25,11 @@ git clone https://github.com/firehol/netdata.git --depth=1
 #### 3. 安装netdata
 
 ```
+https://www.cnblogs.com/beile/p/12875395.html
+
+官方：https://learn.netdata.cloud/docs/agent/packaging/installer/methods/offline
+
+
 ./netdata-installer.sh
 ```
 
@@ -39,6 +44,7 @@ git clone https://github.com/firehol/netdata.git --depth=1
 #### 1. 安装Nginx
 
 ```
+sudo su
 apt-get install nginx
 ```
 
@@ -55,7 +61,7 @@ apt-get install nginx
 
 server {
     listen 80;
-    server_name xxxx.cn;
+    server_name IP;
 
     location / {
       client_max_body_size   3000m;
@@ -76,18 +82,68 @@ server {
 
 这样 当我们在浏览器地址栏输入 域名时 就会自动跳转到`netdata`的主页
 
+### 时区
+	- https://blog.csdn.net/weixin_44109450/article/details/124259338
+	- 
+### Github
+
+	sudo vim /etc/hosts
+	140.82.112.4 github.com  
+	199.232.69.194 github.global.ssl.fastly.net
 
 
+### 内网穿透
+
+```
+1. https://doc.natfrp.com/#/frpc/service/systemd
+2. 
+```
 
 
+### 青龙
+
+```
+# 进入青龙容器
+docker exec -it qinglong bash
+```
 
 
+### 使用systemctl管理服务
+
+```
+https://www.jianshu.com/p/2deb0b79cb10
+
+# 路径
+/etc/systemd/system
+
+```
 
 
+### Arthas
+
+```
+https://arthas.aliyun.com/doc/quick-start.html#_2-%E5%90%AF%E5%8A%A8-arthas
 
 
+[arthas@588425]$ watch net.lab1024.smartadmin.module.business.project.service.ProjectBaiscService queryProjects returnObj
+Press Q or Ctrl+C to abort.
+Affect(class count: 2 , method count: 2) cost in 170 ms, listenerId: 1
+method=net.lab1024.smartadmin.module.business.project.service.ProjectBaiscService.queryProjects location=AtExit
+ts=2022-11-28 20:11:49; [cost=37.212667ms] result=@ResponseDTO[
+    code=@Integer[1],
+    msg=@String[操作成功!],
+    success=@Boolean[true],
+    data=@ArrayList[isEmpty=false;size=13],
+]
+method=net.lab1024.smartadmin.module.business.project.service.ProjectBaiscService$$EnhancerBySpringCGLIB$$2f00139f.queryProjects location=AtExit
+ts=2022-11-28 20:11:49; [cost=94.21994ms] result=@ResponseDTO[
+    code=@Integer[1],
+    msg=@String[操作成功!],
+    success=@Boolean[true],
+    data=@ArrayList[isEmpty=false;size=13],
+]
 
-
+```
 
 
 

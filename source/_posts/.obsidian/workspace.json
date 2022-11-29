@@ -4,16 +4,69 @@
     "type": "split",
     "children": [
       {
-        "id": "4e1fd5568a52fd02",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "MySQL.md",
-            "mode": "source",
-            "source": false
+        "id": "791c9c53a57e5873",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e1fd5568a52fd02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MySQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1feb1facc0d3f83b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "项目实战.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d12240b3193c0fd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ubuntu.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4af98abef4a4a06b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "使用教程.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8d12d18452305c01",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
           }
-        }
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -31,7 +84,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -77,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MySQL.md",
+                "file": "使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MySQL.md",
+                "file": "使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MySQL.md"
+                "file": "使用教程.md"
               }
             }
           }
@@ -137,17 +192,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4e1fd5568a52fd02",
+  "active": "4af98abef4a4a06b",
   "lastOpenFiles": [
-    "日期处理.md",
-    "14.md",
-    "13.md",
-    "10.md",
-    "IDEA Plugins.md",
-    "MySQL.md",
-    "模板.md",
-    "查询不在B表里的A表数据.md",
+    "Ubuntu.md",
+    "MySQL数据删除恢复.md",
+    "项目实战.md",
+    "StringToInteger.md",
+    "Springboot返回html.md",
+    "Redis笔记.md",
+    "RE-3用户服务.md",
     "RE-1注册中心.md",
-    "2022-09-22.md"
+    "Pasted image 20220922140434.png",
+    "日期处理.md"
   ]
 }

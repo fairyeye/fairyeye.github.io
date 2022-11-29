@@ -13,3 +13,11 @@ GROUP BY
 	swid.DELIVERY_METHOD
 ```
 
+
+https://www.cnblogs.com/minqiliang/p/16577102.html
+
+https://blog.csdn.net/z15711187787/article/details/124986309
+
+https://blog.csdn.net/weixin_45994575/article/details/123071909?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-123071909-blog-123821186.t0_edu_mix&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-123071909-blog-123821186.t0_edu_mix&utm_relevant_index=1
+
+部署记录
