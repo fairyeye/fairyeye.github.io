@@ -93,18 +93,33 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: shoka
 
 # Search
 # algolia:
 #   applicationID: 'O1I7RNIL72'
 #   indexName: 'hexo_next'
 #   chunkSize: 5000
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+algolia:
+  appId: "2Y4K75XO19"
+  apiKey: "879796413050f78f94862d68137b70b7"
+  adminApiKey: "31703aba407c33f84388c0058162e572"
+  chunkSize: 5000
+  indexName: "fairyeye"
+  fields:
+    - title #必须配置
+    - path #必须配置
+    - categories #推荐配置
+    - content:strip:truncate,0,2000
+    - gallery
+    - photos
+    - tags
+
+# search:
+#   path: search.xml
+#   field: post
+#   format: html
+#   limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -112,3 +127,91 @@ deploy:
   type: 'git'
   repo: 'git@github.com:fairyeye/fairyeye.github.io.git'
   branch: master
+
+
+
+# opitions for renderer
+markdown:
+  render:
+    html: false
+    xhtmlOut: true
+    breaks: true
+    linkify: true
+    typographer: 
+    quotes: '“”‘’'
+  plugins:
+    - plugin:
+        name: markdown-it-toc-and-anchor
+        enable: true
+        options:
+          tocClassName: 'toc'
+          anchorClassName: 'anchor'
+    - plugin:
+        name: markdown-it-multimd-table
+        enable: true
+        options:
+          multiline: true
+          rowspan: true
+          headerless: true
+    - plugin:
+        name: ./markdown-it-furigana
+        enable: true
+        options:
+          fallbackParens: "()"
+    - plugin:
+        name: ./markdown-it-spoiler
+        enable: true
+        options:
+          title: "你知道得太多了"
+ 
+# options for minify
+minify:
+  html:
+    enable: true
+    exclude:
+      - '**/json.ejs'
+      - '**/atom.ejs'
+      - '**/rss.ejs'
+  css:
+    enable: true
+    exclude:
+      - '**/*.min.css'
+  js:
+    enable: true
+    mangle:
+      toplevel: true
+    output:
+    compress:
+    exclude:
+      - '**/*.min.js'
+
+autoprefixer:
+  exclude:
+    - '*.min.css'
+
+
+# # Writing
+# highlight:
+#   enable: false
+
+prismjs:
+  enable: false
+
+
+feed:
+    limit: 20
+    order_by: "-date"
+    tag_dir: false
+    category_dir: false
+    rss:
+        enable: true
+        template: "themes/shoka/layout/_alternate/rss.ejs"
+        output: "rss.xml"
+    atom:
+        enable: true
+        template: "themes/shoka/layout/_alternate/atom.ejs"
+        output: "atom.xml"
+    jsonFeed:
+        enable: true
+        template: "themes/shoka/layout/_alternate/json.ejs"
+        output: "feed.json"

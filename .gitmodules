@@ -1,3 +1,6 @@
 [submodule "themes/stellar"]
 	path = themes/stellar
 	url = https://github.com/fairyeye/stellar-theme
+[submodule "themes/shoka"]
+	path = themes/shoka
+	url = https://github.com/amehime/hexo-theme-shoka
