@@ -80,7 +80,35 @@ server {
 }
 ```
 
+
 这样 当我们在浏览器地址栏输入 域名时 就会自动跳转到`netdata`的主页
+
+#### 3. 反向代理+负载均衡 => 
+
+``` sh
+# 实际服务
+upstream web_servers {
+	server 192.168.139.128:9001;
+	server 192.168.139.128:9002;
+}
+
+server {
+	# 代理端口
+	listen 10086;
+	server_name 192.168.139.128;
+
+	location / {
+		proxy_pass http://web_servers;
+		proxy_set_header Host $host:$server_port;
+	}
+}
+
+# 可以部署两个服务 9001、9002 发布时，等上一个成功发布后，启动第二个。
+# 未验证
+# 加上systemclt管理Java服务
+# 负载均衡的方式：https://mp.weixin.qq.com/s/yJyEwPkLD0V9G0451gbZYg
+# 1.轮询；2.权重；3.ip_hash；4.fair；5.url_hash
+```
 
 ### 时区
 	- https://blog.csdn.net/weixin_44109450/article/details/124259338
@@ -116,6 +144,9 @@ https://www.jianshu.com/p/2deb0b79cb10
 # 路径
 /etc/systemd/system
 
+# 日志
+journalctl -u 服务名
+
 ```
 
 
@@ -147,8 +178,34 @@ ts=2022-11-28 20:11:49; [cost=94.21994ms] result=@ResponseDTO[
 
 
 
+### Prometheus
+
+``` sh
+# prometheus
+wget https://github.com/prometheus/prometheus/releases/download/v2.40.4/prometheus-2.40.4.linux-amd64.tar.gz
+tar -zxvf prometheus-2.40.4.linux-amd64.tar.gz
+sudo mv prometheus-2.40.4.linux-amd64 /usr/local/prometheus
 
 
+vim /usr/lib/systemd/system/prometheus.service
+[Unit]
+Description=prometheus
+After=network.target 
+
+[Service]
+User=prometheus
+Group=prometheus
+WorkingDirectory=/usr/local/prometheus
+ExecStart=/usr/local/prometheus/prometheus
+[Install]
+WantedBy=multi-user.target
+
+# 启动并开启自启
+systemctl daemon-reload
+systemctl enable --now prometheus									
+
+
+```
 
 
 

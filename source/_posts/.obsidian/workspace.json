@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MySQL.md",
+                "file": "Ubuntu.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3a56142fd0f8905d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,19 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4af98abef4a4a06b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "使用教程.md",
+                "file": "MySQL数据删除恢复.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +66,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,9 +96,9 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "使用教程.md",
+                "file": "Ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "使用教程.md",
+                "file": "Ubuntu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "使用教程.md"
+                "file": "Ubuntu.md"
               }
             }
           }
@@ -192,17 +192,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4af98abef4a4a06b",
+  "active": "3a56142fd0f8905d",
   "lastOpenFiles": [
+    "Nacos.md",
     "Ubuntu.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "MySQL.md",
     "MySQL数据删除恢复.md",
+    "使用教程.md",
     "项目实战.md",
     "StringToInteger.md",
     "Springboot返回html.md",
-    "Redis笔记.md",
-    "RE-3用户服务.md",
-    "RE-1注册中心.md",
-    "Pasted image 20220922140434.png",
-    "日期处理.md"
+    "Redis笔记.md"
   ]
 }

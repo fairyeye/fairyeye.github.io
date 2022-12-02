@@ -110,6 +110,8 @@ mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
 
 - XShell：好看 好用
 
+-  tabby-terminal：https://github.com/Eugeny/tabby/releases/tag/v1.0.164
+
 - Shadowsocks：小飞机
 
 - Windows Termial:Windows终端
