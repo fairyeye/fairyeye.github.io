@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Ubuntu.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -194,12 +194,12 @@
   },
   "active": "3a56142fd0f8905d",
   "lastOpenFiles": [
-    "Nacos.md",
+    "使用教程.md",
     "Ubuntu.md",
+    "Nacos.md",
     "WHEN YOU HAVE A NEW PC.md",
     "MySQL.md",
     "MySQL数据删除恢复.md",
-    "使用教程.md",
     "项目实战.md",
     "StringToInteger.md",
     "Springboot返回html.md",

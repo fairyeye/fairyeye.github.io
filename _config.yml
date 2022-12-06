@@ -77,7 +77,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+updated_option: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -96,13 +96,10 @@ ignore:
 theme: shoka
 
 # Search
-# algolia:
-#   applicationID: 'O1I7RNIL72'
-#   indexName: 'hexo_next'
-#   chunkSize: 5000
 algolia:
   appId: "2Y4K75XO19"
-  apiKey: "879796413050f78f94862d68137b70b7"
+  # applicationID: "2Y4K75XO19"
+  apiKey: "310fcf609e432a918fbf38ec8064da7d"
   adminApiKey: "31703aba407c33f84388c0058162e572"
   chunkSize: 5000
   indexName: "fairyeye"
