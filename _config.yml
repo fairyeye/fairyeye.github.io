@@ -98,7 +98,7 @@ theme: shoka
 # Search
 algolia:
   appId: "2Y4K75XO19"
-  # applicationID: "2Y4K75XO19"
+  # 使用only-search apikey
   apiKey: "310fcf609e432a918fbf38ec8064da7d"
   adminApiKey: "31703aba407c33f84388c0058162e572"
   chunkSize: 5000
@@ -112,20 +112,12 @@ algolia:
     - photos
     - tags
 
-# search:
-#   path: search.xml
-#   field: post
-#   format: html
-#   limit: 10000
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
   repo: 'git@github.com:fairyeye/fairyeye.github.io.git'
   branch: master
-
-
 
 # opitions for renderer
 markdown:

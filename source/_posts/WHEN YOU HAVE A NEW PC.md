@@ -1,3 +1,8 @@
+---
+title: WHEN YOU HAVE A NEW PC
+date: 2020年9月17日18:59:55
+categories: "杂谈"
+---
 ###  <center> WHEN YOU HAVE A NEW PC</center>
 
 #### Java环境配置
@@ -64,10 +69,6 @@ git push -u origin master
 
 安装`https://www.runoob.com/mysql/mysql-install.html`
 
-
-
-
-
 修改初始密码
 
 MySQL版本5.7.6版本以前用户可以使用如下命令：
@@ -79,9 +80,6 @@ MySQL版本5.7.6版本开始的用户可以使用如下命令：
 ```
 mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
 ```
-
-
-
 
 
 登录报错 `https://www.cnblogs.com/lifan1998/p/9177731.html`

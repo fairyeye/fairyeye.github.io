@@ -1,7 +1,7 @@
 alternate: Li
 # statics: //cdn.jsdelivr.net/gh/fairyeye/fairyeye.github.io@latest/
 
-darkmode: true
+darkmode: false
 
 loader:
   start: false # 当初次打开页面时，显示加载动画
@@ -60,13 +60,13 @@ menu:
   # links: /links/ || magic
 
 social:
-  github: https://github.com/yourname || github || "#191717"
+  github: https://github.com/fairyeye || github || "#00aff0"
   #google: https://plus.google.com/yourname || google
-  twitter: https://twitter.com/yourname || twitter || "#00aff0"
-  zhihu: https://www.zhihu.com/people/yourname || zhihu || "#1e88e5"
-  music: https://music.163.com/#/user/home?id=yourid || cloud-music || "#e60026"
-  weibo: https://weibo.com/yourname || weibo || "#ea716e"
-  about: https://about.me/yourname || address-card || "#3b5998"
+  # twitter: https://twitter.com/yourname || twitter || "#00aff0"
+  # zhihu: https://www.zhihu.com/people/yourname || zhihu || "#1e88e5"
+  # music: https://music.163.com/#/user/home?id=yourid || cloud-music || "#e60026"
+  # weibo: https://weibo.com/yourname || weibo || "#ea716e"
+  # about: https://about.me/yourname || address-card || "#3b5998"
   #email: mailto:yourname@mail.com || envelope || "#55acd5"
   #facebook: https://www.facebook.com/yourname || facebook
   #stackoverflow: https://stackoverflow.com/yourname || stack-overflow
@@ -81,3 +81,43 @@ sidebar:
   #position: right
   # Replace the default avatar image and set the url here.
   avatar: avatar.jpg
+
+valine:
+  appId: mySIdbVRfxngOYSXcLLTQsOY-gzGzoHsz
+  appKey: VAtlaFTMr0NvApYuBcbo9l3C
+  placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
+  avatar: mp # Gravatar style : mp, identicon, monsterid, wavatar, robohash, retro
+  pageSize: 10 # Pagination size
+  lang: zh-CN
+  visitor: true # 文章访问量统计
+  NoRecordIP: false # 不记录 IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  powerMode: false # 默认打开评论框输入特效
+  tagMeta:
+    visitor: 新朋友
+    master: 主人
+    friend: 小伙伴
+    investor: 
+  tagColor:
+    master: "var(--color-orange)"
+    friend: "var(--color-aqua)"
+    investor: "var(--color-pink)"
+  tagMember:
+    master:
+      # - hash of master@email.com
+      # - hash of master2@email.com
+    friend:
+      # - hash of friend@email.com
+      # - hash of friend2@email.com
+    investor:
+      # - hash of investor1@email.com
+
+
+# 页尾全站统计
+footer:
+  since: 2019
+  count: true
+
+# 文章界面统计
+post:
+  count: true

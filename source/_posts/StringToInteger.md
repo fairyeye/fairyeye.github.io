@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>页面标题</title>
-		<style>
-		body {        background-image: url("../640.png"); } 
-		</style>
-	</head>
-<body> 
+---
+title: StringToInteger
+date: 2020年9月17日18:59:55
+categories: "java"
+---
 
 # String 转 Integer
 

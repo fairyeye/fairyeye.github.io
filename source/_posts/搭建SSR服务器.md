@@ -1,3 +1,10 @@
+---
+title: 搭建SSR服务器
+date: 2022-12-7 11:00:24
+tags: others
+categories: 杂项
+---
+
 ```
 apt install git 
 报错：Temporary failure resolving 'archive.ubuntu.com

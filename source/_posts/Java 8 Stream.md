@@ -4,21 +4,11 @@ date: 2020年5月19日
 tags: "Java"
 ---
 
-
-
-
-
-
-
-
-
 通过`workOrederNum`字段排序
 
 ```Java
 List<ProduceOrderDTO> collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());
 ```
-
-
 
 查出`InstructionPoDTO`中`InstructionDocNum`作为list
 
@@ -26,8 +16,6 @@ List<ProduceOrderDTO> collect = list.stream().sorted(Comparator.comparing(Produc
 // 筛选出不重复的 instructionDocNum
 List<String> instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());
 ```
-
-
 
 筛选所有`instructionDocNum = 123`的对象 
 
@@ -37,14 +25,11 @@ List<InstructionPoDTO> instructionPoDTOS = read.stream().filter(instructionPoDTO
 ```
 
 
-
 查询出第一个
 
 ```java
 String instructionDocId = instructionDocs.stream().findFirst().get();
 ```
-
-
 
 设置`typeCode`为key，`list`的对象为`value`
 
@@ -52,17 +37,11 @@ String instructionDocId = instructionDocs.stream().findFirst().get();
 Map<String, MtGenType> typesMap = types.stream().collect(Collectors.toMap(t -> t.getTypeCode(), t -> t));
 ```
 
-
-
-
-
 // 通过字段去重
 
 ```
 instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-> new TreeSet<>(Comparator.comparing(o -> o.getMaterial()+";"+o.getPlant()+";"+o.getStorage()+";"+o.getBatch()+";"+o.getSpecialStock()))), ArrayList::new));
 ```
-
-
 
 GROUP BY
 
@@ -95,7 +74,6 @@ Map<String, List<WmsIqcRecord>> map = records.stream().collect(Collectors.groupi
                     }
                 }));
 ```
-
 
 
 ```

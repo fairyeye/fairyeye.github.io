@@ -1,7 +1,8 @@
 ---
 title: Redis笔记
 date: 2021-12-10 10:36:33
-tags: "dairy"
+tags: "redis"
+categories: "中间件"
 ---
 
 ![image-20211210103722039](https://s2.loli.net/2021/12/10/Flr6LcyMp7aXzZG.png)
