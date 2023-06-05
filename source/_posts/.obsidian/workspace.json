@@ -4,22 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "791c9c53a57e5873",
+        "id": "4afecdbc78954801",
         "type": "tabs",
         "children": [
           {
-            "id": "4e1fd5568a52fd02",
+            "id": "8c72176ea2cfc2ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "MySQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b3c05bac792d6773",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java 8 Stream.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc13ad83ddde7b31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "使用教程.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "813d410fa345e1b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MySQL.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -85,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "MySQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "MySQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "MySQL.md"
               }
             }
           }
@@ -145,17 +182,44 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4e1fd5568a52fd02",
+  "left-ribbon": {
+    "hiddenItems": {
+      "auto_upload_pic:icon": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "813d410fa345e1b4",
   "lastOpenFiles": [
-    "StringToInteger.md",
-    "Springboot返回html.md",
-    "时间戳转换日期问题.md",
+    "Jmeter简单使用.md",
+    "Java 8 Stream.md",
+    "IDEA.md",
+    "Go笔记.md",
+    "GC回收算法.md",
+    "FileUtils.md",
+    "Delete & Truncate.md",
+    "算法.md",
+    "数据库时间存储.md",
+    "事务问题.md",
+    "使用教程.md",
+    "设计模式笔记.md",
+    "分页查询.md",
+    "反射获取父类字段.md",
+    "单例模式.md",
+    "搭建SSR服务器.md",
+    "阿里巴巴手册.md",
+    "Mac 数据库忘记密码.md",
     "Ubuntu.md",
-    "20.md",
-    "16.md",
-    "15.md",
-    "14.md",
+    "Untitled.md",
+    "StringToInteger.md",
+    "Nacos.md",
     "13.md",
-    "Work.md"
+    "14.md",
+    "15.md",
+    "16.md"
   ]
 }

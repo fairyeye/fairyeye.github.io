@@ -80,3 +80,18 @@ root@VM-4-10-ubuntu:/var/lib/mysql# cat 000018.sql | sed -n '/###/p' | sed 's/##
 ![](https://s3.uuu.ovh/imgs/2022/11/28/070cfb64cc8045dc.png)
 
 最后将数据导入数据库即可。
+
+
+### Group
+
+```mysql
+-- 修改 group_concat 长度限制
+SET GLOBAL group_concat_max_len=102400;
+SET SESSION group_concat_max_len=102400;
+```
+
+
+### Mapper空指针
+
+count sql resultType为对象，导致报错
+
