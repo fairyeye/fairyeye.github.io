@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>人生当苦, 良人当归</title>
+  
+  
+  <link href="https://fairyeye.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://fairyeye.github.io/"/>
+  <updated>2023-06-05T02:15:15.545Z</updated>
+  <id>https://fairyeye.github.io/</id>
+  
+  <author>
+    <name>有李说不清</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Obsidian</title>
+    <link href="https://fairyeye.github.io/2023/06/05/Obsidian/"/>
+    <id>https://fairyeye.github.io/2023/06/05/Obsidian/</id>
+    <published>2023-06-05T01:58:52.308Z</published>
+    <updated>2023-06-05T02:15:15.545Z</updated>
+    
+    <content type="html"><![CDATA[<p>把<code>main.js</code> 复制到<code>.obsidian/plugin/auto_upload_pic/</code>中。</p><p><img src="https://s3.bmp.ovh/imgs/2023/06/05/fcc28856b4474ac1.png"></p>]]></content>
+    
+    
+    <summary type="html">想不起来的事</summary>
+    
+    
+    
+    <category term="软件使用" scheme="https://fairyeye.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="软件" scheme="https://fairyeye.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Zero</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</id>
+    <published>2023-06-05T01:28:10.959Z</published>
+    <updated>2023-06-05T01:28:10.959Z</updated>
+    
+    <content type="html"><![CDATA[<p>启动类</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class DoaApplication &#123;</span><br><span class="line"></span><br><span class="line">@Resource</span><br><span class="line">private JdbcTemplate jdbcTemplate;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">SpringApplication.run(DoaApplication.class, args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@GetMapping(&quot;/test&quot;)</span><br><span class="line">public List&lt;Map&lt;String, Object&gt;&gt; test() &#123;</span><br><span class="line">return jdbcTemplate.queryForList(&quot;select * from user&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>配置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:mysql://localhost:3306/doa?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;rewriteBatchedStatements=true&amp;serverTimezone=UTC</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;-- pom --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><h1 id="Java-Zero"><a href="#Java-Zero" class="headerlink" title="Java Zero"></a>Java Zero</h1><h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;spring-boot.version&gt;2.1.18.RELEASE&lt;/spring-boot.version&gt;</span><br></pre></td></tr></table></figure><h2 id="开源组件"><a href="#开源组件" class="headerlink" title="开源组件"></a>开源组件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上传文件</span><br><span class="line">spring-file-storage</span><br><span class="line">https://spring-file-storage.xuyanwu.cn/#/</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;启动类&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="dairy" scheme="https://fairyeye.github.io/tags/dairy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/</id>
+    <published>2023-06-05T01:28:10.959Z</published>
+    <updated>2023-06-05T01:28:10.959Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2020/07/16/ZXJmPqvfo2W6U9p.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/16/ZXJmPqvfo2W6U9p.png&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%9C%AA%E6%95%B4%E5%90%88/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%9C%AA%E6%95%B4%E5%90%88/</id>
+    <published>2023-06-05T01:28:10.958Z</published>
+    <updated>2023-06-05T01:28:10.958Z</updated>
+    
+    <content type="html"><![CDATA[<p># 先将当前仓库的文件的暂存区中剔除 git rm -r –cached . # 再添加所有的文件到暂存区，这时.gitignore文件就会生效了 git add .</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;# 先将当前仓库的文件的暂存区中剔除 git rm -r –cached . # 再添加所有的文件到暂存区，这时.gitignore文件就会生效了 git add .&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL查询</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%A8%A1%E6%9D%BF/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%A8%A1%E6%9D%BF/</id>
+    <published>2023-06-05T01:28:10.958Z</published>
+    <updated>2023-06-05T01:28:10.958Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-首先要保证本地的MySQL服务支持FEDERATED引擎。"><a href="#1-首先要保证本地的MySQL服务支持FEDERATED引擎。" class="headerlink" title="1. 首先要保证本地的MySQL服务支持FEDERATED引擎。"></a>1. 首先要保证本地的MySQL服务支持FEDERATED引擎。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：SHOW ENGINES;</span><br><span class="line">如下 FEDERATED 行的Support为YES则表示开启了FEDERATED。</span><br><span class="line">如果为 NO 则表示未开启。</span><br><span class="line"></span><br><span class="line">如果 FEDERATED 没有开启的话 要启用。</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png"></p><h4 id="2-启用-FEDERATED"><a href="#2-启用-FEDERATED" class="headerlink" title="2.启用 FEDERATED"></a>2.启用 FEDERATED</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在MySQL的配置文件</span><br><span class="line">安装目录下的my.ini或my.cnf </span><br><span class="line">加上 一行  `FEDERATED`</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/10/22/HhLBosuOdeNDbgQ.png"></p><h4 id="3-建表"><a href="#3-建表" class="headerlink" title="3.建表"></a>3.建表</h4><p><strong>建表一般应的是InnoDB引擎，这里需要修改一下 改为</strong> <code>ENGINE=FEDERATED</code></p><p>从原表导出表结构SQL，然后修改 <code>ENGINE = InnoDB</code>-&gt;<code>ENGINE=FEDERATED CONNECTION=&#39;mysql://用户名:密码@IP:PORT/库名/表名&#39;</code></p><p>然后打开这张表，可以看到远程表里的数据已经同步到了这张表。</p>]]></content>
+    
+    
+    <summary type="html">通过FEDERATED同步在不同MySQL服务的两张表</summary>
+    
+    
+    
+    <category term="MySQL" scheme="https://fairyeye.github.io/categories/MySQL/"/>
+    
+    
+    <category term="utils" scheme="https://fairyeye.github.io/tags/utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/</id>
+    <published>2023-06-05T01:28:10.958Z</published>
+    <updated>2023-06-05T01:28:10.958Z</updated>
+    
+    
+    
+    
+    
+    <category term="utils" scheme="https://fairyeye.github.io/tags/utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</id>
+    <published>2023-06-05T01:28:10.958Z</published>
+    <updated>2023-06-05T01:28:10.959Z</updated>
+    
+    <content type="html"><![CDATA[<p>设计模式遵循六⼤原则；单⼀职责( ⼀个类和⽅法只做⼀件事 )、⾥⽒替换( 多态，⼦类可扩展⽗类 )、依赖 倒置( 细节依赖抽象，下层依赖上层 )、接⼝隔离( 建⽴单⼀接⼝ )、迪⽶特原则( 最少知道，降低耦合 )、开闭 原则( 抽象架构，扩展实现 ）。</p><h2 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="1. 工厂模式"></a>1. 工厂模式</h2><p>举个例子：</p><p>吃：南方人爱吃饭，北方人爱吃面</p><p>定义一个接口：吃</p><p>定义两个实现类继承吃：饭、面</p><p>定义一个工厂：饭店</p><p>饭店通过判断是南方人还是北方人返回不同的实现类，从而让不同的人吃到了不同的饭</p><h2 id="2-抽象工厂模式"><a href="#2-抽象工厂模式" class="headerlink" title="2.抽象工厂模式"></a>2.抽象工厂模式</h2><h2 id="3-建造者模式"><a href="#3-建造者模式" class="headerlink" title="3.建造者模式"></a>3.建造者模式</h2><p>实体类的<code>setXxx()</code>方法，一般是返回<code>void</code>，可以改造为：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ObjectX <span class="title function_">setXxx</span><span class="params">(String xx)</span> &#123;</span><br><span class="line"><span class="built_in">this</span>.xxx = xx</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="4-原型模式"><a href="#4-原型模式" class="headerlink" title="4. 原型模式"></a>4. 原型模式</h2><p>考卷题目和答案乱序。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;设计模式遵循六⼤原则；单⼀职责( ⼀个类和⽅法只做⼀件事 )、⾥⽒替换( 多态，⼦类可扩展⽗类 )、依赖 倒置( 细节依赖抽象，下层依赖上层 )、接⼝隔离( 建⽴单⼀接⼝ )、迪⽶特原则( 最少知道，降低耦合 )、开闭 原则( 抽象架构，扩展实现 ）。&lt;/p&gt;
+&lt;h2 id</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>淘汰策略</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</id>
+    <published>2023-06-05T01:28:10.958Z</published>
+    <updated>2023-06-05T01:28:10.958Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">常见的策略有三种：</span><br><span class="line"></span><br><span class="line">- FIFO：先进先出策略 </span><br><span class="line">- LFU：最少使用策略</span><br><span class="line">- LRU：最近最少使用策略</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    
+    <category term="数据结构" scheme="https://fairyeye.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2023-06-05T01:28:10.957Z</published>
+    <updated>2023-06-05T01:28:10.957Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">apt install git </span><br><span class="line">报错：Temporary failure resolving &#x27;archive.ubuntu.com</span><br><span class="line">具体如下：</span><br><span class="line"></span><br><span class="line">Ign:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">Ign:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 git amd64 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17-1.2_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git-man_2.7.4-0ubuntu1_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1_amd64.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line">root@132157:~# apt-get update</span><br><span class="line">Err:1 http://security.ubuntu.com/ubuntu xenial-security InRelease</span><br><span class="line">  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-updates/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-backports/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/xenial-security/InRelease  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><code>原因是DNS未配置</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/resolv.conf</span><br><span class="line"></span><br><span class="line">+ nameserver 202.96.134.133</span><br><span class="line">+ nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/</id>
+    <published>2023-06-05T01:28:10.957Z</published>
+    <updated>2023-06-05T01:28:10.957Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Tastill/article/details/88060539">https://blog.csdn.net/Tastill/article/details/88060539</a></p><p>pdf   <a href="https://www.cnblogs.com/duoduo-727/p/9367175.html">https://www.cnblogs.com/duoduo-727/p/9367175.html</a></p><p>CASE<br>    mmla.ATTR_VALUE<br>    WHEN ‘Y’ THEN<br>    ‘BONDED’ ELSE ‘’<br>END </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">desc information_schema.innodb_locks;</span><br><span class="line">SHOW PROCESSLIST;</span><br><span class="line">show OPEN TABLES where In_use &gt; 0;</span><br><span class="line">select * from information_schema.innodb_trx;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Tastill/article/details/88060539&quot;&gt;https://blog.csdn.net/Tastill/article/details/88060539&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;pdf   </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java8 LocalDate</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</id>
+    <published>2023-06-05T01:28:10.957Z</published>
+    <updated>2023-06-05T01:28:10.957Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">LocalDate localDate = LocalDate.now();</span><br><span class="line">      LocalTime localTime = LocalTime.now();</span><br><span class="line">      LocalDateTime localDateTime = LocalDateTime.now();</span><br><span class="line"></span><br><span class="line">      System.out.println(localDate); // 2020-10-09</span><br><span class="line">      System.out.println(localTime); // 18:29:47.712227100</span><br><span class="line">      System.out.println(localDateTime); // 2020-10-09T18:29:47.712227100</span><br><span class="line"></span><br><span class="line">      // 去掉毫秒</span><br><span class="line">      System.out.println(localTime.withNano(0)); // 18:29:47</span><br><span class="line">      System.out.println(localDateTime.withNano(0)); // 2020-10-09T18:29:47</span><br><span class="line">      System.out.println(localTime.truncatedTo(ChronoUnit.SECONDS)); // 18:29:47</span><br><span class="line">      System.out.println(localDateTime.truncatedTo(ChronoUnit.SECONDS)); // 2020-10-09T18:29:47</span><br><span class="line"></span><br><span class="line">      // 获取加减一天的日期</span><br><span class="line">      System.out.println(localDateTime.plusDays(1L)); // 2020-10-10T18:33:47.376192400</span><br><span class="line">      System.out.println(localDateTime.plusDays(-1L)); // 2020-10-08T18:33:47.376192400</span><br></pre></td></tr></table></figure><p>参考API</p>]]></content>
+    
+    
+    <summary type="html">localDate/localTime/localDateTime</summary>
+    
+    
+    
+    
+    <category term="utils" scheme="https://fairyeye.github.io/tags/utils/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2023-06-05T01:28:10.957Z</published>
+    <updated>2023-06-05T01:28:10.957Z</updated>
+    
+    <content type="html"><![CDATA[<p>0001-0099&#x2F;字符串有序</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat f=new DecimalFormat(&quot;00000&quot;);</span><br><span class="line">for(int i=1;i&lt;10000;i++)&#123;</span><br><span class="line">System.out.println(f.format(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>ER-00001 下一个为ER-00002一直到ER-99999</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String m = &quot;ER-&quot;;</span><br><span class="line">for (int i = 0; i &lt; 2; i++) &#123;</span><br><span class="line">    String format = String.format(&quot;%05d&quot;, i);   </span><br><span class="line">    System.out.println(m+format);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://user-gold-cdn.xitu.io/2020/6/16/172baf15ddf4c269?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;0001-0099&amp;#x2F;字符串有序&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span clas</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<hr><hr><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用 yarn 创建 Umi 脚手架，执行以下命令</span><br><span class="line">$ mkdir li &amp;&amp; cd li</span><br><span class="line">$ yarn create umi</span><br><span class="line">$ yarn</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">failed (13: Permission denied)</span><br><span class="line"></span><br><span class="line"># vim nginx.conf</span><br><span class="line"></span><br><span class="line"> - user www-data;</span><br><span class="line"> + user root;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>查询优化</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<p>MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 反例（耗时129.570s）</span><br><span class="line">select * from task_result LIMIT 20000000, 10;</span><br><span class="line"></span><br><span class="line"># 正例（耗时5.114s）</span><br><span class="line">SELECT a.* FROM task_result a, (select id from task_result LIMIT 20000000, 10) b where a.id = b.id;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，id为主键，偏移量达到2000万</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="获取一条数据时的Limit-1"><a href="#获取一条数据时的Limit-1" class="headerlink" title="获取一条数据时的Limit 1"></a>获取一条数据时的Limit 1</h3><p>在很多情况下我们已知数据仅存在一条，此时我们应该告知数据库只用查一条，否则将会转化为全表扫描</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 反例（耗时2424.612s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27;;</span><br><span class="line"></span><br><span class="line"># 正例（耗时1.036s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27; LIMIT 1;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，where条件非索引字段，数据所在行为第19486条记录</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 反例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;B&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;C&#x27;,24)</span><br><span class="line"></span><br><span class="line"># 正例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24),(&#x27;B&#x27;,24),(&#x27;C&#x27;,24);</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">比较常规，就不多做说明了</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><a href="https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension">https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行。&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="mysql" scheme="https://fairyeye.github.io/categories/mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://fairyeye.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CAS</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%20-%20%E5%89%AF%E6%9C%AC/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>https://www.processon.com/view/link/5f6891517d9c087da1ba5bbe</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;code&gt;https://www.processon.com/view/link/5f6891517d9c087da1ba5bbe&lt;/code&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://fairyeye.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="demo" scheme="https://fairyeye.github.io/tags/demo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-最简单的单例模式："><a href="#1-最简单的单例模式：" class="headerlink" title="1. 最简单的单例模式："></a>1. 最简单的单例模式：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package com.example.demo.JUC.thread;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author huapeng.zhang</span><br><span class="line"> * @version 1.0</span><br><span class="line"> * @date 2020/9/17 18:28</span><br><span class="line"> */</span><br><span class="line">public class SingletomDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static SingletomDemo singletomDemo = null;</span><br><span class="line">    </span><br><span class="line">    private SingletomDemo() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;\t 我是构造方法SingletomDemo()！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static SingletomDemo getInstance() &#123;</span><br><span class="line">        if (singletomDemo == null) &#123;</span><br><span class="line">        singletomDemo = new SingletomDemo();</span><br><span class="line">        &#125;</span><br><span class="line">        return singletomDemo;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 单线程</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>在单线程的情况下，打印结果如下：</p><p><img src="https://i.loli.net/2020/09/17/J9rb5oynQclfD4d.png" alt="image-20200917191550283"></p><p>可以看到，虽然我们一共调用了六次<code>getInstance()</code>， 但是只打印了一次构造方法输出内容，也就是只调用了一个构造函数，所获得的对象地址自然是一样的。</p><h4 id="2-多线程下的单例模式"><a href="#2-多线程下的单例模式" class="headerlink" title="2. 多线程下的单例模式"></a>2. 多线程下的单例模式</h4><p>我们对<code>main()</code>方法做一下改造，改造后的代码如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    // 改为多线程后 可能多次调用构造函数</span><br><span class="line">    for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        new Thread(() -&gt; &#123;</span><br><span class="line">            SingletomDemo.getInstance();</span><br><span class="line">        &#125;, String.valueOf(i)).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>打印结果为：</p><p><img src="https://i.loli.net/2020/09/17/Q7RWYjayOgoXfH1.png" alt="image-20200917192220270"></p><p>多次执行下可以看到打印的次数是不同的。</p><p>可以对<code>getInstance()</code>方法添加<code>synchronized</code>加锁，保证只生成一个实例。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private static synchronized SingletomDemo getInstance() &#123;</span><br><span class="line">    if (singletomDemo == null) &#123;</span><br><span class="line">    singletomDemo = new SingletomDemo();</span><br><span class="line">    &#125;</span><br><span class="line">    return singletomDemo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>再次执行程序发现只打印了一次构造方法输出函数，还有另外一种方法就是<code>DCL：double check locks双端检测模式</code>模式也可以达到同样的目的。</p><h4 id="3-DCL-单例模式"><a href="#3-DCL-单例模式" class="headerlink" title="3.DCL + 单例模式"></a>3.DCL + 单例模式</h4><p>我们再次对<code>getInstance()</code>方法进行改造，代码如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// DCL模式(double check locks双端检测模式)</span><br><span class="line">private static SingletomDemo getInstance() &#123;</span><br><span class="line">    if (singletomDemo == null) &#123;</span><br><span class="line">        synchronized (SingletomDemo.class) &#123;</span><br><span class="line">            if (singletomDemo == null) &#123;</span><br><span class="line">                singletomDemo = new SingletomDemo();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return singletomDemo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当我们的单例模式写到这种程度的时候，基本可以应对99%的情况，但是由于<code>指令排序</code>的存在，还是有可能会出现问题。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memory = allocate(); //1.分配对象内存空间</span><br><span class="line">instance(memory);    //2.初始化对象</span><br><span class="line">instance = memory;   //3.设置instance指向刚分配的内存地址，此时instance!=null</span><br></pre></td></tr></table></figure><p>步骤2、3不存在数据依赖，所以由于指令重排的关系，可能会出现：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memory = allocate(); //1.分配对象内存空间</span><br><span class="line">instance = memory;   //3.设置instance指向刚分配的内存地址，此时instance!=null</span><br><span class="line">instance(memory);    //2.初始化对象</span><br></pre></td></tr></table></figure><h4 id="4-Volatile-单例模式"><a href="#4-Volatile-单例模式" class="headerlink" title="4.Volatile + 单例模式"></a>4.Volatile + 单例模式</h4><p>我们在声明 <code>singletomDemo</code>时，加上<code>Volatile</code>关键字修饰，就可以达到完美的效果。</p><p>最终代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">package com.example.demo.JUC.thread;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author huapeng.zhang</span><br><span class="line"> * @version 1.0</span><br><span class="line"> * @date 2020/9/17 18:28</span><br><span class="line"> */</span><br><span class="line">public class SingletomDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static volatile SingletomDemo singletomDemo = null;</span><br><span class="line"></span><br><span class="line">    private SingletomDemo() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;\t 我是构造方法SingletomDemo()！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // DCL模式(double check locks双端检测模式)</span><br><span class="line">    private static SingletomDemo getInstance() &#123;</span><br><span class="line">        if (singletomDemo == null) &#123;</span><br><span class="line">            synchronized (SingletomDemo.class) &#123;</span><br><span class="line">                if (singletomDemo == null) &#123;</span><br><span class="line">                    singletomDemo = new SingletomDemo();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singletomDemo;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 单线程</span><br><span class="line">//        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">//        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">//        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line"></span><br><span class="line">//         改为多线程后 可能多次调用构造函数</span><br><span class="line">//         可以在 getInstance上加SYNC解决问题</span><br><span class="line">        for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">            new Thread(() -&gt; &#123;</span><br><span class="line">                SingletomDemo.getInstance();</span><br><span class="line">            &#125;, String.valueOf(i)).start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">通过Volatile实现单例模式</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://fairyeye.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="demo" scheme="https://fairyeye.github.io/tags/demo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>反射</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E7%88%B6%E7%B1%BB%E5%AD%97%E6%AE%B5/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E7%88%B6%E7%B1%BB%E5%AD%97%E6%AE%B5/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; superclass = itfBaseBO.getClass();</span><br><span class="line"><span class="keyword">while</span> (!superclass.getName().equals(ExpandDomain.class.getName())) &#123;</span><br><span class="line">    superclass = superclass.getSuperclass();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">获取指定父类的字段</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://fairyeye.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="demo" scheme="https://fairyeye.github.io/tags/demo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-查询数据库是否启用-FEDERATED引擎"><a href="#1-查询数据库是否启用-FEDERATED引擎" class="headerlink" title="1.查询数据库是否启用 FEDERATED引擎"></a>1.查询数据库是否启用 <strong>FEDERATED</strong>引擎</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW ENGINES;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/10/26/NmkbpSugEsld1rJ.png"></p><p>如果<code>Support</code> 为<code>NO</code>需要改为<code>YES</code> ，只需要修改自己的数据库，目标数据库无需修改。</p><h4 id="2-建立数据库"><a href="#2-建立数据库" class="headerlink" title="2.建立数据库"></a>2.建立数据库</h4><p>自建表引擎一般为<code>InnoDB</code>，建立远程数据表示需要修改为<code>FEDERATED</code></p><p>建立与目标 表一样的表结构  替换引擎为<code>FEDERATED</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENGINE=FEDERATED CONNECTION=&#x27;mysql://#&#123;userName&#125;:#&#123;passwd&#125;@#&#123;IP&#125;:#&#123;PORT&#125;/#&#123;数据库&#125;/#&#123;表&#125;&#x27;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;1-查询数据库是否启用-FEDERATED引擎&quot;&gt;&lt;a href=&quot;#1-查询数据库是否启用-FEDERATED引擎&quot; class=&quot;headerlink&quot; title=&quot;1.查询数据库是否启用 FEDERATED引擎&quot;&gt;&lt;/a&gt;1.查询数据库是否启用 &lt;stro</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E6%8C%96%E5%9D%91/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E6%8C%96%E5%9D%91/</id>
+    <published>2023-06-05T01:28:10.956Z</published>
+    <updated>2023-06-05T01:28:10.956Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3><p><img src="https://i.loli.net/2020/06/26/9dsgJ8kPlNnyHFV.png" alt="image-20200626141113470"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;interface&quot;&gt;&lt;a href=&quot;#interface&quot; class=&quot;headerlink&quot; title=&quot;@interface&quot;&gt;&lt;/a&gt;@interface&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/26/</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Transactional注解</title>
+    <link href="https://fairyeye.github.io/2023/06/05/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/"/>
+    <id>https://fairyeye.github.io/2023/06/05/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/</id>
+    <published>2023-06-05T01:28:10.955Z</published>
+    <updated>2023-06-05T01:28:10.955Z</updated>
+    
+    <content type="html"><![CDATA[<p>方法A中调用B后再调用C,三个方法中均有插入数据后再查询数据</p><p>B方法的注解：@Transactional(propagation&#x3D;Propagation.REQUIRES_NEW) –不管是否存在事务,都创建一个新的事务,原来的挂起,新的执行完毕,继续执行老的事务</p><p>C方法的注解：@Transactional(propagation&#x3D;Propagation.REQUIRED) –如果有事务,那么加入事务,没有的话新建一个</p><p>1、当方法B或者C报错时，A、B、C方法都回滚</p><p>2、当方法A、B、C异常被捕获时，A、B、C事务不回滚（a、b、c均入库）</p><p>3、当方法BC执行后，方法A报错时，A、C事务回滚，B事务不回滚（b数据入库）</p><p>A方法向表中添加数据a，在查询该表能得到数据a</p><p>B方法向表中添加数据b，再查询该表能得到数据b</p><p>C方法向表中添加数据c，再查询该表能得到数据a，b，c</p><p>带有注解@Transactional(propagation&#x3D;Propagation.REQUIRES_NEW)的方法走完之后，数据就会被提交入库</p><p>另外需要注意方法内部调用@Transactional(propagation&#x3D;Propagation.REQUIRES_NEW)注解不生效，比如A和B都在同一个方法中，A调用B，B方法是此注解，则不生效。同样，AOP拦截也拦截不到B</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public enum Propagation &#123;</span><br><span class="line">    REQUIRED(0),</span><br><span class="line">    SUPPORTS(1),</span><br><span class="line">    MANDATORY(2),</span><br><span class="line">    REQUIRES_NEW(3),</span><br><span class="line">    NOT_SUPPORTED(4),</span><br><span class="line">    NEVER(5),</span><br><span class="line">    NESTED(6);</span><br><span class="line"></span><br><span class="line">    private final int value;</span><br><span class="line"></span><br><span class="line">    private Propagation(int value) &#123;</span><br><span class="line">        this.value = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int value() &#123;</span><br><span class="line">        return this.value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>七种事物传播类型 默认为：<code>REQUIRED</code></p>]]></content>
+    
+    
+    <summary type="html">事务回滚</summary>
+    
+    
+    
+    <category term="数据库" scheme="https://fairyeye.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+</feed>

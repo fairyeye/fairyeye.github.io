@@ -1,0 +1,1639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>GIT代码无法合并+本地构建成功服务器构建失败</title>
+    <url>/2020/04/13/13/</url>
+    <content><![CDATA[<h4 id="1-GIT相关"><a href="#1-GIT相关" class="headerlink" title="1.GIT相关"></a>1.GIT相关</h4><h5 id="场景："><a href="#场景：" class="headerlink" title="场景："></a>场景：</h5><p>​		GIT版本出了点问题，无法正常合并代码</p>
+<h5 id="具体描述："><a href="#具体描述：" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​		由于误操作，导致我的本地分支和dev分支不同，在GIT上对比的时候显示无差别，但是实际上最近一次的提交是没有合并的。</p>
+<p>​		无奈之下，我选择回滚代码。</p>
+<h5 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h5><p><strong>第一种方法：<code>注意：这种方法会把之后的代码完全覆盖掉，不建议使用，除非这个分支只有你自己操作，或者你回滚的版本之后没有别的人提交</code></strong></p>
+<ol>
+<li><p>首先要找到你要回滚的版本号。</p>
+<p>​	在idea中操作：右键项目 -&gt; Git -&gt; Show History -&gt; 右键提交的版本 -&gt; Copy Revision Number。</p>
+<p>​	在GIT中操作：找到提交的历史，SHA 值，即为版本号。</p>
+</li>
+<li><p>Git Bush 命令行&#x2F;idea TerMinal 命令行</p>
+<p>​	<code>git reset --hard 版本号</code></p>
+</li>
+</ol>
+<p><strong>第二种方法：</strong></p>
+<ol>
+<li>找到版本号，同上。</li>
+<li>右键项目 -&gt; Git -&gt; Repository -&gt; Reset HEAD</li>
+<li>在 To Commit 中输入版本号</li>
+</ol>
+<p><img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200414092630073.png" alt="回滚代码"></p>
+<h5 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h5><p>​		<strong>记得一定要提交代码，即使看起来没有要 push 的东西，否则 git pull 之后等于没回滚。</strong></p>
+<h4 id="2-构建相关"><a href="#2-构建相关" class="headerlink" title="2.构建相关"></a>2.构建相关</h4><h5 id="场景：-1"><a href="#场景：-1" class="headerlink" title="场景："></a>场景：</h5><p>​		回滚代码之后，本地可以成功构建，但服务器端无法正常构建。</p>
+<h5 id="具体描述：-1"><a href="#具体描述：-1" class="headerlink" title="具体描述："></a>具体描述：</h5><p>​		服务器端构建一直失败，好像是拉取到了错误版本的代码。</p>
+<h5 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h5><p>​		暴脾气的我本来打算把项目删了重新拉一个下来，后来忍住了，在服务器端回滚了一下代码，然后手动构建了一下，居然成功了，完结。</p>
+<h5 id="最后：-1"><a href="#最后：-1" class="headerlink" title="最后："></a>最后：</h5><p>​		虽然没什么有用的东西，不过思路还是有的。</p>
+<p>​		首先你要确认本地构建的代码是否和服务器完全相同、服务器构建的时候是否pull了最新的代码…</p>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内部类问题</title>
+    <url>/2020/04/14/14/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">错误描述信息：</span><br><span class="line">org.fairy.eye.domin.entity.User is not an enclosing class</span><br></pre></td></tr></table></figure>
+
+<p>​		在 new 一个内部类的对象时，idea 会生成如下的代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Info 是User的内部类</span><br><span class="line">User.Info info = new User.Info();</span><br></pre></td></tr></table></figure>
+
+<p>​		然后会提示报错 <code>org.fairy.eye.domin.entity.User is not an enclosing class</code></p>
+<p>​		如果内部类没有用 <code>static</code> 修饰的话，是不能这样 new 的。</p>
+<p>​		需要有外部类实例对象来支持。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">User user = new User();</span><br><span class="line">User.Info info = new user.Info();</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/10/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">query -&gt; DataPermission</span><br><span class="line">	:</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>15</title>
+    <url>/2020/04/15/15/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>17</title>
+    <url>/2020/04/17/17/</url>
+    <content><![CDATA[<p>场景：</p>
+<p>参数为一个list，但是不确定他是null还是size为0，如果同时判断的话，当他为null时  会出现nullPointException,</p>
+<p>可以用 ||</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if （Objects.isNull(list) || list == 0） &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>单个的逻辑运算符会将左右两个表达式都进行运算得出布尔值，再进行运算。</code></p>
+<p><strong>File - &gt;  Other Setting -&gt; Setting For New Projects</strong> 全局配置</p>
+<p>maven默认仓库地址，选择本地的地址</p>
+<p><code>&lt;localRepository&gt;D:\maven_repo&lt;/localRepository&gt;</code></p>
+<p>Setting -&gt; file and code temeplate -&gt; include</p>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>20</title>
+    <url>/2020/04/20/20/</url>
+    <content><![CDATA[<h1 id="String数组转int数组"><a href="#String数组转int数组" class="headerlink" title="String数组转int数组"></a><a href="https://www.cnblogs.com/ukzq/p/11965382.html">String数组转int数组</a></h1><p>假设我们有一个字符串数组：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String[] strings = &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>使用<em>Lambda表达式</em>（自Java 8起）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] array = Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>
+
+<p>另一种方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] array = Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>22</title>
+    <url>/2020/04/22/22/</url>
+    <content><![CDATA[<h4 id="Calendar"><a href="#Calendar" class="headerlink" title="Calendar"></a>Calendar</h4><table>
+<thead>
+<tr>
+<th>Modifier and Type</th>
+<th>Method and Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>BigDecimal</code></td>
+<td><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>BigDecimal</code></td>
+<td><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>BigDecimal</code></td>
+<td><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>BigDecimal</code></td>
+<td><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Modifier and Type</th>
+<th align="left">Method and Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>abs()</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>abs(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the absolute value of this <code>BigDecimal</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>add(BigDecimal augend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, and whose scale is <code>max(this.scale(), augend.scale())</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>add(BigDecimal augend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this + augend)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>byte</code></td>
+<td align="left"><code>byteValueExact()</code>Converts this <code>BigDecimal</code> to a <code>byte</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>compareTo(BigDecimal val)</code>Compares this <code>BigDecimal</code> with the specified <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose preferred scale is <code>(this.scale() - divisor.scale())</code>; if the exact quotient cannot be represented (because it has a non-terminating decimal expansion) an <code>ArithmeticException</code> is thrown.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, int scale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, int scale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is as specified.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divide(BigDecimal divisor, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose value is <code>(this / divisor)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal[]</code></td>
+<td align="left"><code>divideAndRemainder(BigDecimal divisor)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal[]</code></td>
+<td align="left"><code>divideAndRemainder(BigDecimal divisor, MathContext mc)</code>Returns a two-element <code>BigDecimal</code> array containing the result of <code>divideToIntegralValue</code> followed by the result of <code>remainder</code> on the two operands calculated with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divideToIntegralValue(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is the integer part of the quotient <code>(this / divisor)</code> rounded down.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>divideToIntegralValue(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is the integer part of <code>(this / divisor)</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>double</code></td>
+<td align="left"><code>doubleValue()</code>Converts this <code>BigDecimal</code> to a <code>double</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>boolean</code></td>
+<td align="left"><code>equals(Object x)</code>Compares this <code>BigDecimal</code> with the specified <code>Object</code> for equality.</td>
+</tr>
+<tr>
+<td align="left"><code>float</code></td>
+<td align="left"><code>floatValue()</code>Converts this <code>BigDecimal</code> to a <code>float</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>hashCode()</code>Returns the hash code for this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>intValue()</code>Converts this <code>BigDecimal</code> to an <code>int</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>intValueExact()</code>Converts this <code>BigDecimal</code> to an <code>int</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>long</code></td>
+<td align="left"><code>longValue()</code>Converts this <code>BigDecimal</code> to a <code>long</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>long</code></td>
+<td align="left"><code>longValueExact()</code>Converts this <code>BigDecimal</code> to a <code>long</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>max(BigDecimal val)</code>Returns the maximum of this <code>BigDecimal</code> and <code>val</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>min(BigDecimal val)</code>Returns the minimum of this <code>BigDecimal</code> and <code>val</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>movePointLeft(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the left.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>movePointRight(int n)</code>Returns a <code>BigDecimal</code> which is equivalent to this one with the decimal point moved <code>n</code> places to the right.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>multiply(BigDecimal multiplicand)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, and whose scale is <code>(this.scale() + multiplicand.scale())</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>multiply(BigDecimal multiplicand, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this × multiplicand)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>negate()</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>negate(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(-this)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>plus()</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, and whose scale is <code>this.scale()</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>plus(MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(+this)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>pow(int n)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>, The power is computed exactly, to unlimited precision.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>pow(int n, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(thisn)</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>precision()</code>Returns the <em>precision</em> of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>remainder(BigDecimal divisor)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>remainder(BigDecimal divisor, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this % divisor)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>round(MathContext mc)</code>Returns a <code>BigDecimal</code> rounded according to the <code>MathContext</code> settings.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>scale()</code>Returns the <em>scale</em> of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>scaleByPowerOfTen(int n)</code>Returns a BigDecimal whose numerical value is equal to (<code>this</code> * 10n).</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>setScale(int newScale)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose value is numerically equal to this <code>BigDecimal</code>‘s.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>setScale(int newScale, int roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>setScale(int newScale, RoundingMode roundingMode)</code>Returns a <code>BigDecimal</code> whose scale is the specified value, and whose unscaled value is determined by multiplying or dividing this <code>BigDecimal</code>‘s unscaled value by the appropriate power of ten to maintain its overall value.</td>
+</tr>
+<tr>
+<td align="left"><code>short</code></td>
+<td align="left"><code>shortValueExact()</code>Converts this <code>BigDecimal</code> to a <code>short</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>int</code></td>
+<td align="left"><code>signum()</code>Returns the signum function of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>stripTrailingZeros()</code>Returns a <code>BigDecimal</code> which is numerically equal to this one but with any trailing zeros removed from the representation.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>subtract(BigDecimal subtrahend)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, and whose scale is <code>max(this.scale(), subtrahend.scale())</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>subtract(BigDecimal subtrahend, MathContext mc)</code>Returns a <code>BigDecimal</code> whose value is <code>(this - subtrahend)</code>, with rounding according to the context settings.</td>
+</tr>
+<tr>
+<td align="left"><code>BigInteger</code></td>
+<td align="left"><code>toBigInteger()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigInteger</code></td>
+<td align="left"><code>toBigIntegerExact()</code>Converts this <code>BigDecimal</code> to a <code>BigInteger</code>, checking for lost information.</td>
+</tr>
+<tr>
+<td align="left"><code>String</code></td>
+<td align="left"><code>toEngineeringString()</code>Returns a string representation of this <code>BigDecimal</code>, using engineering notation if an exponent is needed.</td>
+</tr>
+<tr>
+<td align="left"><code>String</code></td>
+<td align="left"><code>toPlainString()</code>Returns a string representation of this <code>BigDecimal</code> without an exponent field.</td>
+</tr>
+<tr>
+<td align="left"><code>String</code></td>
+<td align="left"><code>toString()</code>Returns the string representation of this <code>BigDecimal</code>, using scientific notation if an exponent is needed.</td>
+</tr>
+<tr>
+<td align="left"><code>BigDecimal</code></td>
+<td align="left"><code>ulp()</code>Returns the size of an ulp, a unit in the last place, of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>BigInteger</code></td>
+<td align="left"><code>unscaledValue()</code>Returns a <code>BigInteger</code> whose value is the <em>unscaled value</em> of this <code>BigDecimal</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>static BigDecimal</code></td>
+<td align="left"><code>valueOf(double val)</code>Translates a <code>double</code> into a <code>BigDecimal</code>, using the <code>double</code>‘s canonical string representation provided by the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#toString-double-"><code>Double.toString(double)</code></a> method.</td>
+</tr>
+<tr>
+<td align="left"><code>static BigDecimal</code></td>
+<td align="left"><code>valueOf(long val)</code>Translates a <code>long</code> value into a <code>BigDecimal</code> with a scale of zero.</td>
+</tr>
+<tr>
+<td align="left"><code>static BigDecimal</code></td>
+<td align="left"><code>valueOf(long unscaledVal, int scale)</code>Translates a <code>long</code> unscaled value and an <code>int</code> scale into a <code>BigDecimal</code>.</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 8 Stream</title>
+    <url>/2020/04/16/16/</url>
+    <content><![CDATA[<h5 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Stream&lt;T&gt; <span class="title function_">filter</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; predicate)</span></span><br></pre></td></tr></table></figure>
+
+<p>Returns a stream consisting of the elements of this stream that match the given predicate.</p>
+<p>This is an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#StreamOps">intermediate operation</a>.</p>
+<ul>
+<li><p><strong>Parameters:</strong></p>
+<p>predicate - a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference">non-interfering</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness">stateless</a> predicate to apply to each element to determine if it should be included</p>
+</li>
+<li><p><strong>Returns:</strong></p>
+<p>the new stream</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过条件筛选</span></span><br><span class="line">list.stream().filter(User -&gt; StringUtils.isEmpty(User.getUserName));</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h5 id="GroupBy"><a href="#GroupBy" class="headerlink" title="GroupBy"></a>GroupBy</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过条件分组</span></span><br><span class="line">Map&lt;String, List&lt;User&gt;&gt; groupMap = list.stream().collect(Collectors.groupingBy(User::getName));</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Easy Code使用问题</title>
+    <url>/2023/06/05/EasyCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><code>Mapper</code>接口要加上<code>@Mapper</code>注解。</p>
+<p><code>application.yml</code>要加上</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:/mapper/*Dao.xml</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/BigDecimal/</url>
+    <content><![CDATA[<hr>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int a = bigdemical.compareTo(bigdemical2)</span><br><span class="line">//a = -1,表示bigdemical小于bigdemical2；</span><br><span class="line">//a = 0,表示bigdemical等于bigdemical2；</span><br><span class="line">//a = 1,表示bigdemical大于bigdemical2；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//加减乘除：</span><br><span class="line">BigDecimal bignum1 = new BigDecimal(&quot;10&quot;);  </span><br><span class="line">BigDecimal bignum2 = new BigDecimal(&quot;5&quot;);  </span><br><span class="line">BigDecimal bignum3 = null;  </span><br><span class="line">  </span><br><span class="line">//加法  </span><br><span class="line">bignum3 =  bignum1.add(bignum2);       </span><br><span class="line">System.out.println(&quot;和 是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">//减法  </span><br><span class="line">bignum3 = bignum1.</span><br><span class="line">(bignum2);  </span><br><span class="line">System.out.println(&quot;差  是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">//乘法  </span><br><span class="line">bignum3 = bignum1.multiply(bignum2);  </span><br><span class="line">System.out.println(&quot;积  是：&quot; + bignum3);  </span><br><span class="line">  </span><br><span class="line">//除法  </span><br><span class="line">bignum3 = bignum1.divide(bignum2);  </span><br><span class="line">System.out.println(&quot;商  是：&quot; + bignum3);</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="BigDecimal-去除小数点后的0"><a href="#BigDecimal-去除小数点后的0" class="headerlink" title="BigDecimal 去除小数点后的0"></a>BigDecimal 去除小数点后的0</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BigDecimal bigDecimal = new BigDecimal(&quot;10.100000&quot;);</span><br><span class="line">bigDecimal = bigDecimal.stripTrailingZeros();// 10.1</span><br><span class="line">String str = bigDecimal.toPlainString();//转成字符串</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Delete/Truncate/Drop</title>
+    <url>/2023/06/05/Delete%20&amp;%20Truncate/</url>
+    <content><![CDATA[<p>假如把一张表比作一间教室，数据比作学生。</p>
+<p><code>drop</code> 就是把这件教师炸掉了，教室都没了，更不用说数据了。</p>
+<p><code>truncate</code> 就是把学生开除了，离开了，再也没有了。</p>
+<p><code>delete</code> 就是学生出去了，虽然他们可能不会回来了，但是位置还是要留着。</p>
+<h4 id="Drop"><a href="#Drop" class="headerlink" title="Drop"></a>Drop</h4><p>直接删掉表，这个没什么好说的。</p>
+<p>包括表结构，表数据，全部删除，占用的空间也会释放。</p>
+<h4 id="Truncate"><a href="#Truncate" class="headerlink" title="Truncate"></a>Truncate</h4><p>截断表，会释放空间。</p>
+<h4 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h4><p>删除数据</p>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/ExcelUtils/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 对应Excel头与实体类字段 通过HeaderAlias</span><br><span class="line">int rowCount = reader.getRowCount();</span><br><span class="line">reader.setHeaderAlias(DataReadVO.getHeaderAlias());</span><br><span class="line">List&lt;DataReadVO&gt; read = reader.read(0, 1, rowCount, DataReadVO.class);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class DataReadVO &#123;</span><br><span class="line"></span><br><span class="line">    private boolean status = false;</span><br><span class="line">    private Long lineNum;</span><br><span class="line">    private String materialId;</span><br><span class="line">    private String materialCode;</span><br><span class="line">    private Double qty;</span><br><span class="line">    public Map&lt;String, String&gt; map;</span><br><span class="line"></span><br><span class="line">    public static Map&lt;String, String&gt; getHeaderAlias()&#123;</span><br><span class="line">        Map&lt;String, String&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        map.put(&quot;行号&quot;, &quot;lineNum&quot;);</span><br><span class="line">        map.put(&quot;物料编码&quot;, &quot;materialCode&quot;);</span><br><span class="line">        map.put(&quot;数量&quot;, &quot;qty&quot;);</span><br><span class="line">        return map;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/FileUtils/</url>
+    <content><![CDATA[<p>数组转文件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> bfile</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> filePath</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> fileName</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 根据byte数组，生成文件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">getFile</span><span class="params">(<span class="type">byte</span>[] bfile, String filePath,String fileName)</span> &#123;</span><br><span class="line">    <span class="type">BufferedOutputStream</span> <span class="variable">bos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">FileOutputStream</span> <span class="variable">fos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(filePath);</span><br><span class="line">        <span class="keyword">if</span>(!dir.exists()&amp;&amp;dir.isDirectory())&#123;<span class="comment">//判断文件目录是否存在</span></span><br><span class="line">            dir.mkdirs();</span><br><span class="line">        &#125;</span><br><span class="line">        file = <span class="keyword">new</span> <span class="title class_">File</span>(filePath+<span class="string">&quot;\\&quot;</span>+fileName);</span><br><span class="line">        fos = <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file);</span><br><span class="line">        bos = <span class="keyword">new</span> <span class="title class_">BufferedOutputStream</span>(fos);</span><br><span class="line">        bos.write(bfile);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (bos != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                bos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (fos != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/2023/06/05/Git/</url>
+    <content><![CDATA[<p>Git常用操作。</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/ch2362710931/article/details/125709372</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>GC</title>
+    <url>/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h4><p>​	原理：是否有对象引用。</p>
+<p>​	![Reference counting](D:\workspace\gitee\StaticFile\image\Reference counting.png)</p>
+<p>​	缺点：如果两个对象互相引用，会造成内存泄漏。</p>
+<h4 id="可达性分析法"><a href="#可达性分析法" class="headerlink" title="可达性分析法"></a>可达性分析法</h4><p>​	</p>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Go%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，那么使用这种形式的标识符的对象就可以被外部包的代码所使用（客户端程序需要先导入这个包），这被称为导出（像面向对象语言中的 public）；标识符如果以小写字母开头，则对包外是不可见的，但是他们在整个包的内部是可见并且可用的（像面向对象语言中的 protected ）。</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>报错：<code>The &#39;main&#39; file has the non-main package or does not contain the &#39;main&#39; function</code></p>
+<p>main函数需要再main包下</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>GC</title>
+    <url>/2020/04/24/IDEA%20Plugins/</url>
+    <content><![CDATA[<p> <code>Java Bean to Json</code></p>
+<p>实体类–&gt;Json</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/IDEA%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h4 id="1-Maven-设置"><a href="#1-Maven-设置" class="headerlink" title="1. Maven 设置"></a>1. Maven 设置</h4><p><img src="https://i.loli.net/2021/07/07/nvqeJDmrtAf1w5U.png" alt="image-20210707213050448"></p>
+<p><img src="https://i.loli.net/2021/07/07/967olUfIFqMOsyC.png" alt="image-20210707213232536"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Idea%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%89%BE%E4%B8%8D%E5%88%B0%E4%B8%BB%E7%B1%BB/</url>
+    <content><![CDATA[<p>多module下，启动程序报错：</p>
+<p>执行下，就可以了</p>
+<p><img src="https://i.loli.net/2021/06/10/U8DZTSa1jw7ELBM.png" alt="image-20210610165645928"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>List stream</title>
+    <url>/2023/06/05/Java%208%20Stream/</url>
+    <content><![CDATA[<p>通过<code>workOrederNum</code>字段排序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;ProduceOrderDTO&gt; collect = list.stream().sorted(Comparator.comparing(ProduceOrderDTO::getWorkOrderNum)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查出<code>InstructionPoDTO</code>中<code>InstructionDocNum</code>作为list</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 筛选出不重复的 instructionDocNum</span></span><br><span class="line">List&lt;String&gt; instructionDocNums = read.stream().map(InstructionPoDTO::getInstructionDocNum).distinct().collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>筛选所有<code>instructionDocNum = 123</code>的对象 </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;InstructionPoDTO&gt; instructionPoDTOS = read.stream().filter(instructionPoDTO -&gt;</span><br><span class="line">     instructionPoDTO.getInstructionDocNum().equals(<span class="string">&quot;123&quot;</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查询出第一个</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">instructionDocId</span> <span class="operator">=</span> instructionDocs.stream().findFirst().get();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>设置<code>typeCode</code>为key，<code>list</code>的对象为<code>value</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, MtGenType&gt; typesMap = types.stream().collect(Collectors.toMap(t -&gt; t.getTypeCode(), t -&gt; t));</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>&#x2F;&#x2F; 通过字段去重</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">instructionSapStockDTOS.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(()-&gt; new TreeSet&lt;&gt;(Comparator.comparing(o -&gt; o.getMaterial()+&quot;;&quot;+o.getPlant()+&quot;;&quot;+o.getStorage()+&quot;;&quot;+o.getBatch()+&quot;;&quot;+o.getSpecialStock()))), ArrayList::new));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>GROUP BY</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Map&lt;String, List&lt;WmsIqcRecord&gt;&gt; map = records.stream().collect(Collectors.groupingBy(iqcRecord -&gt; &#123;</span><br><span class="line">                    if (StringUtils.equals(&quot;TO_DO&quot;, iqcRecord.getStatus())) &#123;</span><br><span class="line">                        switch (iqcRecord.getDealMethod()) &#123;</span><br><span class="line">                            case &quot;RELEASE&quot;:</span><br><span class="line">                                return &quot;TO_RELEASE&quot;;</span><br><span class="line">                            case &quot;FREEZE&quot;:</span><br><span class="line">                                return &quot;TO_FREEZE&quot;;</span><br><span class="line">                            case &quot;RETURN&quot;:</span><br><span class="line">                                return &quot;TO_RETURN&quot;;</span><br><span class="line">                            default:</span><br><span class="line">                                return &quot;TO_DO&quot;;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else if (StringUtils.equals(&quot;DONE&quot;, iqcRecord.getStatus())) &#123;</span><br><span class="line">                        switch (iqcRecord.getDealMethod()) &#123;</span><br><span class="line">                            case &quot;RELEASE&quot;:</span><br><span class="line">                                return &quot;RELEASE_DONE&quot;;</span><br><span class="line">                            case &quot;FREEZE&quot;:</span><br><span class="line">                                return &quot;FREEZE_DONE&quot;;</span><br><span class="line">                            case &quot;RETURN&quot;:</span><br><span class="line">                                return &quot;RETURN_DONE&quot;;</span><br><span class="line">                            default:</span><br><span class="line">                                return &quot;DONE&quot;;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return &quot;DEAL&quot;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;));</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//        List&lt;LocalDate&gt; collect = localDates.stream().sorted((var1, var2) -&gt; &#123;</span><br><span class="line">//            if (var1.isBefore(var2)) &#123;</span><br><span class="line">//                return -1;</span><br><span class="line">//            &#125;</span><br><span class="line">//            return 1;</span><br><span class="line">//        &#125;).collect(Collectors.toList());</span><br><span class="line">//        System.out.println(localDates.stream().sorted().collect(Collectors.toList()));</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JdbcTemplete批处理</title>
+    <url>/2023/06/05/JDBCTemplete%E6%89%B9%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// sql语句</span><br><span class="line">String sql = &quot;INSERT INTO ssme_iqc_change(TENANT_ID, KID) VALUE (?, ?);&quot;;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; kids = new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">// BatchPreparedStatementSetter 通过循环取出数据填充到SQL中</span><br><span class="line">jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void setValues(PreparedStatement ps, int i) throws SQLException &#123;</span><br><span class="line">                ps.setLong(1, 4L);</span><br><span class="line">                ps.setString(2, kids.get(i));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public int getBatchSize() &#123;</span><br><span class="line">                return kids.size();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>速率优化</category>
+      </categories>
+      <tags>
+        <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Jmeter%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2021/08/18/7YTjKofu9SMPDWU.png" alt="image-20210818195517502"></p>
+<p><img src="https://i.loli.net/2021/08/18/hqIAWMJTpGnS4tB.png" alt="image-20210818195538542"></p>
+<p><img src="https://i.loli.net/2021/08/18/B73hXaVCULHQ4KN.png" alt="image-20210818200759281"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Navicat数据库导出链接密码解析</title>
+    <url>/2023/06/05/Mac%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/</url>
+    <content><![CDATA[<p>参考：<a href="https://blog.csdn.net/harris_lele/article/details/123588127">https://blog.csdn.net/harris_lele/article/details/123588127</a></p>
+<p>导出来，然后用php解析密码即可；</p>
+<p>在线运行php：</p>
+<p><code>https://www.toolfk.com/tools/online-runphp.html</code></p>
+<p>运行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NavicatPassword</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$version</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$aesKey</span> = <span class="string">&#x27;libcckeylibcckey&#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$aesIv</span> = <span class="string">&#x27;libcciv libcciv &#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowString</span> = <span class="string">&#x27;3DC5CA39&#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowKey</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowIv</span> = <span class="literal">null</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$version</span> = <span class="number">12</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;version = <span class="variable">$version</span>;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;blowKey = <span class="title function_ invoke__">sha1</span>(<span class="string">&#x27;3DC5CA39&#x27;</span>, <span class="literal">true</span>);</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;blowIv = <span class="title function_ invoke__">hex2bin</span>(<span class="string">&#x27;d9c7c3c8870d64bd&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="literal">FALSE</span>;</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">$this</span>-&gt;version) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptEleven</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptTwelve</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptEleven</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$round</span> = <span class="title function_ invoke__">intval</span>(<span class="title function_ invoke__">floor</span>(<span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) / <span class="number">8</span>));</span><br><span class="line">        <span class="variable">$leftLength</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) % <span class="number">8</span>;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;blowIv;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$round</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$temp</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="number">8</span>), <span class="variable">$currentVector</span>));</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$currentVector</span>, <span class="variable">$temp</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable">$temp</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$leftLength</span>) &#123;</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="variable">$leftLength</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">strtoupper</span>(<span class="title function_ invoke__">bin2hex</span>(<span class="variable">$result</span>));</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptBlock</span>(<span class="params"><span class="variable">$block</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$block</span>, <span class="string">&#x27;BF-ECB&#x27;</span>, <span class="variable">$this</span>-&gt;blowKey, OPENSSL_RAW_DATA|OPENSSL_NO_PADDING);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptBlock</span>(<span class="params"><span class="variable">$block</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$block</span>, <span class="string">&#x27;BF-ECB&#x27;</span>, <span class="variable">$this</span>-&gt;blowKey, OPENSSL_RAW_DATA|OPENSSL_NO_PADDING);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">xorBytes</span>(<span class="params"><span class="variable">$str1</span>, <span class="variable">$str2</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="title function_ invoke__">strlen</span>(<span class="variable">$str1</span>); <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$result</span> .= <span class="title function_ invoke__">chr</span>(<span class="title function_ invoke__">ord</span>(<span class="variable">$str1</span>[<span class="variable">$i</span>]) ^ <span class="title function_ invoke__">ord</span>(<span class="variable">$str2</span>[<span class="variable">$i</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptTwelve</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$string</span>, <span class="string">&#x27;AES-128-CBC&#x27;</span>, <span class="variable">$this</span>-&gt;aesKey, OPENSSL_RAW_DATA, <span class="variable">$this</span>-&gt;aesIv);</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">strtoupper</span>(<span class="title function_ invoke__">bin2hex</span>(<span class="variable">$result</span>));</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="literal">FALSE</span>;</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">$this</span>-&gt;version) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">decryptEleven</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">decryptTwelve</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptEleven</span>(<span class="params"><span class="variable">$upperString</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$string</span> = <span class="title function_ invoke__">hex2bin</span>(<span class="title function_ invoke__">strtolower</span>(<span class="variable">$upperString</span>));</span><br><span class="line">         </span><br><span class="line">        <span class="variable">$round</span> = <span class="title function_ invoke__">intval</span>(<span class="title function_ invoke__">floor</span>(<span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) / <span class="number">8</span>));</span><br><span class="line">        <span class="variable">$leftLength</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) % <span class="number">8</span>;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;blowIv;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$round</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$encryptedBlock</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="number">8</span>);</span><br><span class="line">            <span class="variable">$temp</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$this</span>-&gt;<span class="title function_ invoke__">decryptBlock</span>(<span class="variable">$encryptedBlock</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$currentVector</span>, <span class="variable">$encryptedBlock</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable">$temp</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$leftLength</span>) &#123;</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="variable">$leftLength</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptTwelve</span>(<span class="params"><span class="variable">$upperString</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$string</span> = <span class="title function_ invoke__">hex2bin</span>(<span class="title function_ invoke__">strtolower</span>(<span class="variable">$upperString</span>));</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$string</span>, <span class="string">&#x27;AES-128-CBC&#x27;</span>, <span class="variable">$this</span>-&gt;aesKey, OPENSSL_RAW_DATA, <span class="variable">$this</span>-&gt;aesIv);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//需要指定版本两种，11或12</span></span><br><span class="line"><span class="comment">//$navicatPassword = new NavicatPassword(11);</span></span><br><span class="line"><span class="variable">$navicatPassword</span> = <span class="keyword">new</span> <span class="title class_">NavicatPassword</span>(<span class="number">12</span>);</span><br><span class="line"> </span><br><span class="line"><span class="comment">//解密</span></span><br><span class="line"><span class="comment">//$decode = $navicatPassword-&gt;decrypt(&#x27;15057D7BA390&#x27;);</span></span><br><span class="line"><span class="variable">$decode</span> = <span class="variable">$navicatPassword</span>-&gt;<span class="title function_ invoke__">decrypt</span>(<span class="string">&#x27;75008D0AE102C19EE3767E201AC9E4D2&#x27;</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$decode</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"> </span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>实用</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Main%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>天天写 main方法， <code>args</code>到底是个啥??</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">java -jar demo.jar <span class="string">&#x27;$MAVEN_REPOSITORY$&#x27;</span> <span class="string">&#x27;哈哈&#x27;</span> <span class="string">&#x27;12345&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><img src="https://i.loli.net/2021/06/21/lzAd4onh9cHtJT8.png" alt="image-20210621143454688"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Mapper/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;if test=&quot;dto.instructionDocStatus != null and dto.instructionDocStatus != &#x27;&#x27;&quot;&gt;</span><br><span class="line">    AND MID.INSTRUCTION_DOC_STATUS IN</span><br><span class="line">    &lt;foreach collection=&quot;dto.instructionDocStatus.split(&#x27;,&#x27;)&quot; item=&quot;item&quot; index=&quot;index&quot; separator=&quot;,&quot;&gt;</span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/if&gt;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/MySQL/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	swid.OPERATION,</span><br><span class="line">	swid.DELIVERY_METHOD,</span><br><span class="line">	GROUP_CONCAT( DISTINCT( swid.WORK_ORDER_ID ) ) WORK_ORDER_ID </span><br><span class="line">FROM</span><br><span class="line">	SSME_WO_ISSUE_DETAIL swid </span><br><span class="line">WHERE</span><br><span class="line">	swid.TENANT_ID = 4 </span><br><span class="line">	AND swid.WORK_ORDER_ID IN ( &#x27;42717.1&#x27;,&#x27;42719.1&#x27; ) </span><br><span class="line">GROUP BY</span><br><span class="line">	swid.OPERATION,</span><br><span class="line">	swid.DELIVERY_METHOD</span><br></pre></td></tr></table></figure>
+
+
+<p><a href="https://www.cnblogs.com/minqiliang/p/16577102.html">https://www.cnblogs.com/minqiliang/p/16577102.html</a></p>
+<p><a href="https://blog.csdn.net/z15711187787/article/details/124986309">https://blog.csdn.net/z15711187787/article/details/124986309</a></p>
+<p><a href="https://blog.csdn.net/weixin_45994575/article/details/123071909?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-123071909-blog-123821186.t0_edu_mix&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~Rate-1-123071909-blog-123821186.t0_edu_mix&amp;utm_relevant_index=1">https://blog.csdn.net/weixin_45994575/article/details/123071909?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-123071909-blog-123821186.t0_edu_mix&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-123071909-blog-123821186.t0_edu_mix&amp;utm_relevant_index=1</a></p>
+<p>部署记录</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/MySQL%E6%95%B0%E6%8D%AE%E5%88%A0%E9%99%A4%E6%81%A2%E5%A4%8D/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 数据库中运行</span><br><span class="line"># 判断binlog是否开启</span><br><span class="line">show variables like &#x27;%log_bin%&#x27;;</span><br><span class="line"></span><br><span class="line"># 找到数据库data位置</span><br><span class="line">show variables like &#x27;datadir&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>data目录下数据  找到当天的binlog<br><img src="https://s3.uuu.ovh/imgs/2022/11/28/9c0f7495a6838922.png"></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 转换为SQL 只转换操作时间内的数据即可</span><br><span class="line">root@VM-4-10-ubuntu:/var/lib/mysql# mysqlbinlog --base64-output=decode-rows -v --database=smart-admin-dev --start-datetime=&quot;2022-11-28 10:50:00&quot; --stop-datetime=&quot;2022-11-28 11:00:00&quot; binlog.000018 &gt; 000018.sql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>000018.sql<br><img src="https://s3.uuu.ovh/imgs/2022/11/28/09e65127e32811f6.png"></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 将SQL转换为insert语句</span><br><span class="line">root@VM-4-10-ubuntu:/var/lib/mysql# cat 000018.sql | sed -n &#x27;/###/p&#x27; | sed &#x27;s/### //g;s/\/\*.*/,/g;s/DELETE FROM/;INSERT INTO/g;s/WHERE/SELECT/g;&#x27; |sed -r &#x27;s/(@17.*),/\1;/g&#x27; | sed &#x27;s/@1=//g&#x27;| sed &#x27;s/@[1-9]=/,/g&#x27; | sed &#x27;s/@[1-9][0-9]=/,/g&#x27; &gt; 000018OK.sql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>000018OK.sql<br><img src="https://s3.uuu.ovh/imgs/2022/11/28/070cfb64cc8045dc.png"></li>
+</ul>
+<p>最后将数据导入数据库即可。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/MySQL%E9%87%8D%E5%90%AF%E5%A4%B1%E8%B4%A5/</url>
+    <content><![CDATA[<p>my.cnf -&gt; 查看 err_log 位置</p>
+<p>查看日志报错</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ERROR:-----------&gt; The innodb_system data file &#x27;ibdata1&#x27; must be writable</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 5.7之后版本 [根据MySQL安装路径]</span><br><span class="line">chmod -R 777 /var/lib/mysql</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>MySQL连接问题</title>
+    <url>/2020/04/28/MySQL%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天接了一个任务，把之前写好的<code>Mapper</code> 中的SQL多连接一张表，</p>
+<p>然后中间出现了一个问题</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ui.name <span class="keyword">FROM</span> school s,<span class="keyword">user</span> u <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> user_info ui <span class="keyword">ON</span> u.id <span class="operator">=</span> ui.id;</span><br></pre></td></tr></table></figure>
+
+<p>这样是没错的，但是如果把表的顺序换一下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT ui.name FROM user u,school s LEFT JOIN user_info ui ON u.id = ui.id;</span><br></pre></td></tr></table></figure>
+
+<p>就会出问题，理论上来说这样是正常的，但是刚开始的时候确实忽略的这个问题</p>
+<p>毕竟有前辈写的代码，实战中都是很多张表关联。</p>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Nacos/</url>
+    <content><![CDATA[<h3 id="配置中心"><a href="#配置中心" class="headerlink" title="配置中心"></a>配置中心</h3><h5 id="1-添加依赖"><a href="#1-添加依赖" class="headerlink" title="1.添加依赖"></a>1.添加依赖</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos-config-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.2.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-启动类注解-NacosPropertySource"><a href="#2-启动类注解-NacosPropertySource" class="headerlink" title="2.启动类注解 @NacosPropertySource"></a>2.启动类注解 @NacosPropertySource</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span>  </span><br><span class="line"><span class="comment">// dataId 对应配置管理-配置列表-dataId</span></span><br><span class="line"><span class="meta">@NacosPropertySource(dataId = &quot;nacosDemo&quot;, autoRefreshed = true)</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">NacosDemoApplication</span> &#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;  </span><br><span class="line">        SpringApplication.run(NacosDemoApplication.class, args);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-配置nacos地址"><a href="#3-配置nacos地址" class="headerlink" title="3.配置nacos地址"></a>3.配置nacos地址</h5><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span>  </span><br><span class="line">    <span class="attr">application:</span>  </span><br><span class="line">        <span class="attr">name:</span> <span class="string">nacos-demo</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-使用配置"><a href="#4-使用配置" class="headerlink" title="4.使用配置"></a>4.使用配置</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CacheController</span> &#123;  </span><br><span class="line">  </span><br><span class="line">   <span class="meta">@NacosValue(value = &quot;$&#123;useLocalCache:false&#125;&quot;, autoRefreshed = true)</span>  </span><br><span class="line">   <span class="keyword">private</span> <span class="type">boolean</span> useLocalCache;  </span><br><span class="line">  </span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">template</span> <span class="operator">=</span> <span class="string">&quot;useLocalCache is %s!&quot;</span>;  </span><br><span class="line">  </span><br><span class="line">   <span class="meta">@GetMapping(&quot;/cache&quot;)</span>  </span><br><span class="line">   <span class="keyword">public</span> String <span class="title function_">cache</span><span class="params">()</span> &#123;  </span><br><span class="line">      <span class="comment">// 默认返回false</span></span><br><span class="line">      <span class="keyword">return</span> String.format(template, useLocalCache);  </span><br><span class="line">   &#125;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 此时返回结果 ：useLocalCache is false!</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>增加配置并发布</li>
+</ul>
+<p><img src="https://s3.uuu.ovh/imgs/2022/11/30/d17d85b8702c1cc8.png"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 返回结果 ：useLocalCache is true!</span></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Object/</url>
+    <content><![CDATA[<p><a href="https://hellogithub.com/periodical/statistics/click/?target=https://github.com/RitterHou/Geisha">https://hellogithub.com/periodical/statistics/click/?target=https://github.com/RitterHou/Geisha</a><br><img src="https://s3.bmp.ovh/imgs/2022/09/22/18d24053c8fe8e40.png"></p>
+<ul>
+<li><a href="https://hellogithub.com/periodical/statistics/click/?target=https://github.com/dianbaer/anychat">https://hellogithub.com/periodical/statistics/click/?target=https://github.com/dianbaer/anychat</a></li>
+<li><img src="https://s3.bmp.ovh/imgs/2022/09/22/c419708e797e87bb.png"></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Obsidian</title>
+    <url>/2023/06/05/Obsidian/</url>
+    <content><![CDATA[<p>把<code>main.js</code> 复制到<code>.obsidian/plugin/auto_upload_pic/</code>中。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/05/fcc28856b4474ac1.png"></p>
+]]></content>
+      <categories>
+        <category>软件使用</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RE:1 注册中心</title>
+    <url>/2020/04/26/RE-1%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</url>
+    <content><![CDATA[<h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\huapeng.zhang\AppData\Roaming\Typora\typora-user-images\image-20200426143308709.png" alt="image-20200426143308709"></p>
+<h4 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h4><p>启动类上加<code>@EnableEurekaServer</code>注解</p>
+<p>store需要pom</p>
+<p><code>application.yml</code></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: store-eureka</span><br><span class="line">server:</span><br><span class="line">  port: 8000</span><br><span class="line">eureka:</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false</span><br><span class="line">    fetch-registry: false</span><br><span class="line">    serviceUrl:</span><br><span class="line">      defaultZone: http://dev.store.local:$&#123;server.port&#125;/eureka/</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">register-with-eureka: false  // 注释之后才可以看到 available instance</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html">http://www.ityouknow.com/springcloud/2017/05/10/springcloud-eureka.html</a></p>
+<h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><p> 版本：8.0.19</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RE:2网关</title>
+    <url>/2020/04/26/RE-2%E7%BD%91%E5%85%B3/</url>
+    <content><![CDATA[<h5 id="错误的依赖"><a href="#错误的依赖" class="headerlink" title="错误的依赖"></a>错误的依赖</h5><p>正确的依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="使用IP注册到注册中心"><a href="#使用IP注册到注册中心" class="headerlink" title="使用IP注册到注册中心"></a>使用IP注册到注册中心</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    hostname: $&#123;spring.cloud.client.ip-address&#125;</span><br><span class="line">    instance-id: $&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;</span><br><span class="line">    # 使用IP注册到注册中心</span><br><span class="line">    prefer-ip-address: true</span><br></pre></td></tr></table></figure>
+
+
+
+<p><a href="http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html">http://www.ityouknow.com/springcloud/2018/12/12/spring-cloud-gateway-start.html</a></p>
+]]></content>
+      <tags>
+        <tag>store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RE:3-UserService</title>
+    <url>/2020/04/26/RE-3%E7%94%A8%E6%88%B7%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<h4 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">goods-service</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://dev.store.local:3306/store_goods?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h4><p>通过easyCode 生成的代码  需要在application配置文件中添加：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapper-locations: classpath:/mapper/*Dao.xml</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="报错："><a href="#报错：" class="headerlink" title="报错："></a>报错：</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">java.sql.SQLException: The server time zone value <span class="string">&#x27;?й???????&#x27;</span> is unrecognized or represents more</span><br></pre></td></tr></table></figure>
+
+<p>在数据库连接后添加：<code>&amp;serverTimezone=GMT</code></p>
+]]></content>
+      <tags>
+        <tag>store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RE:4Swagger</title>
+    <url>/2020/04/26/RE-4Swagger/</url>
+    <content><![CDATA[<ol>
+<li>添加依赖</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><a href="https://blog.csdn.net/huangjinjin520/article/details/89740672">https://blog.csdn.net/huangjinjin520/article/details/89740672</a></p>
+]]></content>
+      <tags>
+        <tag>store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RE:5UserService&amp;Fegin</title>
+    <url>/2020/04/26/RE-5UserService&amp;Fegin/</url>
+    <content><![CDATA[<h4 id="Fegin"><a href="#Fegin" class="headerlink" title="Fegin"></a>Fegin</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fairyeye.feign;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FeignClient(name = &quot;goods-service&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">GoodsFeign</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/goods/selectOne&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Goods <span class="title function_">selectOne</span><span class="params">(<span class="meta">@RequestParam(value = &quot;id&quot;)</span> Long id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@FeignClient(name = &quot;goods-service&quot;)</code>:服务名称</p>
+<p><code> @GetMapping(&quot;/goods/selectOne&quot;)</code>：是goods-service中该接口的完整路由。</p>
+<p><strong>注册中心：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Application</th>
+<th align="left">AMIs</th>
+<th align="left">Availability Zones</th>
+<th align="left">Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>GOODS-SERVICE</strong></td>
+<td align="left"><strong>n&#x2F;a</strong> (1)</td>
+<td align="left">(1)</td>
+<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info">your ip:port</a></td>
+</tr>
+<tr>
+<td align="left"><strong>USER-SERVICE</strong></td>
+<td align="left"><strong>n&#x2F;a</strong> (1)</td>
+<td align="left">(1)</td>
+<td align="left"><strong>UP</strong> (1) - <a href="http://localhost:8080/actuator/info">your ip:port</a></td>
+</tr>
+</tbody></table>
+<h4 id="UserService"><a href="#UserService" class="headerlink" title="UserService"></a>UserService</h4><p><a href="https://github.com/fairyeye/store">https://github.com/fairyeye/store</a></p>
+<p>1+1+1+1+1+1+1 &#x3D; 7</p>
+<p>6+5+4+3+2+1 &#x3D; </p>
+]]></content>
+      <tags>
+        <tag>store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis笔记</title>
+    <url>/2021/12/10/Redis%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2021/12/10/Flr6LcyMp7aXzZG.png" alt="image-20211210103722039"></p>
+<p><img src="https://s2.loli.net/2021/12/10/SdJVDNcHnpkoReQ.png" alt="image-20211210103735160"></p>
+<p><img src="https://s2.loli.net/2021/12/10/KTlw579PQLcaq4r.png" alt="image-20211210103752696"></p>
+<p>&#x2F;&#x2F; 201个线程 应该扣减201 -&gt; 库存不足</p>
+<p><img src="https://s2.loli.net/2021/12/10/NlMoYyiBnv8rqXD.png" alt="image-20211210104539695"></p>
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Springboot%E8%BF%94%E5%9B%9Ehtml/</url>
+    <content><![CDATA[<h1 id="Springboot返回html"><a href="#Springboot返回html" class="headerlink" title="Springboot返回html"></a>Springboot返回html</h1><p>2019-04-15阅读 1.4K0</p>
+<p>  注：Springboot的版本2.1.3.RELEASE</p>
+<p> <em>List-1</em> application.properties文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">server.<span class="property">port</span>=<span class="number">8080</span></span><br><span class="line">#url中，项目的前缀</span><br><span class="line">server.<span class="property">servlet</span>.<span class="property">context</span>-path=/project</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">spring.<span class="property">mvc</span>.<span class="property">view</span>.<span class="property">prefix</span>=/</span><br><span class="line">spring.<span class="property">mvc</span>.<span class="property">view</span>.<span class="property">suffix</span>=.<span class="property">html</span></span><br></pre></td></tr></table></figure>
+
+<p>  整体结构如下图1所示，html要放在static下，不是templates下</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-5089774/1k8adq8jn7.jpeg?imageView2/2/w/1620" alt="img"></p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　图１</p>
+<p> <em>List-2</em> HelloController的内容如下</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.<span class="property">extern</span>.<span class="property">slf4j</span>.<span class="property">Slf4j</span>;</span><br><span class="line"><span class="keyword">import</span> org.<span class="property">springframework</span>.<span class="property">stereotype</span>.<span class="property">Controller</span>;</span><br><span class="line"><span class="keyword">import</span> org.<span class="property">springframework</span>.<span class="property">web</span>.<span class="property">bind</span>.<span class="property">annotation</span>.<span class="property">RequestMapping</span>;</span><br><span class="line"></span><br><span class="line">@<span class="title class_">Slf4</span>j</span><br><span class="line">@<span class="title class_">Controller</span></span><br><span class="line">public <span class="keyword">class</span> <span class="title class_">HelloController</span> &#123;</span><br><span class="line"></span><br><span class="line">    @<span class="title class_">RequestMapping</span>(value = <span class="string">&quot;/hello&quot;</span>)</span><br><span class="line">    public <span class="title class_">String</span> <span class="title function_">index</span>(<span class="params"></span>) &#123;</span><br><span class="line">        log.<span class="title function_">info</span>(<span class="string">&quot;收到请求&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;html/hello&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> <em>List-3</em> 启动springboot，之后在浏览器中输入</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#返回index.<span class="property">html</span>的内容</span><br><span class="line"><span class="attr">http</span>:<span class="comment">//localhost:8080/project/</span></span><br><span class="line"></span><br><span class="line">#返回hello.<span class="property">html</span>的内容</span><br><span class="line"><span class="attr">http</span>:<span class="comment">//localhost:8080/project/hello</span></span><br></pre></td></tr></table></figure>
+
+<p>  网上很多关于模板的（Thymeleaf 、FreeMarker 等），但是我不需要，我只需要纯的html。</p>
+<p>  index.html是springboot的默认welcome page。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://www.jianshu.com/p/eb4c0fc2dfc4">https://www.jianshu.com/p/eb4c0fc2dfc4</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-welcome-page">https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-welcome-page</a></li>
+</ol>
+<p>​     (adsbygoogle &#x3D; window.adsbygoogle || []).push({});  </p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/StringToInteger/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html>
+    <head>
+        <title>页面标题</title>
+        <style>
+        body {        background-image: url("../640.png"); } 
+        </style>
+    </head>
+<body> 
+
+<h1 id="String-转-Integer"><a href="#String-转-Integer" class="headerlink" title="String 转 Integer"></a>String 转 Integer</h1><h2 id="1-Integer的parseInt方法"><a href="#1-Integer的parseInt方法" class="headerlink" title="1.Integer的parseInt方法"></a>1.Integer的parseInt方法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String string = &quot;123&quot;;</span><br><span class="line">int value = Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt----------&gt;123</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Integer的valueOf方法"><a href="#2-Integer的valueOf方法" class="headerlink" title="2.Integer的valueOf方法"></a>2.Integer的valueOf方法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String string = &quot;123&quot;;</span><br><span class="line">Integer value = Integer.valueOf(string);</span><br><span class="line">System.out.println(&quot;stringToInt1----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：StringToInt1----------&gt;123</span><br></pre></td></tr></table></figure>
+
+<p>以上两种方法都是可行的。</p>
+<p>但是会有特殊的情况，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String string = &quot;abc&quot;;</span><br><span class="line">int value = Integer.parseInt(string);</span><br><span class="line">System.out.println(&quot;stringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Exception in thread &quot;main&quot; java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:16)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br></pre></td></tr></table></figure>
+
+<p>使用stringToInt1()也会返回同样的错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static Integer valueOf(String s) throws NumberFormatException &#123;</span><br><span class="line">    return Integer.valueOf(parseInt(s, 10));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>valueOf()调用了parseInt()，所以返回同样的错误是正常的。</p>
+<p>按照正常的逻辑来说，我们需要对这个错误进行处理，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String string = &quot;abc&quot;;</span><br><span class="line">int value = 0;</span><br><span class="line">try &#123;</span><br><span class="line">    value = Integer.parseInt(string);</span><br><span class="line">&#125; catch (NumberFormatException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(&quot;StringToInt----------&gt;&quot;+value);</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">java.lang.NumberFormatException: For input string: &quot;abc&quot;</span><br><span class="line">	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:580)</span><br><span class="line">	at java.lang.Integer.parseInt(Integer.java:615)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.stringToInt(StringToInt.java:18)</span><br><span class="line">	at com.hand.todo.infra.util.StringToInt.main(StringToInt.java:10)</span><br><span class="line">StringToInt----------&gt;0</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，虽然依然报错，但是程序还是继续执行了。</p>
+<p>然后回到主题。</p>
+<h2 id="3-Guava-的-Ints-结合-Java8-的-Optional"><a href="#3-Guava-的-Ints-结合-Java8-的-Optional" class="headerlink" title="3.Guava 的 Ints 结合 Java8 的 Optional"></a>3.Guava 的 Ints 结合 Java8 的 Optional</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String string = &quot;abc&quot;;</span><br><span class="line">Integer value = Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(0);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;0</span><br></pre></td></tr></table></figure>
+
+<p>可以在转换失败的时候为他设置默认值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String string = &quot;abc&quot;;</span><br><span class="line">Integer value = Optional.ofNullable(string)</span><br><span class="line">        .map(Ints::tryParse)</span><br><span class="line">        .orElse(100);</span><br><span class="line"> System.out.println(&quot;StringToInt2----------&gt;&quot; + value);</span><br><span class="line"> </span><br><span class="line"> 结果：StringToInt2----------&gt;100</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>写在末尾：之所以写这么详细是因为最开始的时候我很菜，看别人写的文档都很简单，虽然可以解决问题，但是却不解其意，所以写的啰嗦一点，对新手比较友好。</strong></p>
+<p>​	</body></p>
+</html>]]></content>
+  </entry>
+  <entry>
+    <title>Ubuntu</title>
+    <url>/2023/06/05/Ubuntu/</url>
+    <content><![CDATA[<h3 id="NETDATA"><a href="#NETDATA" class="headerlink" title="NETDATA"></a>NETDATA</h3><h4 id="1-安装编译环境"><a href="#1-安装编译环境" class="headerlink" title="1. 安装编译环境"></a>1. 安装编译环境</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install zlib1g-dev gcc make git autoconf autogen automake pkg-config uuid-dev</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-克隆项目"><a href="#2-克隆项目" class="headerlink" title="2. 克隆项目"></a>2. 克隆项目</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/firehol/netdata.git --depth=1</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-安装netdata"><a href="#3-安装netdata" class="headerlink" title="3. 安装netdata"></a>3. 安装netdata</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.cnblogs.com/beile/p/12875395.html</span><br><span class="line"></span><br><span class="line">官方：https://learn.netdata.cloud/docs/agent/packaging/installer/methods/offline</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">./netdata-installer.sh</span><br></pre></td></tr></table></figure>
+
+<p>然后访问 <code>IP:19999</code> </p>
+<p><img src="https://i.loli.net/2020/09/23/Zp2AJqzlKPSaW7E.png"></p>
+<h3 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h3><h4 id="1-安装Nginx"><a href="#1-安装Nginx" class="headerlink" title="1. 安装Nginx"></a>1. 安装Nginx</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo su</span><br><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
+
+<p>浏览器地址栏输入 <code>IP</code>看到如下页面表示已经安装好了Nginx，如果有域名，输入域名也是同样的效果（前提是已经给域名添加了解析）</p>
+<p><img src="https://i.loli.net/2020/09/23/45jPeQEu2TCoOyb.png"></p>
+<h4 id="2-Nginx-转发端口"><a href="#2-Nginx-转发端口" class="headerlink" title="2.Nginx 转发端口"></a>2.Nginx 转发端口</h4><p>我已经在服务器上安装了<code>netdata</code>服务，端口为<code>19999</code>,但是通过<code>Nginx</code>访问服务器时默认是<code>80</code>端口，所以需要做一些配置，在我们输入域名的时候访问不同的端口。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># nginx.conf里包含	include /etc/nginx/conf.d/*.conf; 所以可以在/etc/nginx/conf.d 文件夹下新增一个配置文件</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name IP;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">      client_max_body_size   3000m;</span><br><span class="line">      proxy_next_upstream http_502 http_504 error timeout invalid_header;</span><br><span class="line"></span><br><span class="line">      proxy_set_header   Host $host;</span><br><span class="line">      proxy_set_header   X-Real-IP $remote_addr;</span><br><span class="line">      proxy_set_header   X-Real-PORT $remote_port;</span><br><span class="line">      proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line"></span><br><span class="line">      proxy_pass http://127.0.0.1:19999;</span><br><span class="line">      proxy_redirect default;</span><br><span class="line">      proxy_connect_timeout 3000;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>这样 当我们在浏览器地址栏输入 域名时 就会自动跳转到<code>netdata</code>的主页</p>
+<h4 id="3-反向代理-负载均衡-x3D-gt"><a href="#3-反向代理-负载均衡-x3D-gt" class="headerlink" title="3. 反向代理+负载均衡 &#x3D;&gt;"></a>3. 反向代理+负载均衡 &#x3D;&gt;</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 实际服务</span></span><br><span class="line">upstream web_servers &#123;</span><br><span class="line">	server 192.168.139.128:9001;</span><br><span class="line">	server 192.168.139.128:9002;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">	<span class="comment"># 代理端口</span></span><br><span class="line">	listen 10086;</span><br><span class="line">	server_name 192.168.139.128;</span><br><span class="line"></span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://web_servers;</span><br><span class="line">		proxy_set_header Host <span class="variable">$host</span>:<span class="variable">$server_port</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以部署两个服务 9001、9002 发布时，等上一个成功发布后，启动第二个。</span></span><br><span class="line"><span class="comment"># 未验证</span></span><br><span class="line"><span class="comment"># 加上systemclt管理Java服务</span></span><br><span class="line"><span class="comment"># 负载均衡的方式：https://mp.weixin.qq.com/s/yJyEwPkLD0V9G0451gbZYg</span></span><br><span class="line"><span class="comment"># 1.轮询；2.权重；3.ip_hash；4.fair；5.url_hash</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h3><pre><code>- https://blog.csdn.net/weixin_44109450/article/details/124259338
+- 
+</code></pre>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><pre><code>sudo vim /etc/hosts
+140.82.112.4 github.com  
+199.232.69.194 github.global.ssl.fastly.net
+</code></pre>
+<h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. https://doc.natfrp.com/#/frpc/service/systemd</span><br><span class="line">2. </span><br></pre></td></tr></table></figure>
+
+
+<h3 id="青龙"><a href="#青龙" class="headerlink" title="青龙"></a>青龙</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入青龙容器</span><br><span class="line">docker exec -it qinglong bash</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="使用systemctl管理服务"><a href="#使用systemctl管理服务" class="headerlink" title="使用systemctl管理服务"></a>使用systemctl管理服务</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.jianshu.com/p/2deb0b79cb10</span><br><span class="line"></span><br><span class="line"># 路径</span><br><span class="line">/etc/systemd/system</span><br><span class="line"></span><br><span class="line"># 日志</span><br><span class="line">journalctl -u 服务名</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Arthas"><a href="#Arthas" class="headerlink" title="Arthas"></a>Arthas</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://arthas.aliyun.com/doc/quick-start.html#_2-%E5%90%AF%E5%8A%A8-arthas</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[arthas@588425]$ watch net.lab1024.smartadmin.module.business.project.service.ProjectBaiscService queryProjects returnObj</span><br><span class="line">Press Q or Ctrl+C to abort.</span><br><span class="line">Affect(class count: 2 , method count: 2) cost in 170 ms, listenerId: 1</span><br><span class="line">method=net.lab1024.smartadmin.module.business.project.service.ProjectBaiscService.queryProjects location=AtExit</span><br><span class="line">ts=2022-11-28 20:11:49; [cost=37.212667ms] result=@ResponseDTO[</span><br><span class="line">    code=@Integer[1],</span><br><span class="line">    msg=@String[操作成功!],</span><br><span class="line">    success=@Boolean[true],</span><br><span class="line">    data=@ArrayList[isEmpty=false;size=13],</span><br><span class="line">]</span><br><span class="line">method=net.lab1024.smartadmin.module.business.project.service.ProjectBaiscService$$EnhancerBySpringCGLIB$$2f00139f.queryProjects location=AtExit</span><br><span class="line">ts=2022-11-28 20:11:49; [cost=94.21994ms] result=@ResponseDTO[</span><br><span class="line">    code=@Integer[1],</span><br><span class="line">    msg=@String[操作成功!],</span><br><span class="line">    success=@Boolean[true],</span><br><span class="line">    data=@ArrayList[isEmpty=false;size=13],</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Prometheus"><a href="#Prometheus" class="headerlink" title="Prometheus"></a>Prometheus</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># prometheus</span></span><br><span class="line">wget https://github.com/prometheus/prometheus/releases/download/v2.40.4/prometheus-2.40.4.linux-amd64.tar.gz</span><br><span class="line">tar -zxvf prometheus-2.40.4.linux-amd64.tar.gz</span><br><span class="line">sudo <span class="built_in">mv</span> prometheus-2.40.4.linux-amd64 /usr/local/prometheus</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vim /usr/lib/systemd/system/prometheus.service</span><br><span class="line">[Unit]</span><br><span class="line">Description=prometheus</span><br><span class="line">After=network.target </span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=prometheus</span><br><span class="line">Group=prometheus</span><br><span class="line">WorkingDirectory=/usr/local/prometheus</span><br><span class="line">ExecStart=/usr/local/prometheus/prometheus</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动并开启自启</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> --now prometheus									</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>系统集成</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Untitled/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Jmeter 轻量级</span><br><span class="line">LoaderRunner 重量级</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/VPS%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">root      8841     1  0 01:49 ?        00:00:00 /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks-python/config.json -d start</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 创建软连接</span><br><span class="line">root@139141:/usr/local/bin<span class="comment"># ln /etc/init.d/shadowsocks-python /usr/bin/</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/WHEN%20YOU%20HAVE%20A%20NEW%20PC/</url>
+    <content><![CDATA[<h3 id="WHEN-YOU-HAVE-A-NEW-PC"><a href="#WHEN-YOU-HAVE-A-NEW-PC" class="headerlink" title=" WHEN YOU HAVE A NEW PC"></a><center> WHEN YOU HAVE A NEW PC</center></h3><h4 id="Java环境配置"><a href="#Java环境配置" class="headerlink" title="Java环境配置"></a>Java环境配置</h4><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h5><p>​	提前新建两个文件夹，jdk，jre，默认路径也可以</p>
+<p>​	安装<code>jdk-8u111-windows-x64.exe</code></p>
+<p>​	设置jdk、jre的路径</p>
+<h5 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h5><p>​	右键此电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  <strong>系统变量(S)</strong></p>
+<p>​	只有系统变量才是全局的。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">新建	CLASSPATH	.;</span><br><span class="line">新建	JAVA_HOME	jdk路径</span><br><span class="line">修改	path		添加 %JAVA_HOME%\bin;</span><br><span class="line"></span><br><span class="line">测试	java -version</span><br><span class="line">	 javac -version	</span><br></pre></td></tr></table></figure>
+
+<h4 id="Maven环境配置"><a href="#Maven环境配置" class="headerlink" title="Maven环境配置"></a>Maven环境配置</h4><ol>
+<li>解压<code>apache-maven-3.3.9.rar</code> 到指定的目录。</li>
+<li>修改配置文件（压缩包已修改过）。</li>
+</ol>
+<h4 id="GIT-工具"><a href="#GIT-工具" class="headerlink" title="GIT 工具"></a>GIT 工具</h4><h5 id="1-全局配置用户信息"><a href="#1-全局配置用户信息" class="headerlink" title="1. 全局配置用户信息"></a>1. 全局配置用户信息</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;fairy&quot;</span><br><span class="line">git config --global user.email &quot;fairy@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-生成key"><a href="#2-生成key" class="headerlink" title="2. 生成key"></a>2. 生成key</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#x27;email&#x27; // Email可选，会在key中生成你的邮箱信息  一直回车就行</span><br></pre></td></tr></table></figure>
+
+<p>​	生成的key文件  <code>C:\Users\你的用户名\.ssh\id_rsa.pub</code></p>
+<p>​	用文本编辑器打开，复制到GIT上。</p>
+<h5 id="3-上传项目到GIT"><a href="#3-上传项目到GIT" class="headerlink" title="3. 上传项目到GIT"></a>3. 上传项目到GIT</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd 项目文件加夹</span><br><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:fairyeye/StudyJava.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h4 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h4><p>安装<code>https://www.runoob.com/mysql/mysql-install.html</code></p>
+<p>修改初始密码</p>
+<p>MySQL版本5.7.6版本以前用户可以使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql&gt; SET PASSWORD = PASSWORD(&#x27;your pwd&#x27;); </span><br></pre></td></tr></table></figure>
+<p>MySQL版本5.7.6版本开始的用户可以使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql&gt; ALTER USER USER() IDENTIFIED BY &#x27;your pwd&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>登录报错 <code>https://www.cnblogs.com/lifan1998/p/9177731.html</code></p>
+<h4 id="去图标"><a href="#去图标" class="headerlink" title="去图标"></a>去图标</h4><p>​	管理员运行  <code>去图标.bat</code> 文件。</p>
+<h4 id="谷歌访问助手"><a href="#谷歌访问助手" class="headerlink" title="谷歌访问助手"></a>谷歌访问助手</h4><p>​	谷歌浏览器 -&gt; 更多工具 -&gt; 扩展程序 -&gt; 开发者模式(打开) 。</p>
+<p>​	拖动 <code>谷歌访问助手.crx</code> 到谷歌浏览器中。</p>
+<h4 id="软件安装清单"><a href="#软件安装清单" class="headerlink" title="软件安装清单"></a>软件安装清单</h4><ul>
+<li><p>IDEA：</p>
+</li>
+<li><p>Chrome：</p>
+</li>
+<li><p>uTools：</p>
+</li>
+<li><p>Typora：</p>
+</li>
+<li><p>Another Redis Desktop Manager：很好看的Redis客户端</p>
+</li>
+<li><p>XShell：好看 好用</p>
+</li>
+<li><p>tabby-terminal：<a href="https://github.com/Eugeny/tabby/releases/tag/v1.0.164">https://github.com/Eugeny/tabby/releases/tag/v1.0.164</a></p>
+</li>
+<li><p>Shadowsocks：小飞机</p>
+</li>
+<li><p>Windows Termial:Windows终端</p>
+</li>
+<li><ul>
+<li>nvm: Windows切换node版本</li>
+</ul>
+</li>
+<li><p>n：Mac切换node版本</p>
+</li>
+<li><p>pyenv：切换python版本</p>
+<ul>
+<li>Invoke-WebRequest -UseBasicParsing -Uri “<a href="https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1">https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1</a>“ -OutFile “.&#x2F;install-pyenv-win.ps1”; &amp;”.&#x2F;install-pyenv-win.ps1”</li>
+</ul>
+</li>
+</ul>
+<h2 id="电脑使用"><a href="#电脑使用" class="headerlink" title="电脑使用"></a>电脑使用</h2><h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/Work/</url>
+    <content><![CDATA[<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p><strong>Date：2020-12-20 22:12:30</strong></p>
+<h5 id="Intellij-IDEA-Live-Templete"><a href="#Intellij-IDEA-Live-Templete" class="headerlink" title="Intellij IDEA Live Templete"></a>Intellij IDEA Live Templete</h5><p>![image-20201220221405385](&#x2F;Users&#x2F;li&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20201220221405385.png)</p>
+<p>Preferences&#x2F;Editor&#x2F;Live Templates -&gt; Java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Abbreviation: 输入代码即可快速打印代码。比如常用的sout-&gt;System.out.print();</span><br><span class="line">Description: 描述。</span><br><span class="line">Template text: 模板内容。</span><br></pre></td></tr></table></figure>
+
+<p>实际上是通过<code>XML</code> 实现，右键<code>copy</code>粘贴之后可以看到。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">&quot;lo&quot;</span> <span class="attr">value</span>=<span class="string">&quot;private static final Logger LOGGER = LoggerFactory.getLogger($Class$.class);&quot;</span> <span class="attr">description</span>=<span class="string">&quot;Generate Logger Slf4j&quot;</span> <span class="attr">toReformat</span>=<span class="string">&quot;false&quot;</span> <span class="attr">toShortenFQNames</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">variable</span> <span class="attr">name</span>=<span class="string">&quot;Class&quot;</span> <span class="attr">expression</span>=<span class="string">&quot;className()&quot;</span> <span class="attr">defaultValue</span>=<span class="string">&quot;String&quot;</span> <span class="attr">alwaysStopAt</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">context</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">name</span>=<span class="string">&quot;JAVA_CODE&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<p><strong>Date:2020-12-19 10:20:18</strong></p>
+<p>数据分发，HZERO每个业务节点连接各自数据库</p>
+<hr>
+<p><strong>Date : 2020-12-09 19:29:18</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">src/main/resources</span><br><span class="line">banner.txt</span><br><span class="line">自定义banner</span><br><span class="line">生成banner网站：network-science.de/ascii/</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Optional 抛异常</span><br><span class="line">Optional.ofNullable(object&lt;T&gt; ).orElseThrow(() -&gt; new Exception());</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>fastJson使用</title>
+    <url>/2023/06/05/fastJson/</url>
+    <content><![CDATA[<p><code>syntax error, expect &#123;, actual [, pos 0, fastjson-version 1.2.50</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 转换一个map对象</span></span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; maps = jdbcTemplate.queryForList(<span class="string">&quot;select * from user&quot;</span>);</span><br><span class="line">		maps.forEach(stringObjectMap -&gt; &#123;</span><br><span class="line">			<span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> JSON.parseObject(JSON.toJSONString(stringObjectMap), User.class);</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Wed Apr 08 2020 00:00:00 GMT+0800 (中国标准时间)</title>
+    <url>/2020/04/08/test/</url>
+    <content><![CDATA[<p>当做实体类入参时，可以通过mapper接口的<code>@param</code>绑定入参。</p>
+<h3 id="Exception："><a href="#Exception：" class="headerlink" title="Exception："></a>Exception：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>子查询：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;select id=&quot;queryList&quot; resultType=&quot;org.hdgp.mdm.domain.entity.DataPermission&quot;&gt;</span><br><span class="line">    SELECT</span><br><span class="line">        ddp.*</span><br><span class="line">    FROM dmdm_data_permission ddp</span><br><span class="line">    WHERE 1=1</span><br><span class="line">    &lt;if test=&quot;permission.attrName!=null&quot;&gt;</span><br><span class="line">        AND ddp.attr_code in (</span><br><span class="line">        SELECT hda.attr_code</span><br><span class="line">        FROM hdpm_data_attribute hda</span><br><span class="line">        WHERE hda.attr_name LIKE CONCAT(CONCAT(&#x27;%&#x27;,#&#123;permission.attrName&#125;,&#x27;%&#x27;))</span><br><span class="line">        )</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;permission.attrValue!=null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value LIKE CONCAT(CONCAT(&#x27;%&#x27;,#&#123;permission.attrValue&#125;,&#x27;%&#x27;))</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;permission.meaning!=null&quot;&gt;</span><br><span class="line">        AND ddp.attr_value IN (</span><br><span class="line">        SELECT hlv.value</span><br><span class="line">        FROM hpfm_lov_value hlv</span><br><span class="line">        WHERE hlv.meaning like CONCAT(CONCAT(&#x27;%&#x27;,#&#123;permission.meaning&#125;,&#x27;%&#x27;))</span><br><span class="line">        )</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>换成连接查询：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Transactional注解</title>
+    <url>/2023/06/05/%E4%BA%8B%E5%8A%A1%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>方法A中调用B后再调用C,三个方法中均有插入数据后再查询数据</p>
+<p>B方法的注解：@Transactional(propagation&#x3D;Propagation.REQUIRES_NEW) –不管是否存在事务,都创建一个新的事务,原来的挂起,新的执行完毕,继续执行老的事务</p>
+<p>C方法的注解：@Transactional(propagation&#x3D;Propagation.REQUIRED) –如果有事务,那么加入事务,没有的话新建一个</p>
+<p>1、当方法B或者C报错时，A、B、C方法都回滚</p>
+<p>2、当方法A、B、C异常被捕获时，A、B、C事务不回滚（a、b、c均入库）</p>
+<p>3、当方法BC执行后，方法A报错时，A、C事务回滚，B事务不回滚（b数据入库）</p>
+<p>A方法向表中添加数据a，在查询该表能得到数据a</p>
+<p>B方法向表中添加数据b，再查询该表能得到数据b</p>
+<p>C方法向表中添加数据c，再查询该表能得到数据a，b，c</p>
+<p>带有注解@Transactional(propagation&#x3D;Propagation.REQUIRES_NEW)的方法走完之后，数据就会被提交入库</p>
+<p>另外需要注意方法内部调用@Transactional(propagation&#x3D;Propagation.REQUIRES_NEW)注解不生效，比如A和B都在同一个方法中，A调用B，B方法是此注解，则不生效。同样，AOP拦截也拦截不到B</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public enum Propagation &#123;</span><br><span class="line">    REQUIRED(0),</span><br><span class="line">    SUPPORTS(1),</span><br><span class="line">    MANDATORY(2),</span><br><span class="line">    REQUIRES_NEW(3),</span><br><span class="line">    NOT_SUPPORTED(4),</span><br><span class="line">    NEVER(5),</span><br><span class="line">    NESTED(6);</span><br><span class="line"></span><br><span class="line">    private final int value;</span><br><span class="line"></span><br><span class="line">    private Propagation(int value) &#123;</span><br><span class="line">        this.value = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int value() &#123;</span><br><span class="line">        return this.value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>七种事物传播类型 默认为：<code>REQUIRED</code></p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><h4 id="1-登录："><a href="#1-登录：" class="headerlink" title="1. 登录："></a>1. 登录：</h4><h4 id="2-注册："><a href="#2-注册：" class="headerlink" title="2. 注册："></a>2. 注册：</h4><h4 id="3-更改密码："><a href="#3-更改密码：" class="headerlink" title="3. 更改密码："></a>3. 更改密码：</h4>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<hr>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用 yarn 创建 Umi 脚手架，执行以下命令</span><br><span class="line">$ mkdir li &amp;&amp; cd li</span><br><span class="line">$ yarn create umi</span><br><span class="line">$ yarn</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">failed (13: Permission denied)</span><br><span class="line"></span><br><span class="line"># vim nginx.conf</span><br><span class="line"></span><br><span class="line"> - user www-data;</span><br><span class="line"> + user root;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>查询优化</title>
+    <url>/2023/06/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[<p>MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例（耗时129.570s）</span><br><span class="line">select * from task_result LIMIT 20000000, 10;</span><br><span class="line"></span><br><span class="line"># 正例（耗时5.114s）</span><br><span class="line">SELECT a.* FROM task_result a, (select id from task_result LIMIT 20000000, 10) b where a.id = b.id;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，id为主键，偏移量达到2000万</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="获取一条数据时的Limit-1"><a href="#获取一条数据时的Limit-1" class="headerlink" title="获取一条数据时的Limit 1"></a>获取一条数据时的Limit 1</h3><p>在很多情况下我们已知数据仅存在一条，此时我们应该告知数据库只用查一条，否则将会转化为全表扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例（耗时2424.612s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27;;</span><br><span class="line"></span><br><span class="line"># 正例（耗时1.036s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27; LIMIT 1;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，where条件非索引字段，数据所在行为第19486条记录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;B&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;C&#x27;,24)</span><br><span class="line"></span><br><span class="line"># 正例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24),(&#x27;B&#x27;,24),(&#x27;C&#x27;,24);</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">比较常规，就不多做说明了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<p><a href="https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension">https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension</a></p>
+]]></content>
+      <categories>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CAS</title>
+    <url>/2023/06/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%20-%20%E5%89%AF%E6%9C%AC/</url>
+    <content><![CDATA[<p><code>https://www.processon.com/view/link/5f6891517d9c087da1ba5bbe</code></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单例模式</title>
+    <url>/2023/06/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="1-最简单的单例模式："><a href="#1-最简单的单例模式：" class="headerlink" title="1. 最简单的单例模式："></a>1. 最简单的单例模式：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package com.example.demo.JUC.thread;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author huapeng.zhang</span><br><span class="line"> * @version 1.0</span><br><span class="line"> * @date 2020/9/17 18:28</span><br><span class="line"> */</span><br><span class="line">public class SingletomDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static SingletomDemo singletomDemo = null;</span><br><span class="line">    </span><br><span class="line">    private SingletomDemo() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;\t 我是构造方法SingletomDemo()！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static SingletomDemo getInstance() &#123;</span><br><span class="line">        if (singletomDemo == null) &#123;</span><br><span class="line">        		singletomDemo = new SingletomDemo();</span><br><span class="line">        &#125;</span><br><span class="line">        return singletomDemo;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 单线程</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在单线程的情况下，打印结果如下：</p>
+<p><img src="https://i.loli.net/2020/09/17/J9rb5oynQclfD4d.png" alt="image-20200917191550283"></p>
+<p>可以看到，虽然我们一共调用了六次<code>getInstance()</code>， 但是只打印了一次构造方法输出内容，也就是只调用了一个构造函数，所获得的对象地址自然是一样的。</p>
+<h4 id="2-多线程下的单例模式"><a href="#2-多线程下的单例模式" class="headerlink" title="2. 多线程下的单例模式"></a>2. 多线程下的单例模式</h4><p>我们对<code>main()</code>方法做一下改造，改造后的代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    // 改为多线程后 可能多次调用构造函数</span><br><span class="line">    for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">        new Thread(() -&gt; &#123;</span><br><span class="line">            SingletomDemo.getInstance();</span><br><span class="line">        &#125;, String.valueOf(i)).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打印结果为：</p>
+<p><img src="https://i.loli.net/2020/09/17/Q7RWYjayOgoXfH1.png" alt="image-20200917192220270"></p>
+<p>多次执行下可以看到打印的次数是不同的。</p>
+<p>可以对<code>getInstance()</code>方法添加<code>synchronized</code>加锁，保证只生成一个实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private static synchronized SingletomDemo getInstance() &#123;</span><br><span class="line">    if (singletomDemo == null) &#123;</span><br><span class="line">    		singletomDemo = new SingletomDemo();</span><br><span class="line">    &#125;</span><br><span class="line">    return singletomDemo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再次执行程序发现只打印了一次构造方法输出函数，还有另外一种方法就是<code>DCL：double check locks双端检测模式</code>模式也可以达到同样的目的。</p>
+<h4 id="3-DCL-单例模式"><a href="#3-DCL-单例模式" class="headerlink" title="3.DCL + 单例模式"></a>3.DCL + 单例模式</h4><p>我们再次对<code>getInstance()</code>方法进行改造，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// DCL模式(double check locks双端检测模式)</span><br><span class="line">private static SingletomDemo getInstance() &#123;</span><br><span class="line">    if (singletomDemo == null) &#123;</span><br><span class="line">        synchronized (SingletomDemo.class) &#123;</span><br><span class="line">            if (singletomDemo == null) &#123;</span><br><span class="line">                singletomDemo = new SingletomDemo();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return singletomDemo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当我们的单例模式写到这种程度的时候，基本可以应对99%的情况，但是由于<code>指令排序</code>的存在，还是有可能会出现问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">memory = allocate(); //1.分配对象内存空间</span><br><span class="line">instance(memory);    //2.初始化对象</span><br><span class="line">instance = memory;   //3.设置instance指向刚分配的内存地址，此时instance!=null</span><br></pre></td></tr></table></figure>
+
+<p>步骤2、3不存在数据依赖，所以由于指令重排的关系，可能会出现：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">memory = allocate(); //1.分配对象内存空间</span><br><span class="line">instance = memory;   //3.设置instance指向刚分配的内存地址，此时instance!=null</span><br><span class="line">instance(memory);    //2.初始化对象</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-Volatile-单例模式"><a href="#4-Volatile-单例模式" class="headerlink" title="4.Volatile + 单例模式"></a>4.Volatile + 单例模式</h4><p>我们在声明 <code>singletomDemo</code>时，加上<code>Volatile</code>关键字修饰，就可以达到完美的效果。</p>
+<p>最终代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package com.example.demo.JUC.thread;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @author huapeng.zhang</span><br><span class="line"> * @version 1.0</span><br><span class="line"> * @date 2020/9/17 18:28</span><br><span class="line"> */</span><br><span class="line">public class SingletomDemo &#123;</span><br><span class="line"></span><br><span class="line">    private static volatile SingletomDemo singletomDemo = null;</span><br><span class="line"></span><br><span class="line">    private SingletomDemo() &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;\t 我是构造方法SingletomDemo()！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // DCL模式(double check locks双端检测模式)</span><br><span class="line">    private static SingletomDemo getInstance() &#123;</span><br><span class="line">        if (singletomDemo == null) &#123;</span><br><span class="line">            synchronized (SingletomDemo.class) &#123;</span><br><span class="line">                if (singletomDemo == null) &#123;</span><br><span class="line">                    singletomDemo = new SingletomDemo();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singletomDemo;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 单线程</span><br><span class="line">//        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">//        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line">//        System.out.println(SingletomDemo.getInstance() == SingletomDemo.getInstance());</span><br><span class="line"></span><br><span class="line">//         改为多线程后 可能多次调用构造函数</span><br><span class="line">//         可以在 getInstance上加SYNC解决问题</span><br><span class="line">        for (int i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">            new Thread(() -&gt; &#123;</span><br><span class="line">                SingletomDemo.getInstance();</span><br><span class="line">            &#125;, String.valueOf(i)).start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>反射</title>
+    <url>/2023/06/05/%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E7%88%B6%E7%B1%BB%E5%AD%97%E6%AE%B5/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class&lt;?&gt; superclass = itfBaseBO.getClass();</span><br><span class="line"><span class="keyword">while</span> (!superclass.getName().equals(ExpandDomain.class.getName())) &#123;</span><br><span class="line">    superclass = superclass.getSuperclass();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/</url>
+    <content><![CDATA[<h4 id="1-查询数据库是否启用-FEDERATED引擎"><a href="#1-查询数据库是否启用-FEDERATED引擎" class="headerlink" title="1.查询数据库是否启用 FEDERATED引擎"></a>1.查询数据库是否启用 <strong>FEDERATED</strong>引擎</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SHOW ENGINES;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/10/26/NmkbpSugEsld1rJ.png"></p>
+<p>如果<code>Support</code> 为<code>NO</code>需要改为<code>YES</code> ，只需要修改自己的数据库，目标数据库无需修改。</p>
+<h4 id="2-建立数据库"><a href="#2-建立数据库" class="headerlink" title="2.建立数据库"></a>2.建立数据库</h4><p>自建表引擎一般为<code>InnoDB</code>，建立远程数据表示需要修改为<code>FEDERATED</code></p>
+<p>建立与目标 表一样的表结构  替换引擎为<code>FEDERATED</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ENGINE=FEDERATED CONNECTION=&#x27;mysql://#&#123;userName&#125;:#&#123;passwd&#125;@#&#123;IP&#125;:#&#123;PORT&#125;/#&#123;数据库&#125;/#&#123;表&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E6%8C%96%E5%9D%91/</url>
+    <content><![CDATA[<h3 id="interface"><a href="#interface" class="headerlink" title="@interface"></a>@interface</h3><p><img src="https://i.loli.net/2020/06/26/9dsgJ8kPlNnyHFV.png" alt="image-20200626141113470"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt install git </span><br><span class="line">报错：Temporary failure resolving &#x27;archive.ubuntu.com</span><br><span class="line">具体如下：</span><br><span class="line"></span><br><span class="line">Ign:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">Ign:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 git amd64 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17-1.2_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git-man_2.7.4-0ubuntu1_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1_amd64.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line">root@132157:~# apt-get update</span><br><span class="line">Err:1 http://security.ubuntu.com/ubuntu xenial-security InRelease</span><br><span class="line">  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-updates/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-backports/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/xenial-security/InRelease  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>原因是DNS未配置</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/resolv.conf</span><br><span class="line"></span><br><span class="line">+ nameserver 202.96.134.133</span><br><span class="line">+ nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>数据库时间存储</title>
+    <url>/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h1 id="数据库如何存储时间？你真的知道吗？"><a href="#数据库如何存储时间？你真的知道吗？" class="headerlink" title="数据库如何存储时间？你真的知道吗？"></a>数据库如何存储时间？你真的知道吗？</h1><p>我们平时开发中不可避免的就是要存储时间，比如我们要记录操作表中这条记录的时间、记录转账的交易时间、记录出发时间等等。你会发现这个时间这个东西与我们开发的联系还是非常紧密的，用的好与不好会给我们的业务甚至功能带来很大的影响。所以，我们有必要重新出发，好好认识一下这个东西。</p>
+<p>这是一篇短小精悍的文章，仔细阅读一定能学到不少东西！</p>
+<h3 id="1-切记不要用字符串存储日期"><a href="#1-切记不要用字符串存储日期" class="headerlink" title="1.切记不要用字符串存储日期"></a>1.切记不要用字符串存储日期</h3><p>我记得我在大学的时候就这样干过，而且现在很多对数据库不太了解的新手也会这样干，可见，这种存储日期的方式的优点还是有的，就是简单直白，容易上手。</p>
+<p>但是，这是不正确的做法，主要会有下面两个问题：</p>
+<ol>
+<li>字符串占用的空间更大！</li>
+<li>字符串存储的日期比较效率比较低（逐个字符进行比对），无法用日期相关的 API 进行计算和比较。</li>
+</ol>
+<h3 id="2-Datetime-和-Timestamp-之间抉择"><a href="#2-Datetime-和-Timestamp-之间抉择" class="headerlink" title="2.Datetime 和 Timestamp 之间抉择"></a>2.Datetime 和 Timestamp 之间抉择</h3><p>Datetime 和 Timestamp 是 MySQL 提供的两种比较相似的保存时间的数据类型。他们两者究竟该如何选择呢？</p>
+<p><strong>通常我们都会首选 Timestamp。</strong> 下面说一下为什么这样做!</p>
+<h4 id="2-1-DateTime-类型没有时区信息的"><a href="#2-1-DateTime-类型没有时区信息的" class="headerlink" title="2.1 DateTime 类型没有时区信息的"></a>2.1 DateTime 类型没有时区信息的</h4><p><strong>DateTime 类型是没有时区信息的（时区无关）</strong> ，DateTime 类型保存的时间都是当前会话所设置的时区对应的时间。这样就会有什么问题呢？当你的时区更换之后，比如你的服务器更换地址或者更换客户端连接时区设置的话，就会导致你从数据库中读出的时间错误。不要小看这个问题，很多系统就是因为这个问题闹出了很多笑话。</p>
+<p><strong>Timestamp 和时区有关</strong>。Timestamp 类型字段的值会随着服务器时区的变化而变化，自动换算成相应的时间，说简单点就是在不同时区，查询到同一个条记录此字段的值会不一样。</p>
+<p>下面实际演示一下！</p>
+<p>建表 SQL 语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CREATE TABLE `time_zone_test` (</span><br><span class="line">  `id` bigint(20) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `date_time` datetime DEFAULT NULL,</span><br><span class="line">  `time_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,</span><br><span class="line">  PRIMARY KEY (`id`)</span><br><span class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8;</span><br></pre></td></tr></table></figure>
+
+<p>插入数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">INSERT INTO time_zone_test(date_time,time_stamp) VALUES(NOW(),NOW());</span><br></pre></td></tr></table></figure>
+
+<p>查看数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select date_time,time_stamp from time_zone_test;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+---------------------+---------------------+</span><br><span class="line">| date_time           | time_stamp          |</span><br><span class="line">+---------------------+---------------------+</span><br><span class="line">| 2020-01-11 09:53:32 | 2020-01-11 09:53:32 |</span><br><span class="line">+---------------------+---------------------+</span><br></pre></td></tr></table></figure>
+
+<p>现在我们运行</p>
+<p>修改当前会话的时区:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set time_zone=&#x27;+8:00&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>再次查看数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+---------------------+---------------------+</span><br><span class="line">| date_time           | time_stamp          |</span><br><span class="line">+---------------------+---------------------+</span><br><span class="line">| 2020-01-11 09:53:32 | 2020-01-11 17:53:32 |</span><br><span class="line">+---------------------+---------------------+</span><br></pre></td></tr></table></figure>
+
+<p><strong>扩展：一些关于 MySQL 时区设置的一个常用 sql 命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看当前会话时区</span><br><span class="line">SELECT @@session.time_zone;</span><br><span class="line"># 设置当前会话时区</span><br><span class="line">SET time_zone = &#x27;Europe/Helsinki&#x27;;</span><br><span class="line">SET time_zone = &quot;+00:00&quot;;</span><br><span class="line"># 数据库全局时区设置</span><br><span class="line">SELECT @@global.time_zone;</span><br><span class="line"># 设置全局时区</span><br><span class="line">SET GLOBAL time_zone = &#x27;+8:00&#x27;;</span><br><span class="line">SET GLOBAL time_zone = &#x27;Europe/Helsinki&#x27;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-2-DateTime-类型耗费空间更大"><a href="#2-2-DateTime-类型耗费空间更大" class="headerlink" title="2.2 DateTime 类型耗费空间更大"></a>2.2 DateTime 类型耗费空间更大</h4><p>Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。但是，这样同样造成了一个问题，Timestamp 表示的时间范围更小。</p>
+<ul>
+<li>DateTime ：1000-01-01 00:00:00 ~ 9999-12-31 23:59:59</li>
+<li>Timestamp： 1970-01-01 00:00:01 ~ 2037-12-31 23:59:59</li>
+</ul>
+<blockquote>
+<p>Timestamp 在不同版本的 MySQL 中有细微差别。</p>
+</blockquote>
+<h3 id="3-再看-MySQL-日期类型存储空间"><a href="#3-再看-MySQL-日期类型存储空间" class="headerlink" title="3 再看 MySQL 日期类型存储空间"></a>3 再看 MySQL 日期类型存储空间</h3><p>下图是 MySQL 5.6 版本中日期类型所占的存储空间：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/1/14/16fa26644507d5f4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+<p>可以看出 5.6.4 之后的 MySQL 多出了一个需要 0 ～ 3 字节的小数位。Datatime 和 Timestamp 会有几种不同的存储空间占用。</p>
+<p>为了方便，本文我们还是默认 Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。</p>
+<h3 id="4-数值型时间戳是更好的选择吗？"><a href="#4-数值型时间戳是更好的选择吗？" class="headerlink" title="4.数值型时间戳是更好的选择吗？"></a>4.数值型时间戳是更好的选择吗？</h3><p>很多时候，我们也会使用 int 或者 bigint 类型的数值也就是时间戳来表示时间。</p>
+<p>这种存储方式的具有 Timestamp 类型的所具有一些优点，并且使用它的进行日期排序以及对比等操作的效率会更高，跨系统也很方便，毕竟只是存放的数值。缺点也很明显，就是数据的可读性太差了，你无法直观的看到具体时间。</p>
+<p>时间戳的定义如下：</p>
+<blockquote>
+<p>时间戳的定义是从一个基准时间开始算起，这个基准时间是「1970-1-1 00:00:00 +0:00」，从这个时间开始，用整数表示，以秒计时，随着时间的流逝这个时间整数不断增加。这样一来，我只需要一个数值，就可以完美地表示时间了，而且这个数值是一个绝对数值，即无论的身处地球的任何角落，这个表示时间的时间戳，都是一样的，生成的数值都是一样的，并且没有时区的概念，所以在系统的中时间的传输中，都不需要进行额外的转换了，只有在显示给用户的时候，才转换为字符串格式的本地时间。</p>
+</blockquote>
+<p>数据库中实际操作：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql&gt; select UNIX_TIMESTAMP(&#x27;2020-01-11 09:53:32&#x27;);</span><br><span class="line">+---------------------------------------+</span><br><span class="line">| UNIX_TIMESTAMP(&#x27;2020-01-11 09:53:32&#x27;) |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|                            1578707612 |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select FROM_UNIXTIME(1578707612);</span><br><span class="line">+---------------------------+</span><br><span class="line">| FROM_UNIXTIME(1578707612) |</span><br><span class="line">+---------------------------+</span><br><span class="line">| 2020-01-11 09:53:32       |</span><br><span class="line">+---------------------------+</span><br><span class="line">1 row in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">转载：https://juejin.im/post/5e1d494a5188254c45778a14</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%81/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/Tastill/article/details/88060539">https://blog.csdn.net/Tastill/article/details/88060539</a></p>
+<p>pdf   <a href="https://www.cnblogs.com/duoduo-727/p/9367175.html">https://www.cnblogs.com/duoduo-727/p/9367175.html</a></p>
+<p>CASE<br>    mmla.ATTR_VALUE<br>    WHEN ‘Y’ THEN<br>    ‘BONDED’ ELSE ‘’<br>END </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">desc information_schema.innodb_locks;</span><br><span class="line">SHOW PROCESSLIST;</span><br><span class="line">show OPEN TABLES where In_use &gt; 0;</span><br><span class="line">select * from information_schema.innodb_trx;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Java8 LocalDate</title>
+    <url>/2023/06/05/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">LocalDate localDate = LocalDate.now();</span><br><span class="line">      LocalTime localTime = LocalTime.now();</span><br><span class="line">      LocalDateTime localDateTime = LocalDateTime.now();</span><br><span class="line"></span><br><span class="line">      System.out.println(localDate); // 2020-10-09</span><br><span class="line">      System.out.println(localTime); // 18:29:47.712227100</span><br><span class="line">      System.out.println(localDateTime); // 2020-10-09T18:29:47.712227100</span><br><span class="line"></span><br><span class="line">      // 去掉毫秒</span><br><span class="line">      System.out.println(localTime.withNano(0)); // 18:29:47</span><br><span class="line">      System.out.println(localDateTime.withNano(0)); // 2020-10-09T18:29:47</span><br><span class="line">      System.out.println(localTime.truncatedTo(ChronoUnit.SECONDS)); // 18:29:47</span><br><span class="line">      System.out.println(localDateTime.truncatedTo(ChronoUnit.SECONDS)); // 2020-10-09T18:29:47</span><br><span class="line"></span><br><span class="line">      // 获取加减一天的日期</span><br><span class="line">      System.out.println(localDateTime.plusDays(1L)); // 2020-10-10T18:33:47.376192400</span><br><span class="line">      System.out.println(localDateTime.plusDays(-1L)); // 2020-10-08T18:33:47.376192400</span><br></pre></td></tr></table></figure>
+
+<p>参考API</p>
+]]></content>
+      <tags>
+        <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>时间戳 -&gt; Date</title>
+    <url>/2020/04/17/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h4><p>后来发现是我拿到的时间戳是以 秒 为单位的，而转换时需要的是 毫秒。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">1579676844</span>); <span class="comment">// 1970-01-19T14:47:56.844+0800</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">1579676844</span> * <span class="number">1000L</span>); <span class="comment">// 2020-01-22T15:07:24.000+0800</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>basic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E6%9C%89%E5%BA%8F%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<p>0001-0099&#x2F;字符串有序</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">NumberFormat f=new DecimalFormat(&quot;00000&quot;);</span><br><span class="line">for(int i=1;i&lt;10000;i++)&#123;</span><br><span class="line">System.out.println(f.format(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ER-00001 下一个为ER-00002一直到ER-99999</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String m = &quot;ER-&quot;;</span><br><span class="line">for (int i = 0; i &lt; 2; i++) &#123;</span><br><span class="line">    String format = String.format(&quot;%05d&quot;, i);   </span><br><span class="line">    System.out.println(m+format);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://user-gold-cdn.xitu.io/2020/6/16/172baf15ddf4c269?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E6%9C%AA%E6%95%B4%E5%90%88/</url>
+    <content><![CDATA[<p># 先将当前仓库的文件的暂存区中剔除 git rm -r –cached . # 再添加所有的文件到暂存区，这时.gitignore文件就会生效了 git add .</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>MySQL查询</title>
+    <url>/2023/06/05/%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<h4 id="1-首先要保证本地的MySQL服务支持FEDERATED引擎。"><a href="#1-首先要保证本地的MySQL服务支持FEDERATED引擎。" class="headerlink" title="1. 首先要保证本地的MySQL服务支持FEDERATED引擎。"></a>1. 首先要保证本地的MySQL服务支持FEDERATED引擎。</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：SHOW ENGINES;</span><br><span class="line">如下 FEDERATED 行的Support为YES则表示开启了FEDERATED。</span><br><span class="line">如果为 NO 则表示未开启。</span><br><span class="line"></span><br><span class="line">如果 FEDERATED 没有开启的话 要启用。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png"></p>
+<h4 id="2-启用-FEDERATED"><a href="#2-启用-FEDERATED" class="headerlink" title="2.启用 FEDERATED"></a>2.启用 FEDERATED</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在MySQL的配置文件</span><br><span class="line">安装目录下的my.ini或my.cnf </span><br><span class="line">加上 一行  `FEDERATED`</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/10/22/HhLBosuOdeNDbgQ.png"></p>
+<h4 id="3-建表"><a href="#3-建表" class="headerlink" title="3.建表"></a>3.建表</h4><p><strong>建表一般应的是InnoDB引擎，这里需要修改一下 改为</strong> <code>ENGINE=FEDERATED</code></p>
+<p>从原表导出表结构SQL，然后修改 <code>ENGINE = InnoDB</code>-&gt;<code>ENGINE=FEDERATED CONNECTION=&#39;mysql://用户名:密码@IP:PORT/库名/表名&#39;</code></p>
+<p>然后打开这张表，可以看到远程表里的数据已经同步到了这张表。</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E6%9F%A5%E8%AF%A2%E4%B8%8D%E5%9C%A8B%E8%A1%A8%E9%87%8C%E7%9A%84A%E8%A1%A8%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java Zero</title>
+    <url>/2023/06/05/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</url>
+    <content><![CDATA[<p>启动类</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class DoaApplication &#123;</span><br><span class="line"></span><br><span class="line">	@Resource</span><br><span class="line">	private JdbcTemplate jdbcTemplate;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		SpringApplication.run(DoaApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@GetMapping(&quot;/test&quot;)</span><br><span class="line">	public List&lt;Map&lt;String, Object&gt;&gt; test() &#123;</span><br><span class="line">		return jdbcTemplate.queryForList(&quot;select * from user&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:mysql://localhost:3306/doa?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;rewriteBatchedStatements=true&amp;serverTimezone=UTC</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;-- pom --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Java-Zero"><a href="#Java-Zero" class="headerlink" title="Java Zero"></a>Java Zero</h1><h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;spring-boot.version&gt;2.1.18.RELEASE&lt;/spring-boot.version&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="开源组件"><a href="#开源组件" class="headerlink" title="开源组件"></a>开源组件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">上传文件</span><br><span class="line">spring-file-storage</span><br><span class="line">https://spring-file-storage.xuyanwu.cn/#/</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>dairy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<p><img src="https://i.loli.net/2020/07/16/ZXJmPqvfo2W6U9p.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>设计模式遵循六⼤原则；单⼀职责( ⼀个类和⽅法只做⼀件事 )、⾥⽒替换( 多态，⼦类可扩展⽗类 )、依赖 倒置( 细节依赖抽象，下层依赖上层 )、接⼝隔离( 建⽴单⼀接⼝ )、迪⽶特原则( 最少知道，降低耦合 )、开闭 原则( 抽象架构，扩展实现 ）。</p>
+<h2 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="1. 工厂模式"></a>1. 工厂模式</h2><p>举个例子：</p>
+<p>吃：南方人爱吃饭，北方人爱吃面</p>
+<p>定义一个接口：吃</p>
+<p>定义两个实现类继承吃：饭、面</p>
+<p>定义一个工厂：饭店</p>
+<p>饭店通过判断是南方人还是北方人返回不同的实现类，从而让不同的人吃到了不同的饭</p>
+<h2 id="2-抽象工厂模式"><a href="#2-抽象工厂模式" class="headerlink" title="2.抽象工厂模式"></a>2.抽象工厂模式</h2><h2 id="3-建造者模式"><a href="#3-建造者模式" class="headerlink" title="3.建造者模式"></a>3.建造者模式</h2><p>实体类的<code>setXxx()</code>方法，一般是返回<code>void</code>，可以改造为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> ObjectX <span class="title function_">setXxx</span><span class="params">(String xx)</span> &#123;</span><br><span class="line">	<span class="built_in">this</span>.xxx = xx</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-原型模式"><a href="#4-原型模式" class="headerlink" title="4. 原型模式"></a>4. 原型模式</h2><p>考卷题目和答案乱序。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>淘汰策略</title>
+    <url>/2023/06/05/%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">常见的策略有三种：</span><br><span class="line"></span><br><span class="line">- FIFO：先进先出策略 </span><br><span class="line">- LFU：最少使用策略</span><br><span class="line">- LRU：最近最少使用策略</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+</search>
