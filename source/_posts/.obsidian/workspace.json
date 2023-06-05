@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a4e49a42b3d8d6df",
+        "id": "baf987aebb94befc",
         "type": "tabs",
         "children": [
           {
-            "id": "b1e771ea250f467b",
+            "id": "a1454f99182f8f0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "15.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "15.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "15.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "15.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -163,10 +163,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b1e771ea250f467b",
+  "active": "a1454f99182f8f0c",
   "lastOpenFiles": [
-    "16.md",
     "15.md",
+    "GitHub Page.md",
+    "16.md",
     "20.md",
     "14.md",
     "13.md",
@@ -190,7 +191,6 @@
     "MySQL数据删除恢复.md",
     "VPS相关.md",
     "Nacos.md",
-    "MySQL.md",
-    "使用教程.md"
+    "MySQL.md"
   ]
 }
