@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "15.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md"
+                "file": "15.md"
               }
             }
           }
@@ -165,11 +165,20 @@
   },
   "active": "b1e771ea250f467b",
   "lastOpenFiles": [
+    "16.md",
+    "15.md",
+    "20.md",
+    "14.md",
+    "13.md",
+    "FileUtils.md",
+    "需要掌握以下知识.md",
+    "Ubuntu.md",
+    "搭建SSR服务器.md",
+    "WHEN YOU HAVE A NEW PC.md",
     "Work.md",
     "算法.md",
     "Redis.md",
     "IDEA.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "10.md",
     "项目实战.md",
     "Obsidian.md",
@@ -180,13 +189,8 @@
     "Object.md",
     "MySQL数据删除恢复.md",
     "VPS相关.md",
-    "Untitled.md",
-    "Ubuntu.md",
     "Nacos.md",
     "MySQL.md",
-    "使用教程.md",
-    "StringToInteger.md",
-    "Springboot返回html.md",
-    "Redis笔记.md"
+    "使用教程.md"
   ]
 }
