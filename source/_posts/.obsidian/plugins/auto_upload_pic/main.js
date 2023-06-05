@@ -86,7 +86,7 @@ var AutoUploadPicImageUrl = class extends import_obsidian.Plugin {
       }
       e.preventDefault();
       for (let i = 0; i < files.length; i += 1) {
-        new import_obsidian.Notice("customPasteEventCallback...");
+        new import_obsidian.Notice("This is customPasteEventCallback, you copy an picture");
         this.uploadFileAndEmbedImgurImage(files[i]).catch(() => {
           markdownView.currentMode.clipboardManager.handlePaste(new PasteEventCopy(e));
         });
@@ -97,9 +97,6 @@ var AutoUploadPicImageUrl = class extends import_obsidian.Plugin {
     return __async(this, null, function* () {
       yield this.loadSettings();
       this.setupImgurHandlers();
-      const ribbonIconEl = this.addRibbonIcon("dice", "icon", (evt) => {
-        new import_obsidian.Notice("this is a notice");
-      });
     });
   }
   setupImgurHandlers() {

@@ -43,14 +43,14 @@ export default class AutoUploadPicImageUrl extends Plugin {
 		this.setupImgurHandlers();
 
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon(
-			"dice",
-			"icon",
-			(evt: MouseEvent) => {
-				// Called when the user clicks the icon.
-				new Notice("this is a notice");
-			}
-		);
+		// const ribbonIconEl = this.addRibbonIcon(
+		// 	"dice",
+		// 	"icon",
+		// 	(evt: MouseEvent) => {
+		// 		// Called when the user clicks the icon.
+		// 		new Notice("this is a notice");
+		// 	}
+		// );
 		// Perform additional things with the ribbon
 		// ribbonIconEl.addClass('my-plugin-ribbon-class');
 
@@ -129,7 +129,7 @@ export default class AutoUploadPicImageUrl extends Plugin {
 		e.preventDefault();
 
 		for (let i = 0; i < files.length; i += 1) {
-			new Notice("customPasteEventCallback...");
+			new Notice("This is customPasteEventCallback, you copy an picture");
 			this.uploadFileAndEmbedImgurImage(files[i]).catch(() => {
 				markdownView.currentMode.clipboardManager.handlePaste(
 					new PasteEventCopy(e)
@@ -202,7 +202,6 @@ export default class AutoUploadPicImageUrl extends Plugin {
 	public embedMarkDownImage(pasteId: string, imageUrl: string) {
 		const progressText = AutoUploadPicImageUrl.progressTextFor(pasteId);
 		const markDownImage = `![](${imageUrl})`;
-		// new Notice("markDownImage is " + markDownImage);
 		AutoUploadPicImageUrl.replaceFirstOccurrence(
 			this.getEditor(),
 			progressText,
