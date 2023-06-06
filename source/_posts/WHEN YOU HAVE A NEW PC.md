@@ -119,5 +119,14 @@ mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
     -   Invoke-WebRequest -UseBasicParsing -Uri "[https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1](https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1)" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 
 
-  
+
+## Mac
+
+### 终端：
+
+##### oh my zsh
+```
+https://zhuanlan.zhihu.com/p/550022490
+https://blog.csdn.net/weixin_42326144/article/details/121957795
+```
 

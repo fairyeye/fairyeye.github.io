@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "时间",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -155,6 +156,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "auto_upload_pic:icon": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -163,7 +165,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a1454f99182f8f0c",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
     "15.md",
     "GitHub Page.md",
