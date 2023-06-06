@@ -43,14 +43,14 @@ export default class AutoUploadPicImageUrl extends Plugin {
 		this.setupImgurHandlers();
 
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon(
-			"dice",
-			"icon",
-			(evt: MouseEvent) => {
-				// Called when the user clicks the icon.
-				new Notice("this is a notice");
-			}
-		);
+		// const ribbonIconEl = this.addRibbonIcon(
+		// 	"dice",
+		// 	"icon",
+		// 	(evt: MouseEvent) => {
+		// 		// Called when the user clicks the icon.
+		// 		new Notice("this is a notice");
+		// 	}
+		// );
 		// Perform additional things with the ribbon
 		// ribbonIconEl.addClass('my-plugin-ribbon-class');
 

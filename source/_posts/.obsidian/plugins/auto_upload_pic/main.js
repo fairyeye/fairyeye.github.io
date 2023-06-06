@@ -97,9 +97,6 @@ var AutoUploadPicImageUrl = class extends import_obsidian.Plugin {
     return __async(this, null, function* () {
       yield this.loadSettings();
       this.setupImgurHandlers();
-      const ribbonIconEl = this.addRibbonIcon("dice", "icon", (evt) => {
-        new import_obsidian.Notice("this is a notice");
-      });
     });
   }
   setupImgurHandlers() {
