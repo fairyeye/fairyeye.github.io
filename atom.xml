@@ -8,7 +8,116 @@
     <author>
       <name>有李说不清</name>
     </author>
-    <updated>2023-06-05T05:49:50.603Z</updated>
+    <updated>2023-06-07T13:29:01.504Z</updated>
+    <entry>
+        <id>https://fairyeye.github.io/2023/06/07/2023-06-07/</id>
+        <title></title>
+        <link rel="alternate" href="https://fairyeye.github.io/2023/06/07/2023-06-07/"/>
+        <content type="html"></content>
+        <updated>2023-06-07T13:29:01.504Z</updated>
+    </entry>
+    <entry>
+        <id>https://fairyeye.github.io/2023/06/05/GitHub%20Page/</id>
+        <title>GitHub Page</title>
+        <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/GitHub%20Page/"/>
+        <content type="html">&lt;p&gt;&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;## 拉取子模块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git submodule init // 初始化子模块&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git submodule update // 更新子模块与主仓库中的子模块代码同步&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+        <category term="hexo" scheme="https://fairyeye.github.io/tags/hexo/" />
+        <updated>2023-06-05T06:10:07.408Z</updated>
+    </entry>
+    <entry>
+        <id>https://fairyeye.github.io/2023/06/05/WHEN%20YOU%20HAVE%20A%20NEW%20PC/</id>
+        <title>WHEN YOU HAVE A NEW PC</title>
+        <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/WHEN%20YOU%20HAVE%20A%20NEW%20PC/"/>
+        <content type="html">&lt;h3 id=&#34;center-when-you-have-a-new-pccenter&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#center-when-you-have-a-new-pccenter&#34;&gt;#&lt;/a&gt; &amp;lt;center&amp;gt; WHEN YOU HAVE A NEW PC&amp;lt;/center&amp;gt;&lt;/h3&gt;
+&lt;h4 id=&#34;java环境配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java环境配置&#34;&gt;#&lt;/a&gt; Java 环境配置&lt;/h4&gt;
+&lt;h5 id=&#34;1-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-安装&#34;&gt;#&lt;/a&gt; 1. 安装&lt;/h5&gt;
+&lt;p&gt;​	提前新建两个文件夹，jdk，jre，默认路径也可以&lt;/p&gt;
+&lt;p&gt;​	安装 &lt;code&gt;jdk-8u111-windows-x64.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	设置 jdk、jre 的路径&lt;/p&gt;
+&lt;h5 id=&#34;2-配置环境变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-配置环境变量&#34;&gt;#&lt;/a&gt; 2. 配置环境变量&lt;/h5&gt;
+&lt;p&gt;​	右键此电脑 -&amp;gt; 属性 -&amp;gt; 高级系统设置 -&amp;gt; 环境变量 -&amp;gt;  &lt;strong&gt;系统变量 (S)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	只有系统变量才是全局的。&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;新建	CLASSPATH	.;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;新建	JAVA_HOME	jdk路径&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;修改	path		添加 %JAVA_HOME%\bin;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;测试	java -version&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	 javac -version	&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;maven环境配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#maven环境配置&#34;&gt;#&lt;/a&gt; Maven 环境配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;解压 &lt;code&gt;apache-maven-3.3.9.rar&lt;/code&gt;  到指定的目录。&lt;/li&gt;
+&lt;li&gt;修改配置文件（压缩包已修改过）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;git-工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git-工具&#34;&gt;#&lt;/a&gt; GIT 工具&lt;/h4&gt;
+&lt;h5 id=&#34;1-全局配置用户信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-全局配置用户信息&#34;&gt;#&lt;/a&gt; 1. 全局配置用户信息&lt;/h5&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.name &amp;quot;fairy&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.email &amp;quot;fairy@gmail.com&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h5 id=&#34;2-生成key&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-生成key&#34;&gt;#&lt;/a&gt; 2. 生成 key&lt;/h5&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ssh-keygen -t rsa -C &amp;#x27;email&amp;#x27; // Email可选，会在key中生成你的邮箱信息  一直回车就行&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;​	生成的 key 文件   &lt;code&gt;C:\Users\你的用户名\.ssh\id_rsa.pub&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	用文本编辑器打开，复制到 GIT 上。&lt;/p&gt;
+&lt;h5 id=&#34;3-上传项目到git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-上传项目到git&#34;&gt;#&lt;/a&gt; 3. 上传项目到 GIT&lt;/h5&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd 项目文件加夹&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:fairyeye/StudyJava.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;Initial commit&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;mysql-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql-安装&#34;&gt;#&lt;/a&gt; MySQL 安装&lt;/h4&gt;
+&lt;p&gt;安装 &lt;code&gt;https://www.runoob.com/mysql/mysql-install.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;修改初始密码&lt;/p&gt;
+&lt;p&gt;MySQL 版本 5.7.6 版本以前用户可以使用如下命令：&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mysql&amp;gt; SET PASSWORD = PASSWORD(&amp;#x27;your pwd&amp;#x27;); &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br /&gt;
+MySQL 版本 5.7.6 版本开始的用户可以使用如下命令：&lt;br /&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mysql&amp;gt; ALTER USER USER() IDENTIFIED BY &amp;#x27;your pwd&amp;#x27;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;登录报错  &lt;code&gt;https://www.cnblogs.com/lifan1998/p/9177731.html&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;去图标&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#去图标&#34;&gt;#&lt;/a&gt; 去图标&lt;/h4&gt;
+&lt;p&gt;​	管理员运行   &lt;code&gt;去图标.bat&lt;/code&gt;  文件。&lt;/p&gt;
+&lt;h4 id=&#34;谷歌访问助手&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#谷歌访问助手&#34;&gt;#&lt;/a&gt; 谷歌访问助手&lt;/h4&gt;
+&lt;p&gt;​	谷歌浏览器 -&amp;gt; 更多工具 -&amp;gt; 扩展程序 -&amp;gt; 开发者模式 (打开) 。&lt;/p&gt;
+&lt;p&gt;​	拖动  &lt;code&gt;谷歌访问助手.crx&lt;/code&gt;  到谷歌浏览器中。&lt;/p&gt;
+&lt;h4 id=&#34;软件安装清单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件安装清单&#34;&gt;#&lt;/a&gt; 软件安装清单&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IDEA：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chrome：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;uTools：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Typora：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another Redis Desktop Manager：很好看的 Redis 客户端&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;XShell：好看 好用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tabby-terminal：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0V1Z2VueS90YWJieS9yZWxlYXNlcy90YWcvdjEuMC4xNjQ=&#34;&gt;https://github.com/Eugeny/tabby/releases/tag/v1.0.164&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shadowsocks：小飞机&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Windows Termial:Windows 终端&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;nvm: Windows 切换 node 版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;n：Mac 切换 node 版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pyenv：切换 python 版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Invoke-WebRequest -UseBasicParsing -Uri &amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3B5ZW52LXdpbi9weWVudi13aW4vbWFzdGVyL3B5ZW52LXdpbi9pbnN0YWxsLXB5ZW52LXdpbi5wczE=&#34;&gt;https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1&lt;/span&gt;&amp;quot; -OutFile &amp;quot;./install-pyenv-win.ps1&amp;quot;; &amp;amp;&amp;quot;./install-pyenv-win.ps1&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mac&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mac&#34;&gt;#&lt;/a&gt; Mac&lt;/h2&gt;
+&lt;h3 id=&#34;终端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#终端&#34;&gt;#&lt;/a&gt; 终端：&lt;/h3&gt;
+&lt;h5 id=&#34;oh-my-zsh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oh-my-zsh&#34;&gt;#&lt;/a&gt; oh my zsh&lt;/h5&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;https://zhuanlan.zhihu.com/p/550022490&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;https://blog.csdn.net/weixin_42326144/article/details/121957795&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+        <category term="杂谈" scheme="https://fairyeye.github.io/categories/%E6%9D%82%E8%B0%88/" />
+        <updated>2023-06-05T05:49:50.604Z</updated>
+    </entry>
     <entry>
         <id>https://fairyeye.github.io/2023/06/05/Springboot%E8%BF%94%E5%9B%9Ehtml/</id>
         <title>Springboot</title>
@@ -248,13 +357,6 @@
         <updated>2023-06-05T01:28:10.955Z</updated>
     </entry>
     <entry>
-        <id>https://fairyeye.github.io/2023/06/05/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</id>
-        <title></title>
-        <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-        <content type="html">&lt;h2 id=&#34;系统&#34;&gt;&lt;a href=&#34;#系统&#34; class=&#34;headerlink&#34; title=&#34;系统&#34;&gt;&lt;/a&gt;系统&lt;/h2&gt;&lt;h4 id=&#34;1-登录：&#34;&gt;&lt;a href=&#34;#1-登录：&#34; class=&#34;headerlink&#34; title=&#34;1. 登录：&#34;&gt;&lt;/a&gt;1. 登录：&lt;/h4&gt;&lt;h4 id=&#34;2-注册：&#34;&gt;&lt;a href=&#34;#2-注册：&#34; class=&#34;headerlink&#34; title=&#34;2. 注册：&#34;&gt;&lt;/a&gt;2. 注册：&lt;/h4&gt;&lt;h4 id=&#34;3-更改密码：&#34;&gt;&lt;a href=&#34;#3-更改密码：&#34; class=&#34;headerlink&#34; title=&#34;3. 更改密码：&#34;&gt;&lt;/a&gt;3. 更改密码：&lt;/h4&gt;</content>
-        <updated>2023-06-05T01:28:10.955Z</updated>
-    </entry>
-    <entry>
         <id>https://fairyeye.github.io/2023/06/05/StringToInteger/</id>
         <title></title>
         <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/StringToInteger/"/>
@@ -387,78 +489,6 @@
         <updated>2023-06-05T01:28:10.953Z</updated>
     </entry>
     <entry>
-        <id>https://fairyeye.github.io/2023/06/05/WHEN%20YOU%20HAVE%20A%20NEW%20PC/</id>
-        <title></title>
-        <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/WHEN%20YOU%20HAVE%20A%20NEW%20PC/"/>
-        <content type="html">&lt;h3 id=&#34;WHEN-YOU-HAVE-A-NEW-PC&#34;&gt;&lt;a href=&#34;#WHEN-YOU-HAVE-A-NEW-PC&#34; class=&#34;headerlink&#34; title=&#34; WHEN YOU HAVE A NEW PC&#34;&gt;&lt;/a&gt;&lt;center&gt; WHEN YOU HAVE A NEW PC&lt;/center&gt;&lt;/h3&gt;&lt;h4 id=&#34;Java环境配置&#34;&gt;&lt;a href=&#34;#Java环境配置&#34; class=&#34;headerlink&#34; title=&#34;Java环境配置&#34;&gt;&lt;/a&gt;Java环境配置&lt;/h4&gt;&lt;h5 id=&#34;1-安装&#34;&gt;&lt;a href=&#34;#1-安装&#34; class=&#34;headerlink&#34; title=&#34;1. 安装&#34;&gt;&lt;/a&gt;1. 安装&lt;/h5&gt;&lt;p&gt;​	提前新建两个文件夹，jdk，jre，默认路径也可以&lt;/p&gt;
-&lt;p&gt;​	安装&lt;code&gt;jdk-8u111-windows-x64.exe&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​	设置jdk、jre的路径&lt;/p&gt;
-&lt;h5 id=&#34;2-配置环境变量&#34;&gt;&lt;a href=&#34;#2-配置环境变量&#34; class=&#34;headerlink&#34; title=&#34;2. 配置环境变量&#34;&gt;&lt;/a&gt;2. 配置环境变量&lt;/h5&gt;&lt;p&gt;​	右键此电脑 -&amp;gt; 属性 -&amp;gt; 高级系统设置 -&amp;gt; 环境变量 -&amp;gt;  &lt;strong&gt;系统变量(S)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​	只有系统变量才是全局的。&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;新建	CLASSPATH	.;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;新建	JAVA_HOME	jdk路径&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;修改	path		添加 %JAVA_HOME%\bin;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;测试	java -version&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	 javac -version	&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h4 id=&#34;Maven环境配置&#34;&gt;&lt;a href=&#34;#Maven环境配置&#34; class=&#34;headerlink&#34; title=&#34;Maven环境配置&#34;&gt;&lt;/a&gt;Maven环境配置&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;解压&lt;code&gt;apache-maven-3.3.9.rar&lt;/code&gt; 到指定的目录。&lt;/li&gt;
-&lt;li&gt;修改配置文件（压缩包已修改过）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;GIT-工具&#34;&gt;&lt;a href=&#34;#GIT-工具&#34; class=&#34;headerlink&#34; title=&#34;GIT 工具&#34;&gt;&lt;/a&gt;GIT 工具&lt;/h4&gt;&lt;h5 id=&#34;1-全局配置用户信息&#34;&gt;&lt;a href=&#34;#1-全局配置用户信息&#34; class=&#34;headerlink&#34; title=&#34;1. 全局配置用户信息&#34;&gt;&lt;/a&gt;1. 全局配置用户信息&lt;/h5&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.name &amp;quot;fairy&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.email &amp;quot;fairy@gmail.com&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h5 id=&#34;2-生成key&#34;&gt;&lt;a href=&#34;#2-生成key&#34; class=&#34;headerlink&#34; title=&#34;2. 生成key&#34;&gt;&lt;/a&gt;2. 生成key&lt;/h5&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ssh-keygen -t rsa -C &amp;#x27;email&amp;#x27; // Email可选，会在key中生成你的邮箱信息  一直回车就行&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;​	生成的key文件  &lt;code&gt;C:\Users\你的用户名\.ssh\id_rsa.pub&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​	用文本编辑器打开，复制到GIT上。&lt;/p&gt;
-&lt;h5 id=&#34;3-上传项目到GIT&#34;&gt;&lt;a href=&#34;#3-上传项目到GIT&#34; class=&#34;headerlink&#34; title=&#34;3. 上传项目到GIT&#34;&gt;&lt;/a&gt;3. 上传项目到GIT&lt;/h5&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd 项目文件加夹&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:fairyeye/StudyJava.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;Initial commit&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h4 id=&#34;MySQL-安装&#34;&gt;&lt;a href=&#34;#MySQL-安装&#34; class=&#34;headerlink&#34; title=&#34;MySQL 安装&#34;&gt;&lt;/a&gt;MySQL 安装&lt;/h4&gt;&lt;p&gt;安装&lt;code&gt;https://www.runoob.com/mysql/mysql-install.html&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;修改初始密码&lt;/p&gt;
-&lt;p&gt;MySQL版本5.7.6版本以前用户可以使用如下命令：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mysql&amp;gt; SET PASSWORD = PASSWORD(&amp;#x27;your pwd&amp;#x27;); &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;MySQL版本5.7.6版本开始的用户可以使用如下命令：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mysql&amp;gt; ALTER USER USER() IDENTIFIED BY &amp;#x27;your pwd&amp;#x27;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-
-
-&lt;p&gt;登录报错 &lt;code&gt;https://www.cnblogs.com/lifan1998/p/9177731.html&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;去图标&#34;&gt;&lt;a href=&#34;#去图标&#34; class=&#34;headerlink&#34; title=&#34;去图标&#34;&gt;&lt;/a&gt;去图标&lt;/h4&gt;&lt;p&gt;​	管理员运行  &lt;code&gt;去图标.bat&lt;/code&gt; 文件。&lt;/p&gt;
-&lt;h4 id=&#34;谷歌访问助手&#34;&gt;&lt;a href=&#34;#谷歌访问助手&#34; class=&#34;headerlink&#34; title=&#34;谷歌访问助手&#34;&gt;&lt;/a&gt;谷歌访问助手&lt;/h4&gt;&lt;p&gt;​	谷歌浏览器 -&amp;gt; 更多工具 -&amp;gt; 扩展程序 -&amp;gt; 开发者模式(打开) 。&lt;/p&gt;
-&lt;p&gt;​	拖动 &lt;code&gt;谷歌访问助手.crx&lt;/code&gt; 到谷歌浏览器中。&lt;/p&gt;
-&lt;h4 id=&#34;软件安装清单&#34;&gt;&lt;a href=&#34;#软件安装清单&#34; class=&#34;headerlink&#34; title=&#34;软件安装清单&#34;&gt;&lt;/a&gt;软件安装清单&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;IDEA：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Chrome：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;uTools：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Typora：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Another Redis Desktop Manager：很好看的Redis客户端&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;XShell：好看 好用&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;tabby-terminal：&lt;a href=&#34;https://github.com/Eugeny/tabby/releases/tag/v1.0.164&#34;&gt;https://github.com/Eugeny/tabby/releases/tag/v1.0.164&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Shadowsocks：小飞机&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Windows Termial:Windows终端&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;nvm: Windows切换node版本&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;n：Mac切换node版本&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;pyenv：切换python版本&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Invoke-WebRequest -UseBasicParsing -Uri “&lt;a href=&#34;https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1&#34;&gt;https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1&lt;/a&gt;“ -OutFile “.&amp;#x2F;install-pyenv-win.ps1”; &amp;amp;”.&amp;#x2F;install-pyenv-win.ps1”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;电脑使用&#34;&gt;&lt;a href=&#34;#电脑使用&#34; class=&#34;headerlink&#34; title=&#34;电脑使用&#34;&gt;&lt;/a&gt;电脑使用&lt;/h2&gt;&lt;h3 id=&#34;软件&#34;&gt;&lt;a href=&#34;#软件&#34; class=&#34;headerlink&#34; title=&#34;软件&#34;&gt;&lt;/a&gt;软件&lt;/h3&gt;</content>
-        <updated>2023-06-05T01:28:10.953Z</updated>
-    </entry>
-    <entry>
         <id>https://fairyeye.github.io/2023/06/05/MySQL/</id>
         <title></title>
         <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/MySQL/"/>
@@ -562,20 +592,5 @@
         <category term="实用" scheme="https://fairyeye.github.io/categories/%E5%AE%9E%E7%94%A8/" />
         <category term="数据库" scheme="https://fairyeye.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
         <updated>2023-06-05T01:28:10.950Z</updated>
-    </entry>
-    <entry>
-        <id>https://fairyeye.github.io/2023/06/05/Go%E7%AC%94%E8%AE%B0/</id>
-        <title></title>
-        <link rel="alternate" href="https://fairyeye.github.io/2023/06/05/Go%E7%AC%94%E8%AE%B0/"/>
-        <content type="html">&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，那么使用这种形式的标识符的对象就可以被外部包的代码所使用（客户端程序需要先导入这个包），这被称为导出（像面向对象语言中的 public）；标识符如果以小写字母开头，则对包外是不可见的，但是他们在整个包的内部是可见并且可用的（像面向对象语言中的 protected ）。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-
-
-&lt;p&gt;报错：&lt;code&gt;The &amp;#39;main&amp;#39; file has the non-main package or does not contain the &amp;#39;main&amp;#39; function&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;main函数需要再main包下&lt;/p&gt;
-</content>
-        <updated>2023-06-05T01:28:10.949Z</updated>
     </entry>
 </feed>
