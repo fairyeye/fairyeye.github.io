@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "baf987aebb94befc",
+        "id": "5a47787efca5b418",
         "type": "tabs",
         "children": [
           {
-            "id": "a1454f99182f8f0c",
+            "id": "aec46e53547b36c2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "时间",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -77,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -93,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,18 +135,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md"
-              }
+              "state": {}
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,13 +155,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a1454f99182f8f0c",
+  "active": "aec46e53547b36c2",
   "lastOpenFiles": [
+    "2023-06-07.md",
+    "阿里巴巴手册.md",
+    "使用教程.md",
+    "设计模式笔记.md",
+    "分页查询.md",
+    "反射获取父类字段.md",
+    "搭建SSR服务器.md",
+    "UBW.md",
+    "MySQL.md",
+    "Java 8 Stream.md",
+    "GC回收算法.md",
+    "WHEN YOU HAVE A NEW PC.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
     "数据库时间存储.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "15.md",
     "GitHub Page.md",
     "16.md",
@@ -179,20 +182,10 @@
     "FileUtils.md",
     "需要掌握以下知识.md",
     "Ubuntu.md",
-    "搭建SSR服务器.md",
     "Work.md",
     "算法.md",
     "Redis.md",
     "IDEA.md",
-    "10.md",
-    "项目实战.md",
-    "Obsidian.md",
-    "反射获取父类字段.md",
-    "阿里巴巴手册.md",
-    "RE-1注册中心.md",
-    "Pasted image 20220922140434.png",
-    "Object.md",
-    "MySQL数据删除恢复.md",
-    "VPS相关.md"
+    "Pasted image 20220922140434.png"
   ]
 }
