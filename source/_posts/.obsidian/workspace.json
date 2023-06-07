@@ -11,9 +11,11 @@
             "id": "a1454f99182f8f0c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "upload/image-20200917191550283.png"
+                "file": "WHEN YOU HAVE A NEW PC.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "upload/image-20200917191550283.png",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "upload/image-20200917191550283.png",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "upload/image-20200917191550283.png"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -161,10 +163,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "a1454f99182f8f0c",
   "lastOpenFiles": [
-    "upload/image-20200917192220270.png",
     "upload/image-20200917191550283.png",
+    "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
     "数据库时间存储.md",
     "WHEN YOU HAVE A NEW PC.md",
