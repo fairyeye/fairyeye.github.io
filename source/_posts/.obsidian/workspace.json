@@ -11,8 +11,12 @@
             "id": "28efc9c0066cc149",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "20.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +140,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "20.md"
+              }
             }
           }
         ],
@@ -156,10 +164,16 @@
   },
   "active": "28efc9c0066cc149",
   "lastOpenFiles": [
+    "2023-06-07.md",
+    "20.md",
+    "16.md",
+    "15.md",
+    "14.md",
+    "13.md",
     "使用教程.md",
+    "StringToInteger.md",
     "Untitled.canvas",
     "Jmeter简单使用.md",
-    "2023-06-07.md",
     "阿里巴巴手册.md",
     "设计模式笔记.md",
     "分页查询.md",
@@ -174,12 +188,7 @@
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
     "数据库时间存储.md",
-    "15.md",
     "GitHub Page.md",
-    "16.md",
-    "20.md",
-    "14.md",
-    "13.md",
     "FileUtils.md",
     "需要掌握以下知识.md",
     "Ubuntu.md",
