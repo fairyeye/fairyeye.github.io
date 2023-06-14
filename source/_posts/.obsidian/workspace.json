@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13.md",
+                "file": "15.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "hexo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "13.md",
+                "file": "15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "13.md",
+                "file": "15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13.md"
+                "file": "15.md"
               }
             }
           }
@@ -163,14 +164,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "170eb090f47ce433",
   "lastOpenFiles": [
+    "13.md",
     "GC回收算法.md",
     "Ubuntu.md",
     "Untitled.canvas",
     "WHEN YOU HAVE A NEW PC.md",
     "14.md",
-    "13.md",
     "16.md",
     "20.md",
     "2023-06-07.md",

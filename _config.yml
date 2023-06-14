@@ -204,3 +204,8 @@ feed:
         enable: true
         template: "themes/shoka/layout/_alternate/json.ejs"
         output: "feed.json"
+# hexo-hide-posts
+hide_posts:
+  # 可以改成其他你喜欢的名字
+  filter: hidden
+  noindex: false
