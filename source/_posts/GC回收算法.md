@@ -2,6 +2,7 @@
 title: GC
 date: 2020/4/24
 tags: dairy
+hidden: true
 ---
 
 #### 引用计数算法
