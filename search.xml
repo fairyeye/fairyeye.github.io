@@ -16,6 +16,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo</title>
+    <url>/2020/04/15/15/</url>
+    <content><![CDATA[<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo shoka</span><br><span class="line">https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/#%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>hexo,theme,shoka</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>String 数组转 int 数组</title>
+    <url>/2020/04/20/20/</url>
+    <content><![CDATA[<h1 id="string数组转int数组"><a class="anchor" href="#string数组转int数组">#</a> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vdWt6cS9wLzExOTY1MzgyLmh0bWw=">String 数组转 int 数组</span></h1>
+<p>假设我们有一个字符串数组：</p>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String[] strings = &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>使用<em> Lambda 表达式</em>（自 Java 8 起）：</p>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] array = Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure></p>
+<p>另一种方式：</p>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] array = Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># MySQL 判断不等于时，要考虑为空的情况</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>零碎记录</category>
+      </categories>
+  </entry>
+  <entry>
     <title>GIT代码无法合并+本地构建成功服务器构建失败</title>
     <url>/2020/04/13/13/</url>
     <content><![CDATA[<h4 id="1git相关"><a class="anchor" href="#1git相关">#</a> 1.GIT 相关</h4>
@@ -87,69 +112,6 @@
       </tags>
   </entry>
   <entry>
-    <title>String 数组转 int 数组</title>
-    <url>/2020/04/20/20/</url>
-    <content><![CDATA[<h1 id="string数组转int数组"><a class="anchor" href="#string数组转int数组">#</a> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vdWt6cS9wLzExOTY1MzgyLmh0bWw=">String 数组转 int 数组</span></h1>
-<p>假设我们有一个字符串数组：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String[] strings = &#123;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>使用<em> Lambda 表达式</em>（自 Java 8 起）：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] array = Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure></p>
-<p>另一种方式：</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] array = Arrays.stream(strings).mapToInt(Integer::parseInt).toArray();</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>零碎记录</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hexo</title>
-    <url>/2020/04/15/15/</url>
-    <content><![CDATA[<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo shoka</span><br><span class="line">https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/#%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>hexo,theme,shoka</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/06/07/2023-06-07/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>GitHub Page</title>
-    <url>/2023/06/05/GitHub%20Page/</url>
-    <content><![CDATA[<p><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 拉取子模块</span></span><br><span class="line">git submodule init // 初始化子模块</span><br><span class="line">git submodule update // 更新子模块与主仓库中的子模块代码同步</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Go笔记</title>
-    <url>/2020/04/20/Go%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，那么使用这种形式的标识符的对象就可以被外部包的代码所使用（客户端程序需要先导入这个包），这被称为导出（像面向对象语言中的 public）；标识符如果以小写字母开头，则对包外是不可见的，但是他们在整个包的内部是可见并且可用的（像面向对象语言中的 protected ）。</span></span><br></pre></td></tr></table></figure></p>
-<p>报错： <code>The 'main' file has the non-main package or does not contain the 'main' function</code></p>
-<p>main 函数需要再 main 包下</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>GC</title>
-    <url>/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h4 id="引用计数算法"><a class="anchor" href="#引用计数算法">#</a> 引用计数算法</h4>
-<p>​	原理：是否有对象引用。</p>
-<p>​	![Reference counting](D:\workspace\gitee\StaticFile\image\Reference counting.png)</p>
-<p>​	缺点：如果两个对象互相引用，会造成内存泄漏。</p>
-<h4 id="可达性分析法"><a class="anchor" href="#可达性分析法">#</a> 可达性分析法</h4>
-<p>​</p>
-]]></content>
-      <tags>
-        <tag>dairy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Delete/Truncate/Drop</title>
     <url>/2023/06/05/Delete%20&amp;%20Truncate/</url>
     <content><![CDATA[<p>假如把一张表比作一间教室，数据比作学生。</p>
@@ -169,15 +131,38 @@
       </tags>
   </entry>
   <entry>
-    <title>Jmeter</title>
-    <url>/2023/06/05/Jmeter%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/08/18/7YTjKofu9SMPDWU.png" alt="image-20210818195517502" /></p>
-<p><img data-src="https://i.loli.net/2021/08/18/hqIAWMJTpGnS4tB.png" alt="image-20210818195538542" /></p>
-<p><img data-src="https://i.loli.net/2021/08/18/B73hXaVCULHQ4KN.png" alt="image-20210818200759281" /></p>
+    <title>GC</title>
+    <url>/2020/04/24/GC%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="引用计数算法"><a class="anchor" href="#引用计数算法">#</a> 引用计数算法</h4>
+<p>​	原理：是否有对象引用。</p>
+<p>​	![Reference counting](D:\workspace\gitee\StaticFile\image\Reference counting.png)</p>
+<p>​	缺点：如果两个对象互相引用，会造成内存泄漏。</p>
+<h4 id="可达性分析法"><a class="anchor" href="#可达性分析法">#</a> 可达性分析法</h4>
+<p>​</p>
 ]]></content>
       <tags>
-        <tag>软件</tag>
+        <tag>dairy</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>GitHub Page</title>
+    <url>/2023/06/05/GitHub%20Page/</url>
+    <content><![CDATA[<p><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 拉取子模块</span></span><br><span class="line">git submodule init // 初始化子模块</span><br><span class="line">git submodule update // 更新子模块与主仓库中的子模块代码同步</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/06/05/FileUtils/</url>
+    <content><![CDATA[<hr />
+<h2 id="title-工具类date-2020-04-20-110050categories-工具类"><a class="anchor" href="#title-工具类date-2020-04-20-110050categories-工具类">#</a> title: 工具类<br />
+ date: 2020-04-20 11:00:50<br />
+categories: &quot;工具类&quot;</h2>
+<h3 id="数组转文件"><a class="anchor" href="#数组转文件">#</a> 数组转文件</h3>
+<p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> bfile</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> filePath</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> fileName</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 根据byte数组，生成文件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">getFile</span><span class="params">(<span class="type">byte</span>[] bfile, String filePath,String fileName)</span> &#123;</span><br><span class="line">    <span class="type">BufferedOutputStream</span> <span class="variable">bos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">FileOutputStream</span> <span class="variable">fos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(filePath);</span><br><span class="line">        <span class="keyword">if</span>(!dir.exists()&amp;&amp;dir.isDirectory())&#123;<span class="comment">//判断文件目录是否存在</span></span><br><span class="line">            dir.mkdirs();</span><br><span class="line">        &#125;</span><br><span class="line">        file = <span class="keyword">new</span> <span class="title class_">File</span>(filePath+<span class="string">&quot;\\&quot;</span>+fileName);</span><br><span class="line">        fos = <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file);</span><br><span class="line">        bos = <span class="keyword">new</span> <span class="title class_">BufferedOutputStream</span>(fos);</span><br><span class="line">        bos.write(bfile);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (bos != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                bos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (fos != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
   </entry>
   <entry>
     <title>IDEA</title>
@@ -191,6 +176,17 @@
 ]]></content>
       <categories>
         <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Go笔记</title>
+    <url>/2020/04/20/Go%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 当标识符（包括常量、变量、类型、函数名、结构字段等等）以一个大写字母开头，如：Group1，那么使用这种形式的标识符的对象就可以被外部包的代码所使用（客户端程序需要先导入这个包），这被称为导出（像面向对象语言中的 public）；标识符如果以小写字母开头，则对包外是不可见的，但是他们在整个包的内部是可见并且可用的（像面向对象语言中的 protected ）。</span></span><br></pre></td></tr></table></figure></p>
+<p>报错： <code>The 'main' file has the non-main package or does not contain the 'main' function</code></p>
+<p>main 函数需要再 main 包下</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
       </categories>
   </entry>
   <entry>
@@ -214,6 +210,34 @@
 ]]></content>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jmeter</title>
+    <url>/2023/06/05/Jmeter%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2021/08/18/7YTjKofu9SMPDWU.png" alt="image-20210818195517502" /></p>
+<p><img data-src="https://i.loli.net/2021/08/18/hqIAWMJTpGnS4tB.png" alt="image-20210818195538542" /></p>
+<p><img data-src="https://i.loli.net/2021/08/18/B73hXaVCULHQ4KN.png" alt="image-20210818200759281" /></p>
+]]></content>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Navicat数据库导出链接密码解析</title>
+    <url>/2023/06/05/Mac%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/</url>
+    <content><![CDATA[<p>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhcnJpc19sZWxlL2FydGljbGUvZGV0YWlscy8xMjM1ODgxMjc=">https://blog.csdn.net/harris_lele/article/details/123588127</span></p>
+<p>导出来，然后用 php 解析密码即可；</p>
+<p>在线运行 php：</p>
+<p><code>https://www.toolfk.com/tools/online-runphp.html</code></p>
+<p>运行代码：</p>
+<p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NavicatPassword</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$version</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$aesKey</span> = <span class="string">&#x27;libcckeylibcckey&#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$aesIv</span> = <span class="string">&#x27;libcciv libcciv &#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowString</span> = <span class="string">&#x27;3DC5CA39&#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowKey</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowIv</span> = <span class="literal">null</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$version</span> = <span class="number">12</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;version = <span class="variable">$version</span>;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;blowKey = <span class="title function_ invoke__">sha1</span>(<span class="string">&#x27;3DC5CA39&#x27;</span>, <span class="literal">true</span>);</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;blowIv = <span class="title function_ invoke__">hex2bin</span>(<span class="string">&#x27;d9c7c3c8870d64bd&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="literal">FALSE</span>;</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">$this</span>-&gt;version) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptEleven</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptTwelve</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptEleven</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$round</span> = <span class="title function_ invoke__">intval</span>(<span class="title function_ invoke__">floor</span>(<span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) / <span class="number">8</span>));</span><br><span class="line">        <span class="variable">$leftLength</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) % <span class="number">8</span>;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;blowIv;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$round</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$temp</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="number">8</span>), <span class="variable">$currentVector</span>));</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$currentVector</span>, <span class="variable">$temp</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable">$temp</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$leftLength</span>) &#123;</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="variable">$leftLength</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">strtoupper</span>(<span class="title function_ invoke__">bin2hex</span>(<span class="variable">$result</span>));</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptBlock</span>(<span class="params"><span class="variable">$block</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$block</span>, <span class="string">&#x27;BF-ECB&#x27;</span>, <span class="variable">$this</span>-&gt;blowKey, OPENSSL_RAW_DATA|OPENSSL_NO_PADDING);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptBlock</span>(<span class="params"><span class="variable">$block</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$block</span>, <span class="string">&#x27;BF-ECB&#x27;</span>, <span class="variable">$this</span>-&gt;blowKey, OPENSSL_RAW_DATA|OPENSSL_NO_PADDING);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">xorBytes</span>(<span class="params"><span class="variable">$str1</span>, <span class="variable">$str2</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="title function_ invoke__">strlen</span>(<span class="variable">$str1</span>); <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$result</span> .= <span class="title function_ invoke__">chr</span>(<span class="title function_ invoke__">ord</span>(<span class="variable">$str1</span>[<span class="variable">$i</span>]) ^ <span class="title function_ invoke__">ord</span>(<span class="variable">$str2</span>[<span class="variable">$i</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptTwelve</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$string</span>, <span class="string">&#x27;AES-128-CBC&#x27;</span>, <span class="variable">$this</span>-&gt;aesKey, OPENSSL_RAW_DATA, <span class="variable">$this</span>-&gt;aesIv);</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">strtoupper</span>(<span class="title function_ invoke__">bin2hex</span>(<span class="variable">$result</span>));</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="literal">FALSE</span>;</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">$this</span>-&gt;version) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">decryptEleven</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">decryptTwelve</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptEleven</span>(<span class="params"><span class="variable">$upperString</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$string</span> = <span class="title function_ invoke__">hex2bin</span>(<span class="title function_ invoke__">strtolower</span>(<span class="variable">$upperString</span>));</span><br><span class="line">         </span><br><span class="line">        <span class="variable">$round</span> = <span class="title function_ invoke__">intval</span>(<span class="title function_ invoke__">floor</span>(<span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) / <span class="number">8</span>));</span><br><span class="line">        <span class="variable">$leftLength</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) % <span class="number">8</span>;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;blowIv;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$round</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$encryptedBlock</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="number">8</span>);</span><br><span class="line">            <span class="variable">$temp</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$this</span>-&gt;<span class="title function_ invoke__">decryptBlock</span>(<span class="variable">$encryptedBlock</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$currentVector</span>, <span class="variable">$encryptedBlock</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable">$temp</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$leftLength</span>) &#123;</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="variable">$leftLength</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptTwelve</span>(<span class="params"><span class="variable">$upperString</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$string</span> = <span class="title function_ invoke__">hex2bin</span>(<span class="title function_ invoke__">strtolower</span>(<span class="variable">$upperString</span>));</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$string</span>, <span class="string">&#x27;AES-128-CBC&#x27;</span>, <span class="variable">$this</span>-&gt;aesKey, OPENSSL_RAW_DATA, <span class="variable">$this</span>-&gt;aesIv);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//需要指定版本两种，11或12</span></span><br><span class="line"><span class="comment">//$navicatPassword = new NavicatPassword(11);</span></span><br><span class="line"><span class="variable">$navicatPassword</span> = <span class="keyword">new</span> <span class="title class_">NavicatPassword</span>(<span class="number">12</span>);</span><br><span class="line"> </span><br><span class="line"><span class="comment">//解密</span></span><br><span class="line"><span class="comment">//$decode = $navicatPassword-&gt;decrypt(&#x27;15057D7BA390&#x27;);</span></span><br><span class="line"><span class="variable">$decode</span> = <span class="variable">$navicatPassword</span>-&gt;<span class="title function_ invoke__">decrypt</span>(<span class="string">&#x27;75008D0AE102C19EE3767E201AC9E4D2&#x27;</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$decode</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"> </span><br><span class="line"> </span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>实用</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -275,39 +299,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Redis笔记</title>
-    <url>/2021/12/10/Redis/</url>
-    <content><![CDATA[<p><img data-src="https://s2.loli.net/2021/12/10/Flr6LcyMp7aXzZG.png" alt="image-20211210103722039" /></p>
-<p><img data-src="https://s2.loli.net/2021/12/10/SdJVDNcHnpkoReQ.png" alt="image-20211210103735160" /></p>
-<p><img data-src="https://s2.loli.net/2021/12/10/KTlw579PQLcaq4r.png" alt="image-20211210103752696" /></p>
-<p>// 201 个线程 应该扣减 201 -&gt; 库存不足</p>
-<p><img data-src="https://s2.loli.net/2021/12/10/NlMoYyiBnv8rqXD.png" alt="image-20211210104539695" /></p>
-]]></content>
-      <categories>
-        <category>中间件</category>
-      </categories>
-      <tags>
-        <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Navicat数据库导出链接密码解析</title>
-    <url>/2023/06/05/Mac%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/</url>
-    <content><![CDATA[<p>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhcnJpc19sZWxlL2FydGljbGUvZGV0YWlscy8xMjM1ODgxMjc=">https://blog.csdn.net/harris_lele/article/details/123588127</span></p>
-<p>导出来，然后用 php 解析密码即可；</p>
-<p>在线运行 php：</p>
-<p><code>https://www.toolfk.com/tools/online-runphp.html</code></p>
-<p>运行代码：</p>
-<p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NavicatPassword</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$version</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$aesKey</span> = <span class="string">&#x27;libcckeylibcckey&#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$aesIv</span> = <span class="string">&#x27;libcciv libcciv &#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowString</span> = <span class="string">&#x27;3DC5CA39&#x27;</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowKey</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">protected</span> <span class="variable">$blowIv</span> = <span class="literal">null</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"><span class="variable">$version</span> = <span class="number">12</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;version = <span class="variable">$version</span>;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;blowKey = <span class="title function_ invoke__">sha1</span>(<span class="string">&#x27;3DC5CA39&#x27;</span>, <span class="literal">true</span>);</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;blowIv = <span class="title function_ invoke__">hex2bin</span>(<span class="string">&#x27;d9c7c3c8870d64bd&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">encrypt</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="literal">FALSE</span>;</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">$this</span>-&gt;version) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptEleven</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptTwelve</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptEleven</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$round</span> = <span class="title function_ invoke__">intval</span>(<span class="title function_ invoke__">floor</span>(<span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) / <span class="number">8</span>));</span><br><span class="line">        <span class="variable">$leftLength</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) % <span class="number">8</span>;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;blowIv;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$round</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$temp</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="number">8</span>), <span class="variable">$currentVector</span>));</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$currentVector</span>, <span class="variable">$temp</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable">$temp</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$leftLength</span>) &#123;</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="variable">$leftLength</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">strtoupper</span>(<span class="title function_ invoke__">bin2hex</span>(<span class="variable">$result</span>));</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptBlock</span>(<span class="params"><span class="variable">$block</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$block</span>, <span class="string">&#x27;BF-ECB&#x27;</span>, <span class="variable">$this</span>-&gt;blowKey, OPENSSL_RAW_DATA|OPENSSL_NO_PADDING);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptBlock</span>(<span class="params"><span class="variable">$block</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$block</span>, <span class="string">&#x27;BF-ECB&#x27;</span>, <span class="variable">$this</span>-&gt;blowKey, OPENSSL_RAW_DATA|OPENSSL_NO_PADDING);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">xorBytes</span>(<span class="params"><span class="variable">$str1</span>, <span class="variable">$str2</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="title function_ invoke__">strlen</span>(<span class="variable">$str1</span>); <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$result</span> .= <span class="title function_ invoke__">chr</span>(<span class="title function_ invoke__">ord</span>(<span class="variable">$str1</span>[<span class="variable">$i</span>]) ^ <span class="title function_ invoke__">ord</span>(<span class="variable">$str2</span>[<span class="variable">$i</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">encryptTwelve</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="title function_ invoke__">openssl_encrypt</span>(<span class="variable">$string</span>, <span class="string">&#x27;AES-128-CBC&#x27;</span>, <span class="variable">$this</span>-&gt;aesKey, OPENSSL_RAW_DATA, <span class="variable">$this</span>-&gt;aesIv);</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">strtoupper</span>(<span class="title function_ invoke__">bin2hex</span>(<span class="variable">$result</span>));</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">decrypt</span>(<span class="params"><span class="variable">$string</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$result</span> = <span class="literal">FALSE</span>;</span><br><span class="line">        <span class="keyword">switch</span> (<span class="variable language_">$this</span>-&gt;version) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">11</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">decryptEleven</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">12</span>:</span><br><span class="line">                <span class="variable">$result</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">decryptTwelve</span>(<span class="variable">$string</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptEleven</span>(<span class="params"><span class="variable">$upperString</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$string</span> = <span class="title function_ invoke__">hex2bin</span>(<span class="title function_ invoke__">strtolower</span>(<span class="variable">$upperString</span>));</span><br><span class="line">         </span><br><span class="line">        <span class="variable">$round</span> = <span class="title function_ invoke__">intval</span>(<span class="title function_ invoke__">floor</span>(<span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) / <span class="number">8</span>));</span><br><span class="line">        <span class="variable">$leftLength</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$string</span>) % <span class="number">8</span>;</span><br><span class="line">        <span class="variable">$result</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;blowIv;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$round</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$encryptedBlock</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="number">8</span>);</span><br><span class="line">            <span class="variable">$temp</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$this</span>-&gt;<span class="title function_ invoke__">decryptBlock</span>(<span class="variable">$encryptedBlock</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="variable">$currentVector</span>, <span class="variable">$encryptedBlock</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable">$temp</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$leftLength</span>) &#123;</span><br><span class="line">            <span class="variable">$currentVector</span> = <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">encryptBlock</span>(<span class="variable">$currentVector</span>);</span><br><span class="line">            <span class="variable">$result</span> .= <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">xorBytes</span>(<span class="title function_ invoke__">substr</span>(<span class="variable">$string</span>, <span class="number">8</span> * <span class="variable">$i</span>, <span class="variable">$leftLength</span>), <span class="variable">$currentVector</span>);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">decryptTwelve</span>(<span class="params"><span class="variable">$upperString</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="variable">$string</span> = <span class="title function_ invoke__">hex2bin</span>(<span class="title function_ invoke__">strtolower</span>(<span class="variable">$upperString</span>));</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_ invoke__">openssl_decrypt</span>(<span class="variable">$string</span>, <span class="string">&#x27;AES-128-CBC&#x27;</span>, <span class="variable">$this</span>-&gt;aesKey, OPENSSL_RAW_DATA, <span class="variable">$this</span>-&gt;aesIv);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//需要指定版本两种，11或12</span></span><br><span class="line"><span class="comment">//$navicatPassword = new NavicatPassword(11);</span></span><br><span class="line"><span class="variable">$navicatPassword</span> = <span class="keyword">new</span> <span class="title class_">NavicatPassword</span>(<span class="number">12</span>);</span><br><span class="line"> </span><br><span class="line"><span class="comment">//解密</span></span><br><span class="line"><span class="comment">//$decode = $navicatPassword-&gt;decrypt(&#x27;15057D7BA390&#x27;);</span></span><br><span class="line"><span class="variable">$decode</span> = <span class="variable">$navicatPassword</span>-&gt;<span class="title function_ invoke__">decrypt</span>(<span class="string">&#x27;75008D0AE102C19EE3767E201AC9E4D2&#x27;</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$decode</span>.<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"> </span><br><span class="line"> </span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>实用</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Springboot</title>
     <url>/2023/06/05/Springboot%E8%BF%94%E5%9B%9Ehtml/</url>
     <content><![CDATA[<h1 id="springboot返回html"><a class="anchor" href="#springboot返回html">#</a> Springboot 返回 html</h1>
@@ -333,6 +324,22 @@
 ]]></content>
       <tags>
         <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis笔记</title>
+    <url>/2021/12/10/Redis/</url>
+    <content><![CDATA[<p><img data-src="https://s2.loli.net/2021/12/10/Flr6LcyMp7aXzZG.png" alt="image-20211210103722039" /></p>
+<p><img data-src="https://s2.loli.net/2021/12/10/SdJVDNcHnpkoReQ.png" alt="image-20211210103735160" /></p>
+<p><img data-src="https://s2.loli.net/2021/12/10/KTlw579PQLcaq4r.png" alt="image-20211210103752696" /></p>
+<p>// 201 个线程 应该扣减 201 -&gt; 库存不足</p>
+<p><img data-src="https://s2.loli.net/2021/12/10/NlMoYyiBnv8rqXD.png" alt="image-20211210104539695" /></p>
+]]></content>
+      <categories>
+        <category>中间件</category>
+      </categories>
+      <tags>
+        <tag>redis</tag>
       </tags>
   </entry>
   <entry>
@@ -527,8 +534,27 @@ MySQL 版本 5.7.6 版本开始的用户可以使用如下命令：<br />
       </categories>
   </entry>
   <entry>
+    <title>Sql小技巧</title>
+    <url>/2023/06/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[<p>MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行。</p>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例（耗时129.570s）</span><br><span class="line">select * from task_result LIMIT 20000000, 10;</span><br><span class="line"></span><br><span class="line"># 正例（耗时5.114s）</span><br><span class="line">SELECT a.* FROM task_result a, (select id from task_result LIMIT 20000000, 10) b where a.id = b.id;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，id为主键，偏移量达到2000万</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="获取一条数据时的limit-1"><a class="anchor" href="#获取一条数据时的limit-1">#</a> 获取一条数据时的 Limit 1</h3>
+<p>在很多情况下我们已知数据仅存在一条，此时我们应该告知数据库只用查一条，否则将会转化为全表扫描</p>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例（耗时2424.612s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27;;</span><br><span class="line"></span><br><span class="line"># 正例（耗时1.036s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27; LIMIT 1;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，where条件非索引字段，数据所在行为第19486条记录</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="批量插入"><a class="anchor" href="#批量插入">#</a> 批量插入</h3>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;B&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;C&#x27;,24)</span><br><span class="line"></span><br><span class="line"># 正例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24),(&#x27;B&#x27;,24),(&#x27;C&#x27;,24);</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">比较常规，就不多做说明了</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uaW0vcG9zdC81ZWExNmRlZGU1MWQ0NTQ3MGI0ZmZjNWI/dXRtX3NvdXJjZT1nb2xkX2Jyb3dzZXJfZXh0ZW5zaW9u">https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension</span></p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>UBW</title>
-    <url>/2020/04/20/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <url>/2022/11/20/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="系统"><a class="anchor" href="#系统">#</a> 系统</h2>
 <h4 id="1-登录"><a class="anchor" href="#1-登录">#</a> 1. 登录：</h4>
 <h4 id="2-注册"><a class="anchor" href="#2-注册">#</a> 2. 注册：</h4>
@@ -578,28 +604,11 @@ MySQL 版本 5.7.6 版本开始的用户可以使用如下命令：<br />
 <h5 id="项目分析表"><a class="anchor" href="#项目分析表">#</a> 项目分析表</h5>
 <h5 id="分项数据分析"><a class="anchor" href="#分项数据分析">#</a> 分项数据分析</h5>
 <h5 id="材料用量费用分析-材料疑点报表"><a class="anchor" href="#材料用量费用分析-材料疑点报表">#</a> 材料用量费用分析 &amp; 材料疑点报表</h5>
+<h3 id="补充"><a class="anchor" href="#补充">#</a> 补充</h3>
+<p>模板可以上传（仅管理员有权限</p>
 ]]></content>
       <tags>
         <tag>项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Sql小技巧</title>
-    <url>/2023/06/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/</url>
-    <content><![CDATA[<p>MySQL 并不是跳过 offset 行，而是取 offset+N 行，然后返回放弃前 offset 行，返回 N 行。</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例（耗时129.570s）</span><br><span class="line">select * from task_result LIMIT 20000000, 10;</span><br><span class="line"></span><br><span class="line"># 正例（耗时5.114s）</span><br><span class="line">SELECT a.* FROM task_result a, (select id from task_result LIMIT 20000000, 10) b where a.id = b.id;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，id为主键，偏移量达到2000万</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h3 id="获取一条数据时的limit-1"><a class="anchor" href="#获取一条数据时的limit-1">#</a> 获取一条数据时的 Limit 1</h3>
-<p>在很多情况下我们已知数据仅存在一条，此时我们应该告知数据库只用查一条，否则将会转化为全表扫描</p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例（耗时2424.612s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27;;</span><br><span class="line"></span><br><span class="line"># 正例（耗时1.036s）</span><br><span class="line">select * from task_result where unique_key = &#x27;ebbf420b65d95573db7669f21fa3be3e_861414030800727_48&#x27; LIMIT 1;</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">task_result表为生产环境的一个表，总数据量为3400万，where条件非索引字段，数据所在行为第19486条记录</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h3 id="批量插入"><a class="anchor" href="#批量插入">#</a> 批量插入</h3>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 反例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;B&#x27;,24)</span><br><span class="line">INSERT into person(name,age) values(&#x27;C&#x27;,24)</span><br><span class="line"></span><br><span class="line"># 正例</span><br><span class="line">INSERT into person(name,age) values(&#x27;A&#x27;,24),(&#x27;B&#x27;,24),(&#x27;C&#x27;,24);</span><br><span class="line"></span><br><span class="line"># 说明</span><br><span class="line">比较常规，就不多做说明了</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uaW0vcG9zdC81ZWExNmRlZGU1MWQ0NTQ3MGI0ZmZjNWI/dXRtX3NvdXJjZT1nb2xkX2Jyb3dzZXJfZXh0ZW5zaW9u">https://juejin.im/post/5ea16dede51d45470b4ffc5b?utm_source=gold_browser_extension</span></p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -648,41 +657,6 @@ MySQL 版本 5.7.6 版本开始的用户可以使用如下命令：<br />
       </categories>
       <tags>
         <tag>demo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL查询</title>
-    <url>/2023/06/05/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/</url>
-    <content><![CDATA[<h4 id="1-首先要保证本地的mysql服务支持federated引擎"><a class="anchor" href="#1-首先要保证本地的mysql服务支持federated引擎">#</a> 1. 首先要保证本地的 MySQL 服务支持 FEDERATED 引擎。</h4>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：SHOW ENGINES;</span><br><span class="line">如下 FEDERATED 行的Support为YES则表示开启了FEDERATED。</span><br><span class="line">如果为 NO 则表示未开启。</span><br><span class="line"></span><br><span class="line">如果 FEDERATED 没有开启的话 要启用。</span><br></pre></td></tr></table></figure></p>
-<p><img data-src="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png" alt="" /></p>
-<h4 id="2启用-federated"><a class="anchor" href="#2启用-federated">#</a> 2. 启用 FEDERATED</h4>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在MySQL的配置文件</span><br><span class="line">安装目录下的my.ini或my.cnf </span><br><span class="line">加上 一行  `FEDERATED`</span><br></pre></td></tr></table></figure></p>
-<p><img data-src="https://i.loli.net/2020/10/22/HhLBosuOdeNDbgQ.png" alt="" /></p>
-<h4 id="3建表"><a class="anchor" href="#3建表">#</a> 3. 建表</h4>
-<p><strong>建表一般应的是 InnoDB 引擎，这里需要修改一下 改为</strong>  <code>ENGINE=FEDERATED</code></p>
-<p>从原表导出表结构 SQL，然后修改  <code>ENGINE = InnoDB</code> -&gt; <code>ENGINE=FEDERATED CONNECTION='mysql://用户名:密码@IP:PORT/库名/表名'</code></p>
-<p>然后打开这张表，可以看到远程表里的数据已经同步到了这张表。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>utils</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建SSR服务器</title>
-    <url>/2022/12/07/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt install git </span><br><span class="line">报错：Temporary failure resolving &#x27;archive.ubuntu.com</span><br><span class="line">具体如下：</span><br><span class="line"></span><br><span class="line">Ign:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">Ign:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 git amd64 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17-1.2_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git-man_2.7.4-0ubuntu1_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1_amd64.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line">root@132157:~# apt-get update</span><br><span class="line">Err:1 http://security.ubuntu.com/ubuntu xenial-security InRelease</span><br><span class="line">  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-updates/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-backports/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/xenial-security/InRelease  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p><code>原因是DNS未配置</code></p>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/resolv.conf</span><br><span class="line"></span><br><span class="line">+ nameserver 202.96.134.133</span><br><span class="line">+ nameserver 8.8.8.8</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>others</tag>
       </tags>
   </entry>
   <entry>
@@ -750,6 +724,41 @@ MySQL 版本 5.7.6 版本开始的用户可以使用如下命令：<br />
       </tags>
   </entry>
   <entry>
+    <title>搭建SSR服务器</title>
+    <url>/2022/12/07/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt install git </span><br><span class="line">报错：Temporary failure resolving &#x27;archive.ubuntu.com</span><br><span class="line">具体如下：</span><br><span class="line"></span><br><span class="line">Ign:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">Ign:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 git amd64 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:1 http://archive.ubuntu.com/ubuntu xenial/main i386 liberror-perl all 0.17-1.2</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial/main i386 git-man all 1:2.7.4-0ubuntu1</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17-1.2_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git-man_2.7.4-0ubuntu1_all.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.7.4-0ubuntu1_amd64.deb  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line"></span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line">root@132157:~# apt-get update</span><br><span class="line">Err:1 http://security.ubuntu.com/ubuntu xenial-security InRelease</span><br><span class="line">  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">Err:2 http://archive.ubuntu.com/ubuntu xenial InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Err:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease</span><br><span class="line">  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-updates/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-backports/InRelease  Temporary failure resolving &#x27;archive.ubuntu.com&#x27;</span><br><span class="line">W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/xenial-security/InRelease  Temporary failure resolving &#x27;security.ubuntu.com&#x27;</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><code>原因是DNS未配置</code></p>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/resolv.conf</span><br><span class="line"></span><br><span class="line">+ nameserver 202.96.134.133</span><br><span class="line">+ nameserver 8.8.8.8</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>others</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL查询</title>
+    <url>/2023/06/05/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/</url>
+    <content><![CDATA[<h4 id="1-首先要保证本地的mysql服务支持federated引擎"><a class="anchor" href="#1-首先要保证本地的mysql服务支持federated引擎">#</a> 1. 首先要保证本地的 MySQL 服务支持 FEDERATED 引擎。</h4>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：SHOW ENGINES;</span><br><span class="line">如下 FEDERATED 行的Support为YES则表示开启了FEDERATED。</span><br><span class="line">如果为 NO 则表示未开启。</span><br><span class="line"></span><br><span class="line">如果 FEDERATED 没有开启的话 要启用。</span><br></pre></td></tr></table></figure></p>
+<p><img data-src="https://i.loli.net/2020/10/22/7a8G6nUXbLM24wl.png" alt="" /></p>
+<h4 id="2启用-federated"><a class="anchor" href="#2启用-federated">#</a> 2. 启用 FEDERATED</h4>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在MySQL的配置文件</span><br><span class="line">安装目录下的my.ini或my.cnf </span><br><span class="line">加上 一行  `FEDERATED`</span><br></pre></td></tr></table></figure></p>
+<p><img data-src="https://i.loli.net/2020/10/22/HhLBosuOdeNDbgQ.png" alt="" /></p>
+<h4 id="3建表"><a class="anchor" href="#3建表">#</a> 3. 建表</h4>
+<p><strong>建表一般应的是 InnoDB 引擎，这里需要修改一下 改为</strong>  <code>ENGINE=FEDERATED</code></p>
+<p>从原表导出表结构 SQL，然后修改  <code>ENGINE = InnoDB</code> -&gt; <code>ENGINE=FEDERATED CONNECTION='mysql://用户名:密码@IP:PORT/库名/表名'</code></p>
+<p>然后打开这张表，可以看到远程表里的数据已经同步到了这张表。</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>时间戳转换日期问题</title>
     <url>/2020/04/17/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h4 id="基础依赖"><a class="anchor" href="#基础依赖">#</a> 基础依赖</h4>
@@ -760,17 +769,6 @@ MySQL 版本 5.7.6 版本开始的用户可以使用如下命令：<br />
       <tags>
         <tag>basic</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/06/05/FileUtils/</url>
-    <content><![CDATA[<hr />
-<h2 id="title-工具类date-2020-04-20-110050categories-工具类"><a class="anchor" href="#title-工具类date-2020-04-20-110050categories-工具类">#</a> title: 工具类<br />
- date: 2020-04-20 11:00:50<br />
-categories: &quot;工具类&quot;</h2>
-<h3 id="数组转文件"><a class="anchor" href="#数组转文件">#</a> 数组转文件</h3>
-<p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> bfile</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> filePath</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> fileName</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 根据byte数组，生成文件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">getFile</span><span class="params">(<span class="type">byte</span>[] bfile, String filePath,String fileName)</span> &#123;</span><br><span class="line">    <span class="type">BufferedOutputStream</span> <span class="variable">bos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">FileOutputStream</span> <span class="variable">fos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">dir</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(filePath);</span><br><span class="line">        <span class="keyword">if</span>(!dir.exists()&amp;&amp;dir.isDirectory())&#123;<span class="comment">//判断文件目录是否存在</span></span><br><span class="line">            dir.mkdirs();</span><br><span class="line">        &#125;</span><br><span class="line">        file = <span class="keyword">new</span> <span class="title class_">File</span>(filePath+<span class="string">&quot;\\&quot;</span>+fileName);</span><br><span class="line">        fos = <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file);</span><br><span class="line">        bos = <span class="keyword">new</span> <span class="title class_">BufferedOutputStream</span>(fos);</span><br><span class="line">        bos.write(bfile);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (bos != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                bos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (fos != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                fos.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
   </entry>
   <entry>
     <title>算法</title>
@@ -784,6 +782,12 @@ LFU 缓存在处理缓存置换的时候会考虑到访问频率的因素。如�
       <tags>
         <tag>dairy</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>阿里巴巴手册</title>
+    <url>/2020/04/20/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/07/16/ZXJmPqvfo2W6U9p.png" alt="" /></p>
+]]></content>
   </entry>
   <entry>
     <title>设计模式笔记</title>
@@ -857,11 +861,5 @@ LFU 缓存在处理缓存置换的时候会考虑到访问频率的因素。如�
       <tags>
         <tag>学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>阿里巴巴手册</title>
-    <url>/2020/04/20/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<p><img data-src="https://i.loli.net/2020/07/16/ZXJmPqvfo2W6U9p.png" alt="" /></p>
-]]></content>
   </entry>
 </search>
