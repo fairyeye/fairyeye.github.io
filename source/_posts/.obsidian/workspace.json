@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a34b403016e33dc1",
+        "id": "4edce030c216e1f2",
         "type": "tabs",
         "children": [
           {
-            "id": "170eb090f47ce433",
+            "id": "e0e9c26aa0a5617a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "15.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hexo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -73,8 +69,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +134,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "15.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -164,8 +155,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "170eb090f47ce433",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
+    "15.md",
     "13.md",
     "GC回收算法.md",
     "Ubuntu.md",
@@ -175,7 +167,6 @@
     "16.md",
     "20.md",
     "2023-06-07.md",
-    "15.md",
     "使用教程.md",
     "StringToInteger.md",
     "Jmeter简单使用.md",
