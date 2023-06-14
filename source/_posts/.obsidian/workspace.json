@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e0e9c26aa0a5617a",
+            "id": "13e4ebdfc26c2f4e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "230715.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tags",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -73,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "230715.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "230715.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "230715.md"
+              }
             }
           }
         ],
@@ -155,17 +164,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "13e4ebdfc26c2f4e",
   "lastOpenFiles": [
+    "20.md",
+    "230715.md",
+    "16.md",
     "15.md",
-    "13.md",
     "GC回收算法.md",
+    "13.md",
     "Ubuntu.md",
     "Untitled.canvas",
     "WHEN YOU HAVE A NEW PC.md",
     "14.md",
-    "16.md",
-    "20.md",
     "2023-06-07.md",
     "使用教程.md",
     "StringToInteger.md",
