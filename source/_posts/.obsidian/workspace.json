@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230715.md",
+                "file": "20.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "230715.md",
+                "file": "20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "230715.md",
+                "file": "20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "230715.md"
+                "file": "20.md"
               }
             }
           }
@@ -176,11 +176,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "f4e4729aaca39d8c",
   "lastOpenFiles": [
+    "230715.md",
     "SRM.md",
     "20.md",
-    "230715.md",
     "16.md",
     "15.md",
     "GC回收算法.md",
