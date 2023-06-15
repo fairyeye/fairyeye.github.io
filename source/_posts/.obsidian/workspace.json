@@ -145,8 +145,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -163,7 +162,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "13e4ebdfc26c2f4e",
+  "active": "6e77739602c9b2cf",
   "lastOpenFiles": [
     "使用教程.md",
     "230715.md",
