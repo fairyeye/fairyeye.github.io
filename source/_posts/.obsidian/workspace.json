@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -162,7 +163,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6e77739602c9b2cf",
+  "active": "13e4ebdfc26c2f4e",
   "lastOpenFiles": [
     "使用教程.md",
     "230715.md",
