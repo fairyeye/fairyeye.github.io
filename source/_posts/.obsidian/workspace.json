@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20.md",
+                "file": "使用教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20.md",
+                "file": "使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20.md",
+                "file": "使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20.md"
+                "file": "使用教程.md"
               }
             }
           }
@@ -164,8 +164,8 @@
   },
   "active": "baef27349df373d1",
   "lastOpenFiles": [
-    "230715.md",
     "20.md",
+    "230715.md",
     "使用教程.md",
     "MySQL.md",
     "SRM.md",
