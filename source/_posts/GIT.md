@@ -11,6 +11,10 @@ description:
 
 #### 流水线
 
+```
+# 官方文档
+https://blog.gitee.com/2022/11/23/pipeline/
+```
 
 #### 前端CI
 
@@ -70,3 +74,38 @@ tar zxvf ~/gitee_go/deploy/output.tar.gz -C /home/ubuntu
 
 
 ![](https://s3.bmp.ovh/imgs/2023/06/17/b3943c35c7f70d3b.png)
+
+
+
+#### 后端CI
+
+
+
+##### 部署脚本
+
+```sh
+cd ~/gitee_go/deoloy
+ls
+tar -zxf output.tar.gz
+cd target
+pid=`ps -ef|grep xxx|grep -v grep|awk '{print $2}'`
+if [ $pid ]
+then
+  kill -15 $pid  
+fi
+nohup java -jar xxx.jar --server.port=8090 &
+
+for((i=1;i<=10;i++));
+do
+  new_pid=`ps -ef|grep xxx|grep -v grep|awk '{print $2}'`
+  if [ ! $new_pid ]
+  then
+   echo 'starting......'
+   sleep 10
+  else
+   echo "Deploy Success"
+   break;
+  fi
+done
+
+```
