@@ -93,7 +93,7 @@ if [ $pid ]
 then
   kill -15 $pid  
 fi
-nohup java -jar xxx.jar --server.port=8090 &
+nohup java -jar xxx.jar log.log &
 
 for((i=1;i<=10;i++));
 do
