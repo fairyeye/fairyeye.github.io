@@ -84,28 +84,17 @@ tar zxvf ~/gitee_go/deploy/output.tar.gz -C /home/ubuntu
 ##### 部署脚本
 
 ```sh
-cd ~/gitee_go/deoloy
+cd ~/gitee_go/deploy/
 ls
-tar -zxf output.tar.gz
+tar -zxf API.tar.gz
 cd target
 pid=`ps -ef|grep smart-admin-api-1.0.0|grep -v grep|awk '{print $2}'`
 if [ $pid ]
 then
-  kill -15 $pid  
+sudo kill -15 $pid  
 fi
-nohup java -jar smart-admin-api-1.0.0.jar log.log &
 
-for((i=1;i<=10;i++));
-do
-  new_pid=`ps -ef|grep smart-admin-api-1.0.0|grep -v grep|awk '{print $2}'`
-  if [ ! $new_pid ]
-  then
-   echo 'starting......'
-   sleep 10
-  else
-   echo "Deploy Success"
-   break;
-  fi
-done
+sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar >/home/ubuntu/log.log &
+
 
 ```
