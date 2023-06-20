@@ -227,7 +227,7 @@ then
   kill -15 $pid  
 fi
 nohup java -jar xxx.jar --server.port=8090 &
-
+# Ubuntu sh脚本不支持for循环  这里会报错
 for((i=1;i<=10;i++));
 do
   new_pid=`ps -ef|grep xxx|grep -v grep|awk '{print $2}'`

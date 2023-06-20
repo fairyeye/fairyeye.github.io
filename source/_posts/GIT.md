@@ -98,3 +98,25 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar >/h
 
 
 ```
+
+
+```sh
+cd ~/gitee_go/deploy/
+ls
+tar -zxf API.tar.gz
+cd target
+pid=`ps -ef|grep smart-admin-api-1.0.0|grep -v grep|awk '{print $2}'`
+if [ $pid ]
+then
+sudo kill -15 $pid  
+fi
+
+sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
+
+
+
+
+
+> /home/ubuntu/log.log 2>&1 &
+
+```
