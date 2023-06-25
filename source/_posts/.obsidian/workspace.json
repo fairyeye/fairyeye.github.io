@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4edce030c216e1f2",
+        "id": "65bfa220093ff668",
         "type": "tabs",
         "children": [
           {
-            "id": "13e4ebdfc26c2f4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9f6668c41fb3cc77",
+            "id": "1490ec5af32ca98c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -175,15 +162,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f6668c41fb3cc77",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
+    "20.md",
+    "230715.md",
     "Ubuntu.md",
     "GIT.md",
     "使用教程.md",
-    "20.md",
     "时间戳转换日期问题.md",
     "16.md",
-    "230715.md",
     "GitHub Page.md",
     "MySQL.md",
     "SRM.md",
