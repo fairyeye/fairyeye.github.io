@@ -6,6 +6,7 @@ darkmode: false
 loader:
   start: false # 当初次打开页面时，显示加载动画
   switch: false # tab 切换到其他页面时，显示加载动画
+image_server: "https://acg.xydwz.cn/api/api.php"
 
 font:
   enable: true
