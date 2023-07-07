@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -162,10 +163,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1490ec5af32ca98c",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
-    "20.md",
+    "Delete & Truncate.md",
+    "FileUtils.md",
+    "需要掌握以下知识.md",
     "230715.md",
+    "20.md",
     "Ubuntu.md",
     "GIT.md",
     "使用教程.md",
@@ -188,12 +192,9 @@
     "分页查询.md",
     "反射获取父类字段.md",
     "搭建SSR服务器.md",
-    "UBW.md",
-    "Java 8 Stream.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
-    "数据库时间存储.md",
     "Pasted image 20220922140434.png"
   ]
 }
