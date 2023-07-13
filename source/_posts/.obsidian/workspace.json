@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "65bfa220093ff668",
+        "id": "aee5c2aedd07bed8",
         "type": "tabs",
         "children": [
           {
-            "id": "1490ec5af32ca98c",
+            "id": "dea76bd99382053f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -163,12 +163,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "dea76bd99382053f",
   "lastOpenFiles": [
+    "230715.md",
     "Delete & Truncate.md",
     "FileUtils.md",
     "需要掌握以下知识.md",
-    "230715.md",
     "20.md",
     "Ubuntu.md",
     "GIT.md",
