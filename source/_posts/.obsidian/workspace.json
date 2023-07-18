@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e0bce34523fcb9f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230819.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6626c0948e010413",
@@ -94,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "230715.md",
+                "file": "230819.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "230715.md",
+                "file": "230819.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "230715.md"
+                "file": "230819.md"
               }
             }
           }
@@ -163,9 +175,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dea76bd99382053f",
+  "active": "e0bce34523fcb9f6",
   "lastOpenFiles": [
     "230715.md",
+    "230819.md",
     "Delete & Truncate.md",
     "FileUtils.md",
     "需要掌握以下知识.md",
@@ -191,7 +204,6 @@
     "设计模式笔记.md",
     "分页查询.md",
     "反射获取父类字段.md",
-    "搭建SSR服务器.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
