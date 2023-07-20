@@ -175,10 +175,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e0bce34523fcb9f6",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
-    "230715.md",
+    "MySQL.md",
     "230819.md",
+    "230715.md",
     "Delete & Truncate.md",
     "FileUtils.md",
     "需要掌握以下知识.md",
@@ -189,7 +190,6 @@
     "时间戳转换日期问题.md",
     "16.md",
     "GitHub Page.md",
-    "MySQL.md",
     "SRM.md",
     "15.md",
     "GC回收算法.md",

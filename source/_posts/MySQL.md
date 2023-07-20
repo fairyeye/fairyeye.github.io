@@ -95,3 +95,6 @@ SET SESSION group_concat_max_len=102400;
 
 count sql resultType为对象，导致报错
 
+
+###  Waiting for table metadata lock
+https://blog.csdn.net/jianlong727/article/details/111877226
