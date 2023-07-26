@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dea76bd99382053f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "230715.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e0bce34523fcb9f6",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "恢复",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -86,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -177,9 +165,9 @@
   },
   "active": "e0bce34523fcb9f6",
   "lastOpenFiles": [
-    "230715.md",
     "MySQL.md",
     "230819.md",
+    "230715.md",
     "Delete & Truncate.md",
     "FileUtils.md",
     "需要掌握以下知识.md",
