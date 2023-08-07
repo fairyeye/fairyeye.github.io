@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "5d7c8186845c0656",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.7"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -59,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "恢复",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -174,7 +163,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5d7c8186845c0656",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
     "MySQL.md",
     "230819.md",
