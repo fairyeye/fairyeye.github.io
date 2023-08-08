@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "230819.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "230819.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "230819.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "230819.md"
               }
             }
           }
@@ -162,8 +162,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "e0bce34523fcb9f6",
   "lastOpenFiles": [
+    "Ubuntu.md",
     "使用教程.md",
     "230819.md",
     "MySQL.md",
@@ -172,7 +173,6 @@
     "FileUtils.md",
     "需要掌握以下知识.md",
     "20.md",
-    "Ubuntu.md",
     "GIT.md",
     "时间戳转换日期问题.md",
     "16.md",
