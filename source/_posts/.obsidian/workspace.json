@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "同步不同服务的MySQL数据表.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mysql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "同步不同服务的MySQL数据表.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "同步不同服务的MySQL数据表.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "同步不同服务的MySQL数据表.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -166,6 +167,7 @@
   "lastOpenFiles": [
     "MySQL.md",
     "230819.md",
+    "同步不同服务的MySQL数据表.md",
     "Ubuntu.md",
     "使用教程.md",
     "230715.md",
@@ -190,7 +192,6 @@
     "阿里巴巴手册.md",
     "设计模式笔记.md",
     "分页查询.md",
-    "反射获取父类字段.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
