@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230819.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mysql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -86,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -177,9 +178,9 @@
   },
   "active": "d720dc10669c36b6",
   "lastOpenFiles": [
+    "WHEN YOU HAVE A NEW PC.md",
     "230819.md",
     "230923.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "MySQL.md",
     "同步不同服务的MySQL数据表.md",
     "Ubuntu.md",
