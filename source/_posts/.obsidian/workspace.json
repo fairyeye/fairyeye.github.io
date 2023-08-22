@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "230715.md",
+                "file": "230923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "230715.md",
+                "file": "230923.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "230715.md"
+                "file": "230923.md"
               }
             }
           }
@@ -175,10 +174,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d720dc10669c36b6",
+  "active": "e0bce34523fcb9f6",
   "lastOpenFiles": [
-    "230923.md",
     "230715.md",
+    "230923.md",
     "WHEN YOU HAVE A NEW PC.md",
     "230819.md",
     "MySQL.md",
