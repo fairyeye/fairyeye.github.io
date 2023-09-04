@@ -41,8 +41,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,7 +184,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c9d0482842e3d209",
+  "active": "e0bce34523fcb9f6",
   "lastOpenFiles": [
     "230715.md",
     "230923.md",
