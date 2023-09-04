@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "c9d0482842e3d209",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.5"
+              }
+            }
+          },
+          {
             "id": "d720dc10669c36b6",
             "type": "leaf",
             "state": {
@@ -31,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,7 +185,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e0bce34523fcb9f6",
+  "active": "c9d0482842e3d209",
   "lastOpenFiles": [
     "230715.md",
     "230923.md",
