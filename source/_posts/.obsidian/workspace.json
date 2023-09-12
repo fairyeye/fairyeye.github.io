@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e0bce34523fcb9f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "230923.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c9d0482842e3d209",
             "type": "leaf",
             "state": {
@@ -35,13 +23,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230715.md",
+                "file": "230923.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -184,7 +173,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e0bce34523fcb9f6",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
     "230715.md",
     "230923.md",
