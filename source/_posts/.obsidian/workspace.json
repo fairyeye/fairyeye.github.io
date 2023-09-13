@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "230923.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "230923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "230923.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "230923.md"
               }
             }
           }
@@ -173,10 +173,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d720dc10669c36b6",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
-    "使用教程.md",
     "GIT.md",
+    "使用教程.md",
     "230923.md",
     "230715.md",
     "WHEN YOU HAVE A NEW PC.md",
