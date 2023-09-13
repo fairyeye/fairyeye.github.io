@@ -137,3 +137,21 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 ```
 一款 Java 写的内部培训系统。这是一款基于 SpringBoot+React 开发而成的视频培训系统，它界面清爽、交互流畅，支持上传资源、创建部门、添加学员、指派课程等功能，可用于企业和机构搭建内部培训平台。
 ```
+
+#### [Holer](https://github.com/wisdom-projects/holer)
+
+```
+一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。内网穿透工具，包含 Web 后台管理系统。用到的技术如下：
+
+- 服务端采用 SpringBoot 和 Netty 实现
+- 客户端采用 Java Netty 和 Go 语言实现
+```
+![](https://s3.bmp.ovh/imgs/2023/09/13/e1c366275bdb16f6.png)
+
+
+### [SoloPo](https://github.com/alipay/SoloPi)
+
+```
+一个不需要连接电脑、非侵入式的 Android 自动化工具。公测版拥有录制回放、性能测试、一机多控三项主要功能，能为测试开发人员节省宝贵时间。安卓版本多、终端型号多，一个成熟安卓应用的上线需要进行大量测试，而很多测试都是属于重复操作，通过此工具可以极大简化测试人员的工作量
+```
+![](https://s3.bmp.ovh/imgs/2023/09/13/f9f815c624347451.png)
