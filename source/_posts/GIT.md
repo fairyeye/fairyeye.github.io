@@ -120,3 +120,20 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 > /home/ubuntu/log.log 2>&1 &
 
 ```
+
+
+
+### 开源项目
+
+
+#### [Oshi](https://github.com/oshi/oshi)
+
+```
+获取操作系统和硬件信息的 Java 库。这是一个基于 JNA 实现的获取本机操作系统和硬件信息的库，支持操作系统版本、进程、内存、 CPU 使用率、磁盘和分区、设备、传感器等信息。
+```
+
+#### [PlayEdu](https://github.com/PlayEdu/PlayEdu)
+
+```
+一款 Java 写的内部培训系统。这是一款基于 SpringBoot+React 开发而成的视频培训系统，它界面清爽、交互流畅，支持上传资源、创建部门、添加学员、指派课程等功能，可用于企业和机构搭建内部培训平台。
+```
