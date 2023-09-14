@@ -244,7 +244,9 @@ done
 ```
 
 
-
+``` sh
+echo "alias python=/usr/bin/python3" >> ~/.bash_profile
+```
 
 
 
