@@ -35,7 +35,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "Ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -52,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "230923.md",
+                "file": "Ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "230923.md",
+                "file": "Ubuntu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "230923.md"
+                "file": "Ubuntu.md"
               }
             }
           },
@@ -205,11 +205,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d720dc10669c36b6",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
-    "Ubuntu.md",
-    "230923.md",
     "GIT.md",
+    "230923.md",
+    "Ubuntu.md",
     "使用教程.md",
     "230715.md",
     "WHEN YOU HAVE A NEW PC.md",
