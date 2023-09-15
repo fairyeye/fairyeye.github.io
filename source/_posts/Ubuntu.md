@@ -1,9 +1,11 @@
 ---
 title: Ubuntu
 date: 2020年9月17日18:59:55
-tags: "系统集成"
+tags:
+  - 系统集成
 categories: ""
 description: 
+hidden: false
 ---
 
 

@@ -36,7 +36,7 @@
               "type": "markdown",
               "state": {
                 "file": "Ubuntu.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -52,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mysql",
+                "query": "tag:系统集成",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -106,7 +106,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -126,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "230923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "230923.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "230923.md"
               }
             }
           },
@@ -205,11 +206,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
-    "GIT.md",
-    "230923.md",
     "Ubuntu.md",
+    "230923.md",
+    "阿里巴巴手册.md",
+    "设计模式笔记.md",
+    "GIT.md",
     "使用教程.md",
     "230715.md",
     "WHEN YOU HAVE A NEW PC.md",
@@ -232,8 +235,6 @@
     "2023-06-07.md",
     "StringToInteger.md",
     "Jmeter简单使用.md",
-    "阿里巴巴手册.md",
-    "设计模式笔记.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
