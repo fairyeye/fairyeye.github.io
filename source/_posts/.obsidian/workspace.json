@@ -30,6 +30,16 @@
             }
           },
           {
+            "id": "0fd0ea290c7250fb",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
+          },
+          {
             "id": "3b1f8491c6d64bdc",
             "type": "leaf",
             "state": {
@@ -52,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -206,7 +216,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d720dc10669c36b6",
+  "active": "0fd0ea290c7250fb",
   "lastOpenFiles": [
     "Ubuntu.md",
     "230923.md",
