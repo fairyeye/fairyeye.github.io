@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230819.md",
+                "file": "230923.md",
                 "mode": "source",
                 "source": false
               }
@@ -51,8 +51,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -126,6 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "230923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,6 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "230923.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +172,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "230923.md"
+              }
             }
           },
           {
@@ -201,7 +204,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2a4781b30afd0cd2",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
     "230819.md",
     "Ubuntu--.md",
