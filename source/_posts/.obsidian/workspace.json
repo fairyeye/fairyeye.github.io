@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230923.md",
+                "file": "Ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -35,7 +35,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu--.md",
+                "file": "Ubuntu.md",
                 "mode": "preview",
                 "source": false
               }
@@ -80,7 +80,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:/  ",
+                "query": "item2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "230923.md",
+                "file": "Ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "230923.md",
+                "file": "Ubuntu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "230923.md"
+                "file": "Ubuntu.md"
               }
             }
           },
@@ -206,11 +206,11 @@
   },
   "active": "d720dc10669c36b6",
   "lastOpenFiles": [
+    "230923.md",
     "230819.md",
-    "Ubuntu--.md",
+    "Ubuntu.md",
     "230715.md",
     "需要掌握以下知识.md",
-    "230923.md",
     "阿里巴巴手册.md",
     "设计模式笔记.md",
     "GIT.md",
