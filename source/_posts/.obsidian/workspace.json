@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "Ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "item2",
+                "query": "python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -86,7 +86,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "Ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "Ubuntu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "Ubuntu.md"
               }
             }
           },
@@ -187,6 +188,8 @@
   },
   "active": "3b1f8491c6d64bdc",
   "lastOpenFiles": [
+    "WHEN YOU HAVE A NEW PC.md",
+    "GIT.md",
     "230923.md",
     "Ubuntu.md",
     "230819.md",
@@ -194,9 +197,7 @@
     "需要掌握以下知识.md",
     "阿里巴巴手册.md",
     "设计模式笔记.md",
-    "GIT.md",
     "使用教程.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "MySQL.md",
     "同步不同服务的MySQL数据表.md",
     "Delete & Truncate.md",
