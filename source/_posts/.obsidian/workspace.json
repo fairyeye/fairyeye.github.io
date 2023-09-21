@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230923.md",
-                "mode": "preview",
+                "file": "GIT.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "230923.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "230923.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "230923.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -187,8 +187,8 @@
   },
   "active": "3b1f8491c6d64bdc",
   "lastOpenFiles": [
-    "Ubuntu.md",
     "230923.md",
+    "Ubuntu.md",
     "230819.md",
     "230715.md",
     "需要掌握以下知识.md",
