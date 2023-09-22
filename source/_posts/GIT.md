@@ -171,6 +171,38 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
     
 - 支持多种下载方式
 
+### Python 搞定 UI：nicegui
+
+**本周 star 增长数：850+**，**主语言：Python、JavaScript**
+
+`New` 用 Python 搞定 Web UI，有了它，你可以用 Python 创建按钮、对话框、Markdown 文件、3D 场景。
+
+> GitHub 地址→https://github.com/zauberzeug/nicegui
+
+![](https://s3.bmp.ovh/imgs/2023/09/22/65aeeb9f2a95da35.png)
+
+
+### 炫酷的 Windows 终端软件：FluentTerminal
+
+**主语言：C#**
+
+基于 UWP 的 Windows 终端应用，拥有强大的自定义主题模块，能够轻松定制出风格各异的主题。提供了中文选项，支持多窗口、SSH 和搜索等功能。
+
+> HG 评价地址→https://hellogithub.com/repository/352150f3034742cbbf67d301a86973ca
+
+
+### 1.2 AI 生图：ControlNet
+
+**主语言：Python**
+
+`New` 上周线稿上色的 style2paints 在 ControlNet 面前可能只是个弟弟。ControlNet 是一种通过添加额外条件来控制扩散模型的神经网络结构。为什么说 style2paints 是个弟弟呢？这是 ControlNet 的社生成效果图，从线稿到成品，一句话搞点。
+
+> GitHub 地址→https://github.com/lllyasviel/ControlNet
+
+
+
+
+
 
 
 ### Git技巧
