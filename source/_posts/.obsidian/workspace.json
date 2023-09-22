@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -188,10 +187,10 @@
   },
   "active": "3b1f8491c6d64bdc",
   "lastOpenFiles": [
+    "Ubuntu.md",
     "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "230923.md",
-    "Ubuntu.md",
     "230819.md",
     "230715.md",
     "需要掌握以下知识.md",

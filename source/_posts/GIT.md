@@ -157,6 +157,21 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 ![](https://s3.bmp.ovh/imgs/2023/09/13/f9f815c624347451.png)
 
 
+### [Hitomi](https://github.com/KurtBestor/Hitomi-Downloader)
+
+**本周 star 增长数：400+**，**主语言：Python**
+
+Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的图片、视频、音频。部分特性：
+
+- 简洁的用户界面
+    
+- 支持下载加速，也支持限速
+    
+- 支持单任务由 24 个线程
+    
+- 支持多种下载方式
+
+
 
 ### Git技巧
 
