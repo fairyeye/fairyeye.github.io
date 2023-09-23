@@ -200,7 +200,7 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 > GitHub 地址→https://github.com/lllyasviel/ControlNet
 
 
-#### 1Panel
+#### [1Panel](https://github.com/1Panel-dev/1Panel)
 
 ```
 [1Panel Log]: 1Panel 服务启动成功!

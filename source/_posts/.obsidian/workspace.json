@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "3b1f8491c6d64bdc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GIT.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "Ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "Ubuntu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "Ubuntu.md"
               }
             }
           },
@@ -185,11 +172,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b1f8491c6d64bdc",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
+    "GIT.md",
     "Ubuntu.md",
     "WHEN YOU HAVE A NEW PC.md",
-    "GIT.md",
     "230923.md",
     "230819.md",
     "230715.md",
