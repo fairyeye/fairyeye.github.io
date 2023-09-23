@@ -157,7 +157,7 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 ![](https://s3.bmp.ovh/imgs/2023/09/13/f9f815c624347451.png)
 
 
-### [Hitomi](https://github.com/KurtBestor/Hitomi-Downloader)
+#### [Hitomi](https://github.com/KurtBestor/Hitomi-Downloader)
 
 **本周 star 增长数：400+**，**主语言：Python**
 
@@ -171,7 +171,7 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
     
 - 支持多种下载方式
 
-### Python 搞定 UI：nicegui
+#### Python 搞定 UI：nicegui
 
 **本周 star 增长数：850+**，**主语言：Python、JavaScript**
 
@@ -182,7 +182,7 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 ![](https://s3.bmp.ovh/imgs/2023/09/22/65aeeb9f2a95da35.png)
 
 
-### 炫酷的 Windows 终端软件：FluentTerminal
+#### 炫酷的 Windows 终端软件：FluentTerminal
 
 **主语言：C#**
 
@@ -191,7 +191,7 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 > HG 评价地址→https://hellogithub.com/repository/352150f3034742cbbf67d301a86973ca
 
 
-### 1.2 AI 生图：ControlNet
+#### 1.2 AI 生图：ControlNet
 
 **主语言：Python**
 
@@ -200,7 +200,26 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 > GitHub 地址→https://github.com/lllyasviel/ControlNet
 
 
+#### 1Panel
 
+```
+[1Panel Log]: 1Panel 服务启动成功!
+[1Panel Log]:
+[1Panel Log]: =================感谢您的耐心等待，安装已经完成==================
+[1Panel Log]:
+[1Panel Log]: 请用浏览器访问面板:
+[1Panel Log]: 面板地址: http://$LOCAL_IP:29252/821d637d70
+[1Panel Log]: 用户名称: e0ae9ef986
+[1Panel Log]: 用户密码: zhang...1997
+[1Panel Log]:
+[1Panel Log]: 项目官网: https://1panel.cn
+[1Panel Log]: 项目文档: https://1panel.cn/docs
+[1Panel Log]: 代码仓库: https://github.com/1Panel-dev/1Panel
+[1Panel Log]:
+[1Panel Log]: 如果使用的是云服务器，请至安全组开放 29252 端口
+[1Panel Log]:
+[1Panel Log]: ================================================================
+```
 
 
 
