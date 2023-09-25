@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "230923.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d8aa1b08576adc93",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "231104.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "231104.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "231104.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "231104.md"
               }
             }
           },
@@ -172,12 +185,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d720dc10669c36b6",
+  "active": "d8aa1b08576adc93",
   "lastOpenFiles": [
-    "GIT.md",
-    "Ubuntu.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "230923.md",
+    "231104.md",
+    "Ubuntu.md",
+    "GIT.md",
+    "WHEN YOU HAVE A NEW PC.md",
     "230819.md",
     "230715.md",
     "需要掌握以下知识.md",
@@ -200,7 +214,6 @@
     "14.md",
     "2023-06-07.md",
     "StringToInteger.md",
-    "Jmeter简单使用.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
