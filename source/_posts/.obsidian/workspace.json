@@ -30,19 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "cc6eecb0f7c5ccab",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.14"
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,10 +185,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cc6eecb0f7c5ccab",
+  "active": "d8aa1b08576adc93",
   "lastOpenFiles": [
-    "230923.md",
     "231104.md",
+    "230923.md",
     "Ubuntu.md",
     "GIT.md",
     "WHEN YOU HAVE A NEW PC.md",
