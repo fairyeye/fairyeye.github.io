@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "231104.md",
+                "file": "Ubuntu.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "python",
+                "query": "docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -86,7 +85,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "231104.md",
+                "file": "230923.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "231104.md",
+                "file": "230923.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "231104.md"
+                "file": "230923.md"
               }
             }
           },
@@ -185,11 +185,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d8aa1b08576adc93",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
+    "Ubuntu.md",
     "231104.md",
     "230923.md",
-    "Ubuntu.md",
     "GIT.md",
     "WHEN YOU HAVE A NEW PC.md",
     "230819.md",
