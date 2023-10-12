@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "231104.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "231104.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "231104.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "231104.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -197,12 +197,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fc901e479a20dbb5",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
+    "231104.md",
     "Ubuntu.md",
     "230819.md",
     "230923.md",
-    "231104.md",
     "GIT.md",
     "WHEN YOU HAVE A NEW PC.md",
     "230715.md",
