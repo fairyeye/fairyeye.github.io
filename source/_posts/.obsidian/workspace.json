@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "docker",
+                "query": "13643",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -185,7 +185,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d720dc10669c36b6",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
     "Ubuntu.md",
     "231104.md",
