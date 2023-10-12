@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ad65f1c8b7d5b46c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Centos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "端口",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -98,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -118,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "Centos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "Centos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "Centos.md"
               }
             }
           },
@@ -197,13 +210,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
+    "GIT.md",
+    "Centos.md",
     "231104.md",
     "Ubuntu.md",
     "230819.md",
     "230923.md",
-    "GIT.md",
     "WHEN YOU HAVE A NEW PC.md",
     "230715.md",
     "需要掌握以下知识.md",
@@ -225,7 +239,6 @@
     "Untitled.canvas",
     "14.md",
     "2023-06-07.md",
-    "StringToInteger.md",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
     "upload/image-20200626141113470.png",
