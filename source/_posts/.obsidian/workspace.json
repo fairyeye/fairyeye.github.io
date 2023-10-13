@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "230819.md",
+                "file": "231104.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,8 +109,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -131,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Centos.md",
+                "file": "231104.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Centos.md",
+                "file": "231104.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Centos.md"
+                "file": "231104.md"
               }
             }
           },
@@ -210,13 +208,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "195b6116ec82a7f8",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
-    "GIT.md",
     "Centos.md",
     "231104.md",
-    "Ubuntu.md",
     "230819.md",
+    "GIT.md",
+    "Ubuntu.md",
     "230923.md",
     "WHEN YOU HAVE A NEW PC.md",
     "230715.md",
