@@ -16,6 +16,6 @@ brew install ttygif
 
 #### 使用
 
-```bash
+```bash 命令行提示符 command:("[root@localhost] $":1,9-10||"[admin@remotehost] #":4-6)
 ttyrec myrecording
 ```

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "~Shoka使用说明.md",
+                "file": "Mac使用记录.md",
                 "mode": "source",
                 "source": false
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "~Shoka使用说明.md",
+                "file": "Mac使用记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "~Shoka使用说明.md",
+                "file": "Mac使用记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "~Shoka使用说明.md"
+                "file": "Mac使用记录.md"
               }
             }
           },
@@ -221,11 +221,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95d10f8868aa0edb",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
+    "Mac 数据库忘记密码.md",
+    "~Shoka使用说明.md",
     "Mac使用记录.md",
     "231104.md",
-    "~Shoka使用说明.md",
     "13.md",
     "Pasted image 20231025105221.png",
     "230819.md",
@@ -249,7 +250,6 @@
     "GitHub Page.md",
     "SRM.md",
     "15.md",
-    "GC回收算法.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
