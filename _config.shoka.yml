@@ -6,7 +6,7 @@ darkmode: false
 loader:
   start: false # 当初次打开页面时，显示加载动画
   switch: false # tab 切换到其他页面时，显示加载动画
-image_server: "https://wallhaven.cc/"
+image_server: "https://source.unsplash.com/random/800x600"
 
 font:
   enable: true
