@@ -10,8 +10,24 @@
         </author>
         <description>我不过像你像他像那野草野花。</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 12 Oct 2023 16:12:32 +0800</pubDate>
-        <lastBuildDate>Thu, 12 Oct 2023 16:12:32 +0800</lastBuildDate>
+        <pubDate>Wed, 25 Oct 2023 11:31:59 +0800</pubDate>
+        <lastBuildDate>Wed, 25 Oct 2023 11:31:59 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://fairyeye.github.io/2023/10/25/Mac%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</guid>
+            <title>Mac使用记录</title>
+            <link>https://fairyeye.github.io/2023/10/25/Mac%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</link>
+            <pubDate>Wed, 25 Oct 2023 11:31:59 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;软件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件&#34;&gt;#&lt;/a&gt; 软件&lt;/h2&gt;
+&lt;h3 id=&#34;ttygif&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ttygif&#34;&gt;#&lt;/a&gt; ttygif&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;终端录制工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;安装教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装教程&#34;&gt;#&lt;/a&gt; 安装教程&lt;/h4&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;brew install ttygif&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h4&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;命令行提示符 command:(&#34;[root@localhost] $&#34;:1,9-10||&#34;[admin@remotehost] #&#34;:4-6)&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ttyrec myrecording&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://fairyeye.github.io/2023/10/12/Centos/</guid>
             <title>Centos</title>
@@ -26,159 +42,93 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://fairyeye.github.io/2023/08/21/230923/</guid>
-            <title></title>
-            <link>https://fairyeye.github.io/2023/08/21/230923/</link>
-            <pubDate>Mon, 21 Aug 2023 09:37:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;pur-23920&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-23920&#34;&gt;#&lt;/a&gt; pur-23920&lt;/h3&gt;
-&lt;p&gt;QB: SCUX_LOTUSEU_QUERY_SUM_ADVANCE_PAYMENT_AMOUNT&lt;br /&gt;
- 埋点：SPUC_PO_ADVANCE_PAYMENT_AMOUNT_AFTER&lt;/p&gt;
-&lt;h3 id=&#34;pur-23503&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-23503&#34;&gt;#&lt;/a&gt; pur-23503&lt;/h3&gt;
-&lt;p&gt;API + 独立脚本：SCUX_LOTUSNYO_CREATE_PREPAYMENT_BY_ORDER&lt;/p&gt;
+            <guid isPermalink="true">https://fairyeye.github.io/2023/09/25/231104/</guid>
+            <title>231104</title>
+            <link>https://fairyeye.github.io/2023/09/25/231104/</link>
+            <pubDate>Mon, 25 Sep 2023 09:36:59 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;pur-24166&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-24166&#34;&gt;#&lt;/a&gt; pur-24166&lt;/h3&gt;
 &lt;p&gt;返回消息：&lt;br /&gt;
-scux.spuc.lotusnyo_po_is_not_confirmed_or_not_closed&lt;br /&gt;
-scux.spuc.lotusnyo_po_is_not_found&lt;/p&gt;
-&lt;h3 id=&#34;pur-22253&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22253&#34;&gt;#&lt;/a&gt; pur-22253&lt;/h3&gt;
-&lt;h3 id=&#34;pur-21898&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21898&#34;&gt;#&lt;/a&gt; pur-21898&lt;/h3&gt;
-&lt;h3 id=&#34;pur-23010&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-23010&#34;&gt;#&lt;/a&gt; pur-23010&lt;/h3&gt;
-&lt;p&gt;// 查询后置脚本：SPUC_ORDER_LINE_DETAIL&lt;br /&gt;
-attachmentSize&lt;br /&gt;
-QB：SCUX_MARKOR_QUERY_ATTACHMENT_SIZE_BY_ITEM_ID&lt;br /&gt;
-SCUX_MARKOR_QUERY_ITEM_BY_PO_LINE&lt;/p&gt;
-&lt;p&gt;API + 独立脚本：SCUX_MARKOR_ATTACHMENT_BATCH_DOWNLOAD&lt;/p&gt;
-&lt;p&gt;返回消息：scux.spuc.markor_no_attachment_download&lt;/p&gt;
-&lt;h3 id=&#34;pur-23788&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-23788&#34;&gt;#&lt;/a&gt; pur-23788&lt;/h3&gt;
-&lt;p&gt;值集：  SCUX.SPUC.JIULI_QUERY_CONFIRMED_ORDER&lt;br /&gt;
- 值集视图：  SCUX.SPUC.JIULI_QUERY_CONFIRMED_ORDER&lt;/p&gt;
-&lt;h3 id=&#34;pur-22490&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22490&#34;&gt;#&lt;/a&gt; pur-22490&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/08/24/3c1195c6f528ac8c.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;pur-24324&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-24324&#34;&gt;#&lt;/a&gt; pur-24324&lt;/h3&gt;
-&lt;p&gt;SPUC_ORDER_BATCH_SUBMIT_HANDLE&lt;br /&gt;
-QB：SCUX_ISIMCERE_QUERY_EMPLOYEE_BY_USER_ID&lt;br /&gt;
- 返回消息：scux.isimcere.spuc.submit_error_pr_request_by&lt;/p&gt;
-&lt;h3 id=&#34;pur-24217&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-24217&#34;&gt;#&lt;/a&gt; pur-24217&lt;/h3&gt;
-&lt;p&gt;配置表：scux_srm_carlsberg_carlsberg_po_attachment_mult&lt;br /&gt;
- 埋点：SPUC_ORDER_SYNC_IMP_INSERT_PROCESS&lt;br /&gt;
- 值集：SCUX.CARLSBERG.LANGUAGE&lt;br /&gt;
- 编码规则：SCUX.CARLSBERG_ATTACHMENT_VER&lt;/p&gt;
-&lt;p&gt;动作脚本：配置表关联动作脚本&lt;/p&gt;
-&lt;h3 id=&#34;pur-24216&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-24216&#34;&gt;#&lt;/a&gt; pur-24216&lt;/h3&gt;
-&lt;p&gt;配置表：scux_srm_carlsberg_order_description_maintenance&lt;br /&gt;
-scux_srm_carlsberg_order_description&lt;/p&gt;
-&lt;p&gt;埋点：SPUC_ORDER_SYNC_IMP_INSERT_PROCESS、SPUC_SUBMIT_PO、SCUX_MTC_PO_HEADER_INFO&lt;/p&gt;
-&lt;h3 id=&#34;pur-24191&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-24191&#34;&gt;#&lt;/a&gt; pur-24191&lt;/h3&gt;
-&lt;p&gt;埋点：SPUC_SUBMIT_PO&lt;br /&gt;
- 返回消息：scux.error.supplier_is_not_enabled&lt;br /&gt;
- 来源：自动转单提交？ERP 来源？&lt;br /&gt;
-报错：【PO001】采购组织在供应商主数据中已冻结或未拓展，请调整后重试&lt;br /&gt;
-待确定：接口报错、接口没查到、参数为空等&lt;/p&gt;
-&lt;h3 id=&#34;pur-24244&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-24244&#34;&gt;#&lt;/a&gt; pur-24244&lt;/h3&gt;
-&lt;p&gt;API + 独立脚本：SCUX_KBYK_UPDATE_PO_LOCATION_ATTACHMENT&lt;/p&gt;
-&lt;h3 id=&#34;pur-23989&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-23989&#34;&gt;#&lt;/a&gt; pur-23989&lt;/h3&gt;
-&lt;p&gt;QB：SCUX_MARUBI_QUERY_EMPLOYEEBY_USER、SCUX_MARUBI_QUERY_PO_LINE&lt;br /&gt;
- 独立脚本：SCUX_MARUBI_CREATE_CHARGE_BY_PO_JOB&lt;br /&gt;
-JOB: SCUX_MARUBI_CREATE_CHARGE_PO&lt;/p&gt;
-&lt;h3 id=&#34;pur-26689-博威价格确认单导出套保&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26689-博威价格确认单导出套保&#34;&gt;#&lt;/a&gt; pur-26689 【博威】价格确认单导出套保&lt;/h3&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://fairyeye.github.io/2023/07/18/230819/</guid>
-            <title></title>
-            <link>https://fairyeye.github.io/2023/07/18/230819/</link>
-            <pubDate>Tue, 18 Jul 2023 09:22:42 +0800</pubDate>
-            <description><![CDATA[ &lt;hr /&gt;
-&lt;hr /&gt;
-&lt;h3 id=&#34;pur-&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-&#34;&gt;#&lt;/a&gt; PUR-&lt;/h3&gt;
-&lt;h3 id=&#34;pur-21898&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21898&#34;&gt;#&lt;/a&gt; PUR-21898&lt;/h3&gt;
-&lt;h4 id=&#34;spucresource&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#spucresource&#34;&gt;#&lt;/a&gt; spuc，resource&lt;/h4&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;update sodr_po_header set settle_pe_supplier = concat(ifnull(settle_supplier_id,&amp;#x27;null&amp;#x27;),&amp;#x27;-&amp;#x27;,ifnull(settle_erp_supplier_id,&amp;#x27;null&amp;#x27;)) where (settle_supplier_id is not null or settle_erp_supplier_id is not null);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;select count(1) from sodr_po_header where (settle_supplier_id is not null or settle_erp_supplier_id is not null); -- 178826&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;select count(1) from sodr_po_header;-- 9596554&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;pur-21731&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21731&#34;&gt;#&lt;/a&gt; PUR-21731&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1. subErpSupplierId: 277766&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. subErpSupplierName: &amp;quot;协议本&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3. subSupplierCode: &amp;quot;CO00024895&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4. subSupplierFlag: 0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5. subSupplierId: 1089712&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6. subSupplierName: &amp;quot;协议平台供应商1&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7. supplierCompanyId: &amp;quot;__-gYSNy2v7rnwsDtO5_UGeMA-__&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h5 id=&#34;pur-21731-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21731-2&#34;&gt;#&lt;/a&gt; pur-21731&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;批量编辑
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;种子数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#种子数据&#34;&gt;#&lt;/a&gt; 种子数据&lt;/h4&gt;
-&lt;p&gt;值集：SODR.PO_TABLE_FIELD&lt;br /&gt;
- 配置表：sodr_po_config_init&lt;br /&gt;
- 代码：&lt;/p&gt;
-&lt;h3 id=&#34;pur-22219&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22219&#34;&gt;#&lt;/a&gt; PUR-22219&lt;/h3&gt;
-&lt;p&gt;前置：SPUC_PCI_PO_HEADER_CONFIRM_DETAIL&lt;/p&gt;
-&lt;p&gt;返回消息：error.pci.confirm_order_attchment_is_empty&lt;/p&gt;
-&lt;h3 id=&#34;pur-22269&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22269&#34;&gt;#&lt;/a&gt; PUR-22269&lt;/h3&gt;
-&lt;p&gt;埋点：SPUC_ORDER_LINE_IMPORT&lt;br /&gt;
-SPUC_ORDER_PRICE_SOURCE_TYPE&lt;/p&gt;
-&lt;h3 id=&#34;pur-21594&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21594&#34;&gt;#&lt;/a&gt; PUR-21594&lt;/h3&gt;
-&lt;p&gt;值集：SCUX.CHAM_CONFIDENTIAL_DOCUMENT_LEVEL&lt;br /&gt;
- 埋点：SPUC_ORDER_PRICE_SOURCE_TYPE&lt;/p&gt;
-&lt;h3 id=&#34;pur-22034&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22034&#34;&gt;#&lt;/a&gt; pur-22034&lt;/h3&gt;
-&lt;p&gt;独立脚本：SCUX_INOV_QUERY_QUANTITY_BY_COMPANY_ITEM&lt;br /&gt;
-API：SCUX_INOV_QUERY_QUANTITY_BY_COMPANY_ITEM&lt;br /&gt;
-QB：SCUX_INOV_QUERY_QUANTITY_BY_COMPANY_ITEM&lt;/p&gt;
-&lt;h3 id=&#34;pur-22249&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22249&#34;&gt;#&lt;/a&gt; PUR-22249&lt;/h3&gt;
-&lt;p&gt;标准代码埋点：feature-pur-22249&lt;br /&gt;
+scux.spuc.lotus_nyo_no_enabled_master_enable_bank&lt;br /&gt;
+scux.spuc.lotus_nyo_no_erp_supplier&lt;br /&gt;
+ 埋点：&lt;br /&gt;
+SPUC_SUBMIT_PO&lt;/p&gt;
+&lt;h3 id=&#34;pur-26089&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26089&#34;&gt;#&lt;/a&gt; pur-26089&lt;/h3&gt;
+&lt;p&gt;组合业务对象：&lt;br /&gt;
+SRM_C_SRM_SODR_PO_HEADER&lt;br /&gt;
+ 个性化单元：&lt;br /&gt;
+SODR.ORDER_TRACKING_LIST.EXPORT&lt;/p&gt;
+&lt;h3 id=&#34;pur-25937&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-25937&#34;&gt;#&lt;/a&gt; pur-25937&lt;/h3&gt;
+&lt;p&gt;平台供应商多语言待确定&lt;/p&gt;
+&lt;p&gt;页面个性化：&lt;br /&gt;
+SODR.WORKSPACE_DETAILALL.SEARCH&lt;/p&gt;
+&lt;h3 id=&#34;pur-26467&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26467&#34;&gt;#&lt;/a&gt; pur-26467&lt;/h3&gt;
+&lt;p&gt;独立脚本 + API 发布：&lt;br /&gt;
+SCUX_LDJT_QUERY_LAST_PURCHASE_PRICE&lt;/p&gt;
+&lt;h3 id=&#34;pur-26322&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26322&#34;&gt;#&lt;/a&gt; pur-26322&lt;/h3&gt;
+&lt;p&gt;独立脚本 + API：&lt;br /&gt;
+SCUX_WATSONS_UPDATE_ATTACHMENT_WFL&lt;br /&gt;
  适配器：&lt;br /&gt;
-提交：SPUC_SUBMIT_PO,SPUC_AFTER_SUBMIT_PO&lt;br /&gt;
- 行取消联动头：SPUC_LINE_CANCEL_PO_HEADER&lt;br /&gt;
- 电商行取消联动头：SPUC_LINE_CANCEL_PO_HEADER&lt;br /&gt;
- 整单取消：SPUC_ALL_CANCEL_PO_HEADER&lt;br /&gt;
- 取消时，判断非新建审批拒绝&lt;br /&gt;
-审批拒绝：SPUC_ORDER_REJECTED_EVENT&lt;br /&gt;
- 区分新建审批拒绝&lt;br /&gt;
-撤销：SPUC_ORDER_REVOCATION_EVENT_AFTER&lt;br /&gt;
- 重新同步：SPUC_RE_SYNC_ERP&lt;/p&gt;
-&lt;p&gt;值集：SPUC.SYNC_EXP_TYPE、SPUC.SYNC_INTERFACE_TYPE&lt;/p&gt;
-&lt;p&gt;返回消息：error.spuc.supplier_oreder_nums_is_zero&lt;br /&gt;
- 配置表：scux_srm_hanslaser_supplier_life_cycle_place_order_control&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# 同步失败 写入同步记录表&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;and&lt;/span&gt; spcr.sync_status &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;FAIL&amp;#x27;&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;and&lt;/span&gt; spcr.po_line_id &lt;span class=&#34;keyword&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;null&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;and&lt;/span&gt; spcr.po_line_location_id &lt;span class=&#34;keyword&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;pur-20078 配置表：scux_srm_hanslaser_supplier_life_cycle_place_order_control&lt;/p&gt;
-&lt;h3 id=&#34;pur-21957&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21957&#34;&gt;#&lt;/a&gt; pur-21957&lt;/h3&gt;
-&lt;p&gt;-- 查询复制新的供应商附件&lt;br /&gt;
-独立脚本：SCUX_QUANTUM_PO_COPY_UUID，SCUX_QUANTUM_UPDATE_SUP_ATTACHMENT_UUID&lt;br /&gt;
-API：SCUX_QUANTUM_PO_COPY_UUID，SCUX_QUANTUM_UPDATE_SUP_ATTACHMENT_UUID&lt;br /&gt;
--- api 发布 更新供应商附件 UUID&lt;/p&gt;
-&lt;p&gt;返回消息：error.spuc.quantum_po_status_is_not_delivery&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;org.srm.purchasecooperation.order.api.controller.v2.PoExternalController#deliveryExportToErp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;org.srm.purchasecooperation.order.api.controller.v2.PoReceiptInteractionController#poInitDeliveryWorkbench&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;org.srm.purchasecooperation.order.api.controller.v1.PoHeaderController#exportErp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;pur-22195&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22195&#34;&gt;#&lt;/a&gt; pur-22195&lt;/h3&gt;
-&lt;p&gt;API + 独立脚本：SCUX_DREAME_QUERY_DRAWING_LINE_BY_ITEM&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/08/01/18aa18c75d251422.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;pur-22427&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22427&#34;&gt;#&lt;/a&gt; pur-22427&lt;/h3&gt;
-&lt;p&gt;-- 删除二开 恢复标准  &lt;code&gt;hrpt_print_report&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;-- hrpt_print_report&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;INTO&lt;/span&gt; `srm`.`hrpt_print_report` (`report_id`, `doc_id`, `report_uuid`, `report_code`, `dataset_code`, `report_name`, `report_type`, `enabled_flag`, `remark`, `tenant_id`, `object_version_number`, `created_by`, `creation_date`, `last_updated_by`, `last_update_date`) &lt;span class=&#34;keyword&#34;&gt;VALUES&lt;/span&gt; (&lt;span class=&#34;number&#34;&gt;67&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;66032d351f364f31b44f4bd5e1442dfe&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;SODR.PO_REPT_NEW&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;SODR.STD.ORDER_DATASET&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;标准采购订单打印模板&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;PDF&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;keyword&#34;&gt;NULL&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;30&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;430&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;2022-09-29 20:03:26&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;495599&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;2023-06-08 11:12:32&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;INTO&lt;/span&gt; `srm`.`hrpt_print_report` (`report_id`, `doc_id`, `report_uuid`, `report_code`, `dataset_code`, `report_name`, `report_type`, `enabled_flag`, `remark`, `tenant_id`, `object_version_number`, `created_by`, `creation_date`, `last_updated_by`, `last_update_date`) &lt;span class=&#34;keyword&#34;&gt;VALUES&lt;/span&gt; (&lt;span class=&#34;number&#34;&gt;388&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;a8589263034d4ba3a0074c376fd36a92&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;SODR.PO_REPT_NEW2&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;SODR.STD.ORDER_DATASET_1&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;标准采购订单打印模板_库存组织&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;PDF&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;keyword&#34;&gt;NULL&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;30&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;495599&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;2023-06-08 10:20:05&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;495599&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;2023-06-08 10:20:05&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;INSERT&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;INTO&lt;/span&gt; `srm`.`hrpt_print_report` (`report_id`, `doc_id`, `report_uuid`, `report_code`, `dataset_code`, `report_name`, `report_type`, `enabled_flag`, `remark`, `tenant_id`, `object_version_number`, `created_by`, `creation_date`, `last_updated_by`, `last_update_date`) &lt;span class=&#34;keyword&#34;&gt;VALUES&lt;/span&gt; (&lt;span class=&#34;number&#34;&gt;389&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;8450c0aebecc4fdbba8796b1ac624eda&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;SODR.PO_REPT_NEW3&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;SODR.STD.ORDER_DATASET_1_1&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;测试&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;PDF&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;keyword&#34;&gt;NULL&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;30&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;495599&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;2023-06-08 11:22:51&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;495599&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;2023-06-08 11:22:51&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&#34;pur-22126&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22126&#34;&gt;#&lt;/a&gt; pur-22126&lt;/h3&gt;
-&lt;p&gt;埋点：SPUC_ALL_CANCEL_PO_LINE&lt;br /&gt;
-SPUC_LINE_CANCEL_PO_LINE_NEW&lt;br /&gt;
-SPUC_LINE_CANCEL_PO_LINE&lt;br /&gt;
-%%SPUC_LINE_CLOSE_PO_LINE&lt;br /&gt;
-SPUC_ALL_CLOSE_PO_LINE%%&lt;br /&gt;
- 独立脚本：SCUX_XTALPI_CHANGE_QUERY_PAYMENT_STAGE&lt;br /&gt;
-SCUX_XTALPI_PO_CLOSE_CHECK&lt;br /&gt;
-SCUX_XTALPI_PO_LINE_CLOSE_CHECK&lt;br /&gt;
-SCUX_XTALPI_PO_LOCATION_PURCHASER_AFTER&lt;/p&gt;
-&lt;p&gt;取消查询预付款、取消保存预付款&lt;br /&gt;
- API + 独立脚本：SCUX_XTALPI_CANCEL_QUERY_PAYMENT_STAGE&lt;br /&gt;
-SCUX_XTALPI_CANCEL_SAVE_PAYMET_STAGE&lt;/p&gt;
-&lt;p&gt;返回消息：scux_xtalpi.line_cancel_faild&lt;br /&gt;
-scux_xtalpi.line_close_faild&lt;br /&gt;
-scux.xtalpi.error.payment_save_faild_pre_pay_is_no&lt;br /&gt;
-scux.xtalpi.error.payment_rate_more_than_100&lt;br /&gt;
-scux.xtalpi.error.paymet_stage_save_faild_amount_not_eq_po_amount&lt;br /&gt;
-scux.xtalpi.error.payment_save_faild.data_is_empty&lt;/p&gt;
-&lt;p&gt;API 挂载：&lt;br /&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;@MarmotApiPoint(apiCode = &amp;quot;PO_HEADER_CLOSE&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;@MarmotApiPoint(apiCode = &amp;quot;PO_LOCATION_CLOSE&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;PO_LOCATION_PURCHASER&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;QB:  SCUX_XTALPI_QUERY_PREPAY_FLAG_BY_LINE&lt;/p&gt;
-&lt;h3 id=&#34;pur-21956&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21956&#34;&gt;#&lt;/a&gt; pur-21956&lt;/h3&gt;
-&lt;p&gt;埋点：SPUC_ORDER_CONFIRM_AFTER&lt;br /&gt;
- 注意 ConfirmType！=LINE_CONFIRM&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;SPUC_PO_DELIVERY_DATE_REVIEW_APPROVE_ADAPTOR
+SCUX_MTC_PO_HEADER_INFO&lt;br /&gt;
+SPUC_ORDER_QUERY_PROCESS_ACTION&lt;/p&gt;
+&lt;h3 id=&#34;pur-26427&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26427&#34;&gt;#&lt;/a&gt; pur-26427&lt;/h3&gt;
+&lt;p&gt;配置表：&lt;br /&gt;
+scux_srm_carlsberg_contract_amount_change_record&lt;br /&gt;
+ 适配器：&lt;br /&gt;
+SPUC_ORDER_SYNC_IMP_INSERT_PROCESS&lt;br /&gt;
+SPUC_BEFORE_ERP_CLOSE_OR_CANCEL_PO&lt;/p&gt;
+&lt;p&gt;更新时：判断取消状态和表里的取消状态&lt;/p&gt;
+&lt;h3 id=&#34;pur-26689&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26689&#34;&gt;#&lt;/a&gt; pur-26689&lt;/h3&gt;
+&lt;p&gt;独立脚本：&lt;br /&gt;
+SCUX_VN_SCM_PO_RETURN_OA&lt;br /&gt;
+ 适配器：&lt;br /&gt;
+重新同步：SPUC_RE_SYNC_ERP&lt;/p&gt;
+&lt;p&gt;值集：&lt;br /&gt;
+SPUC.SYNC_EXP_TYPE&lt;br /&gt;
+SPUC.SYNC_INTERFACE_TYPE&lt;/p&gt;
+&lt;h3 id=&#34;pur-26080&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26080&#34;&gt;#&lt;/a&gt; pur-26080&lt;/h3&gt;
+&lt;p&gt;适配器:&lt;br /&gt;
+SPUC_SUBMIT_PO&lt;br /&gt;
+SPUC_ORDER_APPROVED_EVENT&lt;/p&gt;
+&lt;h3 id=&#34;pur-26150&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-26150&#34;&gt;#&lt;/a&gt; pur-26150&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;配置表：
+	scux_srm_sanning_fee_info
+	scux_srm_sanning_fee_calculate_type
+API:
+	查询（返回配置表数据，且翻译税率、关联协议：SCUX_SANNING_FEE_INFO_QUERY    /marmot-api/v49ECXUYP60iaTD6VDYCeIrqbnlzgazaL5HYWyv9ScGg
+	查询2 及币种精度、CNY币种ID、CNY、费用计算类型对应关系 SCUX_SANNING_FEE_OTHER_QUERY
+	保存 有ID是更新，没有ID是新增  SCUX_SANNING_FEE_INFO_SAVE_OR_UPDATE  /marmot-api/v49ECXUYP60iaTD6VDYCeIpQpEumLeekdKWnTERvKJjibX4rd3PkiakwNOzdMU5JBn8
+	删除 根据ID删除，支持批量删除   SCUX_SANNING_FEE_INFO_DEL /marmot/v1/20990/marmot-api/v49ECXUYP60iaTD6VDYCeIiab6r6sOKdPfrdSqia2ePicuU
+	更新预付标识：SCUX_SANNING_FEE_INFO_UPDATE_PAY_FLAG
+	查询: 给结算用  SCUX_SANNING_FEE_INFO_QUERY_FOR_SETTLE
+	QB：SCUX_SANNING_FEE_INFO_QUERY_FOR_SETTLE
+独立脚本：
+	SCUX_SANNING_FEE_INFO_QUERY
+	SCUX_SANNING_FEE_OTHER_QUERY
+	SCUX_SANNING_FEE_INFO_SAVE_OR_UPDATE
+	SCUX_SANNING_FEE_INFO_DEL
+埋点：
+	保存、提交计算头个性化字段金额：SPUC_ORDER_PRICE_SOURCE_TYPE
+	整单取消：SPUC_ALL_CANCEL_PO_HEADER
+	按行取消：SPUC_LINE_CANCEL_PO_LINE
+	复制：
+		SPUC_ORDER_SAVE_DATA_CONVERSION_AFTER（写入数据
+		SPUC_ORDER_SAVE_DATA_CONVERSION_NEWPRICE_AFTER
+		SCUX_ORDER_PO_COPY_LINE（记录订单行ID
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;重新同步：SPUC_RE_SYNC_ERP&lt;/p&gt;
-&lt;p&gt;SPUC.SYNC_EXP_TYPE_BY_LINE，SPUC.SYNC_INTERFACE_TYPE，SPUC.SYNC_EXP_TYPE&lt;/p&gt;
-&lt;h3 id=&#34;pur-21994&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-21994&#34;&gt;#&lt;/a&gt; pur-21994&lt;/h3&gt;
-&lt;p&gt;提供 API  待定  事务锁&lt;/p&gt;
-&lt;h3 id=&#34;pur-22331&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-22331&#34;&gt;#&lt;/a&gt; PUR-22331&lt;/h3&gt;
-&lt;p&gt;返回消息：spuc.query_param_sup_tenant_is_empty&lt;/p&gt;
-&lt;p&gt;配置表：srm_supplier_iso_ignore_list&lt;br /&gt;
- 供应商数据隔离忽略&lt;/p&gt;
+&lt;h3 id=&#34;pur-27164&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pur-27164&#34;&gt;#&lt;/a&gt; pur-27164&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;	适配器：
+		SPUC_ORDER_SYNC_IMP_INSERT_PROCESS
+		SPUC_ORDER_SYNC_IMP_UPDATE_PROCESS
+	配置表：
+		scux_srm_daqo_po_drawing_info
+	API+独立脚本
+		查询：SCUX_DAQO_PO_DRAWING_INFO_QUERY
+		导出：SCUX_DAQO_PO_DRAWING_INFO_EXPORT
+		下载：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;bug-pur-26901-spuc_order_batch_submit_handle&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bug-pur-26901-spuc_order_batch_submit_handle&#34;&gt;#&lt;/a&gt; BUG pur-26901   SPUC_ORDER_BATCH_SUBMIT_HANDLE&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s3.bmp.ovh/imgs/2023/10/25/4c3f3f9377020435.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;kbd&#34;&gt;Ctrl&lt;/span&gt; + &lt;span class=&#34;kbd red&#34;&gt;C&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
