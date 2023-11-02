@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dart.md",
+                "file": "231104.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dart.md",
+                "file": "231104.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +189,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dart.md"
+                "file": "231104.md"
               }
             }
           },
@@ -221,13 +220,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1498a629e8338d69",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
+    "Dart.md",
+    "231104.md",
     "Delete & Truncate.md",
     "Mac使用记录.md",
     "Mac 数据库忘记密码.md",
-    "Dart.md",
-    "231104.md",
     "~Shoka使用说明.md",
     "文章名称.md",
     "13.md",
