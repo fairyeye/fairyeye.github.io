@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "231209.md",
                 "mode": "source",
                 "source": false
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "231209.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "231209.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +189,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "231209.md"
               }
             }
           },
@@ -220,8 +220,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "d720dc10669c36b6",
   "lastOpenFiles": [
+    "GIT.md",
     "231209.md",
     "231104.md",
     "阿里巴巴手册.md",
@@ -238,7 +239,6 @@
     "230923.md",
     "Ubuntu.md",
     "Centos.md",
-    "GIT.md",
     "WHEN YOU HAVE A NEW PC.md",
     "需要掌握以下知识.md",
     "设计模式笔记.md",
