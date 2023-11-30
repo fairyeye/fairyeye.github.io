@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "密码",
+                "query": "pur-28553",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -122,7 +122,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
