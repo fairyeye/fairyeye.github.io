@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algo.md",
+                "file": "240113.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algo.md",
+                "file": "240113.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algo.md"
+                "file": "240113.md"
               }
             }
           },
@@ -197,13 +197,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bfb35bf771d3580f",
+  "active": "d8aa1b08576adc93",
   "lastOpenFiles": [
+    "Algo.md",
     "240113.md",
     "Ubuntu.md",
     "GIT.md",
     "未命名.canvas",
-    "Algo.md",
     "Dart.md",
     "阿里巴巴手册.md",
     "230715.md",
