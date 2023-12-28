@@ -20,8 +20,20 @@ brew install ttygif
 ttyrec myrecording
 ```
 
+### sshx
 
+- 终端共享
 
+#### 使用
+
+```sh
+zhanghuapengdeMacBook-Pro :: Downloads/work_space/AA % sshx
+
+  sshx v0.2.1
+
+  ➜  Link:  https://sshx.io/s/ZtVval8VO2#e9o4sruIiflVdh
+  ➜  Shell: /bin/zsh
+```
 
 
 

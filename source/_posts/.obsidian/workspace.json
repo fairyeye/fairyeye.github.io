@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "240113.md",
+                "file": "Mac使用记录.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240113.md",
+                "file": "Mac使用记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240113.md",
+                "file": "Mac使用记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240113.md"
+                "file": "Mac使用记录.md"
               }
             }
           },
@@ -197,10 +197,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d8aa1b08576adc93",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
-    "Algo.md",
     "240113.md",
+    "Algo.md",
     "Ubuntu.md",
     "GIT.md",
     "未命名.canvas",
