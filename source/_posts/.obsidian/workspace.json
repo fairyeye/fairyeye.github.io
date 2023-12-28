@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "Algo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "Algo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "Algo.md"
               }
             }
           },
@@ -197,14 +197,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "bfb35bf771d3580f",
   "lastOpenFiles": [
+    "Dart.md",
     "240113.md",
     "Algo.md",
     "Ubuntu.md",
     "GIT.md",
     "未命名.canvas",
-    "Dart.md",
     "阿里巴巴手册.md",
     "230715.md",
     "Centos.md",
