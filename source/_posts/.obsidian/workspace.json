@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algo.md",
+                "file": "240113.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algo.md",
+                "file": "240113.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algo.md",
+                "file": "240113.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algo.md"
+                "file": "240113.md"
               }
             }
           },
@@ -199,9 +199,9 @@
   },
   "active": "bfb35bf771d3580f",
   "lastOpenFiles": [
+    "Algo.md",
     "Dart.md",
     "240113.md",
-    "Algo.md",
     "Ubuntu.md",
     "GIT.md",
     "未命名.canvas",
