@@ -98,7 +98,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -197,7 +198,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bfb35bf771d3580f",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
     "Algo.md",
     "Dart.md",
