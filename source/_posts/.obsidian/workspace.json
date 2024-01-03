@@ -11,11 +11,14 @@
             "id": "1498a629e8338d69",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Dart.md",
-                "mode": "source",
-                "source": false
+                "file": "笔记.canvas",
+                "viewState": {
+                  "x": 692.8400000000021,
+                  "y": 26.03999999999998,
+                  "zoom": -1
+                }
               }
             }
           },
@@ -35,6 +38,21 @@
             "id": "bfb35bf771d3580f",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "笔记.canvas",
+                "viewState": {
+                  "x": 748.6883771428584,
+                  "y": -189.56203428571416,
+                  "zoom": -0.5871592198983546
+                }
+              }
+            }
+          },
+          {
+            "id": "a64de718318999f3",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "240113.md",
@@ -44,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,8 +116,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -126,7 +143,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -180,8 +197,19 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "a4ecd95604ab9efd",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "240113.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -198,14 +226,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "195b6116ec82a7f8",
+  "active": "a64de718318999f3",
   "lastOpenFiles": [
-    "Algo.md",
-    "Dart.md",
+    "数组与链表.md",
+    "笔记.canvas",
+    "迭代.canvas",
     "240113.md",
+    "GC回收算法.md",
+    "Pasted image 20231025105221.png",
+    "文章名称.md",
+    "Algo.md",
+    "算法.md",
+    "Dart.md",
     "Ubuntu.md",
     "GIT.md",
-    "未命名.canvas",
     "阿里巴巴手册.md",
     "230715.md",
     "Centos.md",
@@ -215,18 +249,13 @@
     "Delete & Truncate.md",
     "Mac使用记录.md",
     "~Shoka使用说明.md",
-    "文章名称.md",
     "13.md",
-    "Pasted image 20231025105221.png",
     "230819.md",
     "230923.md",
     "WHEN YOU HAVE A NEW PC.md",
     "需要掌握以下知识.md",
     "设计模式笔记.md",
     "使用教程.md",
-    "MySQL.md",
-    "同步不同服务的MySQL数据表.md",
-    "FileUtils.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",

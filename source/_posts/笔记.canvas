@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"fe4f59d18ce49bb4","type":"file","file":"Algo.md","x":360,"y":-720,"width":400,"height":400},
+		{"id":"b4fb5c3b9569e65e","type":"text","text":"Algorithm","x":-200,"y":-120,"width":250,"height":60},
+		{"id":"88c43133c69af9df","type":"text","text":"数组与链表","x":360,"y":-120,"width":250,"height":60,"color":"5"},
+		{"id":"c46069ba43195696","x":349,"y":45,"width":250,"height":60,"type":"text","text":"LFU"},
+		{"id":"f47f5aa20fd0d57b","x":800,"y":75,"width":400,"height":400,"type":"file","file":"算法.md"}
+	],
+	"edges":[
+		{"id":"25b9930ea2b458d6","fromNode":"b4fb5c3b9569e65e","fromSide":"right","toNode":"fe4f59d18ce49bb4","toSide":"left"},
+		{"id":"21871a0ccde88d64","fromNode":"b4fb5c3b9569e65e","fromSide":"right","toNode":"88c43133c69af9df","toSide":"left"},
+		{"id":"aa9fb00fa25acb19","fromNode":"b4fb5c3b9569e65e","fromSide":"right","toNode":"c46069ba43195696","toSide":"left"},
+		{"id":"f5ef59550410ce7a","fromNode":"c46069ba43195696","fromSide":"right","toNode":"f47f5aa20fd0d57b","toSide":"left"}
+	]
+}
