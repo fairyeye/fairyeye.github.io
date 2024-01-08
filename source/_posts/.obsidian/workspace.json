@@ -53,14 +53,11 @@
             "id": "a64de718318999f3",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "笔记.canvas",
-                "viewState": {
-                  "x": -1442.2497764826476,
-                  "y": -116.2783668949453,
-                  "zoom": -0.1903231700261434
-                }
+                "file": "WHEN YOU HAVE A NEW PC.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -94,7 +91,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "node",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -119,7 +116,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -139,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记.canvas",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记.canvas",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +185,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记.canvas"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           },
@@ -207,7 +205,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "笔记.canvas"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -231,9 +229,9 @@
   },
   "active": "a64de718318999f3",
   "lastOpenFiles": [
+    "笔记.canvas",
     "240113.md",
     "数组与链表.md",
-    "笔记.canvas",
     "迭代.canvas",
     "GC回收算法.md",
     "Pasted image 20231025105221.png",

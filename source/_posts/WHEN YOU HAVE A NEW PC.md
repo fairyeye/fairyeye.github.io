@@ -115,6 +115,8 @@ mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
 - Windows Termial:Windows终端
 - -   nvm: Windows切换node版本
 -   n：Mac切换node版本
+	-  https://github.com/tj/n
+	-  npm install -g n
 -   pyenv：切换python版本
     -   Invoke-WebRequest -UseBasicParsing -Uri "[https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1](https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1)" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 
