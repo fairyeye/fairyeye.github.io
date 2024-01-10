@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "240113.md",
                 "mode": "source",
                 "source": false
               }
@@ -91,7 +91,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "node",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -116,8 +116,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "240113.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "240113.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md"
+                "file": "240113.md"
               }
             }
           },
@@ -205,7 +204,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md"
+                "file": "240113.md"
               }
             }
           }
@@ -230,9 +229,11 @@
   "active": "a64de718318999f3",
   "lastOpenFiles": [
     "笔记.canvas",
-    "240113.md",
-    "数组与链表.md",
+    "开发日志.md",
     "迭代.canvas",
+    "240113.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "数组与链表.md",
     "GC回收算法.md",
     "Pasted image 20231025105221.png",
     "文章名称.md",
@@ -253,10 +254,8 @@
     "13.md",
     "230819.md",
     "230923.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "需要掌握以下知识.md",
     "设计模式笔记.md",
-    "使用教程.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
