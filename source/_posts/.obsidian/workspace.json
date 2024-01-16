@@ -21,48 +21,8 @@
                 }
               }
             }
-          },
-          {
-            "id": "d8aa1b08576adc93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mac使用记录.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bfb35bf771d3580f",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "笔记.canvas",
-                "viewState": {
-                  "x": 748.6883771428584,
-                  "y": -189.56203428571416,
-                  "zoom": -0.5871592198983546
-                }
-              }
-            }
-          },
-          {
-            "id": "a64de718318999f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mac 数据库忘记密码.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "密码",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -116,8 +76,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -137,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac 数据库忘记密码.md",
+                "file": "笔记.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mac 数据库忘记密码.md",
+                "file": "笔记.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mac 数据库忘记密码.md"
+                "file": "笔记.canvas"
               }
             }
           },
@@ -205,7 +164,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Mac 数据库忘记密码.md"
+                "file": "笔记.canvas"
               }
             }
           }
@@ -227,8 +186,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a64de718318999f3",
+  "active": "1498a629e8338d69",
   "lastOpenFiles": [
+    "供应商.md",
+    "Pasted image 20240116101021.png",
+    "Mac 数据库忘记密码.md",
     "240113.md",
     "笔记.canvas",
     "开发日志.md",
@@ -248,7 +210,6 @@
     "Centos.md",
     "231209.md",
     "231104.md",
-    "Mac 数据库忘记密码.md",
     "Delete & Truncate.md",
     "Mac使用记录.md",
     "~Shoka使用说明.md",
@@ -256,7 +217,6 @@
     "230819.md",
     "230923.md",
     "需要掌握以下知识.md",
-    "设计模式笔记.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
