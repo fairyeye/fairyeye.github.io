@@ -4,21 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "aee5c2aedd07bed8",
+        "id": "988b2a5d557d5c70",
         "type": "tabs",
         "children": [
           {
-            "id": "1498a629e8338d69",
+            "id": "3482bdced8c21359",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "笔记.canvas",
-                "viewState": {
-                  "x": 692.8400000000021,
-                  "y": 26.03999999999998,
-                  "zoom": -1
-                }
+                "file": "供应商.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记.canvas",
+                "file": "供应商.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记.canvas",
+                "file": "供应商.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记.canvas"
+                "file": "供应商.md"
               }
             }
           },
@@ -164,7 +161,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "笔记.canvas"
+                "file": "供应商.md"
               }
             }
           }
@@ -186,13 +183,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1498a629e8338d69",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
+    "笔记.canvas",
     "供应商.md",
     "Pasted image 20240116101021.png",
     "Mac 数据库忘记密码.md",
     "240113.md",
-    "笔记.canvas",
     "开发日志.md",
     "迭代.canvas",
     "WHEN YOU HAVE A NEW PC.md",
