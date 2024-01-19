@@ -11,14 +11,11 @@
             "id": "3482bdced8c21359",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "笔记.canvas",
-                "viewState": {
-                  "x": -102.23999999999985,
-                  "y": -845.2199999999991,
-                  "zoom": 0
-                }
+                "file": "13.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记.canvas",
+                "file": "13.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记.canvas",
+                "file": "13.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记.canvas"
+                "file": "13.md"
               }
             }
           },
@@ -164,7 +161,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "笔记.canvas"
+                "file": "13.md"
               }
             }
           }
@@ -188,11 +185,12 @@
   },
   "active": "3482bdced8c21359",
   "lastOpenFiles": [
+    "20.md",
+    "笔记.canvas",
     "Leetcode.md",
     "Algo.md",
     "Centos.md",
     "供应商.md",
-    "笔记.canvas",
     "Pasted image 20240116101021.png",
     "Mac 数据库忘记密码.md",
     "240113.md",
@@ -217,7 +215,6 @@
     "13.md",
     "230819.md",
     "230923.md",
-    "需要掌握以下知识.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
