@@ -1,6 +1,8 @@
 ---
 title: Mac使用记录
 description: 记录使用的软件、环境配置等
+tags:
+  - 日常记录
 ---
 ## 软件
 
