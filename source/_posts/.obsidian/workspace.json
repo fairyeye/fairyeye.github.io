@@ -13,10 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "GIT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "916adc3ec4d10f22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "供应商.md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "cc5cd52ee268a5e3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "供应商.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "供应商.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "供应商.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -161,7 +181,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "供应商.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -185,18 +205,18 @@
   },
   "active": "fa983115002d91a7",
   "lastOpenFiles": [
+    "240224.md",
+    "供应商.md",
+    "Mac使用记录.md",
     "230715.md",
     "230819.md",
     "230923.md",
     "231104.md",
     "231209.md",
     "240113.md",
-    "240224.md",
-    "Mac使用记录.md",
     "16.md",
     "迭代.canvas",
     "笔记.canvas",
-    "供应商.md",
     "Springboot返回html.md",
     "Redis.md",
     "Pasted image 20240116101021.png",

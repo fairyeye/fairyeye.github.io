@@ -235,3 +235,13 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 ```
 https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 ```
+
+
+
+### 2.2 Windows 激活：Microsoft-Activation-Scripts
+
+**本周 star 增长数：1,100+**
+
+有了 Microsoft-Activation-Scripts，激活 Windows 和 Office 不再是问题。它注重开源、减少反病毒软件的检测，这个用到 HWID、Ohook、KMS38、在线 KMS 激活方法的工具，一定能帮你解决 Windows 的激活问题。
+
+> GitHub 地址→github.com/massgravel/Microsoft-Activation-Scripts
