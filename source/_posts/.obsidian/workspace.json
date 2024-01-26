@@ -35,11 +35,16 @@
             "id": "cc5cd52ee268a5e3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Mac使用记录.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -113,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240224.md",
+                "file": "Mac使用记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240224.md",
+                "file": "Mac使用记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240224.md"
+                "file": "Mac使用记录.md"
               }
             }
           },
@@ -181,7 +186,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240224.md"
+                "file": "Mac使用记录.md"
               }
             }
           }
@@ -203,12 +208,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fa983115002d91a7",
+  "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
+    "WHEN YOU HAVE A NEW PC.md",
+    "Mac使用记录.md",
+    "240224.md",
     "GIT.md",
     "供应商.md",
-    "240224.md",
-    "Mac使用记录.md",
     "230715.md",
     "230819.md",
     "230923.md",
@@ -228,7 +234,6 @@
     "Centos.md",
     "Mac 数据库忘记密码.md",
     "开发日志.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "数组与链表.md",
     "GC回收算法.md",
     "Pasted image 20231025105221.png",

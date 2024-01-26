@@ -54,3 +54,8 @@ zhanghuapengdeMacBook-Pro :: Downloads/work_space/AA % sshx
 
 ![](https://s3.bmp.ovh/imgs/2024/01/25/41d94c7e3a65b7e2.png)
 
+
+## Cargo
+
+
+[install cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
