@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "240224.md",
                 "mode": "source",
                 "source": false
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "240224.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "240224.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "240224.md"
               }
             }
           },
@@ -181,7 +181,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "240224.md"
               }
             }
           }
@@ -205,8 +205,9 @@
   },
   "active": "fa983115002d91a7",
   "lastOpenFiles": [
-    "240224.md",
+    "GIT.md",
     "供应商.md",
+    "240224.md",
     "Mac使用记录.md",
     "230715.md",
     "230819.md",
@@ -234,7 +235,6 @@
     "文章名称.md",
     "算法.md",
     "Dart.md",
-    "Ubuntu.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",
