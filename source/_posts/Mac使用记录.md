@@ -59,3 +59,15 @@ zhanghuapengdeMacBook-Pro :: Downloads/work_space/AA % sshx
 
 
 [install cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
+
+
+## 破解软件打不开
+
+```sh
+# 这个好像没生效
+Mac :: ~ % sudo spctl --global-disable
+Password:
+
+# 将软件拖进来
+Mac :: ~ % sudo xattr -r -c /Applications/Navicat\ Premium.app
+```
