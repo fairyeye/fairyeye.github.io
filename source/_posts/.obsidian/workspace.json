@@ -52,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,6 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "供应商.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,6 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "供应商.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +173,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "供应商.md"
+              }
             }
           },
           {
@@ -189,7 +193,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {}
+              "state": {
+                "file": "供应商.md"
+              }
             }
           }
         ],
@@ -210,7 +216,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5c8608b0fb9b02ce",
+  "active": "916adc3ec4d10f22",
   "lastOpenFiles": [
     "240224.md",
     "Mac使用记录.md",
