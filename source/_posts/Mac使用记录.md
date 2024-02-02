@@ -71,3 +71,14 @@ Password:
 # 将软件拖进来
 Mac :: ~ % sudo xattr -r -c /Applications/Navicat\ Premium.app
 ```
+
+
+## Jrebel 激活
+
+```
+docker pull qierkang/golang-reverseproxy
+docker run -d -p 8888:8888 qierkang/golang-reverseproxy
+
+#licene
+http://127.0.0.1:8888/7a14c9f7-8a27-46d6-bb50-2b30c19e766c
+```
