@@ -47,8 +47,12 @@
             "id": "5c8608b0fb9b02ce",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "WHEN YOU HAVE A NEW PC.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -217,11 +221,14 @@
   },
   "active": "fa983115002d91a7",
   "lastOpenFiles": [
-    "供应商.md",
-    "240224.md",
-    "Mac使用记录.md",
     "WHEN YOU HAVE A NEW PC.md",
+    "Mac使用记录.md",
+    "IDEA.md",
+    "Go笔记.md",
+    "GitHub Page.md",
     "GIT.md",
+    "240224.md",
+    "供应商.md",
     "230715.md",
     "230819.md",
     "230923.md",
@@ -244,9 +251,6 @@
     "数组与链表.md",
     "GC回收算法.md",
     "Pasted image 20231025105221.png",
-    "文章名称.md",
-    "算法.md",
-    "Dart.md",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
     "upload/image-20200917192220270.png",

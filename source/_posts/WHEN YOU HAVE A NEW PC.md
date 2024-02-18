@@ -37,11 +37,17 @@ categories: "杂谈"
 
 #### GIT 工具
 
-##### 1. 全局配置用户信息
+##### 1. 配置用户信息
 
-```
+``` sh
+# 用户级
 git config --global user.name "fairy"
 git config --global user.email "fairy@gmail.com"
+# 仓库级 local可以省略
+git config --local user.name "fairy"
+git config --local user.email "fairy@gmail.com"
+# 使配置不生效
+git config --global --unset user.name
 ```
 
 ##### 2. 生成key
