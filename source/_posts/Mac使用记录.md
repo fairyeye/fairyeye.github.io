@@ -82,3 +82,21 @@ docker run -d -p 8888:8888 qierkang/golang-reverseproxy
 #licene
 http://127.0.0.1:8888/7a14c9f7-8a27-46d6-bb50-2b30c19e766c
 ```
+
+
+
+###  一行命令下载全网视频
+```sh
+$ pip3 install you-get
+```
+**如何下载**
+
+_**1.**_ 可通过如下命令查看该视频的详细信息。
+```sh
+you-get -i '视频url'
+```
+_**2.**_ 下载方式更简单，只需一行命令即可下载了：
+
+```sh
+you-get '视频url'
+```
