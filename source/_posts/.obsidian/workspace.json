@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "240224.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240224.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240224.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "240224.md"
               }
             }
           },
@@ -198,7 +197,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "240224.md"
               }
             }
           }
@@ -220,8 +219,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cc5cd52ee268a5e3",
+  "active": "fa983115002d91a7",
   "lastOpenFiles": [
+    "Mac使用记录.md",
     "240224.md",
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
@@ -240,7 +240,6 @@
     "Springboot返回html.md",
     "Redis.md",
     "Pasted image 20240116101021.png",
-    "Mac使用记录.md",
     "WHEN YOU HAVE A NEW PC.md",
     "Go笔记.md",
     "供应商.md",
