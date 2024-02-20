@@ -55,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -129,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240224.md",
+                "file": "Mac使用记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240224.md",
+                "file": "Mac使用记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240224.md"
+                "file": "Mac使用记录.md"
               }
             }
           },
@@ -197,7 +198,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240224.md"
+                "file": "Mac使用记录.md"
               }
             }
           }
@@ -219,10 +220,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fa983115002d91a7",
+  "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
-    "Mac使用记录.md",
     "240224.md",
+    "Mac使用记录.md",
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
     "Delete & Truncate.md",
