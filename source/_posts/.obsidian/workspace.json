@@ -47,11 +47,14 @@
             "id": "5c8608b0fb9b02ce",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
-                "mode": "source",
-                "source": false
+                "file": "笔记.canvas",
+                "viewState": {
+                  "x": -313.5,
+                  "y": -122.5,
+                  "zoom": -1.932992158800522
+                }
               }
             }
           }
@@ -222,8 +225,10 @@
   },
   "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
-    "240224.md",
+    "笔记.canvas",
+    "WHEN YOU HAVE A NEW PC.md",
     "Mac使用记录.md",
+    "240224.md",
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
     "Delete & Truncate.md",
@@ -241,16 +246,13 @@
     "Springboot返回html.md",
     "Redis.md",
     "Pasted image 20240116101021.png",
-    "WHEN YOU HAVE A NEW PC.md",
     "Go笔记.md",
     "供应商.md",
     "230715.md",
     "230819.md",
     "230923.md",
     "231104.md",
-    "231209.md",
     "迭代.canvas",
-    "笔记.canvas",
     "Pasted image 20231025105221.png",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
