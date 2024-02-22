@@ -88,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "单元测试",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -113,7 +113,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -133,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240224.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240224.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "240224.md"
               }
             }
           },
@@ -201,7 +202,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "240224.md"
               }
             }
           }
@@ -223,7 +224,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cc5cd52ee268a5e3",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
     "笔记.canvas",
     "WHEN YOU HAVE A NEW PC.md",
