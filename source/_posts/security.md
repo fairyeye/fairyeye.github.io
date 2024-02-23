@@ -326,13 +326,6 @@ public class SaySomethingJWTFilter extends OncePerRequestFilter {
             return;  
         }  
   
-        // 从Redis获取token并校验  
-        String tokenInRedis = stringRedisTemplate.opsForValue().get("logintoken:" + jwtToken);  
-        if (!StringUtils.hasText(tokenInRedis)) {  
-            printFront(response, "用户已退出，请重新登录");  
-            return;  
-        }  
-  
         //从payload中获取userInfo  
         String userInfo = jwtUtils.getUserInfo(jwtToken);  
         //从payload中获取授权列表  
@@ -392,3 +385,147 @@ protected void configure(HttpSecurity http) throws Exception {
 ```
 
 4.  在`com.li.config`,新建`SaySAuthenticationSuccessHandler`
+
+
+
+
+
+
+
+
+#### 设置权限
+
+**在loadUserByUsername中获取权限，并设置到SecurityUser中**
+
+```java
+// com.li.service.impl.UserServiceImpl
+
+SecurityUser securityUser = new SecurityUser(sysUser);  
+// 获取权限信息  
+List<String> authList = sysMenuDao.queryPermissionByUserId(sysUser.getUserId());  
+if (!CollectionUtils.isEmpty(authList)) {  
+    List<SimpleGrantedAuthority> authorities = authList.stream().map(SimpleGrantedAuthority::new).collect(toList());  
+    // 设置权限  
+    securityUser.setAuthorities(authorities);  
+}  
+return securityUser;
+```
+
+在SaySAuthenticationSuccessHandler.onAuthenticationSuccess中，生成Token时，可以将权限信息一起放入Token中。
+
+```java
+List<String> authList = new ArrayList<>();  
+// 获取权限  
+List<SimpleGrantedAuthority> authorities = (List<SimpleGrantedAuthority>) securityUser.getAuthorities();  
+if (!CollectionUtils.isEmpty(authorities)) {  
+    // 转成String 用于生成Token  
+    authList = authorities.stream().map(SimpleGrantedAuthority::getAuthority).collect(Collectors.toList());  
+}
+
+// 创建Token  增加authList参数
+String token = saySJwtUtils.createToken(userInfo, authList);
+```
+
+
+#### 注销处理
+
+**Jwt本质上是一个字符串，无法手动将其过期，也就是说，即使手动退出登录，对于Token来说，还是一个有效的Token，可以通过接入Redis来解决这一问题**
+
+1. 登录成功时，将Token写入Redis
+```java
+// SaySAuthenticationSuccessHandler
+// 设置过期时间  
+@Value("${jwt.expiration}")  
+private long expiration;
+// 引入StringRedisTemplate
+@Resource  
+private StringRedisTemplate stringRedisTemplate;
+
+// 在创建Token之后，将Token存到Redis中
+
+onAuthenticationSuccess(){
+// 创建Token  
+String token = saySJwtUtils.createToken(userInfo, authList);
+
+// 写入Redis  
+stringRedisTemplate.opsForValue().set("login_token:" + token, objectMapper.writeValueAsString(authentication), expiration, TimeUnit.MILLISECONDS);
+}
+
+```
+
+2. 校验Token时，先验签，再去Redis中判断Token是否还存在
+- 如果验签成功，但是Redis中不存在，说明Token被手动过期了
+```java 
+doFilterInternal(){
+...
+// 从Redis获取token并校验  
+String tokenInRedis = stringRedisTemplate.opsForValue().get("login_token:" + jwtToken);  
+if (!StringUtils.hasText(tokenInRedis)) {  
+    printFront(response, "用户已退出，请重新登录");  
+    return;  
+}
+...
+}
+```
+
+在`com.li.config`，新建`SaysLogoutSuccessHandler`
+```java
+ 
+/**  
+ * 退出成功处理器，用户退出成功后，执行此处理器  
+ */  
+@Component  
+public class SaysLogoutSuccessHandler implements LogoutSuccessHandler {  
+    //使用此工具类的对象进行序列化操作  
+    @Resource  
+    private ObjectMapper objectMapper;  
+    @Resource  
+    private StringRedisTemplate stringRedisTemplate;  
+  
+    @Override  
+    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {  
+        //从请求头中获取Authorization信息  
+        String authorization = request.getHeader("Authorization");  
+        //如果授权信息为空，返回前端  
+        if (null == authorization) {  
+            response.setCharacterEncoding("UTF-8");  
+            response.setContentType("application/json;charset=utf-8");  
+            HttpResult httpResult = HttpResult.builder().code(-1).msg("token不能为空").build();  
+            PrintWriter writer = response.getWriter();  
+            writer.write(objectMapper.writeValueAsString(httpResult));  
+            writer.flush();  
+            return;  
+        }  
+        //如果Authorization信息不为空，去掉头部的Bearer字符串  
+        String token = authorization.replace("Bearer ", "");  
+  
+        //redis中删除token，这是关键点  
+        stringRedisTemplate.delete("login_token:" + token);  
+  
+        response.setCharacterEncoding("UTF-8");  
+        response.setContentType("application/json;charset=utf-8");  
+        HttpResult httpResult = HttpResult.builder().code(200).msg("退出成功").build();  
+        PrintWriter writer = response.getWriter();  
+        writer.write(objectMapper.writeValueAsString(httpResult));  
+        writer.flush();  
+    }  
+}
+```
+
+调整`SecurityConfig`
+```java
+
+@Resource  
+private SaysLogoutSuccessHandler saysLogoutSuccessHandler;
+
+configure(){
+http.logout().logoutSuccessHandler(saysLogoutSuccessHandler);
+// 禁用跨域请求保护 要不然logout不能访问(目前体现是弹出了确认退出登录的确认框  
+http.csrf().disable();
+}
+```
+
+`org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider#authenticate`
+`org.springframework.security.authentication.dao.DaoAuthenticationProvider#retrieveUser`
+
+`org.springframework.security.authentication.dao.DaoAuthenticationProvider#additionalAuthenticationChecks`
