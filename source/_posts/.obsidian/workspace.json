@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redis.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
@@ -236,19 +236,19 @@
   },
   "active": "fa983115002d91a7",
   "lastOpenFiles": [
-    "240224.md",
-    "240330.md",
-    "security.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "GIT.md",
     "Redis.md",
+    "security.md",
+    "笔记.canvas",
+    "240330.md",
+    "240224.md",
     "Pasted image 20240116101021.png",
     "Mac使用记录.md",
-    "笔记.canvas",
-    "WHEN YOU HAVE A NEW PC.md",
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
     "Delete & Truncate.md",
     "GC回收算法.md",
-    "GIT.md",
     "GitHub Page.md",
     "IDEA.md",
     "Java 8 Stream.md",
@@ -263,7 +263,6 @@
     "供应商.md",
     "230715.md",
     "230819.md",
-    "230923.md",
     "迭代.canvas",
     "Pasted image 20231025105221.png",
     "Untitled.canvas",
