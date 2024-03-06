@@ -70,7 +70,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -144,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240330.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240330.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240330.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           },
@@ -212,7 +213,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240330.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -234,14 +235,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fa983115002d91a7",
+  "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
+    "240330.md",
     "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "Redis.md",
     "security.md",
     "笔记.canvas",
-    "240330.md",
     "240224.md",
     "Pasted image 20240116101021.png",
     "Mac使用记录.md",
