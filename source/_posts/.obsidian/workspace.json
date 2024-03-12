@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fa983115002d91a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "240330.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "916adc3ec4d10f22",
             "type": "leaf",
             "state": {
@@ -144,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240330.md",
+                "file": "供应商.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240330.md",
+                "file": "供应商.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240330.md"
+                "file": "供应商.md"
               }
             }
           },
@@ -212,7 +200,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240330.md"
+                "file": "供应商.md"
               }
             }
           }
@@ -234,10 +222,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fa983115002d91a7",
+  "active": "916adc3ec4d10f22",
   "lastOpenFiles": [
-    "WHEN YOU HAVE A NEW PC.md",
     "240330.md",
+    "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "Redis.md",
     "security.md",
