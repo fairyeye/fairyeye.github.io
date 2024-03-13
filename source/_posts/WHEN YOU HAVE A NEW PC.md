@@ -139,3 +139,24 @@ https://zhuanlan.zhihu.com/p/550022490
 https://blog.csdn.net/weixin_42326144/article/details/121957795
 ```
 
+
+## IDEA
+```
+在 IntelliJ IDEA 中，要确保项目中的中文字符以 UTF-8 编码保存，可以按照以下步骤操作：
+
+1. **打开项目设置**：在 IntelliJ IDEA 中，点击菜单栏中的 "File" -> "Settings"（或者直接使用快捷键 `Ctrl + Alt + S`）来打开项目设置。
+    
+2. **设置文件编码**：在设置窗口左侧的搜索框中输入 "File Encoding"，然后选择 "File Encodings" 选项。
+    
+3. **更改默认编码**：在右侧的界面中，找到 "Global Encoding" 下的 "IDE Encoding"，将其设置为 "UTF-8"。同样，也可以设置 "Project Encoding" 和 "Default encoding for properties files" 为 "UTF-8"。
+    
+4. **应用更改并重新加载项目**：点击 "OK" 按钮以应用更改，并可能需要重新加载项目以确保更改生效。
+    
+5. **保存文件为 UTF-8 编码**：对于现有的文件，可以通过以下方式将其保存为 UTF-8 编码：
+    
+    - 打开文件。
+    - 点击菜单栏中的 "File" -> "Save with Encoding..."。
+    - 在弹出的对话框中，选择 "UTF-8" 编码，然后点击 "OK" 保存文件。
+
+通过以上步骤，您可以确保在 IntelliJ IDEA 中创建和编辑的所有文件都以 UTF-8 编码保存，包括中文字符。
+```
