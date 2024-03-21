@@ -40,3 +40,44 @@ public class JDBCDemo {
 - 处理结果集麻烦
 
 
+## 自定义
+
+### 创建两个工程
+
+- IPersistence、IPersistence_Test
+
+#### IPersistence_Test  使用端
+
+
+
+#### IPersistence  自定义框架
+
+##### 根据配置文件的路径，将配置文件加载成字节输入流，存储在内存中
+
+```java
+Resources.getResourceAsStream(String path)
+```
+
+
+
+1. 获得sqlSession对象
+
+sqlSession通过sqlSessionFatory.open获得
+sqlSessionFatory通过sqlSessionFatoryBuilder.build(configuration)获得
+	build需要获取数据库信息
+
+- 创建SqlSessionFactoryBuilder
+- 通过SqlSessionFatoryBuilder.build()获得SqlSessionFatory
+- 通过DefaultSqlSessionFactory.open()获得SqlSession
+- 创建DefaultSqlSession 实现基础方法 selectAll，selectList
+
+2. 执行JDBC逻辑
+
+创建Executor、Executor实现类，执行CURD
+
+
+
+3. 处理返回结果
+
+通过反射或内省+SQLID上的resultType全路径，处理返参
+
