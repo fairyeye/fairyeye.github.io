@@ -81,3 +81,21 @@ sqlSessionFatory通过sqlSessionFatoryBuilder.build(configuration)获得
 
 通过反射或内省+SQLID上的resultType全路径，处理返参
 
+- 问题1：数据库类型与实体类型不一致
+```log
+Exception in thread "main" java.lang.IllegalArgumentException: argument type mismatch at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:498)
+```
+- 问题2：数据库版本与驱动版本不一致
+
+无法获取数据库连接，报错信息和获取连接方法有关
+
+使用C3P0连接池是报错：
+```log
+java.sql.SQLException: Connections could not be acquired from the underlying database!
+```
+
+使用DriverManager直接连接时：
+```
+Client does not support authentication protocol requested by server; consider upgrading MySQL client
+
+```
