@@ -99,3 +99,15 @@ java.sql.SQLException: Connections could not be acquired from the underlying dat
 Client does not support authentication protocol requested by server; consider upgrading MySQL client
 
 ```
+
+
+4. 持久层实现
+
+通过mapper接口，数据库的交互
+
+SqlSession中创建一个getMapper方法，获取mapper的代理类，执行被代理类的方法 
+
+
+# Mybatis
+
+基于ORM的`半自动`轻量级持久层框架。
