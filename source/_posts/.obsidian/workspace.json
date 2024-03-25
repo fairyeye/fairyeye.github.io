@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "GitHub Page.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,14 +61,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mac 数据库忘记密码.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -97,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "git config",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -122,7 +122,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -142,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AA.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AA.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AA.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           },
@@ -210,7 +211,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "AA.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -232,13 +233,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cc5cd52ee268a5e3",
+  "active": "5c8608b0fb9b02ce",
   "lastOpenFiles": [
-    "240330.md",
-    "AA.md",
-    "Spring Boot Admin.md",
-    "Mac使用记录.md",
+    "Mac 数据库忘记密码.md",
     "security.md",
+    "GitHub Page.md",
+    "GIT.md",
+    "Mac使用记录.md",
+    "AA.md",
+    "240330.md",
+    "Spring Boot Admin.md",
     "231104.md",
     "未命名 1.md",
     "Redis.md",
@@ -249,17 +253,14 @@
     "迭代.canvas",
     "供应商.md",
     "WHEN YOU HAVE A NEW PC.md",
-    "Mac 数据库忘记密码.md",
     "使用教程.md",
     "笔记.canvas",
-    "GIT.md",
     "240224.md",
     "Pasted image 20240116101021.png",
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
     "Delete & Truncate.md",
     "GC回收算法.md",
-    "GitHub Page.md",
     "IDEA.md",
     "Java 8 Stream.md",
     "MySQL.md",

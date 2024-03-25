@@ -44,8 +44,8 @@ categories: "杂谈"
 git config --global user.name "fairy"
 git config --global user.email "fairy@gmail.com"
 # 仓库级 local可以省略
-git config --local user.name "fairy"
-git config --local user.email "fairy@gmail.com"
+git config --local user.name "张华朋26190"
+git config --local user.email "huapeng.zhang@going-link.com"
 # 使配置不生效
 git config --global --unset user.name
 ```
