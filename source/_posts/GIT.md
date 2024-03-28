@@ -245,3 +245,8 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 有了 Microsoft-Activation-Scripts，激活 Windows 和 Office 不再是问题。它注重开源、减少反病毒软件的检测，这个用到 HWID、Ohook、KMS38、在线 KMS 激活方法的工具，一定能帮你解决 Windows 的激活问题。
 
 > GitHub 地址→github.com/massgravel/Microsoft-Activation-Scripts
+
+
+17、**source-code-hunter**：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。
+
+> 地址：https://github.com/doocs/source-code-hunter

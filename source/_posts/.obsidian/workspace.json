@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "240330.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AA.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AA.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +189,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AA.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -210,7 +209,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "AA.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -232,8 +231,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cc5cd52ee268a5e3",
+  "active": "916adc3ec4d10f22",
   "lastOpenFiles": [
+    "GC回收算法.md",
     "240330.md",
     "AA.md",
     "WHEN YOU HAVE A NEW PC.md",
@@ -259,7 +259,6 @@
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
     "Delete & Truncate.md",
-    "GC回收算法.md",
     "IDEA.md",
     "Java 8 Stream.md",
     "MySQL.md",
