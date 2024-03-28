@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "240330.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "security.md",
+                "file": "~Shoka使用说明.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -141,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "AA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "AA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "AA.md"
               }
             }
           },
@@ -209,7 +210,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "AA.md"
               }
             }
           }
@@ -231,16 +232,17 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "916adc3ec4d10f22",
+  "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
-    "GC回收算法.md",
-    "240330.md",
+    "~Shoka使用说明.md",
+    "security.md",
     "AA.md",
+    "240330.md",
+    "GIT.md",
+    "GC回收算法.md",
     "WHEN YOU HAVE A NEW PC.md",
     "Mac 数据库忘记密码.md",
-    "security.md",
     "GitHub Page.md",
-    "GIT.md",
     "Mac使用记录.md",
     "Spring Boot Admin.md",
     "231104.md",
@@ -261,7 +263,6 @@
     "Delete & Truncate.md",
     "IDEA.md",
     "Java 8 Stream.md",
-    "MySQL.md",
     "Pasted image 20231025105221.png",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",

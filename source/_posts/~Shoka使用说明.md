@@ -16,3 +16,37 @@ python3 manage.py migrate
 
 python3 manage.py runserver 0.0.0.0:8000 --noreload
 ```
+
+
+## 主题使用说明
+
+```
+## Basic
+- [ ] to-do
+- [/] incomplete
+- [x] done
+- [-] canceled
+- [>] forwarded
+- [<] scheduling
+
+## Extras
+- [?] question
+- [!] important
+- [*] star
+- ["] quote
+- [l] location
+- [b] bookmark
+- [i] information
+- [S] savings
+- [I] idea
+- [p] pros
+- [c] cons
+- [f] fire
+- [k] key
+- [w] win
+- [u] up
+- [d] down
+- [D] draft pull request
+- [P] open pull request
+- [M] merged pull request
+```
