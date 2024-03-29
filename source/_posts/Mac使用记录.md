@@ -45,7 +45,13 @@ zhanghuapengdeMacBook-Pro :: Downloads/work_space/AA % sshx
 
 [官方说明](https://docs.flutter.dev/get-started/install/macos)
 
+## 环境
 
+python环境
+
+虚拟环境：~/
+
+DP:DrissionPage
 
 
 ## LUA

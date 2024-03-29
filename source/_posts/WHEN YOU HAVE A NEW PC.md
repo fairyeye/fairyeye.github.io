@@ -128,6 +128,35 @@ mysql> ALTER USER USER() IDENTIFIED BY 'your pwd';
 - Redis图形化页面： [Tiny RDM](https://github.com/tiny-craft/tiny-rdm/releases)
 
 
+以下是如何在Linux或macOS上创建和使用虚拟环境的步骤：
+
+1. 打开终端。
+    
+2. 使用`python3 -m venv path/to/venv`命令创建一个新的虚拟环境，其中`path/to/venv`是你想要创建虚拟环境的目录。例如，你可以在家目录下创建一个名为`myenv`的虚拟环境，使用命令`python3 -m venv ~/myenv`。
+    
+3. 激活虚拟环境。在Linux或macOS上，你可以使用以下命令激活虚拟环境：
+    
+    复制
+    
+    ```
+    source ~/myenv/bin/activate
+    ```
+    
+    激活后，你的命令行提示符会改变，通常前面会加上虚拟环境的名字，比如`(myenv)`。
+    
+4. 在虚拟环境中，你可以使用`pip`安装、升级或删除包，而不会影响到系统级别的Python环境。例如，你可以使用以下命令安装一个包：
+    
+    复制
+    
+    ```
+    pip install package-name
+    ```
+    
+5. 当你完成工作后，你可以通过运行`deactivate`命令来停用虚拟环境。
+    
+
+请注意，如果你的系统上没有安装`python3`，或者你的Python版本不同，你可能需要根据你的实际情况调整上述命令。如果你使用的是Windows系统，步骤会有所不同，通常你会使用`path\to\venv\Scripts\activate`来激活虚拟环境
+
 
 ## Mac
 

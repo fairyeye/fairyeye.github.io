@@ -195,3 +195,15 @@ public void firstLevelCacheTest3() throws IOException {
 
 ### 插件
 
+- [I]  需要在SqlMapConfig.xml中启用
+
+```xml
+<plugins>  
+    <plugin interceptor="com.li.plugin.MyPlugin"></plugin>  
+</plugins>
+```
+
+#### 分页插件
+
+
+
