@@ -220,3 +220,7 @@ public void firstLevelCacheTest3() throws IOException {
 - 创建新的mapperStatement，执行分页SQL
 
 - 设置分页参数：`com.github.pagehelper.MSUtils#setPageParameter`
+
+
+#### 通用Mapper
+
