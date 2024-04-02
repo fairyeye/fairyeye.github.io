@@ -205,5 +205,18 @@ public void firstLevelCacheTest3() throws IOException {
 
 #### 分页插件
 
+**拦截器实现**
 
+- [*] `com.github.pagehelper.PageHelper`
 
+- [*] 入口：`com.github.pagehelper.SqlUtil#_processPage`
+
+- [*] 增加COUNTSQL：`com.github.pagehelper.MSUtils#processCountMappedStatement(MappedStatement ms, SqlSource sqlSource, Object[] args)`
+
+- countSql返回结果大于0时，执行分页，将总数设置到page对象中
+
+- 替换参数 `com.github.pagehelper.MSUtils#processPageMappedStatement(MappedStatement ms, SqlSource sqlSource, Page page, Object[] args)`
+
+- 创建新的mapperStatement，执行分页SQL
+
+- 设置分页参数：`com.github.pagehelper.MSUtils#setPageParameter`

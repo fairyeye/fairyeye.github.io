@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GitHub Page.md",
+                "file": "AA.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "python",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -121,8 +122,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240330.md",
+                "file": "AA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240330.md",
+                "file": "AA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240330.md"
+                "file": "AA.md"
               }
             }
           },
@@ -210,7 +210,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240330.md"
+                "file": "AA.md"
               }
             }
           }
@@ -232,19 +232,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "916adc3ec4d10f22",
+  "active": "f42e9cbda5049246",
   "lastOpenFiles": [
+    "GitHub Page.md",
+    "240330.md",
     "WHEN YOU HAVE A NEW PC.md",
     "Mac使用记录.md",
     "Ubuntu.md",
     "AA.md",
     "~Shoka使用说明.md",
     "security.md",
-    "240330.md",
     "GIT.md",
     "GC回收算法.md",
     "Mac 数据库忘记密码.md",
-    "GitHub Page.md",
     "Spring Boot Admin.md",
     "231104.md",
     "未命名 1.md",
