@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "916adc3ec4d10f22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "240330.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c0c561f512ee3c31",
             "type": "leaf",
             "state": {
@@ -138,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -154,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240511.md",
+                "file": "AA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240511.md",
+                "file": "AA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240511.md"
+                "file": "AA.md"
               }
             }
           },
@@ -222,17 +211,16 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240511.md"
+                "file": "AA.md"
               }
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 254.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -244,10 +232,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c0c561f512ee3c31",
+  "active": "8157870522aab0ea",
   "lastOpenFiles": [
-    "240330.md",
     "240511.md",
+    "240330.md",
     "AA.md",
     "GitHub Page.md",
     "WHEN YOU HAVE A NEW PC.md",

@@ -224,3 +224,60 @@ public void firstLevelCacheTest3() throws IOException {
 
 #### 通用Mapper
 
+
+
+
+### 架构原理
+
+#### 架构设计
+
+##### 接口
+
+- 通过sqlSession.method(statementId)或者Mapper代理类调用方法，执行主句的增删改查。
+- 调用接口修改配置信息等。
+
+##### 数据处理
+
+- 请求参数处理(@Param)：ParameterHandler
+- SQL解析(处理占位符、Mapper标签)：SqlSource
+- SQL执行(JDBC)：Executor
+- 返回结果处理(类型转换等)：ResultSetHandler
+
+##### 框架支撑
+
+- 事务管理
+- 连接池管理
+- 缓存机制
+
+#### 主要构件
+
+- SqlSession：session表示与数据库的连接
+
+- Executor：执行器
+
+- StatementHandler：
+
+- ParameterHandler：
+
+- BoundSql：
+
+- ResultSetHander：
+
+- TypeHandler：数据库类型与JavaBean类型的转换
+
+- MappedStatement：
+
+- SqlSource：
+
+
+#### 总体流程
+
+1. SqlSessionFactoryBuilder获取SqlSessionFactory
+2. SqlSessionFactory.openSession获取SqlSession对象
+3. 通过getMapper获取Mapper代理对象
+4. 执行代理Mapper的方法
+5.  => Executor Mybatis的执行器
+6.  => StatementHandler 与JDBC Statement的交互
+7.  => ParameterHandler 处理方法中携带的参数，拼接到Sql中
+8.  => 执行JDBC流程（加载驱动、建立连接、定义Sql、获取预处理对象、处理参数、执行、处理返回结果）
+9.  => 处理Java类型和数据库类型映射
