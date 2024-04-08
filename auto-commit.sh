@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/sh
  
 echo "####### 开始自动提交 #######"
  
-ls
+# ls
  
 echo "开始执行命令"
  
