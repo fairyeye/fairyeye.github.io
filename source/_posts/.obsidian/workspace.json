@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "AA.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -141,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240511.md",
+                "file": "AA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240511.md",
+                "file": "AA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -189,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240511.md"
+                "file": "AA.md"
               }
             }
           },
@@ -209,7 +210,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240511.md"
+                "file": "AA.md"
               }
             }
           }
@@ -230,11 +231,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c0c561f512ee3c31",
+  "active": "f42e9cbda5049246",
   "lastOpenFiles": [
     "GIT.md",
-    "AA.md",
     "240511.md",
+    "AA.md",
     "240330.md",
     "GitHub Page.md",
     "WHEN YOU HAVE A NEW PC.md",

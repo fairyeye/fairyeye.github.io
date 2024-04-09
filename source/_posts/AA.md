@@ -281,3 +281,30 @@ public void firstLevelCacheTest3() throws IOException {
 7.  => ParameterHandler 处理方法中携带的参数，拼接到Sql中
 8.  => 执行JDBC流程（加载驱动、建立连接、定义Sql、获取预处理对象、处理参数、执行、处理返回结果）
 9.  => 处理Java类型和数据库类型映射
+
+
+### 源码分析
+
+#### getMapper
+
+扫描@Mapper注解、从sqlMapConfigXml中读取Mapper包名，或者Mapper接口，将其存到MapperRegistry.knownMappers中
+```java 
+Map<Class<?>, MapperProxyFactory<?>> knownMappers = new HashMap<>();
+```
+
+value值存储的是一个工厂类，有个`Class<T>`的变量，和`newInstance(SqlSession sqlSession)`方法，用于给Mapper创建代理对象
+
+- [*] `Proxy.newProxyInstance(mapperInterface.getClassLoader(), new Class[]{mapperInterface}, mapperProxy);`
+
+
+```java 
+// JDK动态代理 生成代理对象
+/**
+ * loader 类加载器
+ * interfaces 代理对象类型
+ * h InvocationHandler接口的实现类，需要实现invoke方法
+ */
+newProxyInstance(ClassLoader loader,  
+                                      Class<?>[] interfaces,  
+                                      InvocationHandler h)
+```
