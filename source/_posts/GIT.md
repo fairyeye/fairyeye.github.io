@@ -250,3 +250,14 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 17、**source-code-hunter**：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。
 
 > 地址：https://github.com/doocs/source-code-hunter
+
+
+### 2.1 免费的 AI 图像升级器：Upscaler
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNPydvTukojzHTnhQlLXGLsJ4t0OiaCFCQYqtp5SXDiclDBw2xQ0MIAtnHCFSwUJeT33Hq40VnjuV9RA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**主语言：TypeScript**，**Star：25k**，**周增长：1k**
+
+这是一款通过 AI 算法提高图像分辨率（超级分辨率，简称超分）的桌面工具，它免费、开源、无需联网、开箱即用，安装包大概 200+MB，需要有 GPU 的机器才能运行，适用于 Windows、Linux 和 macOS 系统。
+
+> GitHub 地址→github.com/upscayl/upscayl
