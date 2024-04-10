@@ -308,3 +308,12 @@ newProxyInstance(ClassLoader loader,
                                       Class<?>[] interfaces,  
                                       InvocationHandler h)
 ```
+
+
+#### 二级缓存
+
+- [*] `org.apache.ibatis.executor.CachingExecutor#flushCacheIfRequired`
+
+- [ * ] `org.apache.ibatis.builder.MapperBuilderAssistant#addMappedStatement(java.lang.String, org.apache.ibatis.mapping.SqlSource, org.apache.ibatis.mapping.StatementType, org.apache.ibatis.mapping.SqlCommandType, java.lang.Integer, java.lang.Integer, java.lang.String, java.lang.Class<?>, java.lang.String, java.lang.Class<?>, org.apache.ibatis.mapping.ResultSetType, boolean, boolean, boolean, org.apache.ibatis.executor.keygen.KeyGenerator, java.lang.String, java.lang.String, java.lang.String, org.apache.ibatis.scripting.LanguageDriver, java.lang.String)`
+
+
