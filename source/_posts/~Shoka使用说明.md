@@ -21,7 +21,7 @@ python3 manage.py runserver 0.0.0.0:8000 --noreload
 ## 主题使用说明
 
 ```
-## Basic
+## Basic 中括号里没有空格 前后各一个空格
 - [ ] to-do
 - [/] incomplete
 - [x] done
@@ -50,3 +50,4 @@ python3 manage.py runserver 0.0.0.0:8000 --noreload
 - [P] open pull request
 - [M] merged pull request
 ```
+

@@ -219,7 +219,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 254.5
+    "width": 254.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,15 +234,15 @@
   },
   "active": "f42e9cbda5049246",
   "lastOpenFiles": [
-    "240511.md",
+    "~Shoka使用说明.md",
     "AA.md",
+    "240511.md",
     "GIT.md",
     "240330.md",
     "GitHub Page.md",
     "WHEN YOU HAVE A NEW PC.md",
     "Mac使用记录.md",
     "Ubuntu.md",
-    "~Shoka使用说明.md",
     "security.md",
     "GC回收算法.md",
     "Mac 数据库忘记密码.md",

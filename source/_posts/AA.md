@@ -269,7 +269,6 @@ public void firstLevelCacheTest3() throws IOException {
 
 - SqlSource：
 
-
 #### 总体流程
 
 1. SqlSessionFactoryBuilder获取SqlSessionFactory
@@ -314,6 +313,49 @@ newProxyInstance(ClassLoader loader,
 
 - [*] `org.apache.ibatis.executor.CachingExecutor#flushCacheIfRequired`
 
-- [ * ] `org.apache.ibatis.builder.MapperBuilderAssistant#addMappedStatement(java.lang.String, org.apache.ibatis.mapping.SqlSource, org.apache.ibatis.mapping.StatementType, org.apache.ibatis.mapping.SqlCommandType, java.lang.Integer, java.lang.Integer, java.lang.String, java.lang.Class<?>, java.lang.String, java.lang.Class<?>, org.apache.ibatis.mapping.ResultSetType, boolean, boolean, boolean, org.apache.ibatis.executor.keygen.KeyGenerator, java.lang.String, java.lang.String, java.lang.String, org.apache.ibatis.scripting.LanguageDriver, java.lang.String)`
+- [*] `org.apache.ibatis.builder.MapperBuilderAssistant#addMappedStatement(java.lang.String, org.apache.ibatis.mapping.SqlSource, org.apache.ibatis.mapping.StatementType, org.apache.ibatis.mapping.SqlCommandType, java.lang.Integer, java.lang.Integer, java.lang.String, java.lang.Class<?>, java.lang.String, java.lang.Class<?>, org.apache.ibatis.mapping.ResultSetType, boolean, boolean, boolean, org.apache.ibatis.executor.keygen.KeyGenerator, java.lang.String, java.lang.String, java.lang.String, org.apache.ibatis.scripting.LanguageDriver, java.lang.String)`
 
+
+- [?] 二级缓存需要再事务提交后或者关闭后生效
+
+`org.apache.ibatis.executor.CachingExecutor#query(org.apache.ibatis.mapping.MappedStatement, java.lang.Object, org.apache.ibatis.session.RowBounds, org.apache.ibatis.session.ResultHandler, org.apache.ibatis.cache.CacheKey, org.apache.ibatis.mapping.BoundSql)`
+
+=>  使用`CachingExecutor.query()`
+=>  清空缓存
+=> 
+```
+// 从二级缓存中，获取结果
+List<E> list = (List<E>) tcm.getObject(cache, key);
+getObject => TransactionalCacheManager.transactionalCaches.delegate中获取缓存
+
+// 如果没有取到 去一级缓存中取
+
+
+// 缓存查询结果  
+tcm.putObject(cache, key, list);
+
+=> 实际是存到了entriesToAddOnCommit中
+
+transactionalCaches中有一个：
+private final Map<Object, Object> entriesToAddOnCommit;
+
+public void putObject(Cache cache, CacheKey key, Object value) {  
+    // 存入TransactionalCache的缓存中  
+    getTransactionalCache(cache).putObject(key, value);  
+}
+=> 
+entriesToAddOnCommit.put(key, object);
+
+transactionalCaches中有一个flushPendingEntries方法，该方法会在事务提交、关闭时会调用，这也是二级缓存需要在事务提交或者关闭后才能查到的原因
+// 将 entriesToAddOnCommit、entriesMissedInCache 刷入 delegate(cache) 中  
+flushPendingEntries();
+
+```
+
+- [?] 二级缓存为什么使用的是`CachingExecutor`
+
+sqlSessionFactory.openSession()时会new Executor
+`org.apache.ibatis.session.defaults.DefaultSqlSessionFactory#openSessionFromDataSource`
+
+`org.apache.ibatis.session.Configuration#newExecutor(org.apache.ibatis.transaction.Transaction, org.apache.ibatis.session.ExecutorType)`
 
