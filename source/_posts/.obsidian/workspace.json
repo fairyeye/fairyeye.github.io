@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AA.md",
+                "file": "240511.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +166,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AA.md",
+                "file": "240511.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +189,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AA.md"
+                "file": "240511.md"
               }
             }
           },
@@ -210,7 +209,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "AA.md"
+                "file": "240511.md"
               }
             }
           }
@@ -232,11 +231,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f42e9cbda5049246",
+  "active": "c0c561f512ee3c31",
   "lastOpenFiles": [
-    "~Shoka使用说明.md",
     "AA.md",
     "240511.md",
+    "~Shoka使用说明.md",
     "GIT.md",
     "240330.md",
     "GitHub Page.md",
