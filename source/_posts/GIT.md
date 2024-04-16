@@ -261,3 +261,14 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 这是一款通过 AI 算法提高图像分辨率（超级分辨率，简称超分）的桌面工具，它免费、开源、无需联网、开箱即用，安装包大概 200+MB，需要有 GPU 的机器才能运行，适用于 Windows、Linux 和 macOS 系统。
 
 > GitHub 地址→github.com/upscayl/upscayl
+
+
+### 2.1 在线的数据库设计工具：DrawDB
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNpuPH55ddPkSnH9H4wHVSG5YudMeeSnXGSEw2HhFD6yPXgWyedmSQ7wO3hWIqSZEeialYhgoianlsA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+**主语言：JavaScript**，**Star：4.7k**，**周增长：3.8k**
+
+这个开源项目是一个免费、简单、强大的数据库实体关系（DBER）在线编辑器，无需注册即可直接在浏览器中使用。它提供了直观、可视化的操作界面，用户通过点击即可构建数据库表和导出建表语句，还可以导入建表语句，实现可视化编辑、错误检查等。支持 MySQL、PostgreSQL、SQLite、MariaDB、SQL Server 共 5 种常用的关系数据库。
+
+> GitHub 地址→github.com/drawdb-io/drawdb
