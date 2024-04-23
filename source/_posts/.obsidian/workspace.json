@@ -125,7 +125,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -231,7 +232,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c0c561f512ee3c31",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
     "GIT.md",
     "240511.md",
