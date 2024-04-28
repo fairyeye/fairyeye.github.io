@@ -272,3 +272,87 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 这个开源项目是一个免费、简单、强大的数据库实体关系（DBER）在线编辑器，无需注册即可直接在浏览器中使用。它提供了直观、可视化的操作界面，用户通过点击即可构建数据库表和导出建表语句，还可以导入建表语句，实现可视化编辑、错误检查等。支持 MySQL、PostgreSQL、SQLite、MariaDB、SQL Server 共 5 种常用的关系数据库。
 
 > GitHub 地址→github.com/drawdb-io/drawdb
+
+
+
+5、WingetUI：带界面的 Windows 包管理器。该项目是一个为 Windows 常用的命令行包管理工具设计的用户界面，如 Winget、Scoop、Pip、NPM、.NET Tool 等。它的界面友好、设计美观、支持中文，通过它你可以轻松下载、安装、更新和卸载包管理器上发布的任何软件以及其它日常应用，如浏览器、PDF 阅读器等。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkxbJX9TVeXSVphhvpywb7IRHMbJVW9Mf29bXj2iaFp6jDLg4xnjEhZJA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/marticliment/WingetUI
+
+
+
+9、freeze：生成代码图片的终端工具。该项目可以将代码片段和终端输出，转换成 PNG、SVG 和 WebP 格式的图片，它采用 Go 语言开发，特点是安装简单和易于使用，支持一条命令生成图片，也可以通过交互模式生成定制的图片。
+
+`# macOS or Linux   brew install charmbracelet/tap/freeze      # Arch Linux (btw)   pacman -S freeze      # Nix   nix-env -iA nixpkgs.charm-freeze   `
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkvHXibe5VF36piaofqXtfe19mDWWw7bPowMChlhic3vmdzXEJfWIzvPLIQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+> 地址：github.com/charmbracelet/freeze
+
+
+
+### Java 项目
+
+12、CompreFace：免费、开源的人脸识别系统。该项目提供了用于人脸识别、检测、验证、头部姿势检测、性别和年龄识别的 REST API 服务，不用懂机器学习就能轻松集成到任何系统中。它后端采用 Java 编写，人脸识别是基于 FaceNet 和 InsightFace 实现，同时支持 Docker 部署。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFklgLXIgse7X1bUGibNltiaiaeILsfG4HqCUpCD2Ylpx30dLDdjufpWNMXg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/exadel-inc/CompreFace
+
+13、fdroidclient：免费、开源的 Android 应用商店。该项目是 F-Droid 的 Android 客户端，专门收集各类开源安卓软件（FOSS）的应用商店。它里面大部分是免费且无广告的应用，如遇到资源加载慢的情况，可通过设置镜像源解决。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkZibGRXYunyDJoORM0r5hho5QWH12xlRBCgeuE8vR7SkMGHjtkj8yINw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/f-droid/fdroidclient
+
+
+
+18、tailwind-landing-page-template：免费、开源的落地页模板。该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。
+
+`git clone 项目   yarn install   yarn dev   # http://localhost:3000   `
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkvXzGZmE2MMYSWkczoFgbz7e8Oh0m56R53r2LZF1HCFOicR2LMmAibSrw/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+> 地址：github.com/cruip/tailwind-landing-page-template
+
+
+
+
+22、python-miio：用于控制小米智能家电的 Python 库。该项目提供了一个 Python 库和命令行工具，可以用来控制使用小米的 miIO 和 MIoT 协议的设备。借助它用户可以轻松地与小米智能设备进行通信和远程控制，包括扫地机器人、灯泡、空气净化器等，非常适合喜欢 DIY 智能家居系统的开发者。
+
+> 地址：github.com/rytilahti/python-miio
+
+
+23、undetected-chromedriver：绕过反爬检测的 Python 库。这是一个经过优化的 Selenium WebDriver 补丁，专门用于防止浏览器自动化过程中，触发反机器人机制。它能够隐藏浏览器特征（指纹），使用起来十分方便，就像一个 Python 的第三方库一样。
+
+`import undetected_chromedriver as uc   driver = uc.Chrome(headless=True,use_subprocess=False)   driver.get('https://nowsecure.nl')   driver.save_screenshot('nowsecure.png')   `
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFk1FIGdy5Ya4F82sGRNjmzMqysdiarqXicPOxZYqfpPGp5licTuAWMvHC1Q/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+> 地址：github.com/ultrafunkamsterdam/undetected-chromedriver
+
+
+
+
+29、reminders-menubar：极简的 macOS 菜单栏提醒工具。这是一款使用 SwiftUI 开发的小工具，能够在 macOS 菜单栏查看/提醒待办事项。它体积小、交互简单、界面清爽，支持开机启动、多语言（包括中文）、菜单栏显示计数、快捷键等功能。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkWbYLJNXibzGw3vLsTAbLHKys7s4VJM9Zucicr9oF0jDwQ0nfOyVNMy4A/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/DamascenoRafael/reminders-menubar
+
+###
+
+
+32、ServiceLogos：超可爱的 Logo 集合。这里是用来存放 Sawaratsuki 制作的各种 logo 的仓库，这些 logo 制作精美、画风可爱，包括编程语言、框架、工具和各大社交媒体的商标™️。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkg5uv5yRia0J7MzVJUiccurARChJuSmJYKWiaqk490eO8kOewpuhAia5pHA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/SAWARATSUKI/ServiceLogos
+
+
+
+35、how-to-learn-robotics：机器人学自学指南。这本指南专为非科班的小伙伴而设计，旨在指导他们如何学习机器人学。它包含了必备知识、入门教材推荐、实践项目以及进阶方法等内容，帮助读者逐步成长为一名优秀的机器人工程师。
+
+> 地址：github.com/qqfly/how-to-learn-robotics

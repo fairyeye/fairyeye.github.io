@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -125,8 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6626c0948e010413",
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240511.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240511.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240511.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -210,7 +210,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240511.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -232,15 +232,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
-    "GIT.md",
-    "240511.md",
+    "WHEN YOU HAVE A NEW PC.md",
     "AA.md",
+    "240511.md",
+    "GIT.md",
     "~Shoka使用说明.md",
     "240330.md",
     "GitHub Page.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "Mac使用记录.md",
     "Ubuntu.md",
     "security.md",
