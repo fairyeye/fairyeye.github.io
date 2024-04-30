@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "240511.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "set glo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -122,7 +121,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           },
@@ -210,7 +210,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -232,12 +232,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cc5cd52ee268a5e3",
+  "active": "c0c561f512ee3c31",
   "lastOpenFiles": [
-    "WHEN YOU HAVE A NEW PC.md",
-    "AA.md",
+    "Dart.md",
     "240511.md",
     "GIT.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "AA.md",
     "~Shoka使用说明.md",
     "240330.md",
     "GitHub Page.md",
@@ -262,7 +263,6 @@
     "Pasted image 20240116101021.png",
     "同步不同服务的MySQL数据表.md",
     "Algo.md",
-    "Delete & Truncate.md",
     "Pasted image 20231025105221.png",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",
