@@ -471,3 +471,11 @@ if condition.lower() == "n":
 
 break
 ```
+
+
+## Scrcpy
+
+``` sh
+# 手机息屏启动
+scrcpy --turn-screen-off
+```

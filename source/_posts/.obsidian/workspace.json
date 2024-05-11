@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AA.md",
+                "file": "240511.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "Mac使用记录.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "set glo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AA.md",
+                "file": "240511.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AA.md",
+                "file": "240511.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AA.md"
+                "file": "240511.md"
               }
             }
           },
@@ -197,7 +197,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "AA.md"
+                "file": "240511.md"
               }
             }
           }
@@ -221,15 +221,15 @@
   },
   "active": "f42e9cbda5049246",
   "lastOpenFiles": [
-    "240511.md",
+    "Mac使用记录.md",
     "WHEN YOU HAVE A NEW PC.md",
+    "~Shoka使用说明.md",
+    "240511.md",
+    "AA.md",
     "Dart.md",
     "GIT.md",
-    "AA.md",
-    "~Shoka使用说明.md",
     "240330.md",
     "GitHub Page.md",
-    "Mac使用记录.md",
     "Ubuntu.md",
     "security.md",
     "GC回收算法.md",
