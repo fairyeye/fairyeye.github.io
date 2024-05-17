@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -84,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "glob",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -109,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -129,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240511.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240511.md",
+                "file": "WHEN YOU HAVE A NEW PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240511.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           },
@@ -197,7 +199,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240511.md"
+                "file": "WHEN YOU HAVE A NEW PC.md"
               }
             }
           }
@@ -219,15 +221,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f42e9cbda5049246",
+  "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
+    "GIT.md",
+    "240511.md",
     "Mac使用记录.md",
     "WHEN YOU HAVE A NEW PC.md",
     "~Shoka使用说明.md",
-    "240511.md",
     "AA.md",
     "Dart.md",
-    "GIT.md",
     "240330.md",
     "GitHub Page.md",
     "Ubuntu.md",
