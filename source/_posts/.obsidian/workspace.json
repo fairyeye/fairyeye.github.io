@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "Dart.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "glob",
+                "query": "flutter",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "Dart.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md",
+                "file": "Dart.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md"
+                "file": "Dart.md"
               }
             }
           },
@@ -199,7 +199,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "WHEN YOU HAVE A NEW PC.md"
+                "file": "Dart.md"
               }
             }
           }
@@ -223,10 +223,10 @@
   },
   "active": "cc5cd52ee268a5e3",
   "lastOpenFiles": [
+    "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "240511.md",
     "Mac使用记录.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "~Shoka使用说明.md",
     "AA.md",
     "Dart.md",
