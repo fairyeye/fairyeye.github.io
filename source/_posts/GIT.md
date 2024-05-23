@@ -356,3 +356,14 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 35、how-to-learn-robotics：机器人学自学指南。这本指南专为非科班的小伙伴而设计，旨在指导他们如何学习机器人学。它包含了必备知识、入门教材推荐、实践项目以及进阶方法等内容，帮助读者逐步成长为一名优秀的机器人工程师。
 
 > 地址：github.com/qqfly/how-to-learn-robotics
+
+
+### 2.2 免费、开源的落地页模板：tailwind-landing-page-template
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNopDgmYXxHEOsNjAbajpFicNWJrrkoveg9zDmqS0hrrf7fNngdGjOMymnZcPPtwUAUNhGNtCnVHtg/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+**主语言：TypeScript**
+
+该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。
+
+> 项目详情→hellogithub.com/repository/9f205fad64b241609ce3feec456ab818
