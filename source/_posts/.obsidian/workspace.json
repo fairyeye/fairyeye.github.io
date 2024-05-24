@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "240615.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "240615.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "240615.md"
               }
             }
           },
@@ -198,7 +197,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "240615.md"
               }
             }
           }
@@ -220,13 +219,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "56f626a9951de028",
+  "active": "f42e9cbda5049246",
   "lastOpenFiles": [
+    "GIT.md",
     "240615.md",
     "240511.md",
     "Dart.md",
     "WHEN YOU HAVE A NEW PC.md",
-    "GIT.md",
     "Mac使用记录.md",
     "~Shoka使用说明.md",
     "AA.md",
