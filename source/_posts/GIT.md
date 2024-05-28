@@ -367,3 +367,26 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。
 
 > 项目详情→hellogithub.com/repository/9f205fad64b241609ce3feec456ab818
+
+
+### C# 项目
+
+3、RunCat_for_windows：在 Windows 任务栏飞奔的“小猫”。这是一个用 C# 写的小工具，它会在 Windows 任务栏显示一只奔跑的小猫动画，CPU 使用率越高它跑得越快。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0ICLfJm011mOVMNibjTO2BKrDnXCgibjQROB5SGS5ibTiat02POkf5HUibicxA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+> 地址：github.com/Kyome22/RunCat_for_windows
+
+
+9、mactop：专为苹果芯片打造的 Mac 性能监控工具。该项目用不到 1k 行的 Go 代码，实现了一个类似 top 命令的工具。它可以实时显示 Apple M 系列芯片的性能指标，包括 CPU、GPU 使用率、内存、网络和硬盘等信息。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0IQghM8WzLANkVqeJLMA5ELVO8enFQBRo2PzXbsSq760LRepj74zzOMg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/context-labs/mactop
+
+
+11、superfile：非常漂亮的终端文件管理器。这是一个现代终端文件管理器，为命令行文件操作提供了一个直观且漂亮的界面。它默认采用 Vim 风格的快捷键操作，还支持插件和主题自定义。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0IxjDDtDYbYermMXiaHDBicsfmicDhVhOWR50ys7k5Qzia4kWwRgRibOnfTKg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/yorukot/superfile
