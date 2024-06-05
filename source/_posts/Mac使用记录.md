@@ -479,3 +479,9 @@ break
 # 手机息屏启动
 scrcpy --turn-screen-off
 ```
+
+
+
+## 服务器FRP
+
+##### path: `/home/li/frpc`
