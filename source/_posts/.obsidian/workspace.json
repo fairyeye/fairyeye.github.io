@@ -79,8 +79,7 @@
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -154,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "使用教程.md",
+                "file": "240615.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "使用教程.md",
+                "file": "240615.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +201,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "使用教程.md"
+                "file": "240615.md"
               }
             }
           },
@@ -222,7 +221,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "使用教程.md"
+                "file": "240615.md"
               }
             }
           }
@@ -243,12 +242,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ab90bb1e6649629d",
+  "active": "f42e9cbda5049246",
   "lastOpenFiles": [
-    "Mac使用记录.md",
-    "使用教程.md",
-    "HY2.0.md",
     "GIT.md",
+    "使用教程.md",
+    "Mac使用记录.md",
+    "HY2.0.md",
     "240615.md",
     "供货能力申请单功能.md",
     "WHEN YOU HAVE A NEW PC.md",
