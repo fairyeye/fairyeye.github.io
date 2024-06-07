@@ -233,3 +233,72 @@ pyupdater settings
 
 这样，你就有了一个带有登录功能的Windows应用程序，可以选择文件夹中的PDF文件进行处理，并支持在线更新。
 
+
+
+# 要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行
+
+：
+
+1. **读取所有Excel文件**。
+2. **提取并整理数据**。
+3. **比较每对Excel文件的数据**。
+4. **计算重复率**。
+5. **输出比较结果**。
+
+可以使用 `pandas` 库来处理Excel文件，利用 `pandas` 的 DataFrame 结构进行数据比较和重复率计算。
+
+### 1. 安装必要的库
+
+首先，确保你已经安装了 `pandas` 和 `openpyxl` 库：
+
+bash
+
+复制代码
+
+`pip install pandas openpyxl`
+
+### 2. 读取所有Excel文件
+
+使用 `pandas` 读取Excel文件，并提取数据。
+
+python
+
+复制代码
+
+`import os import pandas as pd  def read_excel_files(folder_path):     excel_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.xlsx')]     dataframes = {f: pd.read_excel(f) for f in excel_files}     return dataframes  folder_path = 'your_folder_with_excel_files' dataframes = read_excel_files(folder_path)`
+
+### 3. 比较每对Excel文件的数据
+
+定义一个函数来比较两个DataFrame，计算重复率。
+
+python
+
+复制代码
+
+`def calculate_similarity(df1, df2):     # 确保两者都有相同的列     common_columns = df1.columns.intersection(df2.columns)     if len(common_columns) == 0:         return 0.0          # 选择共同的列进行比较     df1_common = df1[common_columns]     df2_common = df2[common_columns]          # 合并两个数据集，保留重复项     combined = pd.concat([df1_common, df2_common])     duplicates = combined.duplicated(keep=False)          # 计算重复率     similarity = duplicates.sum() / len(combined)     return similarity  def compare_excel_files(dataframes):     results = []     files = list(dataframes.keys())     for i in range(len(files)):         for j in range(i + 1, len(files)):             df1 = dataframes[files[i]]             df2 = dataframes[files[j]]             similarity = calculate_similarity(df1, df2)             results.append((files[i], files[j], similarity))     return results  similarity_results = compare_excel_files(dataframes)`
+
+### 4. 输出比较结果
+
+将比较结果输出，显示每对Excel文件的相似度。
+
+python
+
+复制代码
+
+`for file1, file2, similarity in similarity_results:     print(f"文件 {file1} 和文件 {file2} 的相似度为: {similarity:.2%}")`
+
+### 完整代码
+
+python
+
+复制代码
+
+`import os import pandas as pd  def read_excel_files(folder_path):     excel_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.xlsx')]     dataframes = {f: pd.read_excel(f) for f in excel_files}     return dataframes  def calculate_similarity(df1, df2):     common_columns = df1.columns.intersection(df2.columns)     if len(common_columns) == 0:         return 0.0          df1_common = df1[common_columns]     df2_common = df2[common_columns]          combined = pd.concat([df1_common, df2_common])     duplicates = combined.duplicated(keep=False)          similarity = duplicates.sum() / len(combined)     return similarity  def compare_excel_files(dataframes):     results = []     files = list(dataframes.keys())     for i in range(len(files)):         for j in range(i + 1, len(files)):             df1 = dataframes[files[i]]             df2 = dataframes[files[j]]             similarity = calculate_similarity(df1, df2)             results.append((files[i], files[j], similarity))     return results  folder_path = 'your_folder_with_excel_files' dataframes = read_excel_files(folder_path) similarity_results = compare_excel_files(dataframes)  for file1, file2, similarity in similarity_results:     print(f"文件 {file1} 和文件 {file2} 的相似度为: {similarity:.2%}")`
+
+### 注意事项
+
+- **列对齐**：确保所有比较的数据具有相同的列。
+- **数据清理**：在实际使用中，可能需要对数据进行清理和预处理，以确保比较的准确性。
+- **优化**：对于大型数据集，计算重复率可能会很耗时。可以考虑优化算法或使用更高效的数据结构。
+
+通过这些步骤，你可以实现读取多个Excel文件并两两判断是否有高度重复的数据，并计算和输出相似度。
