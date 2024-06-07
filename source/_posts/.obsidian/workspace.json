@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HY2.0.md",
+                "file": "Centos.md",
                 "mode": "source",
                 "source": false
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HY2.0.md",
+                "file": "Centos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HY2.0.md",
+                "file": "Centos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HY2.0.md"
+                "file": "Centos.md"
               }
             }
           },
@@ -222,7 +222,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "HY2.0.md"
+                "file": "Centos.md"
               }
             }
           }
@@ -245,12 +245,12 @@
   },
   "active": "ab90bb1e6649629d",
   "lastOpenFiles": [
+    "HY2.0.md",
     "使用教程.md",
     "供货能力申请单功能.md",
     "240615.md",
     "GIT.md",
     "Mac使用记录.md",
-    "HY2.0.md",
     "WHEN YOU HAVE A NEW PC.md",
     "240511.md",
     "Dart.md",
