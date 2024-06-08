@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Centos.md",
+                "file": "使用教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "苏州一日游.md",
+                "file": "使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "苏州一日游.md",
+                "file": "使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "苏州一日游.md"
+                "file": "使用教程.md"
               }
             }
           },
@@ -234,7 +234,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "苏州一日游.md"
+                "file": "使用教程.md"
               }
             }
           }
@@ -255,7 +255,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ff7759460055e7bb",
+  "active": "ab90bb1e6649629d",
   "lastOpenFiles": [
     "Centos.md",
     "苏州一日游.md",
