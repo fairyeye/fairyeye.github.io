@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240615.md",
                 "mode": "source",
                 "source": false
               }
@@ -133,8 +133,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -154,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240615.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mac使用记录.md",
+                "file": "240615.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +201,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "240615.md"
               }
             }
           },
@@ -222,7 +221,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Mac使用记录.md"
+                "file": "240615.md"
               }
             }
           }
@@ -245,6 +244,7 @@
   },
   "active": "f42e9cbda5049246",
   "lastOpenFiles": [
+    "Mac使用记录.md",
     "240615.md",
     "使用教程.md",
     "苏州一日游 1.md",
@@ -253,7 +253,6 @@
     "HY2.0.md",
     "供货能力申请单功能.md",
     "GIT.md",
-    "Mac使用记录.md",
     "WHEN YOU HAVE A NEW PC.md",
     "240511.md",
     "Dart.md",
