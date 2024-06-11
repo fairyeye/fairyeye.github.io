@@ -49,3 +49,50 @@ https://www.qqmate.cn/652.html
     - 将批处理文件放置在`frpc.exe`相同的文件夹中。
     - 您可以双击运行此批处理文件，或者将其添加到启动文件夹以在用户登录时自动运行。
 ```
+
+
+
+## 端口
+
+#####  3001   
+
+
+`账号：li  gz123456`
+
+
+
+
+
+
+##
+
+
+开机启动frpc全部服务
+
+
+```sh
+[Unit]
+Description=Frp Multiple Client Services
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/frpc/frpc/start_all_frpc.sh
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+```
+
+start_all_frpc.sh
+
+```sh
+#!/bin/bash
+
+/root/frpc/frpc -c /root/frpc/frpc/frpc.toml &
+/root/frpc/frpc -c /root/frpc/frpc/frpc-29252.toml &
+/root/frpc/frpc -c /root/frpc/frpc/frpc-3001.toml &
+
+wait
+```

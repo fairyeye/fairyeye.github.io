@@ -31,6 +31,10 @@ echo "####### 推送成功 #######"
 
 sleep 3s
 
+hexo g
+
+sleep 3s
+
 hexo d
 
 echo "####### 部署成功 #######"
