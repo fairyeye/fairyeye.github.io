@@ -78,18 +78,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ff7759460055e7bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "苏州一日游.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
         "currentTab": 5
@@ -257,10 +245,11 @@
   },
   "active": "ab90bb1e6649629d",
   "lastOpenFiles": [
-    "Centos.md",
+    "苏州一日游 1.md",
     "苏州一日游.md",
-    "HY2.0.md",
     "使用教程.md",
+    "Centos.md",
+    "HY2.0.md",
     "供货能力申请单功能.md",
     "240615.md",
     "GIT.md",
@@ -282,7 +271,6 @@
     "Redis.md",
     "Leetcode.md",
     "Jmeter简单使用.md",
-    "分页查询.md",
     "迭代.canvas",
     "笔记.canvas",
     "Pasted image 20240116101021.png",
