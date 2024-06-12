@@ -1,39 +1,40 @@
 #!/bin/sh
- 
+cd /Users/li/Downloads/work_space/fairyeye.github.io 
 echo "####### 开始自动提交 #######"
  
 # ls
  
 echo "开始执行命令"
  
-git add .
+# git add .
  
-git status
+# git status
  
 #写个sleep 1s 是为了解决并发导致卡壳
  
-sleep 1s
+# sleep 1s
  
-echo "####### 添加文件 #######"
+# echo "####### 添加文件 #######"
  
-git commit -m "auto committed"
+# git commit -m "auto committed"
  
-echo "####### commit #######"
+# echo "####### commit #######"
  
-sleep 1s
+# sleep 1s
  
-echo "####### 开始推送 #######"
+# echo "####### 开始推送 #######"
  
  
-git push 
+# git push 
  
-echo "####### 推送成功 #######"
+# echo "####### 推送成功 #######"
 
-sleep 3s
+# sleep 3s
 
 hexo g
 
-sleep 3s
+echo "###### 生成页面 ######"
+sleep 5s
 
 hexo d
 
