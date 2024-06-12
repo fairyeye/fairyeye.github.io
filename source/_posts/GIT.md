@@ -396,3 +396,51 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 ##### 登录页面HTML
 
 https://mp.weixin.qq.com/s?__biz=MzkyOTY0MTc2Mw==&mid=2247484615&idx=1&sn=ea7f0a83d59cbecd8d35bcc8593df965&chksm=c379bfb1c9e47cd5f6cb9f2f1549b14c7e6ae9d5df148869070d42df10a94ff5fc731bc5ea2b&scene=132&exptype=timeline_recommend_article_extendread_extendread_interest&show_related_article=1&subscene=132&scene=132#wechat_redirect
+
+
+## 在Master分之发生变化的时候，pull一下代码
+
+
+要在Git仓库的master分支发生变化时自动执行`git pull`操作，可以设置一个Git hook来触发这个动作。具体步骤如下：
+
+1. **安装Git：** 确保系统上已经安装了Git。如果没有安装，可以运行以下命令：
+
+    `sudo yum install git`
+    
+2. **克隆仓库：** 如果您还没有克隆仓库，请先克隆它：
+    
+    `git clone https://github.com/username/repository.git /path/to/your/local/repo cd /path/to/your/local/repo`
+    
+3. **设置Git hook：** Git hooks 是一些脚本，在Git仓库中的特定事件发生时执行。我们可以使用`post-merge`和`post-receive` hooks来实现这个功能。
+    
+    1. **创建一个钩子脚本：**
+        
+        `vi /path/to/your/local/repo/.git/hooks/post-merge`
+        
+        添加以下内容：
+        
+```sh
+#!/bin/bash  
+# 切换到仓库目录 
+cd /path/to/your/local/repo  # 执行 git pull 
+git pull origin master
+```
+
+ 保存并关闭文件。
+        
+**注意：** 确保替换`/path/to/your/local/repo`为您的实际仓库路径。
+        
+2. **为钩子脚本添加执行权限：**
+
+
+```sh
+chmod +x /path/to/your/local/repo/.git/hooks/post-merge
+```
+
+
+## Github Hooks
+
+[GitHooks ](https://juejin.cn/post/7249281117169614904)
+
+
+![](https://s3.bmp.ovh/imgs/2024/06/12/d328d835ab6947bb.png)

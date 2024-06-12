@@ -20,18 +20,6 @@
             }
           },
           {
-            "id": "bc3915235db4b338",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "~Shoka使用说明.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5c8608b0fb9b02ce",
             "type": "leaf",
             "state": {
@@ -44,7 +32,7 @@
             }
           },
           {
-            "id": "56f626a9951de028",
+            "id": "ab90bb1e6649629d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -56,7 +44,7 @@
             }
           },
           {
-            "id": "ab90bb1e6649629d",
+            "id": "511be548317e2d35",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -66,20 +54,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "511be548317e2d35",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Centos.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -108,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nginx",
+                "query": "frpc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -153,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240615.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240615.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240615.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -221,7 +198,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240615.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -242,20 +219,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f42e9cbda5049246",
+  "active": "ab90bb1e6649629d",
   "lastOpenFiles": [
-    "Centos.md",
+    "使用教程.md",
+    "GIT.md",
+    "240615.md",
+    "苏州一日游.md",
+    "数组与链表.md",
+    "供货能力申请单.md",
     "~Shoka使用说明.md",
+    "Mac使用记录.md",
+    "Centos.md",
     "Ubuntu.md",
     "WHEN YOU HAVE A NEW PC.md",
-    "供货能力申请单功能.md",
-    "Mac使用记录.md",
-    "240615.md",
-    "使用教程.md",
-    "苏州一日游 1.md",
-    "苏州一日游.md",
     "HY2.0.md",
-    "GIT.md",
     "240511.md",
     "Dart.md",
     "AA.md",
@@ -269,7 +246,6 @@
     "未命名 1.md",
     "Redis.md",
     "Leetcode.md",
-    "Jmeter简单使用.md",
     "迭代.canvas",
     "笔记.canvas",
     "Pasted image 20240116101021.png",
