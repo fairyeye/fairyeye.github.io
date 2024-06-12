@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "~Shoka使用说明.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,8 +79,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,8 +133,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -155,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "240615.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,7 +178,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ubuntu.md",
+                "file": "240615.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -203,7 +201,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "240615.md"
               }
             }
           },
@@ -223,7 +221,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Ubuntu.md"
+                "file": "240615.md"
               }
             }
           }
@@ -244,15 +242,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bc3915235db4b338",
+  "active": "f42e9cbda5049246",
   "lastOpenFiles": [
+    "Centos.md",
+    "~Shoka使用说明.md",
+    "Ubuntu.md",
     "WHEN YOU HAVE A NEW PC.md",
     "供货能力申请单功能.md",
-    "~Shoka使用说明.md",
     "Mac使用记录.md",
     "240615.md",
     "使用教程.md",
-    "Centos.md",
     "苏州一日游 1.md",
     "苏州一日游.md",
     "HY2.0.md",
@@ -262,7 +261,6 @@
     "AA.md",
     "240330.md",
     "GitHub Page.md",
-    "Ubuntu.md",
     "security.md",
     "GC回收算法.md",
     "Mac 数据库忘记密码.md",

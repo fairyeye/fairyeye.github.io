@@ -96,3 +96,68 @@ start_all_frpc.sh
 
 wait
 ```
+
+
+
+## Nginx
+
+#### 安装
+
+```sh
+sudo yum install nginx
+
+# 如果报错：没有可用软件包 nginx
+
+
+sudo vi /etc/yum.repos.d/nginx.repo
+
+
+[nginx-stable]
+name=nginx stable repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
+
+```
+
+#### 使用 
+
+```
+curl localhost可以
+curl ip 不可以
+
+修改配置文件
+
+/etc/nginx/config.d/default.conf
+```
+
+
+## GitHub Page
+
+#### NGINX配置
+
+```conf
+    listen       80;
+    server_name  10.213.42.79;
+
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/fairyeye.github.io;
+        index  index.html index.htm;
+    }
+```
+
+
+分之：`master`
+位置：`/usr/share/nginx/fairyeye.github.io`
+
+
+
+- [/] 未实现部分
+
+- [ ] 自动拉代码
+- [ ] 本地每天部署一遍
+- [ ] 更新图片地址
