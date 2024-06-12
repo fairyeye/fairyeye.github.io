@@ -25,19 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "供货能力申请单功能.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b720c057766cf0f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "~Shoka使用说明.md",
+                "file": "Ubuntu.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "jreb",
+                "query": "nginx",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -146,7 +134,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -166,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "使用教程.md",
+                "file": "Ubuntu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "使用教程.md",
+                "file": "Ubuntu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "使用教程.md"
+                "file": "Ubuntu.md"
               }
             }
           },
@@ -234,7 +223,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "使用教程.md"
+                "file": "Ubuntu.md"
               }
             }
           }
@@ -255,21 +244,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ab90bb1e6649629d",
+  "active": "bc3915235db4b338",
   "lastOpenFiles": [
-    "Centos.md",
-    "使用教程.md",
-    "240615.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "供货能力申请单功能.md",
+    "~Shoka使用说明.md",
     "Mac使用记录.md",
+    "240615.md",
+    "使用教程.md",
+    "Centos.md",
     "苏州一日游 1.md",
     "苏州一日游.md",
     "HY2.0.md",
-    "供货能力申请单功能.md",
     "GIT.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "240511.md",
     "Dart.md",
-    "~Shoka使用说明.md",
     "AA.md",
     "240330.md",
     "GitHub Page.md",

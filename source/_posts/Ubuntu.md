@@ -48,6 +48,12 @@ https://www.cnblogs.com/beile/p/12875395.html
 ```
 sudo su
 apt-get install nginx
+
+
+
+如果是Centos
+
+
 ```
 
 浏览器地址栏输入 `IP`看到如下页面表示已经安装好了Nginx，如果有域名，输入域名也是同样的效果（前提是已经给域名添加了解析）
