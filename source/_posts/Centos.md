@@ -102,6 +102,8 @@ wait
 
 
 
+
+
 ## Nginx
 
 #### 安装
@@ -164,3 +166,20 @@ curl ip 不可以
 - [ ] 自动拉代码
 - [ ] 本地每天部署一遍
 - [ ] 更新图片地址
+
+
+## Windows开机启动虚拟机
+
+
+在虚拟机安装目录新建`start_vm.bat`，
+
+ps：如果vmx文件包含中文，保存编码选择GB开头的格式
+
+```bat
+@echo off
+
+.\vmrun.exe start  "D:\Centos\CentOS 7 64位.vmx"
+
+exit
+
+```
