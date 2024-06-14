@@ -28,3 +28,8 @@ import 'package:pure_live/modules/search/search_controller.dart' as CustomContro
 - 运行 `flutter packages get` 命令，让 Flutter 获取并安装依赖
 
 [# 解决Flutter运行一直卡在 Running Gradle task ‘assembleDebug‘.](https://blog.csdn.net/zhangyiminsunshine/article/details/111137877?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-5-111137877-blog-128835228.235%5Ev38%5Epc_relevant_sort_base2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-5-111137877-blog-128835228.235%5Ev38%5Epc_relevant_sort_base2&utm_relevant_index=6)
+
+
+
+
+- [*] 在更新 `_progress` 时，如果每次更新都会进入一个新的 `setState`，但最终更新的值几乎相同，那么确实会导致仅进行一次更新。
