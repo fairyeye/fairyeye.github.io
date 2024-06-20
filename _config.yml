@@ -96,11 +96,26 @@ ignore:
 theme: shoka
 
 # Search
+# algolia:
+#   appId: "2Y4K75XO19"
+#   # 使用only-search apikey
+#   apiKey: "310fcf609e432a918fbf38ec8064da7d"
+#   adminApiKey: "31703aba407c33f84388c0058162e572"
+#   chunkSize: 5000
+#   indexName: "fairyeye"
+#   fields:
+#     - title #必须配置
+#     - path #必须配置
+#     - categories #推荐配置
+#     - content:strip:truncate,0,2000
+#     - gallery
+#     - photos
+#     - tags
 algolia:
-  appId: "2Y4K75XO19"
+  appId: "BVLI9SUL61"
   # 使用only-search apikey
-  apiKey: "310fcf609e432a918fbf38ec8064da7d"
-  adminApiKey: "31703aba407c33f84388c0058162e572"
+  apiKey: "85b559c0ef54994d12adb0a461ba7e7e"
+  adminApiKey: "5010940470eb2b33673c27927ed9ac8d"
   chunkSize: 5000
   indexName: "fairyeye"
   fields:
