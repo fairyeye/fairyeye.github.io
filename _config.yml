@@ -111,6 +111,7 @@ theme: shoka
 #     - gallery
 #     - photos
 #     - tags
+# 更新配置 然后hexo algolia  可以更新索引
 algolia:
   appId: "BVLI9SUL61"
   # 使用only-search apikey
