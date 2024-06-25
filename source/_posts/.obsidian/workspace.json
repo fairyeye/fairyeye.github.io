@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "开发日志.md",
+                "file": "20.md",
                 "mode": "source",
                 "source": false
               }
@@ -234,8 +234,9 @@
   "active": "5c8608b0fb9b02ce",
   "lastOpenFiles": [
     "240720.md",
-    "供货能力申请单.md",
     "20.md",
+    "开发日志.md",
+    "供货能力申请单.md",
     "16.md",
     "15.md",
     "14.md",
@@ -244,7 +245,6 @@
     "Centos.md",
     "240615.md",
     "使用教程.md",
-    "开发日志.md",
     "~Shoka使用说明.md",
     "GIT.md",
     "Dart.md",
