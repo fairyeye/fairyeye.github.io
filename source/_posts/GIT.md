@@ -229,6 +229,39 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 
 
 
+#### [Etcher](https://github.com/balena-io/etcher)
+
+
+简单易用的 USB/SD 启动盘制作工具。该项目可以将操作系统镜像烧录进 SD 卡或 USB 设备，可用于制作可启动、便携式的操作系统。它拥有友好的操作界面，仅需 3 步就能完成 USB 启动盘制作，适用于 Linux、macOS 和 Windows 10 及更高版本。
+
+![etcher](https://img.hellogithub.com/i/fWOuYpyAv4TVn0j_1715044602.png)
+
+
+#### MoneyPrinterTurbo：
+一键生成短视频的 AI 工具。该项目是基于大模型服务的 AI 视频生成工具，只需要提供一个主题或关键字，就可以自动生成高清的短视频。它拥有简单易用的 Web 界面，支持批量生成、设置视频时长和横/竖屏尺寸等功能。来自 @jolahua 的分享
+
+![图片](https://mmbiz.qpic.cn/mmbiz_jpg/xBgIbW1vdNN1km98o6YnFZUWnr5GgkXLouuzgRL6B31s7Cml6iammZaXRia7tmadAyicQ2N30F7IbB2kmDgbXwRgg/640?wx_fmt=jpeg&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/harry0703/MoneyPrinterTurbo
+
+
+#### Omost
+：极简提示词的文生图工具。该项目基于 LLM 的编程能力帮用户自动完善文生图的提示词，可以根据用户输入的简短提示词生成高质量的图片，还支持图片局部修改等功能，比如将图片中的龙变成恐龙，极大地降低了编写文生图的门槛，无需复杂的提示词即可生成满意的图片。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN1km98o6YnFZUWnr5GgkXLGCiaHdCxvkicicwrooTMpYbYIu9s8q5hzqWRcOz9kicuHXibHpkeiaYEG2PA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/lllyasviel/Omost
+
+
+
+#### Scrapegraph-ai
+：基于 AI 的 Python 爬虫。这是一个由 AI 驱动的 Python 爬虫库，它借助 LLM 的能力，可以根据提示词自动抓取目标网站的数据。
+
+`smart_scraper_graph = SmartScraperGraph(       prompt="List me all the projects with their descriptions",       source="目标网站",       config=graph_config   )      result = smart_scraper_graph.run()   print(result)   `
+
+> 地址：github.com/VinciGit00/Scrapegraph-ai
+
+
 ### Git技巧
 
 
