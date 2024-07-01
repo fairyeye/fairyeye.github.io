@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "供货能力申请单.md",
+                "file": "20.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "covert",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -121,7 +121,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -232,12 +233,12 @@
   },
   "active": "f42e9cbda5049246",
   "lastOpenFiles": [
+    "20.md",
     "供货能力申请单.md",
     "240720.md",
-    "GIT.md",
     "供应商.md",
+    "GIT.md",
     "240615.md",
-    "20.md",
     "开发日志.md",
     "16.md",
     "15.md",
