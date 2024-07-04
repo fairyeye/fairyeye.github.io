@@ -79,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -153,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240720.md",
+                "file": "供货能力申请单.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +179,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240720.md",
+                "file": "供货能力申请单.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -201,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240720.md"
+                "file": "供货能力申请单.md"
               }
             }
           },
@@ -221,7 +222,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240720.md"
+                "file": "供货能力申请单.md"
               }
             }
           }
@@ -242,10 +243,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f42e9cbda5049246",
+  "active": "5c8608b0fb9b02ce",
   "lastOpenFiles": [
-    "Arch Linux.md",
     "240720.md",
+    "Arch Linux.md",
     "供货能力申请单.md",
     "20.md",
     "供应商.md",
