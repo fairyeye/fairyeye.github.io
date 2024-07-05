@@ -17,7 +17,7 @@ date: 2024-07-03 21:04:21
 archinstall
 # 设置一下即可
 
-# 必选：设置硬盘、root密码、普通用户   网络！！  选第二个
+# 必选：设置硬盘、root密码   网络！！  选第二个
 # 可选：时区
 ```
 
@@ -32,6 +32,10 @@ archinstall
 ### 1. 检查并安装 OpenSSH
 
 确保 OpenSSH 已安装：
+
+安装 `sshd`
+
+`sudo pacman -S openssh`
 
 ### 2. 启动并启用 SSH 服务
 
