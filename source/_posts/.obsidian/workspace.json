@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#适配器",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -145,12 +145,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -243,7 +243,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 254.5
+    "width": 254.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -255,7 +256,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "195b6116ec82a7f8",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
     "NO Name.md",
     "240720.md",
