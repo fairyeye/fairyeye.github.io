@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "git config",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -149,8 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6626c0948e010413",
@@ -258,13 +257,14 @@
   },
   "active": "f42e9cbda5049246",
   "lastOpenFiles": [
-    "供货能力申请单.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "GIT.md",
     "240720.md",
+    "供货能力申请单.md",
     "NO Name.md",
     "Arch Linux.md",
     "20.md",
     "供应商.md",
-    "GIT.md",
     "240615.md",
     "开发日志.md",
     "16.md",
@@ -280,7 +280,6 @@
     "苏州一日游.md",
     "数组与链表.md",
     "Ubuntu.md",
-    "WHEN YOU HAVE A NEW PC.md",
     "240511.md",
     "AA.md",
     "240330.md",
