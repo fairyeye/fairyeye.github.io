@@ -91,8 +91,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -167,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "供货能力申请单.md",
+                "file": "240720.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "供货能力申请单.md",
+                "file": "240720.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "供货能力申请单.md"
+                "file": "240720.md"
               }
             }
           },
@@ -235,7 +234,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "供货能力申请单.md"
+                "file": "240720.md"
               }
             }
           }
@@ -256,12 +255,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5c8608b0fb9b02ce",
+  "active": "f42e9cbda5049246",
   "lastOpenFiles": [
+    "供货能力申请单.md",
     "240720.md",
     "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
-    "供货能力申请单.md",
     "NO Name.md",
     "Arch Linux.md",
     "20.md",
