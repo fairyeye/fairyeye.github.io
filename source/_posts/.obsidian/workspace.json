@@ -44,6 +44,18 @@
             }
           },
           {
+            "id": "7a7624a0858bd134",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "240831.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "d6fc1268da35ac7e",
             "type": "leaf",
             "state": {
@@ -92,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -150,8 +162,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6626c0948e010413",
@@ -167,7 +178,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "供货能力申请单.md",
+                "file": "240831.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "供货能力申请单.md",
+                "file": "240831.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +226,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "供货能力申请单.md"
+                "file": "240831.md"
               }
             }
           },
@@ -235,7 +246,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "供货能力申请单.md"
+                "file": "240831.md"
               }
             }
           }
@@ -256,10 +267,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5c8608b0fb9b02ce",
+  "active": "7a7624a0858bd134",
   "lastOpenFiles": [
-    "240720.md",
     "供货能力申请单.md",
+    "240831.md",
+    "240720.md",
     "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "NO Name.md",
@@ -283,7 +295,6 @@
     "Ubuntu.md",
     "240511.md",
     "AA.md",
-    "240330.md",
     "迭代.canvas",
     "笔记.canvas",
     "Pasted image 20240116101021.png",
