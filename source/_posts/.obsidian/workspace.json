@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f42e9cbda5049246",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "240720.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cfc60c1099354899",
             "type": "leaf",
             "state": {
@@ -49,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "240831.md",
+                "file": "240824.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -178,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240831.md",
+                "file": "240824.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240831.md",
+                "file": "240824.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240831.md"
+                "file": "240824.md"
               }
             }
           },
@@ -246,7 +234,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240831.md"
+                "file": "240824.md"
               }
             }
           }
@@ -269,9 +257,9 @@
   },
   "active": "7a7624a0858bd134",
   "lastOpenFiles": [
-    "供货能力申请单.md",
-    "240831.md",
     "240720.md",
+    "240824.md",
+    "供货能力申请单.md",
     "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "NO Name.md",
