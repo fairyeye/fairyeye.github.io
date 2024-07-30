@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240824.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240824.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240824.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -234,7 +234,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240824.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -255,10 +255,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7a7624a0858bd134",
+  "active": "ab90bb1e6649629d",
   "lastOpenFiles": [
-    "240720.md",
     "240824.md",
+    "240720.md",
     "供货能力申请单.md",
     "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
