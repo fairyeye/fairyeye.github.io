@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git config",
+                "query": "jrebel",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -256,10 +256,11 @@
   },
   "active": "cfc60c1099354899",
   "lastOpenFiles": [
+    "Mac使用记录.md",
+    "240824.md",
     "NO Name.md",
     "供货能力申请单.md",
     "GIT.md",
-    "240824.md",
     "240720.md",
     "WHEN YOU HAVE A NEW PC.md",
     "Arch Linux.md",
@@ -271,7 +272,6 @@
     "15.md",
     "14.md",
     "13.md",
-    "Mac使用记录.md",
     "Centos.md",
     "使用教程.md",
     "~Shoka使用说明.md",
