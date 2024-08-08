@@ -192,7 +192,7 @@
               "state": {
                 "file": "240824.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -238,11 +238,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 254.5
+    "width": 254.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -254,7 +255,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cfc60c1099354899",
+  "active": "69844bd2465c214f",
   "lastOpenFiles": [
     "240330.md",
     "240824.md",
