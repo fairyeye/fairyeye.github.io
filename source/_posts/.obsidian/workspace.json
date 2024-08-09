@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "240330.md",
+                "file": "240824.md",
                 "mode": "source",
                 "source": false
               }
@@ -145,12 +145,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240330.md",
+                "file": "240824.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240330.md",
+                "file": "240824.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -214,7 +214,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240330.md"
+                "file": "240824.md"
               }
             }
           },
@@ -234,7 +234,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240330.md"
+                "file": "240824.md"
               }
             }
           }
@@ -258,8 +258,8 @@
   },
   "active": "cfc60c1099354899",
   "lastOpenFiles": [
-    "240824.md",
     "240330.md",
+    "240824.md",
     "20.md",
     "240720.md",
     "Mac使用记录.md",
