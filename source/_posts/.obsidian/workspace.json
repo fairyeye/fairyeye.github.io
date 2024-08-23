@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20.md",
+                "file": "240824.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20.md",
+                "file": "240824.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20.md",
+                "file": "240824.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -153,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20.md"
+                "file": "240824.md"
               }
             }
           },
@@ -173,7 +174,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "20.md"
+                "file": "240824.md"
               }
             }
           }
@@ -197,9 +198,9 @@
   },
   "active": "cfc60c1099354899",
   "lastOpenFiles": [
+    "20.md",
     "13.md",
     "240824.md",
-    "20.md",
     "Centos.md",
     "GIT.md",
     "Arch Linux.md",
