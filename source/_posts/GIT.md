@@ -435,6 +435,26 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 > 地址：github.com/yorukot/superfile
 
 
+2、chsrc：全平台通用的换源工具。该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。来自 @ccmywish 的分享
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDHZoVqIM0vSQj3ocHOR3xczuRWRDNyIJoHibBhadLaJl1nEnzFTb2tCyA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/RubyMetric/chsrc
+
+
+6、lnav：强大的终端日志文件查看工具。这是一款用于查看和分析日志文件的轻量级工具。它无需配置、开箱即用，可自动识别日志格式并解压文件，支持同时处理多个文件和目录、实时更新、文本高亮、正则与 SQL 过滤日志等功能，特别适合在服务器和开发环境中使用。来自 @DeShuiYu 的分享
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH1xLFIZT7lCVaROvmQdHYlHbZFv0YlFCogjSPv7g3SNib0xmWHBelgJQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/tstack/lnav
+
+
+7、shadPS4：开源的 PS4 模拟器。这是用 C++ 编写的 PlayStation 4（PS4）模拟器，支持在 Windows、Linux 和 macOS 系统上玩 PS4 游戏。虽然项目仍处于早期开发阶段，能运行的游戏有限，但最新版已经能够成功运行《血源诅咒》和《黑暗之魂II》等游戏。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH182TnOW81kW8UAfmVEShP3jgU8sAxFnbh2yVowy3PEhfuqD9SNbkqw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/shadps4-emu/shadPS4
+
 
 ##### 登录页面HTML
 
