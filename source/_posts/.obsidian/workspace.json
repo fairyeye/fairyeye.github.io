@@ -129,14 +129,6 @@
             }
           },
           {
-            "id": "aed910db0388682a",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
             "id": "69844bd2465c214f",
             "type": "leaf",
             "state": {
@@ -189,8 +181,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -206,8 +197,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cfc60c1099354899",
+  "active": "6e77739602c9b2cf",
   "lastOpenFiles": [
+    "240927.md",
+    "240824.md",
     "GIT.md",
     "GitHub Page.md",
     "Go笔记.md",
@@ -231,8 +224,6 @@
     "Centos.md",
     "FileUtils.md",
     "Delete & Truncate.md",
-    "240927.md",
-    "240824.md",
     "20.md",
     "13.md",
     "迭代.canvas",
