@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "43468",
+                "query": "path:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -97,7 +97,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -181,7 +182,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -197,7 +199,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6e77739602c9b2cf",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
     "240927.md",
     "240824.md",
