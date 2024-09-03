@@ -271,6 +271,16 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 
 > 项目详情→hellogithub.com/repository/572e31f5fc7541efb19c16d331796edf
 
+#### 1.5 轻量级的 AI 证件照制作工具：HivisionIDPhotos
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOAQ2JbRhibxP6B2lFu0NIwksC40TA1kdW1q8bM1koyGYOQkI2NoooWDLFcp0vsUG18Vc5pqErLoTQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**主语言：Python**，**Star：1.9k**，**周增长：1.5k**
+
+这是一款简单易用的 AI 证件照制作工具，能够生成标准证件照和六寸排版照。它提供了简洁的 Web 界面和 API 服务，即使在没有 GPU 的电脑上也能够运行，支持抠图、尺寸调整和自定义底色等功能。
+
+> GitHub 地址→github.com/Zeyi-Lin/HivisionIDPhotos
+
 
 ### Git技巧
 
