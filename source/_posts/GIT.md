@@ -227,7 +227,17 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 
 ![](https://s3.bmp.ovh/imgs/2023/10/12/87fe9705e1078ecc.png)
 
+#### Deskreen：将任何屏幕变成你的扩展显示器
 
+我们经常需要在多个设备之间切换工作，但有时候，如果能将手机或平板变成电脑的第二屏幕，那将大大提高工作效率。
+
+Deskreen，一个开源项目，正是为此而生！这是一个简单而强大的工具，**它允许你将任何带有网络浏览器的设备变成电脑的第二屏幕。**
+
+无论是为了扩展你的工作空间，还是为了在大屏幕上展示你的演示文稿，Deskreen 都能轻松实现。
+
+```
+开源地址：https://github.com/pavlobu/deskreen
+```
 
 #### [Etcher](https://github.com/balena-io/etcher)
 
