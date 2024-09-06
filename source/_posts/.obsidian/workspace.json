@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:",
+                "query": "qingl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -97,8 +97,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -201,8 +200,9 @@
   },
   "active": "cfc60c1099354899",
   "lastOpenFiles": [
-    "GIT.md",
+    "Ubuntu.md",
     "240927.md",
+    "GIT.md",
     "240824.md",
     "GitHub Page.md",
     "Go笔记.md",
@@ -213,7 +213,6 @@
     "Mac 数据库忘记密码.md",
     "Nacos.md",
     "WHEN YOU HAVE A NEW PC.md",
-    "Ubuntu.md",
     "SRM.md",
     "Spring Boot Admin.md",
     "security.md",
