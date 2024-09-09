@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "7fb643d729b66efe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "cbef8321dbeda21c",
             "type": "leaf",
             "state": {
@@ -55,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -129,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240927.md",
+                "file": "未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240927.md",
+                "file": "未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -169,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240927.md"
+                "file": "未命名.md"
               }
             }
           },
@@ -189,7 +202,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240927.md"
+                "file": "未命名.md"
               }
             }
           }
@@ -210,10 +223,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cfc60c1099354899",
+  "active": "7fb643d729b66efe",
   "lastOpenFiles": [
-    "Ubuntu.md",
     "240927.md",
+    "未命名.md",
+    "Ubuntu.md",
     "GIT.md",
     "240824.md",
     "GitHub Page.md",
@@ -238,7 +252,6 @@
     "FileUtils.md",
     "Delete & Truncate.md",
     "20.md",
-    "13.md",
     "迭代.canvas",
     "笔记.canvas",
     "Pasted image 20231025105221.png",
