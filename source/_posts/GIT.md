@@ -271,6 +271,16 @@ Deskreen，一个开源项目，正是为此而生！这是一个简单而强大
 
 > 地址：github.com/VinciGit00/Scrapegraph-ai
 
+#### 2.2 全平台通用的换源工具：chsrc
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNPOhVtJmAeAhSWNbpRZiaYYr4hlmr7EP4u9SwNwoiajgOBCupEI188sMH4lg7D0hDVVHguZrReHfHfQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**主语言：C**
+
+该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。
+
+> 项目详情→hellogithub.com/repository/7666ba91e01e4a59be5809b02d9e8ff6
+
 #### 3.1 免费的可视化 Web 页面构建平台：GrapesJS
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNM0SdfZZBicTn5DWTZgHx0ae1PnTfOx0QvPticBlnJAfI1ZOr1GBiaJqUPhoO9XqtZ5KXWQ0wEXSBZpg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)

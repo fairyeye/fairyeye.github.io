@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名.md",
+                "file": "240927.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +158,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名.md",
+                "file": "240927.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -182,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名.md"
+                "file": "240927.md"
               }
             }
           },
@@ -202,7 +201,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "未命名.md"
+                "file": "240927.md"
               }
             }
           }
@@ -223,12 +222,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7fb643d729b66efe",
+  "active": "cfc60c1099354899",
   "lastOpenFiles": [
-    "240927.md",
-    "未命名.md",
-    "Ubuntu.md",
     "GIT.md",
+    "未命名.md",
+    "240927.md",
+    "Ubuntu.md",
     "240824.md",
     "GitHub Page.md",
     "Go笔记.md",
