@@ -125,6 +125,13 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### omakub：精美的 Ubuntu 配置方案。
+
+该项目可以将全新的 Ubuntu 24.04 系统配置成美观、功能齐全、适合 Web 开发的系统。只需简单的一条命令，即可拥有配置好的 GNOME 桌面环境、窗口管理工具、Alacritty 终端、Neovim 和 VSCode 编辑器等应用，还会将 Chrome 设置成默认浏览器。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNHACLhrT0cZJ0t608OhI2GWqg5Bc66ZrtqTLuGkxpEYw2bs1ib2YcGFevbjsxMvWOCAribDibZXWniaw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/basecamp/omakub
 
 #### [Oshi](https://github.com/oshi/oshi)
 
