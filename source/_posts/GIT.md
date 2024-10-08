@@ -474,6 +474,8 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 2、chsrc：全平台通用的换源工具。该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。来自 @ccmywish 的分享
 
+#chsrc
+
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDHZoVqIM0vSQj3ocHOR3xczuRWRDNyIJoHibBhadLaJl1nEnzFTb2tCyA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 地址：github.com/RubyMetric/chsrc

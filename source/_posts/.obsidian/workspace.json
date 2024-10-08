@@ -42,8 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8a6b942c255e771d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "N N.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -72,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git config",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -117,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "241102.md",
+                "file": "N N.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "241102.md",
+                "file": "N N.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -157,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "241102.md"
+                "file": "N N.md"
               }
             }
           },
@@ -177,7 +190,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "241102.md"
+                "file": "N N.md"
               }
             }
           }
@@ -198,18 +211,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cfc60c1099354899",
+  "active": "8a6b942c255e771d",
   "lastOpenFiles": [
-    "240927.md",
     "241102.md",
-    "WHEN YOU HAVE A NEW PC.md",
-    "GIT.md",
-    "未命名.md",
+    "N N.md",
     "Centos.md",
+    "14.md",
+    "GIT.md",
+    "240927.md",
+    "WHEN YOU HAVE A NEW PC.md",
+    "未命名.md",
     "20.md",
     "16.md",
     "15.md",
-    "14.md",
     "13.md",
     "Ubuntu.md",
     "240824.md",
@@ -226,7 +240,6 @@
     "security.md",
     "Redis.md",
     "Pasted image 20240116101021.png",
-    "NO Name.md",
     "迭代.canvas",
     "笔记.canvas",
     "Pasted image 20231025105221.png",
