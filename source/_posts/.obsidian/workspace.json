@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "240927.md",
+                "file": "241102.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "240927.md",
+                "file": "241102.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "240927.md",
+                "file": "241102.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "240927.md"
+                "file": "241102.md"
               }
             }
           },
@@ -177,7 +177,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "240927.md"
+                "file": "241102.md"
               }
             }
           }
@@ -200,8 +200,9 @@
   },
   "active": "cfc60c1099354899",
   "lastOpenFiles": [
-    "WHEN YOU HAVE A NEW PC.md",
     "240927.md",
+    "241102.md",
+    "WHEN YOU HAVE A NEW PC.md",
     "GIT.md",
     "未命名.md",
     "Centos.md",
@@ -226,7 +227,6 @@
     "Redis.md",
     "Pasted image 20240116101021.png",
     "NO Name.md",
-    "AA.md",
     "迭代.canvas",
     "笔记.canvas",
     "Pasted image 20231025105221.png",
