@@ -125,6 +125,19 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### 索尼 PS1 模拟器“开源”项目
+
+Duckstation是由stenzek开发的索尼PS 模拟器，适用于 x86-64/AArch32/AArch64/RV64。
+
+这开源项目**专注于可玩性，速度，目标是尽可能让相对低端的设备也能玩 PS 游戏。默认设置即可运行所有支持的游戏，仅有部分兼容性问题。**
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruw20geLdOwGhgyiaOuZa8ibWic1akIEo730UbTvrwbFk6ciaX2DOjYAF8WBgoibj50s7V1DyAwO8r27Zfw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+```
+“开源”地址：https://github.com/stenzek/duckstation
+```
+
+
 #### omakub：精美的 Ubuntu 配置方案。
 
 该项目可以将全新的 Ubuntu 24.04 系统配置成美观、功能齐全、适合 Web 开发的系统。只需简单的一条命令，即可拥有配置好的 GNOME 桌面环境、窗口管理工具、Alacritty 终端、Neovim 和 VSCode 编辑器等应用，还会将 Chrome 设置成默认浏览器。
