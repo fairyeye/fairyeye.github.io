@@ -125,6 +125,17 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### 一个鼠标操作多个电脑
+
+Deskflow 帮助用户**在多台计算机（包括 Windows、macOS 和 Linux）之间共享键盘和鼠标**，就像软件版的 KVM（但不包含视频功能）。
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruxEzPa6F6qa1cut1bqhYJhHt83ekve7dmia3gKf5o4uBmB4SopibY3E3bhsHjBFbyh3HOP89dlLvBmA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+它支持 TLS 加密、Wayland 显示协议，**并且具备剪贴板共享功能**。作为社区驱动项目，Deskflow 鼓励用户参与开发和改进，同时与类似的开源项目合作，如 Synergy 和 Input Leap。用户可以通过安装包或源码编译来使用该软件。
+
+`开源地址：https://github.com/deskflow/deskflow`
+
+
 #### beszel：轻量级高颜值的 Docker 监控平台。
 
 这是一个轻量级的服务器监控平台，包括 Docker 统计、历史数据和警报功能。它拥有友好的 Web 界面，配置简单、开箱即用，支持自动备份、多用户、OAuth 认证和 API 访问等功能。

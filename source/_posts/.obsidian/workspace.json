@@ -49,13 +49,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13.md",
+                "file": "GIT.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -129,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "241102.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "241102.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -169,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "241102.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -189,7 +190,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "241102.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -210,11 +211,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7fb643d729b66efe",
+  "active": "e6f516d1a6b98a96",
   "lastOpenFiles": [
     "13.md",
-    "GIT.md",
     "241102.md",
+    "GIT.md",
     "240824.md",
     "240927.md",
     "Arch Linux.md",
