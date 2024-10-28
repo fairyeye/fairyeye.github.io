@@ -125,6 +125,31 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### beszel：轻量级高颜值的 Docker 监控平台。
+
+这是一个轻量级的服务器监控平台，包括 Docker 统计、历史数据和警报功能。它拥有友好的 Web 界面，配置简单、开箱即用，支持自动备份、多用户、OAuth 认证和 API 访问等功能。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOh3AWZPLqMIsPX4YffnmwYV9dDjYm6WqUcYibM871CUYI68LMkXoulEEic338TkicJff30ibJQ7aL0kg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/henrygd/beszel
+
+####  mame：开源的街机模拟器。
+
+这是一款支持海量街机游戏的模拟器。它通过模拟多种硬件平台，实现了在电脑上运行各种复古软件的功能。不仅支持街机，还有老式电脑和游戏机。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOh3AWZPLqMIsPX4YffnmwYtkutJpJlCCvRfNLkleaadxwjQAkL97nicmVqVgIM4vYtcALQCfUk5FA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/mamedev/mame
+
+
+#### shadPS4：开源的 PS4 模拟器。
+
+这是用 C++ 编写的 PlayStation 4（PS4）模拟器，支持在 Windows、Linux 和 macOS 系统上玩 PS4 游戏。虽然项目仍处于早期开发阶段，能运行的游戏有限，但最新版已经能够成功运行《血源诅咒》和《黑暗之魂II》等游戏。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH182TnOW81kW8UAfmVEShP3jgU8sAxFnbh2yVowy3PEhfuqD9SNbkqw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/shadps4-emu/shadPS4
+
 #### 索尼 PS1 模拟器“开源”项目
 
 Duckstation是由stenzek开发的索尼PS 模拟器，适用于 x86-64/AArch32/AArch64/RV64。
@@ -211,7 +236,7 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 > HG 评价地址→https://hellogithub.com/repository/352150f3034742cbbf67d301a86973ca
 
 
-#### 1.2 AI 生图：ControlNet
+#### AI 生图：ControlNet
 
 **主语言：Python**
 
@@ -241,9 +266,9 @@ Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的
 [1Panel Log]: ================================================================
 ```
 
-####  [Nezha](https://github.com/naiba/nezha)
+####  [Nezha](https://github.com/naiba/nezha) 国产的轻量级服务器监控工具。
 
-国产的轻量级服务器监控工具。这是一款名为“哪吒”的服务器监控面板，它安装简单、开箱即用，支持监控多个服务器的系统状态、SSL 证书状态、报警通知、流量监控、设置定时任务等功能，适用于 Linux、Windows、macOS、OpenWRT 等主流系统。
+这是一款名为“哪吒”的服务器监控面板，它安装简单、开箱即用，支持监控多个服务器的系统状态、SSL 证书状态、报警通知、流量监控、设置定时任务等功能，适用于 Linux、Windows、macOS、OpenWRT 等主流系统。
 
 ![](https://s3.bmp.ovh/imgs/2023/10/12/87fe9705e1078ecc.png)
 
@@ -259,39 +284,40 @@ Deskreen，一个开源项目，正是为此而生！这是一个简单而强大
 开源地址：https://github.com/pavlobu/deskreen
 ```
 
-#### [Etcher](https://github.com/balena-io/etcher)
+#### [Etcher](https://github.com/balena-io/etcher) 简单易用的 USB/SD 启动盘制作工具。
 
-
-简单易用的 USB/SD 启动盘制作工具。该项目可以将操作系统镜像烧录进 SD 卡或 USB 设备，可用于制作可启动、便携式的操作系统。它拥有友好的操作界面，仅需 3 步就能完成 USB 启动盘制作，适用于 Linux、macOS 和 Windows 10 及更高版本。
+该项目可以将操作系统镜像烧录进 SD 卡或 USB 设备，可用于制作可启动、便携式的操作系统。它拥有友好的操作界面，仅需 3 步就能完成 USB 启动盘制作，适用于 Linux、macOS 和 Windows 10 及更高版本。
 
 ![etcher](https://img.hellogithub.com/i/fWOuYpyAv4TVn0j_1715044602.png)
 
 
-#### MoneyPrinterTurbo：
-一键生成短视频的 AI 工具。该项目是基于大模型服务的 AI 视频生成工具，只需要提供一个主题或关键字，就可以自动生成高清的短视频。它拥有简单易用的 Web 界面，支持批量生成、设置视频时长和横/竖屏尺寸等功能。来自 @jolahua 的分享
+#### MoneyPrinterTurbo：一键生成短视频的 AI 工具。
+
+该项目是基于大模型服务的 AI 视频生成工具，只需要提供一个主题或关键字，就可以自动生成高清的短视频。它拥有简单易用的 Web 界面，支持批量生成、设置视频时长和横/竖屏尺寸等功能。来自 @jolahua 的分享
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_jpg/xBgIbW1vdNN1km98o6YnFZUWnr5GgkXLouuzgRL6B31s7Cml6iammZaXRia7tmadAyicQ2N30F7IbB2kmDgbXwRgg/640?wx_fmt=jpeg&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 地址：github.com/harry0703/MoneyPrinterTurbo
 
 
-#### Omost
-：极简提示词的文生图工具。该项目基于 LLM 的编程能力帮用户自动完善文生图的提示词，可以根据用户输入的简短提示词生成高质量的图片，还支持图片局部修改等功能，比如将图片中的龙变成恐龙，极大地降低了编写文生图的门槛，无需复杂的提示词即可生成满意的图片。
+#### Omost ：极简提示词的文生图工具。
+
+该项目基于 LLM 的编程能力帮用户自动完善文生图的提示词，可以根据用户输入的简短提示词生成高质量的图片，还支持图片局部修改等功能，比如将图片中的龙变成恐龙，极大地降低了编写文生图的门槛，无需复杂的提示词即可生成满意的图片。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN1km98o6YnFZUWnr5GgkXLGCiaHdCxvkicicwrooTMpYbYIu9s8q5hzqWRcOz9kicuHXibHpkeiaYEG2PA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 地址：github.com/lllyasviel/Omost
 
 
+#### Scrapegraph-ai ：基于 AI 的 Python 爬虫。
 
-#### Scrapegraph-ai
-：基于 AI 的 Python 爬虫。这是一个由 AI 驱动的 Python 爬虫库，它借助 LLM 的能力，可以根据提示词自动抓取目标网站的数据。
+这是一个由 AI 驱动的 Python 爬虫库，它借助 LLM 的能力，可以根据提示词自动抓取目标网站的数据。
 
 `smart_scraper_graph = SmartScraperGraph(       prompt="List me all the projects with their descriptions",       source="目标网站",       config=graph_config   )      result = smart_scraper_graph.run()   print(result)   `
 
 > 地址：github.com/VinciGit00/Scrapegraph-ai
 
-#### 2.2 全平台通用的换源工具：chsrc
+#### 全平台通用的换源工具：chsrc
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNPOhVtJmAeAhSWNbpRZiaYYr4hlmr7EP4u9SwNwoiajgOBCupEI188sMH4lg7D0hDVVHguZrReHfHfQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -301,7 +327,7 @@ Deskreen，一个开源项目，正是为此而生！这是一个简单而强大
 
 > 项目详情→hellogithub.com/repository/7666ba91e01e4a59be5809b02d9e8ff6
 
-#### 3.1 免费的可视化 Web 页面构建平台：GrapesJS
+#### 免费的可视化 Web 页面构建平台：GrapesJS
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNM0SdfZZBicTn5DWTZgHx0ae1PnTfOx0QvPticBlnJAfI1ZOr1GBiaJqUPhoO9XqtZ5KXWQ0wEXSBZpg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -311,7 +337,7 @@ Deskreen，一个开源项目，正是为此而生！这是一个简单而强大
 
 > 项目详情→hellogithub.com/repository/572e31f5fc7541efb19c16d331796edf
 
-#### 1.5 轻量级的 AI 证件照制作工具：HivisionIDPhotos
+####  轻量级的 AI 证件照制作工具：HivisionIDPhotos
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOAQ2JbRhibxP6B2lFu0NIwksC40TA1kdW1q8bM1koyGYOQkI2NoooWDLFcp0vsUG18Vc5pqErLoTQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -500,12 +526,6 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 > 地址：github.com/tstack/lnav
 
-
-7、shadPS4：开源的 PS4 模拟器。这是用 C++ 编写的 PlayStation 4（PS4）模拟器，支持在 Windows、Linux 和 macOS 系统上玩 PS4 游戏。虽然项目仍处于早期开发阶段，能运行的游戏有限，但最新版已经能够成功运行《血源诅咒》和《黑暗之魂II》等游戏。
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH182TnOW81kW8UAfmVEShP3jgU8sAxFnbh2yVowy3PEhfuqD9SNbkqw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-> 地址：github.com/shadps4-emu/shadPS4
 
 
 ##### 登录页面HTML
