@@ -3,6 +3,106 @@ title: hy2.0
 hidden: true
 ---
 
+## Flask Python 服务器部署
+
+
+### 1. 准备服务器
+
+首先，你需要一个可以运行 Python 的服务器。你可以使用以下服务：
+
+- **云服务提供商**：如 AWS、阿里云、DigitalOcean 等。
+- **VPS 提供商**：如 Linode、Vultr 等。
+
+确保服务器上安装了 Python 和 pip。
+
+### 2. 连接到服务器
+
+使用 SSH 连接到你的服务器：
+
+`ssh username@your_server_ip`
+
+### 3. 安装依赖
+
+在服务器上，确保你已经安装了 Python 和 pip。你可以使用以下命令检查：
+
+`python3 --version pip3 --version`
+
+如果没有安装，可以使用以下命令安装：
+
+`sudo apt update sudo apt install python3 python3-pip`
+
+### 4. 上传代码
+
+将你的 Flask 应用代码上传到服务器。可以使用 SCP、FTP 或 Git 来上传文件。下面是使用 SCP 的示例：
+
+`scp -r /path/to/your/project username@your_server_ip:/path/to/target/directory`
+
+### 5. 创建虚拟环境
+
+在你的项目目录中创建一个虚拟环境：
+
+`cd /path/to/target/directory python3 -m venv venv source venv/bin/activate`
+
+### 6. 安装项目依赖
+
+在虚拟环境中安装你的项目依赖：
+
+`pip install -r requirements.txt`
+
+### 7. 运行 Flask 应用
+
+在开发环境中，你可以使用以下命令运行 Flask 应用：
+
+`python app.py`
+
+但是在生产环境中，最好使用 WSGI 服务器（如 Gunicorn）来运行 Flask 应用：
+
+`pip install gunicorn gunicorn -w 4 app:app --bind 0.0.0.0:5000`
+
+这里 `-w 4` 表示使用 4 个工作进程，你可以根据需要调整。
+
+### 8. 配置反向代理（可选）
+
+为了在 80 或 443 端口上提供服务，建议使用 Nginx 作为反向代理：
+
+#### 安装 Nginx
+
+`sudo apt install nginx`
+
+#### 配置 Nginx
+
+创建一个新的 Nginx 配置文件，例如 `/etc/nginx/sites-available/my_flask_app`：
+
+nginx
+
+复制代码
+
+`server {     listen 80;     server_name your_server_ip;  # 或者你的域名      location / {         proxy_pass http://127.0.0.1:5000;  # Flask 应用的地址         proxy_set_header Host $host;         proxy_set_header X-Real-IP $remote_addr;         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;         proxy_set_header X-Forwarded-Proto $scheme;     } }`
+
+创建符号链接到 `sites-enabled`：
+
+`sudo ln -s /etc/nginx/sites-available/my_flask_app /etc/nginx/sites-enabled`
+
+测试 Nginx 配置并重启服务：
+
+`sudo nginx -t sudo systemctl restart nginx`
+
+### 9. 配置防火墙（可选）
+
+确保服务器的防火墙允许 HTTP 和 HTTPS 流量：
+
+`sudo ufw allow 'Nginx Full'`
+
+### 10. 访问你的应用
+
+现在，你应该能够通过浏览器访问你的 Flask 应用，使用服务器的 IP 地址或域名。
+
+### 额外建议
+
+- **使用 HTTPS**：在生产环境中，强烈建议使用 HTTPS。可以使用 Let’s Encrypt 来免费申请 SSL 证书。
+- **监控和日志**：考虑使用工具来监控应用的性能和日志，以便及时发现问题。
+
+
 ## python
 
 好的，这里是一个详细的Python方案，包括登录页面、选择文件夹、处理PDF文件并将数据存储到SQLite数据库，以及在线更新功能。
@@ -235,7 +335,7 @@ pyupdater settings
 
 
 
-# 要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行
+## 要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行
 
 ：
 
