@@ -125,6 +125,26 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+####  免费的 API 学习平台：apihub
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNMmicoKVicSqSt2t1qze8SqazYXhvBicx42j1w1VoJxibgWuibmQQxMRxyu7qn0eH0iczKLicS0Z0iaRkFEfg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**主语言：JavaScript**，**Star：6.4k**，**周增长：1k**
+
+这是一个功能齐全的 API 学习平台，支持多种编程语言（Node.js、Python、Go 等）的 API 开发和学习。它免费提供丰富的 API 集合，涉及社交媒体集成、支付网关、物联网设备连接和机器学习等领域。你可以在该平台获取 API 开发的各类资源，包括详细教程、接口文档、代码示例和在线尝试。除了使用在线服务外，强烈推荐用户选择本地部署，以避免官网服务每两小时重置数据的限制。
+
+> GitHub 地址→github.com/hiteshchoudhary/apihub
+
+#### 轻松启动本地 HTTPS 代理的工具：ophiuchi-desktop
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNMmicoKVicSqSt2t1qze8SqazefXibHqfAB99pX4ibia4L8kia5ic1tyuxO8hBYqHFVuNH30R50h583EoS1Q/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**主语言：TypeScript**，**Star：928**
+
+这是一个本地 HTTPS 代理服务器管理工具，无需复杂配置即可轻松设置本地 HTTPS 代理。它使用 Docker 作为后端，并采用 Tauri 编写 GUI 界面，极大地简化了本地 HTTPS 代理的配置流程。不过，使用前需确保本机已安装 Docker。
+
+> GitHub 地址→github.com/apilylabs/ophiuchi-desktop
+
 #### 一个鼠标操作多个电脑
 
 Deskflow 帮助用户**在多台计算机（包括 Windows、macOS 和 Linux）之间共享键盘和鼠标**，就像软件版的 KVM（但不包含视频功能）。
