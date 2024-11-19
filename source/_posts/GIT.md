@@ -125,6 +125,16 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### Rust 驱动的 HTTP 压测工具：oha
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNP1QBiaJpyxVV9vaUIloeALZhY4OEgRNwM8fVmOYqv9OEuPDqw96DR9QiaU6VvRzmRWwnDySHUwazaQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+**主语言：Rust**
+
+这是一个用 Rust 开发的 HTTP 请求压测工具，它操作简单、带 TUI 动画界面，支持生成请求延迟、吞吐量等指标的报告，以及动态 URL 和更灵活的请求间隔（burst-delay）等功能。
+
+> 项目详情→hellogithub.com/repository/98b46ea0d7d84f4c944d0a35a9d2d140
+
 ####  免费的 API 学习平台：apihub
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNMmicoKVicSqSt2t1qze8SqazYXhvBicx42j1w1VoJxibgWuibmQQxMRxyu7qn0eH0iczKLicS0Z0iaRkFEfg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
