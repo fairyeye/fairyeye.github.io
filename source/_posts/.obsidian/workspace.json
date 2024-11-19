@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "241207.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +158,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "241207.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -182,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "241207.md"
               }
             }
           },
@@ -202,7 +201,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "241207.md"
               }
             }
           }
@@ -223,14 +222,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e6f516d1a6b98a96",
+  "active": "7fb643d729b66efe",
   "lastOpenFiles": [
+    "GIT.md",
     "241207.md",
     "MySQL.md",
     "WHEN YOU HAVE A NEW PC.md",
     "241102.md",
     "HY2.0.md",
-    "GIT.md",
     "N N.md",
     "一些文案.md",
     "13.md",
