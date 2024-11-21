@@ -133,12 +133,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6626c0948e010413",
@@ -223,7 +223,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5
+    "width": 291.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,7 +236,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7fb643d729b66efe",
+  "active": "baef27349df373d1",
   "lastOpenFiles": [
     "装修注意事项.md",
     "GIT.md",
