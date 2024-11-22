@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "c20a0f2988ae9fa3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "卡米救砖记录.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "a0aaa887efb6fab0",
             "type": "leaf",
             "state": {
@@ -79,7 +91,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -137,8 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6626c0948e010413",
@@ -154,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "241207.md",
+                "file": "卡米救砖记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "241207.md",
+                "file": "卡米救砖记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -194,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "241207.md"
+                "file": "卡米救砖记录.md"
               }
             }
           },
@@ -214,7 +226,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "241207.md"
+                "file": "卡米救砖记录.md"
               }
             }
           }
@@ -223,8 +235,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5,
-    "collapsed": true
+    "width": 291.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,11 +247,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "baef27349df373d1",
+  "active": "c20a0f2988ae9fa3",
   "lastOpenFiles": [
+    "241207.md",
+    "卡米救砖记录.md",
     "装修注意事项.md",
     "GIT.md",
-    "241207.md",
     "20.md",
     "MySQL.md",
     "WHEN YOU HAVE A NEW PC.md",
@@ -263,7 +275,6 @@
     "Mac 数据库忘记密码.md",
     "Jmeter简单使用.md",
     "Java 8 Stream.md",
-    "IDEA.md",
     "Pasted image 20240116101021.png",
     "迭代.canvas",
     "笔记.canvas",
