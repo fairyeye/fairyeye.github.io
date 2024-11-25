@@ -125,6 +125,11 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### 根据菜谱生成图片、根据毛坯设计房间
+
+开源地址：https://github.com/Nutlope/roomGPT  
+开源地址：https://github.com/Nutlope/picMenu
+
 #### Rust 驱动的 HTTP 压测工具：oha
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNP1QBiaJpyxVV9vaUIloeALZhY4OEgRNwM8fVmOYqv9OEuPDqw96DR9QiaU6VvRzmRWwnDySHUwazaQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
