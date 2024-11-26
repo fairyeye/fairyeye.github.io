@@ -91,8 +91,7 @@
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -166,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "241207.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "241207.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -206,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "241207.md"
               }
             }
           },
@@ -226,12 +225,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "241207.md"
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -247,12 +246,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e6f516d1a6b98a96",
+  "active": "7fb643d729b66efe",
   "lastOpenFiles": [
+    "GIT.md",
     "241207.md",
     "卡米救砖记录.md",
     "装修注意事项.md",
-    "GIT.md",
     "20.md",
     "MySQL.md",
     "WHEN YOU HAVE A NEW PC.md",
