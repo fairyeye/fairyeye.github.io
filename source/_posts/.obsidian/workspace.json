@@ -91,7 +91,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -120,7 +121,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"title\"]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -165,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "241207.md",
+                "file": "卡米救砖记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "241207.md",
+                "file": "卡米救砖记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -205,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "241207.md"
+                "file": "卡米救砖记录.md"
               }
             }
           },
@@ -225,7 +226,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "241207.md"
+                "file": "卡米救砖记录.md"
               }
             }
           }
@@ -246,10 +247,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7fb643d729b66efe",
+  "active": "c20a0f2988ae9fa3",
   "lastOpenFiles": [
-    "GIT.md",
     "241207.md",
+    "使用教程.md",
+    "GIT.md",
     "卡米救砖记录.md",
     "装修注意事项.md",
     "20.md",
@@ -273,7 +275,6 @@
     "Mac使用记录.md",
     "Mac 数据库忘记密码.md",
     "Jmeter简单使用.md",
-    "Java 8 Stream.md",
     "Pasted image 20240116101021.png",
     "迭代.canvas",
     "笔记.canvas",
