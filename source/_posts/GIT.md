@@ -125,6 +125,22 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### spotube：开源的 Spotify 客户端。
+
+该项目是基于 Flutter 开发的 Spotify 客户端，完全免费且无广告。它使用 Spotify、JioSaavn 和 YouTube 作为音乐源，用户无需登录即可自由下载音乐，支持桌面和移动设备。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOiaxK5zKZxdQyUUkMwmvkkwpZz6kFqSIceLNqM9RRDgl5dTtsUYxlUZROLbwfa8dl32mEwaM3mJIA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/KRTirtho/spotube
+
+#### frpc-desktop：跨平台的 frp 桌面客户端。
+
+该项目是内网穿透工具 frp 的桌面客户端，更方便地实现内网穿透。它开箱即用、界面清爽，支持开机启动、多用户、配置导入和导出等功能，适用于 Windows、Linux 和 macOS 平台。来自 @蠢🐷 的分享
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOiaxK5zKZxdQyUUkMwmvkkw9eauoyVpCKk9nmwKibcyF5VFlvQnHhFDibTMsIDps851J858nb0MMnXA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> 地址：github.com/luckjiawei/frpc-desktop
+
 #### 根据菜谱生成图片、根据毛坯设计房间
 
 开源地址：https://github.com/Nutlope/roomGPT  

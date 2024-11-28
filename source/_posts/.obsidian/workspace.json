@@ -20,48 +20,12 @@
             }
           },
           {
-            "id": "c20a0f2988ae9fa3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "卡米救砖记录.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a0aaa887efb6fab0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "一些文案.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "511be548317e2d35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Centos.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8a6b942c255e771d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "供应商导出SQL.md",
+                "file": "使用教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -91,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -120,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "frpc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -145,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "241207.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "241207.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -205,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "241207.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -225,7 +191,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "241207.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -246,25 +212,26 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "7fb643d729b66efe",
+  "active": "e6f516d1a6b98a96",
   "lastOpenFiles": [
-    "卡米救砖记录.md",
     "241207.md",
     "使用教程.md",
+    "Centos.md",
     "GIT.md",
     "装修注意事项.md",
+    "供应商导出SQL.md",
+    "一些文案.md",
+    "卡米救砖记录.md",
     "20.md",
     "MySQL.md",
     "WHEN YOU HAVE A NEW PC.md",
     "241102.md",
     "HY2.0.md",
     "N N.md",
-    "一些文案.md",
     "13.md",
     "240824.md",
     "240927.md",
     "Arch Linux.md",
-    "供应商导出SQL.md",
     "文章名称.md",
     "Ubuntu.md",
     "StringToInteger.md",
@@ -273,7 +240,6 @@
     "Nacos.md",
     "Mac使用记录.md",
     "Mac 数据库忘记密码.md",
-    "Jmeter简单使用.md",
     "Pasted image 20240116101021.png",
     "迭代.canvas",
     "笔记.canvas",
