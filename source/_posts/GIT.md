@@ -125,6 +125,27 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+
+#### AI 驱动的简历匹配分析工具：Reactive-Resume
+
+![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNM62eLbdFNwVdxo9BK0DUaZGGXbdjw7vCXaBJbicwoibZer5ic12PNNgFMnREhq3WWr7Guibfe707RzBQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
+
+**主语言：Python**，**Star：5.1k**，**周增长：100**
+
+这是一个基于 AI 的免费开源工具，可用于提升简历质量。它通过解析简历和职位描述，模拟求职者跟踪系统（ATS），并利用 FastEmbed 技术计算简历与职位描述的匹配程度，最后给出简历的修改建议，从而提高简历通过自动筛选系统的概率。
+
+> GitHub 地址→github.com/srbhr/Resume-Matcher
+
+#### 隐藏私人文件和应用的 Android 工具：Amarok-Hider
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNM62eLbdFNwVdxo9BK0DUaZjlvicibBMq5ibyE7YPeRx1ksXfeQ8Iluq9Ow6AwlqON4s7iaHNtxMXQGsg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+**主语言：Java**，**Star：1.7k**
+
+这是一款用于隐藏文件和应用的隐私保护工具，简单易用且界面美观。它通过混淆文件名来实现文件隐藏，而非加密操作，支持免 Root 一键隐藏应用、浮动按钮和快捷开关等功能。
+
+> GitHub 地址→github.com/deltazefiro/Amarok-Hider
+
 #### spotube：开源的 Spotify 客户端。
 
 该项目是基于 Flutter 开发的 Spotify 客户端，完全免费且无广告。它使用 Spotify、JioSaavn 和 YouTube 作为音乐源，用户无需登录即可自由下载音乐，支持桌面和移动设备。
