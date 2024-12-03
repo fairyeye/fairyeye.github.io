@@ -126,6 +126,29 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 ### 开源项目
 
 
+
+#### 高颜值 Windows 系统桌面
+
+Seelen UI 是一款专为 Windows 10 和 11 用户设计的桌面环境，旨在**通过高度自定义和提升生产力来优化您的桌面体验**。它无缝集成于系统，提供多种功能，允许您根据个人喜好定制桌面，并优化工作流程。
+
+**个性化桌面：**Seelen UI 让您可以根据自己的风格和需求调整桌面。您可以自定义菜单、小部件等元素，打造最适合您的工作空间。
+
+**平铺式窗口管理器：**Seelen UI 自动排列窗口，支持多任务处理，使工作流程更加流畅。
+
+**音乐体验：**内置的媒体模块兼容大多数音乐播放器，您可以随时暂停、恢复和跳过曲目，而无需打开其他窗口。
+
+开源地址：https://github.com/eythaann/Seelen-UI
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKb6dOrjPbMLlCHvicWHeoWcW3LWcM8alo16bQMaLafQUHINmF3tvdTW1Q/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbUROW5GszEPMWmX3wcvduhUQCeGpR6uOISurcVUdb2rugxDr58XURcw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbVqXxdibYZrzc3wwXlxFM4R5w1icjngEuEOCUqvzaGyb7eRmz8RPiaONBg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbiakGW6YMDkpWRqlUIGdqABG6x54o0Aew8RLuozoDJuZk4pOslaS1nxw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbWxiaKNlN3fq2vJ7qetucrQLW7ibhmcKlg9krKdicfX2gxaus1ibTjKD1AA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+
+
 #### AI 驱动的简历匹配分析工具：Reactive-Resume
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNM62eLbdFNwVdxo9BK0DUaZGGXbdjw7vCXaBJbicwoibZer5ic12PNNgFMnREhq3WWr7Guibfe707RzBQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
