@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f6648bb0a194900e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GIT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -73,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "20001",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -119,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "使用教程.md",
+                "file": "GIT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "使用教程.md",
+                "file": "GIT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -159,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "使用教程.md"
+                "file": "GIT.md"
               }
             }
           },
@@ -179,7 +191,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "使用教程.md"
+                "file": "GIT.md"
               }
             }
           }
@@ -188,7 +200,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 219.5
+    "width": 234.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,13 +212,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e6f516d1a6b98a96",
+  "active": "f6648bb0a194900e",
   "lastOpenFiles": [
+    "241207.md",
+    "使用教程.md",
     "N N.md",
     "Centos.md",
     "GIT.md",
     "装修注意事项.md",
-    "241207.md",
     "SRM.md",
     "13.md",
     "14.md",
@@ -215,7 +228,6 @@
     "20.md",
     "~Shoka使用说明.md",
     "Springboot返回html.md",
-    "使用教程.md",
     "230715.md",
     "供应商导出SQL.md",
     "一些文案.md",

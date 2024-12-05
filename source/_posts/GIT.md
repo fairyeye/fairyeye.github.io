@@ -125,7 +125,9 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目
 
+#### `MediaGo`是一个用Electron+Antd+Vite打造的开源视频下载工具。
 
+专门针对m3u8格式的流媒体视频进行下载。这个工具不仅支持视频下载，还能处理B站视频下载，功能强大到让你惊呼“还有这种操作”！目前已经在GitHub上收获了超过4.7k的星星，可见其受欢迎程度。
 
 #### 高颜值 Windows 系统桌面
 
@@ -274,19 +276,19 @@ Duckstation是由stenzek开发的索尼PS 模拟器，适用于 x86-64/AArch32/A
 
 > 地址：github.com/basecamp/omakub
 
-#### [Oshi](https://github.com/oshi/oshi)
+#### [Oshi](https://github.com/oshi/oshi)获取操作系统和硬件信息的 Java 库。
 
 ```
 获取操作系统和硬件信息的 Java 库。这是一个基于 JNA 实现的获取本机操作系统和硬件信息的库，支持操作系统版本、进程、内存、 CPU 使用率、磁盘和分区、设备、传感器等信息。
 ```
 
-#### [PlayEdu](https://github.com/PlayEdu/PlayEdu)
+#### [PlayEdu](https://github.com/PlayEdu/PlayEdu)一款 Java 写的内部培训系统。
 
 ```
 一款 Java 写的内部培训系统。这是一款基于 SpringBoot+React 开发而成的视频培训系统，它界面清爽、交互流畅，支持上传资源、创建部门、添加学员、指派课程等功能，可用于企业和机构搭建内部培训平台。
 ```
 
-#### [Holer](https://github.com/wisdom-projects/holer)
+#### [Holer](https://github.com/wisdom-projects/holer) 一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。
 
 ```
 一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。内网穿透工具，包含 Web 后台管理系统。用到的技术如下：
@@ -297,7 +299,7 @@ Duckstation是由stenzek开发的索尼PS 模拟器，适用于 x86-64/AArch32/A
 ![](https://s3.bmp.ovh/imgs/2023/09/13/e1c366275bdb16f6.png)
 
 
-#### [SoloPo](https://github.com/alipay/SoloPi)
+#### [SoloPo](https://github.com/alipay/SoloPi)一个不需要连接电脑、非侵入式的 Android 自动化工具。
 
 ```
 一个不需要连接电脑、非侵入式的 Android 自动化工具。公测版拥有录制回放、性能测试、一机多控三项主要功能，能为测试开发人员节省宝贵时间。安卓版本多、终端型号多，一个成熟安卓应用的上线需要进行大量测试，而很多测试都是属于重复操作，通过此工具可以极大简化测试人员的工作量
@@ -305,7 +307,7 @@ Duckstation是由stenzek开发的索尼PS 模拟器，适用于 x86-64/AArch32/A
 ![](https://s3.bmp.ovh/imgs/2023/09/13/f9f815c624347451.png)
 
 
-#### [Hitomi](https://github.com/KurtBestor/Hitomi-Downloader)
+#### [Hitomi](https://github.com/KurtBestor/Hitomi-Downloader) Hitomi-Downloader 知名下载工具
 
 **本周 star 增长数：400+**，**主语言：Python**
 
@@ -451,16 +453,7 @@ Deskreen，一个开源项目，正是为此而生！这是一个简单而强大
 > GitHub 地址→github.com/Zeyi-Lin/HivisionIDPhotos
 
 
-### Git技巧
-
-
-```
-https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
-```
-
-
-
-### 2.2 Windows 激活：Microsoft-Activation-Scripts
+#### Windows 激活：Microsoft-Activation-Scripts
 
 **本周 star 增长数：1,100+**
 
@@ -469,12 +462,12 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 > GitHub 地址→github.com/massgravel/Microsoft-Activation-Scripts
 
 
-17、**source-code-hunter**：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。
+#### **source-code-hunter**：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。
 
 > 地址：https://github.com/doocs/source-code-hunter
 
 
-### 2.1 免费的 AI 图像升级器：Upscaler
+#### 免费的 AI 图像升级器：Upscaler
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNPydvTukojzHTnhQlLXGLsJ4t0OiaCFCQYqtp5SXDiclDBw2xQ0MIAtnHCFSwUJeT33Hq40VnjuV9RA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -485,7 +478,7 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 > GitHub 地址→github.com/upscayl/upscayl
 
 
-### 2.1 在线的数据库设计工具：DrawDB
+####  在线的数据库设计工具：DrawDB
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNpuPH55ddPkSnH9H4wHVSG5YudMeeSnXGSEw2HhFD6yPXgWyedmSQ7wO3hWIqSZEeialYhgoianlsA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
 
@@ -497,7 +490,9 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-5、WingetUI：带界面的 Windows 包管理器。该项目是一个为 Windows 常用的命令行包管理工具设计的用户界面，如 Winget、Scoop、Pip、NPM、.NET Tool 等。它的界面友好、设计美观、支持中文，通过它你可以轻松下载、安装、更新和卸载包管理器上发布的任何软件以及其它日常应用，如浏览器、PDF 阅读器等。
+#### WingetUI：带界面的 Windows 包管理器。
+
+该项目是一个为 Windows 常用的命令行包管理工具设计的用户界面，如 Winget、Scoop、Pip、NPM、.NET Tool 等。它的界面友好、设计美观、支持中文，通过它你可以轻松下载、安装、更新和卸载包管理器上发布的任何软件以及其它日常应用，如浏览器、PDF 阅读器等。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkxbJX9TVeXSVphhvpywb7IRHMbJVW9Mf29bXj2iaFp6jDLg4xnjEhZJA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -505,7 +500,9 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-9、freeze：生成代码图片的终端工具。该项目可以将代码片段和终端输出，转换成 PNG、SVG 和 WebP 格式的图片，它采用 Go 语言开发，特点是安装简单和易于使用，支持一条命令生成图片，也可以通过交互模式生成定制的图片。
+#### freeze：生成代码图片的终端工具。
+
+该项目可以将代码片段和终端输出，转换成 PNG、SVG 和 WebP 格式的图片，它采用 Go 语言开发，特点是安装简单和易于使用，支持一条命令生成图片，也可以通过交互模式生成定制的图片。
 
 `# macOS or Linux   brew install charmbracelet/tap/freeze      # Arch Linux (btw)   pacman -S freeze      # Nix   nix-env -iA nixpkgs.charm-freeze   `
 
@@ -515,15 +512,17 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-### Java 项目
+#### CompreFace：免费、开源的人脸识别系统。
 
-12、CompreFace：免费、开源的人脸识别系统。该项目提供了用于人脸识别、检测、验证、头部姿势检测、性别和年龄识别的 REST API 服务，不用懂机器学习就能轻松集成到任何系统中。它后端采用 Java 编写，人脸识别是基于 FaceNet 和 InsightFace 实现，同时支持 Docker 部署。
+该项目提供了用于人脸识别、检测、验证、头部姿势检测、性别和年龄识别的 REST API 服务，不用懂机器学习就能轻松集成到任何系统中。它后端采用 Java 编写，人脸识别是基于 FaceNet 和 InsightFace 实现，同时支持 Docker 部署。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFklgLXIgse7X1bUGibNltiaiaeILsfG4HqCUpCD2Ylpx30dLDdjufpWNMXg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 地址：github.com/exadel-inc/CompreFace
 
-13、fdroidclient：免费、开源的 Android 应用商店。该项目是 F-Droid 的 Android 客户端，专门收集各类开源安卓软件（FOSS）的应用商店。它里面大部分是免费且无广告的应用，如遇到资源加载慢的情况，可通过设置镜像源解决。
+#### fdroidclient：免费、开源的 Android 应用商店。
+
+该项目是 F-Droid 的 Android 客户端，专门收集各类开源安卓软件（FOSS）的应用商店。它里面大部分是免费且无广告的应用，如遇到资源加载慢的情况，可通过设置镜像源解决。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkZibGRXYunyDJoORM0r5hho5QWH12xlRBCgeuE8vR7SkMGHjtkj8yINw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -531,7 +530,9 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-18、tailwind-landing-page-template：免费、开源的落地页模板。该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。
+#### tailwind-landing-page-template：免费、开源的落地页模板。
+
+该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。
 
 `git clone 项目   yarn install   yarn dev   # http://localhost:3000   `
 
@@ -542,12 +543,15 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-22、python-miio：用于控制小米智能家电的 Python 库。该项目提供了一个 Python 库和命令行工具，可以用来控制使用小米的 miIO 和 MIoT 协议的设备。借助它用户可以轻松地与小米智能设备进行通信和远程控制，包括扫地机器人、灯泡、空气净化器等，非常适合喜欢 DIY 智能家居系统的开发者。
+####  python-miio：用于控制小米智能家电的 Python 库。
+该项目提供了一个 Python 库和命令行工具，可以用来控制使用小米的 miIO 和 MIoT 协议的设备。借助它用户可以轻松地与小米智能设备进行通信和远程控制，包括扫地机器人、灯泡、空气净化器等，非常适合喜欢 DIY 智能家居系统的开发者。
 
 > 地址：github.com/rytilahti/python-miio
 
 
-23、undetected-chromedriver：绕过反爬检测的 Python 库。这是一个经过优化的 Selenium WebDriver 补丁，专门用于防止浏览器自动化过程中，触发反机器人机制。它能够隐藏浏览器特征（指纹），使用起来十分方便，就像一个 Python 的第三方库一样。
+#### undetected-chromedriver：绕过反爬检测的 Python 库。
+
+这是一个经过优化的 Selenium WebDriver 补丁，专门用于防止浏览器自动化过程中，触发反机器人机制。它能够隐藏浏览器特征（指纹），使用起来十分方便，就像一个 Python 的第三方库一样。
 
 `import undetected_chromedriver as uc   driver = uc.Chrome(headless=True,use_subprocess=False)   driver.get('https://nowsecure.nl')   driver.save_screenshot('nowsecure.png')   `
 
@@ -558,7 +562,9 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-29、reminders-menubar：极简的 macOS 菜单栏提醒工具。这是一款使用 SwiftUI 开发的小工具，能够在 macOS 菜单栏查看/提醒待办事项。它体积小、交互简单、界面清爽，支持开机启动、多语言（包括中文）、菜单栏显示计数、快捷键等功能。
+####  reminders-menubar：极简的 macOS 菜单栏提醒工具。
+
+这是一款使用 SwiftUI 开发的小工具，能够在 macOS 菜单栏查看/提醒待办事项。它体积小、交互简单、界面清爽，支持开机启动、多语言（包括中文）、菜单栏显示计数、快捷键等功能。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkWbYLJNXibzGw3vLsTAbLHKys7s4VJM9Zucicr9oF0jDwQ0nfOyVNMy4A/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -567,7 +573,9 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 ###
 
 
-32、ServiceLogos：超可爱的 Logo 集合。这里是用来存放 Sawaratsuki 制作的各种 logo 的仓库，这些 logo 制作精美、画风可爱，包括编程语言、框架、工具和各大社交媒体的商标™️。
+#### ServiceLogos：超可爱的 Logo 集合。
+
+这里是用来存放 Sawaratsuki 制作的各种 logo 的仓库，这些 logo 制作精美、画风可爱，包括编程语言、框架、工具和各大社交媒体的商标™️。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkg5uv5yRia0J7MzVJUiccurARChJuSmJYKWiaqk490eO8kOewpuhAia5pHA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -575,12 +583,14 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 
 
 
-35、how-to-learn-robotics：机器人学自学指南。这本指南专为非科班的小伙伴而设计，旨在指导他们如何学习机器人学。它包含了必备知识、入门教材推荐、实践项目以及进阶方法等内容，帮助读者逐步成长为一名优秀的机器人工程师。
+#### how-to-learn-robotics：机器人学自学指南。
+
+这本指南专为非科班的小伙伴而设计，旨在指导他们如何学习机器人学。它包含了必备知识、入门教材推荐、实践项目以及进阶方法等内容，帮助读者逐步成长为一名优秀的机器人工程师。
 
 > 地址：github.com/qqfly/how-to-learn-robotics
 
 
-### 2.2 免费、开源的落地页模板：tailwind-landing-page-template
+####  免费、开源的落地页模板：tailwind-landing-page-template
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNopDgmYXxHEOsNjAbajpFicNWJrrkoveg9zDmqS0hrrf7fNngdGjOMymnZcPPtwUAUNhGNtCnVHtg/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
 
@@ -591,30 +601,37 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 > 项目详情→hellogithub.com/repository/9f205fad64b241609ce3feec456ab818
 
 
-### C# 项目
+####  RunCat_for_windows：在 Windows 任务栏飞奔的“小猫”。
 
-3、RunCat_for_windows：在 Windows 任务栏飞奔的“小猫”。这是一个用 C# 写的小工具，它会在 Windows 任务栏显示一只奔跑的小猫动画，CPU 使用率越高它跑得越快。
+这是一个用 C# 写的小工具，它会在 Windows 任务栏显示一只奔跑的小猫动画，CPU 使用率越高它跑得越快。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0ICLfJm011mOVMNibjTO2BKrDnXCgibjQROB5SGS5ibTiat02POkf5HUibicxA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1)
 
 > 地址：github.com/Kyome22/RunCat_for_windows
 
 
-9、mactop：专为苹果芯片打造的 Mac 性能监控工具。该项目用不到 1k 行的 Go 代码，实现了一个类似 top 命令的工具。它可以实时显示 Apple M 系列芯片的性能指标，包括 CPU、GPU 使用率、内存、网络和硬盘等信息。
+#### mactop：专为苹果芯片打造的 Mac 性能监控工具。
+
+该项目用不到 1k 行的 Go 代码，实现了一个类似 top 命令的工具。它可以实时显示 Apple M 系列芯片的性能指标，包括 CPU、GPU 使用率、内存、网络和硬盘等信息。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0IQghM8WzLANkVqeJLMA5ELVO8enFQBRo2PzXbsSq760LRepj74zzOMg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 地址：github.com/context-labs/mactop
 
 
-11、superfile：非常漂亮的终端文件管理器。这是一个现代终端文件管理器，为命令行文件操作提供了一个直观且漂亮的界面。它默认采用 Vim 风格的快捷键操作，还支持插件和主题自定义。
+#### superfile：非常漂亮的终端文件管理器。
+
+这是一个现代终端文件管理器，为命令行文件操作提供了一个直观且漂亮的界面。它默认采用 Vim 风格的快捷键操作，还支持插件和主题自定义。
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0IxjDDtDYbYermMXiaHDBicsfmicDhVhOWR50ys7k5Qzia4kWwRgRibOnfTKg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 > 地址：github.com/yorukot/superfile
 
 
-2、chsrc：全平台通用的换源工具。该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。来自 @ccmywish 的分享
+####  chsrc：全平台通用的换源工具。
+
+
+该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。来自 @ccmywish 的分享
 
 #chsrc
 
@@ -623,7 +640,9 @@ https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
 > 地址：github.com/RubyMetric/chsrc
 
 
-6、lnav：强大的终端日志文件查看工具。这是一款用于查看和分析日志文件的轻量级工具。它无需配置、开箱即用，可自动识别日志格式并解压文件，支持同时处理多个文件和目录、实时更新、文本高亮、正则与 SQL 过滤日志等功能，特别适合在服务器和开发环境中使用。来自 @DeShuiYu 的分享
+####  lnav：强大的终端日志文件查看工具。
+
+这是一款用于查看和分析日志文件的轻量级工具。它无需配置、开箱即用，可自动识别日志格式并解压文件，支持同时处理多个文件和目录、实时更新、文本高亮、正则与 SQL 过滤日志等功能，特别适合在服务器和开发环境中使用。来自 @DeShuiYu 的分享
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH1xLFIZT7lCVaROvmQdHYlHbZFv0YlFCogjSPv7g3SNib0xmWHBelgJQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
@@ -682,3 +701,10 @@ chmod +x /path/to/your/local/repo/.git/hooks/post-merge
 
 
 ![](https://s3.bmp.ovh/imgs/2024/06/12/d328d835ab6947bb.png)
+### Git技巧
+
+
+```
+https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4
+```
+
