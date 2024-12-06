@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "54390",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -131,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT.md",
+                "file": "241207.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT.md",
+                "file": "241207.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -171,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT.md"
+                "file": "241207.md"
               }
             }
           },
@@ -191,7 +190,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GIT.md"
+                "file": "241207.md"
               }
             }
           }
@@ -212,13 +211,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f6648bb0a194900e",
+  "active": "195b6116ec82a7f8",
   "lastOpenFiles": [
+    "GIT.md",
     "241207.md",
     "使用教程.md",
     "N N.md",
     "Centos.md",
-    "GIT.md",
     "装修注意事项.md",
     "SRM.md",
     "13.md",
