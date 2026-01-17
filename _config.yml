@@ -104,7 +104,7 @@ theme: stellar
 deploy:
   type: 'git'
   repo: 'git@github.com:fairyeye/fairyeye.github.io.git'
-  branch: master
+  branch: hexo-page
 
 
 
