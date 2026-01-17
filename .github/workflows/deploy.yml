@@ -1,0 +1,44 @@
+name: Deploy Hexo to GitHub Pages
+
+on:
+  # 触发条件：推送到 main 分支
+  push:
+    branches: [ main ]
+  # 也可以加 pull_request 用于测试，但非必需
+  # pull_request:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取你的源码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      # 3. 安装依赖（包括 hexo 和主题所需插件）
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install hexo-renderer-pug hexo-renderer-sass probe-image-size --save
+
+      # 4. 生成静态文件（输出到 public/）
+      - name: Build static files
+        run: npx hexo generate
+
+      # 5. 部署到 GitHub Pages（推送到 gh-pages 分支）
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          # 可选：自定义提交信息
+          commit_message: "[CI] Update site at ${{ github.sha }}"
