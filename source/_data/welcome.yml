@@ -1,0 +1,12 @@
+# 欢迎区域配置
+title: "👋 欢迎来到我的博客"
+description: |
+  这里记录着技术探索的点滴和生活的感悟。
+  希望我的分享能给你带来一些启发和帮助。
+
+  **技术栈**: Java | Spring Boot | MySQL | Redis | Docker
+  **兴趣**: 开源项目 | 后端开发 | 系统架构
+button:
+  text: "了解更多 →"
+  link: "/about/"
+  type: "primary"

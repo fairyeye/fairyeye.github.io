@@ -3,13 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 人生当苦, 良人当归
-subtitle: ''
+title: LI
+subtitle: '记录记录'
 description: '我不过像你像他像那野草野花。'
-keywords:
+keywords: 技术,博客,笔记,开源
 author: li
 language: zh-CN
 timezone: ''
+
+# Avatar
+avatar: /images/avatar.jpg
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -98,6 +101,14 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: stellar
+
+# Custom CSS/JS
+## 自定义样式文件
+styles:
+  - /css/custom.css
+
+# 自定义数据
+data_dir: source/_data
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
