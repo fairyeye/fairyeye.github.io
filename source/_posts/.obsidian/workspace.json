@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "归档/MJ.md",
+                "file": "HEXO相关/主题配置.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MJ"
+              "title": "主题配置"
             }
           }
         ],
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "归档/MJ.md",
+                "file": "HEXO相关/主题配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "MJ 的反向链接列表"
+              "title": "主题配置 的反向链接列表"
             }
           },
           {
@@ -152,12 +152,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "归档/MJ.md",
+                "file": "HEXO相关/主题配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "MJ 的出链列表"
+              "title": "主题配置 的出链列表"
             }
           },
           {
@@ -181,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "归档/MJ.md",
+                "file": "HEXO相关/主题配置.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MJ 的大纲"
+              "title": "主题配置 的大纲"
             }
           },
           {
@@ -210,10 +210,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "归档/MJ.md"
+                "file": "HEXO相关/主题配置.md"
               },
               "icon": "lucide-info",
-              "title": "MJ的笔记属性"
+              "title": "主题配置的笔记属性"
             }
           }
         ],
@@ -237,6 +237,10 @@
   },
   "active": "cc42a9f4f60c8252",
   "lastOpenFiles": [
+    "归档/MJ.md",
+    "HEXO相关/主题配置.md",
+    "HEXO相关",
+    "hello-world.md",
     "模板.md",
     "ZY-工作/常用/常用SQL.md",
     "ZY-工作/常用",
@@ -262,7 +266,6 @@
     "归档/张华朋-Java-本科-6年-简历涉及.md",
     "归档/250222.md",
     "归档/阿里巴巴手册.md",
-    "归档/MJ.md",
     "归档/Arthas.md",
     "归档/HY2.0.md",
     "归档/241102.md",
@@ -272,7 +275,6 @@
     "归档/Pasted image 20250213202432.png",
     "归档/Pasted image 20250213202427.png",
     "归档/SRM.md",
-    "归档/Ubuntu.md",
     "归档/笔记.canvas",
     "归档/迭代.canvas",
     "归档/Pasted image 20241211153956.png",
