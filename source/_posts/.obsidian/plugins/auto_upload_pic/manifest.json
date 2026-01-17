@@ -1,0 +1,10 @@
+{
+	"id": "auto_upload_pic",
+	"name": "auto upload pic",
+	"version": "1.0.1",
+	"minAppVersion": "0.12.0",
+	"description": "自动上传复制的图片",
+	"author": "li",
+	"authorUrl": "No authorUrl",
+	"isDesktopOnly": false
+}

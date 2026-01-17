@@ -1,0 +1,286 @@
+{
+  "main": {
+    "id": "b943b25b9f738828",
+    "type": "split",
+    "children": [
+      {
+        "id": "881609aa501add8d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "838625a9a4341238",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "归档/~Shoka使用说明.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "~Shoka使用说明"
+            }
+          },
+          {
+            "id": "9cece6696911e49d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "模板.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "模板"
+            }
+          },
+          {
+            "id": "cc42a9f4f60c8252",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "归档/MJ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MJ"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0f4330fdad99a594",
+    "type": "split",
+    "children": [
+      {
+        "id": "81c8c4788d6ad54c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "baef27349df373d1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "195b6116ec82a7f8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "384d860e4449826e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "starred"
+            }
+          },
+          {
+            "id": "dc42664e52abccf7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 258.5024719238281
+  },
+  "right": {
+    "id": "6626c0948e010413",
+    "type": "split",
+    "children": [
+      {
+        "id": "35719637bb69c1b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e77739602c9b2cf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "归档/MJ.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "MJ 的反向链接列表"
+            }
+          },
+          {
+            "id": "69844bd2465c214f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "归档/MJ.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "MJ 的出链列表"
+            }
+          },
+          {
+            "id": "fc38dcb611182d1a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "8157870522aab0ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "归档/MJ.md",
+                "followCursor": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "MJ 的大纲"
+            }
+          },
+          {
+            "id": "aa184b014aaea631",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "a4ecd95604ab9efd",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "归档/MJ.md"
+              },
+              "icon": "lucide-info",
+              "title": "MJ的笔记属性"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 234.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "cc42a9f4f60c8252",
+  "lastOpenFiles": [
+    "模板.md",
+    "ZY-工作/常用/常用SQL.md",
+    "ZY-工作/常用",
+    "ZY-工作",
+    "归档/13.md",
+    "归档/~Shoka使用说明.md",
+    "Archive.26",
+    "归档/文章名称.md",
+    "归档",
+    "集中交付/常用SQL",
+    "集中交付",
+    "归档/需要掌握以下知识.md",
+    "归档/~集中交付.md",
+    "归档/240224.md",
+    "归档/240330.md",
+    "归档/N N.md",
+    "归档/Pasted image 20240116101021.png",
+    "归档/WHEN YOU HAVE A NEW PC.md",
+    "归档/供应商导出SQL.md",
+    "归档/GIT.md",
+    "归档/本地虚拟机信息记录.md",
+    "归档/张华朋-Java-本科-6年.md",
+    "归档/张华朋-Java-本科-6年-简历涉及.md",
+    "归档/250222.md",
+    "归档/阿里巴巴手册.md",
+    "归档/MJ.md",
+    "归档/Arthas.md",
+    "归档/HY2.0.md",
+    "归档/241102.md",
+    "归档/240720.md",
+    "归档/张华朋-Java-本科-6年.pdf",
+    "张华朋-Java-本科-6年_tmp.html",
+    "归档/Pasted image 20250213202432.png",
+    "归档/Pasted image 20250213202427.png",
+    "归档/SRM.md",
+    "归档/Ubuntu.md",
+    "归档/笔记.canvas",
+    "归档/迭代.canvas",
+    "归档/Pasted image 20241211153956.png",
+    "Pasted image 20231025105221.png",
+    "Untitled.canvas",
+    "upload/image-20200917191550283.png",
+    "upload/image-20200917192220270.png",
+    "upload/image-20200626141113470.png",
+    "Pasted image 20220922140434.png"
+  ]
+}

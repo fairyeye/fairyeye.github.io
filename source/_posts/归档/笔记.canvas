@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"5f8127c376f3e04a","type":"file","file":"归档/Leetcode.md","x":-1827,"y":-196,"width":507,"height":476},
+		{"id":"fe4f59d18ce49bb4","type":"file","file":"归档/Algo.md","x":360,"y":-720,"width":400,"height":400},
+		{"id":"b4fb5c3b9569e65e","type":"text","text":"Algorithm","x":-200,"y":-120,"width":140,"height":60},
+		{"id":"88c43133c69af9df","type":"text","text":"数组与链表","x":360,"y":-120,"width":160,"height":60,"color":"5"},
+		{"id":"c46069ba43195696","type":"text","text":"LFU","x":349,"y":45,"width":91,"height":55},
+		{"id":"f47f5aa20fd0d57b","type":"file","file":"归档/算法.md","x":800,"y":75,"width":400,"height":400},
+		{"id":"22fd5d2874889e8c","type":"text","text":"零碎知识","x":-1054,"y":-346,"width":134,"height":55},
+		{"id":"e0fb7b7d36d37e3b","type":"text","text":"charArray[c - 'a'] = charArray[index]\nleetcode383 赎金信","x":-1800,"y":-341,"width":360,"height":81},
+		{"id":"8c65ad1f4d4fcfef","type":"text","text":"LeetCode","x":-1109,"y":-22,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"f5ef59550410ce7a","fromNode":"c46069ba43195696","fromSide":"right","toNode":"f47f5aa20fd0d57b","toSide":"left"},
+		{"id":"67f3f85825c8aa69","fromNode":"22fd5d2874889e8c","fromSide":"left","toNode":"e0fb7b7d36d37e3b","toSide":"right"},
+		{"id":"25b9930ea2b458d6","fromNode":"b4fb5c3b9569e65e","fromSide":"right","toNode":"fe4f59d18ce49bb4","toSide":"left"},
+		{"id":"21871a0ccde88d64","fromNode":"b4fb5c3b9569e65e","fromSide":"right","toNode":"88c43133c69af9df","toSide":"left"},
+		{"id":"aa9fb00fa25acb19","fromNode":"b4fb5c3b9569e65e","fromSide":"right","toNode":"c46069ba43195696","toSide":"left"},
+		{"id":"3efdae78ac6dce1c","fromNode":"b4fb5c3b9569e65e","fromSide":"left","toNode":"22fd5d2874889e8c","toSide":"right"},
+		{"id":"b25450e60108b163","fromNode":"b4fb5c3b9569e65e","fromSide":"left","toNode":"8c65ad1f4d4fcfef","toSide":"right"},
+		{"id":"4c222de8f889e829","fromNode":"8c65ad1f4d4fcfef","fromSide":"left","toNode":"5f8127c376f3e04a","toSide":"right"}
+	]
+}

@@ -1,0 +1,152 @@
+{
+  "main": {
+    "id": "b943b25b9f738828",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0d25d8f0309f618",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "MySQL.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0f4330fdad99a594",
+    "type": "split",
+    "children": [
+      {
+        "id": "81c8c4788d6ad54c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "baef27349df373d1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "195b6116ec82a7f8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "384d860e4449826e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6626c0948e010413",
+    "type": "split",
+    "children": [
+      {
+        "id": "35719637bb69c1b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e77739602c9b2cf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "MySQL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aed910db0388682a",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "69844bd2465c214f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "MySQL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fc38dcb611182d1a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8157870522aab0ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "MySQL.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c0d25d8f0309f618",
+  "lastOpenFiles": [
+    "MySQL.md",
+    "日期处理.md",
+    "14.md",
+    "13.md",
+    "10.md",
+    "IDEA Plugins.md",
+    "模板.md",
+    "查询不在B表里的A表数据.md",
+    "RE-1注册中心.md",
+    "2022-09-22.md"
+  ]
+}

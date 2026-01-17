@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"72ae7b3333183d42","type":"text","text":"2023","x":-300,"y":-120,"width":250,"height":60},
+		{"id":"c4a9ae141597453e","type":"file","file":"归档/230715.md","x":321,"y":-920,"width":400,"height":400},
+		{"id":"ea9d3e1ff4871332","type":"file","file":"归档/230819.md","x":321,"y":-460,"width":400,"height":400},
+		{"id":"826f81fb78ababff","type":"file","file":"归档/230923.md","x":321,"y":5,"width":400,"height":400},
+		{"id":"9029879cdd7f6eca","type":"file","file":"归档/231104.md","x":321,"y":462,"width":400,"height":400},
+		{"id":"79d6eb4406e9501a","type":"file","file":"归档/231209.md","x":321,"y":960,"width":400,"height":400},
+		{"id":"2b7fbb31d062a87d","type":"text","text":"2024","x":-269,"y":1479,"width":149,"height":61,"color":"1"},
+		{"id":"68311718958c8d28","type":"file","file":"归档/240113.md","x":-960,"y":2280,"width":1120,"height":620}
+	],
+	"edges":[
+		{"id":"a854dc64dc65f64d","fromNode":"72ae7b3333183d42","fromSide":"right","toNode":"c4a9ae141597453e","toSide":"left"},
+		{"id":"09a64ad9cc522fdd","fromNode":"72ae7b3333183d42","fromSide":"right","toNode":"ea9d3e1ff4871332","toSide":"left"},
+		{"id":"9da25a5532a6f1aa","fromNode":"72ae7b3333183d42","fromSide":"right","toNode":"826f81fb78ababff","toSide":"left"},
+		{"id":"1d5b60627f8f8721","fromNode":"72ae7b3333183d42","fromSide":"right","toNode":"9029879cdd7f6eca","toSide":"left"},
+		{"id":"7174cbe5c0351def","fromNode":"72ae7b3333183d42","fromSide":"right","toNode":"79d6eb4406e9501a","toSide":"left"},
+		{"id":"dd0c1f60327f7df5","fromNode":"72ae7b3333183d42","fromSide":"bottom","toNode":"2b7fbb31d062a87d","toSide":"top"},
+		{"id":"1db8c9f18f2520ab","fromNode":"2b7fbb31d062a87d","fromSide":"bottom","toNode":"68311718958c8d28","toSide":"top"}
+	]
+}
