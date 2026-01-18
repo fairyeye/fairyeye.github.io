@@ -48,6 +48,76 @@ source ~/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+### 美化、插件、配置
+
+#### 安装 Powerline 字体
+
+```bash
+# 克隆仓库 
+git clone --depth=1 https://github.com/powerline/fonts.git ~/powerline-fonts 
+
+# 安装所有字体 
+cd ～/powerline-fonts 
+./install.sh 
+
+# 清理 
+cd .. && rm -rf ~/powerline-fonts
+```
+
+设置终端使用 Powerline 字体：
+
+1. 打开 **Terminal（终端）**
+2. `Terminal → Settings → Profiles → Text`
+3. 字体选择：**`Meslo LG M Regular for Powerline`**（或其他带 "for Powerline" 的字体）
+4. 关闭设置，重启终端
+
+#### 使用 Powerlevel10k
+
+```bash
+# 安装
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# 修改 ~/.zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# 重载
+source ~/.zshrc
+
+```
+
+
+#### 插件
+
+##### 安装
+
+```bash
+# zsh-autosuggestions  根据历史命令 灰色自动建议
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-～/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# zsh-syntax-highlighting  实时语法高亮
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-～/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+```
+
+
+```bash
+# 修改配置
+vim ~/.zshrc
+
+# 找到 plugin 修改成：
+plugins=(
+  git
+  brew
+  npm
+  pnpm
+  zsh-autosuggestions
+  zsh-syntax-highlighting   # 必须放最后！
+)
+
+# 装完插件后 再执行下面的
+source ~/.zshrc
+```
+
 
 
 ## 使用 SDKMAN!（强烈推荐，尤其开发者）
