@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HEXO相关/主题配置.md",
+                "file": "Archive.26/项目/前端+后端初始化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "主题配置"
+              "title": "前端+后端初始化"
             }
           }
         ],
@@ -119,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HEXO相关/主题配置.md",
+                "file": "Archive.26/项目/前端+后端初始化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "主题配置 的反向链接列表"
+              "title": "前端+后端初始化 的反向链接列表"
             }
           },
           {
@@ -138,12 +138,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HEXO相关/主题配置.md",
+                "file": "Archive.26/项目/前端+后端初始化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "主题配置 的出链列表"
+              "title": "前端+后端初始化 的出链列表"
             }
           },
           {
@@ -167,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HEXO相关/主题配置.md",
+                "file": "Archive.26/项目/前端+后端初始化.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "主题配置 的大纲"
+              "title": "前端+后端初始化 的大纲"
             }
           },
           {
@@ -196,10 +196,20 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "HEXO相关/主题配置.md"
+                "file": "Archive.26/项目/前端+后端初始化.md"
               },
               "icon": "lucide-info",
-              "title": "主题配置的笔记属性"
+              "title": "前端+后端初始化的笔记属性"
+            }
+          },
+          {
+            "id": "3a0dd6390b7b1b06",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -223,6 +233,16 @@
   },
   "active": "cc42a9f4f60c8252",
   "lastOpenFiles": [
+    "Mac使用记录.md",
+    "Archive.26/项目/前端+后端初始化.md",
+    "Archive.26/项目",
+    "项目/未命名",
+    "项目",
+    "HEXO相关/主题配置.md",
+    "归档/~集中交付.md",
+    "未命名.base",
+    "模板.md",
+    "hello-world.md",
     "归档/需要掌握以下知识.md",
     "归档/阿里巴巴手册.md",
     "归档/述职报告.md",
@@ -246,12 +266,6 @@
     "归档/卡米救砖记录.md",
     "归档/单例模式.md",
     "归档/分页查询.md",
-    "归档/供货能力申请单.md",
-    "归档/供应商导出SQL.md",
-    "归档/供应商.md",
-    "归档/使用教程.md",
-    "归档/事务问题.md",
-    "归档/一些文案.md",
     "归档/Pasted image 20250213202432.png",
     "归档/Pasted image 20250213202427.png",
     "归档/Pasted image 20241211153956.png",
@@ -261,9 +275,6 @@
     "ZY-工作/常用",
     "ZY-工作",
     "Archive.26",
-    "集中交付/常用SQL",
-    "集中交付",
-    "张华朋-Java-本科-6年_tmp.html",
     "Pasted image 20231025105221.png",
     "Untitled.canvas",
     "upload/image-20200917191550283.png",

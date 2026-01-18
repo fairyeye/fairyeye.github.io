@@ -21,17 +21,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: pnpm
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
+          cache: npm
 
       # 3. 安装依赖（包括 hexo 和主题所需插件）
       - name: Install dependencies
         run: |
-          pnpm install
-          pnpm install hexo-renderer-pug hexo-hide-posts hexo-renderer-sass probe-image-size --save
+          npm install
+          npm install hexo-renderer-pug hexo-hide-posts hexo-renderer-sass probe-image-size --save
 
       # 4. 生成静态文件（输出到 public/）
       - name: Build static files
