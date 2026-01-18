@@ -14,6 +14,8 @@ categories: 杂项
 # 1. 安装 Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# 💡 如果是 Apple Silicon Mac（M1/M2/M3），Homebrew 会自动安装到 /opt/homebrew. 如果是 Intel Mac，则安装到 /usr/local
+
 # 2. 配置 Homebrew（Apple Silicon）
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"

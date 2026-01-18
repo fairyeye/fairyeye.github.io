@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "881609aa501add8d",
+        "id": "49b501860835d81c",
         "type": "tabs",
         "children": [
           {
-            "id": "cc42a9f4f60c8252",
+            "id": "0dc4e35389dfa860",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "source/_posts/Mac使用记录.md",
-                "bFile": "source/_posts/Mac使用记录.md",
-                "aRef": ""
+                "file": "Mac使用记录.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: Mac使用记录  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Mac使用记录"
             }
           }
         ]
@@ -152,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Mac使用记录.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Mac使用记录 的大纲"
             }
           },
           {
@@ -179,9 +180,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "Mac使用记录.md"
+              },
               "icon": "lucide-info",
-              "title": "笔记属性"
+              "title": "Mac使用记录的笔记属性"
             }
           },
           {
@@ -195,7 +198,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -213,7 +216,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cc42a9f4f60c8252",
+  "active": "8157870522aab0ea",
   "lastOpenFiles": [
     "Mac使用记录.md",
     "Archive.26/项目/问题记录.md",
