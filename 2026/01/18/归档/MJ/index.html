@@ -1,0 +1,1376 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
+  
+  
+  <meta name="generator" content="Hexo 8.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>LI</title>
+
+  
+    <meta name="description" content="面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。候选人： 好的，这些锁机制是解决并发问题的核心手段，各自适用于不同的场景。我来分别阐述它们的原理、应用及实践经验。  一、乐观锁（Optimistic Lock）核心思想：假设并发冲突的概率低，只在提交时检测数据是否被修改。实现方式：    版本号机制：数据表中增加版本号字段，更新时校验版本号。  12UPDATE table SET val">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LI">
+<meta property="og:url" content="https://fairyeye.github.io/2026/01/18/%E5%BD%92%E6%A1%A3/MJ/">
+<meta property="og:site_name" content="LI">
+<meta property="og:description" content="面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。候选人： 好的，这些锁机制是解决并发问题的核心手段，各自适用于不同的场景。我来分别阐述它们的原理、应用及实践经验。  一、乐观锁（Optimistic Lock）核心思想：假设并发冲突的概率低，只在提交时检测数据是否被修改。实现方式：    版本号机制：数据表中增加版本号字段，更新时校验版本号。  12UPDATE table SET val">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fairyeye.github.io/images/avatar.jpg">
+<meta property="article:published_time" content="2026-01-18T04:55:30.277Z">
+<meta property="article:modified_time" content="2026-01-18T04:55:30.277Z">
+<meta property="article:author" content="li">
+<meta property="article:tag" content="技术,博客,笔记,开源">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fairyeye.github.io/images/avatar.jpg">
+  
+  
+  
+  <meta name="keywords" content="技术,博客,笔记,开源">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
+
+
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"li","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-01-18T04:55:30+00:00","dateModified":"2026-01-18T04:55:30+00:00","datePublished":"2026-01-18T04:55:30+00:00","description":"","headline":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://fairyeye.github.io/2026/01/18/%E5%BD%92%E6%A1%A3/MJ/"},"publisher":{"@type":"Organization","name":"li","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fairyeye.github.io/2026/01/18/%E5%BD%92%E6%A1%A3/MJ/","image":[]}</script>
+  
+</head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">LI</div><div class="sub cap">记录记录</div></a></div></header>
+
+<div class="nav-area">
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="归档" href="/archives/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/categories/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="关于" href="/about/" style="color:#F44336"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></nav>
+</div>
+<div class="widgets">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/01/17/%E6%A8%A1%E6%9D%BF/"><span class="title">模板</span></a><a class="item title" href="/2026/01/18/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/"><span class="title">本地虚拟机记录</span></a><a class="item title" href="/2023/02/13/%E5%BD%92%E6%A1%A3/%E7%AE%97%E6%B3%95/"><span class="title">算法</span></a><a class="item title" href="/2026/01/18/%E5%BD%92%E6%A1%A3/%E8%A3%85%E4%BF%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"><span class="title">装修注意事项</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/"><span class="title">设计模式笔记</span></a><a class="item title" href="/2026/01/18/%E5%BD%92%E6%A1%A3/%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E4%BB%A5%E4%B8%8B%E7%9F%A5%E8%AF%86/"><span class="title">需要掌握以下知识</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/"><span class="title">阿里巴巴手册</span></a><a class="item title" href="/2020/04/29/%E5%BD%92%E6%A1%A3/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/"><span class="title">数据库时间存储</span></a><a class="item title" href="/2022/12/07/%E5%BD%92%E6%A1%A3/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">搭建SSR服务器</span></a><a class="item title" href="/2020/04/17/%E5%BD%92%E6%A1%A3/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/"><span class="title">时间戳转换日期问题</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/fairyeye" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:your-email@example.com" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-01-18T04:55:30.277Z">2026-01-18</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-01-18T04:55:30.277Z">2026-01-18</time></span></div></div></div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。"><a href="#面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。" class="headerlink" title="面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。"></a><strong>面试官</strong>：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。</h2><p>候选人：</p>
+<p>好的，这些锁机制是解决并发问题的核心手段，各自适用于不同的场景。我来分别阐述它们的原理、应用及实践经验。</p>
+<hr>
+<h3 id="一、乐观锁（Optimistic-Lock）"><a href="#一、乐观锁（Optimistic-Lock）" class="headerlink" title="一、乐观锁（Optimistic Lock）"></a><strong>一、乐观锁（Optimistic Lock）</strong></h3><p><strong>核心思想</strong>：假设并发冲突的概率低，只在提交时检测数据是否被修改。<br><strong>实现方式</strong>：  </p>
+<ol>
+<li><strong>版本号机制</strong>：数据表中增加版本号字段，更新时校验版本号。  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="keyword">table</span> <span class="keyword">SET</span> <span class="keyword">value</span> <span class="operator">=</span> new_value, version <span class="operator">=</span> version <span class="operator">+</span> <span class="number">1</span> </span><br><span class="line"><span class="keyword">WHERE</span> id <span class="operator">=</span> #&#123;id&#125; <span class="keyword">AND</span> version <span class="operator">=</span> #&#123;old_version&#125;</span><br></pre></td></tr></table></figure></li>
+<li><strong>CAS（Compare And Swap）</strong>：通过CPU原子指令实现无锁并发。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">AtomicInteger</span> <span class="variable">count</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AtomicInteger</span>(<span class="number">0</span>);</span><br><span class="line">count.compareAndSet(<span class="number">0</span>, <span class="number">1</span>); <span class="comment">// 当前值为0时更新为1</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>适用场景</strong>：  </p>
+<ul>
+<li>读多写少，冲突概率低（如点赞计数、库存扣减）。  </li>
+<li>需要高并发吞吐（避免锁竞争开销）。</li>
+</ul>
+<p><strong>优点</strong>：无锁设计，性能高。<br><strong>缺点</strong>：  </p>
+<ul>
+<li><strong>ABA问题</strong>：数据被修改后恢复原值，导致CAS误判（可通过时间戳或递增版本号解决）。  </li>
+<li><strong>自旋开销</strong>：高冲突场景下频繁重试。</li>
+</ul>
+<p><strong>案例</strong>：<br>电商系统中，秒杀活动库存扣减使用Redis的<code>WATCH</code>+<code>MULTI</code>实现乐观锁，确保超卖问题。</p>
+<hr>
+<h3 id="二、悲观锁（Pessimistic-Lock）"><a href="#二、悲观锁（Pessimistic-Lock）" class="headerlink" title="二、悲观锁（Pessimistic Lock）"></a><strong>二、悲观锁（Pessimistic Lock）</strong></h3><p><strong>核心思想</strong>：假设并发冲突概率高，操作前先加锁独占资源。<br><strong>实现方式</strong>：  </p>
+<ol>
+<li><strong>数据库行锁</strong>：<code>SELECT ... FOR UPDATE</code>。  </li>
+<li><strong>Java锁机制</strong>：<code>synchronized</code>、<code>ReentrantLock</code>。</li>
+</ol>
+<p><strong>适用场景</strong>：  </p>
+<ul>
+<li>写多读少，冲突概率高（如账户转账、订单支付）。  </li>
+<li>需要强一致性保证。</li>
+</ul>
+<p><strong>优点</strong>：保证数据强一致性。<br><strong>缺点</strong>：锁竞争导致吞吐下降，可能引发死锁。  </p>
+<p><strong>案例</strong>：<br>银行转账时，使用数据库事务+行级锁，确保转账操作的原子性。</p>
+<hr>
+<h3 id="三、分布式锁（Distributed-Lock）"><a href="#三、分布式锁（Distributed-Lock）" class="headerlink" title="三、分布式锁（Distributed Lock）"></a><strong>三、分布式锁（Distributed Lock）</strong></h3><p><strong>核心思想</strong>：在分布式系统中协调多节点对共享资源的互斥访问。<br><strong>实现方式</strong>：  </p>
+<ol>
+<li><p><strong>Redis（AP模型）</strong>：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Redisson实现</span></span><br><span class="line"><span class="type">RLock</span> <span class="variable">lock</span> <span class="operator">=</span> redisson.getLock(<span class="string">&quot;order_lock&quot;</span>);</span><br><span class="line">lock.lock(<span class="number">30</span>, TimeUnit.SECONDS); <span class="comment">// 支持自动续期</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 业务逻辑</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    lock.unlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>缺点</strong>：主从切换可能导致锁失效（需RedLock算法，但仍有争议）。</li>
+</ul>
+</li>
+<li><p><strong>ZooKeeper（CP模型）</strong>：  </p>
+<ul>
+<li>基于临时顺序节点，通过Watcher机制实现锁竞争。  </li>
+<li>优点：强一致，无脑裂问题。  </li>
+<li>缺点：性能低于Redis，需维护长连接。</li>
+</ul>
+</li>
+</ol>
+<p><strong>适用场景</strong>：  </p>
+<ul>
+<li>分布式系统资源互斥（如定时任务调度、分布式事务协调）。</li>
+</ul>
+<p><strong>关键问题</strong>：  </p>
+<ul>
+<li><strong>锁续期</strong>：需实现心跳机制防止业务未完成锁超时（如Redisson的<code>WatchDog</code>）。  </li>
+<li><strong>容错性</strong>：确保锁在节点宕机时自动释放。</li>
+</ul>
+<p><strong>案例</strong>：<br>分布式系统中，使用ZooKeeper实现全局唯一ID生成服务的互斥锁。</p>
+<hr>
+<h3 id="四、读写锁（ReadWrite-Lock）"><a href="#四、读写锁（ReadWrite-Lock）" class="headerlink" title="四、读写锁（ReadWrite Lock）"></a><strong>四、读写锁（ReadWrite Lock）</strong></h3><p><strong>核心思想</strong>：读共享，写独占，提升读多写少场景的并发度。<br><strong>实现方式</strong>：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ReentrantReadWriteLock</span> <span class="variable">rwLock</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ReentrantReadWriteLock</span>();</span><br><span class="line"><span class="type">Lock</span> <span class="variable">readLock</span> <span class="operator">=</span> rwLock.readLock(); <span class="comment">// 读锁（共享）</span></span><br><span class="line"><span class="type">Lock</span> <span class="variable">writeLock</span> <span class="operator">=</span> rwLock.writeLock(); <span class="comment">// 写锁（独占）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 读操作</span></span><br><span class="line">readLock.lock();</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 读取数据</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    readLock.unlock();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写操作</span></span><br><span class="line">writeLock.lock();</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 修改数据</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    writeLock.unlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>适用场景</strong>：  </p>
+<ul>
+<li>读操作远多于写操作（如配置中心、缓存数据）。  </li>
+<li>需要保证写操作的原子性，同时允许多读并发。</li>
+</ul>
+<p><strong>优点</strong>：显著提升读性能。<br><strong>缺点</strong>：  </p>
+<ul>
+<li><strong>写饥饿</strong>：持续读操作可能导致写线程长期等待（可设置公平锁缓解）。  </li>
+<li><strong>锁降级</strong>：写锁可降级为读锁，但读锁无法升级为写锁。</li>
+</ul>
+<p><strong>案例</strong>：<br>缓存系统中，使用<code>StampedLock</code>的乐观读（<code>tryOptimisticRead</code>）进一步减少锁竞争。</p>
+<hr>
+<h3 id="五、锁机制对比与选型"><a href="#五、锁机制对比与选型" class="headerlink" title="五、锁机制对比与选型"></a><strong>五、锁机制对比与选型</strong></h3><table>
+<thead>
+<tr>
+<th><strong>锁类型</strong></th>
+<th><strong>适用场景</strong></th>
+<th><strong>性能</strong></th>
+<th><strong>一致性</strong></th>
+<th><strong>复杂度</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>乐观锁</strong></td>
+<td>低冲突、高并发读</td>
+<td>高</td>
+<td>最终</td>
+<td>低</td>
+</tr>
+<tr>
+<td><strong>悲观锁</strong></td>
+<td>高冲突、强一致性</td>
+<td>中</td>
+<td>强</td>
+<td>中</td>
+</tr>
+<tr>
+<td><strong>分布式锁</strong></td>
+<td>跨进程资源协调</td>
+<td>低</td>
+<td>依赖实现</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>读写锁</strong></td>
+<td>读多写少</td>
+<td>高</td>
+<td>强</td>
+<td>中</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="六、实践经验总结"><a href="#六、实践经验总结" class="headerlink" title="六、实践经验总结"></a><strong>六、实践经验总结</strong></h3><ol>
+<li><p><strong>减少锁粒度</strong>：  </p>
+<ul>
+<li>使用<code>ConcurrentHashMap</code>的分段锁替代全局锁。  </li>
+<li>数据库对非必要字段不加锁。</li>
+</ul>
+</li>
+<li><p><strong>避免死锁</strong>：  </p>
+<ul>
+<li>按固定顺序获取锁。  </li>
+<li>使用<code>tryLock</code>设置超时。</li>
+</ul>
+</li>
+<li><p><strong>监控与调优</strong>：  </p>
+<ul>
+<li>通过JMX监控锁竞争（如<code>ReentrantLock</code>的<code>getQueueLength</code>）。  </li>
+<li>压测验证锁性能（如使用JMeter模拟高并发）。</li>
+</ul>
+</li>
+<li><p><strong>分布式锁容灾</strong>：  </p>
+<ul>
+<li>为Redis锁设置合理的超时时间，并实现续期逻辑。  </li>
+<li>ZooKeeper锁需处理Session过期（如<code>Curator</code>的<code>InterProcessMutex</code>）。</li>
+</ul>
+</li>
+</ol>
+<p><strong>案例</strong>：<br>某交易平台在促销活动中，针对商品详情页的读多写少场景，采用<code>ReentrantReadWriteLock</code>，将QPS从1.2万提升至4.8万，同时保证价格库存的强一致性。</p>
+<hr>
+<p><strong>总结</strong>：  </p>
+<ul>
+<li><strong>乐观锁</strong>和<strong>悲观锁</strong>是解决并发问题的两种哲学，前者信任环境，后者防范风险。  </li>
+<li><strong>分布式锁</strong>是分布式系统的刚需，需在CAP中权衡选择Redis或ZooKeeper。  </li>
+<li><strong>读写锁</strong>通过分离读&#x2F;写操作最大化并发效率。  </li>
+<li>实际开发中需结合业务特点（冲突频率、一致性要求、吞吐需求）选择最合适的锁机制。</li>
+</ul>
+<h2 id="面试官：谈谈你对线程守护的理解。"><a href="#面试官：谈谈你对线程守护的理解。" class="headerlink" title="面试官：谈谈你对线程守护的理解。"></a><strong>面试官</strong>：谈谈你对线程守护的理解。</h2><p><strong>候选人</strong>：</p>
+<p>好的，守护线程（DaThread）是Java中一种特殊类型的线程，它的核心作用是为其他线程（用户线程）提供后台服务支持。当所有用户线程结束时，守护线程会自动终止，无论其任务是否完成。以下是我对守护线程的理解和实际应用中的注意事项：</p>
+<hr>
+<h3 id="一、守护线程的核心特性"><a href="#一、守护线程的核心特性" class="headerlink" title="一、守护线程的核心特性"></a><strong>一、守护线程的核心特性</strong></h3><ol>
+<li><p><strong>自动终止机制</strong><br>当JVM中仅剩守护线程运行时，JVM会直接退出，不会等待守护线程完成任务。<br><strong>示例</strong>：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Thread</span> <span class="variable">daemonThread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;守护线程运行中...&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123; Thread.sleep(<span class="number">1000</span>); &#125; </span><br><span class="line">        <span class="keyword">catch</span> (InterruptedException e) &#123; e.printStackTrace(); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">daemonThread.setDaemon(<span class="literal">true</span>); <span class="comment">// 必须在线程启动前设置</span></span><br><span class="line">daemonThread.start();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 主线程结束 → 所有用户线程终止 → 守护线程自动退出</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>非阻塞性</strong><br>守护线程的存在不会阻止JVM退出，适合执行非关键性任务（如日志轮转、监控等）。</p>
+</li>
+<li><p><strong>继承性</strong><br>由守护线程创建的线程默认也是守护线程。</p>
+</li>
+</ol>
+<hr>
+<h3 id="二、典型应用场景"><a href="#二、典型应用场景" class="headerlink" title="二、典型应用场景"></a><strong>二、典型应用场景</strong></h3><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>垃圾回收（GC）</strong></td>
+<td>JVM的垃圾回收线程是守护线程，负责自动内存管理</td>
+</tr>
+<tr>
+<td><strong>心跳检测</strong></td>
+<td>网络服务中定期发送心跳包检测连接状态</td>
+</tr>
+<tr>
+<td><strong>缓存清理</strong></td>
+<td>周期性清理过期缓存条目</td>
+</tr>
+<tr>
+<td><strong>日志异步写入</strong></td>
+<td>将日志写入操作委托给守护线程，避免阻塞主线程（需确保写入完整性）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="三、使用注意事项"><a href="#三、使用注意事项" class="headerlink" title="三、使用注意事项"></a><strong>三、使用注意事项</strong></h3><ol>
+<li><p><strong>设置时机</strong><br>必须在调用<code>start()</code>方法前设置<code>setDaemon(true)</code>，否则抛出<code>IllegalThreadStateException</code>。</p>
+</li>
+<li><p><strong>资源管理风险</strong><br>守护线程中不要执行关键任务（如数据库事务提交、文件持久化），否则可能因JVM退出导致数据丢失。<br><strong>反例</strong>：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">daemonThread = <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        writeToFile(); <span class="comment">// 可能未完成写入即被终止</span></span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="comment">// finally块可能无法执行</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>线程池中的守护线程</strong><br>通过<code>ThreadFactory</code>自定义线程池中的线程为守护线程：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ExecutorService</span> <span class="variable">executor</span> <span class="operator">=</span> Executors.newCachedThreadPool(r -&gt; &#123;</span><br><span class="line">    <span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(r);</span><br><span class="line">    t.setDaemon(<span class="literal">true</span>);</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>避免依赖守护线程执行清理</strong><br>需要显式释放资源（如关闭网络连接）时，应使用用户线程结合<code>shutdownHook</code>。</p>
+</li>
+</ol>
+<hr>
+<h3 id="四、守护线程-vs-用户线程"><a href="#四、守护线程-vs-用户线程" class="headerlink" title="四、守护线程 vs 用户线程"></a><strong>四、守护线程 vs 用户线程</strong></h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>守护线程</th>
+<th>用户线程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>JVM退出影响</strong></td>
+<td>立即终止</td>
+<td>必须等待执行完毕</td>
+</tr>
+<tr>
+<td><strong>默认类型</strong></td>
+<td>否（需显式设置）</td>
+<td>是（主线程默认是用户线程）</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>辅助性任务</td>
+<td>核心业务逻辑</td>
+</tr>
+<tr>
+<td><strong>资源依赖</strong></td>
+<td>避免持有需释放的资源</td>
+<td>需确保资源正确释放</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="五、实战避坑指南"><a href="#五、实战避坑指南" class="headerlink" title="五、实战避坑指南"></a><strong>五、实战避坑指南</strong></h3><ol>
+<li><p><strong>避免在守护线程中执行I&#x2F;O操作</strong><br>若必须执行，需增加同步屏障确保任务完成：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">CountDownLatch</span> <span class="variable">latch</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CountDownLatch</span>(<span class="number">1</span>);</span><br><span class="line">daemonThread = <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">    writeToFile();</span><br><span class="line">    latch.countDown();</span><br><span class="line">&#125;);</span><br><span class="line">daemonThread.setDaemon(<span class="literal">true</span>);</span><br><span class="line">daemonThread.start();</span><br><span class="line">latch.await(); <span class="comment">// 主线程等待守护线程完成</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>监控守护线程状态</strong><br>通过JMX或自定义监控逻辑检测守护线程是否存活：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!daemonThread.isAlive()) &#123;</span><br><span class="line">    log.error(<span class="string">&quot;守护线程异常终止&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>与ShutdownHook结合</strong><br>在JVM关闭时执行必要的清理操作：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Runtime.getRuntime().addShutdownHook(<span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">    <span class="comment">// 释放资源</span></span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p><strong>总结</strong>：<br>守护线程是Java多线程编程中重要的后台支持机制，但需谨慎使用。它适用于非关键性任务，如监控、日志等，但需避免依赖其执行资源敏感型操作。正确理解其生命周期和限制，能够有效提升程序的健壮性。例如，在分布式系统中，我们曾用守护线程实现服务注册中心的健康检查，确保在主服务线程异常退出时，守护线程能快速终止，避免僵尸进程。</p>
+<h2 id="线程池与线程安全容器详解"><a href="#线程池与线程安全容器详解" class="headerlink" title="线程池与线程安全容器详解"></a><strong>线程池与线程安全容器详解</strong></h2><h4 id="一、线程池的核心概念与实现"><a href="#一、线程池的核心概念与实现" class="headerlink" title="一、线程池的核心概念与实现"></a><strong>一、线程池的核心概念与实现</strong></h4><p>线程池是一种<strong>线程资源复用机制</strong>，通过预先创建并管理线程，降低频繁创建和销毁线程的开销，提升系统性能和稳定性。</p>
+<h5 id="1-线程池关键参数"><a href="#1-线程池关键参数" class="headerlink" title="1. 线程池关键参数"></a><strong>1. 线程池关键参数</strong></h5><ul>
+<li><strong>核心线程数（corePoolSize）</strong>：线程池长期维持的线程数量，即使空闲也不会回收。</li>
+<li><strong>最大线程数（maximumPoolSize）</strong>：线程池允许创建的最大线程数。</li>
+<li><strong>任务队列（workQueue）</strong>：用于缓存待执行任务的阻塞队列。</li>
+<li><strong>拒绝策略（RejectedExecutionHandler）</strong>：当任务数超过最大处理能力时的处理策略。</li>
+</ul>
+<h5 id="2-线程池工作流程"><a href="#2-线程池工作流程" class="headerlink" title="2. 线程池工作流程"></a><strong>2. 线程池工作流程</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A[提交任务] --&gt; B&#123;核心线程是否已满?&#125;</span><br><span class="line">B --&gt;|未满| C[创建新线程执行任务]</span><br><span class="line">B --&gt;|已满| D&#123;队列是否已满?&#125;</span><br><span class="line">D --&gt;|未满| E[任务入队等待]</span><br><span class="line">D --&gt;|已满| F&#123;是否达到最大线程数?&#125;</span><br><span class="line">F --&gt;|未达到| G[创建新线程执行任务]</span><br><span class="line">F --&gt;|已达到| H[触发拒绝策略]</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-常见线程池类型"><a href="#3-常见线程池类型" class="headerlink" title="3. 常见线程池类型"></a><strong>3. 常见线程池类型</strong></h5><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>FixedThreadPool</strong></td>
+<td>固定线程数，使用无界队列（LinkedBlockingQueue）</td>
+<td>长期稳定的并发任务</td>
+</tr>
+<tr>
+<td><strong>CachedThreadPool</strong></td>
+<td>线程数无上限，空闲线程60秒回收，使用同步队列（SynchronousQueue）</td>
+<td>短时异步任务，高并发但需防资源耗尽</td>
+</tr>
+<tr>
+<td><strong>ScheduledThreadPool</strong></td>
+<td>支持定时或周期性任务，使用DelayedWorkQueue</td>
+<td>定时任务、心跳检测</td>
+</tr>
+<tr>
+<td><strong>SingleThreadExecutor</strong></td>
+<td>单线程执行，保证任务顺序性</td>
+<td>需顺序执行的任务（如日志处理）</td>
+</tr>
+</tbody></table>
+<h5 id="4-拒绝策略"><a href="#4-拒绝策略" class="headerlink" title="4. 拒绝策略"></a><strong>4. 拒绝策略</strong></h5><ul>
+<li><strong>AbortPolicy</strong>（默认）：抛出RejectedExecutionException。</li>
+<li><strong>CallerRunsPolicy</strong>：由提交任务的线程直接执行任务。</li>
+<li><strong>DiscardPolicy</strong>：静默丢弃任务。</li>
+<li><strong>DiscardOldestPolicy</strong>：丢弃队列中最旧的任务，重试提交。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ThreadPoolExecutor</span> <span class="variable">executor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(</span><br><span class="line">    <span class="number">4</span>, <span class="comment">// corePoolSize</span></span><br><span class="line">    <span class="number">8</span>, <span class="comment">// maximumPoolSize</span></span><br><span class="line">    <span class="number">60</span>, TimeUnit.SECONDS, <span class="comment">// keepAliveTime</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">ArrayBlockingQueue</span>&lt;&gt;(<span class="number">100</span>), <span class="comment">// 有界队列</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.CallerRunsPolicy() <span class="comment">// 拒绝策略</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="二、线程安全容器"><a href="#二、线程安全容器" class="headerlink" title="二、线程安全容器"></a><strong>二、线程安全容器</strong></h4><p>线程安全容器通过<strong>内部同步机制</strong>保证多线程环境下的数据一致性，常见实现类位于<code>java.util.concurrent</code>包。</p>
+<h5 id="1-常见线程安全容器"><a href="#1-常见线程安全容器" class="headerlink" title="1. 常见线程安全容器"></a><strong>1. 常见线程安全容器</strong></h5><table>
+<thead>
+<tr>
+<th>容器</th>
+<th>实现原理</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ConcurrentHashMap</strong></td>
+<td>分段锁（JDK7）或 CAS + synchronized（JDK8）</td>
+<td>高并发读写，如缓存、计数器</td>
+</tr>
+<tr>
+<td><strong>CopyOnWriteArrayList</strong></td>
+<td>写时复制（复制整个数组）</td>
+<td>读多写少场景（如监听器列表）</td>
+</tr>
+<tr>
+<td><strong>BlockingQueue</strong></td>
+<td>锁 + Condition实现阻塞操作</td>
+<td>生产者-消费者模型（如任务队列）</td>
+</tr>
+<tr>
+<td><strong>ConcurrentLinkedQueue</strong></td>
+<td>CAS实现的无锁队列</td>
+<td>高吞吐量无阻塞队列</td>
+</tr>
+</tbody></table>
+<h5 id="2-核心实现对比"><a href="#2-核心实现对比" class="headerlink" title="2. 核心实现对比"></a><strong>2. 核心实现对比</strong></h5><ul>
+<li><p><strong>ConcurrentHashMap</strong><br>JDK8后采用<code>Node + CAS + synchronized</code>，锁粒度细化到链表头节点，并发度更高。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ConcurrentHashMap&lt;String, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;();</span><br><span class="line">map.computeIfAbsent(<span class="string">&quot;key&quot;</span>, k -&gt; <span class="number">1</span>); <span class="comment">// 原子操作</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>CopyOnWriteArrayList</strong><br>写操作通过复制数组实现线程安全，读操作无锁。适合遍历频繁但修改少的场景。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CopyOnWriteArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">CopyOnWriteArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;item&quot;</span>); <span class="comment">// 加锁复制数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>BlockingQueue</strong><br>如<code>ArrayBlockingQueue</code>（有界）和<code>LinkedBlockingQueue</code>（可选有界&#x2F;无界），支持阻塞插入&#x2F;取出。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BlockingQueue&lt;Runnable&gt; queue = <span class="keyword">new</span> <span class="title class_">ArrayBlockingQueue</span>&lt;&gt;(<span class="number">100</span>);</span><br><span class="line">queue.put(task); <span class="comment">// 阻塞直到队列有空位</span></span><br><span class="line"><span class="type">Runnable</span> <span class="variable">task</span> <span class="operator">=</span> queue.take(); <span class="comment">// 阻塞直到队列有元素</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="3-使用场景与选型"><a href="#3-使用场景与选型" class="headerlink" title="3. 使用场景与选型"></a><strong>3. 使用场景与选型</strong></h5><ul>
+<li><strong>高并发计数器</strong>：使用<code>ConcurrentHashMap</code>的<code>compute</code>方法。</li>
+<li><strong>缓存系统</strong>：<code>ConcurrentHashMap</code> + 软引用&#x2F;弱引用。</li>
+<li><strong>任务调度</strong>：<code>ThreadPoolExecutor</code> + <code>BlockingQueue</code>。</li>
+<li><strong>事件监听器</strong>：<code>CopyOnWriteArrayList</code>避免遍历时修改导致的异常。</li>
+</ul>
+<hr>
+<h4 id="三、实战经验与避坑指南"><a href="#三、实战经验与避坑指南" class="headerlink" title="三、实战经验与避坑指南"></a><strong>三、实战经验与避坑指南</strong></h4><h5 id="1-线程池常见问题"><a href="#1-线程池常见问题" class="headerlink" title="1. 线程池常见问题"></a><strong>1. 线程池常见问题</strong></h5><ul>
+<li><strong>资源耗尽</strong>：无界队列（如LinkedBlockingQueue）可能导致OOM。<ul>
+<li><strong>解决方案</strong>：使用有界队列并合理设置拒绝策略。</li>
+</ul>
+</li>
+<li><strong>死锁</strong>：任务相互等待导致线程饥饿。<ul>
+<li><strong>示例</strong>：线程池大小为2，两个任务各自提交子任务并等待结果。</li>
+<li><strong>解决</strong>：避免在任务中提交阻塞性子任务，或使用<code>ForkJoinPool</code>。</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-线程安全容器注意事项"><a href="#2-线程安全容器注意事项" class="headerlink" title="2. 线程安全容器注意事项"></a><strong>2. 线程安全容器注意事项</strong></h5><ul>
+<li><strong>ConcurrentHashMap的弱一致性</strong>：迭代器不保证反映最新修改。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ConcurrentHashMap&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;();</span><br><span class="line">map.put(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;1&quot;</span>);</span><br><span class="line">Iterator&lt;String&gt; it = map.values().iterator();</span><br><span class="line">map.put(<span class="string">&quot;b&quot;</span>, <span class="string">&quot;2&quot;</span>); </span><br><span class="line"><span class="comment">// 迭代器可能不包含&quot;b&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>CopyOnWriteArrayList的内存开销</strong>：频繁写操作会导致数组频繁复制，适合读多写少场景。</li>
+</ul>
+<h5 id="3-性能优化"><a href="#3-性能优化" class="headerlink" title="3. 性能优化"></a><strong>3. 性能优化</strong></h5><ul>
+<li><strong>线程池监控</strong>：通过<code>ThreadPoolExecutor</code>的<code>getActiveCount()</code>、<code>getQueue().size()</code>等指标实时监控。</li>
+<li><strong>容器选择</strong>：读多写少用<code>ConcurrentHashMap</code>，写多用<code>Collections.synchronizedMap()</code>（需外部同步）。</li>
+<li><strong>避免锁竞争</strong>：使用<code>LongAdder</code>替代<code>AtomicLong</code>（高并发计数器场景）。</li>
+</ul>
+<hr>
+<h4 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a><strong>四、总结</strong></h4><ul>
+<li><strong>线程池</strong>是管理线程生命周期的核心工具，需根据任务类型（CPU密集型、IO密集型）合理配置参数。</li>
+<li><strong>线程安全容器</strong>通过精细的锁机制或无锁编程实现高效并发，需根据读写比例和性能需求选择。</li>
+<li><strong>实际应用</strong>中，线程池需配合有界队列和拒绝策略防止资源耗尽，线程安全容器需注意迭代器弱一致性和内存开销。</li>
+</ul>
+<p>通过合理使用线程池和线程安全容器，可显著提升高并发系统的吞吐量和稳定性。例如，某电商系统通过<code>ThreadPoolExecutor</code>管理订单处理线程，结合<code>ConcurrentHashMap</code>缓存商品信息，成功支撑了双十一期间每秒数万次的并发请求。</p>
+<h2 id="面试官：谈谈你对线程安全的理解，以及信号量、Lock、synchronized的使用概念？"><a href="#面试官：谈谈你对线程安全的理解，以及信号量、Lock、synchronized的使用概念？" class="headerlink" title="面试官：谈谈你对线程安全的理解，以及信号量、Lock、synchronized的使用概念？"></a><strong>面试官</strong>：谈谈你对线程安全的理解，以及信号量、Lock、synchronized的使用概念？</h2><p><strong>候选人</strong>：</p>
+<p>好的，我来分享一下我对线程安全和这些同步机制的理解。</p>
+<hr>
+<h3 id="1-线程安全的核心问题"><a href="#1-线程安全的核心问题" class="headerlink" title="1. 线程安全的核心问题"></a><strong>1. 线程安全的核心问题</strong></h3><p>线程安全的核心是确保多个线程并发访问共享资源时，程序的执行结果始终符合预期。这需要解决三个关键问题：</p>
+<ul>
+<li><strong>原子性</strong>：操作不可分割（如 <code>i++</code> 需要保证“读取-修改-写入”的原子性）。</li>
+<li><strong>可见性</strong>：一个线程对共享变量的修改对其他线程立即可见。</li>
+<li><strong>有序性</strong>：禁止指令重排序导致逻辑错误。</li>
+</ul>
+<hr>
+<h3 id="2-synchronized：内置锁"><a href="#2-synchronized：内置锁" class="headerlink" title="2. synchronized：内置锁"></a><strong>2. synchronized：内置锁</strong></h3><p><strong>特点</strong>：</p>
+<ul>
+<li><strong>语法简单</strong>：直接修饰方法或代码块，自动加锁&#x2F;解锁。</li>
+<li><strong>基于Monitor机制</strong>：每个对象关联一个监视器锁，通过字节码指令 <code>monitorenter</code> 和 <code>monitorexit</code> 实现。</li>
+<li><strong>非公平锁</strong>：等待线程无法按申请顺序获取锁。</li>
+<li><strong>可重入性</strong>：同一线程可重复获取同一把锁（避免死锁）。</li>
+</ul>
+<p><strong>使用场景</strong>：</p>
+<ul>
+<li>简单的临界区保护（如单例模式的懒加载）。</li>
+<li>对性能要求不高且同步逻辑不复杂的场景。</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Counter</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> count;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">increment</span><span class="params">()</span> &#123;</span><br><span class="line">        count++; <span class="comment">// 保证原子性</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>无法中断等待锁的线程。</li>
+<li>无法设置超时。</li>
+<li>粒度较粗（只能锁整个方法或对象）。</li>
+</ul>
+<hr>
+<h3 id="3-Lock接口：灵活控制"><a href="#3-Lock接口：灵活控制" class="headerlink" title="3. Lock接口：灵活控制"></a><strong>3. Lock接口：灵活控制</strong></h3><p><strong>核心实现（如ReentrantLock）</strong>：</p>
+<ul>
+<li><strong>显式锁</strong>：需要手动调用 <code>lock()</code> 和 <code>unlock()</code>（通常在 <code>finally</code> 中释放）。</li>
+<li><strong>可中断</strong>：通过 <code>lockInterruptibly()</code> 响应中断。</li>
+<li><strong>超时机制</strong>：<code>tryLock(long timeout, TimeUnit unit)</code> 避免死等。</li>
+<li><strong>公平性</strong>：支持公平锁（按申请顺序获取）和非公平锁。</li>
+<li><strong>条件变量</strong>：通过 <code>Condition</code> 实现线程间精确唤醒（如生产者-消费者模型）。</li>
+</ul>
+<p><strong>使用场景</strong>：</p>
+<ul>
+<li>需要灵活控制锁的获取与释放。</li>
+<li>需要实现复杂同步逻辑（如超时、可中断）。</li>
+<li>需要公平性保证的高并发场景。</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Lock</span> <span class="variable">lock</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ReentrantLock</span>();</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">transfer</span><span class="params">(Account from, Account to, <span class="type">int</span> amount)</span> &#123;</span><br><span class="line">    lock.lock();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 转账逻辑</span></span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        lock.unlock();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优势</strong>：</p>
+<ul>
+<li>更细粒度的控制。</li>
+<li>支持多条件变量，提升并发效率。</li>
+</ul>
+<hr>
+<h3 id="4-信号量（Semaphore）：资源管控"><a href="#4-信号量（Semaphore）：资源管控" class="headerlink" title="4. 信号量（Semaphore）：资源管控"></a><strong>4. 信号量（Semaphore）：资源管控</strong></h3><p><strong>核心思想</strong>：</p>
+<ul>
+<li>通过“许可证”机制控制并发线程数。</li>
+<li>初始化时指定许可证数量，线程获取许可证后执行，执行完毕释放。</li>
+</ul>
+<p><strong>使用场景</strong>：</p>
+<ul>
+<li>限流（如接口每秒最多处理100个请求）。</li>
+<li>资源池管理（如数据库连接池）。</li>
+<li>控制同时访问特定资源的线程数。</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Semaphore</span> <span class="variable">semaphore</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Semaphore</span>(<span class="number">10</span>); <span class="comment">// 允许10个线程并发</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">accessResource</span><span class="params">()</span> &#123;</span><br><span class="line">    semaphore.acquire(); <span class="comment">// 获取许可</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 使用资源</span></span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        semaphore.release(); <span class="comment">// 释放许可</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>特性</strong>：</p>
+<ul>
+<li>支持公平&#x2F;非公平模式。</li>
+<li>可动态调整许可证数量（如 <code>semaphore.release(5)</code>）。</li>
+</ul>
+<hr>
+<h3 id="5-对比与选型"><a href="#5-对比与选型" class="headerlink" title="5. 对比与选型"></a><strong>5. 对比与选型</strong></h3><table>
+<thead>
+<tr>
+<th><strong>机制</strong></th>
+<th><strong>适用场景</strong></th>
+<th><strong>优势</strong></th>
+<th><strong>局限性</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>synchronized</strong></td>
+<td>简单同步、单JVM内互斥</td>
+<td>自动管理、无需手动释放</td>
+<td>功能单一、无法中断或超时</td>
+</tr>
+<tr>
+<td><strong>Lock</strong></td>
+<td>复杂锁逻辑、需要细粒度控制</td>
+<td>灵活、支持条件变量和超时</td>
+<td>需手动管理、易遗漏释放</td>
+</tr>
+<tr>
+<td><strong>Semaphore</strong></td>
+<td>资源并发数限制、流量控制</td>
+<td>灵活控制并发度</td>
+<td>不保证资源操作的原子性</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="6-实战经验与避坑指南"><a href="#6-实战经验与避坑指南" class="headerlink" title="6. 实战经验与避坑指南"></a><strong>6. 实战经验与避坑指南</strong></h3><ol>
+<li><p><strong>锁粒度控制</strong>：</p>
+<ul>
+<li>粗粒度锁（如锁整个方法）可能导致性能瓶颈。</li>
+<li>细粒度锁（如分段锁）提升并发能力，但复杂度高。</li>
+</ul>
+</li>
+<li><p><strong>死锁预防</strong>：</p>
+<ul>
+<li>避免嵌套锁（如线程A持有锁1请求锁2，线程B持有锁2请求锁1）。</li>
+<li>使用 <code>tryLock</code> 设置超时，打破死锁等待。</li>
+</ul>
+</li>
+<li><p><strong>性能优化</strong>：</p>
+<ul>
+<li>读多写少场景使用 <code>ReadWriteLock</code>（如缓存）。</li>
+<li>无竞争时，<code>synchronized</code> 经过JVM优化（偏向锁、轻量级锁）性能优于 <code>Lock</code>。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>总结</strong>：  </p>
+<ul>
+<li><strong>synchronized</strong> 适合简单场景，开发成本低；  </li>
+<li><strong>Lock</strong> 提供更灵活的并发控制，适合复杂逻辑；  </li>
+<li><strong>Semaphore</strong> 用于资源管控而非互斥。实际选型需结合具体场景，在高并发系统中，通常会组合使用多种机制（如 <code>synchronized</code> + <code>ConcurrentHashMap</code> + <code>Semaphore</code>）实现最优效果。</li>
+</ul>
+</article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://fairyeye.github.io/2026/01/18/%E5%BD%92%E6%A1%A3/MJ/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://fairyeye.github.io/2026/01/18/%E5%BD%92%E6%A1%A3/MJ/&title= - LI&summary=面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。候选人：
+好的，这些锁机制是解决并发问题的核心手段，各自适用于不同的场景。我来分别阐述它们的原理、应用及实践经验。
+
+一、乐观锁（Optimistic Lock）核心思想：假设并..."><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://fairyeye.github.io/2026/01/18/%E5%BD%92%E6%A1%A3/MJ/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/01/18/%E5%BD%92%E6%A1%A3/Leetcode/">2026-01-18</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/01/18/%E5%BD%92%E6%A1%A3/Mac%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/">Navicat数据库导出链接密码解析</a></div></section></div>
+
+
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="fairyeye/fairyeye.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNTM2NzI0OTU=" data-category="Announcements" data-category-id="DIC_kwDODx68L84C1FEi" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:2;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/%E5%BD%92%E6%A1%A3/">归档</a></div><div class="sitemap-group"><span class="fs15">关于</span><a href="/about/">关于我</a><a target="_blank" rel="noopener" href="https://github.com/fairyeye">GitHub</a><a href="/atom.xml">RSS</a></div></div><div class="text"><p>本站由 <a href="%7Bconfig.url%7D">{config.author}</a> 使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 和 <a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%9A%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E4%B9%90%E8%A7%82%E9%94%81%E3%80%81%E6%82%B2%E8%A7%82%E9%94%81%E3%80%81%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E3%80%81%E8%AF%BB%E5%86%99%E9%94%81%E7%9A%84%E7%90%86%E8%A7%A3%E3%80%82"><span class="toc-text">面试官：谈谈你对乐观锁、悲观锁、分布式锁、读写锁的理解。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B9%90%E8%A7%82%E9%94%81%EF%BC%88Optimistic-Lock%EF%BC%89"><span class="toc-text">一、乐观锁（Optimistic Lock）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%82%B2%E8%A7%82%E9%94%81%EF%BC%88Pessimistic-Lock%EF%BC%89"><span class="toc-text">二、悲观锁（Pessimistic Lock）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%EF%BC%88Distributed-Lock%EF%BC%89"><span class="toc-text">三、分布式锁（Distributed Lock）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%AF%BB%E5%86%99%E9%94%81%EF%BC%88ReadWrite-Lock%EF%BC%89"><span class="toc-text">四、读写锁（ReadWrite Lock）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%94%81%E6%9C%BA%E5%88%B6%E5%AF%B9%E6%AF%94%E4%B8%8E%E9%80%89%E5%9E%8B"><span class="toc-text">五、锁机制对比与选型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%AE%9E%E8%B7%B5%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-text">六、实践经验总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%9A%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E7%BA%BF%E7%A8%8B%E5%AE%88%E6%8A%A4%E7%9A%84%E7%90%86%E8%A7%A3%E3%80%82"><span class="toc-text">面试官：谈谈你对线程守护的理解。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7"><span class="toc-text">一、守护线程的核心特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">二、典型应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">三、使用注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B-vs-%E7%94%A8%E6%88%B7%E7%BA%BF%E7%A8%8B"><span class="toc-text">四、守护线程 vs 用户线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%AE%9E%E6%88%98%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97"><span class="toc-text">五、实战避坑指南</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0%E4%B8%8E%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="toc-text">线程池与线程安全容器详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%AE%9E%E7%8E%B0"><span class="toc-text">一、线程池的核心概念与实现</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%85%B3%E9%94%AE%E5%8F%82%E6%95%B0"><span class="toc-text">1. 线程池关键参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">2. 线程池工作流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%B8%B8%E8%A7%81%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%B1%BB%E5%9E%8B"><span class="toc-text">3. 常见线程池类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E6%8B%92%E7%BB%9D%E7%AD%96%E7%95%A5"><span class="toc-text">4. 拒绝策略</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">二、线程安全容器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%B8%B8%E8%A7%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">1. 常见线程安全容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%A0%B8%E5%BF%83%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94"><span class="toc-text">2. 核心实现对比</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%B8%8E%E9%80%89%E5%9E%8B"><span class="toc-text">3. 使用场景与选型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C%E4%B8%8E%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97"><span class="toc-text">三、实战经验与避坑指南</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">1. 线程池常见问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%AE%B9%E5%99%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">2. 线程安全容器注意事项</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">3. 性能优化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-text">四、总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%9A%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%BF%A1%E5%8F%B7%E9%87%8F%E3%80%81Lock%E3%80%81synchronized%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A6%82%E5%BF%B5%EF%BC%9F"><span class="toc-text">面试官：谈谈你对线程安全的理解，以及信号量、Lock、synchronized的使用概念？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98"><span class="toc-text">1. 线程安全的核心问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-synchronized%EF%BC%9A%E5%86%85%E7%BD%AE%E9%94%81"><span class="toc-text">2. synchronized：内置锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Lock%E6%8E%A5%E5%8F%A3%EF%BC%9A%E7%81%B5%E6%B4%BB%E6%8E%A7%E5%88%B6"><span class="toc-text">3. Lock接口：灵活控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BF%A1%E5%8F%B7%E9%87%8F%EF%BC%88Semaphore%EF%BC%89%EF%BC%9A%E8%B5%84%E6%BA%90%E7%AE%A1%E6%8E%A7"><span class="toc-text">4. 信号量（Semaphore）：资源管控</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%AF%B9%E6%AF%94%E4%B8%8E%E9%80%89%E5%9E%8B"><span class="toc-text">5. 对比与选型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C%E4%B8%8E%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97"><span class="toc-text">6. 实战经验与避坑指南</span></a></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `/%5Bobject%20Object%5D`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      const maxRetry = 3;
+      let retryCount = 0;
+
+      return new Promise((resolve, reject) => {
+        const load = () => {
+          utils.onLoading?.(el);
+
+          let timedOut = false;
+          const timeout = setTimeout(() => {
+            timedOut = true;
+            console.warn('[request] 超时:', url);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject('请求超时');
+            } else {
+              setTimeout(load, 1000);
+            }
+          }, 5000);
+
+          fetch(url).then(resp => {
+            if (timedOut) return;
+            clearTimeout(timeout);
+
+            if (!resp.ok) throw new Error('响应失败');
+            return resp;
+          }).then(data => {
+            if (timedOut) return;
+            utils.onLoadSuccess?.(el);
+            callback(data);
+            resolve(data);
+          }).catch(err => {
+            clearTimeout(timeout);
+            console.warn('[request] 错误:', err);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject(err);
+            } else {
+              setTimeout(load, 1000);
+            }
+          });
+        };
+
+        load();
+      });
+    },
+    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
+      return new Promise((resolve, reject) => {
+        let retryCount = 0;
+
+        const tryRequest = () => {
+          let timedOut = false;
+          const timer = setTimeout(() => {
+            timedOut = true;
+            if (++retryCount > maxRetry) reject('timeout');
+            else tryRequest();
+          }, timeout);
+
+          fetch(url, options)
+            .then(resp => {
+              clearTimeout(timer);
+              if (!resp.ok) throw new Error('bad response');
+              resolve(resp);
+            })
+            .catch(err => {
+              clearTimeout(timer);
+              if (++retryCount > maxRetry) reject(err);
+              else setTimeout(tryRequest, 500);
+            });
+        };
+
+        tryRequest();
+      });
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      const wrapper = el.closest('.lazy-box');
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+    
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+      if (def.loading) {
+        icon.style.backgroundImage = `url("${def.loading}")`;
+      }
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+  
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.33.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    // applyThemeToGiscus(theme)
+  }
+
+  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
+  const applyThemeToGiscus = (theme) => {
+    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const memos = document.getElementsByClassName('ds-memos');
+    if (memos != undefined && memos.length > 0) {
+      needFancybox = true;
+    }
+    const fancybox = document.getElementsByClassName('with-fancybox');
+    if (fancybox != undefined && fancybox.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
