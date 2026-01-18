@@ -21,7 +21,7 @@ menubar:
       theme: '#3DC550'
       icon: solar:notebook-bookmark-bold-duotone
       title: 归档
-      url: /archive/
+      url: /archives/
     - id: explore
       theme: '#FA6400'
       icon: solar:planet-bold-duotone
