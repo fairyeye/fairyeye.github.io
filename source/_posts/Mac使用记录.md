@@ -11,7 +11,6 @@ categories: 杂项
 
 
 ```bash
-
 # 1. 安装 Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -88,7 +87,13 @@ gradle -v
 > 💡 后续升级：`sdk upgrade gradle`  
 > 切换版本：`sdk use gradle 8.5`
 
+## 其它Home Brew应用
 
+```bash
+brew install gemini-cli
+
+npx zcf
+```
 
 
 # 软件设置
