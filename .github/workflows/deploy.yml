@@ -22,6 +22,10 @@ jobs:
         with:
           node-version: '20'
           cache: pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       # 3. 安装依赖（包括 hexo 和主题所需插件）
       - name: Install dependencies
