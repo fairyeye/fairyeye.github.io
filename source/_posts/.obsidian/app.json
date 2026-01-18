@@ -6,5 +6,8 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "focusNewTab": false
+  "focusNewTab": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./附件",
+  "alwaysUpdateLinks": true
 }

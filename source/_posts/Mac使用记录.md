@@ -49,6 +49,46 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 
 
+## 使用 SDKMAN!（强烈推荐，尤其开发者）
+
+> **优点**：一键切换 Gradle 版本、自动配置 PATH、支持 Groovy/Kotlin/Java 等工具链
+
+### 1. 安装 SDKMAN!
+
+```bash
+# 安装 SDKMAN!
+curl -s "https://get.sdkman.io" | bash
+
+# 重载 shell 配置
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+```
+
+### 2. 安装 Gradle
+
+```bash
+# 查看可用版本
+sdk list gradle
+
+# 安装最新稳定版（推荐）
+sdk install gradle
+
+# 或安装指定版本（如 LTS 版）
+sdk install gradle 8.5
+```
+
+### 3. 验证
+
+
+```bash
+gradle -v
+```
+
+✅ 输出应包含 Gradle 版本、JVM 信息等。
+
+> 💡 后续升级：`sdk upgrade gradle`  
+> 切换版本：`sdk use gradle 8.5`
+
+
 
 
 # 软件设置
