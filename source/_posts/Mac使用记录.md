@@ -3,6 +3,7 @@ title: Mac使用记录
 tags:
   - 工具
 categories: 杂项
+hidden: true
 ---
 
 # 环境配置
@@ -195,3 +196,29 @@ npx zcf
 #### 3. 如果需要全局护眼绿
 
 截图豆沙绿的图片，在`Appearance & Behavior → Appearance` 设置背景图片，不透明100即可。
+
+
+
+
+```json
+
+[
+    {
+        "ANTHROPIC_BASE_URL": "https://api.xiaomimimo.com/anthropic",
+        "ANTHROPIC_AUTH_TOKEN": "sk-ca1v8uqezj1bxcp61jzfcubrbbdjz8kk8klt3ychxca650eb",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "mimo-v2-flash",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "mimo-v2-flash",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "mimo-v2-flash"
+    },
+    {
+        "ANTHROPIC_AUTH_TOKEN": "ak_2Xp3dn4tW7NU66s1c06929ww7u090",
+        "ANTHROPIC_BASE_URL": "https://api.longcat.chat/anthropic",
+        "ANTHROPIC_MODEL": "LongCat-Flash-Chat",
+        "ANTHROPIC_SMALL_FAST_MODEL": "LongCat-Flash-Chat",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "LongCat-Flash-Chat",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "LongCat-Flash-Chat",
+        "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "6000",
+        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1
+    }
+]
+```
