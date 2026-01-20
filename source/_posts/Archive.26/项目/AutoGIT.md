@@ -257,3 +257,31 @@ pnpm run compile
 ---
 
 *需要帮助？查看 [README.md](./README.md) 或 [CLAUDE.md](./CLAUDE.md)*
+
+
+
+
+
+📦 方法二：打包成 .vsix 文件安装
+
+步骤 1：打包扩展
+在项目根目录运行：
+
+bash
+bash
+pnpm run package
+这会生成一个 autogit-1.0.0.vsix 文件。
+
+
+步骤 2：安装到 VS Code
+1.打开 VS Code
+2.按 Ctrl+Shift+X 打开扩展视图
+3.点击右上角的 "..." 菜单
+4.选择 "从 VSIX 安装..."
+5.选择你生成的 .vsix 文件
+6.安装完成后，重启 VS Code
+
+步骤 3：测试安装的扩展
+1.打开一个 Git 项目
+2.按 Ctrl+Shift+P，输入 AutoGit: Show Status
+3.检查功能是否正常工作
