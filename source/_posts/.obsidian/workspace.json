@@ -152,13 +152,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mac使用记录.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Mac使用记录 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -180,11 +179,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "Mac使用记录.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "Mac使用记录的笔记属性"
+              "title": "笔记属性"
             }
           },
           {
@@ -198,7 +195,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
