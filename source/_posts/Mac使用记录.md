@@ -179,6 +179,8 @@ npx zcf
 
 ## iTerm2配置
 
+
+
 ![](https://s3.bmp.ovh/imgs/2026/01/18/e93b31e7c60f6725.png)
 
 ## idea 
@@ -204,7 +206,7 @@ npx zcf
 截图豆沙绿的图片，在`Appearance & Behavior → Appearance` 设置背景图片，不透明100即可。
 
 
-
+## Claude 备份配置
 
 ```json
 
