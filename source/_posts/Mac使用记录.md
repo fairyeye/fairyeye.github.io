@@ -43,6 +43,8 @@ source ~/.zshrc
 
 ## 安装 Oh My Zsh
 
+- 安装之前 先激活IDEA
+
 ### 使用 curl（推荐）
 
 ```sh
