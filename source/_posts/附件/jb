@@ -1,0 +1,433 @@
+export JB_AUTH_CODE=default_auth
+#!/bin/bash
+
+# 确保PATH环境变量正确
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# ============ 平台检测 =============
+detect_platform() {
+    case "$(uname -s)" in
+        Darwin)
+            OS="macOS"
+            SHA_TOOL="shasum"
+            OPEN_CMD="open"
+            FILE_VMOPTIONS=".vmoptions"
+            ;;
+        Linux)
+            OS="Linux"
+            SHA_TOOL="sha1sum"
+            OPEN_CMD="xdg-open"
+            FILE_VMOPTIONS="64.vmoptions"
+            ;;
+        *)
+            OS="Unknown"
+            SHA_TOOL="sha1sum"
+            OPEN_CMD="xdg-open"
+            FILE_VMOPTIONS=".vmoptions"
+            ;;
+    esac
+}
+detect_platform
+
+# ============ 配置 =============
+DEBUG=true
+ENABLE_COLOR=true
+
+# 服务器配置
+URL_BASE="http://jb.ide.to"
+URL_DOWNLOAD="${URL_BASE}/ja-netfilter"
+URL_LICENSE="${URL_BASE}/auth"
+
+# 从环境变量获取授权码
+AUTH_CODE="$JB_AUTH_CODE"
+
+# 用户路径处理
+if [ "$(id -u)" -eq 0 ] && [ -n "$SUDO_USER" ]; then
+    ORIGINAL_USER="$SUDO_USER"
+    USER_HOME="/home/${SUDO_USER}"
+else
+    ORIGINAL_USER="$(whoami)"
+    USER_HOME="${HOME}"
+fi
+
+# macOS 用户路径修正
+if [[ "$OS" == "macOS" ]]; then
+    USER_HOME="/Users/${ORIGINAL_USER}"
+fi
+
+# 工作路径配置
+dir_work="${USER_HOME}/.jb_run"
+dir_config="${dir_work}/config"
+dir_plugins="${dir_work}/plugins"
+file_netfilter_jar="${dir_work}/ja-netfilter.jar"
+
+# JetBrains 目录配置
+if [[ "$OS" == "macOS" ]]; then
+    dir_cache_jb="${USER_HOME}/Library/Caches/JetBrains"
+    dir_config_jb="${USER_HOME}/Library/Application Support/JetBrains"
+else
+    dir_cache_jb="${USER_HOME}/.cache/JetBrains"
+    dir_config_jb="${USER_HOME}/.config/JetBrains"
+fi
+
+# 日志颜色设置
+if $ENABLE_COLOR; then
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    YELLOW='\033[0;33m'
+    GRAY='\033[38;5;240m'
+    NC='\033[0m'
+else
+    RED=''
+    GREEN=''
+    YELLOW=''
+    GRAY=''
+    NC=''
+fi
+
+# 产品列表配置
+PRODUCTS='[{"name":"idea","productCode":"II,PCWMP,PSI"},{"name":"clion","productCode":"CL,PSI,PCWMP"},{"name":"phpstorm","productCode":"PS,PCWMP,PSI"},{"name":"goland","productCode":"GO,PSI,PCWMP"},{"name":"pycharm","productCode":"PC,PSI,PCWMP"},{"name":"webstorm","productCode":"WS,PCWMP,PSI"},{"name":"rider","productCode":"RD,PDB,PSI,PCWMP"},{"name":"datagrip","productCode":"DB,PSI,PDB"},{"name":"rubymine","productCode":"RM,PCWMP,PSI"},{"name":"appcode","productCode":"AC,PCWMP,PSI"},{"name":"dataspell","productCode":"DS,PSI,PDB,PCWMP"},{"name":"dotmemory","productCode":"DM"},{"name":"rustrover","productCode":"RR,PSI,PCWP"}]'
+
+# ============ 工具函数 =============
+log() {
+    local level="$1"
+    local message="$2"
+    local color=""
+    case "$level" in
+        "INFO") color="$NC" ;;
+        "DEBUG") [[ "$DEBUG" == true ]] || return; color="$GRAY" ;;
+        "WARNING") color="$YELLOW" ;;
+        "ERROR") color="$RED" ;;
+        "SUCCESS") color="$GREEN" ;;
+        *) color="$NC" ;;
+    esac
+    echo -e "${color}[$(date '+%Y-%m-%d %H:%M:%S')][$level] ${message}${NC}"
+}
+
+debug()   { log "DEBUG" "$1"; }
+info()    { log "INFO" "$1"; }
+warning() { log "WARNING" "$1"; }
+error()   { log "ERROR" "$1"; }
+success() { log "SUCCESS" "$1"; }
+
+# 显示ASCII Logo
+show_ascii_jb() {
+    cat <<'EOF'
+JJJJJJ   EEEEEEE   TTTTTTTT  BBBBBBB    RRRRRR    AAAAAA    IIIIIIII  NNNN   NN   SSSSSS
+   JJ    EE           TT     BB    BB   RR   RR   AA  AA       II     NNNNN  NN  SS
+   JJ    EE           TT     BB    BB   RR   RR   AA  AA       II     NN NNN NN   SS
+   JJ    EEEEE        TT     BBBBBBB    RRRRRR    AAAAAA       II     NN  NNNNN    SSSSS
+   JJ    EE           TT     BB    BB   RR   RR   AA  AA       II     NN   NNNN         SS
+JJ JJ    EE           TT     BB    BB   RR   RR   AA  AA       II     NN    NNN          SS
+ JJJJ    EEEEEEE      TT     BBBBBBB    RR   RR   AA  AA    IIIIIIII  NN    NNN    SSSSSS
+EOF
+}
+
+# 依赖检查与安装
+check_and_install_deps() {
+    local deps=("curl" "jq")
+    local missing=()
+    for dep in "${deps[@]}"; do
+        if ! command -v "$dep" &>/dev/null; then missing+=("$dep"); fi
+    done
+    [ ${#missing[@]} -eq 0 ] && { info "所有依赖已安装。"; return; }
+
+    warning "缺少以下依赖：${missing[*]}，正在尝试自动安装..."
+    case "$(uname -s)" in
+        Darwin)
+            if ! command -v brew &>/dev/null; then
+                error "检测到 macOS 但未安装 Homebrew，请先安装 Homebrew"
+                exit 1
+            fi
+            brew install "${missing[@]}"
+            ;;
+        Linux)
+            if command -v apt-get &>/dev/null; then
+                sudo apt update && sudo apt install -y "${missing[@]}"
+            elif command -v dnf &>/dev/null; then
+                sudo dnf install -y "${missing[@]}"
+            elif command -v yum &>/dev/null; then
+                sudo yum install -y "${missing[@]}"
+            elif command -v pacman &>/dev/null; then
+                sudo pacman -Sy --noconfirm "${missing[@]}"
+            else
+                error "无法识别的 Linux 发行版，请手动安装依赖：${missing[*]}"
+                exit 1
+            fi
+            ;;
+        *)
+            error "不支持的操作系统"
+            exit 1
+            ;;
+    esac
+    for dep in "${missing[@]}"; do
+        if ! command -v "$dep" &>/dev/null; then
+            error "安装失败：$dep"
+            exit 1
+        fi
+    done
+    success "所有依赖已成功安装！"
+}
+
+# 产品解析工具
+parse_product_from_json() {
+    local index="$1"
+    local name=$(echo "$PRODUCTS" | jq -r ".[$index].name")
+    local code=$(echo "$PRODUCTS" | jq -r ".[$index].productCode")
+    echo "$name|$code"
+}
+
+# 工作目录创建
+do_create_work_dir() {
+    if [[ "${dir_work}" == "/" || -z "${dir_work}" ]]; then
+        error "检测到非法路径: ${dir_work}，请检查配置。"
+        exit 1
+    fi
+    if [ -d "${dir_work}" ]; then
+        rm -rf "${dir_work}" || {
+            error "文件被占用，请先关闭所有Jetbrains IDE后再试！"
+            exit 1
+        }
+    fi
+    mkdir -p "${dir_config}" "${dir_plugins}" || {
+        error "创建工作目录失败: ${dir_config} 或 ${dir_plugins}"
+        exit 1
+    }
+    debug "创建工作目录: ${dir_work}"
+}
+
+# 文件下载
+download_one_file() {
+    local url="$1"
+    local file_save_path="$2"
+    debug "正在下载: ${url} -> ${file_save_path}"
+    curl -s -o "${file_save_path}" "${url}"
+    if [ $? -ne 0 ]; then
+        error "下载失败: ${url}"
+        exit 1
+    fi
+    if [[ "$file_save_path" == *.jar ]]; then
+        local sha1_hash
+        if command -v $SHA_TOOL &>/dev/null; then
+            sha1_hash=$($SHA_TOOL "$file_save_path" | awk '{print $1}')
+        else
+            warning "未找到 $SHA_TOOL 工具，跳过 SHA-1 校验"
+            return
+        fi
+        debug "sha1: $sha1_hash"
+    fi
+}
+
+progress_bar() {
+    local current=$1
+    local total=$2
+    local bar_length=30
+    local percent=$((current * 100 / total))
+    local filled=$((percent * bar_length / 100))
+    local bar="["
+    bar+=$(printf '#%.0s' $(seq 1 $filled))
+    bar+=$(printf '.%.0s' $(seq 1 $((bar_length - filled))))
+    bar+="]"
+    printf "\r配置 ja-netfilter... %d/%d %s %d%%" "$current" "$total" "$bar" "$percent"
+}
+
+do_download_resources() {
+    local resources=(
+        "${URL_DOWNLOAD}/ja-netfilter.jar|${file_netfilter_jar}"
+        "${URL_DOWNLOAD}/config/dns.conf|${dir_config}/dns.conf"
+        "${URL_DOWNLOAD}/config/native.conf|${dir_config}/native.conf"
+        "${URL_DOWNLOAD}/config/power.conf|${dir_config}/power.conf"
+        "${URL_DOWNLOAD}/config/url.conf|${dir_config}/url.conf"
+        "${URL_DOWNLOAD}/plugins/dns.jar|${dir_plugins}/dns.jar"
+        "${URL_DOWNLOAD}/plugins/native.jar|${dir_plugins}/native.jar"
+        "${URL_DOWNLOAD}/plugins/power.jar|${dir_plugins}/power.jar"
+        "${URL_DOWNLOAD}/plugins/url.jar|${dir_plugins}/url.jar"
+        "${URL_DOWNLOAD}/plugins/hideme.jar|${dir_plugins}/hideme.jar"
+        "${URL_DOWNLOAD}/plugins/privacy.jar|${dir_plugins}/privacy.jar"
+    )
+
+    local total_files=${#resources[@]}
+    local count=0
+
+    debug "源ja-netfilter项目地址: https://gitee.com/ja-netfilter/ja-netfilter/releases/tag/2022.2.0"
+    for item in "${resources[@]}"; do
+        IFS='|' read -r url path <<< "$item"
+        download_one_file "$url" "$path"
+        ((count++))
+        progress_bar "$count" "$total_files"
+    done
+    echo -e "\n"
+}
+
+# 清理并更新 .vmoptions 文件
+clean_vmoptions() {
+    local file="$1"
+    if [ ! -f "$file" ]; then
+        debug "清理vm: 文件不存在，跳过清理: $file"
+        return 0
+    fi
+
+    local temp_lines=()
+    local keywords=(
+        "-javaagent"
+        "--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED"
+        "--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED"
+    )
+
+    while IFS= read -r line; do
+        local matched=false
+        for keyword in "${keywords[@]}"; do
+            [[ "$line" == *"$keyword"* ]] && matched=true && break
+        done
+        [[ "$matched" == false ]] && temp_lines+=("$line")
+    done < "$file"
+
+    printf "%s\n" "${temp_lines[@]}" > "$file"
+    debug "清理vm: $file"
+}
+
+append_vmoptions() {
+    local file="$1"
+    if [ ! -f "$file" ]; then
+        touch "$file" || {
+            error "生成vm: 创建失败: $file"
+            return
+        }
+    fi
+
+    cat >> "$file" <<EOF
+--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
+--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
+-javaagent:${file_netfilter_jar}
+EOF
+
+    debug "生成vm: $file"
+}
+
+# 生成激活码
+generate_license() {
+    local obj_product_name="$1"
+    local dir_product_name="$2"
+    local file_license="${dir_config_jb}/${dir_product_name}/${obj_product_name}.key"
+
+    [ -f "$file_license" ] && rm -f "$file_license"
+
+    debug "从服务器下载授权文件: ${URL_LICENSE}?k=${AUTH_CODE}"
+    debug "保存路径: $file_license"
+
+    # 从服务器下载预生成的授权文件
+    response_code=$(curl -s -w "%{http_code}" -o "$file_license" "${URL_LICENSE}?k=${AUTH_CODE}")
+
+    if [ "$response_code" -eq 200 ] && [ -s "$file_license" ]; then
+        success "${dir_product_name} 激活成功！"
+    else
+        rm -f "$file_license"
+        error "${dir_product_name} 激活失败"
+        error "授权码不正确或已过期，请使用正确的授权码重试"
+    fi
+}
+
+# 处理单个 Jetbrains 产品
+handle_jetbrains_dir() {
+    local dir="$1"
+    local dir_product_name=$(basename "$dir")
+    local obj_product_name=""
+    local obj_product_code=""
+
+    for ((i = 0; i < $(echo "$PRODUCTS" | jq length); i++)); do
+        IFS='|' read -r name code <<< "$(parse_product_from_json "$i")"
+        local lowercase_dir=$(echo "${dir_product_name}" | tr '[:upper:]' '[:lower:]')
+        if [[ "$lowercase_dir" == *"$name"* ]]; then
+            obj_product_name="$name"
+            obj_product_code="$code"
+            break
+        fi
+    done
+
+    [ -z "$obj_product_name" ] && return
+
+    info "处理: ${dir_product_name}"
+
+    local file_home="${dir}/.home"
+    [ -f "$file_home" ] || {
+        warning "未找到 ${dir_product_name} 的 .home 文件"
+        return
+    }
+
+    debug".home路径: $file_home"
+
+    local install_path=$(cat "$file_home")
+    [ -d "$install_path" ] || {
+        warning "未找到 ${dir_product_name} 的安装路径！"
+        return
+    }
+
+    debug ".home内容: $install_path"
+
+    local dir_bin="${install_path}/bin"
+    [ -d "$dir_bin" ] || {
+        warning "${dir_product_name} 的 bin 目录不存在，请确认是否正确安装！"
+        return
+    }
+
+    local dir_config_product="${dir_config_jb}/${dir_product_name}"
+
+    # 先查找所有 .vmoptions 文件
+    files=("${dir_config_product}"/*${FILE_VMOPTIONS})
+
+    # 判断是否真的找到了文件
+    if [[ -f "${files[0]}" ]]; then
+      for file_vmoption in "${files[@]}"; do
+        clean_vmoptions "$file_vmoption"
+        append_vmoptions "$file_vmoption"
+      done
+    else
+      debug "未找到${dir_product_name} 的.vmoptions文件，将创建一个默认的"
+      append_vmoptions "${dir_config_product}/${obj_product_name}${FILE_VMOPTIONS}"
+    fi
+
+    # 判断${dir_config_product}/jetbrains_client.vmoptions是否存在，如果不存在则创建一个默认的
+    local file_jetbrains_client="${dir_config_product}/jetbrains_client.vmoptions"
+    if [ ! -f "${file_jetbrains_client}" ]; then
+        append_vmoptions "${file_jetbrains_client}"
+        else
+        clean_vmoptions "${file_jetbrains_client}"
+        append_vmoptions "${file_jetbrains_client}"
+    fi
+
+    # 调用修改后的授权生成函数
+    generate_license "$obj_product_name" "$dir_product_name"
+}
+
+# 主流程
+main() {
+    clear
+    show_ascii_jb
+    info "欢迎使用 JetBrains 屠龙宝刀 | 主页地址 http://jb.ide.to"
+    warning "更新日期：2025-7-30 08:00:00"
+    warning "请确保所有JB的开发工具 已经关闭掉了！！关闭掉后请按回车继续..."
+    read -r
+
+    info "处理中，请耐心等待..."
+
+    check_and_install_deps
+
+    if [ ! -d "${dir_config_jb}" ]; then
+        error "未找到${dir_config_jb}目录"
+        exit 1
+    fi
+
+    debug "config目录：${dir_config_jb}"
+
+    do_create_work_dir
+    do_download_resources
+
+    for dir in "${dir_cache_jb}"/*; do
+        [ -d "$dir" ] && handle_jetbrains_dir "$dir"
+    done
+
+    info "所有项处理结束"
+    sleep 1
+}
+
+main "$@"
