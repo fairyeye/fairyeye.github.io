@@ -230,3 +230,9 @@ npx zcf
     }
 ]
 ```
+
+
+
+## Zsh 激活 Idea
+
+![](https://s3.bmp.ovh/imgs/2026/01/21/4f996582a52dcdc4.png)
