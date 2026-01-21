@@ -45,6 +45,10 @@ source ~/.zshrc
 
 - 安装之前 先激活IDEA
 
+```sh
+主页地址 http://jb.ide.to
+```
+
 ### 使用 curl（推荐）
 
 ```sh
