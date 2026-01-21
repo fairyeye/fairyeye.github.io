@@ -254,3 +254,15 @@ brew cleanup
 ![[jb]]
 
 ![[ja-netfilter.jar]]
+
+
+
+
+
+# 快捷键
+
+```sh
+# 开启之后 可以通过 Command + Option + 鼠标选中窗口任意位置 移动窗口
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
+```
