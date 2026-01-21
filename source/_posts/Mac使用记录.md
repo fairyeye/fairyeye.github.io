@@ -195,6 +195,21 @@ npx zcf
 brew cleanup
 ```
 
+
+
+### 换源
+
+```sh
+
+# 替换核心仓库源
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
+# 替换 cask 仓库源（用于安装桌面应用）
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+
+```
+
+
 ## Idea 
 
 ### 护眼绿
