@@ -127,7 +127,7 @@ source ~/.zshrc
 
 
 
-## 使用 SDKMAN!（强烈推荐，尤其开发者）
+## SDKMAN
 
 > **优点**：一键切换 Gradle 版本、自动配置 PATH、支持 Groovy/Kotlin/Java 等工具链
 
@@ -183,7 +183,19 @@ npx zcf
 
 ![](https://s3.bmp.ovh/imgs/2026/01/18/e93b31e7c60f6725.png)
 
-## idea 
+
+
+
+## Homebrew
+
+
+### 清理下载的临时文件
+
+```sh
+brew cleanup
+```
+
+## Idea 
 
 ### 护眼绿
 
