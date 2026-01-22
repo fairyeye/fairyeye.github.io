@@ -64,7 +64,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/powerline/fonts.git ~/powerline-fonts 
 
 # 安装所有字体 
-cd ～/powerline-fonts 
+cd ~/powerline-fonts 
 ./install.sh 
 
 # 清理 
