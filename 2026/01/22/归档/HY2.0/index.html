@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
+  
+  
+  <meta name="generator" content="Hexo 8.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>hy2.0 - LI</title>
+
+  
+    <meta name="description" content="1234567891011121314151617&#123;&quot;id&quot;: &quot;file-fe-WvEu6lBm7ZXNURS1wwgZwZ5n&quot;,&quot;object&quot;: &quot;file&quot;,&quot;bytes&quot;: 53409,&quot;created_at&quot;: 1739612338,&quot;filen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hy2.0">
+<meta property="og:url" content="https://fairyeye.github.io/2026/01/22/%E5%BD%92%E6%A1%A3/HY2.0/">
+<meta property="og:site_name" content="LI">
+<meta property="og:description" content="1234567891011121314151617&#123;&quot;id&quot;: &quot;file-fe-WvEu6lBm7ZXNURS1wwgZwZ5n&quot;,&quot;object&quot;: &quot;file&quot;,&quot;bytes&quot;: 53409,&quot;created_at&quot;: 1739612338,&quot;filen">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fairyeye.github.io/images/avatar.jpg">
+<meta property="article:published_time" content="2026-01-22T03:35:59.296Z">
+<meta property="article:modified_time" content="2026-01-22T03:35:59.296Z">
+<meta property="article:author" content="li">
+<meta property="article:tag" content="技术,博客,笔记,开源">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fairyeye.github.io/images/avatar.jpg">
+  
+  
+  
+  <meta name="keywords" content="技术,博客,笔记,开源">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
+
+
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"li","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-01-22T03:35:59+00:00","dateModified":"2026-01-22T03:35:59+00:00","datePublished":"2026-01-22T03:35:59+00:00","description":"","headline":"hy2.0","mainEntityOfPage":{"@type":"WebPage","@id":"https://fairyeye.github.io/2026/01/22/%E5%BD%92%E6%A1%A3/HY2.0/"},"publisher":{"@type":"Organization","name":"li","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fairyeye.github.io/2026/01/22/%E5%BD%92%E6%A1%A3/HY2.0/","image":[]}</script>
+  
+</head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">LI</div><div class="sub cap">记录记录</div></a></div></header>
+
+<div class="nav-area">
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="归档" href="/archives/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/categories/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="关于" href="/about/" style="color:#F44336"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></nav>
+</div>
+<div class="widgets">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/01/17/%E6%A8%A1%E6%9D%BF/"><span class="title">模板</span></a><a class="item title" href="/2026/01/22/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/"><span class="title">本地虚拟机记录</span></a><a class="item title" href="/2023/02/13/%E5%BD%92%E6%A1%A3/%E7%AE%97%E6%B3%95/"><span class="title">算法</span></a><a class="item title" href="/2026/01/22/%E5%BD%92%E6%A1%A3/%E8%A3%85%E4%BF%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"><span class="title">装修注意事项</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/"><span class="title">设计模式笔记</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/"><span class="title">阿里巴巴手册</span></a><a class="item title" href="/2026/01/22/%E5%BD%92%E6%A1%A3/%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E4%BB%A5%E4%B8%8B%E7%9F%A5%E8%AF%86/"><span class="title">需要掌握以下知识</span></a><a class="item title" href="/2020/04/29/%E5%BD%92%E6%A1%A3/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/"><span class="title">数据库时间存储</span></a><a class="item title" href="/2022/12/07/%E5%BD%92%E6%A1%A3/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">搭建SSR服务器</span></a><a class="item title" href="/2020/04/17/%E5%BD%92%E6%A1%A3/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/"><span class="title">时间戳转换日期问题</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/fairyeye" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:your-email@example.com" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-01-22T03:35:59.296Z">2026-01-22</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-01-22T03:35:59.296Z">2026-01-22</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>hy2.0</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-fe-WvEu6lBm7ZXNURS1wwgZwZ5n&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;object&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;bytes&quot;</span><span class="punctuation">:</span> <span class="number">53409</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="number">1739612338</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;filename&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1，招标文件审查-建造师执业范围2024-8-3.xlsx&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;purpose&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-extract&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;processed&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-fe-VUFvRDmAlHHsSmiea1PTSo7F&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;object&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;bytes&quot;</span><span class="punctuation">:</span> <span class="number">18695</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="number">1739614282</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;filename&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1，招标文件审查-施工总承包序列资质标准最终2024-8-3.xlsx&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;purpose&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-extract&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;processed&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-fe-3iPw2e1wP03HQiEDWooGWNQW&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;object&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;bytes&quot;</span><span class="punctuation">:</span> <span class="number">4305676</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;created_at&quot;</span><span class="punctuation">:</span> <span class="number">1739612549</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;filename&quot;</span><span class="punctuation">:</span> <span class="string">&quot;徽州区富溪乡水毁桥梁及护岸修复工程.pdf&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;purpose&quot;</span><span class="punctuation">:</span> <span class="string">&quot;file-extract&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;processed&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="word-分段落替换-https-deepoove-com-poi-tl"><a href="#word-分段落替换-https-deepoove-com-poi-tl" class="headerlink" title="word 分段落替换  https://deepoove.com/poi-tl/"></a>word 分段落替换  <a target="_blank" rel="noopener" href="https://deepoove.com/poi-tl/">https://deepoove.com/poi-tl/</a></h4><h2 id="Flask-Python-服务器部署"><a href="#Flask-Python-服务器部署" class="headerlink" title="Flask Python 服务器部署"></a>Flask Python 服务器部署</h2><h3 id="1-准备服务器"><a href="#1-准备服务器" class="headerlink" title="1. 准备服务器"></a>1. 准备服务器</h3><p>首先，你需要一个可以运行 Python 的服务器。你可以使用以下服务：</p>
+<ul>
+<li><strong>云服务提供商</strong>：如 AWS、阿里云、DigitalOcean 等。</li>
+<li><strong>VPS 提供商</strong>：如 Linode、Vultr 等。</li>
+</ul>
+<p>确保服务器上安装了 Python 和 pip。</p>
+<h3 id="2-连接到服务器"><a href="#2-连接到服务器" class="headerlink" title="2. 连接到服务器"></a>2. 连接到服务器</h3><p>使用 SSH 连接到你的服务器：</p>
+<p><code>ssh username@your_server_ip</code></p>
+<h3 id="3-安装依赖"><a href="#3-安装依赖" class="headerlink" title="3. 安装依赖"></a>3. 安装依赖</h3><p>在服务器上，确保你已经安装了 Python 和 pip。你可以使用以下命令检查：</p>
+<p><code>python3 --version pip3 --version</code></p>
+<p>如果没有安装，可以使用以下命令安装：</p>
+<p><code>sudo apt update sudo apt install python3 python3-pip</code></p>
+<h3 id="4-上传代码"><a href="#4-上传代码" class="headerlink" title="4. 上传代码"></a>4. 上传代码</h3><p>将你的 Flask 应用代码上传到服务器。可以使用 SCP、FTP 或 Git 来上传文件。下面是使用 SCP 的示例：</p>
+<p><code>scp -r /path/to/your/project username@your_server_ip:/path/to/target/directory</code></p>
+<h3 id="5-创建虚拟环境"><a href="#5-创建虚拟环境" class="headerlink" title="5. 创建虚拟环境"></a>5. 创建虚拟环境</h3><p>在你的项目目录中创建一个虚拟环境：</p>
+<p><code>cd /path/to/target/directory python3 -m venv venv source venv/bin/activate</code></p>
+<h3 id="6-安装项目依赖"><a href="#6-安装项目依赖" class="headerlink" title="6. 安装项目依赖"></a>6. 安装项目依赖</h3><p>在虚拟环境中安装你的项目依赖：</p>
+<p><code>pip install -r requirements.txt</code></p>
+<h3 id="7-运行-Flask-应用"><a href="#7-运行-Flask-应用" class="headerlink" title="7. 运行 Flask 应用"></a>7. 运行 Flask 应用</h3><p>在开发环境中，你可以使用以下命令运行 Flask 应用：</p>
+<p><code>python app.py</code></p>
+<p>但是在生产环境中，最好使用 WSGI 服务器（如 Gunicorn）来运行 Flask 应用：</p>
+<p><code>pip install gunicorn gunicorn -w 4 app:app --bind 0.0.0.0:5000</code></p>
+<p>这里 <code>-w 4</code> 表示使用 4 个工作进程，你可以根据需要调整。</p>
+<h3 id="8-配置反向代理（可选）"><a href="#8-配置反向代理（可选）" class="headerlink" title="8. 配置反向代理（可选）"></a>8. 配置反向代理（可选）</h3><p>为了在 80 或 443 端口上提供服务，建议使用 Nginx 作为反向代理：</p>
+<h4 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx"></a>安装 Nginx</h4><p><code>sudo apt install nginx</code></p>
+<h4 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h4><p>创建一个新的 Nginx 配置文件，例如 <code>/etc/nginx/sites-available/my_flask_app</code>：</p>
+<p>nginx</p>
+<p>复制代码</p>
+<p><code>server {     listen 80;     server_name your_server_ip;  # 或者你的域名      location / {         proxy_pass http://127.0.0.1:5000;  # Flask 应用的地址         proxy_set_header Host $host;         proxy_set_header X-Real-IP $remote_addr;         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;         proxy_set_header X-Forwarded-Proto $scheme;     } }</code></p>
+<p>创建符号链接到 <code>sites-enabled</code>：</p>
+<p><code>sudo ln -s /etc/nginx/sites-available/my_flask_app /etc/nginx/sites-enabled</code></p>
+<p>测试 Nginx 配置并重启服务：</p>
+<p><code>sudo nginx -t sudo systemctl restart nginx</code></p>
+<h3 id="9-配置防火墙（可选）"><a href="#9-配置防火墙（可选）" class="headerlink" title="9. 配置防火墙（可选）"></a>9. 配置防火墙（可选）</h3><p>确保服务器的防火墙允许 HTTP 和 HTTPS 流量：</p>
+<p><code>sudo ufw allow &#39;Nginx Full&#39;</code></p>
+<h3 id="10-访问你的应用"><a href="#10-访问你的应用" class="headerlink" title="10. 访问你的应用"></a>10. 访问你的应用</h3><p>现在，你应该能够通过浏览器访问你的 Flask 应用，使用服务器的 IP 地址或域名。</p>
+<h3 id="额外建议"><a href="#额外建议" class="headerlink" title="额外建议"></a>额外建议</h3><ul>
+<li><strong>使用 HTTPS</strong>：在生产环境中，强烈建议使用 HTTPS。可以使用 Let’s Encrypt 来免费申请 SSL 证书。</li>
+<li><strong>监控和日志</strong>：考虑使用工具来监控应用的性能和日志，以便及时发现问题。</li>
+</ul>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><p>好的，这里是一个详细的Python方案，包括登录页面、选择文件夹、处理PDF文件并将数据存储到SQLite数据库，以及在线更新功能。</p>
+<h3 id="1-环境配置和库安装"><a href="#1-环境配置和库安装" class="headerlink" title="1. 环境配置和库安装"></a>1. 环境配置和库安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyInstaller PyUpdater PyPDF2 pdfminer.six pymupdf tkinter requests</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-登录页面和主程序逻辑"><a href="#2-登录页面和主程序逻辑" class="headerlink" title="2. 登录页面和主程序逻辑"></a>2. 登录页面和主程序逻辑</h3><h4 id="2-1-创建登录界面"><a href="#2-1-创建登录界面" class="headerlink" title="2.1. 创建登录界面"></a>2.1. 创建登录界面</h4><p>创建一个文件 <code>login.py</code> 用于实现登录界面：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> messagebox</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LoginApp</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, root</span>):</span><br><span class="line">        <span class="variable language_">self</span>.root = root</span><br><span class="line">        <span class="variable language_">self</span>.root.title(<span class="string">&quot;登录&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.root.geometry(<span class="string">&quot;300x150&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.username_label = tk.Label(root, text=<span class="string">&quot;用户名&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.username_label.pack()</span><br><span class="line">        <span class="variable language_">self</span>.username_entry = tk.Entry(root)</span><br><span class="line">        <span class="variable language_">self</span>.username_entry.pack()</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.password_label = tk.Label(root, text=<span class="string">&quot;密码&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.password_label.pack()</span><br><span class="line">        <span class="variable language_">self</span>.password_entry = tk.Entry(root, show=<span class="string">&quot;*&quot;</span>)</span><br><span class="line">        <span class="variable language_">self</span>.password_entry.pack()</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">self</span>.login_button = tk.Button(root, text=<span class="string">&quot;登录&quot;</span>, command=<span class="variable language_">self</span>.login)</span><br><span class="line">        <span class="variable language_">self</span>.login_button.pack()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">login</span>(<span class="params">self</span>):</span><br><span class="line">        username = <span class="variable language_">self</span>.username_entry.get()</span><br><span class="line">        password = <span class="variable language_">self</span>.password_entry.get()</span><br><span class="line">        <span class="comment"># 假设存在一个登录接口</span></span><br><span class="line">        login_url = <span class="string">&quot;http://example.com/api/login&quot;</span></span><br><span class="line">        response = requests.post(login_url, json=&#123;<span class="string">&quot;username&quot;</span>: username, <span class="string">&quot;password&quot;</span>: password&#125;)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span> <span class="keyword">and</span> response.json().get(<span class="string">&quot;status&quot;</span>) == <span class="string">&quot;success&quot;</span>:</span><br><span class="line">            messagebox.showinfo(<span class="string">&quot;成功&quot;</span>, <span class="string">&quot;登录成功&quot;</span>)</span><br><span class="line">            <span class="variable language_">self</span>.root.destroy()</span><br><span class="line">            <span class="keyword">import</span> main</span><br><span class="line">            main.run_app()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            messagebox.showerror(<span class="string">&quot;错误&quot;</span>, <span class="string">&quot;用户名或密码错误&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_login_app</span>():</span><br><span class="line">    root = tk.Tk()</span><br><span class="line">    app = LoginApp(root)</span><br><span class="line">    root.mainloop()</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-主程序逻辑"><a href="#2-2-主程序逻辑" class="headerlink" title="2.2. 主程序逻辑"></a>2.2. 主程序逻辑</h4><p>创建 <code>main.py</code> 实现主程序逻辑：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> fitz  <span class="comment"># PyMuPDF</span></span><br><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> filedialog, messagebox</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">select_folder</span>():</span><br><span class="line">    folder_path = filedialog.askdirectory(title=<span class="string">&quot;选择包含PDF文件的文件夹&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> folder_path</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_text_from_pdf</span>(<span class="params">pdf_path</span>):</span><br><span class="line">    doc = fitz.<span class="built_in">open</span>(pdf_path)</span><br><span class="line">    text = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> doc:</span><br><span class="line">        text += page.get_text()</span><br><span class="line">    <span class="keyword">return</span> text</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">store_data_to_db</span>(<span class="params">data</span>):</span><br><span class="line">    conn = sqlite3.connect(<span class="string">&#x27;extracted_data.db&#x27;</span>)</span><br><span class="line">    cursor = conn.cursor()</span><br><span class="line">    cursor.execute(<span class="string">&#x27;&#x27;&#x27;CREATE TABLE IF NOT EXISTS pdf_data</span></span><br><span class="line"><span class="string">                      (id INTEGER PRIMARY KEY, file_name TEXT, content TEXT)&#x27;&#x27;&#x27;</span>)</span><br><span class="line">    cursor.execute(<span class="string">&#x27;INSERT INTO pdf_data (file_name, content) VALUES (?, ?)&#x27;</span>, data)</span><br><span class="line">    conn.commit()</span><br><span class="line">    conn.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process_pdfs</span>(<span class="params">folder_path</span>):</span><br><span class="line">    <span class="keyword">for</span> file_name <span class="keyword">in</span> os.listdir(folder_path):</span><br><span class="line">        <span class="keyword">if</span> file_name.endswith(<span class="string">&#x27;.pdf&#x27;</span>):</span><br><span class="line">            pdf_path = os.path.join(folder_path, file_name)</span><br><span class="line">            text = extract_text_from_pdf(pdf_path)</span><br><span class="line">            store_data_to_db((file_name, text))</span><br><span class="line">            messagebox.showinfo(<span class="string">&quot;处理完成&quot;</span>, <span class="string">f&quot;文件 <span class="subst">&#123;file_name&#125;</span> 处理完成&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">run_app</span>():</span><br><span class="line">    root = tk.Tk()</span><br><span class="line">    root.withdraw()</span><br><span class="line">    folder_path = select_folder()</span><br><span class="line">    <span class="keyword">if</span> folder_path:</span><br><span class="line">        process_pdfs(folder_path)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        messagebox.showinfo(<span class="string">&quot;提示&quot;</span>, <span class="string">&quot;没有选择文件夹&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    run_login_app()</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-在线更新功能"><a href="#2-3-在线更新功能" class="headerlink" title="2.3. 在线更新功能"></a>2.3. 在线更新功能</h4><p>创建 <code>client_config.py</code> 配置PyUpdater：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> pyupdater.client <span class="keyword">import</span> Client</span><br><span class="line"></span><br><span class="line">APP_NAME = <span class="string">&quot;PDFExtractorApp&quot;</span></span><br><span class="line">APP_VERSION = <span class="string">&quot;0.1.0&quot;</span></span><br><span class="line">UPDATE_URLS = [<span class="string">&#x27;http://your-update-server.com/&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ClientConfig</span>:</span><br><span class="line">    PUBLIC_KEY = <span class="string">&quot;your-public-key&quot;</span></span><br><span class="line">    APP_NAME = APP_NAME</span><br><span class="line">    COMPANY_NAME = <span class="string">&quot;YourCompany&quot;</span></span><br><span class="line">    UPDATE_URLS = UPDATE_URLS</span><br><span class="line">    MAX_DOWNLOAD_RETRIES = <span class="number">3</span></span><br><span class="line">    USE_PATCHES = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_for_updates</span>():</span><br><span class="line">    client = Client(ClientConfig(), refresh=<span class="literal">True</span>)</span><br><span class="line">    app_update = client.update_check(ClientConfig.APP_NAME, ClientConfig.APP_VERSION)</span><br><span class="line">    <span class="keyword">if</span> app_update <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        app_update.download()</span><br><span class="line">        <span class="keyword">if</span> app_update.is_downloaded():</span><br><span class="line">            app_update.extract_restart()</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>main.py</code> 的 <code>run_app</code> 函数中加入更新检查：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">run_app</span>():</span><br><span class="line">    <span class="keyword">from</span> client_config <span class="keyword">import</span> check_for_updates</span><br><span class="line">    check_for_updates()</span><br><span class="line"></span><br><span class="line">    root = tk.Tk()</span><br><span class="line">    root.withdraw()</span><br><span class="line">    folder_path = select_folder()</span><br><span class="line">    <span class="keyword">if</span> folder_path:</span><br><span class="line">        process_pdfs(folder_path)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        messagebox.showinfo(<span class="string">&quot;提示&quot;</span>, <span class="string">&quot;没有选择文件夹&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4-打包应用程序"><a href="#2-4-打包应用程序" class="headerlink" title="2.4. 打包应用程序"></a>2.4. 打包应用程序</h4><p>创建一个 <code>spec</code> 文件来配置打包设置（<code>your_script.spec</code>）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># your_script.spec</span><br><span class="line"># -*- mode: python ; coding: utf-8 -*-</span><br><span class="line"></span><br><span class="line">block_cipher = None</span><br><span class="line"></span><br><span class="line">a = Analysis([&#x27;main.py&#x27;],</span><br><span class="line">             pathex=[],</span><br><span class="line">             binaries=[],</span><br><span class="line">             datas=[],</span><br><span class="line">             hiddenimports=[],</span><br><span class="line">             hookspath=[],</span><br><span class="line">             runtime_hooks=[],</span><br><span class="line">             excludes=[],</span><br><span class="line">             win_no_prefer_redirects=False,</span><br><span class="line">             win_private_assemblies=False,</span><br><span class="line">             cipher=block_cipher,</span><br><span class="line">             noarchive=False)</span><br><span class="line"></span><br><span class="line">pyz = PYZ(a.pure, a.zipped_data,</span><br><span class="line">             cipher=block_cipher)</span><br><span class="line"></span><br><span class="line">exe = EXE(pyz,</span><br><span class="line">          a.scripts,</span><br><span class="line">          [],</span><br><span class="line">          exclude_binaries=True,</span><br><span class="line">          name=&#x27;PDFExtractorApp&#x27;,</span><br><span class="line">          debug=False,</span><br><span class="line">          bootloader_ignore_signals=False,</span><br><span class="line">          strip=False,</span><br><span class="line">          upx=True,</span><br><span class="line">          upx_exclude=[],</span><br><span class="line">          runtime_tmpdir=None,</span><br><span class="line">          console=False)</span><br><span class="line"></span><br><span class="line">coll = COLLECT(exe,</span><br><span class="line">               a.binaries,</span><br><span class="line">               a.zipfiles,</span><br><span class="line">               a.datas,</span><br><span class="line">               strip=False,</span><br><span class="line">               upx=True,</span><br><span class="line">               upx_exclude=[],</span><br><span class="line">               name=&#x27;PDFExtractorApp&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>然后使用 <code>pyinstaller</code> 打包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller your_script.spec</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-配置和初始化PyUpdater"><a href="#3-配置和初始化PyUpdater" class="headerlink" title="3. 配置和初始化PyUpdater"></a>3. 配置和初始化PyUpdater</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pyupdater init</span><br><span class="line">pyupdater pkg --process</span><br><span class="line">pyupdater pkg --sign</span><br><span class="line">pyupdater pkg --upload</span><br><span class="line">pyupdater keys --create</span><br><span class="line">pyupdater settings</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-部署和测试"><a href="#4-部署和测试" class="headerlink" title="4. 部署和测试"></a>4. 部署和测试</h3><p>将生成的可执行文件和更新配置上传到你的服务器。然后运行打包好的应用程序，确保登录功能、PDF处理功能和在线更新功能都正常工作。</p>
+<p>这样，你就有了一个带有登录功能的Windows应用程序，可以选择文件夹中的PDF文件进行处理，并支持在线更新。</p>
+<h2 id="要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行"><a href="#要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行" class="headerlink" title="要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行"></a>要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行</h2><p>：</p>
+<ol>
+<li><strong>读取所有Excel文件</strong>。</li>
+<li><strong>提取并整理数据</strong>。</li>
+<li><strong>比较每对Excel文件的数据</strong>。</li>
+<li><strong>计算重复率</strong>。</li>
+<li><strong>输出比较结果</strong>。</li>
+</ol>
+<p>可以使用 <code>pandas</code> 库来处理Excel文件，利用 <code>pandas</code> 的 DataFrame 结构进行数据比较和重复率计算。</p>
+<h3 id="1-安装必要的库"><a href="#1-安装必要的库" class="headerlink" title="1. 安装必要的库"></a>1. 安装必要的库</h3><p>首先，确保你已经安装了 <code>pandas</code> 和 <code>openpyxl</code> 库：</p>
+<p>bash</p>
+<p>复制代码</p>
+<p><code>pip install pandas openpyxl</code></p>
+<h3 id="2-读取所有Excel文件"><a href="#2-读取所有Excel文件" class="headerlink" title="2. 读取所有Excel文件"></a>2. 读取所有Excel文件</h3><p>使用 <code>pandas</code> 读取Excel文件，并提取数据。</p>
+<p>python</p>
+<p>复制代码</p>
+<p><code>import os import pandas as pd  def read_excel_files(folder_path):     excel_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith(&#39;.xlsx&#39;)]     dataframes = {f: pd.read_excel(f) for f in excel_files}     return dataframes  folder_path = &#39;your_folder_with_excel_files&#39; dataframes = read_excel_files(folder_path)</code></p>
+<h3 id="3-比较每对Excel文件的数据"><a href="#3-比较每对Excel文件的数据" class="headerlink" title="3. 比较每对Excel文件的数据"></a>3. 比较每对Excel文件的数据</h3><p>定义一个函数来比较两个DataFrame，计算重复率。</p>
+<p>python</p>
+<p>复制代码</p>
+<p><code>def calculate_similarity(df1, df2):     # 确保两者都有相同的列     common_columns = df1.columns.intersection(df2.columns)     if len(common_columns) == 0:         return 0.0          # 选择共同的列进行比较     df1_common = df1[common_columns]     df2_common = df2[common_columns]          # 合并两个数据集，保留重复项     combined = pd.concat([df1_common, df2_common])     duplicates = combined.duplicated(keep=False)          # 计算重复率     similarity = duplicates.sum() / len(combined)     return similarity  def compare_excel_files(dataframes):     results = []     files = list(dataframes.keys())     for i in range(len(files)):         for j in range(i + 1, len(files)):             df1 = dataframes[files[i]]             df2 = dataframes[files[j]]             similarity = calculate_similarity(df1, df2)             results.append((files[i], files[j], similarity))     return results  similarity_results = compare_excel_files(dataframes)</code></p>
+<h3 id="4-输出比较结果"><a href="#4-输出比较结果" class="headerlink" title="4. 输出比较结果"></a>4. 输出比较结果</h3><p>将比较结果输出，显示每对Excel文件的相似度。</p>
+<p>python</p>
+<p>复制代码</p>
+<p><code>for file1, file2, similarity in similarity_results:     print(f&quot;文件 {file1} 和文件 {file2} 的相似度为: {similarity:.2%}&quot;)</code></p>
+<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><p>python</p>
+<p>复制代码</p>
+<p><code>import os import pandas as pd  def read_excel_files(folder_path):     excel_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith(&#39;.xlsx&#39;)]     dataframes = {f: pd.read_excel(f) for f in excel_files}     return dataframes  def calculate_similarity(df1, df2):     common_columns = df1.columns.intersection(df2.columns)     if len(common_columns) == 0:         return 0.0          df1_common = df1[common_columns]     df2_common = df2[common_columns]          combined = pd.concat([df1_common, df2_common])     duplicates = combined.duplicated(keep=False)          similarity = duplicates.sum() / len(combined)     return similarity  def compare_excel_files(dataframes):     results = []     files = list(dataframes.keys())     for i in range(len(files)):         for j in range(i + 1, len(files)):             df1 = dataframes[files[i]]             df2 = dataframes[files[j]]             similarity = calculate_similarity(df1, df2)             results.append((files[i], files[j], similarity))     return results  folder_path = &#39;your_folder_with_excel_files&#39; dataframes = read_excel_files(folder_path) similarity_results = compare_excel_files(dataframes)  for file1, file2, similarity in similarity_results:     print(f&quot;文件 {file1} 和文件 {file2} 的相似度为: {similarity:.2%}&quot;)</code></p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><strong>列对齐</strong>：确保所有比较的数据具有相同的列。</li>
+<li><strong>数据清理</strong>：在实际使用中，可能需要对数据进行清理和预处理，以确保比较的准确性。</li>
+<li><strong>优化</strong>：对于大型数据集，计算重复率可能会很耗时。可以考虑优化算法或使用更高效的数据结构。</li>
+</ul>
+<p>通过这些步骤，你可以实现读取多个Excel文件并两两判断是否有高度重复的数据，并计算和输出相似度。</p>
+<h2 id="审查"><a href="#审查" class="headerlink" title="审查"></a>审查</h2><h3 id="复杂规则"><a href="#复杂规则" class="headerlink" title="复杂规则"></a>复杂规则</h3><h4 id="1-方案"><a href="#1-方案" class="headerlink" title="1. 方案"></a>1. 方案</h4><p>每次执行规则，查数据或者把全部数据缓存每次进行匹配，不太友好。</p>
+<p>项目启动时，查询范围和资质表，然后处理成对象存到缓存：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;一级建造师-工业、民用与公共建筑工程&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;builderName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;一级建造师&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;projectName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;工业、民用与公共建筑工程&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;workType&quot;</span><span class="punctuation">:</span> <span class="string">&quot;一般房屋建筑工程&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;uom&quot;</span><span class="punctuation">:</span> <span class="string">&quot;金额&quot;</span><span class="punctuation">,</span><span class="comment">// 后面看是不是换成编码</span></span><br><span class="line">        <span class="attr">&quot;firstLevelMin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3000&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;firstLevelMax&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;secondLevelMax&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3000&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;secondLevelMin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;300&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;thirdLevelMax&quot;</span><span class="punctuation">:</span> <span class="string">&quot;300&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;thirdLevelMin&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>后面执行规则的时候，只需要按照特性字段从缓存中取，就可以了。</p>
+<p>这样只需要处理一遍范围、资质的数据。</p>
+<h4 id="2-具体实现"><a href="#2-具体实现" class="headerlink" title="2. 具体实现"></a>2. 具体实现</h4><p>使用本地缓存Caffeine、根据数据库创建实体类、Mapper、</p>
+<p>创建一个 Caffeine 缓存配置类，并在 Spring Boot 启动时加载规则。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableCaching</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CaffeineCacheConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> CacheManager <span class="title function_">cacheManager</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">CaffeineCacheManager</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在 Spring Boot 启动时加载规则并缓存:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RuleLoader</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CommonMapper commonMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CacheManager cacheManager;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostConstruct</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">loadRulesToCache</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 从数据库加载资质数据</span></span><br><span class="line">        List&lt;ArchitectScope&gt; qualifications = commonMapper.findAll();</span><br><span class="line">        Map&lt;String, ArchitectScope&gt; qualificationCache = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 根据特性值分组</span></span><br><span class="line">        <span class="comment">// 提取特性值、合同金额</span></span><br><span class="line">        <span class="comment">// 处理成map，map的key就是建造师名称+类型||资质那里比较特殊，需要存双份，一份key值是资质名称，一份是建造师专业</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将加载的规则数据放入 Caffeine 缓存</span></span><br><span class="line">        cacheManager.getCache(<span class="string">&quot;qualificationCache&quot;</span>).put(<span class="string">&quot;qualification&quot;</span>, qualificationCache);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;Rules loaded into Caffeine cache.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>使用缓存：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ArchitectScope <span class="title function_">getQualificationFromCache</span><span class="params">(String qualificationName)</span> &#123; Map&lt;String, ArchitectScope&gt; qualificationCache = (Map&lt;String, ArchitectScope&gt;) cacheManager.getCache(<span class="string">&quot;qualificationCache&quot;</span>).get(<span class="string">&quot;qualification&quot;</span>).get(); <span class="keyword">return</span> qualificationCache.get(qualificationName); &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h2 id="功能设计文档"><a href="#功能设计文档" class="headerlink" title="功能设计文档"></a>功能设计文档</h2><h3 id="页面及流程"><a href="#页面及流程" class="headerlink" title="页面及流程"></a>页面及流程</h3><h4 id="第一页：采购方式及适用范围展示"><a href="#第一页：采购方式及适用范围展示" class="headerlink" title="第一页：采购方式及适用范围展示"></a>第一页：采购方式及适用范围展示</h4><ol>
+<li><p><strong>功能描述</strong>：</p>
+<ul>
+<li>提供一个下拉框（请选择采购方式），用户选择后展示相关文本。</li>
+<li>用户选择下拉框后，触发接口查询数据，返回的数据以只读形式展示。</li>
+<li>页面底部提供“下一页”按钮，参考工程造价页面，点击后进入第二页。</li>
+</ul>
+</li>
+<li><p><strong>变量定义</strong>：</p>
+<ul>
+<li>下拉框选项：<code>dropdown_options</code></li>
+<li>查询接口返回数据：<code>query_data</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="第二页：文件上传与数据提取"><a href="#第二页：文件上传与数据提取" class="headerlink" title="第二页：文件上传与数据提取"></a>第二页：文件上传与数据提取</h4><ol>
+<li><p><strong>功能描述</strong>：</p>
+<ul>
+<li>页面顶部提供一个上传按钮，支持上传文件夹或多选文件。</li>
+<li>触发后端接口，上传文件并提取招标公告和项目信息，提取后的信息存入数据库表。</li>
+<li>页面展示提取的项目信息，用户可修改，修改后的数据以文本格式存储。</li>
+<li>页面底部提供“执行”按钮，点击后进入第三页。</li>
+</ul>
+</li>
+<li><p><strong>变量定义</strong>：</p>
+<ul>
+<li>上传文件的URL：<code>uploaded_file_urls</code></li>
+<li>提取的项目信息：<code>project_info</code></li>
+<li>提取的招标公告内容：<code>tender_notice</code></li>
+<li>修改后的项目信息：<code>modified_project_info</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="第三页：异步执行"><a href="#第三页：异步执行" class="headerlink" title="第三页：异步执行"></a>第三页：异步执行</h4><ol>
+<li><strong>功能描述</strong>：<ul>
+<li>展示固定文本：”异步执行中，请稍后在历史记录中查看。”</li>
+</ul>
+</li>
+</ol>
+<h3 id="数据表结构"><a href="#数据表结构" class="headerlink" title="数据表结构"></a>数据表结构</h3><h4 id="项目信息表（project-info）"><a href="#项目信息表（project-info）" class="headerlink" title="项目信息表（project_info）"></a>项目信息表（<code>project_info</code>）</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE TABLE</span> project_info (</span><br><span class="line">    id <span class="type">INT</span> <span class="keyword">PRIMARY KEY</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;主键&#x27;</span>,</span><br><span class="line">    project_name <span class="type">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT NULL</span> COMMENT <span class="string">&#x27;项目名称&#x27;</span>,</span><br><span class="line">    agency <span class="type">VARCHAR</span>(<span class="number">255</span>) COMMENT <span class="string">&#x27;代理机构&#x27;</span>,</span><br><span class="line">    bidder <span class="type">VARCHAR</span>(<span class="number">255</span>) COMMENT <span class="string">&#x27;招标人&#x27;</span>,</span><br><span class="line">    section_code <span class="type">VARCHAR</span>(<span class="number">50</span>) COMMENT <span class="string">&#x27;标段编码&#x27;</span>,</span><br><span class="line">    location <span class="type">VARCHAR</span>(<span class="number">255</span>) COMMENT <span class="string">&#x27;建设地点&#x27;</span>,</span><br><span class="line">    estimated_cost <span class="type">DECIMAL</span>(<span class="number">18</span>, <span class="number">2</span>) COMMENT <span class="string">&#x27;合同估算价&#x27;</span>,</span><br><span class="line">    duration <span class="type">VARCHAR</span>(<span class="number">50</span>) COMMENT <span class="string">&#x27;计划工期&#x27;</span>,</span><br><span class="line">    project_category <span class="type">VARCHAR</span>(<span class="number">100</span>) COMMENT <span class="string">&#x27;项目类别&#x27;</span>,</span><br><span class="line">    qualification_field <span class="type">VARCHAR</span>(<span class="number">100</span>) COMMENT <span class="string">&#x27;资质专业&#x27;</span>,</span><br><span class="line">    qualification_level <span class="type">VARCHAR</span>(<span class="number">100</span>) COMMENT <span class="string">&#x27;资质级别&#x27;</span>,</span><br><span class="line">    manager_field <span class="type">VARCHAR</span>(<span class="number">100</span>) COMMENT <span class="string">&#x27;项目经理专业&#x27;</span>,</span><br><span class="line">    manager_level <span class="type">VARCHAR</span>(<span class="number">100</span>) COMMENT <span class="string">&#x27;项目经理级别&#x27;</span>,</span><br><span class="line">    performance_req <span class="type">BOOLEAN</span> COMMENT <span class="string">&#x27;业绩要求（有或无）&#x27;</span>,</span><br><span class="line">    manager_perf_req <span class="type">BOOLEAN</span> COMMENT <span class="string">&#x27;项目经理业绩要求（有或无）&#x27;</span>,</span><br><span class="line">    financial_req <span class="type">BOOLEAN</span> COMMENT <span class="string">&#x27;财务要求（有或无）&#x27;</span>,</span><br><span class="line">    doc_acquire_time DATETIME COMMENT <span class="string">&#x27;招标文件获取时间&#x27;</span>,</span><br><span class="line">    bid_opening_time DATETIME COMMENT <span class="string">&#x27;开标时间&#x27;</span>,</span><br><span class="line">    evaluation_method <span class="type">VARCHAR</span>(<span class="number">100</span>) COMMENT <span class="string">&#x27;评标办法（综合评估法或最低价法）&#x27;</span>,</span><br><span class="line">    modified_info TEXT COMMENT <span class="string">&#x27;页面修改后的项目信息&#x27;</span>,</span><br><span class="line">    tender_doc_urls TEXT COMMENT <span class="string">&#x27;招标文件URL（可能是多个）&#x27;</span></span><br><span class="line">) COMMENT<span class="operator">=</span><span class="string">&#x27;项目信息表&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传功能详细流程"><a href="#上传功能详细流程" class="headerlink" title="上传功能详细流程"></a>上传功能详细流程</h3><ol>
+<li><p><strong>用户操作</strong>：</p>
+<ul>
+<li>用户选择文件或文件夹。</li>
+<li>前端调用接口上传文件，返回文件URL列表<code>uploaded_file_urls</code>。</li>
+</ul>
+</li>
+<li><p><strong>后端处理</strong>：</p>
+<ul>
+<li>提取文件中的项目信息和招标公告内容。</li>
+<li>提取的项目信息字段包括：<ul>
+<li><code>project_name</code></li>
+<li><code>agency</code></li>
+<li><code>bidder</code></li>
+<li><code>section_code</code></li>
+<li><code>location</code></li>
+<li><code>estimated_cost</code></li>
+<li><code>duration</code></li>
+<li><code>project_category</code></li>
+<li><code>qualification_field</code></li>
+<li><code>qualification_level</code></li>
+<li><code>manager_field</code></li>
+<li><code>manager_level</code></li>
+<li><code>performance_req</code></li>
+<li><code>manager_perf_req</code></li>
+<li><code>financial_req</code></li>
+<li><code>doc_acquire_time</code></li>
+<li><code>bid_opening_time</code></li>
+<li><code>evaluation_method</code></li>
+</ul>
+</li>
+<li>如果提取到的项目名称存在于缓存中，则直接返回缓存数据；否则：<ul>
+<li>从文件中提取招标公告及招标文件的段落内容。</li>
+<li>将提取结果存入缓存（超时时间30分钟）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>前端展示</strong>：</p>
+<ul>
+<li>接收返回的<code>project_info</code>并展示。</li>
+<li>用户可修改项目信息，修改结果存入<code>modified_project_info</code>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="执行功能详细流程"><a href="#执行功能详细流程" class="headerlink" title="执行功能详细流程"></a>执行功能详细流程</h3><ol>
+<li><p><strong>数据准备</strong>：</p>
+<ul>
+<li>接收前端传递的<code>modified_project_info</code>，存入数据库。</li>
+<li>从缓存中获取：<ul>
+<li>建筑师职业范围和资质。</li>
+<li>审查规则数据（若缓存不存在则查询数据库并存入缓存）。</li>
+<li>招标公告和招标文件段落内容。</li>
+</ul>
+</li>
+<li>如果缓存缺失必要数据，向用户提示重新上传。</li>
+</ul>
+</li>
+<li><p><strong>规则处理</strong>：</p>
+<ul>
+<li>简单规则：统一循环处理，生成结果对象，包括：<ul>
+<li>规则编码：<code>rule_code</code></li>
+<li>取证单位名称：<code>evidence_unit</code></li>
+<li>存在问题：<code>issues</code></li>
+<li>评审建议：<code>review_suggestions</code></li>
+<li>页码：<code>page_numbers</code></li>
+<li>段落内容：<code>paragraphs</code></li>
+</ul>
+</li>
+<li>复杂规则：单独处理，生成结果对象。</li>
+</ul>
+</li>
+<li><p><strong>报告生成</strong>：</p>
+<ul>
+<li>获取最新模板：调用<code>queryLatest</code>方法。</li>
+<li>根据规则处理结果，循环生成审计单，填充审计报告。</li>
+<li>将生成的审计单和报告打包，生成下载链接，并插入记录表。</li>
+</ul>
+</li>
+</ol>
+<h3 id="接口参考"><a href="#接口参考" class="headerlink" title="接口参考"></a>接口参考</h3><ul>
+<li>文件上传：<code>net.lab1024.smartadmin.module.business.bidDocAudit.service.AudiReportTplHistoryService#upload</code></li>
+<li>获取最新模板：<code>net.lab1024.smartadmin.module.business.bidDocAudit.service.AudiReportTplHistoryService#queryLatest</code></li>
+</ul>
+<h2 id="APACHE-OPENNLP"><a href="#APACHE-OPENNLP" class="headerlink" title="APACHE-OPENNLP"></a>APACHE-OPENNLP</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="Mac安装"><a href="#Mac安装" class="headerlink" title="Mac安装"></a>Mac安装</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install apache-opennlp</span><br></pre></td></tr></table></figure>
+
+<p>安装后，执行 <code>opennlp</code>看是否有返回help信息</p>
+<h3 id="标准-训练"><a href="#标准-训练" class="headerlink" title="标准 &amp; 训练"></a>标准 &amp; 训练</h3><p>标注数据是指将文本中的特定部分（实体）标记为自定义标签。标注格式通常是 <strong>每行一个词</strong>，并且每个词都有一个与之相关的标签。</p>
+<h5 id="1-1-标注规则"><a href="#1-1-标注规则" class="headerlink" title="1.1 标注规则"></a>1.1 标注规则</h5><ul>
+<li><strong>B-</strong>：表示实体的开始（Begin）。</li>
+<li><strong>I-</strong>：表示实体的内部部分（Inside）。</li>
+<li><strong>O</strong>：表示该词不属于任何命名实体（Outside）。</li>
+</ul>
+<p><strong>示例</strong>： 假设你有以下招标文件内容：</p>
+<p><code>XX建筑工程，合同金额为200万元，要求具有二级建筑资质。</code></p>
+<p>标注后的内容可能如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">XX建筑工程，合同金额为200万元，要求具有二级建筑资质。</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">XX B-PROJECT_NAME</span><br><span class="line">建筑工程 I-PROJECT_NAME</span><br><span class="line">， O</span><br><span class="line">合同 O</span><br><span class="line">金额 O</span><br><span class="line">为 O</span><br><span class="line">200万元 B-AMOUNT</span><br><span class="line">， O</span><br><span class="line">要求 O</span><br><span class="line">具有 O</span><br><span class="line">二级 B-QUALIFICATION</span><br><span class="line">建筑资质 I-QUALIFICATION</span><br><span class="line">。 O</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="自动标注"><a href="#自动标注" class="headerlink" title="自动标注"></a>自动标注</h5><p>人工标注效率太低，标注数据需要大量案例，人工标注并不现实，推荐使用工具。</p>
+<h6 id="Label-Studio"><a href="#Label-Studio" class="headerlink" title="Label Studio"></a>Label Studio</h6><p><strong>Label Studio</strong> 是一个开源的标注工具，支持文本标注、图片标注、音频标注等多种类型。它具有灵活的配置选项，可以根据需求配置标注任务，并且支持与机器学习模型结合来加速标注过程。</p>
+<ul>
+<li><p><strong>特点</strong>：</p>
+<ul>
+<li><strong>开源免费</strong>，适合小团队使用。</li>
+<li>支持 <strong>命名实体识别（NER）</strong> 标注。</li>
+<li>支持多种数据格式的导入和导出，包括 JSON 和 CSV。</li>
+<li>能够与 <strong>模型</strong> 结合，进行 <strong>自动标注</strong> 和 <strong>人工修正</strong>。</li>
+<li>对中文支持较好。</li>
+</ul>
+</li>
+<li><p><strong>使用场景</strong>：</p>
+<ul>
+<li>适合进行大规模的标注任务，尤其是需要标注结构化文本（如招标公告）的任务。</li>
+</ul>
+</li>
+<li><p><strong>官网</strong>：<a target="_blank" rel="noopener" href="https://labelstud.io/">Label Studio</a></p>
+</li>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li>完全免费且开源。</li>
+<li>支持多种标注任务。</li>
+<li>可配置和灵活的工作流。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li>比 Prodi.gy 的界面稍显简单。</li>
+<li>可能需要一些技术配置和部署。</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MacBookPro :: work_space/HY_work_space/nlp % opennlp TokenNameFinderTrainer -lang zh -model zh-model-bid-project-info.bin -data ner.txt -encoding UTF-8</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><code>ner.txt</code> 是你刚才标注好的数据文件。</li>
+<li><code>zh-model-bid-project-info.bin</code> 是你训练好的模型文件的输出路径。</li>
+<li><code>zh</code> 是语言设置，虽然 OpenNLP 主要提供英语模型，但它也支持其他语言（包括中文）。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> opennlp.tools.namefind.NameFinderME;</span><br><span class="line"><span class="keyword">import</span> opennlp.tools.tokenize.SimpleTokenizer;</span><br><span class="line"><span class="keyword">import</span> opennlp.tools.util.Span;</span><br><span class="line"><span class="keyword">import</span> opennlp.tools.util.model.FileInputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OpenNLPExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="comment">// 加载训练好的NER模型</span></span><br><span class="line">        <span class="type">FileInputStream</span> <span class="variable">modelIn</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;en-ner-custom.bin&quot;</span>); <span class="comment">// 使用你训练的模型</span></span><br><span class="line">        <span class="type">NameFinderME</span> <span class="variable">nameFinder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">NameFinderME</span>(<span class="keyword">new</span> <span class="title class_">TokenNameFinderModel</span>(modelIn));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输入招标文件的内容</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">text</span> <span class="operator">=</span> <span class="string">&quot;XX建筑工程，合同金额200万元，要求具有二级建筑资质。&quot;</span>;</span><br><span class="line">        String[] tokens = SimpleTokenizer.INSTANCE.tokenize(text);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 查找文本中的实体</span></span><br><span class="line">        Span[] nameSpans = nameFinder.find(tokens);</span><br><span class="line">        <span class="keyword">for</span> (Span span : nameSpans) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;实体: &quot;</span> + tokens[span.getStart()] + <span class="string">&quot; 到 &quot;</span> + tokens[span.getEnd() - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="LTP"><a href="#LTP" class="headerlink" title="LTP"></a>LTP</h2><h3 id="1-检查-LTP-模型文件是否正确"><a href="#1-检查-LTP-模型文件是否正确" class="headerlink" title="1. 检查 LTP 模型文件是否正确"></a>1. <strong>检查 LTP 模型文件是否正确</strong></h3><p>LTP 在加载模型时可能会遇到问题，特别是如果模型文件路径不正确或者模型文件损坏。LTP 默认会加载一些预训练的中文模型，如果没有正确加载，程序会卡住。</p>
+<p>首先，确保你的 LTP 模型文件已正确安装和加载。通常，LTP 会自动下载并缓存这些模型，但如果出错，可能会导致程序挂起。</p>
+<p>尝试手动下载 LTP 模型文件：</p>
+<ol>
+<li><p><strong>下载 LTP 模型</strong>：</p>
+<ul>
+<li>你可以访问 <a target="_blank" rel="noopener" href="https://github.com/HIT-SCIR/ltp">LTP 官方 GitHub</a> 或其他提供的下载链接，获取 LTP 模型。</li>
+<li>下载模型后，将它们解压到本地文件夹。</li>
+</ul>
+</li>
+<li><p><strong>设置模型路径</strong>：</p>
+<ul>
+<li>你可以手动设置模型路径，确保 LTP 使用的是正确的模型文件。</li>
+</ul>
+</li>
+</ol>
+<p>python</p>
+<p>复制代码</p>
+<p><code>from ltp import LTP  # 设置模型路径 ltp = LTP()  # 可以尝试通过以下方式手动加载模型 ltp.load(&#39;path_to_your_model&#39;)  # 替换为实际模型路径</code></p>
+<h3 id="2-检查-LTP-的安装方式"><a href="#2-检查-LTP-的安装方式" class="headerlink" title="2. 检查 LTP 的安装方式"></a>2. <strong>检查 LTP 的安装方式</strong></h3><p>LTP 有多个安装方式（如 <code>pyltp</code> 或 <code>ltp</code>），这可能会影响模型加载。你可以尝试使用 <code>pyltp</code>，这是 LTP 的原生 Python 接口，通常支持更好的稳定性。</p>
+<p>尝试以下步骤：</p>
+<p>bash</p>
+<p>复制代码</p>
+<p><code>pip install pyltp</code></p>
+<p>然后使用 <code>pyltp</code> 进行模型加载和处理。</p>
+<p>python</p>
+<p>复制代码</p>
+<p><code>from pyltp import Segmentor, NamedEntityRecognizer  # 初始化分词器和命名实体识别器 segmentor = Segmentor() recognizer = NamedEntityRecognizer()  # 加载模型路径 segmentor.load(&#39;path_to_your_model/cws.model&#39;)  # 分词模型 recognizer.load(&#39;path_to_your_model/ner.model&#39;)  # 命名实体识别模型  # 测试文本 text = &quot;阜阳市城南新区华信路道路及附属工程施工招标公告（电子招标）&quot;  # 分词 words = segmentor.segment(text) print(&quot;Words:&quot;, &#39;\t&#39;.join(words))  # 命名实体识别 named_entities = recognizer.recognize(words, [0]*len(words))  # 这里的[0]*len(words)只是一个例子，实际可以传递真实的句法分析结果 print(&quot;Named Entities:&quot;, &#39;\t&#39;.join(named_entities))</code></p>
+<h3 id="3-调试模型加载过程"><a href="#3-调试模型加载过程" class="headerlink" title="3. 调试模型加载过程"></a>3. <strong>调试模型加载过程</strong></h3><p>为了更深入地理解问题，可以在加载模型时添加更多的调试信息，看看是否能够找出问题所在。</p>
+<p>python</p>
+<p>复制代码</p>
+<p><code>from ltp import LTP  print(&quot;Initializing LTP...&quot;)  try:     ltp = LTP()     print(&quot;LTP initialized.&quot;) except Exception as e:     print(f&quot;Error initializing LTP: {e}&quot;)</code></p>
+<h3 id="4-检查是否有资源耗尽"><a href="#4-检查是否有资源耗尽" class="headerlink" title="4. 检查是否有资源耗尽"></a>4. <strong>检查是否有资源耗尽</strong></h3><p>在一些低配置的机器或内存较小的环境中，LTP 初始化时可能会耗尽资源，导致卡住。可以查看你的系统资源（如 CPU 和内存）使用情况，检查是否有异常。</p>
+<h3 id="5-模型文件路径权限问题"><a href="#5-模型文件路径权限问题" class="headerlink" title="5. 模型文件路径权限问题"></a>5. <strong>模型文件路径权限问题</strong></h3><p>确保 LTP 模型文件有正确的读取权限。有时，路径问题或者权限问题会导致 LTP 卡住。</p>
+<h3 id="6-检查-Python-环境和依赖"><a href="#6-检查-Python-环境和依赖" class="headerlink" title="6. 检查 Python 环境和依赖"></a>6. <strong>检查 Python 环境和依赖</strong></h3><p>LTP 依赖于一些底层的 C++ 库，确保你的 Python 环境没有出现冲突。</p>
+<p>你可以使用以下命令检查 Python 环境是否有问题：</p>
+<p>bash</p>
+<p>复制代码</p>
+<p><code>pip list</code></p>
+<p>查看是否有任何与 <code>ltp</code> 相关的冲突或版本问题。</p>
+<h3 id="7-更新或降级版本"><a href="#7-更新或降级版本" class="headerlink" title="7. 更新或降级版本"></a>7. <strong>更新或降级版本</strong></h3><p>如果你使用的是较新的版本，尝试降级到一个稳定的版本，或尝试使用其他版本的 LTP 进行兼容性测试。</p>
+<h3 id="8-使用其他轻量化中文NLP库"><a href="#8-使用其他轻量化中文NLP库" class="headerlink" title="8. 使用其他轻量化中文NLP库"></a>8. <strong>使用其他轻量化中文NLP库</strong></h3><p>如果 LTP 继续出现问题，考虑使用其他轻量的 NLP 库，如：</p>
+<ul>
+<li><strong>jieba</strong>：一个轻量级的中文分词库，适合分词和简单的文本处理。</li>
+<li><strong>SpaCy + 预训练模型</strong>：SpaCy 也支持中文，并且可以通过加载模型进行命名实体识别。</li>
+</ul>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
+<li>确保 LTP 模型文件已正确下载并加载。</li>
+<li>检查 LTP 安装是否正确，尝试使用 <code>pyltp</code>。</li>
+<li>加入更多调试信息，查看错误。</li>
+<li>确保系统资源足够，检查是否有资源耗尽的情况。</li>
+<li>尝试其他轻量化 NLP 库，如 <code>jieba</code>，如果 LTP 无法解决问题。</li>
+</ol>
+<h2 id="TONGYI-LONG"><a href="#TONGYI-LONG" class="headerlink" title="TONGYI-LONG"></a>TONGYI-LONG</h2><h5 id="新角度-返回全部规则的json-key为规则编码，value为是-否"><a href="#新角度-返回全部规则的json-key为规则编码，value为是-否" class="headerlink" title="新角度 返回全部规则的json key为规则编码，value为是&#x2F;否"></a>新角度 返回全部规则的json key为规则编码，value为是&#x2F;否</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">curl --location <span class="string">&#x27;https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions&#x27;</span> \</span><br><span class="line">--header <span class="string">&#x27;Authorization: Bearer sk-4b479404a0f3478db9f64005cf08367f&#x27;</span> \</span><br><span class="line">--header <span class="string">&#x27;Content-Type: application/json&#x27;</span> \</span><br><span class="line">--header <span class="string">&#x27;Cookie: acw_tc=2526ba21-09fc-95d2-805b-b4218729fdf1cf2b8df336c14ec4375c39b114b97498&#x27;</span> \</span><br><span class="line">--data <span class="string">&#x27;&#123;</span></span><br><span class="line"><span class="string">    &quot;model&quot;: &quot;qwen-long&quot;,</span></span><br><span class="line"><span class="string">    &quot;response_format&quot;: &#123;</span></span><br><span class="line"><span class="string">        &quot;type&quot;: &quot;json_object&quot;</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    &quot;messages&quot;: [</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;role&quot;: &quot;system&quot;,</span></span><br><span class="line"><span class="string">            &quot;content&quot;: &quot;你是一个有熟练经验的审计工程师&quot;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;role&quot;: &quot;system&quot;,</span></span><br><span class="line"><span class="string">            &quot;content&quot;: &quot;fileid://file-fe-VAAynUVqimzTAIH1yQbXXAq5&quot;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;role&quot;: &quot;user&quot;,</span></span><br><span class="line"><span class="string">            &quot;content&quot;: &quot;这个招标文件正文中,投标有效期是否为0或空，请返回json形式&quot;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设计：</span><br><span class="line"></span><br><span class="line">上传文件时，将文件直接上传至阿里qwen-long，返回文件id</span><br><span class="line">通过接口获取项目信息（）</span><br></pre></td></tr></table></figure></article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://fairyeye.github.io/2026/01/22/%E5%BD%92%E6%A1%A3/HY2.0/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://fairyeye.github.io/2026/01/22/%E5%BD%92%E6%A1%A3/HY2.0/&title=hy2.0 - LI&summary=1234567891011121314151617&#123;&quot;id&quot;: &quot;file-fe-WvEu6lBm7ZXNURS1wwgZwZ5n&quot;,&quot;object&quot;: &quot..."><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://fairyeye.github.io/2026/01/22/%E5%BD%92%E6%A1%A3/HY2.0/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/01/22/%E5%BD%92%E6%A1%A3/GitHub%20Page/">GitHub Page</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/01/22/%E5%BD%92%E6%A1%A3/231104/">231104</a></div></section></div>
+
+
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="fairyeye/fairyeye.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNTM2NzI0OTU=" data-category="Announcements" data-category-id="DIC_kwDODx68L84C1FEi" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:2;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/%E5%BD%92%E6%A1%A3/">归档</a></div><div class="sitemap-group"><span class="fs15">关于</span><a href="/about/">关于我</a><a target="_blank" rel="noopener" href="https://github.com/fairyeye">GitHub</a><a href="/atom.xml">RSS</a></div></div><div class="text"><p>本站由 <a href="%7Bconfig.url%7D">{config.author}</a> 使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 和 <a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#word-%E5%88%86%E6%AE%B5%E8%90%BD%E6%9B%BF%E6%8D%A2-https-deepoove-com-poi-tl"><span class="toc-text">word 分段落替换  https:&#x2F;&#x2F;deepoove.com&#x2F;poi-tl&#x2F;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flask-Python-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2"><span class="toc-text">Flask Python 服务器部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">1. 准备服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">2. 连接到服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-text">3. 安装依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81"><span class="toc-text">4. 上传代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-text">5. 创建虚拟环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%89%E8%A3%85%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96"><span class="toc-text">6. 安装项目依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%BF%90%E8%A1%8C-Flask-%E5%BA%94%E7%94%A8"><span class="toc-text">7. 运行 Flask 应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-text">8. 配置反向代理（可选）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Nginx"><span class="toc-text">安装 Nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-Nginx"><span class="toc-text">配置 Nginx</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E9%85%8D%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-text">9. 配置防火墙（可选）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-text">10. 访问你的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9D%E5%A4%96%E5%BB%BA%E8%AE%AE"><span class="toc-text">额外建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python"><span class="toc-text">python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%92%8C%E5%BA%93%E5%AE%89%E8%A3%85"><span class="toc-text">1. 环境配置和库安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%92%8C%E4%B8%BB%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91"><span class="toc-text">2. 登录页面和主程序逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2"><span class="toc-text">2.1. 创建登录界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E4%B8%BB%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91"><span class="toc-text">2.2. 主程序逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-%E5%9C%A8%E7%BA%BF%E6%9B%B4%E6%96%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">2.3. 在线更新功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E6%89%93%E5%8C%85%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-text">2.4. 打包应用程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96PyUpdater"><span class="toc-text">3. 配置和初始化PyUpdater</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%83%A8%E7%BD%B2%E5%92%8C%E6%B5%8B%E8%AF%95"><span class="toc-text">4. 部署和测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%81%E8%AF%BB%E5%8F%96%E5%A4%9A%E4%B8%AAExcel%E6%96%87%E4%BB%B6%E5%B9%B6%E4%B8%A4%E4%B8%A4%E5%88%A4%E6%96%AD%E5%AE%83%E4%BB%AC%E4%B9%8B%E9%97%B4%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E9%AB%98%E5%BA%A6%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%8C%89%E4%BB%A5%E4%B8%8B%E6%AD%A5%E9%AA%A4%E8%BF%9B%E8%A1%8C"><span class="toc-text">要读取多个Excel文件并两两判断它们之间是否存在高度重复的数据，可以按以下步骤进行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E7%9A%84%E5%BA%93"><span class="toc-text">1. 安装必要的库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%BB%E5%8F%96%E6%89%80%E6%9C%89Excel%E6%96%87%E4%BB%B6"><span class="toc-text">2. 读取所有Excel文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%AF%94%E8%BE%83%E6%AF%8F%E5%AF%B9Excel%E6%96%87%E4%BB%B6%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">3. 比较每对Excel文件的数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83%E7%BB%93%E6%9E%9C"><span class="toc-text">4. 输出比较结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-text">完整代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A1%E6%9F%A5"><span class="toc-text">审查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E8%A7%84%E5%88%99"><span class="toc-text">复杂规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%96%B9%E6%A1%88"><span class="toc-text">1. 方案</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">2. 具体实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3"><span class="toc-text">功能设计文档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E5%8F%8A%E6%B5%81%E7%A8%8B"><span class="toc-text">页面及流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A1%B5%EF%BC%9A%E9%87%87%E8%B4%AD%E6%96%B9%E5%BC%8F%E5%8F%8A%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4%E5%B1%95%E7%A4%BA"><span class="toc-text">第一页：采购方式及适用范围展示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A1%B5%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96"><span class="toc-text">第二页：文件上传与数据提取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%A1%B5%EF%BC%9A%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C"><span class="toc-text">第三页：异步执行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%BB%93%E6%9E%84"><span class="toc-text">数据表结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%BF%A1%E6%81%AF%E8%A1%A8%EF%BC%88project-info%EF%BC%89"><span class="toc-text">项目信息表（project_info）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD%E8%AF%A6%E7%BB%86%E6%B5%81%E7%A8%8B"><span class="toc-text">上传功能详细流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E5%8A%9F%E8%83%BD%E8%AF%A6%E7%BB%86%E6%B5%81%E7%A8%8B"><span class="toc-text">执行功能详细流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%8F%82%E8%80%83"><span class="toc-text">接口参考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#APACHE-OPENNLP"><span class="toc-text">APACHE-OPENNLP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mac%E5%AE%89%E8%A3%85"><span class="toc-text">Mac安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86-%E8%AE%AD%E7%BB%83"><span class="toc-text">标准 &amp; 训练</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E6%A0%87%E6%B3%A8%E8%A7%84%E5%88%99"><span class="toc-text">1.1 标注规则</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%A0%87%E6%B3%A8"><span class="toc-text">自动标注</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Label-Studio"><span class="toc-text">Label Studio</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LTP"><span class="toc-text">LTP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A3%80%E6%9F%A5-LTP-%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE"><span class="toc-text">1. 检查 LTP 模型文件是否正确</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A3%80%E6%9F%A5-LTP-%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="toc-text">2. 检查 LTP 的安装方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%B0%83%E8%AF%95%E6%A8%A1%E5%9E%8B%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B"><span class="toc-text">3. 调试模型加载过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E6%9C%89%E8%B5%84%E6%BA%90%E8%80%97%E5%B0%BD"><span class="toc-text">4. 检查是否有资源耗尽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98"><span class="toc-text">5. 模型文件路径权限问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%A3%80%E6%9F%A5-Python-%E7%8E%AF%E5%A2%83%E5%92%8C%E4%BE%9D%E8%B5%96"><span class="toc-text">6. 检查 Python 环境和依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%9B%B4%E6%96%B0%E6%88%96%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC"><span class="toc-text">7. 更新或降级版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96%E8%BD%BB%E9%87%8F%E5%8C%96%E4%B8%AD%E6%96%87NLP%E5%BA%93"><span class="toc-text">8. 使用其他轻量化中文NLP库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">总结：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TONGYI-LONG"><span class="toc-text">TONGYI-LONG</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E8%A7%92%E5%BA%A6-%E8%BF%94%E5%9B%9E%E5%85%A8%E9%83%A8%E8%A7%84%E5%88%99%E7%9A%84json-key%E4%B8%BA%E8%A7%84%E5%88%99%E7%BC%96%E7%A0%81%EF%BC%8Cvalue%E4%B8%BA%E6%98%AF-%E5%90%A6"><span class="toc-text">新角度 返回全部规则的json key为规则编码，value为是&#x2F;否</span></a></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `/%5Bobject%20Object%5D`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      const maxRetry = 3;
+      let retryCount = 0;
+
+      return new Promise((resolve, reject) => {
+        const load = () => {
+          utils.onLoading?.(el);
+
+          let timedOut = false;
+          const timeout = setTimeout(() => {
+            timedOut = true;
+            console.warn('[request] 超时:', url);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject('请求超时');
+            } else {
+              setTimeout(load, 1000);
+            }
+          }, 5000);
+
+          fetch(url).then(resp => {
+            if (timedOut) return;
+            clearTimeout(timeout);
+
+            if (!resp.ok) throw new Error('响应失败');
+            return resp;
+          }).then(data => {
+            if (timedOut) return;
+            utils.onLoadSuccess?.(el);
+            callback(data);
+            resolve(data);
+          }).catch(err => {
+            clearTimeout(timeout);
+            console.warn('[request] 错误:', err);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject(err);
+            } else {
+              setTimeout(load, 1000);
+            }
+          });
+        };
+
+        load();
+      });
+    },
+    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
+      return new Promise((resolve, reject) => {
+        let retryCount = 0;
+
+        const tryRequest = () => {
+          let timedOut = false;
+          const timer = setTimeout(() => {
+            timedOut = true;
+            if (++retryCount > maxRetry) reject('timeout');
+            else tryRequest();
+          }, timeout);
+
+          fetch(url, options)
+            .then(resp => {
+              clearTimeout(timer);
+              if (!resp.ok) throw new Error('bad response');
+              resolve(resp);
+            })
+            .catch(err => {
+              clearTimeout(timer);
+              if (++retryCount > maxRetry) reject(err);
+              else setTimeout(tryRequest, 500);
+            });
+        };
+
+        tryRequest();
+      });
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      const wrapper = el.closest('.lazy-box');
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+    
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+      if (def.loading) {
+        icon.style.backgroundImage = `url("${def.loading}")`;
+      }
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+  
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.33.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    // applyThemeToGiscus(theme)
+  }
+
+  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
+  const applyThemeToGiscus = (theme) => {
+    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const memos = document.getElementsByClassName('ds-memos');
+    if (memos != undefined && memos.length > 0) {
+      needFancybox = true;
+    }
+    const fancybox = document.getElementsByClassName('with-fancybox');
+    if (fancybox != undefined && fancybox.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
