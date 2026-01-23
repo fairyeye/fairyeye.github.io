@@ -304,3 +304,16 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc
 defaults write -g NSWindowShouldDragOnGesture -bool true
 
 ```
+
+
+
+
+```sh
+# 密钥：
+
+# 将备份的SSH密钥复制回来
+cp -r ~/backup/ssh-backup/* ~/.ssh/
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+
+```
