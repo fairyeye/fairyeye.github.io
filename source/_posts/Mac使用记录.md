@@ -131,7 +131,7 @@ source ~/.zshrc
 
 > **优点**：一键切换 Gradle 版本、自动配置 PATH、支持 Groovy/Kotlin/Java 等工具链
 
-### 1. 安装 SDKMAN!
+### 1. 安装 SDKMAN
 
 ```bash
 # 安装 SDKMAN!
@@ -166,12 +166,35 @@ gradle -v
 > 💡 后续升级：`sdk upgrade gradle`  
 > 切换版本：`sdk use gradle 8.5`
 
+
+```
+
+# 安装JDK
+sdk install java 17.0.9-tem
+sdk install java 21.0.1-tem
+sdk install java 8.0.392-tem  # 如果需要Java 8
+
+# 设置默认版本
+sdk default java 17.0.9-tem
+
+```
+
+
+
 ## 其它Home Brew应用
 
 ```bash
+
+# gemini
 brew install gemini-cli
 
+# Claude Code
 npx zcf
+
+# Open Code + GLM
+
+# vscode
+brew install --cask visual-studio-code
 ```
 
 
