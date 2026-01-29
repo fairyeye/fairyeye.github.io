@@ -9,5 +9,7 @@
   "focusNewTab": false,
   "newFileLocation": "current",
   "attachmentFolderPath": "./附件",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "livePreview": true,
+  "readableLineLength": false
 }

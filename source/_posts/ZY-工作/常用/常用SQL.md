@@ -176,8 +176,7 @@ WHERE
 
 ## 欧姆龙
 
-```
-
+```sql
 SELECT
 	sp.supplier_basic_id,
 	hc.company_num '公司',
