@@ -266,3 +266,102 @@ WHERE
 	AND ir.h_tenant_id = 24997
 	and iu.real_name != '期初导入'
 ```
+
+
+```sql
+
+SELECT
+	t.invite_id,
+	t.registration_status '状态',
+	t.company_id,
+	t.company_num '供应商编码',
+	t.company_name '供应商名称',
+	t.login_name '账号',
+	t.sales_person_name '用户名',
+	t.sales_person_phone '手机',
+	t.sales_person_email '邮箱'
+FROM
+	(
+		SELECT
+			spi.invite_id,
+			spi.invite_id AS display_invite_id,
+			spi.last_update_date registration_date,
+			spi.invite_company_id company_id,
+			hc.company_num,
+			hc.company_name,
+			(
+				CASE
+					WHEN spi.process_status = 'REGISTERED' THEN 'REGISTERED'
+					WHEN spi.process_status = 'APPROVED' THEN 'APPROVED'
+					WHEN spi.process_status = 'REJECT' THEN 'REJECT'
+					WHEN spi.process_status = 'DISABLED' THEN 'DISABLED'
+					ELSE 'INVITEING'
+				END
+			) registration_status,
+			spi.level_type_flag,
+			iu.login_name,
+			iu.real_name sales_person_name,
+			ifnull(iu.phone, spi.sales_person_phone) sales_person_phone,
+			ifnull(iu.email, spi.sales_person_email) sales_person_email
+		FROM
+			spfm_partner_invite spi
+			LEFT JOIN srm.hpfm_company hc ON hc.company_id = spi.invite_company_id
+			LEFT JOIN srm.iam_user iu ON spi.sales_person_id = iu.id
+		WHERE
+			spi.invite_type = 'SUPPLIER'
+			AND (
+				spi.invite_id = spi.relation_invite_id
+				OR spi.relation_invite_id IS NULL
+			)
+			AND spi.tenant_id = 24997
+		UNION ALL
+		SELECT
+			spi.invite_id,
+			spi.invite_id AS display_invite_id,
+			spi.last_update_date registration_date,
+			ifnull(spi.invite_company_id, suac.company_id) company_id,
+			hc.company_num,
+			IFNULL(suac.company_name, hui.company_name) company_name,
+			(
+				CASE
+					WHEN sfcr.req_status = 'APPROVING' THEN 'APPROVING'
+					WHEN sfcr.req_status = 'SUBMIT' THEN 'APPROVING'
+					WHEN sfcr.req_status = 'REJECT' THEN 'REG_REJECT'
+					WHEN sfcr.req_status = 'WFL_REJECT' THEN 'REG_REJECT'
+					WHEN sfcr.req_status = 'SUCCESS' THEN 'CERTIFICATED'
+					WHEN spi.process_status = 'CERTIFICATION' THEN 'CERTIFICATION'
+					WHEN spi.process_status = 'CERTIFICATED' THEN 'CERTIFICATED'
+					WHEN spi.process_status = 'REJECT' THEN 'REG_REJECT'
+					WHEN spi.process_status = 'DISABLED' THEN 'DISABLED'
+					WHEN spi.process_status = 'REISSUED' THEN 'REISSUED'
+					WHEN suac.invitation_code IS NULL THEN 'UNREGISTERED'
+					ELSE 'INVITEING'
+				END
+			) registration_status,
+			spi.level_type_flag,
+			iu.login_name,
+			iu.real_name sales_person_name,
+			ifnull(iu.phone, spi.sales_person_phone) sales_person_phone,
+			ifnull(iu.email, spi.sales_person_email) sales_person_email
+		FROM
+			spfm_partner_invite spi
+			LEFT JOIN spfm_supplier_invite_reg sir ON sir.invitation_code = spi.invitation_code
+			LEFT JOIN srm.hiam_user_info hui ON hui.invitation_code = spi.invitation_code
+			AND hui.user_id = spi.invited_user_id
+			LEFT JOIN srm.iam_user iu ON spi.invited_user_id = iu.id
+			LEFT JOIN spfm_user_association_company suac ON iu.id = suac.user_id
+			AND suac.purchase_tenant_id = 24997
+			LEFT JOIN sslm_firm_change_req sfcr ON suac.change_req_id = sfcr.change_req_id
+			LEFT JOIN hpfm_company hc ON hc.company_id = IFNULL(spi.invite_company_id,suac.company_id)
+			AND hc.company_id IS NOT NULL
+		WHERE
+			spi.invite_type = 'REGISTER'
+			AND (
+				spi.invite_id = spi.relation_invite_id
+				OR spi.relation_invite_id IS NULL
+			)
+			AND spi.tenant_id = 24997
+	) t
+WHERE
+	t.sales_person_name != '期初导入' and sales_person_name != '注销账户'
+```

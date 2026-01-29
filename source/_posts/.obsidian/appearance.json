@@ -3,5 +3,5 @@
   "accentColor": "#73d2f2",
   "theme": "obsidian",
   "cssTheme": "Things",
-  "translucency": false
+  "translucency": true
 }
