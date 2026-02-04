@@ -364,3 +364,68 @@ FROM
 WHERE
 	t.sales_person_name != '期初导入' and sales_person_name != '注销账户'
 ```
+
+## 建立合作但是没有生成主数据 补发MQ
+
+```sql
+
+select * from spfm_partner where supplier_basic_id is null; 
+
+select * from spfm_event_message where event_Code='SSLM_LIFECYCLESYNC' and data like '%318027%' and data like '%105552%' 
+
+curl --location 'isrm.going-link.com...' \ 
+
+--header 'Authorization: bearer b3ae9c58-be2d-4cff-bbc3-26f68eb26d61' \ 
+
+--header 'Content-Type: application/json' \ 
+
+--header 'Cookie: HWWAFSESID=6ed37c15462e0b1c2a; HWWAFSESTIME=1703730127205' \ 
+
+--data '[{"eventMessageId":553727991}]'
+```
+
+
+## 建立合作但是没有生成主数据 也没有发MQ
+
+```sql
+select distinct partner_company_id from spfm_partner where supplier_basic_id is null; 
+
+-- 1309,1310,1311
+
+select company_num,company_name from hpfm_company where company_id in (1309,1310,1311);
+
+select partner_id,supplier_basic_id from spfm_partner where tenant_id = 1 and partner_company_id in  (1309,1310,1311);
+select id,organization_id,login_name,real_name from iam_user where real_name in ('CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+select id,company_name,unified_social_code from spfm_enterprise_register_index where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+-- 3029,3028,3027
+select supplier_id,supplier_num,supplier_name,link_id from sslm_external_supplier where supplier_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+
+select company_basic_id,company_id,company_num,company_name from spfm_company_basic where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+
+select * from spfm_company_basic_es where company_basic_id in (3029,3028,3027);
+select * from spfm_company_basic_tl where company_basic_id in (3029,3028,3027);
+
+select company_basic_id,com_basic_req_id,change_req_id from spfm_com_basic_req where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+
+update sslm_external_supplier set link_id = null where supplier_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+
+delete from iam_user where real_name in ('CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+
+delete from hpfm_company where company_id in (1309,1310,1311); 
+delete from spfm_enterprise_register_index where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+delete from spfm_partner where tenant_id = 1 and partner_company_id in  (1309,1310,1311);
+delete from spfm_company_basic where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+delete from spfm_company_basic_tl where company_basic_id in (3029,3028,3027);
+delete from spfm_company_basic where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+
+
+delete from spfm_company_address where company_id in (1309,1310,1311);
+delete from spfm_company_attachment where company_id in (1309,1310,1311);
+delete from spfm_company_bank_account where company_id in (1309,1310,1311);
+delete from spfm_company_business where company_id in (1309,1310,1311);
+delete from spfm_company_contacts where company_id in (1309,1310,1311);
+delete from spfm_company_finance where company_id in (1309,1310,1311);
+delete from spfm_company_invoice where company_id in (1309,1310,1311);
+delete from spfm_company_main_business where company_id in (1309,1310,1311);
+delete from spfm_company_main_industry where company_id in (1309,1310,1311);
+```
