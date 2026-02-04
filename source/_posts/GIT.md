@@ -122,8 +122,50 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 ```
 
 
+### 开源项目 - AI
+
+#### OpenClaw 相关
+
+##### **OpenClaw 的记忆层**
+
+memU 是一个给长期运行的 AI Agent 用的记忆层，比如 OpenClaw。
+
+它会在后台悄悄把对话、文档、行为日志这些东西整理成结构化记忆，一点点积累，帮应用在不同会话之间保留用户的目标、偏好和上下文，不用每次都从头问起。
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzR5pDpuoicpAAeibGn6gQH5IpTCNylPzhDLbFKVdj5QIZEaG9ea6behrTqKBIic5DicicBewVcwcichVdA/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=5)
+
+对开发者来说，就是在现有代理外面加了一层专门管记忆的基础设施，既能减少反复喂上下文的次数，也能降低长期的 LLM 调用成本。
+
+它内部把记忆分成资源、条目和类别，像一个分层的个人知识库。
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzR5pDpuoicpAAeibGn6gQH5IRical1tBQIwXkcKrK3j7icDc53R4WvOOia6q8Kg1wtObQdaQGq7djcCOg/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=6)
+
+从落地场景看，它更适合做一直在旁边观察和学习那种助手：长期跟踪你的阅读和搜索习惯，主动推送可能感兴趣的内容。
+
+帮你记住邮件风格、常用回复和重要联系人，自动归类和起草邮件，也能盯着投资偏好和市场事件，在触发条件满足时给提醒或建议。
+
+简单说，如果你在做任何需要记得住人和事的智能体产品，memU 可以把记忆这块的活先干好，让上层的逻辑专心做交互和决策。
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzR5pDpuoicpAAeibGn6gQH5ITuhH8n2kdzPjUv6BhDRYqwGRf8HFFkRm5O5amCt59cpIqfIp9GSPKA/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=7)
+
+```
+开源地址：https://github.com/NevaMind-AI/memU
+```
+
+#### ClaudeCode 相关
+
+
+#### OpenCode相关
+
+
+
+
+
 
 ### 开源项目
+
+
+
 
 #### AI PPT
 
