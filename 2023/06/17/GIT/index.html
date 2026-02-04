@@ -1,0 +1,1289 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
+  
+  
+  <meta name="generator" content="Hexo 8.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>Git - LI</title>
+
+  
+    <meta name="description" content="Gitee Go流水线12# 官方文档https:&#x2F;&#x2F;blog.gitee.com&#x2F;2022&#x2F;11&#x2F;23&#x2F;pipeline&#x2F;  前端CI手动创建流水线，选择部署分之，需要手动增加部署阶段 添加部署阶段 点击发布后面的＋    添加新阶段  点击部署  点击主机部署     选择执行主机组（如果没有就先去添加主机，选择    填写部署脚本，前端项目把上游构建的包，解压到服务器指定路径即可  1234">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="https://fairyeye.github.io/2023/06/17/GIT/">
+<meta property="og:site_name" content="LI">
+<meta property="og:description" content="Gitee Go流水线12# 官方文档https:&#x2F;&#x2F;blog.gitee.com&#x2F;2022&#x2F;11&#x2F;23&#x2F;pipeline&#x2F;  前端CI手动创建流水线，选择部署分之，需要手动增加部署阶段 添加部署阶段 点击发布后面的＋    添加新阶段  点击部署  点击主机部署     选择执行主机组（如果没有就先去添加主机，选择    填写部署脚本，前端项目把上游构建的包，解压到服务器指定路径即可  1234">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fairyeye.github.io/images/avatar.jpg">
+<meta property="article:published_time" content="2023-06-17T22:33:35.000Z">
+<meta property="article:modified_time" content="2026-02-04T07:50:00.251Z">
+<meta property="article:author" content="li">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fairyeye.github.io/images/avatar.jpg">
+  
+  
+  
+  <meta name="keywords" content="git">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
+
+
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"li","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2023-06-17T22:33:35+00:00","dateModified":"2026-02-04T07:50:00+00:00","datePublished":"2023-06-17T22:33:35+00:00","description":"","headline":"Git","mainEntityOfPage":{"@type":"WebPage","@id":"https://fairyeye.github.io/2023/06/17/GIT/"},"publisher":{"@type":"Organization","name":"li","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fairyeye.github.io/2023/06/17/GIT/","keywords":"git","image":[]}</script>
+  
+</head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">LI</div><div class="sub cap">记录记录</div></a></div></header>
+
+<div class="nav-area">
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="归档" href="/archives/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/categories/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="关于" href="/about/" style="color:#F44336"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></nav>
+</div>
+<div class="widgets">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/01/17/%E6%A8%A1%E6%9D%BF/"><span class="title">模板</span></a><a class="item title" href="/2026/02/04/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/"><span class="title">本地虚拟机记录</span></a><a class="item title" href="/2023/02/13/%E5%BD%92%E6%A1%A3/%E7%AE%97%E6%B3%95/"><span class="title">算法</span></a><a class="item title" href="/2026/02/04/%E5%BD%92%E6%A1%A3/%E8%A3%85%E4%BF%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"><span class="title">装修注意事项</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/"><span class="title">设计模式笔记</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/"><span class="title">阿里巴巴手册</span></a><a class="item title" href="/2026/02/04/%E5%BD%92%E6%A1%A3/%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E4%BB%A5%E4%B8%8B%E7%9F%A5%E8%AF%86/"><span class="title">需要掌握以下知识</span></a><a class="item title" href="/2020/04/29/%E5%BD%92%E6%A1%A3/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/"><span class="title">数据库时间存储</span></a><a class="item title" href="/2022/12/07/%E5%BD%92%E6%A1%A3/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">搭建SSR服务器</span></a><a class="item title" href="/2020/04/17/%E5%BD%92%E6%A1%A3/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/"><span class="title">时间戳转换日期问题</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/fairyeye" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:your-email@example.com" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/use/">use</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-06-17T22:33:35.000Z">2023-06-17</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-02-04T07:50:00.251Z">2026-02-04</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Git</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h3 id="Gitee-Go"><a href="#Gitee-Go" class="headerlink" title="Gitee Go"></a>Gitee Go</h3><h4 id="流水线"><a href="#流水线" class="headerlink" title="流水线"></a>流水线</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 官方文档</span><br><span class="line">https://blog.gitee.com/2022/11/23/pipeline/</span><br></pre></td></tr></table></figure>
+
+<h4 id="前端CI"><a href="#前端CI" class="headerlink" title="前端CI"></a>前端CI</h4><p>手动创建流水线，选择部署分之，需要手动增加部署阶段</p>
+<h5 id="添加部署阶段"><a href="#添加部署阶段" class="headerlink" title="添加部署阶段"></a>添加部署阶段</h5><ol>
+<li><p>点击发布后面的＋    添加新阶段</p>
+</li>
+<li><p>点击部署  点击主机部署</p>
+</li>
+</ol>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/17/2e1e2d665f8fcd29.png"></p>
+<ol start="3">
+<li>选择执行主机组（如果没有就先去添加主机，选择</li>
+</ol>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/17/d1715a1b2ec593f8.png"></p>
+<ol start="4">
+<li>填写部署脚本，前端项目把上游构建的包，解压到服务器指定路径即可</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 功能：部署脚本会在部署主机组的每台机器上执行</span></span><br><span class="line"><span class="comment"># 使用场景：先将制品包解压缩到指定目录中，再执行启动脚本deploy.sh，脚本示例地址：https://gitee.com/gitee-go/spring-boot-maven-deploy-case/blob/master/deploy.sh</span></span><br><span class="line"><span class="comment"># mkdir -p /home/admin/app</span></span><br><span class="line"><span class="comment"># tar zxvf ~/gitee_go/deploy/output.tar.gz -C /home/admin/app</span></span><br><span class="line"><span class="comment"># sh /home/admin/app/deploy.sh restart</span></span><br><span class="line"><span class="comment"># 如果你是php之类的无需制品包的制品方式，可以使用 git clone 或者 git pull 将源代码更新到服务器，再执行其他命令</span></span><br><span class="line"><span class="comment"># git clone ***@***.git</span></span><br><span class="line">tar zxvf ~/gitee_go/deploy/output.tar.gz -C /home/ubuntu </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="添加主机"><a href="#添加主机" class="headerlink" title="添加主机"></a>添加主机</h4><ol>
+<li>点击新建主机组</li>
+</ol>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/17/e0925018357ec4d5.png"></p>
+<ol start="2">
+<li>选择新建类型（以腾讯云为例），填写基本信息（以Linux为例），点击确认</li>
+</ol>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/17/09807a134b458ca9.png"></p>
+<ol start="3">
+<li>添加主机</li>
+</ol>
+<p>点击添加Linux主机，选择通过命令行逐台添加，</p>
+<p>复制命令到目标腾讯云主机命令行</p>
+<p>刷新页面即可见关联服务器信息</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/17/ba5c1004444b1e6a.png"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/06/17/b3943c35c7f70d3b.png"></p>
+<h4 id="后端CI"><a href="#后端CI" class="headerlink" title="后端CI"></a>后端CI</h4><h5 id="部署脚本"><a href="#部署脚本" class="headerlink" title="部署脚本"></a>部署脚本</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/gitee_go/deploy/</span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line">tar -zxf API.tar.gz</span><br><span class="line"><span class="built_in">cd</span> target</span><br><span class="line">pid=`ps -ef|grep smart-admin-api-1.0.0|grep -v grep|awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$pid</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">kill</span> -15 <span class="variable">$pid</span>  </span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">nohup</span> /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar &gt;/home/ubuntu/log.log &amp;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/gitee_go/deploy/</span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line">tar -zxf API.tar.gz</span><br><span class="line"><span class="built_in">cd</span> target</span><br><span class="line">pid=`ps -ef|grep smart-admin-api-1.0.0|grep -v grep|awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span>`</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$pid</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">kill</span> -15 <span class="variable">$pid</span>  </span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">nohup</span> /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; /home/ubuntu/log.log 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="开源项目-AI"><a href="#开源项目-AI" class="headerlink" title="开源项目 - AI"></a>开源项目 - AI</h3><h4 id="OpenClaw-相关"><a href="#OpenClaw-相关" class="headerlink" title="OpenClaw 相关"></a>OpenClaw 相关</h4><h5 id="OpenClaw-的记忆层"><a href="#OpenClaw-的记忆层" class="headerlink" title="OpenClaw 的记忆层"></a><strong>OpenClaw 的记忆层</strong></h5><p>memU 是一个给长期运行的 AI Agent 用的记忆层，比如 OpenClaw。</p>
+<p>它会在后台悄悄把对话、文档、行为日志这些东西整理成结构化记忆，一点点积累，帮应用在不同会话之间保留用户的目标、偏好和上下文，不用每次都从头问起。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzR5pDpuoicpAAeibGn6gQH5IpTCNylPzhDLbFKVdj5QIZEaG9ea6behrTqKBIic5DicicBewVcwcichVdA/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=5" alt="图片"></p>
+<p>对开发者来说，就是在现有代理外面加了一层专门管记忆的基础设施，既能减少反复喂上下文的次数，也能降低长期的 LLM 调用成本。</p>
+<p>它内部把记忆分成资源、条目和类别，像一个分层的个人知识库。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzR5pDpuoicpAAeibGn6gQH5IRical1tBQIwXkcKrK3j7icDc53R4WvOOia6q8Kg1wtObQdaQGq7djcCOg/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=6" alt="图片"></p>
+<p>从落地场景看，它更适合做一直在旁边观察和学习那种助手：长期跟踪你的阅读和搜索习惯，主动推送可能感兴趣的内容。</p>
+<p>帮你记住邮件风格、常用回复和重要联系人，自动归类和起草邮件，也能盯着投资偏好和市场事件，在触发条件满足时给提醒或建议。</p>
+<p>简单说，如果你在做任何需要记得住人和事的智能体产品，memU 可以把记忆这块的活先干好，让上层的逻辑专心做交互和决策。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzR5pDpuoicpAAeibGn6gQH5ITuhH8n2kdzPjUv6BhDRYqwGRf8HFFkRm5O5amCt59cpIqfIp9GSPKA/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=7" alt="图片"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开源地址：https://github.com/NevaMind-AI/memU</span><br></pre></td></tr></table></figure>
+
+<h4 id="ClaudeCode-相关"><a href="#ClaudeCode-相关" class="headerlink" title="ClaudeCode 相关"></a>ClaudeCode 相关</h4><h4 id="OpenCode相关"><a href="#OpenCode相关" class="headerlink" title="OpenCode相关"></a>OpenCode相关</h4><h3 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h3><h4 id="AI-PPT"><a href="#AI-PPT" class="headerlink" title="AI PPT"></a>AI PPT</h4><p>输入一句话，它就能让 AI 自动为你生成一款美观的 PPT。</p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/allweonedev/presentation-ai">https://github.com/allweonedev/presentation-ai</a></p>
+<h4 id="AI-提示词大合集"><a href="#AI-提示词大合集" class="headerlink" title="AI 提示词大合集"></a><strong>AI 提示词大合集</strong></h4><p>*<strong>本周斩获 Star 数：1029*</strong></p>
+<p>这个开源项目没啥好说的，就是<strong>一箩筐好用的 AI 提示词合集</strong>，复制粘贴即用。</p>
+<p>应该是 Github 上受关注程度最高的，目前已经获得了 <strong>122K</strong><strong>+</strong> 的 Star。</p>
+<p>涵盖的场景很多，比如<strong>编程、教育、营销</strong>等等，而且有专为不同 AI 适配的更合适提示词（如 Claude、Gemini、GitHub Copliot 等）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开源地址：https://github.com/f/awesome-chatgpt-prompts</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruxWUwH444ggHRlTJLBF11HEm5iaDEk4zK0NCasOmZddibB2y4cew5aWmaJxlYp5NdCQ2U9vGqial1tRw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<h4 id="Ventoy："><a href="#Ventoy：" class="headerlink" title="Ventoy："></a>Ventoy：</h4><p><strong>Ventoy 是*<em>一个「一劳永逸」的多系统启动U盘工具*</em></strong>，在 GitHub 上竟然获得了 <strong>67K</strong> 的 Star。</p>
+<p>它的核心功能是将普通 U 盘变成“系统仓库”。用户只需首次安装 Ventoy，之后直接<strong>拖入</strong>多个系统镜像文件（如 Windows、Linux 的 ISO文件）即可。</p>
+<p>而且你<strong>不需要</strong>反复格式化 U 盘，<strong>支持自由增删文件</strong>，且 U 盘仍可作为普通存储盘使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开源地址：https://github.com/ventoy/Ventoy</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruxWUwH444ggHRlTJLBF11HEVCffJQlXzlS6wXXstcISsuez2qSCXxfqhEmLgZ39Niab0BMicTkB7ib0Q/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="头像">moodiary：一款 Flutter 构建的开源跨平台日记应用。</p>
+<p>这是一款完全开源、颜值在线的日记软件。它支持多种形式的文本编辑和多媒体附件，同时提供密码保护、生物识别解锁、足迹地图、智能助手、同步与备份等功能，兼容 Android、iOS、Windows、macOS 和 Linux 系统。来自 @云烨 的分享</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNbphtpajhQupibaGhDjCkMMM2DBicNPcFAFrF2sWUNpROAkMLqV5KrVkxwwyhVcQRKicm2lTtWFMIwg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;ZhuJHua&#x2F;moodiary</p>
+</blockquote>
+<h4 id="Pluvia：Android-上的非官方-Steam-客户端"><a href="#Pluvia：Android-上的非官方-Steam-客户端" class="headerlink" title="Pluvia：Android 上的非官方 Steam 客户端"></a>Pluvia：Android 上的非官方 Steam 客户端</h4><p>这是一款专为 Android 设计的轻量级、非官方 Steam 客户端，可以在移动设备上浏览、下载并运行无 DRM（数字版权管理）的 Steam 游戏，支持 Steam 云存档和好友列表等功能。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNbphtpajhQupibaGhDjCkMMkBIuDic11CNBufic502fdic7ftKqVIE47ibe1G10c9iaCfaadCib3l8yWSiaA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;oxters168&#x2F;Pluvia</p>
+</blockquote>
+<h4 id="免费开源的-AI-图像增强神器"><a href="#免费开源的-AI-图像增强神器" class="headerlink" title="免费开源的 AI 图像增强神器"></a>免费开源的 AI 图像增强神器</h4><p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzakDiaJeSvuUY1Hoob4CdDU5NPFjicOVBJDEnPy8zzFPiadHjEKPichEqSIzic74IdDa7sFYBf8mTIXMw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>Upscayl 是免费开源的 AI 图像增强工具，能够利用先进的 AI 模型将低分辨率图像放大并提升质量，让你的老照片焕发新生。在如下场景做的很好：</p>
+<ul>
+<li><p>放大老照片</p>
+</li>
+<li><p>提升图像质量</p>
+</li>
+<li><p>修复损坏的图像</p>
+</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzakDiaJeSvuUY1Hoob4CdDULib6cOmoFMMfCsbqicHz4LNb4U0skhqNWmfBzhiaCqfd9m4pwwZg6I3tg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>它完全免费且开源，支持 Linux、macOS 和 Windows 系统，方便你在任何平台上使用。</p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/upscayl/upscayl">https://github.com/upscayl/upscayl</a></p>
+<p>并且提供多种 AI 模型，包括 Real-ESRGAN、Waifu2x 和 SwinIR 等，可以根据不同的图像类型和需求选择合适的模型。支持批量处理，你可以一次性放大多个图像，节省时间和精力。</p>
+<h4 id="电子书转有声书的工具：ebook2audiobook"><a href="#电子书转有声书的工具：ebook2audiobook" class="headerlink" title="电子书转有声书的工具：ebook2audiobook"></a>电子书转有声书的工具：ebook2audiobook</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNOQTYPgTuVHenJE0Pz9FUYv0RJeBHpC754bT5rgeIrVbEtZJU0QOzZV0DB9EZptHxc4V3aFzM32ibQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<p><strong>主语言：Python</strong>，<strong>Star：2.7k</strong>，<strong>周增长：1.4k</strong></p>
+<p>这款开源工具可以轻松将电子书转换为有声书，支持多种常见格式，如 EPUB、MOBI、PDF 等。它通过 calibre 提取电子书文本，并运用语音合成技术（Text-to-Speech），能够生成包含章节和元数据的有声书，支持包括中文在内的 1000 多种语言。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;DrewThomasson&#x2F;ebook2audiobook</p>
+</blockquote>
+<h4 id="MediaGo是一个用Electron-Antd-Vite打造的开源视频下载工具。"><a href="#MediaGo是一个用Electron-Antd-Vite打造的开源视频下载工具。" class="headerlink" title="MediaGo是一个用Electron+Antd+Vite打造的开源视频下载工具。"></a><code>MediaGo</code>是一个用Electron+Antd+Vite打造的开源视频下载工具。</h4><p>专门针对m3u8格式的流媒体视频进行下载。这个工具不仅支持视频下载，还能处理B站视频下载，功能强大到让你惊呼“还有这种操作”！目前已经在GitHub上收获了超过4.7k的星星，可见其受欢迎程度。</p>
+<h4 id="高颜值-Windows-系统桌面"><a href="#高颜值-Windows-系统桌面" class="headerlink" title="高颜值 Windows 系统桌面"></a>高颜值 Windows 系统桌面</h4><p>Seelen UI 是一款专为 Windows 10 和 11 用户设计的桌面环境，旨在<strong>通过高度自定义和提升生产力来优化您的桌面体验</strong>。它无缝集成于系统，提供多种功能，允许您根据个人喜好定制桌面，并优化工作流程。</p>
+<p>**个性化桌面：**Seelen UI 让您可以根据自己的风格和需求调整桌面。您可以自定义菜单、小部件等元素，打造最适合您的工作空间。</p>
+<p>**平铺式窗口管理器：**Seelen UI 自动排列窗口，支持多任务处理，使工作流程更加流畅。</p>
+<p>**音乐体验：**内置的媒体模块兼容大多数音乐播放器，您可以随时暂停、恢复和跳过曲目，而无需打开其他窗口。</p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/eythaann/Seelen-UI">https://github.com/eythaann/Seelen-UI</a></p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKb6dOrjPbMLlCHvicWHeoWcW3LWcM8alo16bQMaLafQUHINmF3tvdTW1Q/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbUROW5GszEPMWmX3wcvduhUQCeGpR6uOISurcVUdb2rugxDr58XURcw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbVqXxdibYZrzc3wwXlxFM4R5w1icjngEuEOCUqvzaGyb7eRmz8RPiaONBg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbiakGW6YMDkpWRqlUIGdqABG6x54o0Aew8RLuozoDJuZk4pOslaS1nxw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruzESRD7Igh1GXjjsQZmeKKbWxiaKNlN3fq2vJ7qetucrQLW7ibhmcKlg9krKdicfX2gxaus1ibTjKD1AA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h4 id="AI-驱动的简历匹配分析工具：Reactive-Resume"><a href="#AI-驱动的简历匹配分析工具：Reactive-Resume" class="headerlink" title="AI 驱动的简历匹配分析工具：Reactive-Resume"></a>AI 驱动的简历匹配分析工具：Reactive-Resume</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNM62eLbdFNwVdxo9BK0DUaZGGXbdjw7vCXaBJbicwoibZer5ic12PNNgFMnREhq3WWr7Guibfe707RzBQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<p><strong>主语言：Python</strong>，<strong>Star：5.1k</strong>，<strong>周增长：100</strong></p>
+<p>这是一个基于 AI 的免费开源工具，可用于提升简历质量。它通过解析简历和职位描述，模拟求职者跟踪系统（ATS），并利用 FastEmbed 技术计算简历与职位描述的匹配程度，最后给出简历的修改建议，从而提高简历通过自动筛选系统的概率。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;srbhr&#x2F;Resume-Matcher</p>
+</blockquote>
+<h4 id="隐藏私人文件和应用的-Android-工具：Amarok-Hider"><a href="#隐藏私人文件和应用的-Android-工具：Amarok-Hider" class="headerlink" title="隐藏私人文件和应用的 Android 工具：Amarok-Hider"></a>隐藏私人文件和应用的 Android 工具：Amarok-Hider</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNM62eLbdFNwVdxo9BK0DUaZjlvicibBMq5ibyE7YPeRx1ksXfeQ8Iluq9Ow6AwlqON4s7iaHNtxMXQGsg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：Java</strong>，<strong>Star：1.7k</strong></p>
+<p>这是一款用于隐藏文件和应用的隐私保护工具，简单易用且界面美观。它通过混淆文件名来实现文件隐藏，而非加密操作，支持免 Root 一键隐藏应用、浮动按钮和快捷开关等功能。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;deltazefiro&#x2F;Amarok-Hider</p>
+</blockquote>
+<h4 id="spotube：开源的-Spotify-客户端。"><a href="#spotube：开源的-Spotify-客户端。" class="headerlink" title="spotube：开源的 Spotify 客户端。"></a>spotube：开源的 Spotify 客户端。</h4><p>该项目是基于 Flutter 开发的 Spotify 客户端，完全免费且无广告。它使用 Spotify、JioSaavn 和 YouTube 作为音乐源，用户无需登录即可自由下载音乐，支持桌面和移动设备。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOiaxK5zKZxdQyUUkMwmvkkwpZz6kFqSIceLNqM9RRDgl5dTtsUYxlUZROLbwfa8dl32mEwaM3mJIA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;KRTirtho&#x2F;spotube</p>
+</blockquote>
+<h4 id="frpc-desktop：跨平台的-frp-桌面客户端。"><a href="#frpc-desktop：跨平台的-frp-桌面客户端。" class="headerlink" title="frpc-desktop：跨平台的 frp 桌面客户端。"></a>frpc-desktop：跨平台的 frp 桌面客户端。</h4><p>该项目是内网穿透工具 frp 的桌面客户端，更方便地实现内网穿透。它开箱即用、界面清爽，支持开机启动、多用户、配置导入和导出等功能，适用于 Windows、Linux 和 macOS 平台。来自 @蠢🐷 的分享</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOiaxK5zKZxdQyUUkMwmvkkw9eauoyVpCKk9nmwKibcyF5VFlvQnHhFDibTMsIDps851J858nb0MMnXA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;luckjiawei&#x2F;frpc-desktop</p>
+</blockquote>
+<h4 id="根据菜谱生成图片、根据毛坯设计房间"><a href="#根据菜谱生成图片、根据毛坯设计房间" class="headerlink" title="根据菜谱生成图片、根据毛坯设计房间"></a>根据菜谱生成图片、根据毛坯设计房间</h4><p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/Nutlope/roomGPT">https://github.com/Nutlope/roomGPT</a><br>开源地址：<a target="_blank" rel="noopener" href="https://github.com/Nutlope/picMenu">https://github.com/Nutlope/picMenu</a></p>
+<h4 id="Rust-驱动的-HTTP-压测工具：oha"><a href="#Rust-驱动的-HTTP-压测工具：oha" class="headerlink" title="Rust 驱动的 HTTP 压测工具：oha"></a>Rust 驱动的 HTTP 压测工具：oha</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNP1QBiaJpyxVV9vaUIloeALZhY4OEgRNwM8fVmOYqv9OEuPDqw96DR9QiaU6VvRzmRWwnDySHUwazaQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<p><strong>主语言：Rust</strong></p>
+<p>这是一个用 Rust 开发的 HTTP 请求压测工具，它操作简单、带 TUI 动画界面，支持生成请求延迟、吞吐量等指标的报告，以及动态 URL 和更灵活的请求间隔（burst-delay）等功能。</p>
+<blockquote>
+<p>项目详情→hellogithub.com&#x2F;repository&#x2F;98b46ea0d7d84f4c944d0a35a9d2d140</p>
+</blockquote>
+<h4 id="免费的-API-学习平台：apihub"><a href="#免费的-API-学习平台：apihub" class="headerlink" title="免费的 API 学习平台：apihub"></a>免费的 API 学习平台：apihub</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNMmicoKVicSqSt2t1qze8SqazYXhvBicx42j1w1VoJxibgWuibmQQxMRxyu7qn0eH0iczKLicS0Z0iaRkFEfg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：JavaScript</strong>，<strong>Star：6.4k</strong>，<strong>周增长：1k</strong></p>
+<p>这是一个功能齐全的 API 学习平台，支持多种编程语言（Node.js、Python、Go 等）的 API 开发和学习。它免费提供丰富的 API 集合，涉及社交媒体集成、支付网关、物联网设备连接和机器学习等领域。你可以在该平台获取 API 开发的各类资源，包括详细教程、接口文档、代码示例和在线尝试。除了使用在线服务外，强烈推荐用户选择本地部署，以避免官网服务每两小时重置数据的限制。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;hiteshchoudhary&#x2F;apihub</p>
+</blockquote>
+<h4 id="轻松启动本地-HTTPS-代理的工具：ophiuchi-desktop"><a href="#轻松启动本地-HTTPS-代理的工具：ophiuchi-desktop" class="headerlink" title="轻松启动本地 HTTPS 代理的工具：ophiuchi-desktop"></a>轻松启动本地 HTTPS 代理的工具：ophiuchi-desktop</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNMmicoKVicSqSt2t1qze8SqazefXibHqfAB99pX4ibia4L8kia5ic1tyuxO8hBYqHFVuNH30R50h583EoS1Q/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：TypeScript</strong>，<strong>Star：928</strong></p>
+<p>这是一个本地 HTTPS 代理服务器管理工具，无需复杂配置即可轻松设置本地 HTTPS 代理。它使用 Docker 作为后端，并采用 Tauri 编写 GUI 界面，极大地简化了本地 HTTPS 代理的配置流程。不过，使用前需确保本机已安装 Docker。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;apilylabs&#x2F;ophiuchi-desktop</p>
+</blockquote>
+<h4 id="一个鼠标操作多个电脑"><a href="#一个鼠标操作多个电脑" class="headerlink" title="一个鼠标操作多个电脑"></a>一个鼠标操作多个电脑</h4><p>Deskflow 帮助用户<strong>在多台计算机（包括 Windows、macOS 和 Linux）之间共享键盘和鼠标</strong>，就像软件版的 KVM（但不包含视频功能）。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruxEzPa6F6qa1cut1bqhYJhHt83ekve7dmia3gKf5o4uBmB4SopibY3E3bhsHjBFbyh3HOP89dlLvBmA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>它支持 TLS 加密、Wayland 显示协议，<strong>并且具备剪贴板共享功能</strong>。作为社区驱动项目，Deskflow 鼓励用户参与开发和改进，同时与类似的开源项目合作，如 Synergy 和 Input Leap。用户可以通过安装包或源码编译来使用该软件。</p>
+<blockquote>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/deskflow/deskflow">https://github.com/deskflow/deskflow</a></p>
+</blockquote>
+<h4 id="beszel：轻量级高颜值的-Docker-监控平台。"><a href="#beszel：轻量级高颜值的-Docker-监控平台。" class="headerlink" title="beszel：轻量级高颜值的 Docker 监控平台。"></a>beszel：轻量级高颜值的 Docker 监控平台。</h4><p>这是一个轻量级的服务器监控平台，包括 Docker 统计、历史数据和警报功能。它拥有友好的 Web 界面，配置简单、开箱即用，支持自动备份、多用户、OAuth 认证和 API 访问等功能。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOh3AWZPLqMIsPX4YffnmwYV9dDjYm6WqUcYibM871CUYI68LMkXoulEEic338TkicJff30ibJQ7aL0kg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;henrygd&#x2F;beszel</p>
+</blockquote>
+<h4 id="mame：开源的街机模拟器。"><a href="#mame：开源的街机模拟器。" class="headerlink" title="mame：开源的街机模拟器。"></a>mame：开源的街机模拟器。</h4><p>这是一款支持海量街机游戏的模拟器。它通过模拟多种硬件平台，实现了在电脑上运行各种复古软件的功能。不仅支持街机，还有老式电脑和游戏机。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOh3AWZPLqMIsPX4YffnmwYtkutJpJlCCvRfNLkleaadxwjQAkL97nicmVqVgIM4vYtcALQCfUk5FA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;mamedev&#x2F;mame</p>
+</blockquote>
+<h4 id="shadPS4：开源的-PS4-模拟器。"><a href="#shadPS4：开源的-PS4-模拟器。" class="headerlink" title="shadPS4：开源的 PS4 模拟器。"></a>shadPS4：开源的 PS4 模拟器。</h4><p>这是用 C++ 编写的 PlayStation 4（PS4）模拟器，支持在 Windows、Linux 和 macOS 系统上玩 PS4 游戏。虽然项目仍处于早期开发阶段，能运行的游戏有限，但最新版已经能够成功运行《血源诅咒》和《黑暗之魂II》等游戏。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH182TnOW81kW8UAfmVEShP3jgU8sAxFnbh2yVowy3PEhfuqD9SNbkqw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;shadps4-emu&#x2F;shadPS4</p>
+</blockquote>
+<h4 id="索尼-PS1-模拟器“开源”项目"><a href="#索尼-PS1-模拟器“开源”项目" class="headerlink" title="索尼 PS1 模拟器“开源”项目"></a>索尼 PS1 模拟器“开源”项目</h4><p>Duckstation是由stenzek开发的索尼PS 模拟器，适用于 x86-64&#x2F;AArch32&#x2F;AArch64&#x2F;RV64。</p>
+<p>这开源项目<strong>专注于可玩性，速度，目标是尽可能让相对低端的设备也能玩 PS 游戏。默认设置即可运行所有支持的游戏，仅有部分兼容性问题。</strong></p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ePw3ZeGRruw20geLdOwGhgyiaOuZa8ibWic1akIEo730UbTvrwbFk6ciaX2DOjYAF8WBgoibj50s7V1DyAwO8r27Zfw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>“开源”地址：<a target="_blank" rel="noopener" href="https://github.com/stenzek/duckstation">https://github.com/stenzek/duckstation</a></p>
+</blockquote>
+<h4 id="omakub：精美的-Ubuntu-配置方案。"><a href="#omakub：精美的-Ubuntu-配置方案。" class="headerlink" title="omakub：精美的 Ubuntu 配置方案。"></a>omakub：精美的 Ubuntu 配置方案。</h4><p>该项目可以将全新的 Ubuntu 24.04 系统配置成美观、功能齐全、适合 Web 开发的系统。只需简单的一条命令，即可拥有配置好的 GNOME 桌面环境、窗口管理工具、Alacritty 终端、Neovim 和 VSCode 编辑器等应用，还会将 Chrome 设置成默认浏览器。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNHACLhrT0cZJ0t608OhI2GWqg5Bc66ZrtqTLuGkxpEYw2bs1ib2YcGFevbjsxMvWOCAribDibZXWniaw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;basecamp&#x2F;omakub</p>
+</blockquote>
+<h4 id="Oshi获取操作系统和硬件信息的-Java-库。"><a href="#Oshi获取操作系统和硬件信息的-Java-库。" class="headerlink" title="Oshi获取操作系统和硬件信息的 Java 库。"></a><a target="_blank" rel="noopener" href="https://github.com/oshi/oshi">Oshi</a>获取操作系统和硬件信息的 Java 库。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">获取操作系统和硬件信息的 Java 库。这是一个基于 JNA 实现的获取本机操作系统和硬件信息的库，支持操作系统版本、进程、内存、 CPU 使用率、磁盘和分区、设备、传感器等信息。</span><br></pre></td></tr></table></figure>
+
+<h4 id="PlayEdu一款-Java-写的内部培训系统。"><a href="#PlayEdu一款-Java-写的内部培训系统。" class="headerlink" title="PlayEdu一款 Java 写的内部培训系统。"></a><a target="_blank" rel="noopener" href="https://github.com/PlayEdu/PlayEdu">PlayEdu</a>一款 Java 写的内部培训系统。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一款 Java 写的内部培训系统。这是一款基于 SpringBoot+React 开发而成的视频培训系统，它界面清爽、交互流畅，支持上传资源、创建部门、添加学员、指派课程等功能，可用于企业和机构搭建内部培训平台。</span><br></pre></td></tr></table></figure>
+
+<h4 id="Holer-一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于-TCP-协议的报文。"><a href="#Holer-一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于-TCP-协议的报文。" class="headerlink" title="Holer 一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。"></a><a target="_blank" rel="noopener" href="https://github.com/wisdom-projects/holer">Holer</a> 一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。内网穿透工具，包含 Web 后台管理系统。用到的技术如下：</span><br><span class="line"></span><br><span class="line">- 服务端采用 SpringBoot 和 Netty 实现</span><br><span class="line">- 客户端采用 Java Netty 和 Go 语言实现</span><br></pre></td></tr></table></figure>
+<p><img src="https://s3.bmp.ovh/imgs/2023/09/13/e1c366275bdb16f6.png"></p>
+<h4 id="SoloPo一个不需要连接电脑、非侵入式的-Android-自动化工具。"><a href="#SoloPo一个不需要连接电脑、非侵入式的-Android-自动化工具。" class="headerlink" title="SoloPo一个不需要连接电脑、非侵入式的 Android 自动化工具。"></a><a target="_blank" rel="noopener" href="https://github.com/alipay/SoloPi">SoloPo</a>一个不需要连接电脑、非侵入式的 Android 自动化工具。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个不需要连接电脑、非侵入式的 Android 自动化工具。公测版拥有录制回放、性能测试、一机多控三项主要功能，能为测试开发人员节省宝贵时间。安卓版本多、终端型号多，一个成熟安卓应用的上线需要进行大量测试，而很多测试都是属于重复操作，通过此工具可以极大简化测试人员的工作量</span><br></pre></td></tr></table></figure>
+<p><img src="https://s3.bmp.ovh/imgs/2023/09/13/f9f815c624347451.png"></p>
+<h4 id="Hitomi-Hitomi-Downloader-知名下载工具"><a href="#Hitomi-Hitomi-Downloader-知名下载工具" class="headerlink" title="Hitomi Hitomi-Downloader 知名下载工具"></a><a target="_blank" rel="noopener" href="https://github.com/KurtBestor/Hitomi-Downloader">Hitomi</a> Hitomi-Downloader 知名下载工具</h4><p><strong>本周 star 增长数：400+</strong>，<strong>主语言：Python</strong></p>
+<p>Hitomi-Downloader 知名下载工具，只需要一个 url 就能下载对应的图片、视频、音频。部分特性：</p>
+<ul>
+<li><p>简洁的用户界面</p>
+</li>
+<li><p>支持下载加速，也支持限速</p>
+</li>
+<li><p>支持单任务由 24 个线程</p>
+</li>
+<li><p>支持多种下载方式</p>
+</li>
+</ul>
+<h4 id="Python-搞定-UI：nicegui"><a href="#Python-搞定-UI：nicegui" class="headerlink" title="Python 搞定 UI：nicegui"></a>Python 搞定 UI：nicegui</h4><p><strong>本周 star 增长数：850+</strong>，<strong>主语言：Python、JavaScript</strong></p>
+<p><code>New</code> 用 Python 搞定 Web UI，有了它，你可以用 Python 创建按钮、对话框、Markdown 文件、3D 场景。</p>
+<blockquote>
+<p>GitHub 地址→<a target="_blank" rel="noopener" href="https://github.com/zauberzeug/nicegui">https://github.com/zauberzeug/nicegui</a></p>
+</blockquote>
+<p><img src="https://s3.bmp.ovh/imgs/2023/09/22/65aeeb9f2a95da35.png"></p>
+<h4 id="炫酷的-Windows-终端软件：FluentTerminal"><a href="#炫酷的-Windows-终端软件：FluentTerminal" class="headerlink" title="炫酷的 Windows 终端软件：FluentTerminal"></a>炫酷的 Windows 终端软件：FluentTerminal</h4><p><strong>主语言：C#</strong></p>
+<p>基于 UWP 的 Windows 终端应用，拥有强大的自定义主题模块，能够轻松定制出风格各异的主题。提供了中文选项，支持多窗口、SSH 和搜索等功能。</p>
+<blockquote>
+<p>HG 评价地址→<a target="_blank" rel="noopener" href="https://hellogithub.com/repository/352150f3034742cbbf67d301a86973ca">https://hellogithub.com/repository/352150f3034742cbbf67d301a86973ca</a></p>
+</blockquote>
+<h4 id="AI-生图：ControlNet"><a href="#AI-生图：ControlNet" class="headerlink" title="AI 生图：ControlNet"></a>AI 生图：ControlNet</h4><p><strong>主语言：Python</strong></p>
+<p><code>New</code> 上周线稿上色的 style2paints 在 ControlNet 面前可能只是个弟弟。ControlNet 是一种通过添加额外条件来控制扩散模型的神经网络结构。为什么说 style2paints 是个弟弟呢？这是 ControlNet 的社生成效果图，从线稿到成品，一句话搞点。</p>
+<blockquote>
+<p>GitHub 地址→<a target="_blank" rel="noopener" href="https://github.com/lllyasviel/ControlNet">https://github.com/lllyasviel/ControlNet</a></p>
+</blockquote>
+<h4 id="1Panel"><a href="#1Panel" class="headerlink" title="1Panel"></a><a target="_blank" rel="noopener" href="https://github.com/1Panel-dev/1Panel">1Panel</a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[1Panel Log]: 1Panel 服务启动成功!</span><br><span class="line">[1Panel Log]:</span><br><span class="line">[1Panel Log]: =================感谢您的耐心等待，安装已经完成==================</span><br><span class="line">[1Panel Log]:</span><br><span class="line">[1Panel Log]: 请用浏览器访问面板:</span><br><span class="line">[1Panel Log]: 面板地址: http://$LOCAL_IP:29252/821d637d70</span><br><span class="line">[1Panel Log]: 用户名称: e0ae9ef986</span><br><span class="line">[1Panel Log]: 用户密码: zhang...1997</span><br><span class="line">[1Panel Log]:</span><br><span class="line">[1Panel Log]: 项目官网: https://1panel.cn</span><br><span class="line">[1Panel Log]: 项目文档: https://1panel.cn/docs</span><br><span class="line">[1Panel Log]: 代码仓库: https://github.com/1Panel-dev/1Panel</span><br><span class="line">[1Panel Log]:</span><br><span class="line">[1Panel Log]: 如果使用的是云服务器，请至安全组开放 29252 端口</span><br><span class="line">[1Panel Log]:</span><br><span class="line">[1Panel Log]: ================================================================</span><br></pre></td></tr></table></figure>
+
+<h4 id="Nezha-国产的轻量级服务器监控工具。"><a href="#Nezha-国产的轻量级服务器监控工具。" class="headerlink" title="Nezha 国产的轻量级服务器监控工具。"></a><a target="_blank" rel="noopener" href="https://github.com/naiba/nezha">Nezha</a> 国产的轻量级服务器监控工具。</h4><p>这是一款名为“哪吒”的服务器监控面板，它安装简单、开箱即用，支持监控多个服务器的系统状态、SSL 证书状态、报警通知、流量监控、设置定时任务等功能，适用于 Linux、Windows、macOS、OpenWRT 等主流系统。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/10/12/87fe9705e1078ecc.png"></p>
+<h4 id="Deskreen：将任何屏幕变成你的扩展显示器"><a href="#Deskreen：将任何屏幕变成你的扩展显示器" class="headerlink" title="Deskreen：将任何屏幕变成你的扩展显示器"></a>Deskreen：将任何屏幕变成你的扩展显示器</h4><p>我们经常需要在多个设备之间切换工作，但有时候，如果能将手机或平板变成电脑的第二屏幕，那将大大提高工作效率。</p>
+<p>Deskreen，一个开源项目，正是为此而生！这是一个简单而强大的工具，<strong>它允许你将任何带有网络浏览器的设备变成电脑的第二屏幕。</strong></p>
+<p>无论是为了扩展你的工作空间，还是为了在大屏幕上展示你的演示文稿，Deskreen 都能轻松实现。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开源地址：https://github.com/pavlobu/deskreen</span><br></pre></td></tr></table></figure>
+
+<h4 id="Etcher-简单易用的-USB-SD-启动盘制作工具。"><a href="#Etcher-简单易用的-USB-SD-启动盘制作工具。" class="headerlink" title="Etcher 简单易用的 USB&#x2F;SD 启动盘制作工具。"></a><a target="_blank" rel="noopener" href="https://github.com/balena-io/etcher">Etcher</a> 简单易用的 USB&#x2F;SD 启动盘制作工具。</h4><p>该项目可以将操作系统镜像烧录进 SD 卡或 USB 设备，可用于制作可启动、便携式的操作系统。它拥有友好的操作界面，仅需 3 步就能完成 USB 启动盘制作，适用于 Linux、macOS 和 Windows 10 及更高版本。</p>
+<p><img src="https://img.hellogithub.com/i/fWOuYpyAv4TVn0j_1715044602.png" alt="etcher"></p>
+<h4 id="MoneyPrinterTurbo：一键生成短视频的-AI-工具。"><a href="#MoneyPrinterTurbo：一键生成短视频的-AI-工具。" class="headerlink" title="MoneyPrinterTurbo：一键生成短视频的 AI 工具。"></a>MoneyPrinterTurbo：一键生成短视频的 AI 工具。</h4><p>该项目是基于大模型服务的 AI 视频生成工具，只需要提供一个主题或关键字，就可以自动生成高清的短视频。它拥有简单易用的 Web 界面，支持批量生成、设置视频时长和横&#x2F;竖屏尺寸等功能。来自 @jolahua 的分享</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/xBgIbW1vdNN1km98o6YnFZUWnr5GgkXLouuzgRL6B31s7Cml6iammZaXRia7tmadAyicQ2N30F7IbB2kmDgbXwRgg/640?wx_fmt=jpeg&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;harry0703&#x2F;MoneyPrinterTurbo</p>
+</blockquote>
+<h4 id="Omost-：极简提示词的文生图工具。"><a href="#Omost-：极简提示词的文生图工具。" class="headerlink" title="Omost ：极简提示词的文生图工具。"></a>Omost ：极简提示词的文生图工具。</h4><p>该项目基于 LLM 的编程能力帮用户自动完善文生图的提示词，可以根据用户输入的简短提示词生成高质量的图片，还支持图片局部修改等功能，比如将图片中的龙变成恐龙，极大地降低了编写文生图的门槛，无需复杂的提示词即可生成满意的图片。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN1km98o6YnFZUWnr5GgkXLGCiaHdCxvkicicwrooTMpYbYIu9s8q5hzqWRcOz9kicuHXibHpkeiaYEG2PA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;lllyasviel&#x2F;Omost</p>
+</blockquote>
+<h4 id="Scrapegraph-ai-：基于-AI-的-Python-爬虫。"><a href="#Scrapegraph-ai-：基于-AI-的-Python-爬虫。" class="headerlink" title="Scrapegraph-ai ：基于 AI 的 Python 爬虫。"></a>Scrapegraph-ai ：基于 AI 的 Python 爬虫。</h4><p>这是一个由 AI 驱动的 Python 爬虫库，它借助 LLM 的能力，可以根据提示词自动抓取目标网站的数据。</p>
+<p><code>smart_scraper_graph = SmartScraperGraph(       prompt=&quot;List me all the projects with their descriptions&quot;,       source=&quot;目标网站&quot;,       config=graph_config   )      result = smart_scraper_graph.run()   print(result)   </code></p>
+<blockquote>
+<p>地址：github.com&#x2F;VinciGit00&#x2F;Scrapegraph-ai</p>
+</blockquote>
+<h4 id="全平台通用的换源工具：chsrc"><a href="#全平台通用的换源工具：chsrc" class="headerlink" title="全平台通用的换源工具：chsrc"></a>全平台通用的换源工具：chsrc</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNPOhVtJmAeAhSWNbpRZiaYYr4hlmr7EP4u9SwNwoiajgOBCupEI188sMH4lg7D0hDVVHguZrReHfHfQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：C</strong></p>
+<p>该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。</p>
+<blockquote>
+<p>项目详情→hellogithub.com&#x2F;repository&#x2F;7666ba91e01e4a59be5809b02d9e8ff6</p>
+</blockquote>
+<h4 id="免费的可视化-Web-页面构建平台：GrapesJS"><a href="#免费的可视化-Web-页面构建平台：GrapesJS" class="headerlink" title="免费的可视化 Web 页面构建平台：GrapesJS"></a>免费的可视化 Web 页面构建平台：GrapesJS</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNM0SdfZZBicTn5DWTZgHx0ae1PnTfOx0QvPticBlnJAfI1ZOr1GBiaJqUPhoO9XqtZ5KXWQ0wEXSBZpg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：TypeScript</strong></p>
+<p>该项目通过直观的可视化界面，让用户能够通过拖拽的方式，快速设计和构建网站的 HTML 模板。它所见即所得、移动端适配，适用于官网、新闻和 CMS 等类型的网站。</p>
+<blockquote>
+<p>项目详情→hellogithub.com&#x2F;repository&#x2F;572e31f5fc7541efb19c16d331796edf</p>
+</blockquote>
+<h4 id="轻量级的-AI-证件照制作工具：HivisionIDPhotos"><a href="#轻量级的-AI-证件照制作工具：HivisionIDPhotos" class="headerlink" title="轻量级的 AI 证件照制作工具：HivisionIDPhotos"></a>轻量级的 AI 证件照制作工具：HivisionIDPhotos</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOAQ2JbRhibxP6B2lFu0NIwksC40TA1kdW1q8bM1koyGYOQkI2NoooWDLFcp0vsUG18Vc5pqErLoTQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：Python</strong>，<strong>Star：1.9k</strong>，<strong>周增长：1.5k</strong></p>
+<p>这是一款简单易用的 AI 证件照制作工具，能够生成标准证件照和六寸排版照。它提供了简洁的 Web 界面和 API 服务，即使在没有 GPU 的电脑上也能够运行，支持抠图、尺寸调整和自定义底色等功能。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;Zeyi-Lin&#x2F;HivisionIDPhotos</p>
+</blockquote>
+<h4 id="Windows-激活：Microsoft-Activation-Scripts"><a href="#Windows-激活：Microsoft-Activation-Scripts" class="headerlink" title="Windows 激活：Microsoft-Activation-Scripts"></a>Windows 激活：Microsoft-Activation-Scripts</h4><p><strong>本周 star 增长数：1,100+</strong></p>
+<p>有了 Microsoft-Activation-Scripts，激活 Windows 和 Office 不再是问题。它注重开源、减少反病毒软件的检测，这个用到 HWID、Ohook、KMS38、在线 KMS 激活方法的工具，一定能帮你解决 Windows 的激活问题。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;massgravel&#x2F;Microsoft-Activation-Scripts</p>
+</blockquote>
+<h4 id="source-code-hunter：Spring-全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括-Spring-全家桶、Mybatis、Netty、Dubbo-等框架。"><a href="#source-code-hunter：Spring-全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括-Spring-全家桶、Mybatis、Netty、Dubbo-等框架。" class="headerlink" title="source-code-hunter：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。"></a><strong>source-code-hunter</strong>：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。</h4><blockquote>
+<p>地址：<a target="_blank" rel="noopener" href="https://github.com/doocs/source-code-hunter">https://github.com/doocs/source-code-hunter</a></p>
+</blockquote>
+<h4 id="免费的-AI-图像升级器：Upscaler"><a href="#免费的-AI-图像升级器：Upscaler" class="headerlink" title="免费的 AI 图像升级器：Upscaler"></a>免费的 AI 图像升级器：Upscaler</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNPydvTukojzHTnhQlLXGLsJ4t0OiaCFCQYqtp5SXDiclDBw2xQ0MIAtnHCFSwUJeT33Hq40VnjuV9RA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>主语言：TypeScript</strong>，<strong>Star：25k</strong>，<strong>周增长：1k</strong></p>
+<p>这是一款通过 AI 算法提高图像分辨率（超级分辨率，简称超分）的桌面工具，它免费、开源、无需联网、开箱即用，安装包大概 200+MB，需要有 GPU 的机器才能运行，适用于 Windows、Linux 和 macOS 系统。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;upscayl&#x2F;upscayl</p>
+</blockquote>
+<h4 id="在线的数据库设计工具：DrawDB"><a href="#在线的数据库设计工具：DrawDB" class="headerlink" title="在线的数据库设计工具：DrawDB"></a>在线的数据库设计工具：DrawDB</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNpuPH55ddPkSnH9H4wHVSG5YudMeeSnXGSEw2HhFD6yPXgWyedmSQ7wO3hWIqSZEeialYhgoianlsA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<p><strong>主语言：JavaScript</strong>，<strong>Star：4.7k</strong>，<strong>周增长：3.8k</strong></p>
+<p>这个开源项目是一个免费、简单、强大的数据库实体关系（DBER）在线编辑器，无需注册即可直接在浏览器中使用。它提供了直观、可视化的操作界面，用户通过点击即可构建数据库表和导出建表语句，还可以导入建表语句，实现可视化编辑、错误检查等。支持 MySQL、PostgreSQL、SQLite、MariaDB、SQL Server 共 5 种常用的关系数据库。</p>
+<blockquote>
+<p>GitHub 地址→github.com&#x2F;drawdb-io&#x2F;drawdb</p>
+</blockquote>
+<h4 id="WingetUI：带界面的-Windows-包管理器。"><a href="#WingetUI：带界面的-Windows-包管理器。" class="headerlink" title="WingetUI：带界面的 Windows 包管理器。"></a>WingetUI：带界面的 Windows 包管理器。</h4><p>该项目是一个为 Windows 常用的命令行包管理工具设计的用户界面，如 Winget、Scoop、Pip、NPM、.NET Tool 等。它的界面友好、设计美观、支持中文，通过它你可以轻松下载、安装、更新和卸载包管理器上发布的任何软件以及其它日常应用，如浏览器、PDF 阅读器等。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkxbJX9TVeXSVphhvpywb7IRHMbJVW9Mf29bXj2iaFp6jDLg4xnjEhZJA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;marticliment&#x2F;WingetUI</p>
+</blockquote>
+<h4 id="freeze：生成代码图片的终端工具。"><a href="#freeze：生成代码图片的终端工具。" class="headerlink" title="freeze：生成代码图片的终端工具。"></a>freeze：生成代码图片的终端工具。</h4><p>该项目可以将代码片段和终端输出，转换成 PNG、SVG 和 WebP 格式的图片，它采用 Go 语言开发，特点是安装简单和易于使用，支持一条命令生成图片，也可以通过交互模式生成定制的图片。</p>
+<p><code># macOS or Linux   brew install charmbracelet/tap/freeze      # Arch Linux (btw)   pacman -S freeze      # Nix   nix-env -iA nixpkgs.charm-freeze   </code></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkvHXibe5VF36piaofqXtfe19mDWWw7bPowMChlhic3vmdzXEJfWIzvPLIQ/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;charmbracelet&#x2F;freeze</p>
+</blockquote>
+<h4 id="CompreFace：免费、开源的人脸识别系统。"><a href="#CompreFace：免费、开源的人脸识别系统。" class="headerlink" title="CompreFace：免费、开源的人脸识别系统。"></a>CompreFace：免费、开源的人脸识别系统。</h4><p>该项目提供了用于人脸识别、检测、验证、头部姿势检测、性别和年龄识别的 REST API 服务，不用懂机器学习就能轻松集成到任何系统中。它后端采用 Java 编写，人脸识别是基于 FaceNet 和 InsightFace 实现，同时支持 Docker 部署。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFklgLXIgse7X1bUGibNltiaiaeILsfG4HqCUpCD2Ylpx30dLDdjufpWNMXg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;exadel-inc&#x2F;CompreFace</p>
+</blockquote>
+<h4 id="fdroidclient：免费、开源的-Android-应用商店。"><a href="#fdroidclient：免费、开源的-Android-应用商店。" class="headerlink" title="fdroidclient：免费、开源的 Android 应用商店。"></a>fdroidclient：免费、开源的 Android 应用商店。</h4><p>该项目是 F-Droid 的 Android 客户端，专门收集各类开源安卓软件（FOSS）的应用商店。它里面大部分是免费且无广告的应用，如遇到资源加载慢的情况，可通过设置镜像源解决。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkZibGRXYunyDJoORM0r5hho5QWH12xlRBCgeuE8vR7SkMGHjtkj8yINw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;f-droid&#x2F;fdroidclient</p>
+</blockquote>
+<h4 id="tailwind-landing-page-template：免费、开源的落地页模板。"><a href="#tailwind-landing-page-template：免费、开源的落地页模板。" class="headerlink" title="tailwind-landing-page-template：免费、开源的落地页模板。"></a>tailwind-landing-page-template：免费、开源的落地页模板。</h4><p>该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。</p>
+<p><code>git clone 项目   yarn install   yarn dev   # http://localhost:3000   </code></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkvXzGZmE2MMYSWkczoFgbz7e8Oh0m56R53r2LZF1HCFOicR2LMmAibSrw/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;cruip&#x2F;tailwind-landing-page-template</p>
+</blockquote>
+<h4 id="python-miio：用于控制小米智能家电的-Python-库。"><a href="#python-miio：用于控制小米智能家电的-Python-库。" class="headerlink" title="python-miio：用于控制小米智能家电的 Python 库。"></a>python-miio：用于控制小米智能家电的 Python 库。</h4><p>该项目提供了一个 Python 库和命令行工具，可以用来控制使用小米的 miIO 和 MIoT 协议的设备。借助它用户可以轻松地与小米智能设备进行通信和远程控制，包括扫地机器人、灯泡、空气净化器等，非常适合喜欢 DIY 智能家居系统的开发者。</p>
+<blockquote>
+<p>地址：github.com&#x2F;rytilahti&#x2F;python-miio</p>
+</blockquote>
+<h4 id="undetected-chromedriver：绕过反爬检测的-Python-库。"><a href="#undetected-chromedriver：绕过反爬检测的-Python-库。" class="headerlink" title="undetected-chromedriver：绕过反爬检测的 Python 库。"></a>undetected-chromedriver：绕过反爬检测的 Python 库。</h4><p>这是一个经过优化的 Selenium WebDriver 补丁，专门用于防止浏览器自动化过程中，触发反机器人机制。它能够隐藏浏览器特征（指纹），使用起来十分方便，就像一个 Python 的第三方库一样。</p>
+<p><code>import undetected_chromedriver as uc   driver = uc.Chrome(headless=True,use_subprocess=False)   driver.get(&#39;https://nowsecure.nl&#39;)   driver.save_screenshot(&#39;nowsecure.png&#39;)   </code></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFk1FIGdy5Ya4F82sGRNjmzMqysdiarqXicPOxZYqfpPGp5licTuAWMvHC1Q/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;ultrafunkamsterdam&#x2F;undetected-chromedriver</p>
+</blockquote>
+<h4 id="reminders-menubar：极简的-macOS-菜单栏提醒工具。"><a href="#reminders-menubar：极简的-macOS-菜单栏提醒工具。" class="headerlink" title="reminders-menubar：极简的 macOS 菜单栏提醒工具。"></a>reminders-menubar：极简的 macOS 菜单栏提醒工具。</h4><p>这是一款使用 SwiftUI 开发的小工具，能够在 macOS 菜单栏查看&#x2F;提醒待办事项。它体积小、交互简单、界面清爽，支持开机启动、多语言（包括中文）、菜单栏显示计数、快捷键等功能。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkWbYLJNXibzGw3vLsTAbLHKys7s4VJM9Zucicr9oF0jDwQ0nfOyVNMy4A/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;DamascenoRafael&#x2F;reminders-menubar</p>
+</blockquote>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h4 id="ServiceLogos：超可爱的-Logo-集合。"><a href="#ServiceLogos：超可爱的-Logo-集合。" class="headerlink" title="ServiceLogos：超可爱的 Logo 集合。"></a>ServiceLogos：超可爱的 Logo 集合。</h4><p>这里是用来存放 Sawaratsuki 制作的各种 logo 的仓库，这些 logo 制作精美、画风可爱，包括编程语言、框架、工具和各大社交媒体的商标™️。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNN21ibUI7LydiadUd7XaCRrFkg5uv5yRia0J7MzVJUiccurARChJuSmJYKWiaqk490eO8kOewpuhAia5pHA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;SAWARATSUKI&#x2F;ServiceLogos</p>
+</blockquote>
+<h4 id="how-to-learn-robotics：机器人学自学指南。"><a href="#how-to-learn-robotics：机器人学自学指南。" class="headerlink" title="how-to-learn-robotics：机器人学自学指南。"></a>how-to-learn-robotics：机器人学自学指南。</h4><p>这本指南专为非科班的小伙伴而设计，旨在指导他们如何学习机器人学。它包含了必备知识、入门教材推荐、实践项目以及进阶方法等内容，帮助读者逐步成长为一名优秀的机器人工程师。</p>
+<blockquote>
+<p>地址：github.com&#x2F;qqfly&#x2F;how-to-learn-robotics</p>
+</blockquote>
+<h4 id="免费、开源的落地页模板：tailwind-landing-page-template"><a href="#免费、开源的落地页模板：tailwind-landing-page-template" class="headerlink" title="免费、开源的落地页模板：tailwind-landing-page-template"></a>免费、开源的落地页模板：tailwind-landing-page-template</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNopDgmYXxHEOsNjAbajpFicNWJrrkoveg9zDmqS0hrrf7fNngdGjOMymnZcPPtwUAUNhGNtCnVHtg/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<p><strong>主语言：TypeScript</strong></p>
+<p>该项目是基于 TailwindCSS、React 和 Next.js 构建的落地页模板，它界面美观、代码简单、设计在线，适用于快速制作公司主页、活动落地页等。</p>
+<blockquote>
+<p>项目详情→hellogithub.com&#x2F;repository&#x2F;9f205fad64b241609ce3feec456ab818</p>
+</blockquote>
+<h4 id="RunCat-for-windows：在-Windows-任务栏飞奔的“小猫”。"><a href="#RunCat-for-windows：在-Windows-任务栏飞奔的“小猫”。" class="headerlink" title="RunCat_for_windows：在 Windows 任务栏飞奔的“小猫”。"></a>RunCat_for_windows：在 Windows 任务栏飞奔的“小猫”。</h4><p>这是一个用 C# 写的小工具，它会在 Windows 任务栏显示一只奔跑的小猫动画，CPU 使用率越高它跑得越快。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0ICLfJm011mOVMNibjTO2BKrDnXCgibjQROB5SGS5ibTiat02POkf5HUibicxA/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;Kyome22&#x2F;RunCat_for_windows</p>
+</blockquote>
+<h4 id="mactop：专为苹果芯片打造的-Mac-性能监控工具。"><a href="#mactop：专为苹果芯片打造的-Mac-性能监控工具。" class="headerlink" title="mactop：专为苹果芯片打造的 Mac 性能监控工具。"></a>mactop：专为苹果芯片打造的 Mac 性能监控工具。</h4><p>该项目用不到 1k 行的 Go 代码，实现了一个类似 top 命令的工具。它可以实时显示 Apple M 系列芯片的性能指标，包括 CPU、GPU 使用率、内存、网络和硬盘等信息。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0IQghM8WzLANkVqeJLMA5ELVO8enFQBRo2PzXbsSq760LRepj74zzOMg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;context-labs&#x2F;mactop</p>
+</blockquote>
+<h4 id="superfile：非常漂亮的终端文件管理器。"><a href="#superfile：非常漂亮的终端文件管理器。" class="headerlink" title="superfile：非常漂亮的终端文件管理器。"></a>superfile：非常漂亮的终端文件管理器。</h4><p>这是一个现代终端文件管理器，为命令行文件操作提供了一个直观且漂亮的界面。它默认采用 Vim 风格的快捷键操作，还支持插件和主题自定义。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNNEZCicibZu6NibpUibZkOcDy0IxjDDtDYbYermMXiaHDBicsfmicDhVhOWR50ys7k5Qzia4kWwRgRibOnfTKg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;yorukot&#x2F;superfile</p>
+</blockquote>
+<h4 id="chsrc：全平台通用的换源工具。"><a href="#chsrc：全平台通用的换源工具。" class="headerlink" title="chsrc：全平台通用的换源工具。"></a>chsrc：全平台通用的换源工具。</h4><p>该项目能够为常见的 Linux 发行版、编程语言和软件切换至国内镜像源，操作简单仅需一条命令。它采用 C 语言编写，具有高效和轻量级的特点，支持测速、多平台以及项目级换源等功能，适用于优化下载速度或解决源受限的场景。来自 @ccmywish 的分享</p>
+<p>#chsrc</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDHZoVqIM0vSQj3ocHOR3xczuRWRDNyIJoHibBhadLaJl1nEnzFTb2tCyA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;RubyMetric&#x2F;chsrc</p>
+</blockquote>
+<h4 id="lnav：强大的终端日志文件查看工具。"><a href="#lnav：强大的终端日志文件查看工具。" class="headerlink" title="lnav：强大的终端日志文件查看工具。"></a>lnav：强大的终端日志文件查看工具。</h4><p>这是一款用于查看和分析日志文件的轻量级工具。它无需配置、开箱即用，可自动识别日志格式并解压文件，支持同时处理多个文件和目录、实时更新、文本高亮、正则与 SQL 过滤日志等功能，特别适合在服务器和开发环境中使用。来自 @DeShuiYu 的分享</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/xBgIbW1vdNOTjhAHG3PgHxdZU0es1tDH1xLFIZT7lCVaROvmQdHYlHbZFv0YlFCogjSPv7g3SNib0xmWHBelgJQ/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<blockquote>
+<p>地址：github.com&#x2F;tstack&#x2F;lnav</p>
+</blockquote>
+<h5 id="登录页面HTML"><a href="#登录页面HTML" class="headerlink" title="登录页面HTML"></a>登录页面HTML</h5><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzkyOTY0MTc2Mw==&mid=2247484615&idx=1&sn=ea7f0a83d59cbecd8d35bcc8593df965&chksm=c379bfb1c9e47cd5f6cb9f2f1549b14c7e6ae9d5df148869070d42df10a94ff5fc731bc5ea2b&scene=132&exptype=timeline_recommend_article_extendread_extendread_interest&show_related_article=1&subscene=132&scene=132#wechat_redirect">https://mp.weixin.qq.com/s?__biz=MzkyOTY0MTc2Mw==&amp;mid=2247484615&amp;idx=1&amp;sn=ea7f0a83d59cbecd8d35bcc8593df965&amp;chksm=c379bfb1c9e47cd5f6cb9f2f1549b14c7e6ae9d5df148869070d42df10a94ff5fc731bc5ea2b&amp;scene=132&amp;exptype=timeline_recommend_article_extendread_extendread_interest&amp;show_related_article=1&amp;subscene=132&amp;scene=132#wechat_redirect</a></p>
+<h2 id="在Master分之发生变化的时候，pull一下代码"><a href="#在Master分之发生变化的时候，pull一下代码" class="headerlink" title="在Master分之发生变化的时候，pull一下代码"></a>在Master分之发生变化的时候，pull一下代码</h2><p>要在Git仓库的master分支发生变化时自动执行<code>git pull</code>操作，可以设置一个Git hook来触发这个动作。具体步骤如下：</p>
+<ol>
+<li><p><strong>安装Git：</strong> 确保系统上已经安装了Git。如果没有安装，可以运行以下命令：</p>
+<p> <code>sudo yum install git</code></p>
+</li>
+<li><p><strong>克隆仓库：</strong> 如果您还没有克隆仓库，请先克隆它：</p>
+<p> <code>git clone https://github.com/username/repository.git /path/to/your/local/repo cd /path/to/your/local/repo</code></p>
+</li>
+<li><p><strong>设置Git hook：</strong> Git hooks 是一些脚本，在Git仓库中的特定事件发生时执行。我们可以使用<code>post-merge</code>和<code>post-receive</code> hooks来实现这个功能。</p>
+<ol>
+<li><p><strong>创建一个钩子脚本：</strong></p>
+<p> <code>vi /path/to/your/local/repo/.git/hooks/post-merge</code></p>
+<p> 添加以下内容：</p>
+</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash  </span></span><br><span class="line"><span class="comment"># 切换到仓库目录 </span></span><br><span class="line"><span class="built_in">cd</span> /path/to/your/local/repo  <span class="comment"># 执行 git pull </span></span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p> 保存并关闭文件。</p>
+<p><strong>注意：</strong> 确保替换<code>/path/to/your/local/repo</code>为您的实际仓库路径。</p>
+<ol start="2">
+<li><strong>为钩子脚本添加执行权限：</strong></li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /path/to/your/local/repo/.git/hooks/post-merge</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Github-Hooks"><a href="#Github-Hooks" class="headerlink" title="Github Hooks"></a>Github Hooks</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7249281117169614904">GitHooks </a></p>
+<p><img src="https://s3.bmp.ovh/imgs/2024/06/12/d328d835ab6947bb.png"></p>
+<h3 id="Git技巧"><a href="#Git技巧" class="headerlink" title="Git技巧"></a>Git技巧</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hellogithub.com/article/9aed28d4d64b4649bb364685ef557ae4</span><br></pre></td></tr></table></figure>
+
+</article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://fairyeye.github.io/2023/06/17/GIT/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://fairyeye.github.io/2023/06/17/GIT/&title=Git - LI&summary=Gitee Go流水线12# 官方文档https://blog.gitee.com/2022/11/23/pipeline/
+
+前端CI手动创建流水线，选择部署分之，需要手动增加部署阶段
+添加部署阶段
+点击发布后面的＋    添加新阶..."><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://fairyeye.github.io/2023/06/17/GIT/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/10/27/%E5%BD%92%E6%A1%A3/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/">测试</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/02/13/%E5%BD%92%E6%A1%A3/%E7%AE%97%E6%B3%95/">算法</a></div></section></div>
+
+
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="fairyeye/fairyeye.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNTM2NzI0OTU=" data-category="Announcements" data-category-id="DIC_kwDODx68L84C1FEi" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:2;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/%E5%BD%92%E6%A1%A3/">归档</a></div><div class="sitemap-group"><span class="fs15">关于</span><a href="/about/">关于我</a><a target="_blank" rel="noopener" href="https://github.com/fairyeye">GitHub</a><a href="/atom.xml">RSS</a></div></div><div class="text"><p>本站由 <a href="%7Bconfig.url%7D">{config.author}</a> 使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 和 <a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gitee-Go"><span class="toc-text">Gitee Go</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="toc-text">流水线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%AB%AFCI"><span class="toc-text">前端CI</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%83%A8%E7%BD%B2%E9%98%B6%E6%AE%B5"><span class="toc-text">添加部署阶段</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%BB%E6%9C%BA"><span class="toc-text">添加主机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AFCI"><span class="toc-text">后端CI</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC"><span class="toc-text">部署脚本</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-AI"><span class="toc-text">开源项目 - AI</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenClaw-%E7%9B%B8%E5%85%B3"><span class="toc-text">OpenClaw 相关</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#OpenClaw-%E7%9A%84%E8%AE%B0%E5%BF%86%E5%B1%82"><span class="toc-text">OpenClaw 的记忆层</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ClaudeCode-%E7%9B%B8%E5%85%B3"><span class="toc-text">ClaudeCode 相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenCode%E7%9B%B8%E5%85%B3"><span class="toc-text">OpenCode相关</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE"><span class="toc-text">开源项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#AI-PPT"><span class="toc-text">AI PPT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AI-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%A4%A7%E5%90%88%E9%9B%86"><span class="toc-text">AI 提示词大合集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ventoy%EF%BC%9A"><span class="toc-text">Ventoy：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pluvia%EF%BC%9AAndroid-%E4%B8%8A%E7%9A%84%E9%9D%9E%E5%AE%98%E6%96%B9-Steam-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">Pluvia：Android 上的非官方 Steam 客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E7%9A%84-AI-%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%E7%A5%9E%E5%99%A8"><span class="toc-text">免费开源的 AI 图像增强神器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E5%AD%90%E4%B9%A6%E8%BD%AC%E6%9C%89%E5%A3%B0%E4%B9%A6%E7%9A%84%E5%B7%A5%E5%85%B7%EF%BC%9Aebook2audiobook"><span class="toc-text">电子书转有声书的工具：ebook2audiobook</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MediaGo%E6%98%AF%E4%B8%80%E4%B8%AA%E7%94%A8Electron-Antd-Vite%E6%89%93%E9%80%A0%E7%9A%84%E5%BC%80%E6%BA%90%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">MediaGo是一个用Electron+Antd+Vite打造的开源视频下载工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AB%98%E9%A2%9C%E5%80%BC-Windows-%E7%B3%BB%E7%BB%9F%E6%A1%8C%E9%9D%A2"><span class="toc-text">高颜值 Windows 系统桌面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AI-%E9%A9%B1%E5%8A%A8%E7%9A%84%E7%AE%80%E5%8E%86%E5%8C%B9%E9%85%8D%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%EF%BC%9AReactive-Resume"><span class="toc-text">AI 驱动的简历匹配分析工具：Reactive-Resume</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E7%A7%81%E4%BA%BA%E6%96%87%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8%E7%9A%84-Android-%E5%B7%A5%E5%85%B7%EF%BC%9AAmarok-Hider"><span class="toc-text">隐藏私人文件和应用的 Android 工具：Amarok-Hider</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#spotube%EF%BC%9A%E5%BC%80%E6%BA%90%E7%9A%84-Spotify-%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%82"><span class="toc-text">spotube：开源的 Spotify 客户端。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#frpc-desktop%EF%BC%9A%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84-frp-%E6%A1%8C%E9%9D%A2%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%82"><span class="toc-text">frpc-desktop：跨平台的 frp 桌面客户端。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E8%8F%9C%E8%B0%B1%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87%E3%80%81%E6%A0%B9%E6%8D%AE%E6%AF%9B%E5%9D%AF%E8%AE%BE%E8%AE%A1%E6%88%BF%E9%97%B4"><span class="toc-text">根据菜谱生成图片、根据毛坯设计房间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Rust-%E9%A9%B1%E5%8A%A8%E7%9A%84-HTTP-%E5%8E%8B%E6%B5%8B%E5%B7%A5%E5%85%B7%EF%BC%9Aoha"><span class="toc-text">Rust 驱动的 HTTP 压测工具：oha</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E7%9A%84-API-%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0%EF%BC%9Aapihub"><span class="toc-text">免费的 API 学习平台：apihub</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%BB%E6%9D%BE%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0-HTTPS-%E4%BB%A3%E7%90%86%E7%9A%84%E5%B7%A5%E5%85%B7%EF%BC%9Aophiuchi-desktop"><span class="toc-text">轻松启动本地 HTTPS 代理的工具：ophiuchi-desktop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E9%BC%A0%E6%A0%87%E6%93%8D%E4%BD%9C%E5%A4%9A%E4%B8%AA%E7%94%B5%E8%84%91"><span class="toc-text">一个鼠标操作多个电脑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#beszel%EF%BC%9A%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%AB%98%E9%A2%9C%E5%80%BC%E7%9A%84-Docker-%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%E3%80%82"><span class="toc-text">beszel：轻量级高颜值的 Docker 监控平台。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mame%EF%BC%9A%E5%BC%80%E6%BA%90%E7%9A%84%E8%A1%97%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%82"><span class="toc-text">mame：开源的街机模拟器。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shadPS4%EF%BC%9A%E5%BC%80%E6%BA%90%E7%9A%84-PS4-%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%82"><span class="toc-text">shadPS4：开源的 PS4 模拟器。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%B0%BC-PS1-%E6%A8%A1%E6%8B%9F%E5%99%A8%E2%80%9C%E5%BC%80%E6%BA%90%E2%80%9D%E9%A1%B9%E7%9B%AE"><span class="toc-text">索尼 PS1 模拟器“开源”项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#omakub%EF%BC%9A%E7%B2%BE%E7%BE%8E%E7%9A%84-Ubuntu-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%E3%80%82"><span class="toc-text">omakub：精美的 Ubuntu 配置方案。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Oshi%E8%8E%B7%E5%8F%96%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%92%8C%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E7%9A%84-Java-%E5%BA%93%E3%80%82"><span class="toc-text">Oshi获取操作系统和硬件信息的 Java 库。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PlayEdu%E4%B8%80%E6%AC%BE-Java-%E5%86%99%E7%9A%84%E5%86%85%E9%83%A8%E5%9F%B9%E8%AE%AD%E7%B3%BB%E7%BB%9F%E3%80%82"><span class="toc-text">PlayEdu一款 Java 写的内部培训系统。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Holer-%E4%B8%80%E4%B8%AA%E5%B0%86%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E6%98%A0%E5%B0%84%E5%88%B0%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE%E7%9A%84%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84%E8%BD%AF%E4%BB%B6%EF%BC%8C%E6%94%AF%E6%8C%81%E8%BD%AC%E5%8F%91%E5%9F%BA%E4%BA%8E-TCP-%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%8A%A5%E6%96%87%E3%80%82"><span class="toc-text">Holer 一个将局域网中的应用映射到公网访问的端口映射软件，支持转发基于 TCP 协议的报文。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SoloPo%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%9C%80%E8%A6%81%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E3%80%81%E9%9D%9E%E4%BE%B5%E5%85%A5%E5%BC%8F%E7%9A%84-Android-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">SoloPo一个不需要连接电脑、非侵入式的 Android 自动化工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hitomi-Hitomi-Downloader-%E7%9F%A5%E5%90%8D%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-text">Hitomi Hitomi-Downloader 知名下载工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Python-%E6%90%9E%E5%AE%9A-UI%EF%BC%9Anicegui"><span class="toc-text">Python 搞定 UI：nicegui</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%AB%E9%85%B7%E7%9A%84-Windows-%E7%BB%88%E7%AB%AF%E8%BD%AF%E4%BB%B6%EF%BC%9AFluentTerminal"><span class="toc-text">炫酷的 Windows 终端软件：FluentTerminal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AI-%E7%94%9F%E5%9B%BE%EF%BC%9AControlNet"><span class="toc-text">AI 生图：ControlNet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1Panel"><span class="toc-text">1Panel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nezha-%E5%9B%BD%E4%BA%A7%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">Nezha 国产的轻量级服务器监控工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Deskreen%EF%BC%9A%E5%B0%86%E4%BB%BB%E4%BD%95%E5%B1%8F%E5%B9%95%E5%8F%98%E6%88%90%E4%BD%A0%E7%9A%84%E6%89%A9%E5%B1%95%E6%98%BE%E7%A4%BA%E5%99%A8"><span class="toc-text">Deskreen：将任何屏幕变成你的扩展显示器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Etcher-%E7%AE%80%E5%8D%95%E6%98%93%E7%94%A8%E7%9A%84-USB-SD-%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">Etcher 简单易用的 USB&#x2F;SD 启动盘制作工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MoneyPrinterTurbo%EF%BC%9A%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E7%9F%AD%E8%A7%86%E9%A2%91%E7%9A%84-AI-%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">MoneyPrinterTurbo：一键生成短视频的 AI 工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Omost-%EF%BC%9A%E6%9E%81%E7%AE%80%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E6%96%87%E7%94%9F%E5%9B%BE%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">Omost ：极简提示词的文生图工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Scrapegraph-ai-%EF%BC%9A%E5%9F%BA%E4%BA%8E-AI-%E7%9A%84-Python-%E7%88%AC%E8%99%AB%E3%80%82"><span class="toc-text">Scrapegraph-ai ：基于 AI 的 Python 爬虫。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%B9%B3%E5%8F%B0%E9%80%9A%E7%94%A8%E7%9A%84%E6%8D%A2%E6%BA%90%E5%B7%A5%E5%85%B7%EF%BC%9Achsrc"><span class="toc-text">全平台通用的换源工具：chsrc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96-Web-%E9%A1%B5%E9%9D%A2%E6%9E%84%E5%BB%BA%E5%B9%B3%E5%8F%B0%EF%BC%9AGrapesJS"><span class="toc-text">免费的可视化 Web 页面构建平台：GrapesJS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84-AI-%E8%AF%81%E4%BB%B6%E7%85%A7%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%EF%BC%9AHivisionIDPhotos"><span class="toc-text">轻量级的 AI 证件照制作工具：HivisionIDPhotos</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows-%E6%BF%80%E6%B4%BB%EF%BC%9AMicrosoft-Activation-Scripts"><span class="toc-text">Windows 激活：Microsoft-Activation-Scripts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#source-code-hunter%EF%BC%9ASpring-%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB%E3%80%82%E8%AF%A5%E9%A1%B9%E7%9B%AE%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%80%E7%B3%BB%E5%88%97%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6%E5%92%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%BA%90%E7%A0%81%E8%AE%B2%E8%A7%A3%EF%BC%8C%E5%8C%85%E6%8B%AC-Spring-%E5%85%A8%E5%AE%B6%E6%A1%B6%E3%80%81Mybatis%E3%80%81Netty%E3%80%81Dubbo-%E7%AD%89%E6%A1%86%E6%9E%B6%E3%80%82"><span class="toc-text">source-code-hunter：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E7%9A%84-AI-%E5%9B%BE%E5%83%8F%E5%8D%87%E7%BA%A7%E5%99%A8%EF%BC%9AUpscaler"><span class="toc-text">免费的 AI 图像升级器：Upscaler</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%EF%BC%9ADrawDB"><span class="toc-text">在线的数据库设计工具：DrawDB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WingetUI%EF%BC%9A%E5%B8%A6%E7%95%8C%E9%9D%A2%E7%9A%84-Windows-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E3%80%82"><span class="toc-text">WingetUI：带界面的 Windows 包管理器。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#freeze%EF%BC%9A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%9B%BE%E7%89%87%E7%9A%84%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">freeze：生成代码图片的终端工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CompreFace%EF%BC%9A%E5%85%8D%E8%B4%B9%E3%80%81%E5%BC%80%E6%BA%90%E7%9A%84%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%B3%BB%E7%BB%9F%E3%80%82"><span class="toc-text">CompreFace：免费、开源的人脸识别系统。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fdroidclient%EF%BC%9A%E5%85%8D%E8%B4%B9%E3%80%81%E5%BC%80%E6%BA%90%E7%9A%84-Android-%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E3%80%82"><span class="toc-text">fdroidclient：免费、开源的 Android 应用商店。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tailwind-landing-page-template%EF%BC%9A%E5%85%8D%E8%B4%B9%E3%80%81%E5%BC%80%E6%BA%90%E7%9A%84%E8%90%BD%E5%9C%B0%E9%A1%B5%E6%A8%A1%E6%9D%BF%E3%80%82"><span class="toc-text">tailwind-landing-page-template：免费、开源的落地页模板。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python-miio%EF%BC%9A%E7%94%A8%E4%BA%8E%E6%8E%A7%E5%88%B6%E5%B0%8F%E7%B1%B3%E6%99%BA%E8%83%BD%E5%AE%B6%E7%94%B5%E7%9A%84-Python-%E5%BA%93%E3%80%82"><span class="toc-text">python-miio：用于控制小米智能家电的 Python 库。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undetected-chromedriver%EF%BC%9A%E7%BB%95%E8%BF%87%E5%8F%8D%E7%88%AC%E6%A3%80%E6%B5%8B%E7%9A%84-Python-%E5%BA%93%E3%80%82"><span class="toc-text">undetected-chromedriver：绕过反爬检测的 Python 库。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reminders-menubar%EF%BC%9A%E6%9E%81%E7%AE%80%E7%9A%84-macOS-%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%8F%90%E9%86%92%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">reminders-menubar：极简的 macOS 菜单栏提醒工具。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ServiceLogos%EF%BC%9A%E8%B6%85%E5%8F%AF%E7%88%B1%E7%9A%84-Logo-%E9%9B%86%E5%90%88%E3%80%82"><span class="toc-text">ServiceLogos：超可爱的 Logo 集合。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#how-to-learn-robotics%EF%BC%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6%E8%87%AA%E5%AD%A6%E6%8C%87%E5%8D%97%E3%80%82"><span class="toc-text">how-to-learn-robotics：机器人学自学指南。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E3%80%81%E5%BC%80%E6%BA%90%E7%9A%84%E8%90%BD%E5%9C%B0%E9%A1%B5%E6%A8%A1%E6%9D%BF%EF%BC%9Atailwind-landing-page-template"><span class="toc-text">免费、开源的落地页模板：tailwind-landing-page-template</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RunCat-for-windows%EF%BC%9A%E5%9C%A8-Windows-%E4%BB%BB%E5%8A%A1%E6%A0%8F%E9%A3%9E%E5%A5%94%E7%9A%84%E2%80%9C%E5%B0%8F%E7%8C%AB%E2%80%9D%E3%80%82"><span class="toc-text">RunCat_for_windows：在 Windows 任务栏飞奔的“小猫”。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mactop%EF%BC%9A%E4%B8%93%E4%B8%BA%E8%8B%B9%E6%9E%9C%E8%8A%AF%E7%89%87%E6%89%93%E9%80%A0%E7%9A%84-Mac-%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">mactop：专为苹果芯片打造的 Mac 性能监控工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#superfile%EF%BC%9A%E9%9D%9E%E5%B8%B8%E6%BC%82%E4%BA%AE%E7%9A%84%E7%BB%88%E7%AB%AF%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E3%80%82"><span class="toc-text">superfile：非常漂亮的终端文件管理器。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#chsrc%EF%BC%9A%E5%85%A8%E5%B9%B3%E5%8F%B0%E9%80%9A%E7%94%A8%E7%9A%84%E6%8D%A2%E6%BA%90%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">chsrc：全平台通用的换源工具。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lnav%EF%BC%9A%E5%BC%BA%E5%A4%A7%E7%9A%84%E7%BB%88%E7%AB%AF%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7%E3%80%82"><span class="toc-text">lnav：强大的终端日志文件查看工具。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2HTML"><span class="toc-text">登录页面HTML</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Master%E5%88%86%E4%B9%8B%E5%8F%91%E7%94%9F%E5%8F%98%E5%8C%96%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8Cpull%E4%B8%80%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">在Master分之发生变化的时候，pull一下代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github-Hooks"><span class="toc-text">Github Hooks</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E6%8A%80%E5%B7%A7"><span class="toc-text">Git技巧</span></a></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `/%5Bobject%20Object%5D`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      const maxRetry = 3;
+      let retryCount = 0;
+
+      return new Promise((resolve, reject) => {
+        const load = () => {
+          utils.onLoading?.(el);
+
+          let timedOut = false;
+          const timeout = setTimeout(() => {
+            timedOut = true;
+            console.warn('[request] 超时:', url);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject('请求超时');
+            } else {
+              setTimeout(load, 1000);
+            }
+          }, 5000);
+
+          fetch(url).then(resp => {
+            if (timedOut) return;
+            clearTimeout(timeout);
+
+            if (!resp.ok) throw new Error('响应失败');
+            return resp;
+          }).then(data => {
+            if (timedOut) return;
+            utils.onLoadSuccess?.(el);
+            callback(data);
+            resolve(data);
+          }).catch(err => {
+            clearTimeout(timeout);
+            console.warn('[request] 错误:', err);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject(err);
+            } else {
+              setTimeout(load, 1000);
+            }
+          });
+        };
+
+        load();
+      });
+    },
+    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
+      return new Promise((resolve, reject) => {
+        let retryCount = 0;
+
+        const tryRequest = () => {
+          let timedOut = false;
+          const timer = setTimeout(() => {
+            timedOut = true;
+            if (++retryCount > maxRetry) reject('timeout');
+            else tryRequest();
+          }, timeout);
+
+          fetch(url, options)
+            .then(resp => {
+              clearTimeout(timer);
+              if (!resp.ok) throw new Error('bad response');
+              resolve(resp);
+            })
+            .catch(err => {
+              clearTimeout(timer);
+              if (++retryCount > maxRetry) reject(err);
+              else setTimeout(tryRequest, 500);
+            });
+        };
+
+        tryRequest();
+      });
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      const wrapper = el.closest('.lazy-box');
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+    
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+      if (def.loading) {
+        icon.style.backgroundImage = `url("${def.loading}")`;
+      }
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+  
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.33.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    // applyThemeToGiscus(theme)
+  }
+
+  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
+  const applyThemeToGiscus = (theme) => {
+    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const memos = document.getElementsByClassName('ds-memos');
+    if (memos != undefined && memos.length > 0) {
+      needFancybox = true;
+    }
+    const fancybox = document.getElementsByClassName('with-fancybox');
+    if (fancybox != undefined && fancybox.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
