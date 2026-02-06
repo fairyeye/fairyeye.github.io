@@ -438,7 +438,7 @@ delete from spfm_company_main_industry where company_id in (1309,1310,1311);
 select group_concat(t.investigate_template_id) from sslm_investigate_tmpl t where t.tenant_id = 64913 and t.template_code = 'QT001752'; -- (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635)
 select t.investigate_template_id from sslm_investigate_tmpl t where t.tenant_id = 64913 and t.template_code = 'QT001752' AND t.latest_flag = 'Y' and t.release_flag = 1; -- 31465
 
-select investg_summary_id,investigate_template_id from sslm_supplier_investg_sum where tenant_id = 64913 and investigate_template_id in (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635) and partner_company_id = 71803;
+select investg_summary_id,investigate_template_id from sslm_supplier_investg_sum where tenant_id = 64913 and investigate_template_id in (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635);
 
 update sslm_supplier_investg_sum set last_update_date=now(),investigate_template_id=31465 where tenant_id=64913 and investigate_template_id in (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635) and partner_company_id = 71803;
 
