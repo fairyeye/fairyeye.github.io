@@ -140,10 +140,39 @@ WHERE
 	t.tenant_id = 61618
 ```
 
-## 采购财务
+## 采购财务、其他信息
 
 ```sql
+-- 其他信息
+INSERT INTO sslm_supplier_other (tenant_id, company_id, supplier_company_id, supplier_tenant_id)
+SELECT sp.tenant_id, sp.company_id, sp.partner_company_id, sp.partner_tenant_id
+FROM spfm_partner sp
+WHERE sp.tenant_id = 526080
+    and sp.company_id = 595090
+  AND sp.partner_company_id in (1976)
+  and not exists (
+ select *
+ from sslm_supplier_other sso
+ where sso.supplier_company_id = sp.partner_company_id
+ and sso.tenant_id = 526080
+ and sp.company_id = sso.company_id
+);
 
+-- 采购财务
+INSERT INTO sslm_supplier_sync (tenant_id, company_id, supplier_company_id, supplier_company_name, term_id)
+SELECT sp.tenant_id, sp.company_id, sp.partner_company_id, hc.company_name, 46421 
+FROM spfm_partner sp
+     JOIN sslm_supplier_basic hc on hc.supplier_basic_id = sp.supplier_basic_id
+WHERE sp.tenant_id = 526080
+    and sp.company_id = 595090
+  AND sp.partner_company_id in (1976)
+  and not exists (
+ select *
+ from sslm_supplier_sync sso
+ where sso.supplier_company_id = sp.partner_company_id
+ and sso.tenant_id = 526080
+ and sp.company_id = sso.company_id
+);
 ```
 
 ## 采购方的供应商的子账户
