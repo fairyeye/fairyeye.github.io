@@ -1,0 +1,1239 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
+  
+  
+  <meta name="generator" content="Hexo 8.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <title>本地虚拟机记录 - LI</title>
+
+  
+    <meta name="description" content="Redis： MySQL：  Centos12# 重启樱花映射docker restart natfrp-service      12# 强制同步时间sudo systemctl restart chronyd    parallels@10.211.55.15  zhang...1997 12# Redis 日志位置redis.log &#x2F;home&#x2F;parallels&#x2F;app&#x2F;redis&#x2F;lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本地虚拟机记录">
+<meta property="og:url" content="https://fairyeye.github.io/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/">
+<meta property="og:site_name" content="LI">
+<meta property="og:description" content="Redis： MySQL：  Centos12# 重启樱花映射docker restart natfrp-service      12# 强制同步时间sudo systemctl restart chronyd    parallels@10.211.55.15  zhang...1997 12# Redis 日志位置redis.log &#x2F;home&#x2F;parallels&#x2F;app&#x2F;redis&#x2F;lo">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fairyeye.github.io/images/avatar.jpg">
+<meta property="article:published_time" content="2026-02-06T03:27:33.686Z">
+<meta property="article:modified_time" content="2026-02-06T03:27:33.686Z">
+<meta property="article:author" content="li">
+<meta property="article:tag" content="技术,博客,笔记,开源">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fairyeye.github.io/images/avatar.jpg">
+  
+  
+  
+  <meta name="keywords" content="技术,博客,笔记,开源">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.33.1">
+
+
+  
+
+  
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"li","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-02-06T03:27:33+00:00","dateModified":"2026-02-06T03:27:33+00:00","datePublished":"2026-02-06T03:27:33+00:00","description":"","headline":"本地虚拟机记录","mainEntityOfPage":{"@type":"WebPage","@id":"https://fairyeye.github.io/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/"},"publisher":{"@type":"Organization","name":"li","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fairyeye.github.io/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/","image":[]}</script>
+  
+</head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">LI</div><div class="sub cap">记录记录</div></a></div></header>
+
+<div class="nav-area">
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="归档" href="/archives/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/categories/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="关于" href="/about/" style="color:#F44336"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/></a></nav>
+</div>
+<div class="widgets">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/01/17/%E6%A8%A1%E6%9D%BF/"><span class="title">模板</span></a><a class="item title" href="/2026/02/06/%E5%BD%92%E6%A1%A3/%E8%A3%85%E4%BF%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"><span class="title">装修注意事项</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/"><span class="title">设计模式笔记</span></a><a class="item title" href="/2020/04/20/%E5%BD%92%E6%A1%A3/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%89%8B%E5%86%8C/"><span class="title">阿里巴巴手册</span></a><a class="item title" href="/2026/02/06/%E5%BD%92%E6%A1%A3/%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E4%BB%A5%E4%B8%8B%E7%9F%A5%E8%AF%86/"><span class="title">需要掌握以下知识</span></a><a class="item title" href="/2022/12/07/%E5%BD%92%E6%A1%A3/%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">搭建SSR服务器</span></a><a class="item title" href="/2020/04/29/%E5%BD%92%E6%A1%A3/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E9%97%B4%E5%AD%98%E5%82%A8/"><span class="title">数据库时间存储</span></a><a class="item title" href="/2020/04/17/%E5%BD%92%E6%A1%A3/%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8D%A2%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98/"><span class="title">时间戳转换日期问题</span></a><a class="item title" href="/2023/02/13/%E5%BD%92%E6%A1%A3/%E7%AE%97%E6%B3%95/"><span class="title">算法</span></a><a class="item title" href="/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/"><span class="title">本地虚拟机记录</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/fairyeye" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:your-email@example.com" rel="noopener noreferrer"><img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-02-06T03:27:33.686Z">2026-02-06</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-02-06T03:27:33.686Z">2026-02-06</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>本地虚拟机记录</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><hr>
+<p>Redis：</p>
+<p>MySQL：</p>
+<hr>
+<h2 id="Centos"><a href="#Centos" class="headerlink" title="Centos"></a>Centos</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 重启樱花映射</span></span><br><span class="line">docker restart natfrp-service</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 强制同步时间</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl restart chronyd</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>parallels@10.211.55.15  zhang...1997</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Redis 日志位置</span></span><br><span class="line">redis.log /home/parallels/app/redis/log/redis.log</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="mysql"><a href="#mysql" class="headerlink" title="mysql:"></a>mysql:</h4><p>账号：centos<br>密码：centos</p>
+<h4 id="redis"><a href="#redis" class="headerlink" title="redis:"></a>redis:</h4><h4 id="防火墙："><a href="#防火墙：" class="headerlink" title="防火墙："></a>防火墙：</h4><p>关闭防火墙：<code>sudo systemctl stop firewalld</code></p>
+<p>永久关闭防火墙：</p>
+<p><code>sudo systemctl disable firewalld</code></p>
+<p>防火墙状态：<code>sudo firewall-cmd --state</code></p>
+<h4 id="Jdk-1-8"><a href="#Jdk-1-8" class="headerlink" title="Jdk 1.8"></a>Jdk 1.8</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">291  wget https://repo.huaweicloud.com/java/jdk/8u202-b08/jdk-8u202-linux-x64.tar.gz                                      </span><br><span class="line">292  <span class="built_in">mkdir</span> -p /usr/java/</span><br><span class="line">293  tar -zxvf jdk-8u202-linux-x64.tar.gz -C /usr/java/</span><br><span class="line">294  vim /etc/profile</span><br><span class="line">295  <span class="built_in">source</span> /etc/profile</span><br><span class="line">296  java -version</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="linux01"><a href="#linux01" class="headerlink" title="linux01"></a>linux01</h2><p><code> ssh linux01@10.211.55.16 linux01</code></p>
+<p>mysql、redis</p>
+<p><code>redis.log: /home/linux01/log</code></p>
+<p>关闭防火墙：<code>sudo ufw disable</code></p>
+<p>永久关闭防火墙：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop ufw</span><br><span class="line">sudo systemctl disable ufw</span><br></pre></td></tr></table></figure>
+
+<h4 id="mysql-1"><a href="#mysql-1" class="headerlink" title="mysql"></a>mysql</h4><p>账号：linux01<br>密码：linux01</p>
+<h1 id="15虚拟机"><a href="#15虚拟机" class="headerlink" title="15虚拟机"></a>15虚拟机</h1><h2 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h2><p>在CentOS上手动安装Redis的步骤如下：</p>
+<ol>
+<li>安装依赖<br>Redis是由C语言开发的，因此首先需要确保服务器已经安装了GCC编译器。可以通过以下命令查看机器是否安装了GCC：<br>gcc -v<br>如果没有安装，可以通过以下命令进行安装：<br><code>sudo yum install -y gcc</code></li>
+<li>下载并解压Redis安装包<br>下载Redis安装包，可以选择直接通过浏览器下载，或者使用wget命令在终端中下载。以下是一个使用wget命令下载Redis安装包的示例：<br><code>wget https://download.redis.io/releases/redis-6.2.6.tar.gz</code><br>解压下载的文件：<br><code>tar -zxvf redis-6.2.6.tar.gz</code></li>
+<li>编译安装<br>进入解压后的Redis目录：<br><code>cd redis-6.2.6</code><br>使用make命令进行编译：<br><code>make</code><br>编译完成后，使用make install命令进行安装，可以指定安装目录：<br><code>make install PREFIX=/usr/local/redis</code></li>
+<li>配置Redis<br>将Redis的配置文件（redis.conf）复制到安装目录：<br><code>cp /root/redis-6.2.6/redis.conf /usr/local/redis/bin/</code><br>修改redis.conf配置文件以支持后台运行：<br><code>vi /usr/local/redis/bin/redis.conf</code><br>将daemonize的值从no修改为yes：<br><code>daemonize yes</code></li>
+<li>启动Redis服务<br>前台启动<br>进入Redis安装目录并启动服务：<br><code>cd /usr/local/redis</code><br><code>./redis-server</code><br>后台启动<br>创建Redis的工作目录：<br><code>mkdir /usr/local/redis/log</code><br>编辑配置文件，添加日志文件路径：<br><code>vim /usr/local/redis/bin/redis.conf</code><br>添加以下内容：<br><code>logfile &quot;/usr/local/redis/log/redis.log&quot;</code><br>启动Redis服务：<br><code>./redis-server ./redis.conf</code></li>
+<li>设置开机自启动<br>创建systemd服务文件：<br><code>vim /lib/systemd/system/redis.service</code><br>添加以下内容：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Redis Server</span><br><span class="line">After=network.target</span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf</span><br><span class="line">ExecStop=/usr/local/redis/bin/redis-cli shutdown</span><br><span class="line">Restart=always</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>启动Redis服务并设置开机自启：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start redis</span><br><span class="line">systemctl enable redis</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>验证安装<br>通过Redis客户端连接并测试：<br>.&#x2F;redis-cli<br>使用ping命令测试连接：<br>ping<br>通过以上步骤，你可以在CentOS上成功手动安装并配置Redis。</li>
+</ol>
+<h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><h3 id="1-更新系统"><a href="#1-更新系统" class="headerlink" title="1. 更新系统"></a>1. <strong>更新系统</strong></h3><p>确保系统是最新的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf update -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-添加-MySQL-官方-DNF-仓库"><a href="#2-添加-MySQL-官方-DNF-仓库" class="headerlink" title="2. 添加 MySQL 官方 DNF 仓库"></a>2. <strong>添加 MySQL 官方 DNF 仓库</strong></h3><p>CentOS Stream 9 使用 <code>dnf</code> 作为包管理器，我们需要添加 MySQL 官方仓库：</p>
+<ol>
+<li><p>下载适用于 EL9 的 MySQL Yum 仓库 RPM：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install -y wget</span><br><span class="line">wget https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：这是截至 2025 年 2 月的最新版本。如果链接失效，请访问 <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/repo/yum/">MySQL 官方下载页面</a> 获取最新 RPM。</p>
+</blockquote>
+</li>
+<li><p>安装 RPM：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> rpm -Uvh mysql80-community-release-el9-5.noarch.rpm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新 DNF 缓存：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf makecache</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3-安装-MySQL-8-0-41"><a href="#3-安装-MySQL-8-0-41" class="headerlink" title="3. 安装 MySQL 8.0.41"></a>3. <strong>安装 MySQL 8.0.41</strong></h3><p>CentOS Stream 9 的默认仓库可能不直接提供 8.0.41，但 MySQL 官方仓库会有多个版本。检查可用版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf --showduplicates list mysql-community-server</span><br></pre></td></tr></table></figure>
+<p>输出类似：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql-community-server.x86_64  8.0.41-1.el9  mysql80-community</span><br><span class="line">mysql-community-server.x86_64  8.0.40-1.el9  mysql80-community</span><br></pre></td></tr></table></figure>
+<p>如果 8.0.41 可用，安装指定版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install -y mysql-community-server-8.0.41-1.el9</span><br></pre></td></tr></table></figure>
+<p>如果没有列出 8.0.41，默认安装最新版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install -y mysql-community-server</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-启动-MySQL-服务"><a href="#4-启动-MySQL-服务" class="headerlink" title="4. 启动 MySQL 服务"></a>4. <strong>启动 MySQL 服务</strong></h3><p>安装完成后，启动服务并设置开机自启：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start mysqld</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> mysqld</span><br></pre></td></tr></table></figure>
+
+<p>检查状态：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl status mysqld</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-获取临时密码"><a href="#5-获取临时密码" class="headerlink" title="5. 获取临时密码"></a>5. <strong>获取临时密码</strong></h3><p>MySQL 首次安装会生成一个临时 root 密码，查看日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> grep <span class="string">&#x27;temporary password&#x27;</span> /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+<p>记下密码（例如 <code>abcd1234!xyz</code>）。</p>
+<p>– Lk(wE0fZxypJ0</p>
+<p>修改密码级别</p>
+<h3 id="6-配置-MySQL"><a href="#6-配置-MySQL" class="headerlink" title="6. 配置 MySQL"></a>6. <strong>配置 MySQL</strong></h3><p>使用临时密码登录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>修改 root 密码：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;你的新密码&#x27;</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line">EXIT;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-验证安装"><a href="#7-验证安装" class="headerlink" title="7. 验证安装"></a>7. <strong>验证安装</strong></h3><p>检查版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p -e <span class="string">&quot;SELECT VERSION();&quot;</span></span><br></pre></td></tr></table></figure>
+<p>输出应包含 <code>8.0.41</code>（或你安装的版本）。</p>
+<hr>
+<h3 id="如果-8-0-41-不可用：手动安装"><a href="#如果-8-0-41-不可用：手动安装" class="headerlink" title="如果 8.0.41 不可用：手动安装"></a>如果 8.0.41 不可用：手动安装</h3><p>如果 MySQL 官方 EL9 仓库没有 8.0.41，可以手动下载 RPM 包：</p>
+<ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">MySQL 官方档案</a>。</li>
+<li>选择 8.0.41，下载适用于 EL9 的包（例如 <code>mysql-community-server-8.0.41-1.el9.x86_64.rpm</code>）。</li>
+<li>安装：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install -y ./mysql-community-server-8.0.41-1.el9.x86_64.rpm</span><br></pre></td></tr></table></figure>
+如果缺少依赖，运行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install -y -f</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="解决依赖问题"><a href="#解决依赖问题" class="headerlink" title="解决依赖问题"></a>解决依赖问题</h3><p>CentOS Stream 9 不提供 OpenSSL 1.0.2（<code>libcrypto.so.10</code> 和 <code>libssl.so.10</code>），而 MySQL 8.0.41 的 EL7 包依赖这些库。如果你坚持使用 <code>el7</code> 包（不推荐），需要手动安装兼容性库，但这在 Stream 9 上非常复杂且不稳定。建议：</p>
+<ul>
+<li>使用 EL9 版本的 MySQL 8.0.41（如上所述）。</li>
+<li>或选择更新的 MySQL 版本（8.0.x 的最新版已适配 EL9 的 OpenSSL）。</li>
+</ul>
+<hr>
+<h3 id="开启远程连接（可选）"><a href="#开启远程连接（可选）" class="headerlink" title="开启远程连接（可选）"></a>开启远程连接（可选）</h3><p>如果需要远程访问：</p>
+<ol>
+<li><p>编辑配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/my.cnf.d/mysql-server.cnf</span><br></pre></td></tr></table></figure>
+<p>在 <code>[mysqld]</code> 下添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置用户权限：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;centos&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;centos&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> PRIVILEGES <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;centos&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开放防火墙：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=3306/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --reload</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>CentOS Stream 9 是滚动更新的发行版，库版本较新，与 EL7 包不完全兼容。</li>
+<li>如果仍想用 8.0.41 的 EL7 包，建议切换到 CentOS 7 系统。</li>
+<li>遇到任何错误（例如依赖或启动失败），请提供具体输出，我会帮你解决。</li>
+</ul>
+<p>现在你可以尝试安装了！需要进一步帮助吗？</p>
+<h2 id="mysql-workbench"><a href="#mysql-workbench" class="headerlink" title="mysql workbench"></a>mysql workbench</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 更新系统</span><br><span class="line">sudo dnf update -y</span><br><span class="line"></span><br><span class="line"># 安装 EPEL</span><br><span class="line">sudo dnf install -y epel-release</span><br><span class="line"></span><br><span class="line"># 安装 unixODBC</span><br><span class="line">sudo dnf install -y unixODBC</span><br><span class="line"></span><br><span class="line"># 安装 proj（如果 EPEL 提供合适的版本）</span><br><span class="line">sudo dnf install -y proj-libs proj-devel</span><br><span class="line"></span><br><span class="line"># 如果需要手动安装 proj-8.2.1</span><br><span class="line">wget https://dl.fedoraproject.org/pub/epel/9/Everything/x86_64/Packages/p/proj-8.2.1-1.el9.x86_64.rpm</span><br><span class="line">sudo dnf install -y ./proj-8.2.1-1.el9.x86_64.rpm</span><br><span class="line"></span><br><span class="line"># 安装 MySQL Workbench</span><br><span class="line">sudo dnf install -y mysql-workbench-community-8.0.41-1.el9.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="16、17虚拟机"><a href="#16、17虚拟机" class="headerlink" title="16、17虚拟机"></a>16、17虚拟机</h1><p>依赖：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install libhiredis-dev</span><br><span class="line"><span class="built_in">sudo</span> apt-get install liblua5.1-dev</span><br><span class="line"><span class="built_in">sudo</span> apt-get install libjemalloc-dev</span><br><span class="line"><span class="built_in">sudo</span> apt-get install gcc pkg-config</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="MySQL安装-1"><a href="#MySQL安装-1" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><p>在 Ubuntu 24.04 上安装 MySQL 数据库非常简单，我将为你提供逐步指导。以下是安装和基本配置的步骤：</p>
+<h3 id="1-更新软件包列表"><a href="#1-更新软件包列表" class="headerlink" title="1. 更新软件包列表"></a>1. <strong>更新软件包列表</strong></h3><p>首先，确保你的系统软件包列表是最新的。打开终端，运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-安装-MySQL-Server"><a href="#2-安装-MySQL-Server" class="headerlink" title="2. 安装 MySQL Server"></a>2. <strong>安装 MySQL Server</strong></h3><p>在 Ubuntu 24.04 上，MySQL 的默认版本通常可以通过包管理器安装。运行以下命令来安装 MySQL Server：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install mysql-server -y</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，MySQL 服务会自动启动。你可以通过以下命令检查它是否运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl status mysql</span><br></pre></td></tr></table></figure>
+<p>如果显示 “active (running)”，说明服务已成功启动。</p>
+<h3 id="3-运行安全配置脚本"><a href="#3-运行安全配置脚本" class="headerlink" title="3. 运行安全配置脚本"></a>3. <strong>运行安全配置脚本</strong></h3><p>安装完成后，建议运行 MySQL 提供的安全配置脚本，以增强数据库的安全性：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<ul>
+<li>系统会提示你设置 root 用户的密码（如果还未设置）。</li>
+<li>接下来会询问是否移除匿名用户、禁止远程 root 登录、删除测试数据库等，建议根据需求选择（通常选 “Y” 以提高安全性）。</li>
+</ul>
+<h3 id="4-登录-MySQL"><a href="#4-登录-MySQL" class="headerlink" title="4. 登录 MySQL"></a>4. <strong>登录 MySQL</strong></h3><p>安装完成后，可以使用以下命令登录 MySQL：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>输入你在上一步设置的 root 密码。如果未设置密码，可以直接以 root 用户身份进入（视安装时的默认配置）。</p>
+<h3 id="5-（可选）设置-root-用户密码"><a href="#5-（可选）设置-root-用户密码" class="headerlink" title="5. （可选）设置 root 用户密码"></a>5. <strong>（可选）设置 root 用户密码</strong></h3><p>如果默认情况下 root 用户没有密码或你想更改密码，可以在 MySQL 命令行中运行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">WITH</span> <span class="string">&#x27;mysql_native_password&#x27;</span> <span class="keyword">BY</span> <span class="string">&#x27;你的密码&#x27;</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line">EXIT;</span><br></pre></td></tr></table></figure>
+<p>将“你的密码”替换为你想要设置的密码。</p>
+<h3 id="6-验证安装"><a href="#6-验证安装" class="headerlink" title="6. 验证安装"></a>6. <strong>验证安装</strong></h3><p>再次登录 MySQL 并运行以下命令，确认版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>进入后：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> VARIABLES <span class="keyword">LIKE</span> <span class="string">&#x27;version&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>这会显示当前安装的 MySQL 版本。</p>
+<h3 id="7-基本管理命令"><a href="#7-基本管理命令" class="headerlink" title="7. 基本管理命令"></a>7. <strong>基本管理命令</strong></h3><ul>
+<li>启动 MySQL 服务：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start mysql</span><br></pre></td></tr></table></figure></li>
+<li>停止 MySQL 服务：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl stop mysql</span><br></pre></td></tr></table></figure></li>
+<li>重启 MySQL 服务：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart mysql</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>默认安装位置：&#x2F;var&#x2F;lib&#x2F;mysql</p>
+<p>which mysql   </p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-- 查看当前密码策略</span><br><span class="line">SHOW VARIABLES LIKE <span class="string">&#x27;validate_password%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">-- 更改密码策略为低级别</span><br><span class="line">SET GLOBAL validate_password.policy = LOW;</span><br><span class="line">-- 或者，如果您想要完全禁用密码验证（不推荐），可以使用：</span><br><span class="line">-- SET GLOBAL validate_password.policy = OFF;</span><br><span class="line"></span><br><span class="line">-- 如果需要，还可以调整其他密码策略参数，例如：</span><br><span class="line">-- SET GLOBAL validate_password.length = 6; -- 设置最小密码长度</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><p>PIDFile 必须与 redis.conf 中的 pidfile 一致。</p>
+</li>
+<li><p>Type&#x3D;forking 匹配 daemonize yes 设置。</p>
+</li>
+</ul>
+<h1 id="Redis-1"><a href="#Redis-1" class="headerlink" title="Redis"></a>Redis</h1><h2 id="主从-哨兵"><a href="#主从-哨兵" class="headerlink" title="主从+哨兵"></a>主从+哨兵</h2><p>在您的三台虚拟机（10.211.55.15 CentOS Stream 9，10.211.55.16 和 10.211.55.17 Ubuntu 24 LTS）上已经部署了 Redis，现在要配置 Redis 哨兵模式（Sentinel），这是一个非常好的高可用性方案。Redis 哨兵模式可以监控主从节点，并在主节点故障时自动切换到从节点。以下是详细的配置步骤：</p>
+<h3 id="前提假设"><a href="#前提假设" class="headerlink" title="前提假设"></a>前提假设</h3><ol>
+<li>三台服务器都已经安装了 Redis（假设版本一致，比如 Redis 6.x 或 7.x）。</li>
+<li>Redis 主节点（Master）部署在 10.211.55.15，从节点（Slave）部署在 10.211.55.16 和 10.211.55.17。</li>
+<li>Sentinel 将在这三台服务器上都部署，以实现高可用监控。</li>
+</ol>
+<p>如果您的部署计划不同（如主从分配不同），请告诉我，我会调整方案。</p>
+<hr>
+<h3 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h3><h4 id="1-配置-Redis-主从复制"><a href="#1-配置-Redis-主从复制" class="headerlink" title="1. 配置 Redis 主从复制"></a>1. 配置 Redis 主从复制</h4><p>首先需要设置一个主节点和两个从节点。</p>
+<h5 id="在主节点-10-211-55-15-上配置-Redis"><a href="#在主节点-10-211-55-15-上配置-Redis" class="headerlink" title="在主节点 (10.211.55.15) 上配置 Redis"></a>在主节点 (10.211.55.15) 上配置 Redis</h5><p>编辑 Redis 配置文件（通常在 <code>/etc/redis.conf</code> 或 <code>/etc/redis/redis.conf</code>，具体路径取决于安装方式）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 确保绑定本地 IP（或 0.0.0.0 允许外部访问）</span></span><br><span class="line"><span class="built_in">bind</span> 10.211.55.15</span><br><span class="line"><span class="comment"># 设置端口（默认 6379，可自定义）</span></span><br><span class="line">port 6379</span><br><span class="line"><span class="comment"># 可选：设置密码（增强安全性）</span></span><br><span class="line">requirepass <span class="string">&quot;yourpassword&quot;</span></span><br><span class="line"><span class="comment"># 后台运行</span></span><br><span class="line">daemonize <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+
+<p>启动 Redis：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server /etc/redis.conf</span><br></pre></td></tr></table></figure>
+
+<h5 id="在从节点-10-211-55-16-和-10-211-55-17-上配置-Redis"><a href="#在从节点-10-211-55-16-和-10-211-55-17-上配置-Redis" class="headerlink" title="在从节点 (10.211.55.16 和 10.211.55.17) 上配置 Redis"></a>在从节点 (10.211.55.16 和 10.211.55.17) 上配置 Redis</h5><p>编辑从节点的 Redis 配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绑定本地 IP</span></span><br><span class="line"><span class="built_in">bind</span> 10.211.55.16  <span class="comment"># 或 10.211.55.17</span></span><br><span class="line"><span class="comment"># 设置端口</span></span><br><span class="line">port 6379</span><br><span class="line"><span class="comment"># 设置为主节点的从节点</span></span><br><span class="line">replicaof 10.211.55.15 6379</span><br><span class="line"><span class="comment"># 如果主节点设置了密码</span></span><br><span class="line">masterauth <span class="string">&quot;yourpassword&quot;</span></span><br><span class="line"><span class="comment"># 后台运行</span></span><br><span class="line">daemonize <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+
+<p>分别在两台从节点上启动 Redis：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server /etc/redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>验证主从同步：<br>在主节点上运行 <code>redis-cli</code>，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO REPLICATION</span><br></pre></td></tr></table></figure>
+<p>可以看到从节点信息。确保从节点已连接。</p>
+<hr>
+<h4 id="2-配置-Redis-Sentinel"><a href="#2-配置-Redis-Sentinel" class="headerlink" title="2. 配置 Redis Sentinel"></a>2. 配置 Redis Sentinel</h4><p>Redis Sentinel 需要单独的配置文件，通常命名为 <code>sentinel.conf</code>，并在每台服务器上运行一个 Sentinel 实例。</p>
+<h5 id="创建-Sentinel-配置文件"><a href="#创建-Sentinel-配置文件" class="headerlink" title="创建 Sentinel 配置文件"></a>创建 Sentinel 配置文件</h5><p>在每台服务器上创建一个 <code>sentinel.conf</code> 文件（例如放在 <code>/etc/redis/sentinel.conf</code>），内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sentinel 监听端口（默认 26379）</span></span><br><span class="line">port 26379</span><br><span class="line"><span class="comment"># 后台运行</span></span><br><span class="line">daemonize <span class="built_in">yes</span></span><br><span class="line"><span class="comment"># 监控的主节点信息</span></span><br><span class="line">sentinel monitor mymaster 10.211.55.15 6379 2</span><br><span class="line"><span class="comment"># 如果主节点有密码</span></span><br><span class="line">sentinel auth-pass mymaster yourpassword</span><br><span class="line"><span class="comment"># 主节点宕机判断时间（单位：毫秒，默认 30000，即 30 秒）</span></span><br><span class="line">sentinel down-after-milliseconds mymaster 30000</span><br><span class="line"><span class="comment"># 故障转移后并行同步从节点的数量</span></span><br><span class="line">sentinel parallel-syncs mymaster 1</span><br><span class="line"><span class="comment"># 故障转移超时时间（单位：毫秒，默认 180000，即 3 分钟）</span></span><br><span class="line">sentinel failover-timeout mymaster 180000</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li><code>sentinel monitor mymaster &lt;主节点IP&gt; &lt;端口&gt; &lt;法定人数&gt;</code>：<code>mymaster</code> 是主节点的别名，<code>2</code> 表示至少 2 个 Sentinel 同意才能触发故障转移。</li>
+<li>每台服务器的 <code>sentinel.conf</code> 配置相同。</li>
+</ul>
+<h5 id="启动-Sentinel"><a href="#启动-Sentinel" class="headerlink" title="启动 Sentinel"></a>启动 Sentinel</h5><p>在每台服务器上启动 Sentinel：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-sentinel /etc/redis/sentinel.conf</span><br></pre></td></tr></table></figure>
+
+<p>启动后，Sentinel 会自动发现主节点和从节点，并开始监控。</p>
+<hr>
+<h4 id="3-验证-Sentinel-工作状态"><a href="#3-验证-Sentinel-工作状态" class="headerlink" title="3. 验证 Sentinel 工作状态"></a>3. 验证 Sentinel 工作状态</h4><p>在任意一台服务器上，使用 <code>redis-cli</code> 连接 Sentinel（默认端口 26379）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h 10.211.55.15 -p 26379</span><br></pre></td></tr></table></figure>
+<p>输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SENTINEL masters</span><br></pre></td></tr></table></figure>
+<p>查看主节点状态。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SENTINEL slaves mymaster</span><br></pre></td></tr></table></figure>
+<p>查看从节点状态。</p>
+<hr>
+<h4 id="4-测试故障转移"><a href="#4-测试故障转移" class="headerlink" title="4. 测试故障转移"></a>4. 测试故障转移</h4><ol>
+<li>在主节点 (10.211.55.15) 上停止 Redis：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h 10.211.55.15 shutdown</span><br></pre></td></tr></table></figure></li>
+<li>等待几秒后，检查 Sentinel 日志（通常在 <code>sentinel.conf</code> 指定的日志文件中）或重新运行 <code>SENTINEL masters</code>，确认主节点已切换到 10.211.55.16 或 10.211.55.17。</li>
+<li>原主节点恢复后会自动变为从节点。</li>
+<li>手动故障主节点</li>
+<li></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SENTINEL failover mymaster <span class="comment"># mymaster 是主节点的名称</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li><p><strong>防火墙配置</strong>：</p>
+<ul>
+<li>确保主从节点的 6379 端口和 Sentinel 的 26379 端口在三台服务器之间互通。</li>
+<li>CentOS Stream 9：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=6379/tcp --permanent</span><br><span class="line">firewall-cmd --add-port=26379/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure></li>
+<li>Ubuntu 24 LTS：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 6379/tcp</span><br><span class="line">ufw allow 26379/tcp</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>网络延迟</strong>：</p>
+<ul>
+<li>由于是本地虚拟机，网络延迟应该很低，但如果在生产环境，需确保网络稳定。</li>
+</ul>
+</li>
+<li><p><strong>版本一致性</strong>：</p>
+<ul>
+<li>确保三台服务器的 Redis 和 Sentinel 版本一致，避免兼容性问题。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h3><p>如果您已经按照上述步骤配置完成，可以告诉我测试结果，或者如果有任何报错，我可以帮您排查。如果您想调整配置（比如更改主节点、端口等），也请随时告诉我！</p>
+<h1 id="MySQL-1"><a href="#MySQL-1" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="主从同步-ShardingSphere"><a href="#主从同步-ShardingSphere" class="headerlink" title="主从同步  ShardingSphere"></a>主从同步  ShardingSphere</h2><p>好的，您决定使用 ShardingSphere 并基于 Java 的 Spring Boot 应用来实现读写分离，这是个很不错的选择。您的三台服务器（10.211.55.15 CentOS Stream 9，10.211.55.16 和 10.211.55.17 Ubuntu 24 LTS）已经部署了 MySQL 8.0.41，但尚未配置主从同步。我们需要先完成 MySQL 的主从同步配置，然后在 Spring Boot 中引入 ShardingSphere-JDBC 来实现读写分离。以下是详细步骤：</p>
+<h3 id="第一步：配置-MySQL-主从同步"><a href="#第一步：配置-MySQL-主从同步" class="headerlink" title="第一步：配置 MySQL 主从同步"></a>第一步：配置 MySQL 主从同步</h3><p>我们将 10.211.55.15 设置为主节点 (Master)，10.211.55.16 和 10.211.55.17 设置为从节点 (Slave)。</p>
+<h4 id="1-配置主节点-10-211-55-15"><a href="#1-配置主节点-10-211-55-15" class="headerlink" title="1. 配置主节点 (10.211.55.15)"></a>1. 配置主节点 (10.211.55.15)</h4><p>编辑 MySQL 配置文件：</p>
+<ul>
+<li>CentOS Stream 9 通常是 <code>/etc/my.cnf</code>：</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">server-id</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">bind-address</span> = <span class="number">0.0</span>.<span class="number">0.0</span>  <span class="comment"># 或 10.211.55.15，允许外部访问</span></span><br><span class="line"><span class="attr">log_bin</span> = mysql-bin     <span class="comment"># 启用二进制日志</span></span><br><span class="line"><span class="attr">binlog_format</span> = ROW     <span class="comment"># MySQL 8.0 默认推荐 ROW 格式</span></span><br></pre></td></tr></table></figure>
+
+<p>重启 MySQL：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
+
+<p>创建复制用户：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql <span class="operator">-</span>u root <span class="operator">-</span>p</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;10.211.55.%&#x27;</span> IDENTIFIED <span class="keyword">WITH</span> <span class="string">&#x27;mysql_native_password&#x27;</span> <span class="keyword">BY</span> <span class="string">&#x27;Repl@1234&#x27;</span>;</span><br><span class="line"><span class="keyword">GRANT</span> REPLICATION SLAVE <span class="keyword">ON</span> <span class="operator">*</span>.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;repl&#x27;</span>@<span class="string">&#x27;10.211.55.%&#x27;</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"><span class="keyword">SHOW</span> MASTER STATUS;</span><br></pre></td></tr></table></figure>
+<p>记录 <code>File</code>（如 <code>mysql-bin.000001</code>）和 <code>Position</code>（如 <code>156</code>）。</p>
+<h4 id="2-配置从节点-10-211-55-16"><a href="#2-配置从节点-10-211-55-16" class="headerlink" title="2. 配置从节点 (10.211.55.16)"></a>2. 配置从节点 (10.211.55.16)</h4><p>编辑 MySQL 配置文件（Ubuntu 通常是 <code>/etc/mysql/my.cnf</code> 或 <code>/etc/mysql/mysql.conf.d/mysqld.cnf</code>）：</p>
+<p>16是：<code>/etc/mysql/mysql.conf.d/mysqld.cnf</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">server-id</span> = <span class="number">2</span></span><br><span class="line"><span class="attr">bind-address</span> = <span class="number">0.0</span>.<span class="number">0.0</span>  <span class="comment"># 或 10.211.55.16</span></span><br><span class="line"><span class="attr">relay_log</span> = mysql-relay-bin</span><br><span class="line"><span class="attr">read_only</span> = <span class="number">1</span>          <span class="comment"># 从节点只读</span></span><br></pre></td></tr></table></figure>
+
+<p>重启 MySQL：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysql</span><br><span class="line">systemctl status mysql</span><br></pre></td></tr></table></figure>
+
+<p>连接主节点：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql <span class="operator">-</span>u root <span class="operator">-</span>p</span><br><span class="line">CHANGE REPLICATION SOURCE <span class="keyword">TO</span></span><br><span class="line">  SOURCE_HOST <span class="operator">=</span> <span class="string">&#x27;10.211.55.15&#x27;</span>,</span><br><span class="line">  SOURCE_USER <span class="operator">=</span> <span class="string">&#x27;repl&#x27;</span>,</span><br><span class="line">  SOURCE_PASSWORD <span class="operator">=</span> <span class="string">&#x27;Repl@1234&#x27;</span>,</span><br><span class="line">  SOURCE_LOG_FILE <span class="operator">=</span> <span class="string">&#x27;mysql-bin.000001&#x27;</span>,</span><br><span class="line">  SOURCE_LOG_POS <span class="operator">=</span> <span class="number">156</span>;</span><br><span class="line">`<span class="keyword">START</span> REPLICA; </span><br><span class="line"><span class="keyword">SHOW</span> REPLICA STATUS\G`</span><br></pre></td></tr></table></figure>
+<p>确认 <code>Replica_IO_Running</code> 和 <code>Replica_SQL_Running</code> 均为 <code>Yes</code>。</p>
+<h4 id="3-配置从节点-10-211-55-17"><a href="#3-配置从节点-10-211-55-17" class="headerlink" title="3. 配置从节点 (10.211.55.17)"></a>3. 配置从节点 (10.211.55.17)</h4><p>与 10.211.55.16 类似，配置文件中设置：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">server-id</span> = <span class="number">3</span></span><br><span class="line"><span class="attr">bind-address</span> = <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line"><span class="attr">relay_log</span> = mysql-relay-bin</span><br><span class="line"><span class="attr">read_only</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>重启并连接主节点（参数与 10.211.55.16 相同，只是 <code>server-id</code> 不同），然后检查同步状态。</p>
+<h4 id="4-防火墙设置"><a href="#4-防火墙设置" class="headerlink" title="4. 防火墙设置"></a>4. 防火墙设置</h4><ul>
+<li>CentOS：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure></li>
+<li>Ubuntu：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 3306/tcp</span><br><span class="line">ufw status</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="5-测试主从同步"><a href="#5-测试主从同步" class="headerlink" title="5. 测试主从同步"></a>5. 测试主从同步</h4><p>在主节点创建测试数据：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE test_db;</span><br><span class="line">USE test_db;</span><br><span class="line"><span class="keyword">CREATE TABLE</span> users (id <span class="type">INT</span> AUTO_INCREMENT <span class="keyword">PRIMARY KEY</span>, name <span class="type">VARCHAR</span>(<span class="number">50</span>));</span><br><span class="line"><span class="keyword">INSERT INTO</span> users (name) <span class="keyword">VALUES</span> (<span class="string">&#x27;Alice&#x27;</span>), (<span class="string">&#x27;Bob&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>在从节点检查：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">USE test_db;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users;</span><br></pre></td></tr></table></figure>
+<p>若能看到数据，同步成功。</p>
+<hr>
+<h3 id="第二步：在-Spring-Boot-中引入-ShardingSphere-JDBC"><a href="#第二步：在-Spring-Boot-中引入-ShardingSphere-JDBC" class="headerlink" title="第二步：在 Spring Boot 中引入 ShardingSphere-JDBC"></a>第二步：在 Spring Boot 中引入 ShardingSphere-JDBC</h3><h4 id="1-创建-Spring-Boot-项目"><a href="#1-创建-Spring-Boot-项目" class="headerlink" title="1. 创建 Spring Boot 项目"></a>1. 创建 Spring Boot 项目</h4><p>使用 Spring Initializr 创建项目，添加以下依赖：</p>
+<ul>
+<li>Spring Web</li>
+<li>Spring Data JPA</li>
+<li>MySQL Driver</li>
+</ul>
+<h4 id="2-添加-ShardingSphere-JDBC-依赖"><a href="#2-添加-ShardingSphere-JDBC-依赖" class="headerlink" title="2. 添加 ShardingSphere-JDBC 依赖"></a>2. 添加 ShardingSphere-JDBC 依赖</h4><p>编辑 <code>pom.xml</code>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Spring Boot 基础依赖 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-jpa<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.33<span class="tag">&lt;/<span class="name">version</span>&gt;</span> <span class="comment">&lt;!-- 与 MySQL 8.0.41 兼容 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- ShardingSphere-JDBC --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shardingsphere<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shardingsphere-jdbc-core-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span> <span class="comment">&lt;!-- 截至 2025 年 3 月最新版本可能更高，检查官网 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-配置-application-yml"><a href="#3-配置-application-yml" class="headerlink" title="3. 配置 application.yml"></a>3. 配置 application.yml</h4><p>在 <code>src/main/resources/application.yml</code> 中添加：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">shardingsphere:</span></span><br><span class="line">    <span class="attr">datasource:</span></span><br><span class="line">      <span class="attr">names:</span> <span class="string">master,</span> <span class="string">slave1,</span> <span class="string">slave2</span></span><br><span class="line">      <span class="attr">master:</span></span><br><span class="line">        <span class="attr">type:</span> <span class="string">com.zaxxer.hikari.HikariDataSource</span></span><br><span class="line">        <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">        <span class="attr">jdbc-url:</span> <span class="string">jdbc:mysql://10.211.55.15:3306/test_db?useSSL=false&amp;serverTimezone=UTC</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">        <span class="attr">password:</span> <span class="string">your_root_password</span></span><br><span class="line">      <span class="attr">slave1:</span></span><br><span class="line">        <span class="attr">type:</span> <span class="string">com.zaxxer.hikari.HikariDataSource</span></span><br><span class="line">        <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">        <span class="attr">jdbc-url:</span> <span class="string">jdbc:mysql://10.211.55.16:3306/test_db?useSSL=false&amp;serverTimezone=UTC</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">        <span class="attr">password:</span> <span class="string">your_root_password</span></span><br><span class="line">      <span class="attr">slave2:</span></span><br><span class="line">        <span class="attr">type:</span> <span class="string">com.zaxxer.hikari.HikariDataSource</span></span><br><span class="line">        <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">        <span class="attr">jdbc-url:</span> <span class="string">jdbc:mysql://10.211.55.17:3306/test_db?useSSL=false&amp;serverTimezone=UTC</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">        <span class="attr">password:</span> <span class="string">your_root_password</span></span><br><span class="line">    <span class="attr">rules:</span></span><br><span class="line">      <span class="attr">master-slave:</span></span><br><span class="line">        <span class="attr">master-data-source-name:</span> <span class="string">master</span></span><br><span class="line">        <span class="attr">slave-data-source-names:</span> <span class="string">slave1,</span> <span class="string">slave2</span></span><br><span class="line">        <span class="attr">load-balance-algorithm-type:</span> <span class="string">ROUND_ROBIN</span>  <span class="comment"># 读请求轮询分发</span></span><br><span class="line">    <span class="attr">props:</span></span><br><span class="line">      <span class="attr">sql-show:</span> <span class="literal">true</span>  <span class="comment"># 显示 SQL 日志，便于调试</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span>  <span class="comment"># 自动建表</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-创建实体类"><a href="#4-创建实体类" class="headerlink" title="4. 创建实体类"></a>4. 创建实体类</h4><p>在 <code>src/main/java/com/example/demo/entity</code> 下创建 <code>User.java</code>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.persistence.Entity;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.GeneratedValue;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.GenerationType;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.Id;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue(strategy = GenerationType.IDENTITY)</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters 和 Setters</span></span><br><span class="line">    <span class="keyword">public</span> Long <span class="title function_">getId</span><span class="params">()</span> &#123; <span class="keyword">return</span> id; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setId</span><span class="params">(Long id)</span> &#123; <span class="built_in">this</span>.id = id; &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123; <span class="keyword">return</span> name; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123; <span class="built_in">this</span>.name = name; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-创建-Repository"><a href="#5-创建-Repository" class="headerlink" title="5. 创建 Repository"></a>5. 创建 Repository</h4><p>在 <code>src/main/java/com/example/demo/repository</code> 下创建 <code>UserRepository.java</code>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.repository;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.demo.entity.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.jpa.repository.JpaRepository;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserRepository</span> <span class="keyword">extends</span> <span class="title class_">JpaRepository</span>&lt;User, Long&gt; &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-创建-Controller"><a href="#6-创建-Controller" class="headerlink" title="6. 创建 Controller"></a>6. 创建 Controller</h4><p>在 <code>src/main/java/com/example/demo/controller</code> 下创建 <code>UserController.java</code>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.demo.entity.User;</span><br><span class="line"><span class="keyword">import</span> com.example.demo.repository.UserRepository;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/users&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserRepository userRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> User <span class="title function_">addUser</span><span class="params">(<span class="meta">@RequestBody</span> User user)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> userRepository.save(user);  <span class="comment">// 写操作，走主库</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;User&gt; <span class="title function_">getUsers</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> userRepository.findAll();  <span class="comment">// 读操作，走从库</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-运行应用"><a href="#7-运行应用" class="headerlink" title="7. 运行应用"></a>7. 运行应用</h4><p>启动 Spring Boot：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-测试读写分离"><a href="#8-测试读写分离" class="headerlink" title="8. 测试读写分离"></a>8. 测试读写分离</h4><ul>
+<li>添加用户（写操作，走主库）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST http://localhost:8080/users -H <span class="string">&quot;Content-Type:application/json&quot;</span> -d <span class="string">&#x27;&#123;&quot;name&quot;:&quot;Charlie&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>获取用户列表（读操作，走从库）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://localhost:8080/users</span><br></pre></td></tr></table></figure>
+观察日志，确认写操作发往 10.211.55.15，读操作分发到 10.211.55.16 或 10.211.55.17。</li>
+</ul>
+<hr>
+<h3 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li><strong>密码替换</strong>：将 <code>your_root_password</code> 替换为实际的 MySQL root 密码。</li>
+<li><strong>数据库权限</strong>：确保 <code>test_db</code> 在从节点已同步，或者在主节点创建后等待同步完成。</li>
+<li><strong>依赖版本</strong>：ShardingSphere 版本可能更新，建议访问 <a target="_blank" rel="noopener" href="https://shardingsphere.apache.org/">官网</a> 获取最新版。</li>
+<li><strong>日志调试</strong>：若读写分离未生效，检查日志输出，确保数据源正确加载。</li>
+</ol>
+<hr>
+<h3 id="下一步-1"><a href="#下一步-1" class="headerlink" title="下一步"></a>下一步</h3><p>请按照上述步骤配置并测试。如果主从同步或 Spring Boot 集成过程中遇到问题（比如同步失败、连接错误），告诉我具体报错，我会帮您排查！完成后，您可以进一步优化负载均衡策略或添加更多功能。有什么具体需求吗？</p>
+</article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+
+
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://fairyeye.github.io/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://fairyeye.github.io/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/&title=本地虚拟机记录 - LI&summary=
+Redis：
+MySQL：
+
+Centos12# 重启樱花映射docker restart natfrp-service
+
+
+
+
+
+12# 强制同步时间sudo systemctl restart chronyd
+
+
+
+parall..."><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img  src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://fairyeye.github.io/2026/02/06/%E5%BD%92%E6%A1%A3/%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BF%A1%E6%81%AF%E8%AE%B0%E5%BD%95/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/02/06/%E5%BD%92%E6%A1%A3/%E8%A3%85%E4%BF%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">装修注意事项</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/02/06/%E5%BD%92%E6%A1%A3/%E5%8D%A1%E7%B1%B3%E6%95%91%E7%A0%96%E8%AE%B0%E5%BD%95/">卡米救砖</a></div></section></div>
+
+
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="fairyeye/fairyeye.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkyNTM2NzI0OTU=" data-category="Announcements" data-category-id="DIC_kwDODx68L84C1FEi" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="sitemap" style="column-count:2;"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/%E5%BD%92%E6%A1%A3/">归档</a></div><div class="sitemap-group"><span class="fs15">关于</span><a href="/about/">关于我</a><a target="_blank" rel="noopener" href="https://github.com/fairyeye">GitHub</a><a href="/atom.xml">RSS</a></div></div><div class="text"><p>本站由 <a href="%7Bconfig.url%7D">{config.author}</a> 使用 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 和 <a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Centos"><span class="toc-text">Centos</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mysql"><span class="toc-text">mysql:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#redis"><span class="toc-text">redis:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%9A"><span class="toc-text">防火墙：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jdk-1-8"><span class="toc-text">Jdk 1.8</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux01"><span class="toc-text">linux01</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mysql-1"><span class="toc-text">mysql</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#15%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">15虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E5%AE%89%E8%A3%85"><span class="toc-text">Redis安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL%E5%AE%89%E8%A3%85"><span class="toc-text">MySQL安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F"><span class="toc-text">1. 更新系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0-MySQL-%E5%AE%98%E6%96%B9-DNF-%E4%BB%93%E5%BA%93"><span class="toc-text">2. 添加 MySQL 官方 DNF 仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85-MySQL-8-0-41"><span class="toc-text">3. 安装 MySQL 8.0.41</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%90%AF%E5%8A%A8-MySQL-%E6%9C%8D%E5%8A%A1"><span class="toc-text">4. 启动 MySQL 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%8E%B7%E5%8F%96%E4%B8%B4%E6%97%B6%E5%AF%86%E7%A0%81"><span class="toc-text">5. 获取临时密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E9%85%8D%E7%BD%AE-MySQL"><span class="toc-text">6. 配置 MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="toc-text">7. 验证安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C-8-0-41-%E4%B8%8D%E5%8F%AF%E7%94%A8%EF%BC%9A%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="toc-text">如果 8.0.41 不可用：手动安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98"><span class="toc-text">解决依赖问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-text">开启远程连接（可选）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql-workbench"><span class="toc-text">mysql workbench</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#16%E3%80%8117%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">16、17虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL%E5%AE%89%E8%A3%85-1"><span class="toc-text">MySQL安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8"><span class="toc-text">1. 更新软件包列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85-MySQL-Server"><span class="toc-text">2. 安装 MySQL Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E8%84%9A%E6%9C%AC"><span class="toc-text">3. 运行安全配置脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%99%BB%E5%BD%95-MySQL"><span class="toc-text">4. 登录 MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89%E8%AE%BE%E7%BD%AE-root-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-text">5. （可选）设置 root 用户密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="toc-text">6. 验证安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-text">7. 基本管理命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL"><span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis"><span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-text">注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis-1"><span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E4%BB%8E-%E5%93%A8%E5%85%B5"><span class="toc-text">主从+哨兵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E6%8F%90%E5%81%87%E8%AE%BE"><span class="toc-text">前提假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="toc-text">配置步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AE-Redis-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="toc-text">1. 配置 Redis 主从复制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E4%B8%BB%E8%8A%82%E7%82%B9-10-211-55-15-%E4%B8%8A%E9%85%8D%E7%BD%AE-Redis"><span class="toc-text">在主节点 (10.211.55.15) 上配置 Redis</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E4%BB%8E%E8%8A%82%E7%82%B9-10-211-55-16-%E5%92%8C-10-211-55-17-%E4%B8%8A%E9%85%8D%E7%BD%AE-Redis"><span class="toc-text">在从节点 (10.211.55.16 和 10.211.55.17) 上配置 Redis</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE-Redis-Sentinel"><span class="toc-text">2. 配置 Redis Sentinel</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Sentinel-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">创建 Sentinel 配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-Sentinel"><span class="toc-text">启动 Sentinel</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%AA%8C%E8%AF%81-Sentinel-%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81"><span class="toc-text">3. 验证 Sentinel 工作状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%B5%8B%E8%AF%95%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB"><span class="toc-text">4. 测试故障转移</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-2"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-text">下一步</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-1"><span class="toc-text">MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5-ShardingSphere"><span class="toc-text">主从同步  ShardingSphere</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE-MySQL-%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5"><span class="toc-text">第一步：配置 MySQL 主从同步</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AE%E4%B8%BB%E8%8A%82%E7%82%B9-10-211-55-15"><span class="toc-text">1. 配置主节点 (10.211.55.15)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E4%BB%8E%E8%8A%82%E7%82%B9-10-211-55-16"><span class="toc-text">2. 配置从节点 (10.211.55.16)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E4%BB%8E%E8%8A%82%E7%82%B9-10-211-55-17"><span class="toc-text">3. 配置从节点 (10.211.55.17)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">4. 防火墙设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%B5%8B%E8%AF%95%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5"><span class="toc-text">5. 测试主从同步</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%9C%A8-Spring-Boot-%E4%B8%AD%E5%BC%95%E5%85%A5-ShardingSphere-JDBC"><span class="toc-text">第二步：在 Spring Boot 中引入 ShardingSphere-JDBC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA-Spring-Boot-%E9%A1%B9%E7%9B%AE"><span class="toc-text">1. 创建 Spring Boot 项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0-ShardingSphere-JDBC-%E4%BE%9D%E8%B5%96"><span class="toc-text">2. 添加 ShardingSphere-JDBC 依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE-application-yml"><span class="toc-text">3. 配置 application.yml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BD%93%E7%B1%BB"><span class="toc-text">4. 创建实体类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA-Repository"><span class="toc-text">5. 创建 Repository</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%88%9B%E5%BB%BA-Controller"><span class="toc-text">6. 创建 Controller</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E8%BF%90%E8%A1%8C%E5%BA%94%E7%94%A8"><span class="toc-text">7. 运行应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E6%B5%8B%E8%AF%95%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB"><span class="toc-text">8. 测试读写分离</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-3"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5-1"><span class="toc-text">下一步</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+
+
+<script type="text/javascript">
+  window.canonical = {"originalHost":null,"officialHosts":["localhost"],"encoded":""};
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+    loading: `https://api.iconify.design/eos-icons:three-dots-loading.svg?color=%231cd0fd`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`,
+    lazyload: `/%5Bobject%20Object%5D`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      const maxRetry = 3;
+      let retryCount = 0;
+
+      return new Promise((resolve, reject) => {
+        const load = () => {
+          utils.onLoading?.(el);
+
+          let timedOut = false;
+          const timeout = setTimeout(() => {
+            timedOut = true;
+            console.warn('[request] 超时:', url);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject('请求超时');
+            } else {
+              setTimeout(load, 1000);
+            }
+          }, 5000);
+
+          fetch(url).then(resp => {
+            if (timedOut) return;
+            clearTimeout(timeout);
+
+            if (!resp.ok) throw new Error('响应失败');
+            return resp;
+          }).then(data => {
+            if (timedOut) return;
+            utils.onLoadSuccess?.(el);
+            callback(data);
+            resolve(data);
+          }).catch(err => {
+            clearTimeout(timeout);
+            console.warn('[request] 错误:', err);
+
+            if (++retryCount >= maxRetry) {
+              utils.onLoadFailure?.(el);
+              onFailure?.();
+              reject(err);
+            } else {
+              setTimeout(load, 1000);
+            }
+          });
+        };
+
+        load();
+      });
+    },
+    requestWithoutLoading: (url, options = {}, maxRetry = 2, timeout = 5000) => {
+      return new Promise((resolve, reject) => {
+        let retryCount = 0;
+
+        const tryRequest = () => {
+          let timedOut = false;
+          const timer = setTimeout(() => {
+            timedOut = true;
+            if (++retryCount > maxRetry) reject('timeout');
+            else tryRequest();
+          }, timeout);
+
+          fetch(url, options)
+            .then(resp => {
+              clearTimeout(timer);
+              if (!resp.ok) throw new Error('bad response');
+              resolve(resp);
+            })
+            .catch(err => {
+              clearTimeout(timer);
+              if (++retryCount > maxRetry) reject(err);
+              else setTimeout(tryRequest, 500);
+            });
+        };
+
+        tryRequest();
+      });
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+<script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    callback_loaded: (el) => {
+      el.classList.add('loaded');
+      const wrapper = el.closest('.lazy-box');
+      const icon = wrapper?.querySelector('.lazy-icon');
+      if (icon) icon.remove();
+    }
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+
+  window.wrapLazyloadImages = (container) => {
+    if (typeof container === 'string') {
+      container = document.querySelector(container);
+    }
+    if (!container) return;
+    
+    const images = container.querySelectorAll('img');
+    images.forEach((img) => {
+      if (img.classList.contains('lazy')) return;
+
+      const src = img.getAttribute('src');
+      if (!src) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lazy-box';
+
+      const newImg = img.cloneNode();
+      newImg.removeAttribute('src');
+      newImg.setAttribute('data-src', src);
+      newImg.classList.add('lazy');
+
+      const icon = document.createElement('div');
+      icon.className = 'lazy-icon';
+      if (def.loading) {
+        icon.style.backgroundImage = `url("${def.loading}")`;
+      }
+
+      wrapper.appendChild(newImg);
+      wrapper.appendChild(icon);
+
+      img.replaceWith(wrapper);
+    });
+
+    // 通知 LazyLoad 更新
+    if (window.lazyLoadInstance?.update) {
+      window.lazyLoadInstance.update();
+    }
+  }
+  
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.33.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    // applyThemeToGiscus(theme)
+  }
+
+  // FIXME: 这会导致无法使用 preferred_color_scheme 以外的主题
+  const applyThemeToGiscus = (theme) => {
+    // theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"rating":{"js":"/js/services/rating.js","api":"https://star-vote.xaox.cc/api/rating"},"vote":{"js":"/js/services/vote.js","api":"https://star-vote.xaox.cc/api/vote"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"},"contributors":{"edit_this_page":{"_posts/":null,"wiki/stellar/":"https://github.com/xaoxuu/hexo-theme-stellar-docs/blob/main/"},"js":"/js/services/contributors.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error), .with-fancybox .atk-content img:not([atk-emoticon])';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const memos = document.getElementsByClassName('ds-memos');
+    if (memos != undefined && memos.length > 0) {
+      needFancybox = true;
+    }
+    const fancybox = document.getElementsByClassName('with-fancybox');
+    if (fancybox != undefined && fancybox.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
