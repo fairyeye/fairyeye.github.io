@@ -429,3 +429,18 @@ delete from spfm_company_invoice where company_id in (1309,1310,1311);
 delete from spfm_company_main_business where company_id in (1309,1310,1311);
 delete from spfm_company_main_industry where company_id in (1309,1310,1311);
 ```
+
+
+## 刷新调查表模板
+
+```sql
+-- 1.根据模板编码查全部的调查表模板;2.查最新的模板;3.把sslm_supplier_investg_sum表所有旧模板id全部算成新模板id;
+select group_concat(t.investigate_template_id) from sslm_investigate_tmpl t where t.tenant_id = 64913 and t.template_code = 'QT001752'; -- (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635)
+select t.investigate_template_id from sslm_investigate_tmpl t where t.tenant_id = 64913 and t.template_code = 'QT001752' AND t.latest_flag = 'Y' and t.release_flag = 1; -- 31465
+
+select investg_summary_id,investigate_template_id from sslm_supplier_investg_sum where tenant_id = 64913 and investigate_template_id in (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635) and partner_company_id = 71803;
+
+update sslm_supplier_investg_sum set last_update_date=now(),investigate_template_id=31465 where tenant_id=64913 and investigate_template_id in (27636,27682,27683,27684,27685,28156,28157,28214,28286,28466,28467,28588,28589,28714,30573,31427,31465,27635) and partner_company_id = 71803;
+
+select * from hpfm_company where company_name = '敦化市丰达农牧业开发有限公司';
+```
