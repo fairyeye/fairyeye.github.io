@@ -318,3 +318,13 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/*
 
 ```
+
+
+
+# 三方软件
+
+
+## 清理软件
+
+
+https://github.com/tw93/Mole
