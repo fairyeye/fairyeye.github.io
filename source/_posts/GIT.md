@@ -165,6 +165,13 @@ memU 是一个给长期运行的 AI Agent 用的记忆层，比如 OpenClaw。
 ### 开源项目
 
 
+#### AppPorts
+
+一键将 macOS 应用迁移到外部硬盘。该项目通过 Contents 链接的方式，将 macOS 应用迁移到外部存储设备（移动硬盘、SD 卡或 NAS），并在原位置保留应用入口，让用户能够像之前一样启动应用，在不影响使用的前提下释放宝贵的 macOS 存储空间。来自 @Zehua Wang 的分享
+
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/qM9nLFgfXPc3QzPWvTXJAAkazibjGlJwBP2JibCbqice7dWKVgXcaOChfY3orhyicBhuUiarVbbUqeUt2oUXxxC28BXafb0XfXq0VEBVUX0h43xk/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=22)
+
+> 地址：github.com/wzh4869/AppPorts
 
 
 #### AI PPT
