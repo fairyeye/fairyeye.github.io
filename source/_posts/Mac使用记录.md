@@ -5,6 +5,15 @@ tags:
 categories: 杂项
 hidden: true
 ---
+# 前置
+
+```sh
+# 恢复软件列表：
+1. Clash Verge     订阅链接：https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=f1a81448bef507e08f35c99027ce4172
+2. 
+
+```
+
 
 # 环境配置
 
