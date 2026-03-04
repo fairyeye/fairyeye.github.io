@@ -137,7 +137,7 @@ source ~/.zshrc
 
 
 
-## SDKMAN
+## SDKMAN  这个不着急
 
 > **优点**：一键切换 Gradle 版本、自动配置 PATH、支持 Groovy/Kotlin/Java 等工具链
 
@@ -191,6 +191,7 @@ sdk default java 17.0.9-tem
 
 
 
+
 ## 其它Home Brew应用
 
 ```bash
@@ -201,7 +202,7 @@ brew install gemini-cli
 # Claude Code
 npx zcf
 
-# Open Code + GLM
+# Open Code
 
 # vscode
 brew install --cask visual-studio-code
