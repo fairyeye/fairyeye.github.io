@@ -59,6 +59,20 @@ source ~/.zshrc
 // 主页地址 http://jb.ide.to
 ```
 
+
+- 如果先安装了zsh，按照以下方案：
+
+```
+// 1. 下载脚本，然后执行一遍
+
+curl -L -o jb jb.ide.to
+
+zsh jb
+
+// 2. 等待执行完成，修改代码：注释这段相关：开始清理 JetBrains 相关环境变量、下载失败
+// 3. 手动下载并复制jar：cp ja-netfilter.jar ~/.jb_run/ja-netfilter.jar
+```
+
 ### 使用 curl（推荐）
 
 ```sh
