@@ -594,6 +594,10 @@ Deskreen，一个开源项目，正是为此而生！这是一个简单而强大
 
 > GitHub 地址→github.com/massgravel/Microsoft-Activation-Scripts
 
+```sh
+irm https://get.activated.win | iex
+```
+
 
 #### **source-code-hunter**：Spring 全家桶源码解读。该项目提供了一系列互联网主流框架和中间件的源码讲解，包括 Spring 全家桶、Mybatis、Netty、Dubbo 等框架。
 
