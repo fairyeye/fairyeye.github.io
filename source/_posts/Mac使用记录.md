@@ -346,6 +346,9 @@ chmod 600 ~/.ssh/*
 
 # 必备软件
 
+## IINA
+
+`https://www.iina.io/`
 
 
 
