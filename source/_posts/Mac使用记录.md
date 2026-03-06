@@ -62,15 +62,15 @@ source ~/.zshrc
 
 - 如果先安装了zsh，按照以下方案：
 
-```
-// 1. 下载脚本，然后执行一遍
+```sh
 
-curl -L -o jb jb.ide.to
+# vim ~/.zshrc   注释下面的两行  然后在执行
 
-zsh jb
+# source $ZSH/oh-my-zsh.sh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-// 2. 等待执行完成，修改代码：注释这段相关：开始清理 JetBrains 相关环境变量、下载失败
-// 3. 手动下载并复制jar：cp ja-netfilter.jar ~/.jb_run/ja-netfilter.jar
+
+curl -L -o jb jb.ide.to && bash jb
 ```
 
 ### 使用 curl（推荐）
