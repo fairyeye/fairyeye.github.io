@@ -28,8 +28,8 @@
 <meta property="og:description" content="日常业务运行过程中，Redis 实例经常因各种 Big keys &#x2F; Hot Keys 的问题未及时处理，导致服务性能下降、访问超时、用户体验变差，甚至可能造成实例大范围故障 。 这篇文章，我们聊聊生产环境，如何应对 Redis 大 Key 问题。  1 什么是大 key大 Key 具体表现为 Redis 中的 Key 对应的 Value 很大，占用 Redis 空间比较大，本质上是大">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://fairyeye.github.io/images/avatar.jpg">
-<meta property="article:published_time" content="2026-03-06T10:04:59.073Z">
-<meta property="article:modified_time" content="2026-03-06T10:04:59.073Z">
+<meta property="article:published_time" content="2026-03-06T11:05:03.394Z">
+<meta property="article:modified_time" content="2026-03-06T11:05:03.394Z">
 <meta property="article:author" content="li">
 <meta property="article:tag" content="技术,博客,笔记,开源">
 <meta name="twitter:card" content="summary">
@@ -49,7 +49,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"li","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-03-06T10:04:59+00:00","dateModified":"2026-03-06T10:04:59+00:00","datePublished":"2026-03-06T10:04:59+00:00","description":"","headline":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://fairyeye.github.io/2026/03/06/%E5%BD%92%E6%A1%A3/Redis%E5%A4%A7Key/"},"publisher":{"@type":"Organization","name":"li","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fairyeye.github.io/2026/03/06/%E5%BD%92%E6%A1%A3/Redis%E5%A4%A7Key/","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"li","sameAs":[],"image":"/images/avatar.jpg"},"dateCreated":"2026-03-06T11:05:03+00:00","dateModified":"2026-03-06T11:05:03+00:00","datePublished":"2026-03-06T11:05:03+00:00","description":"","headline":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://fairyeye.github.io/2026/03/06/%E5%BD%92%E6%A1%A3/Redis%E5%A4%A7Key/"},"publisher":{"@type":"Organization","name":"li","sameAs":[],"image":"/images/avatar.jpg","logo":{"@type":"ImageObject","url":"/images/avatar.jpg"}},"url":"https://fairyeye.github.io/2026/03/06/%E5%BD%92%E6%A1%A3/Redis%E5%A4%A7Key/","image":[]}</script>
   
 </head>
 <body>
@@ -81,7 +81,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-03-06T10:04:59.073Z">2026-03-06</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-03-06T10:04:59.073Z">2026-03-06</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-03-06T11:05:03.394Z">2026-03-06</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-03-06T11:05:03.394Z">2026-03-06</time></span></div></div></div>
     
   </div>
   </div><article class="md-text content"><p>日常业务运行过程中，Redis 实例经常因各种 Big keys &#x2F; Hot Keys 的问题未及时处理，导致服务性能下降、访问超时、用户体验变差，甚至可能造成实例大范围故障 。</p>
@@ -177,7 +177,7 @@
     </section>
     </div>
 
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/03/06/%E5%BD%92%E6%A1%A3/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/03/06/%E5%BD%92%E6%A1%A3/Springboot%E8%BF%94%E5%9B%9Ehtml/">Springboot</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/03/06/%E5%BD%92%E6%A1%A3/%E5%90%8C%E6%AD%A5%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E7%9A%84MySQL%E6%95%B0%E6%8D%AE%E8%A1%A8/">MySQL查询</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/03/06/%E5%BD%92%E6%A1%A3/Spring%20Boot%20Admin/">Spring Boot Admin</a></div></section></div>
 
 
 
