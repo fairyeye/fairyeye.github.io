@@ -355,8 +355,16 @@ chmod 600 ~/.ssh/*
 
 # 开源软件
 
+## PanSou
+
+```sh
+docker run -d --name pansou -p 8880:80 ghcr.io/fish2018/pansou-web
+```
+
 
 ## 清理软件
 
 
 https://github.com/tw93/Mole
+
+
