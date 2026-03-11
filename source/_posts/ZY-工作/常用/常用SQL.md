@@ -401,7 +401,23 @@ WHERE
 ### 根据供应商查询关联的数据
 
 ```sql
-
+SELECT DISTINCT
+	hc.company_name,
+	hc.company_id,
+	sp.supplier_basic_id,
+	ssc.supplier_contact_id,
+	ssc.`name`,
+	ssc.mail,
+	ssc.mobilephone
+FROM
+	spfm_partner sp
+	LEFT JOIN hpfm_company hc ON hc.company_id = sp.partner_company_id
+	LEFT JOIN sslm_supplier_contact ssc ON ssc.supplier_basic_id = sp.supplier_basic_id
+WHERE
+	sp.tenant_id = 24997
+	AND ssc.tenant_id = 24997
+	AND sp.partner_company_id IN (590764, 598543)
+	AND sp.supplier_basic_id IS NOT NULL;
 
 ```
 
