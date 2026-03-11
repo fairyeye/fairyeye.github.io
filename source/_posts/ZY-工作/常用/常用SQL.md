@@ -296,6 +296,7 @@ WHERE
 ```
 
 
+
 ```sql
 
 SELECT
@@ -393,6 +394,17 @@ FROM
 WHERE
 	t.sales_person_name != '期初导入' and sales_person_name != '注销账户'
 ```
+
+
+## 携程修子账户SQL
+
+### 根据供应商查询关联的数据
+
+```sql
+
+
+```
+
 
 ## 建立合作但是没有生成主数据 补发MQ
 
