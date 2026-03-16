@@ -10,6 +10,40 @@ tags:
 mysql -h `echo $SPRING_DATASOURCE_URL|awk -F "/" '{print $3}'|awk -F ":" '{print $1}'` -u$SPRING_DATASOURCE_USERNAME -p$SPRING_DATASOURCE_PASSWORD -A
 ```
 
+
+# 常用查询
+
+## Table Plus
+
+```sql
+
+select * from hpfm_tenant where tenant_name like '%高标%' AND core_enterprise = 1; -- 26446
+select * from hpfm_tenant where tenant_num = 'SRM-HASCO';
+
+
+
+select * from iam_user where organization_id = 21443;
+select * from sprm_pr_header where tenant_id = 17552;
+
+select * From sprm_pr_line where pr_header_id = 1008507037668022;
+
+
+select * from hpfm_purchase_agent  where tenant_id = 17552;
+
+
+
+delete from sslm_supply_ability where tenant_id = 55771;
+DELETE from sslm_supply_ability_line where tenant_id = 55771;
+DELETE from sslm_external_supplier where tenant_id = 55771;
+delete from sslm_external_supplier_req where tenant_id = 55771;
+
+DELETE from sslm_supplier_es where external_system_code = 'AKBL_RQNV1BYPL0';
+
+-- 亿咖通修账号：
+update iam_user set email='fengyan@yoocar.com',phone='13567176851' where login_name='56380426';
+```
+
+
 # 供应商
 
 ## 供货能力
@@ -501,3 +535,6 @@ update sslm_supplier_investg_sum set last_update_date=now(),investigate_template
 
 select * from hpfm_company where company_name = '敦化市丰达农牧业开发有限公司';
 ```
+
+
+
