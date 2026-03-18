@@ -25,6 +25,41 @@ git clone https://gitee.com/fairyeye/hyprland_dotfile ~/.dotfiles
 # 新方案
 
 
+```
+# 进入iwctl交互模式
+iwctl
+
+## 一下是交互模式
+
+# 列出可用的无线网卡
+device list
+
+# 扫描WiFi网络（假设网卡是wlan0）
+station wlan0 scan
+
+# 查看扫描结果
+station wlan0 get-networks
+
+# 连接到指定WiFi（替换"YourSSID"为你的WiFi名称）
+station wlan0 connect "YourSSID"
+
+# 输入密码（如果需要）
+
+# 检查连接状态
+station wlan0 show
+
+# 退出交互模式
+exit
+```
+
+archinstall 
+
+
+
+
+
+
+
 ## 安装临时图形环境 (or  archinstall 安装kde桌面)
 
 [](https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide/wiki/%E4%BB%A3%E7%90%86#%E5%AE%89%E8%A3%85%E4%B8%B4%E6%97%B6%E5%9B%BE%E5%BD%A2%E7%8E%AF%E5%A2%83)
