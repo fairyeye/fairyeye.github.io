@@ -9,8 +9,10 @@ date: 2026-03-17 17:12:34
 
 archinstall
 
-# 安装git  sshd
+# 安装git sshd vim
 # 新建用户 
+
+# 新方案
 
 
 
