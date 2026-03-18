@@ -139,13 +139,18 @@ flclash支持随壁纸更换颜色，强推！
     
 1. 安装
     
-    ```
+    ```sh
+    
+    # 需要先安装clash
+    
+    pacman -S clash-verge-rev
+    
+    # 然后打开clash的代理  复制到终端
+    
     yay -S flclash-bin
     
-    or 
     
     
-    wget http://61.147.247.83:10537/ELITE/FlClash/releases/download/FlClash/FlClash-0.8.92-linux-amd64.AppImage
     ```
     
 2. 启动
