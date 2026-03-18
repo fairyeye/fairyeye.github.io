@@ -165,3 +165,10 @@ https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=f1a81448bef507e08
 ```sh
 curl -L shorin.xyz/archsetup | bash 
 ```
+
+
+# 新新方案
+
+```
+https://ml4w.com/os/getting-started/install
+```
