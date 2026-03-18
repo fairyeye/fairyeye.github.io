@@ -165,6 +165,19 @@ https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=f1a81448bef507e08
 curl -L shorin.xyz/archsetup | bash
 ```
 
+
+# 新新方案
+
+```
+# 可以做成U盘一键启动 （没代理能行？
+
+https://github.com/mylinuxforwork/dotfiles
+
+https://ml4w.com/os/
+
+
+```
+
 ---
 
 ## 参考新方案
