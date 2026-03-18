@@ -125,24 +125,36 @@ sudo pacman -S --needed base-devel yay paru
 > Flclash 支持随壁纸更换颜色，推荐使用。
 
 **安装步骤：**
+
+
 1. **首先确保已配置好 Arch Linux CN 源并安装了 AUR 助手**（参考上方步骤）。
-2. **先安装 Clash 核心**
-    ```sh
+
+2. **先安装 Clash(不然安装flclash太慢了)**
+
+```sh
     sudo pacman -S clash-verge-rev
-    ```
-3. **启动 Clash 的代理**（在 Clash 界面中开启），然后在终端中执行：
-    ```sh
+```
+
+1. **启动 Clash 的代理**（在 Clash 界面中开启），然后在终端中执行：
+
+```sh
     yay -S flclash-bin
-    ```
+```
+
 4. **启动 Flclash**
-    ```sh
+
+```sh
     flclash
-    ```
+```
+
 5. **在 Flclash 主页开启 TUN（虚拟网卡）模式**。
+
 6. **导入订阅链接**
-    ```
-    https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=f1a81448bef507e08f35c99027ce4172
-    ```
+
+```
+https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=f1a81448bef507e08f35c99027ce4172
+```
+
 7. **在右下角系统托盘中启动代理**。
 
 ---
