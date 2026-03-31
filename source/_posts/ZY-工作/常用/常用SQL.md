@@ -331,7 +331,7 @@ WHERE
 
 
 
-```sql
+```mysql
 
 SELECT
 	t.invite_id,
