@@ -464,7 +464,7 @@ select * from spfm_partner where supplier_basic_id is null;
 
 select * from spfm_event_message where event_Code='SSLM_LIFECYCLESYNC' and data like '%318027%' and data like '%105552%' 
 
-curl --location 'isrm.going-link.com...' \ 
+curl --location 'https://isrm.going-link.com/spfm/v1/event-messages/appoint-resend' \ 
 
 --header 'Authorization: bearer b3ae9c58-be2d-4cff-bbc3-26f68eb26d61' \ 
 
