@@ -498,6 +498,9 @@ select * from spfm_company_basic_tl where company_basic_id in (3029,3028,3027);
 
 select company_basic_id,com_basic_req_id,change_req_id from spfm_com_basic_req where company_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
 
+select * from spfm_user_association_company where company_name in ('CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
+-- 查到userid  删除
+
 update sslm_external_supplier set link_id = null where supplier_name in ( 'CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
 
 delete from iam_user where real_name in ('CÔNG TY TNHH KHKT TIẾN PHÁT-进发科技有限责任公司', '创富责任有限公司CÔNGTYTNHHCHUANGFU', 'BYD新能量叉车贸易责任公司-CôngtyTNHHthươngmạinănglượngmớiBYD');
