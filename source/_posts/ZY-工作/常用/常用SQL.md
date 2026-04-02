@@ -74,6 +74,12 @@ WHERE
 ## 重复注册
 
 ```Sql
+
+select * from hpfm_company where company_name = '中国电信（泰国）有限公司';
+
+select * from spfm_company_basic where business_registration_number = '0105556087406';
+
+
 select * from hpfm_company where company_num = 'CO00247789'; -- 3690
 select * from spfm_company_basic where company_num = 'CO00247789'; -- 3690
 select * from sslm_supplier_basic where supplier_company_id = 3690;
