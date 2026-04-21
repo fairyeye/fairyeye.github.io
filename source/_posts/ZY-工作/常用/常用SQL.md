@@ -75,6 +75,12 @@ WHERE
 
 ```Sql
 
+
+update hpfm_company set domestic_foreign_relation=1,unified_social_code='12330700MB0M75926T',organizing_institution_code=null,certification_region_id=47,certification_type='1',last_update_date=now() where company_id=436072 and tenant_id=421636;
+update spfm_company_basic set domestic_foreign_relation=1,unified_social_code='12330700MB0M75926T',organizing_institution_code=null,certification_region_id=47,certification_type='1',last_update_date=now() where company_id=669983 and tenant_id=421636;
+update sslm_supplier_basic set domestic_foreign_relation=1,unified_social_code='12330700MB0M75926T',organizing_institution_code=null,certification_region_id=47,certification_type='1',last_update_date=now() where supplier_basic_id=1796788 and tenant_id=408641;
+
+
 select * from hpfm_company where company_name = '中国电信（泰国）有限公司';
 
 select * from spfm_company_basic where business_registration_number = '0105556087406';
