@@ -186,6 +186,32 @@ WHERE
 	t.tenant_id = 61618
 ```
 
+
+## 省市区 平台数据导出
+
+```sql
+SELECT
+	hc.country_code '国家编码',
+	hc.country_name '国家',
+	hr3.region_code '省编码',
+	hr3.region_name '省',
+	hr2.region_code '市编码',
+	hr2.region_name '市',
+	hr1.region_code '区编码',
+	hr1.region_name '区',
+	hr.region_code '街道编码',
+	hr.region_name '街道',
+	CONCAT(IFNULL(CONCAT(hr3.region_name, '|'), ''), IFNULL(CONCAT(hr2.region_name, '|'), ''), IFNULL(CONCAT(hr1.region_name, '|'), ''), IFNULL(hr.region_name, '')) region_name4
+FROM
+	hpfm_region hr
+	LEFT JOIN hpfm_region hr1 ON hr.parent_region_id = hr1.region_id
+	LEFT JOIN hpfm_region hr2 ON hr1.parent_region_id = hr2.region_id
+	LEFT JOIN hpfm_region hr3 ON hr2.parent_region_id = hr3.region_id
+	LEFT JOIN hpfm_country hc ON hc.country_id = hr.country_id
+WHERE
+	hr.tenant_id = 0
+order by hr.region_code
+```
 ## 采购财务、其他信息
 
 ```sql
