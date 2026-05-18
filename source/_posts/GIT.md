@@ -124,6 +124,13 @@ sudo nohup /usr/lib/jvm/jdk1.8.0_341/bin/java -jar smart-admin-api-1.0.0.jar
 
 ### 开源项目 - AI
 
+
+#### Vibe Coding 零基础教程
+
+```
+https://github.com/datawhalechina/easy-vibe
+```
+
 #### OpenClaw 相关
 
 ##### **OpenClaw 的记忆层**
