@@ -368,3 +368,14 @@ docker run -d --name pansou -p 8880:80 ghcr.io/fish2018/pansou-web
 https://github.com/tw93/Mole
 
 
+
+
+
+
+```
+ 等你准备发布时：
+  1. 去 raycast.com 注册账号
+  2. 把 package.json 中的 author 改成你的 Raycast 用户名
+  3. 用 Node 20 跑 lint（nvm install 20 && nvm use 20）
+  4. 按 PUBLISH.md 的流程提交 PR
+```
