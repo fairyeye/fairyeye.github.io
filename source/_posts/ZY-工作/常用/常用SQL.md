@@ -105,7 +105,109 @@ UPDATE sslm_supplier_basic set last_update_date=NOW(),company_name='Nasdaq Corpo
 UPDATE spfm_enterprise_register_index SET last_update_date=NOW(),company_name='Nasdaq Corporate Solutions International Limited(废弃)',duns_code='733541812(废弃)' WHERE id=3709;
 ```
 
+## 主数据 聚合明细
+
+
+```sql
+SELECT DISTINCT
+	ssb.supplier_company_id,
+	ssb.supplier_basic_id,
+	ssb.company_num '供应商编码',
+	ssb.company_name '供应商名称',
+	CASE
+		WHEN (
+			(
+				SELECT
+					count(1)
+				FROM
+					sslm_external_supplier ses
+				WHERE
+					ses.tenant_id = slc.tenant_id
+					AND slc.supplier_company_id = ses.link_id
+					AND ses.supplier_num IS NOT NULL
+			) > 0
+		) THEN '是'
+		ELSE '否'
+	END 'ERP供应商',
+	CONCAT(IFNULL(CONCAT(hr3.region_name, '|'), ''), IFNULL(CONCAT(hr2.region_name, '|'), ''), IFNULL(CONCAT(hr1.region_name, '|'), ''), IFNULL(hr.region_name, '')) '注册地区',
+	CONCAT_WS(
+		' ',
+		IF(scb.manufacturer_flag = 1, '制造商', NULL),
+		IF(scb.trader_flag = 1, '贸易商', NULL),
+		IF(scb.servicer_flag = 1, '服务商', NULL),
+		IF(scb.agent_flag = 1, '代理商', NULL),
+		IF(scb.integration_flag = 1, '集成商', NULL),
+		IF(scb.contractor_flag = 1, '承包商', NULL),
+		IF(scb.dealer_flag = 1, '经销商', NULL)
+	) AS '经营性质',
+	CASE slc.blacklist_flag
+		WHEN 0 THEN '否'
+		WHEN 1 THEN '是'
+		ELSE '否'
+	END AS '黑名单',
+	slcs.stage_description '生命阶段',
+	hpa.purchase_agent_name '采购员',
+	ssb.unified_social_code '统一社会信用代码',
+	(
+		SELECT
+			GROUP_CONCAT(i.industry_name)
+		FROM
+			hpfm_industry i
+		WHERE
+			i.industry_id IN (
+				SELECT
+					t.industry_id
+				FROM
+					sslm_supplier_main_industry t
+				WHERE
+					t.tenant_id = 105513
+					AND t.supplier_basic_id = ssb.supplier_basic_id
+			)
+	) AS '行业类型',
+	CASE ssb.taxpayer_type
+		WHEN 'GT' THEN '一般纳税人'
+		WHEN 'T' THEN '小规模纳税人'
+		WHEN 'NT' THEN '非增值税纳税人'
+		ELSE '未知'
+	END AS '纳税人类型',
+	ssc.`name` AS '联系人姓名',
+	ssc.mail '邮箱',
+	ssc.mobilephone '手机号码',
+	ssb.legal_rep_name '法定代表人',
+	ssa.address_detail '详细地址',
+	ssba.bank_firm '联行号',
+	ssi.receive_address '税务登记地址',
+	ssi.receive_phone '收票人手机号'
+FROM
+	sslm_life_cycle slc
+	LEFT JOIN sslm_life_cycle_stages slcs ON slcs.stage_id = slc.stage_id
+	LEFT JOIN spfm_partner sp ON sp.tenant_id = slc.tenant_id
+	AND sp.company_id = slc.company_id
+	AND sp.partner_company_id = slc.supplier_company_id
+	AND sp.partner_tenant_id = slc.supplier_tenant_id
+	LEFT JOIN sslm_supplier_basic ssb ON ssb.supplier_basic_id = sp.supplier_basic_id
+	LEFT JOIN sslm_supplier_business scb ON scb.supplier_basic_id = ssb.supplier_basic_id
+	LEFT JOIN hpfm_purchase_agent hpa ON ssb.purchase_agent_id = hpa.purchase_agent_id
+	LEFT JOIN sslm_supplier_contact ssc ON ssc.supplier_basic_id = ssb.supplier_basic_id
+	AND ssc.default_flag = 1
+	AND ssc.enabled_flag = 1
+	LEFT JOIN sslm_supplier_address ssa ON ssa.supplier_basic_id = ssb.supplier_basic_id
+	AND ssa.enabled_flag = 1
+	LEFT JOIN sslm_supplier_bank_account ssba ON ssba.supplier_basic_id = ssb.supplier_basic_id
+	AND ssba.master_flag = 1
+	AND ssba.enabled_flag = 1
+	LEFT JOIN sslm_supplier_invoice ssi ON ssi.supplier_basic_id = ssb.supplier_basic_id
+	LEFT JOIN hpfm_region hr ON hr.region_id = ssb.registered_region_id
+	LEFT JOIN hpfm_region hr1 ON hr.parent_region_id = hr1.region_id
+	LEFT JOIN hpfm_region hr2 ON hr1.parent_region_id = hr2.region_id
+	LEFT JOIN hpfm_region hr3 ON hr2.parent_region_id = hr3.region_id
+	LEFT JOIN hpfm_country hc ON hc.country_id = hr.country_id
+WHERE
+	slc.tenant_id = 105513;
+```
+
 ## 主数据（本地供应商）导出
+
 
 ```
 # 联系人 -需解密
