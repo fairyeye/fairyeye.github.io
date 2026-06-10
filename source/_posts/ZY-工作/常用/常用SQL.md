@@ -708,3 +708,27 @@ where
   and ses.supplier_num like '20%' AND t.supplier_id is not null
   and ses.link_id is not null
 ```
+
+```
+select
+    hc.company_num        '平台供应商编码',
+    t.supplier_num        '新本地供应商编码',
+    t.supplier_name       '新本地供应商名称',
+    ses.supplier_num      '老本地供应商编码',
+    ses.supplier_name     '老本地供应商名称'
+from
+    -- 主表：已绑定平台供应商的CO新供应商
+    sslm_external_supplier t
+    left join hpfm_company hc on hc.company_id = t.link_id
+    -- 通过名称匹配已解绑的老供应商
+    inner join sslm_external_supplier ses
+        on  ses.supplier_name = t.supplier_name
+        and ses.supplier_num like '20%'
+        and ses.link_id is null
+        and ses.tenant_id = t.tenant_id
+where
+    t.tenant_id = 35988
+    and t.supplier_num like 'CO%'
+    and t.link_id is not null
+
+```
