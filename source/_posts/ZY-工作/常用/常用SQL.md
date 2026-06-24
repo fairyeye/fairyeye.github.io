@@ -733,3 +733,40 @@ WHERE
 	AND t.link_id IS NOT NULL
 
 ```
+
+
+
+佳通修数据：
+
+```sql
+SELECT
+	group_concat(investigate_template_id)
+FROM
+	sslm_investigate_tmpl
+WHERE
+	tenant_id = 19950
+	AND template_code = 'QT000414'
+	AND version_number < 4; -- 7948,7947
+SELECT
+	group_concat(investigate_template_id) -- 1234,4567
+FROM
+	sslm_investigate_tmpl
+WHERE
+	tenant_id = 19950
+	AND template_code IN ('QT000401', 'QT000402', 'QT000400', 'QT000403');
+SELECT
+	sih.partner_company_id
+FROM
+	sslm_investg_header sih
+WHERE
+	sih.tenant_id = 19950
+	AND sih.investigate_template_id IN (7948, 7947)
+	AND NOT EXISTS (
+		SELECT
+			1
+		FROM
+			sslm_investg_header t
+		WHERE
+			t.investigate_template_id IN (1234)
+	);
+```
