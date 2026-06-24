@@ -744,29 +744,30 @@ SELECT
 FROM
 	sslm_investigate_tmpl
 WHERE
-	tenant_id = 19950
+	tenant_id = 1
 	AND template_code = 'QT000414'
-	AND version_number < 4; -- 7948,7947
+	AND version_number < 4; "107", "108", "109"
 SELECT
-	group_concat(investigate_template_id) -- 1234,4567
+	group_concat(investigate_template_id)
 FROM
 	sslm_investigate_tmpl
 WHERE
-	tenant_id = 19950
+	tenant_id = 1
 	AND template_code IN ('QT000401', 'QT000402', 'QT000400', 'QT000403');
+	-- 2,9,12,19,33,38,52,58,65,68,69,72,114,1,4,5,8,13,16,18,31,32,37,39,40,57,59,66,70,71,73,81,82,3,7,10,11,14,15,17,20,21,22,23,24,25,26,27,28,29,30,34,41,43,44,47,48,51,53,55,64,76,80,6,36,42,45,46,49,50,54,56,63,77,79,35
 SELECT
 	sih.partner_company_id
 FROM
 	sslm_investg_header sih
 WHERE
 	sih.tenant_id = 19950
-	AND sih.investigate_template_id IN (7948, 7947)
+	AND sih.investigate_template_id IN (107, 108, 109)
 	AND NOT EXISTS (
 		SELECT
 			1
 		FROM
 			sslm_investg_header t
 		WHERE
-			t.investigate_template_id IN (1234)
+			t.investigate_template_id IN (2,9,12,19,33,38,52,58,65,68,69,72,114,1,4,5,8,13,16,18,31,32,37,39,40,57,59,66,70,71,73,81,82,3,7,10,11,14,15,17,20,21,22,23,24,25,26,27,28,29,30,34,41,43,44,47,48,51,53,55,64,76,80,6,36,42,45,46,49,50,54,56,63,77,79,35)
 	);
 ```
