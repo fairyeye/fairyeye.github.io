@@ -746,7 +746,7 @@ FROM
 WHERE
 	tenant_id = 1
 	AND template_code = 'QT000414'
-	AND version_number < 4; -- "107", "108", "109"
+	AND version_number <= 4; -- 110
 
 SELECT
 	group_concat(investigate_template_id)
