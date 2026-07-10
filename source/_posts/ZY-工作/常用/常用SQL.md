@@ -46,9 +46,87 @@ update iam_user set email='fengyan@yoocar.com',phone='13567176851' where login_n
 
 # 供应商
 
-## 删除合作伙伴
+## 删除合作伙伴关系
 
 ```sql
+
+-- supplier_basic_id
+
+delete from sslm_supplier_basic where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_address where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_attachment where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_auth where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_bank_account where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_basic_tl where supplier_basic_id in (429330);
+
+delete from sslm_supplier_business where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_contact where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_customer where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_custservice where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_equipment where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_fin_branch where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_finance where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_investg_basic where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_investg_business where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_invoice where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_main_business where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_main_industry where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_produce where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_proservice where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_qa where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_rd where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_service_area where tenant_id = 89993 and supplier_basic_id in (429330);
+
+delete from sslm_supplier_sub_supplier where tenant_id = 89993 and supplier_basic_id in (429330);
+
+-- company_id
+
+delete from spfm_partner where tenant_id = 89993 AND partner_company_id in (105329);
+
+delete from spfm_partner_invite where tenant_id = 89993 and invite_company_id in (105329);
+
+delete from sslm_life_cycle where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_life_cycle_dim_sup where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_investg_header where tenant_id = 89993 and partner_company_id in (105329);
+
+delete from sslm_supplier_investg_sum where tenant_id = 89993 and partner_company_id in (105329);
+
+delete from sslm_firm_change_sum_his where tenant_id = 89993 and partner_company_id in (105329);
+
+delete from sslm_supplier_other where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_supply_ability where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_supplier_sync where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_life_cycle_change_reqs where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_life_cycle_reqs where tenant_id = 89993 and supplier_company_id in (105329);
+
+delete from sslm_supplier_change_req where tenant_id = 89993 and supplier_company_id in (105329);
 
 ```
 
