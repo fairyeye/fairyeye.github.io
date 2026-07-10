@@ -46,6 +46,12 @@ update iam_user set email='fengyan@yoocar.com',phone='13567176851' where login_n
 
 # 供应商
 
+## 删除合作伙伴
+
+```sql
+
+```
+
 ## 供货能力
 
 ```sql
