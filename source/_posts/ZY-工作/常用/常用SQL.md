@@ -195,6 +195,14 @@ UPDATE spfm_enterprise_register_index SET last_update_date=NOW(),company_name='N
 ### 修复 税号/企业注册登记号
 
 ```sql
+select * from spfm_company_basic where company_name = 'BlueVision Interactive Limited'; -- 678467,698258
+
+select * from spfm_enterprise_register_index where company_name = 'BlueVision Interactive Limited'; -- 239939
+
+select * from hpfm_company where company_name = 'BlueVision Interactive Limited'; -- 441173
+
+select * from sslm_supplier_basic where supplier_company_id = 441173; -- 1860648,2059884
+
 
 
 ```
