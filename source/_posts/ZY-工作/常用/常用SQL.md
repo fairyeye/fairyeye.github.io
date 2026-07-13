@@ -203,6 +203,10 @@ select * from hpfm_company where company_name = 'BlueVision Interactive Limited'
 
 select * from sslm_supplier_basic where supplier_company_id = 441173; -- 1860648,2059884
 
+update spfm_company_basic set business_registration_number='66314756' where tenant_id=426633 and company_basic_id in (678467,698258);
+update spfm_enterprise_register_index set business_registration_number='66314756' where id in (239939);
+update sslm_supplier_basic set business_registration_number='66314756' where tenant_id=360910 and supplier_basic_id in (2059884);
+update sslm_supplier_basic set business_registration_number='66314756' where tenant_id=394354 and supplier_basic_id in (1860648);
 
 
 ```
