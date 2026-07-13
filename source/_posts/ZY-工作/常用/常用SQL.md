@@ -155,6 +155,7 @@ WHERE
 	AND ssal.item_code LIKE '5%'
 ```
 
+
 ## 重复注册
 
 ```Sql
@@ -187,6 +188,15 @@ UPDATE sslm_supplier_basic set last_update_date=NOW(),company_name='Nasdaq Corpo
 UPDATE sslm_supplier_basic set last_update_date=NOW(),company_name='Nasdaq Corporate Solutions International Limited(废弃)' WHERE supplier_basic_id = 3671;
 
 UPDATE spfm_enterprise_register_index SET last_update_date=NOW(),company_name='Nasdaq Corporate Solutions International Limited(废弃)',duns_code='733541812(废弃)' WHERE id=3709;
+```
+
+
+
+### 修复 税号/企业注册登记号
+
+```sql
+
+
 ```
 
 ## 主数据 聚合明细
