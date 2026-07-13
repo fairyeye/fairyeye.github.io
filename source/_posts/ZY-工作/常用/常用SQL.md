@@ -900,3 +900,77 @@ WHERE sih.tenant_id = 1
 
 
 ```
+
+
+
+## 亿咖通修数据：
+
+
+### 模型表 附件数据错误  
+
+```sql
+SELECT
+    c.change_req_id,
+    c.change_req_number,
+    hc1.company_name  AS info_change_supplier,
+    lcr.requisition_id,
+    lcr.document_number,
+    hc2.company_name  AS lifecycle_supplier
+FROM
+    sslm_supplier_change_req c
+    JOIN sslm_life_cycle_change_reqs lcr
+        ON c.change_req_id = lcr.requisition_id          -- ID 碰撞
+        AND c.supplier_company_id != lcr.supplier_company_id  -- 不同供应商
+        AND lcr.tenant_id = 119
+    LEFT JOIN hpfm_company hc1 ON hc1.company_id = c.supplier_company_id
+    LEFT JOIN hpfm_company hc2 ON hc2.company_id = lcr.supplier_company_id
+WHERE
+    c.tenant_id = 119
+    AND c.creation_date > '2025-06-04 00:00:00'
+    AND lcr.creation_date > '2025-06-04 00:00:00';
+    
+    
+    
+    SELECT DISTINCT
+    master.data_id,
+    master.relation_id   AS contaminated_supplier_basic_id,
+    master.attribute_varchar4,
+    master.attribute_varchar5 AS approved_by,
+    master.attribute_varchar6 AS approved_time,
+    -- 信息变更上下文（污染来源的触发者）
+    c.change_req_number,
+    hc_change.company_name   AS info_change_supplier,
+    -- 升降级上下文（数据的真实归属）
+    lcr.document_number      AS lifecycle_doc_number,
+    hc_lifecycle.company_name AS lifecycle_supplier
+FROM
+    -- 1. 从主数据出发
+    sslm_model_data master
+    -- 2. 找同 attribute_varchar4 的升降级记录
+    JOIN sslm_model_data upgrade
+        ON  master.attribute_varchar4 = upgrade.attribute_varchar4
+        AND upgrade.table_code        = 'scux_srm_ecarx_supplier_site_model@sslm_life_cycle_manage'
+        AND upgrade.data_change_flag  = 2
+        AND upgrade.tenant_id         = 119
+    -- 3. 升降级的 relationId 碰巧等于某条信息变更的主键（ID碰撞）
+    JOIN sslm_supplier_change_req c
+        ON  c.change_req_id = upgrade.relation_id
+        AND c.tenant_id     = 119
+    JOIN sslm_life_cycle_change_reqs lcr
+        ON  lcr.requisition_id        = upgrade.relation_id
+        AND lcr.tenant_id             = 119
+        AND c.supplier_company_id    != lcr.supplier_company_id   -- 不同供应商
+    -- 4. 确认主数据属于信息变更的供应商（而非升降级的供应商）
+    JOIN spfm_partner p
+        ON  p.supplier_basic_id  = master.relation_id
+        AND p.partner_company_id = c.supplier_company_id
+    -- 关联供应商名称
+    LEFT JOIN hpfm_company hc_change   ON hc_change.company_id   = c.supplier_company_id
+    LEFT JOIN hpfm_company hc_lifecycle ON hc_lifecycle.company_id = lcr.supplier_company_id
+WHERE
+    master.table_code       = 'scux_srm_ecarx_supplier_site_model@sslm_life_cycle_summary'
+    AND master.data_change_flag = 2
+    AND master.tenant_id        = 119
+    AND c.creation_date    > '2025-06-04 00:00:00'
+    AND lcr.creation_date  > '2025-06-04 00:00:00';
+```
