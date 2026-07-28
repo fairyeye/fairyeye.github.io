@@ -5,8 +5,10 @@ tags:
 ---
 ## 本地/公有云 数据库连接
 
-```
-// 鱼 数据库 命令
+
+**鱼 数据库 命令**
+
+```sh
 mysql -h `echo $SPRING_DATASOURCE_URL|awk -F "/" '{print $3}'|awk -F ":" '{print $1}'` -u$SPRING_DATASOURCE_USERNAME -p$SPRING_DATASOURCE_PASSWORD -A
 ```
 
