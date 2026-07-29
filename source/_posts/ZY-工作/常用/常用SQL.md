@@ -455,6 +455,34 @@ WHERE sp.tenant_id = 526080
  and sso.tenant_id = 526080
  and sp.company_id = sso.company_id
 );
+
+
+--供货能力
+INSERT INTO
+	sslm_supply_ability (tenant_id, company_id, supplier_company_id, supply_ability_status)
+SELECT
+	sp.tenant_id,
+	sp.company_id,
+	sp.partner_company_id,
+	'UPDATEED'
+FROM
+	spfm_partner sp
+WHERE
+	sp.tenant_id = 526080
+	AND sp.company_id = 595090
+	AND sp.supplier_basic_id IS NOT NULL
+	AND sp.partner_company_id IN (1976)
+	AND NOT EXISTS (
+		SELECT
+			*
+		FROM
+			sslm_supplier_sync sso
+		WHERE
+			sso.supplier_company_id = sp.partner_company_id
+			AND sso.tenant_id = 526080
+			AND sp.company_id = sso.company_id
+	);
+
 ```
 
 ## 采购方的供应商的子账户
