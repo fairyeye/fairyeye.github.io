@@ -168,9 +168,13 @@ memU 是一个给长期运行的 AI Agent 用的记忆层，比如 OpenClaw。
 
 
 
-
 ### 开源项目
 
+#### 免费代理池
+
+```
+https://github.com/strongshuai/proxy-checker
+```
 
 #### AppPorts
 
