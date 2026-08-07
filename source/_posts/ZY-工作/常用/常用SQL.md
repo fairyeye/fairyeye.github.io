@@ -958,6 +958,7 @@ WHERE sih.tenant_id = 1
 ## 亿咖通修数据：
 
 
+
 ### 模型表 附件数据错误  
 
 ```sql
@@ -1025,4 +1026,12 @@ WHERE
     AND master.tenant_id        = 119
     AND c.creation_date    > '2025-06-04 00:00:00'
     AND lcr.creation_date  > '2025-06-04 00:00:00';
+```
+
+## 海亮
+
+### 增加销售员
+
+```sql
+INSERT INTO `iam_member_role` (`role_id`,`member_id`,`member_type`,`source_id`,`source_type`,`h_assign_level`,`h_assign_level_value`) VALUES ('1800700','6700842','user','84894','organization','organization','84894')
 ```
