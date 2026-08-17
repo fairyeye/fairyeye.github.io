@@ -1039,7 +1039,7 @@ INSERT INTO `iam_member_role` (`role_id`,`member_id`,`member_type`,`source_id
 ## 双汇
 
 ```sql
+select group_concat(pr_header_id) from sprm_pr_header where tenant_id = 62480 and display_pr_num in ('wkshxd260629095', 'wkshxd260629226', 'wkshxd260630136', 'wksh260629079'); -- 361502347,361506283,361506928,361551631
 
-
-update sprm_pr_line set attribute_decimal1=null,closed_flag=0 where tenant_id=62480 and pr_header_id in (358483450,359077620)
+update sprm_pr_line set attribute_decimal1=null,closed_flag=0 where tenant_id=62480 and pr_header_id in (361502347,361506283,361506928,361551631)
 ```
