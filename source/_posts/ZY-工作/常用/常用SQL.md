@@ -1040,4 +1040,6 @@ INSERT INTO `iam_member_role` (`role_id`,`member_id`,`member_type`,`source_id
 
 ```sql
 
+
+update sprm_pr_line set attribute_decimal1=null,closed_flag=0 where tenant_id=62480 and pr_header_id in (358483450,359077620)
 ```
