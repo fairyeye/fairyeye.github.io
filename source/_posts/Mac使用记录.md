@@ -379,3 +379,16 @@ https://github.com/tw93/Mole
   3. 用 Node 20 跑 lint（nvm install 20 && nvm use 20）
   4. 按 PUBLISH.md 的流程提交 PR
 ```
+
+# 代理的方式启动软件
+
+```sh
+export https_proxy=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+export all_proxy=socks5://127.0.0.1:7890
+export HTTP_PROXY=http://127.0.0.1:7890
+export HTTPS_PROXY=http://127.0.0.1:7890
+export ALL_PROXY=socks5://127.0.0.1:7890
+
+open /Applications/Antigravity.app
+```
